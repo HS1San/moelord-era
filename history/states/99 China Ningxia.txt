@@ -1,0 +1,51 @@
+state = {
+	id = 99
+	name = "STATE_99"
+	manpower = 2077600
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 1
+		steel = 5
+		chromium = 0
+	}
+	history = {
+		owner = CNX
+		add_core_of = CNX
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 10724 2 }
+	}
+	provinces = {
+		8081 10724
+	}
+}
+
+state = {
+	id = 100
+	name = "STATE_100"
+	manpower = 1000000
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 1
+		steel = 5
+		chromium = 0
+	}
+	history = {
+		owner = CNX
+		add_core_of = CNX
+	}
+	provinces = {
+		4783 5031 7727 7803 8055 8102 8127 10770 10899 12750 
+	}
+}

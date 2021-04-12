@@ -1,0 +1,80 @@
+﻿add_namespace = new_JAP
+
+country_event = {
+	id = new_JAP.1
+	title = new_JAP.1.t
+	desc = new_JAP.1.d
+	picture = GFX_report_event_generic_funeral
+
+	trigger = {
+		original_tag = JAP
+		has_country_leader = { name = "Yoshihito" }
+		date > 1926.12.1
+	}
+
+	mean_time_to_happen = {
+		days = 24
+		modifier = { factor = 0.5 date > 1927.1.1 }
+		modifier = { factor = 0.2 date > 1927.2.1 }
+	}
+
+	immediate = {
+		hidden_effect = {
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Hirohito"
+				picture = "Portrait_Japan_Emperor_Hirohito.tga"
+				expire = "1936.1.1"
+				ideology =  Centrist_ideology
+				traits = {}
+			}
+			every_other_country = { news_event = new_News.19 }
+		}
+	}
+
+	option = {
+		name = new_JAP.1.a
+		remove_ideas = Taisho_Democracy
+		add_stability = 0.01
+		add_war_support = 0.01
+	}
+}
+
+country_event = { #Destroying the Korean Independence Armies
+	id = new_JAP.3
+	title = new_JAP.3.t
+	desc = new_JAP.3.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_JAP.3.a
+		add_war_support = 0.05
+		declare_war_on = {
+			target = KIA
+			type = annex_everything
+		}
+	}
+}
+
+country_event = { #Destroying the Korean Independence Armies
+	id = new_JAP.4
+	title = new_JAP.4.t
+	desc = new_JAP.4.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_JAP.4.a
+		add_stability = 0.05
+		add_war_support = 0.05
+		CFT = {
+			transfer_state = 18
+			country_event = {
+				id = fengtian.1
+			}
+		}
+	}
+}

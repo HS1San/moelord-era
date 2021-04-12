@@ -1,0 +1,181 @@
+state = {
+	id = 1
+	name = "STATE_1"
+	manpower = 7648400
+	state_category = city
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 1
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 1
+		chromium = 0
+	}
+	history = {
+		owner = CBJ
+		add_core_of = CBJ
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 1
+		}
+		victory_points = { 1134 1 }
+		victory_points = { 4140 1 }
+		victory_points = { 9843 5 }
+		victory_points = { 11761 1 }
+	}
+	provinces = {
+		1134 4140 9843 11761 
+	}
+}
+
+state = {
+	id = 2
+	name = "STATE_2"
+	manpower = 9434900
+	state_category = developed_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 1
+		aluminium = 2
+		rubber = 0
+		tungsten = 0
+		steel = 16
+		chromium = 0
+	}
+	history = {
+		owner = CZL
+		add_core_of = CZL
+		buildings = {
+			industrial_complex = 1
+			infrastructure = 2
+		}
+		victory_points = { 4190 2 }
+		victory_points = { 7109 4 }
+	}
+	provinces = {
+		4032 4093 4190 4208 6828 7000 7109 10022 10053 12026 
+	}
+}
+
+state = {
+	id = 3
+	name = "STATE_3"
+	manpower = 2400000
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 1
+		aluminium = 1
+		rubber = 0
+		tungsten = 0
+		steel = 16
+		chromium = 0
+	}
+	history = {
+		owner = CZL
+		add_core_of = CZL
+		buildings = {
+			infrastructure = 4
+			3900 = { naval_base = 1 }
+		}
+		victory_points = { 3900 1 }
+		victory_points = { 12043 1 }
+	}
+	provinces = {
+		900 1052 3830 3900 6969 11822 12043 
+	}
+}
+
+state = {
+	id = 4
+	name = "STATE_4"
+	manpower = 9000000
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 1
+		rubber = 0
+		tungsten = 0
+		steel = 15
+		chromium = 0
+	}
+	history = {
+		owner = CZL
+		add_core_of = CZL
+		buildings = {
+			industrial_complex = 1
+			infrastructure = 2
+		}
+		victory_points = { 1169 3 }
+	}
+	provinces = {
+		1169 1188 4058 4114 4144 7092 12062 
+	}
+}
+
+state = {
+	id = 196
+	name = "STATE_196"
+	manpower = 2000000
+	state_category = large_town
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = CZL
+		add_core_of = CZL
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+			10068 = { naval_base = 2 }
+		}
+		victory_points = { 10068 4 }
+	}
+	provinces = {
+		10068 
+	}
+}
+
+state = {
+	id = 342
+	name = "STATE_342"
+	manpower = 2000000
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 1
+		rubber = 0
+		tungsten = 0
+		steel = 10
+		chromium = 0
+	}
+	history = {
+		owner = CZL
+		add_core_of = CZL
+		buildings = {
+			infrastructure = 3
+			11944 = { naval_base = 1 }
+		}
+		victory_points = { 11996 1 }
+	}
+	provinces = {
+		4137 9969 10003 10119 11944 11980 11996
+	}
+}

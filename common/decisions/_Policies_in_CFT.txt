@@ -1,0 +1,85 @@
+Diplomacy_with_CBJ = {
+	Control_China_Eastern_Railway = {
+		icon = generic_civil_support
+		ai_will_do = { factor = 100 }
+
+		cost = 90
+		fire_only_once = yes
+
+		visible = {
+			original_tag = CFT
+			has_idea = Foreign_China_Eastern_Railway
+		}
+		available = {
+			has_civil_war = no
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = RUS_Root_Opinion_100
+					check_variable = { ROOT.relationship_with_russia > 99 }
+				}
+				has_government = Radical_Rightist
+			}
+		}
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = Foreign_China_Eastern_Railway
+				add_idea = National_China_Eastern_Railway
+			}
+		}
+	}
+	Bribe_Feng = {
+		icon = generic_army_support
+
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = { factor = 100 }
+
+		modifier = { consumer_goods_factor = 0.05 }
+
+		visible = {
+			original_tag = CFT
+			NOT = { has_global_flag = Rebellion_of_Feng }
+		}
+		available = {
+			OR = {
+				AND = {
+					has_global_flag = Anhui_Won
+					any_other_country = {
+						is_faction_leader = yes
+						has_country_flag = Anhui_Member
+						has_war_with = ROOT
+					}
+				}
+				AND = {
+					has_global_flag = Zhili_Won
+					any_other_country = {
+						is_faction_leader = yes
+						has_country_flag = Zhili_Member
+						has_war_with = ROOT
+					}
+				}
+			}
+			OR = {
+				country_exists = CCH
+				country_exists = CSY
+			}
+			surrender_progress > 0.2
+		}
+		cancel_trigger = {
+			OR = {
+				has_global_flag = Rebellion_of_Feng
+				is_subject = yes
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = { country_exists = CCH }
+				CCH = { country_event = new_GMJ.1 }
+			}
+			if = {
+				limit = { NOT = { country_exists = CCH } }
+				CSY = { country_event = new_GMJ.1 }
+			}
+		}
+	}
+}

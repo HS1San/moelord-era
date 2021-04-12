@@ -1,0 +1,32 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			JAP = {
+				country_event = {
+					id = new_JAP.3
+					days = 516 
+				}
+			}
+		}
+	}
+	
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM.FROM = {
+						state = 18
+					}
+					FROM = {
+						tag = KIA
+					}
+				}
+				JAP = {
+					country_event = {
+						id = new_JAP.4 #Fengtian gets Yanbian
+					}
+				}
+			}
+		}
+	}
+}

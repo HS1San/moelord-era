@@ -1,0 +1,538 @@
+Diplomacy_with_the_Great_Powers = {
+	Gain_Superior_Firepowert = {
+		icon = generic_army_support
+		ai_will_do = { base = 100 }
+
+		cost = 0
+		fire_only_once = yes
+
+		visible = {
+			has_tech = doctrine_surround_and_lure
+			has_tech = doctrine_mobile_annihilation
+			NOT = { has_tech = doctrine_superior_firepower }
+			NOT = { has_tech = doctrine_grand_battle_plan }
+			NOT = { has_tech = doctrine_mass_assault }
+			NOT = { has_tech = doctrine_mobile_warfare }
+		}
+		available = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = USA_Root_Opinion_100
+					check_variable = { ROOT.relationship_with_america > 99 }
+				}
+				custom_trigger_tooltip = {
+					tooltip = GER_Root_Opinion_100
+					check_variable = { ROOT.relationship_with_germany > 99 }
+				}
+				custom_trigger_tooltip = {
+					tooltip = RUS_Root_Opinion_100
+					check_variable = { ROOT.relationship_with_russia > 99 }
+				}
+			}
+			has_army_experience > 99.99
+		}
+		complete_effect = {
+			army_experience = -100
+			set_technology = { doctrine_superior_firepower = 1 }
+			custom_effect_tooltip = doctrine_superior_firepower.tt
+		}
+	}
+	Gain_Grand_Battle_Plan = {
+		icon = generic_army_support
+		ai_will_do = { base = 100 }
+
+		cost = 0
+		fire_only_once = yes
+
+		visible = {
+			has_tech = doctrine_bloodthirsty_fortification
+			has_tech = doctrine_mobile_annihilation
+			NOT = { has_tech = doctrine_superior_firepower }
+			NOT = { has_tech = doctrine_grand_battle_plan }
+			NOT = { has_tech = doctrine_mass_assault }
+			NOT = { has_tech = doctrine_mobile_warfare }
+		}
+		available = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = GBR_Root_Opinion_100
+					check_variable = { ROOT.relationship_with_britain > 99 }
+				}
+				custom_trigger_tooltip = {
+					tooltip = ITA_Root_Opinion_100
+					check_variable = { ROOT.relationship_with_italy > 99 }
+				}
+				custom_trigger_tooltip = {
+					tooltip = FRA_Root_Opinion_100
+					check_variable = { ROOT.relationship_with_france > 99 }
+				}
+			}
+			has_army_experience > 99.99
+		}
+		complete_effect = {
+			army_experience = -100
+			set_technology = { doctrine_grand_battle_plan = 1 }
+			custom_effect_tooltip = doctrine_grand_battle_plan.tt
+		}
+	}
+	Gain_Mass_Assault = {
+		icon = generic_army_support
+		ai_will_do = { base = 100 }
+
+		cost = 0
+		fire_only_once = yes
+
+		visible = {
+			has_tech = doctrine_large_depth_combat
+			has_tech = doctrine_mobile_annihilation
+			NOT = { has_tech = doctrine_superior_firepower }
+			NOT = { has_tech = doctrine_grand_battle_plan }
+			NOT = { has_tech = doctrine_mass_assault }
+			NOT = { has_tech = doctrine_mobile_warfare }
+		}
+		available = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = ITA_Root_Opinion_100
+					check_variable = { ROOT.relationship_with_italy > 99 }
+				}
+				custom_trigger_tooltip = {
+					tooltip = GER_Root_Opinion_100
+					check_variable = { ROOT.relationship_with_germany > 99 }
+				}
+				custom_trigger_tooltip = {
+					tooltip = RUS_Root_Opinion_100
+					check_variable = { ROOT.relationship_with_russia > 99 }
+				}
+			}
+			has_army_experience > 99.99
+		}
+		complete_effect = {
+			army_experience = -100
+			set_technology = { doctrine_mass_assault = 1 }
+			custom_effect_tooltip = doctrine_mass_assault.tt
+		}
+	}
+	Gain_Mobile_Warfare = {
+		icon = generic_army_support
+		ai_will_do = { base = 100 }
+
+		cost = 0
+		fire_only_once = yes
+
+		visible = {
+			has_tech = doctrine_stormtrooper
+			has_tech = doctrine_mobile_annihilation
+			NOT = { has_tech = doctrine_superior_firepower }
+			NOT = { has_tech = doctrine_grand_battle_plan }
+			NOT = { has_tech = doctrine_mass_assault }
+			NOT = { has_tech = doctrine_mobile_warfare }
+		}
+		available = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = GBR_Root_Opinion_100
+					check_variable = { ROOT.relationship_with_britain > 99 }
+				}
+				custom_trigger_tooltip = {
+					tooltip = USA_Root_Opinion_100
+					check_variable = { ROOT.relationship_with_america > 99 }
+				}
+				custom_trigger_tooltip = {
+					tooltip = FRA_Root_Opinion_100
+					check_variable = { ROOT.relationship_with_france > 99 }
+				}
+			}
+			has_army_experience > 99.99
+		}
+		complete_effect = {
+			army_experience = -100
+			set_technology = { doctrine_mobile_warfare = 1 }
+			custom_effect_tooltip = doctrine_mobile_warfare.tt
+		}
+	}
+	Gain_Modern_Warfare = {
+		icon = generic_army_support
+		ai_will_do = { base = 100 }
+
+		cost = 0
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_tech = doctrine_superior_firepower
+				has_tech = doctrine_grand_battle_plan
+				has_tech = doctrine_mass_assault
+				has_tech = doctrine_mobile_warfare
+			}
+			NOT = { has_tech = doctrine_modern_warfare }
+		}
+		available = {
+			has_army_experience > 99.99
+		}
+		complete_effect = {
+			army_experience = -100
+			set_technology = { doctrine_modern_warfare = 1 }
+			custom_effect_tooltip = doctrine_modern_warfare.tt
+		}
+	}
+}
+
+war_measures = {
+	Gain_Tankette = {
+		icon = generic_tank
+		ai_will_do = { factor = 500 }
+
+		cost = 0
+		days_remove = 90
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_completed_focus = Generic_Low_Level_Modern_Equipment
+				has_completed_focus = Shared_Low_Level_Modern_Equipment
+			}
+			NOT = { has_tech = tankette_equipment }
+		}
+		available = {
+			has_army_experience > 39.99
+		}
+		complete_effect = {
+			army_experience = -40
+		}
+		remove_effect = {
+			if = {
+				limit = { NOT = { has_tech = tankette_equipment } }
+				set_technology = { tankette_equipment = 1 }
+			}
+		}
+	}
+	Gain_Light_Tank = {
+		icon = generic_tank
+		ai_will_do = { factor = 150 }
+
+		cost = 0
+		days_remove = 90
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_completed_focus = Generic_Low_Level_Modern_Equipment
+				has_completed_focus = Shared_Low_Level_Modern_Equipment
+			}
+			has_tech = tankette_equipment
+			NOT = { has_tech = light_tank_equipment }
+		}
+		available = {
+			has_army_experience > 59.99
+		}
+		complete_effect = {
+			army_experience = -60	
+		}
+		remove_effect = {
+			if = {
+				limit = { NOT = { has_tech = light_tank_equipment } }
+				set_technology = { light_tank_equipment = 1 }
+			}
+		}
+	}
+	Gain_Medium_Tank = {
+		icon = generic_tank
+		ai_will_do = { factor = 50 }
+
+		cost = 0
+		days_remove = 90
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_completed_focus = Generic_Advanced_Modern_Equipment
+				has_completed_focus = Shared_Advanced_Modern_Equipment
+			}
+			has_tech = tankette_equipment
+			NOT = { has_tech = medium_tank_equipment }
+		}
+		available = {
+			has_army_experience > 69.99
+		}
+		complete_effect = {
+			army_experience = -70	
+		}
+		remove_effect = {
+			if = {
+				limit = { NOT = { has_tech = medium_tank_equipment } }
+				set_technology = { medium_tank_equipment = 1 }
+			}
+		}
+	}
+	Gain_Heavy_Tank = {
+		icon = generic_tank
+		ai_will_do = { factor = 0 }
+
+		cost = 0
+		days_remove = 90
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_completed_focus = Generic_Advanced_Modern_Equipment
+				has_completed_focus = Shared_Advanced_Modern_Equipment
+			}
+			OR = {
+				has_tech = light_tank_equipment
+				has_tech = medium_tank_equipment
+			}
+			NOT = { has_tech = heavy_tank_equipment }
+		}
+		available = {
+			has_army_experience > 99.99
+		}
+		complete_effect = {
+			army_experience = -100	
+		}
+		remove_effect = {
+			if = {
+				limit = { NOT = { has_tech = heavy_tank_equipment } }
+				set_technology = { heavy_tank_equipment = 1 }
+			}
+		}
+	}
+	Gain_Corvette = {
+		icon = generic_naval
+		ai_will_do = { factor = 300 }
+
+		cost = 0
+		days_remove = 90
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_completed_focus = Generic_Low_Level_Modern_Equipment
+				has_completed_focus = Shared_Low_Level_Modern_Equipment
+			}
+			NOT = { has_tech = corvette_equipment }
+		}
+		available = {
+			has_navy_experience > 39.99
+		}
+		complete_effect = {
+			navy_experience = -40
+		}
+		remove_effect = {
+			if = {
+				limit = { NOT = { has_tech = corvette_equipment } }
+				set_technology = { corvette_equipment = 1 }
+			}
+		}
+	}
+	Gain_Cruiser = {
+		icon = generic_naval
+		ai_will_do = { factor = 150 }
+
+		cost = 0
+		days_remove = 90
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_completed_focus = Generic_Low_Level_Modern_Equipment
+				has_completed_focus = Shared_Low_Level_Modern_Equipment
+			}
+			has_tech = corvette_equipment
+			NOT = { has_tech = cruiser_equipment }
+		}
+		available = {
+			has_navy_experience > 59.99
+		}
+		complete_effect = {
+			navy_experience = -60
+		}
+		remove_effect = {
+			if = {
+				limit = { NOT = { has_tech = cruiser_equipment } }
+				set_technology = { cruiser_equipment = 1 }
+			}
+		}
+	}
+	Gain_Submarine = {
+		icon = generic_naval
+		ai_will_do = { factor = 0 }
+
+		cost = 0
+		days_remove = 90
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_completed_focus = Generic_Low_Level_Modern_Equipment
+				has_completed_focus = Shared_Low_Level_Modern_Equipment
+			}
+			has_tech = corvette_equipment
+			NOT = { has_tech = submarine_equipment }
+		}
+		available = {
+			has_navy_experience > 49.99
+		}
+		complete_effect = {
+			navy_experience = -50
+		}
+		remove_effect = {
+			if = {
+				limit = { NOT = { has_tech = submarine_equipment } }
+				set_technology = { submarine_equipment = 1 }
+			}
+		}
+	}
+	Gain_Seaplane_Tender = {
+		icon = generic_naval
+		ai_will_do = { factor = 0 }
+
+		cost = 0
+		days_remove = 90
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_completed_focus = Generic_Advanced_Modern_Equipment
+				has_completed_focus = Shared_Advanced_Modern_Equipment
+			}
+			OR = {
+				has_tech = cruiser_equipment
+				has_tech = submarine_equipment
+			}
+			NOT = { has_tech = seaplane_tender_equipment }
+		}
+		available = {
+			has_navy_experience > 79.99
+		}
+		complete_effect = {
+			navy_experience = -80
+		}
+		remove_effect = {
+			if = {
+				limit = { NOT = { has_tech = seaplane_tender_equipment } }
+				set_technology = { seaplane_tender_equipment = 1 }
+			}
+		}
+	}
+	Gain_Battleship = {
+		icon = generic_naval
+		ai_will_do = { factor = 0 }
+
+		cost = 0
+		days_remove = 90
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_completed_focus = Generic_Advanced_Modern_Equipment
+				has_completed_focus = Shared_Advanced_Modern_Equipment
+			}
+			OR = {
+				has_tech = cruiser_equipment
+				has_tech = submarine_equipment
+			}
+			NOT = { has_tech = battleship_equipment }
+		}
+		available = {
+			has_navy_experience > 99.99
+		}
+		complete_effect = {
+			navy_experience = -100
+		}
+		remove_effect = {
+			if = {
+				limit = { NOT = { has_tech = battleship_equipment } }
+				set_technology = { battleship_equipment = 1 }
+			}
+		}
+	}
+	Gain_Fighter = {
+		icon = generic_air
+		ai_will_do = { factor = 400 }
+
+		cost = 0
+		days_remove = 90
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_completed_focus = Generic_Low_Level_Modern_Equipment
+				has_completed_focus = Shared_Low_Level_Modern_Equipment
+			}
+			NOT = { has_tech = fighter_equipment }
+		}
+		available = {
+			has_air_experience > 39.99
+		}
+		complete_effect = {
+			air_experience = -40
+		}
+		remove_effect = {
+			if = {
+				limit = { NOT = { has_tech = fighter_equipment } }
+				set_technology = { fighter_equipment = 1 }
+			}
+		}
+	}
+	Gain_Attacker = {
+		icon = generic_air
+		ai_will_do = { factor = 400 }
+
+		cost = 0
+		days_remove = 90
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_completed_focus = Generic_Low_Level_Modern_Equipment
+				has_completed_focus = Shared_Low_Level_Modern_Equipment
+			}
+			NOT = { has_tech = attacker_equipment }
+		}
+		available = {
+			has_air_experience > 39.99
+		}
+		complete_effect = {
+			air_experience = -40
+		}
+		remove_effect = {
+			if = {
+				limit = { NOT = { has_tech = attacker_equipment } }
+				set_technology = { attacker_equipment = 1 }
+			}
+		}
+	}
+	Gain_Bomber = {
+		icon = generic_air
+		ai_will_do = { factor = 50 }
+
+		cost = 0
+		days_remove = 90
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_completed_focus = Generic_Advanced_Modern_Equipment
+				has_completed_focus = Shared_Advanced_Modern_Equipment
+			}
+			OR = {
+				has_tech = fighter_equipment
+				has_tech = attacker_equipment
+			}
+			NOT = { has_tech = bomber_equipment }
+		}
+		available = {
+			has_air_experience > 59.99
+		}
+		complete_effect = {
+			air_experience = -60
+		}
+		remove_effect = {
+			if = {
+				limit = { NOT = { has_tech = bomber_equipment } }
+				set_technology = { bomber_equipment = 1 }
+			}
+		}
+	}
+}

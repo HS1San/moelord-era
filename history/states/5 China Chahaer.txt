@@ -1,0 +1,87 @@
+state = {
+	id = 5
+	name = "STATE_5"
+	manpower = 2000000
+	state_category = impoverished_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 2
+		rubber = 0
+		tungsten = 0
+		steel = 5
+		chromium = 0
+	}
+	history = {
+		owner = CCH
+		add_core_of = CCH
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = { 1590 2 }
+		victory_points = { 828 2 }
+	}
+	provinces = {
+		828 952 1137 1590 6904 9776 10397 13241
+	}
+}
+
+state = {
+	id = 6
+	name = "STATE_6"
+	manpower = 1470000
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 1
+		rubber = 0
+		tungsten = 3
+		steel = 1
+		chromium = 0
+	}
+	history = {
+		owner = CCH
+		add_core_of = CCH
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		victory_points = { 4495 1 }
+		victory_points = { 7158 1 }
+	}
+	provinces = {
+		1489 4495 7545 7674
+	}
+}
+
+state = {
+	id = 7
+	name = "STATE_7"
+	manpower = 566000
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 1
+		steel = 7
+		chromium = 10
+	}
+	history = {
+		owner = CCH
+		add_core_of = CCH
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 7648 1 }
+	}
+	provinces = {
+		1551 1608 1796 1811 1871 4222 4555 4612 7578 7648 10363 10372 11752 12348 12448 12554
+	}
+}

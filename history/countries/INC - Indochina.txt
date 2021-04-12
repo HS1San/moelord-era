@@ -1,0 +1,75 @@
+﻿capital = 146
+
+oob = "INC"
+
+set_country_flag = SH_OTH
+
+set_technology = {
+	rifle_equipment_0 = 1
+	support_class_equipment = 1
+	animal_combat_training = 1
+	military_police_0 = 1
+}
+
+add_ideas = {
+	Foreign_Power
+}
+
+set_convoys = 0
+set_research_slots = 1
+
+set_cosmetic_tag = Colonial_INC
+
+set_politics = {
+	ruling_party = Centrist
+	last_election = "1916.6.6"
+	election_frequency = 24
+	elections_allowed = no
+}
+
+set_popularities = {
+    Moderate_Leftist = 0
+    Moderate_Rightist = 0
+    Radical_Rightist = 0
+    Radical_Leftist = 0
+    Centrist = 100
+}
+create_all_leaders = yes
+
+create_country_leader = {
+	name = "Phan Boi Chau"
+	picture = "Portrait_Indochina_Phan_Boi_Chau.tga"
+	expire = "1936.1.1"
+	ideology = Moderate_Leftist_ideology
+	traits = {}
+}
+create_country_leader = {
+	name = "Phan Chau Trinh"
+	picture = "Portrait_Indochina_Phan_Chau_Trinh.tga"
+	expire = "1926.3.24"
+	ideology = Moderate_Rightist_ideology
+	traits = {}
+}
+create_country_leader = {
+	name = "Maurice Montguillot"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+	expire = "1936.1.1"
+	ideology =  Centrist_ideology
+	traits = {}
+}
+create_country_leader = {
+	name = "Ho Chi Minh"
+	picture = "Portrait_Indochina_Ho_Chi_Minh.tga"
+	expire = "1936.1.1"
+	ideology = Radical_Leftist_ideology
+	traits = {}
+}
+
+give_guarantee = CSH
+give_guarantee = CAO
+give_guarantee = PHL
+give_guarantee = SIA
+give_guarantee = GOA
+
+create_faction = French_Sphere
+add_to_faction = PON

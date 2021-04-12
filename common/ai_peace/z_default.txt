@@ -1,0 +1,680 @@
+default_peace = {
+	enable = { always = yes }
+
+	annex_randomness = 0 #350
+	liberate_randomness = 0 #100
+	puppet_randomness = 0 #200
+	take_states_randomness = 0 #150
+	force_government_randomness = 0 #50
+	
+	# ROOT = Taker, FROM = Giver
+	annex = {
+		factor = 500
+	}
+
+	# ROOT = Taker, FROM = Liberated
+	liberate = {
+		factor = 0
+	}
+
+	# ROOT = Taker, FROM = Giver
+	puppet = {
+		factor = 0
+	}
+
+	# ROOT = Taker, FROM = State
+	take_states = {
+		factor = 50
+		modifier = {
+			factor = 20
+			FROM = { is_core_of = ROOT }
+		}
+		modifier = {
+			factor = 10
+			FROM = {
+				NOT = { is_core_of = ROOT }
+				is_claimed_by = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = { is_not_claim_or_core_of_ROOT = yes }
+			ambition_area = yes
+		}
+		modifier = {
+			factor = 10
+			FROM = { is_important_state = yes }
+		}
+		modifier = {
+			factor = 10.0
+			FROM = {
+				num_owned_neighbour_states = { count > 0 owner = ROOT }
+			}
+		}
+		modifier = {
+			factor = 8.0
+			FROM = {
+				NOT = { num_owned_neighbour_states = { count > 0 owner = ROOT } }
+				num_claimed_peace_conference_neighbour_states = { count > 0 owner = ROOT }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				OR = {
+					num_owned_neighbour_states = { count > 1 owner = ROOT }
+					num_claimed_peace_conference_neighbour_states = { count > 1 owner = ROOT }
+					AND = {
+						num_owned_neighbour_states = { count > 0 owner = ROOT }
+						num_claimed_peace_conference_neighbour_states = { count > 0 owner = ROOT }
+					}
+				}
+				NOT = {
+					num_owned_neighbour_states = { count > 2 owner = ROOT }
+					num_claimed_peace_conference_neighbour_states = { count > 2 owner = ROOT }
+					AND = {
+						num_owned_neighbour_states = { count > 1 owner = ROOT }
+						num_claimed_peace_conference_neighbour_states = { count > 0 owner = ROOT }
+					}
+					AND = {
+						num_owned_neighbour_states = { count > 0 owner = ROOT }
+						num_claimed_peace_conference_neighbour_states = { count > 1 owner = ROOT }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 3.0
+			FROM = {
+				OR = {
+					num_owned_neighbour_states = { count > 2 owner = ROOT }
+					num_claimed_peace_conference_neighbour_states = { count > 2 owner = ROOT }
+					AND = {
+						num_owned_neighbour_states = { count > 1 owner = ROOT }
+						num_claimed_peace_conference_neighbour_states = { count > 0 owner = ROOT }
+					}
+					AND = {
+						num_owned_neighbour_states = { count > 0 owner = ROOT }
+						num_claimed_peace_conference_neighbour_states = { count > 1 owner = ROOT }
+					}
+				}
+				NOT = {
+					num_owned_neighbour_states = { count > 3 owner = ROOT }
+					num_claimed_peace_conference_neighbour_states = { count > 3 owner = ROOT }
+					AND = {
+						num_owned_neighbour_states = { count > 1 owner = ROOT }
+						num_claimed_peace_conference_neighbour_states = { count > 1 owner = ROOT }
+					}
+					AND = {
+						num_owned_neighbour_states = { count > 2 owner = ROOT }
+						num_claimed_peace_conference_neighbour_states = { count > 0 owner = ROOT }
+					}
+					AND = {
+						num_owned_neighbour_states = { count > 0 owner = ROOT }
+						num_claimed_peace_conference_neighbour_states = { count > 2 owner = ROOT }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 4.0
+			FROM = {
+				OR = {
+					num_owned_neighbour_states = { count > 3 owner = ROOT }
+					num_claimed_peace_conference_neighbour_states = { count > 3 owner = ROOT }
+					AND = {
+						num_owned_neighbour_states = { count > 1 owner = ROOT }
+						num_claimed_peace_conference_neighbour_states = { count > 1 owner = ROOT }
+					}
+					AND = {
+						num_owned_neighbour_states = { count > 2 owner = ROOT }
+						num_claimed_peace_conference_neighbour_states = { count > 0 owner = ROOT }
+					}
+					AND = {
+						num_owned_neighbour_states = { count > 0 owner = ROOT }
+						num_claimed_peace_conference_neighbour_states = { count > 2 owner = ROOT }
+					}
+				}
+				NOT = {
+					num_owned_neighbour_states = { count > 4 owner = ROOT }
+					num_claimed_peace_conference_neighbour_states = { count > 4 owner = ROOT }
+					AND = {
+						num_owned_neighbour_states = { count > 2 owner = ROOT }
+						num_claimed_peace_conference_neighbour_states = { count > 1 owner = ROOT }
+					}
+					AND = {
+						num_owned_neighbour_states = { count > 1 owner = ROOT }
+						num_claimed_peace_conference_neighbour_states = { count > 2 owner = ROOT }
+					}
+					AND = {
+						num_owned_neighbour_states = { count > 0 owner = ROOT }
+						num_claimed_peace_conference_neighbour_states = { count > 3 owner = ROOT }
+					}
+					AND = {
+						num_owned_neighbour_states = { count > 3 owner = ROOT }
+						num_claimed_peace_conference_neighbour_states = { count > 0 owner = ROOT }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 5.0
+			FROM = {
+				# has five or more neighboring states
+				OR = {
+					num_owned_neighbour_states = { count > 4 owner = ROOT }
+					num_claimed_peace_conference_neighbour_states = { count > 4 owner = ROOT }
+					AND = {
+						num_owned_neighbour_states = { count > 2 owner = ROOT }
+						num_claimed_peace_conference_neighbour_states = { count > 1 owner = ROOT }
+					}
+					AND = {
+						num_owned_neighbour_states = { count > 1 owner = ROOT }
+						num_claimed_peace_conference_neighbour_states = { count > 2 owner = ROOT }
+					}
+					AND = {
+						num_owned_neighbour_states = { count > 0 owner = ROOT }
+						num_claimed_peace_conference_neighbour_states = { count > 3 owner = ROOT }
+					}
+					AND = {
+						num_owned_neighbour_states = { count > 3 owner = ROOT }
+						num_claimed_peace_conference_neighbour_states = { count > 0 owner = ROOT }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.1
+			FROM = {
+				num_claimed_peace_conference_neighbour_states = { count > 0 owner = ROOT }
+			}
+		}
+		modifier = {
+			factor = 5.0
+			capital_scope = {
+				distance_to = { target = FROM value < 25 }
+			}
+		}
+		modifier = {
+			factor = 4.0
+			capital_scope = {
+				NOT = { distance_to = { target = FROM value < 25 } }
+				distance_to = { target = FROM value < 50 }
+			}
+		}
+		modifier = {
+			factor = 3.0
+			capital_scope = {
+				NOT = { distance_to = { target = FROM value < 50 } }
+				distance_to = { target = FROM value < 75 }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			capital_scope = {
+				NOT = { distance_to = { target = FROM value < 75 } }
+				distance_to = { target = FROM value < 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			capital_scope = {
+				NOT = { distance_to = { target = FROM value < 100 } }
+				distance_to = { target = FROM value < 150 }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				NOT = { distance_to = { target = FROM value < 150 } }
+				distance_to = { target = FROM value < 200 }
+			}
+		}
+		modifier = {
+			factor = 0.75
+			capital_scope = {
+				NOT = { distance_to = { target = FROM value > 400 } }
+				distance_to = { target = FROM value > 300 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = {
+				distance_to = { target = FROM value > 400 }
+			}
+		}
+		modifier = {
+			factor = 0.9
+			FROM = { state_and_terrain_strategic_value < 11 }
+		}
+		modifier = {
+			factor = 1.1
+			FROM = { state_and_terrain_strategic_value > 10 }
+		}
+		modifier = {
+			factor = 1.1
+			FROM = { state_and_terrain_strategic_value > 20 }
+		}
+		modifier = {
+			factor = 1.1
+			FROM = { state_and_terrain_strategic_value > 30 }
+		}
+		modifier = {
+			factor = 1.1
+			FROM = { state_and_terrain_strategic_value > 40 }
+		}
+		modifier = {
+			factor = 1.1
+			FROM = { state_and_terrain_strategic_value > 50 }
+		}
+		modifier = {
+			factor = 1.1
+			FROM = { state_and_terrain_strategic_value > 60 }
+		}
+		modifier = {
+			factor = 1.1
+			FROM = { state_and_terrain_strategic_value > 70 }
+		}
+		modifier = {
+			factor = 1.1
+			FROM = { state_and_terrain_strategic_value > 80 }
+		}
+		modifier = {
+			factor = 1.1
+			FROM = { state_and_terrain_strategic_value > 90 }
+		}
+		modifier = {
+			factor = 1.1
+			FROM = { state_and_terrain_strategic_value > 100 }
+		}
+		modifier = {
+			factor = 1.1
+			FROM = { state_and_terrain_strategic_value > 110 }
+		}
+		modifier = {
+			factor = 1.1
+			FROM = { state_and_terrain_strategic_value > 120 }
+		}
+		modifier = {
+			factor = 1.1
+			FROM = { state_and_terrain_strategic_value > 130 }
+		}
+		modifier = {
+			factor = 1.1
+			FROM = { state_and_terrain_strategic_value > 140 }
+		}
+		modifier = {
+			factor = 1.1
+			FROM = { state_and_terrain_strategic_value > 150 }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { is_controlled_by = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			FROM = {
+				NOT = { state_same_continent_as_ROOT = yes }
+				NOT = {
+					is_important_state = yes
+					num_owned_neighbour_states = { count > 0 owner = ROOT }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			FROM = {
+				state_same_continent_as_ROOT = yes
+				is_coastal = yes
+				NOT = {
+					is_important_state = yes
+					num_owned_neighbour_states = { count > 0 owner = ROOT }
+					num_claimed_peace_conference_neighbour_states = { count > 0 owner = ROOT }
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			is_subject = yes
+			overlord = { is_in_peace_conference = yes }
+			FROM = { is_not_claim_or_core_of_ROOT = yes }
+		}
+		modifier = {
+			factor = 0
+			is_actual_major = yes
+			FROM = { is_not_claim_or_core_of_ROOT = yes }
+			any_other_country = {
+				at_conference_no_war_with_ROOT = yes
+				OR = {
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+				FROM = {
+					is_claim_or_core_of_PREV = yes
+					NOT = { is_important_state = yes }
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			is_actual_major = yes
+			FROM = {
+				is_not_claim_or_core_of_ROOT = yes
+				NOT = { is_important_state = yes }
+			}
+			any_other_country = {
+				at_conference_no_war_with_ROOT = yes
+				ROOT = { has_opinion = { target = PREV value > 50 } }
+				NOT = {
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+				FROM = { is_claim_or_core_of_PREV = yes }
+			}
+			NOT = { ambition_area = yes }
+		}
+		modifier = {
+			factor = 0
+			NOT = { is_actual_major = yes }
+			FROM = { is_not_claim_or_core_of_ROOT = yes }
+			any_other_country = {
+				at_conference_no_war_with_ROOT = yes
+				FROM = { is_claim_or_core_of_PREV = yes }
+			}
+		}
+		modifier = {
+			factor = 0
+			FROM = { is_not_claim_or_core_of_ROOT = yes }
+			any_other_country = {
+				at_conference_no_war_with_ROOT = yes
+				is_in_faction_with = ROOT
+				FROM = { is_not_claim_or_core_of_PREV = yes }
+				ambition_area = yes
+			}
+			NOT = { ambition_area = yes }
+		}
+		modifier = {
+			factor = 0
+			NOT = { is_actual_major = yes }
+			FROM = { is_not_claim_or_core_of_ROOT = yes }
+			any_other_country = {
+				is_actual_major = yes
+				at_conference_no_war_with_ROOT = yes
+				is_in_faction_with = ROOT
+				FROM = { is_not_claim_or_core_of_PREV = yes }
+				ambition_area = yes
+			}
+			ambition_area = yes
+		}
+		modifier = {
+			factor = 0
+			restrict_territorial_ambitions = yes
+			NOT = {
+				ambition_area = yes
+				FROM = { is_claim_or_core_of_ROOT = yes }
+			}
+		}
+		modifier = {
+			factor = 0
+			FROM = {
+				NOT = {
+					is_claim_or_core_of_ROOT = yes
+					num_owned_neighbour_states = { count > 0 owner = ROOT }
+					num_claimed_peace_conference_neighbour_states = { count > 0 owner = ROOT }
+					AND = {
+						OR = {
+							is_island_state = yes
+							is_coastal = yes
+						}
+						ROOT = {
+							any_owned_state = { is_coastal = yes }
+						}
+					}
+				}
+			}
+			NOT = { ambition_area = yes }
+
+			# exception: we're unrestricted and there's nobody else who can take it
+			NOT = {
+				AND = {
+					NOT = { restrict_territorial_ambitions = yes }
+					NOT = {
+						any_other_country = {
+							at_conference_no_war_with_ROOT = yes
+							OR = {
+								ambition_area = yes
+								FROM = { is_claim_or_core_of_PREV = yes }
+								AND = {
+									NOT = { restrict_territorial_ambitions_PREV = yes }
+									FROM = {
+										OR = {
+											num_owned_neighbour_states = { count > 0 owner = PREV }
+											num_claimed_peace_conference_neighbour_states = { count > 0 owner = PREV }
+											AND = {
+												OR = {
+													is_island_state = yes
+													is_coastal = yes
+												}
+												PREV = {
+													any_owned_state = { is_coastal = yes }
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			FROM = {
+				NOT = {
+					num_owned_neighbour_states = { count > 0 owner = ROOT }
+					num_claimed_peace_conference_neighbour_states = { count > 0 owner = ROOT }
+					AND = {
+						OR = {
+							is_island_state = yes
+							is_coastal = yes
+						}
+						ROOT = {
+							any_owned_state = { is_coastal = yes }
+						}
+					}
+				}
+			}
+			OR = {
+				ambition_area = yes
+				FROM = { is_claim_or_core_of_ROOT = yes }
+			}
+			any_other_country = {
+				at_conference_no_war_with_ROOT = yes
+				OR = {
+					FROM = { is_claim_or_core_of_PREV = yes }
+					AND = {
+						ambition_area = yes
+						OR = {
+							is_actual_major = yes
+							ROOT = { NOT = { is_actual_major = yes } }
+							NOT = { is_in_faction_with = ROOT }
+						}
+						OR = {
+							is_actual_major = yes
+							FROM = { is_not_claim_or_core_of_ROOT = yes }
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			FROM = {
+				NOT = {
+					is_important_state = yes
+					num_owned_neighbour_states = { count > 0 owner = ROOT }
+					num_claimed_peace_conference_neighbour_states = { count > 0 owner = ROOT }
+				}
+			}
+			OR = {
+				ambition_area = yes
+				FROM = { is_claim_or_core_of_ROOT = yes }
+				NOT = { restrict_territorial_ambitions = yes }
+			}
+			any_other_country = {
+				at_conference_no_war_with_ROOT = yes
+				OR = {
+					NOT = { restrict_territorial_ambitions_PREV = yes }
+					FROM = { is_claim_or_core_of_PREV = yes }
+					AND = {
+						ambition_area = yes
+						OR = {
+							is_actual_major = yes
+							ROOT = { NOT = { is_actual_major = yes } }
+							NOT = { is_in_faction_with = ROOT }
+						}
+						OR = {
+							is_actual_major = yes
+							FROM = { is_not_claim_or_core_of_ROOT = yes }
+						}
+					}
+				}
+				# exceptions: look for states the other country won't take, even if they can
+				NOT = {
+					AND = {
+						is_actual_major = yes
+						NOT = { has_war_with = ROOT }
+						OR = {
+							is_in_faction_with = ROOT
+							ROOT = { is_subject_of = PREV }
+						}
+						FROM = {
+							is_not_claim_or_core_of_PREV = yes
+							is_claim_or_core_of_ROOT = yes
+							NOT = { is_important_state = yes }
+						}
+					}
+					AND = {
+						is_actual_major = yes
+						FROM = {
+							is_claim_or_core_of_ROOT = yes
+							is_not_claim_or_core_of_PREV = yes
+							NOT = { is_important_state = yes }
+						}
+						has_opinion = { target = ROOT value > 50 }
+						NOT = {
+							has_war_with = ROOT
+							is_in_faction_with = ROOT
+							ROOT = { is_subject_of = PREV }
+							ambition_area = yes
+						}
+					}
+					AND = {
+						NOT = { is_actual_major = yes }
+						FROM = { is_not_claim_or_core_of_PREV = yes }
+						NOT = { has_war_with = ROOT }
+						FROM = { is_claim_or_core_of_ROOT = yes }
+					}
+					AND = {
+						FROM = {
+							is_not_claim_or_core_of_ROOT = yes
+							is_not_claim_or_core_of_PREV = yes
+						}
+						is_in_faction_with = ROOT
+						ROOT = { ambition_area = yes }
+						NOT = {
+							has_war_with = ROOT
+							ambition_area = yes
+						}
+					}
+					AND = {
+						NOT = {
+							is_actual_major = yes
+							has_war_with = ROOT
+						}
+						FROM = {
+							is_not_claim_or_core_of_ROOT = yes
+							is_not_claim_or_core_of_PREV = yes
+						}
+						is_in_faction_with = ROOT
+						ROOT = {
+							is_actual_major = yes
+							ambition_area = yes
+						}
+						ambition_area = yes
+					}
+				}
+				FROM = {
+					OR = {
+						num_owned_neighbour_states = { count > 0 owner = PREV }
+						num_claimed_peace_conference_neighbour_states = { count > 0 owner = PREV }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			FROM = {
+				NOT = {
+					is_claim_or_core_of_ROOT = yes
+					state_same_continent_as_ROOT = yes
+				}
+			}
+			NOT = { ambition_area = yes }
+			any_other_country = {
+				at_conference_no_war_with_ROOT = yes
+				same_continent_as_state_FROM = yes
+				OR = {
+					AND = {
+						is_actual_major = yes
+						NOT = { restrict_territorial_ambitions_PREV = yes }
+					}
+					ambition_area = yes
+					FROM = { is_claim_or_core_of_PREV = yes }
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			FROM = {
+				is_not_claim_or_core_of_ROOT = yes
+				OR = {
+					is_island_state = yes
+				}
+				NOT = {
+					is_controlled_by = ROOT
+					controller = { is_in_faction_with = ROOT }
+					ROOT = {
+						any_owned_state = {
+							is_coastal = yes
+							distance_to = { target = FROM value < 100 }
+						}
+					}
+				}
+			}
+			NOT = { ambition_area = yes }
+			any_other_country = {
+				at_conference_no_war_with_ROOT = yes
+				OR = {
+					NOT = { restrict_territorial_ambitions_PREV = yes }
+					FROM = { is_claim_or_core_of_PREV = yes }
+					ambition_area = yes
+				}
+				OR = {
+					controls_state = FROM
+					any_allied_country = { controls_state = FROM }
+					any_owned_state = {
+						is_coastal = yes
+						distance_to = { target = FROM value < 100 }
+					}
+				}
+			}
+		}
+	}
+
+	# ROOT = Taker, FROM = Giver
+	force_government = {
+		factor = 0
+	}
+}

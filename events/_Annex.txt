@@ -1,0 +1,2269 @@
+﻿add_namespace = new_Annex
+
+country_event = {
+	id = new_Annex.1
+	title = new_Annex.1.t
+	desc = new_Annex.1.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Annex.1.a
+		every_state = {
+			limit = {
+				OR = {
+					region = 6
+					region = 42
+					region = 43
+				}
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CFT = { transfer_state = PREV }
+		}
+		CFT = {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		puppet = CFT
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CFT = {
+				create_country_leader = {
+					name = "Duan Zhigui"	# 段芝贵
+					picture = "gfx/leaders/China/Portrait_China_Duan_Zhigui.tga"
+					expire = "1925.3.22"
+					ideology = Centrist_ideology
+					traits = {
+						inexperienced_imperialist
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CFT = {
+				create_country_leader = {
+					name = "Wu Jinglian"	# 吴景濂
+					picture = "gfx/leaders/China/Portrait_China_Wu_Jinglian.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {
+						indecisive
+					}
+				}
+			}
+		}
+		ai_chance = { factor = 30 }
+	}
+	option = {
+		name = new_Annex.1.b
+		trigger = {
+			OR = {
+				CHJ = { exists = no }
+				CJL = { exists = no }
+			}
+		}
+		every_state = {
+			limit = {
+				region = 6
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CFT = { transfer_state = PREV }
+		}
+		puppet = CFT
+		CFT = {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CFT = {
+				create_country_leader = {
+					name = "Duan Zhigui"	# 段芝贵
+					picture = "gfx/leaders/China/Portrait_China_Duan_Zhigui.tga"
+					expire = "1925.3.22"
+					ideology = Centrist_ideology
+					traits = {
+						inexperienced_imperialist
+					}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 3 }
+					set_nationality = CFT
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CFT = {
+				create_country_leader = {
+					name = "Wu Jinglian"	# 吴景濂
+					picture = "gfx/leaders/China/Portrait_China_Wu_Jinglian.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {
+						indecisive
+					}
+				}
+			}
+		}
+		if = {
+			limit = { CHJ = { exists = no } }
+			every_state = {
+				limit = {
+					region = 43
+					is_owned_by = ROOT
+					NOT = { is_core_of = ROOT }
+				}
+				CHJ = { transfer_state = PREV }
+			}
+			CHJ = {
+				drop_cosmetic_tag = yes
+				retire_country_leader = yes
+				clr_country_flag = Anhui_Member
+				clr_country_flag = Zhili_Member
+				clr_country_flag = Fengtian_Member
+				clr_country_flag = Old_Anhui_Member
+				clr_country_flag = Old_Zhili_Member
+				clr_country_flag = Old_Fengtian_Member
+			}
+			puppet = CHJ
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = Anhui_Member
+						has_country_flag = Old_Anhui_Member
+					}
+				}
+				CHJ = {
+					create_country_leader = {
+						name = "Liu Enge"	# 刘恩格
+						picture = "gfx/leaders/China/Portrait_China_Liu_Enge.tga"
+						expire = "1936.1.1"
+						ideology = Centrist_ideology
+						traits = {
+							silent_workhorse
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = Zhili_Member
+						has_country_flag = Old_Zhili_Member
+					}
+				}
+				CHJ = {
+					create_country_leader = {
+						name = "Bi Guifang"	# 毕桂芳
+						picture = "gfx/leaders/China/Portrait_China_Bi_Guifang.tga"
+						expire = "1936.1.1"
+						ideology = Centrist_ideology
+						traits = {
+							silent_workhorse
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = { CJL = { exists = no } }
+			every_state = {
+				limit = {
+					region = 42
+					is_owned_by = ROOT
+					NOT = { is_core_of = ROOT }
+				}
+				CJL = { transfer_state = PREV }
+			}
+			CJL = {
+				drop_cosmetic_tag = yes
+				retire_country_leader = yes
+				clr_country_flag = Anhui_Member
+				clr_country_flag = Zhili_Member
+				clr_country_flag = Fengtian_Member
+				clr_country_flag = Old_Anhui_Member
+				clr_country_flag = Old_Zhili_Member
+				clr_country_flag = Old_Fengtian_Member
+			}
+			puppet = CJL
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = Anhui_Member
+						has_country_flag = Old_Anhui_Member
+					}
+				}
+				CJL = {
+					create_country_leader = {
+						name = "Wang Jitang"	# 王揖唐
+						picture = "gfx/leaders/China/Portrait_China_Wang_Jitang.tga"
+						expire = "1936.1.1"
+						ideology = Centrist_ideology
+						traits = {
+							silent_workhorse
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = Zhili_Member
+						has_country_flag = Old_Zhili_Member
+					}
+				}
+				CJL = {
+					create_country_leader = {
+						name = "Meng Enyuan"	# 孟恩远
+						picture = "gfx/leaders/China/Portrait_China_Meng_Enyuan.tga"
+						expire = "1933.1.1"
+						ideology = Centrist_ideology
+						traits = {
+							silent_workhorse
+						}
+					}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 62 }
+					set_nationality = CJL
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		ai_chance = { factor = 70 }
+	}
+	option = {
+		name = new_Annex.1.c
+		trigger = { is_ai = no }
+		add_political_power = -150
+		add_stability = -0.15
+		add_war_support = -0.15
+	}
+}
+
+country_event = {
+	id = new_Annex.2
+	title = new_Annex.2.t
+	desc = new_Annex.2.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Annex.2.a
+		every_state = {
+			limit = {
+				region = 27
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CAH = { transfer_state = PREV }
+		}
+		CAH = {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		puppet = CAH
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CAH = {
+				create_country_leader = {
+					name = "Xu Shiying"	# 许世英
+					picture = "gfx/leaders/China/Portrait_China_Xu_Shiying.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {
+						silent_workhorse
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CAH = {
+				create_country_leader = {
+					name = "Chen Diaoyuan"	# 陈调元
+					picture = "gfx/leaders/China/Portrait_China_Chen_Diaoyuan.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {
+						silent_workhorse
+					}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 71 }
+					set_nationality = CAH
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Fengtian_Member
+					has_country_flag = Old_Fengtian_Member
+				}
+			}
+			CAH = {
+				create_country_leader = {
+					name = "Zhang Wensheng"	# 张文生
+					picture = "gfx/leaders/China/Portrait_China_Zhang_Wensheng.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {
+						silent_workhorse
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = new_Annex.2.b
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = {
+	id = new_Annex.3
+	title = new_Annex.3.t
+	desc = new_Annex.3.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Annex.3.a
+		every_state = {
+			limit = {
+				region = 24
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CCH = { transfer_state = PREV }
+		}
+		CCH = {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		puppet = CCH
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CCH = {
+				create_country_leader = {
+					name = "Tian Zhongyu"	# 田中玉
+					picture = "gfx/leaders/China/Portrait_China_Tian_Zhongyu.tga"
+					expire = "1935.7.1"
+					ideology = Centrist_ideology
+					traits = {
+						silent_workhorse
+					}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 8 }
+					set_nationality = CCH
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CCH = {
+				create_country_leader = {
+					name = "Zhang Xiyuan"	# 张锡元
+					picture = "gfx/leaders/China/Portrait_China_Zhang_Xiyuan.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {
+						silent_workhorse
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = new_Annex.3.b
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = {
+	id = new_Annex.4
+	title = new_Annex.4.t
+	desc = new_Annex.4.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Annex.4.a
+		every_state = {
+			limit = {
+				region = 32
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CFJ = { transfer_state = PREV }
+		}
+		CFJ = {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		puppet = CFJ
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CFJ = {
+				create_country_leader = {
+					name = "Li Houji"	# 李厚基
+					picture = "gfx/leaders/China/Portrait_China_Li_Houji.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {
+						silent_workhorse
+					}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 9 }
+					set_nationality = CFJ
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CFJ = {
+				create_country_leader = {
+					name = "Zhou Mengren"	# 周荫人
+					picture = "gfx/leaders/China/Portrait_China_Zhou_Mengren.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {
+						silent_workhorse
+					}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 73 }
+					set_nationality = CFJ
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Fengtian_Member
+					has_country_flag = Old_Fengtian_Member
+				}
+			}
+			CFJ = {
+				create_country_leader = {
+					name = "Liang Hongzhi"	# 梁鸿志
+					picture = "gfx/leaders/China/Portrait_China_Liang_Hongzhi.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {
+						silent_workhorse
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = new_Annex.4.b
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = {
+	id = new_Annex.5
+	title = new_Annex.5.t
+	desc = new_Annex.5.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Annex.5.a
+		every_state = {
+			limit = {
+				region = 36
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CGD = { transfer_state = PREV }
+		}
+		CGD = {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		puppet = CGD
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CGD = {
+				create_country_leader = {
+					name = "Li Guojun"	# 李国筠
+					picture = "gfx/leaders/China/Portrait_China_Li_Guojun.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CGD = {
+				create_country_leader = {
+					name = "Wang Chonghui"	# 王宠惠
+					picture = "gfx/leaders/China/Portrait_China_Wang_Chonghui.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Fengtian_Member
+					has_country_flag = Old_Fengtian_Member
+				}
+			}
+			CGD = {
+				create_country_leader = {
+					name = "Liang Shiyi"	# 梁士诒
+					picture = "gfx/leaders/China/Portrait_China_Liang_Shiyi.tga"
+					expire = "1933.4.9"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+	}
+	option = {
+		name = new_Annex.5.b
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = {
+	id = new_Annex.6
+	title = new_Annex.6.t
+	desc = new_Annex.6.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Annex.6.a
+		every_state = {
+			limit = {
+				region = 37
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CGX = { transfer_state = PREV }
+		}
+		CGX = {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		puppet = CGX
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CGX = {
+				create_country_leader = {
+					name = "Huang Guanghua"	# 黄光华
+					picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CGX = {
+				create_country_leader = {
+					name = "Ma Ji"	# 马济
+					picture = "gfx/leaders/China/Portrait_China_Ma_Ji.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 34 }
+					set_nationality = CGX
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Fengtian_Member
+					has_country_flag = Old_Fengtian_Member
+				}
+			}
+			CGX = {
+				create_country_leader = {
+					name = "Lin Hu"	# 林虎
+					picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_2.dds"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 177 }
+					set_nationality = CGX
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = new_Annex.6.b
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = {
+	id = new_Annex.7
+	title = new_Annex.7.t
+	desc = new_Annex.7.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Annex.7.a
+		every_state = {
+			limit = {
+				region = 29
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CHB = { transfer_state = PREV }
+		}
+		CHB = {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		puppet = CHB
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CHB = {
+				create_country_leader = {
+					name = "Zheng Wanzhan"	# 郑万瞻
+					picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CHB = {
+				create_country_leader = {
+					name = "Wang Zhanyuan"	# 王占元
+					picture = "gfx/leaders/China/Portrait_China_Wang_Zhanyuan.tga"
+					expire = "1934.9.14"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 48 }
+					set_nationality = CHB
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Fengtian_Member
+					has_country_flag = Old_Fengtian_Member
+				}
+			}
+			CHB = {
+				create_country_leader = {
+					name = "Qi Yaoshan"	# 齐耀珊
+					picture = "gfx/leaders/China/Portrait_China_Qi_Yaoshan.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+	}
+	option = {
+		name = new_Annex.7.b
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = {
+	id = new_Annex.8
+	title = new_Annex.8.t
+	desc = new_Annex.8.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Annex.8.a
+		every_state = {
+			limit = {
+				region = 28
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CHE = { transfer_state = PREV }
+		}
+		CHE= {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		puppet = CHE
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CHE = {
+				create_country_leader = {
+					name = "Wang Yinchuan"	# 王印川
+					picture = "gfx/leaders/China/Portrait_China_Wang_Yinchuan.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CHE = {
+				create_country_leader = {
+					name = "Zhang Fulai"	# 张福来
+					picture = "gfx/leaders/China/Portrait_China_Zhang_Fulai.tga"
+					expire = "1925.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 137 }
+					set_nationality = CHE
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Fengtian_Member
+					has_country_flag = Old_Fengtian_Member
+				}
+			}
+			CHE = {
+				create_country_leader = {
+					name = "Qi Yaolin"	# 齐耀琳
+					picture = "gfx/leaders/China/Portrait_China_Qi_Yaolin.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+	}
+	option = {
+		name = new_Annex.8.b
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = {
+	id = new_Annex.9
+	title = new_Annex.9.t
+	desc = new_Annex.9.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Annex.9.a
+		every_state = {
+			limit = {
+				region = 35
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CHN = { transfer_state = PREV }
+		}
+		CHN= {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		puppet = CHN
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CHN = {
+				create_country_leader = {
+					name = "Zhang Jingyao"	# 张敬尧
+					picture = "gfx/leaders/China/Portrait_China_Zhang_Jingyao.tga"
+					expire = "1933.5.7"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 53 }
+					set_nationality = CHN
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CHN = {
+				create_country_leader = {
+					name = "Xiao Yaonan"	# 萧耀南
+					picture = "gfx/leaders/China/Portrait_China_Xiao_Yaonan.tga"
+					expire = "1926.2.14"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 217 }
+					set_nationality = CHN
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Fengtian_Member
+					has_country_flag = Old_Fengtian_Member
+				}
+			}
+			CHN = {
+				create_country_leader = {
+					name = "Zhao Hengti"	# 赵恒惕
+					picture = "gfx/leaders/China/Portrait_China_Zhao_Hengti.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 205 }
+					set_nationality = CHN
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = new_Annex.9.b
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = {
+	id = new_Annex.10
+	title = new_Annex.10.t
+	desc = new_Annex.10.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Annex.10.a
+		every_state = {
+			limit = {
+				region = 3
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CJS = { transfer_state = PREV }
+		}
+		CJS= {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		puppet = CJS
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CJS = {
+				create_country_leader = {
+					name = "Jiang Shaojie"	# 江绍杰
+					picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+					expire = "1932.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CJS = {
+				create_country_leader = {
+					name = "Qi Xieyuan"	# 齐燮元
+					picture = "gfx/leaders/China/Portrait_China_Qi_Xieyuan.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 132 }
+					set_nationality = CJS
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Fengtian_Member
+					has_country_flag = Old_Fengtian_Member
+				}
+			}
+			CJS = {
+				create_country_leader = {
+					name = "Ren Fengbao"	# 任凤苞
+					picture = "gfx/leaders/China/Portrait_China_Ren_Fengbao.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+	}
+	option = {
+		name = new_Annex.10.b
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = {
+	id = new_Annex.11
+	title = new_Annex.11.t
+	desc = new_Annex.11.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Annex.11.a
+		every_state = {
+			limit = {
+				region = 34
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CJX = { transfer_state = PREV }
+		}
+		CJX= {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		puppet = CJX
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CJX = {
+				create_country_leader = {
+					name = "Li Shengduo"	# 李盛铎
+					picture = "gfx/leaders/China/Portrait_China_Li_Shengduo.tga"
+					expire = "1934.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CJX = {
+				create_country_leader = {
+					name = "Chen Guangyuan"	# 陈光远
+					picture = "gfx/leaders/China/Portrait_China_Chen_Guangyuan.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 75 }
+					set_nationality = CJX
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Fengtian_Member
+					has_country_flag = Old_Fengtian_Member
+				}
+			}
+			CJX = {
+				create_country_leader = {
+					name = "Fang Benren"	# 方本仁
+					picture = "gfx/leaders/China/Portrait_China_Fang_Benren.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+	}
+	option = {
+		name = new_Annex.11.b
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = {
+	id = new_Annex.12
+	title = new_Annex.12.t
+	desc = new_Annex.12.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Annex.12.a
+		every_state = {
+			limit = {
+				region = 22
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CRH = { transfer_state = PREV }
+		}
+		CRH= {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		puppet = CRH
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CRH = {
+				create_country_leader = {
+					name = "Jiang Guiti"	# 姜桂题
+					picture = "gfx/leaders/China/Portrait_China_Jiang_Guiti.tga"
+					expire = "1922.1.17"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 86 }
+					set_nationality = CRH
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CRH = {
+				create_country_leader = {
+					name = "Wang Huaiqing"	# 王怀庆
+					picture = "gfx/leaders/China/Portrait_China_Wang_Huaiqing.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+	}
+	option = {
+		name = new_Annex.12.b
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = {
+	id = new_Annex.13
+	title = new_Annex.13.t
+	desc = new_Annex.13.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Annex.13.a
+		every_state = {
+			limit = {
+				region = 30
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CSA = { transfer_state = PREV }
+		}
+		CSA= {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		puppet = CSA
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CSA = {
+				create_country_leader = {
+					name = "Chen Shufan"	# 陈树藩
+					picture = "gfx/leaders/China/Portrait_China_Chen_Shufan.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CSA = {
+				create_country_leader = {
+					name = "Yan Xiangwen"	# 阎相文
+					picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+					expire = "1921.8.22"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 216 }
+					set_nationality = CSA
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Fengtian_Member
+					has_country_flag = Old_Fengtian_Member
+				}
+			}
+			CSA = {
+				create_country_leader = {
+					name = "Xu Lanzhou"	# 许兰洲
+					picture = "gfx/leaders/China/Portrait_China_Xu_Lanzhou.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+	}
+	option = {
+		name = new_Annex.13.b
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = {
+	id = new_Annex.14
+	title = new_Annex.14.t
+	desc = new_Annex.14.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Annex.14.a
+		every_state = {
+			limit = {
+				region = 26
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CSD = { transfer_state = PREV }
+		}
+		CSD = {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		puppet = CSD
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CSD = {
+				create_country_leader = {
+					name = "Zhang Shuyuan"	# 张树元
+					picture = "gfx/leaders/China/Portrait_China_Zhang_Shuyuan.tga"
+					expire = "1934.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 99 }
+					set_nationality = CSD
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CSD = {
+				create_country_leader = {
+					name = "Zhang Huaizhi"	# 张怀芝
+					picture = "gfx/leaders/China/Portrait_China_Zhang_Huaizhi.tga"
+					expire = "1934.10.10"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Fengtian_Member
+					has_country_flag = Old_Fengtian_Member
+				}
+			}
+			CSD = {
+				create_country_leader = {
+					name = "Zhang Zongchang"	# 张宗昌
+					picture = "gfx/leaders/China/Portrait_China_Zhang_Zongchang.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 100 }
+					set_nationality = CSD
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = new_Annex.14.b
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = {
+	id = new_Annex.15
+	title = new_Annex.15.t
+	desc = new_Annex.15.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Annex.15.a
+		every_state = {
+			limit = {
+				region = 25
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CSX = { transfer_state = PREV }
+		}
+		CSX = {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		puppet = CSX
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CSX = {
+				create_country_leader = {
+					name = "Tian Yinghuang"	# 田应璜
+					picture = "gfx/leaders/China/Portrait_China_Tian_Yinghuang.tga"
+					expire = "1927.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CSX = {
+				create_country_leader = {
+					name = "Shang Zhen"	# 商震
+					picture = "gfx/leaders/China/Portrait_China_Shang_Zhen.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 104 }
+					set_nationality = CSX
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Fengtian_Member
+					has_country_flag = Old_Fengtian_Member
+				}
+			}
+			CSX = {
+				create_country_leader = {
+					name = "Guo Songling"	# 郭松龄
+					picture = "gfx/leaders/China/Portrait_China_Guo_Songling.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 12 }
+					set_nationality = CSX
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = new_Annex.15.b
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = {
+	id = new_Annex.16
+	title = new_Annex.16.t
+	desc = new_Annex.16.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Annex.16.a
+		every_state = {
+			limit = {
+				region = 23
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CSY = { transfer_state = PREV }
+		}
+		CSY = {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		puppet = CSY
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CSY = {
+				create_country_leader = {
+					name = "Zhang Benyu"	# 张本禹
+					picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CSY = {
+				create_country_leader = {
+					name = "Cai Chengxun"	# 蔡成勋
+					picture = "gfx/leaders/China/Portrait_China_Cai_Chengxun.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 108 }
+					set_nationality = CSY
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = new_Annex.16.b
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = {
+	id = new_Annex.17
+	title = new_Annex.17.t
+	desc = new_Annex.17.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Annex.17.a
+		every_state = {
+			limit = {
+				region = 4
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CZJ = { transfer_state = PREV }
+		}
+		CZJ = {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		puppet = CZJ
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CZJ = {
+				create_country_leader = {
+					name = "Lu Yongxiang"	# 卢永祥
+					picture = "gfx/leaders/China/Portrait_China_Lu_Yongxiang.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 227 }
+					set_nationality = CZJ
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CZJ = {
+				create_country_leader = {
+					name = "Lu Xiangting"	# 卢香亭
+					picture = "gfx/leaders/China/Portrait_China_Lu_Xiangting.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 69 }
+					set_nationality = CZJ
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Fengtian_Member
+					has_country_flag = Old_Fengtian_Member
+				}
+			}
+			CZJ = {
+				create_country_leader = {
+					name = "Zhang Hu"	# 张弧
+					picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+	}
+	option = {
+		name = new_Annex.17.b
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = {
+	id = new_Annex.18
+	title = new_Annex.18.t
+	desc = new_Annex.18.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Annex.18.a
+		every_state = {
+			limit = {
+				region = 31
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CSC = { transfer_state = PREV }
+		}
+		CSC = {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		puppet = CSC
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CSC = {
+				create_country_leader = {
+					name = "Wu Guangxin"	# 吴光新
+					picture = "gfx/leaders/China/Portrait_China_Wu_Guangxin.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CSC = {
+				create_country_leader = {
+					name = "Yang Sen"	# 杨森
+					picture = "gfx/leaders/China/Portrait_China_Yang_Sen.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 98 }
+					set_nationality = CSC
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Fengtian_Member
+					has_country_flag = Old_Fengtian_Member
+				}
+			}
+			CSC = {
+				create_country_leader = {
+					name = "Liu Cunhou"	# 刘存厚
+					picture = "gfx/leaders/China/Portrait_China_Liu_Cunhou.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 89 }
+					set_nationality = CSC
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = new_Annex.18.b
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = {
+	id = new_Annex.19
+	title = new_Annex.19.t
+	desc = new_Annex.19.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Annex.19.a
+		every_state = {
+			limit = {
+				region = 38
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CGZ = { transfer_state = PREV }
+		}
+		CGZ = {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		puppet = CGZ
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CGZ = {
+				create_country_leader = {
+					name = "Liu Xianshi"	# 刘显世
+					picture = "gfx/leaders/China/Portrait_China_Liu_Xianshi.tga"
+					expire = "1927.10.14"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+				global_every_army_leader = {
+					limit = { has_id = 46 }
+					set_nationality = CGZ
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CGZ = {
+				create_country_leader = {
+					name = "Xie Hongxun"	# 谢鸿勋
+					picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Fengtian_Member
+					has_country_flag = Old_Fengtian_Member
+				}
+			}
+			CGZ = {
+				create_country_leader = {
+					name = "Zhu Qiqian"	# 朱启钤
+					picture = "gfx/leaders/China/Portrait_China_Zhu_Qiqian.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+	}
+	option = {
+		name = new_Annex.19.b
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = {
+	id = new_Annex.20
+	title = new_Annex.20.t
+	desc = new_Annex.20.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Annex.20.a
+		every_state = {
+			limit = {
+				region = 39
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			CYN = { transfer_state = PREV }
+		}
+		CYN = {
+			drop_cosmetic_tag = yes
+			retire_country_leader = yes
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+		}
+		puppet = CYN
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Old_Anhui_Member
+				}
+			}
+			CYN = {
+				create_country_leader = {
+					name = "Li Jingxi"	# 李经羲
+					picture = "gfx/leaders/China/Portrait_China_Li_Jingxi.tga"
+					expire = "1925.9.18"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Zhili_Member
+					has_country_flag = Old_Zhili_Member
+				}
+			}
+			CYN = {
+				create_country_leader = {
+					name = "Yang Chisheng"	# 杨池生
+					picture = "gfx/leaders/China/Portrait_China_Yang_Chisheng.tga"
+					expire = "1936.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = Fengtian_Member
+					has_country_flag = Old_Fengtian_Member
+				}
+			}
+			CYN = {
+				create_country_leader = {
+					name = "Zheng Qian"	# 郑谦
+					picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+					expire = "1929.1.1"
+					ideology = Centrist_ideology
+					traits = {}
+				}
+			}
+		}
+	}
+	option = {
+		name = new_Annex.20.b
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}

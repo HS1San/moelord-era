@@ -1,0 +1,219 @@
+﻿generic = {
+	infantry = {
+		prefix = ""
+		generic = { "Infantry Division" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	cavalry = {
+		prefix = ""
+		generic = { "Cavalry Division" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	mounted_infantry = {
+		prefix = ""
+		generic = { "Cavalry Division" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	assault_battalion = {
+		prefix = ""
+		generic = { "Assault Battalion" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	engineer = {
+		prefix = ""
+		generic = { "Engineer Company" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	recon = {
+		prefix = ""
+		generic = { "Recon Company" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	military_police = {
+		prefix = ""
+		generic = { "Police Company" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	maintenance_company = {
+		prefix = ""
+		generic = { "Maintenance Company" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	field_hospital = {
+		prefix = ""
+		generic = { "Field Hospital" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	logistics_company = {
+		prefix = ""
+		generic = { "Logistics Company" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	mountaineers = {
+		prefix = ""
+		generic = { "Mountain Division" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	marine = {
+		prefix = ""
+		generic = { "Marine Division" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	forest_infantry = {
+		prefix = ""
+		generic = { "Forest Infantry Division" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	desert_infantry = {
+		prefix = ""
+		generic = { "Desert Infantry Division" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	jungle_infantry = {
+		prefix = ""
+		generic = { "Jungle Infantry Division" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	signal_company = {
+		prefix = ""
+		generic = { "Signal Company" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	cannon = {
+		prefix = ""
+		generic = { "Cannon Brigade" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	cannon_brigade = {
+		prefix = ""
+		generic = { "Cannon Brigade" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	howitzer = {
+		prefix = ""
+		generic = { "Howitzer Brigade" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	howitzer_brigade = {
+		prefix = ""
+		generic = { "Howitzer Brigade" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	mortar = {
+		prefix = ""
+		generic = { "Mortar Brigade" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	mortar_brigade = {
+		prefix = ""
+		generic = { "Mortar Brigade" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	bicycle_battalion = {
+		prefix = ""
+		generic = { "Bicycle Battalion" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	tankette = {
+		prefix = ""
+		generic = { "Tankette Brigade" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	light_tank = {
+		prefix = ""
+		generic = { "Light Tank Brigade" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	medium_tank = {
+		prefix = ""
+		generic = { "Medium Tank Brigade" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	heavy_tank = {
+		prefix = ""
+		generic = { "Heavy Tank Brigade" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	torpedo_boat = {
+		prefix = ""
+		generic = { "Torpedo Boat" }
+		unique = {}
+	}
+	corvette = {
+		prefix = ""
+		generic = { "Corvette" }
+		unique = {}
+	}
+	cruiser = {
+		prefix = ""
+		generic = { "Cruiser" }
+		unique = {}
+	}
+	seaplane_tender = {
+		prefix = ""
+		generic = { "Seaplane Tender" }
+		unique = {}
+	}
+	battleship = {
+		prefix = ""
+		generic = { "Battleship" }
+		unique = {}
+	}
+	submarine = {
+		prefix = ""
+		generic = { "Submarine" }
+		unique = {}
+	}
+	air_wing_names_template = AIR_WING_NAME_CHI_FALLBACK
+	fighter_equipment = {
+		prefix = ""
+		generic = { "Fighter Group" }
+		generic_pattern = AIR_WING_NAME_CHI_GENERIC
+		unique = {}
+	}
+	attacker_equipment = {
+		prefix = ""
+		generic = { "Attacker Group" }
+		generic_pattern = AIR_WING_NAME_CHI_GENERIC
+		unique = {}
+	}
+	bomber_equipment = {
+		prefix = ""
+		generic = { "Bomber Group" }
+		generic_pattern = AIR_WING_NAME_CHI_GENERIC
+		unique = {}
+	}
+	seaplane_equipment = {
+		prefix = ""
+		generic = { "Seaplane Group" }
+		generic_pattern = AIR_WING_NAME_CHI_GENERIC
+		unique = {}
+	}
+}

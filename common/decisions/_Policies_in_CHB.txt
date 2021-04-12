@@ -1,0 +1,100 @@
+Diplomacy_with_CBJ = {
+	CEX_Expel_Hubei_Warlord = {
+		icon = generic_prepare_civil_war
+		allowed = { tag = CEX }
+		activation = {
+			is_subject = no
+			CHB = {
+				exists = yes
+				has_government = Centrist
+			}
+			NOT = { has_country_flag = CEX_Expel_Hubei_Warlord }
+			NOT = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+			}
+			OR = {
+				has_global_flag = { flag = Anhui_Won days > 6 }
+				has_global_flag = { flag =  Zhili_Won days > 6 }
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 180
+		is_good = no
+		cost = 0
+		fire_only_once = yes
+		cancel_trigger = {
+			OR = {
+				CHB = { exists = no }
+				CHB = { NOT = { has_government = Centrist } }
+			}
+		}
+		complete_effect = {
+			add_war_support = 0.5
+			add_stability = 0.5
+			set_country_flag = CEX_Expel_Hubei_Warlord
+			transfer_state = 46
+			set_state_controller = 46
+			transfer_state = 48
+			set_state_controller = 48
+			hidden_effect = {
+				CHB = {
+					every_enemy_country = { white_peace = CHB }
+					if = {
+						limit = { is_subject = yes }
+						random_other_country = {
+							limit = { CHB = { is_subject_of = PREV } }
+							end_puppet = CHB
+						}
+					}
+					if = {
+						limit = { is_in_faction = yes }
+						leave_faction = yes
+					}
+					clr_country_flag = Anhui_Member
+					clr_country_flag = Zhili_Member
+					clr_country_flag = Fengtian_Member
+					retire_country_leader = yes
+					create_country_leader = {
+						name = "Xiao Yaonan"
+						picture = "gfx/leaders/China/Portrait_China_Xiao_Yaonan.tga"
+						expire = "1927.8.31"
+						ideology =  Centrist_ideology
+						traits = {}
+					}
+					global_every_army_leader = {
+						limit = { has_id = 217 }
+						set_nationality = CHB
+						if = {
+							limit = { is_field_marshal = no }
+							promote_leader = yes
+						}
+						if = {
+							limit = { NOT = { has_trait = General_is_a_HoS } }
+							add_unit_leader_trait = General_is_a_HoS
+						}
+					}
+					random_army_leader = {
+						limit = { has_id = 48 }
+						retire = yes
+					}
+				}
+			}
+			declare_war_on = { target = CHB type = annex_everything }
+			random_other_country = {
+				limit = {
+					original_tag = CHN
+					has_government = Moderate_Rightist
+				}
+				country_event = new_CHN.3
+			}
+		}
+		timeout_effect = {
+			set_country_flag = CEX_Expel_Hubei_Warlord
+			add_political_power = -200
+			add_stability = -0.25
+			add_war_support = -0.25
+		}
+		ai_will_do = { factor = 100 }
+	}
+}

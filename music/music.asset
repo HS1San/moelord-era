@@ -1,0 +1,226 @@
+
+# MAIN THEME
+music = {
+	name = "maintheme"
+	file = "hoi4mainthemeallies.ogg"
+	volume = 0.65
+}
+
+# General Peace:
+music = {
+	name = "general_peace_1"
+	file = "general_peace_heartsofmen.ogg"
+	volume = 0.65
+}
+music = {
+	name = "general_peace_2"
+	file = "thewarends.ogg"
+	volume = 0.65
+}
+music = {
+	name = "general_peace_3"
+	file = "asongforthechildrenofww2.ogg"
+	volume = 0.65
+}
+
+# General war:
+music = {
+	name = "general_war_1"
+	file = "general_war_bringforththetanks.ogg"
+	volume = 0.65
+}
+music = {
+	name = "general_war_2"
+	file = "general_war_theattack.ogg"
+	volume = 0.65
+}
+
+
+# Allies Peace:
+music = {
+	name = "allies_peace_1"
+	file = "allies_peace_morningofdday.ogg"
+	volume = 0.65
+}
+music = {
+	name = "allies_peace_2"
+	file = "endofthetour.ogg"
+	volume = 0.65
+}
+
+
+# Allies War:
+music = {
+	name = "allies_war_1"
+	file = "wearesoldiers.ogg"
+	volume = 0.65
+}
+music = {
+	name = "allies_war_2"
+	file = "allies_war_theroyalairforce.ogg"
+	volume = 0.65
+}
+
+
+# Axis Peace:
+music = {
+	name = "axis_peace_1"
+	file = "axis_peace_krakow.ogg"
+	volume = 0.65
+}
+music = {
+	name = "axis_peace_2"
+	file = "luftwaffemarch_reprise.ogg"
+	volume = 0.65
+}
+
+
+# Axis War:
+music = {
+	name = "axis_war_1"
+	file = "axistheme.ogg"
+	volume = 0.65
+}
+music = {
+	name = "axis_war_2"
+	file = "heavywater.ogg"
+	volume = 0.65
+}
+music = {
+	name = "axis_war_3"
+	file = "operationbarbarossa.ogg"
+	volume = 0.65
+}
+music = {
+	name = "axis_war_4"
+	file = "war_axis_1_daysofthunder.ogg"
+	volume = 0.65
+}
+
+
+# Comintern Peace:
+
+music = {
+	name = "comintern_peace_1"
+	file = "motherrussia.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "comintern_peace_2"
+	file = "theredarmy.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "comintern_peace_3"
+	file = "sovietvictory.ogg"
+	volume = 0.65
+}
+
+# Comintern War:
+
+music = {
+	name = "comintern_war_1"
+	file = "themightofsovietunion.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "comintern_war_2"
+	file = "cominterntheme.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "comintern_war_3"
+	file = "thegreatpatrioticwar.ogg"
+	volume = 0.65
+}
+
+# La Resistance:
+
+music = {
+	name = "resistance_spanish"
+	file = "La_Autocracia.ogg"
+	volume = 0.65
+}
+music = {
+	name = "resistance_french"
+	file = "La_Liberté.ogg"
+	volume = 0.65
+}
+music = {
+	name = "resistance_fascist"
+	file = "L'Autoritario.ogg"
+	volume = 0.65
+}
+music = {
+	name = "resistance_spying"
+	file = "Under_Veils_Of_Secrets.ogg"
+	volume = 0.65
+}
+
+# NEW Modded Anthems:
+music = {
+	name = "NRA_war_1"
+	file = "Whampoa_Military_Academy_Anthem.ogg"
+	volume = 0.65
+}
+music = {
+	name = "ROC_anthem_1"
+	file = "Republic_of_China_Anthem.ogg"
+	volume = 0.65
+}
+music = {
+	name = "ROC_anthem_2"
+	file = "National_Flag_Anthem(R.O.C).ogg"
+	volume = 0.65
+}
+music = {
+	name = "bey_anthem_1"
+	file = "china_stands_heroically.ogg"
+	volume = 0.65
+}
+music = {
+	name = "fed_anthem_1"
+	file = "Song_of_Five_Races_Under_One_Union.ogg"
+	volume = 2
+}
+music = {
+	name = "monarchy_anthem_1"
+	file = "Qing_Anthem_Cup_of_Solid_Gold.ogg"
+	volume = 0.65
+}
+music = {
+	name = "socialist_anthem_1"
+	file = "Internationale-cmn.ogg"
+	volume = 0.6
+}
+music = {
+	name = "socialist_anthem_2"
+	file = "March_of_the_Volunteers_vocal.ogg"
+	volume = 0.65
+}
+music = {
+	name = "mymotherland_1"
+	file = "mymotherland_1.ogg"
+	volume = 0.65
+}
+music = {
+	name = "mymotherland_2"
+	file = "mymotherland_2.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Bey_war_1"
+	file = "Chinese_Soldier's_Training_Song.ogg"
+	volume = 0.75
+}
+music = {
+	name = "Guangxi"
+	file = "Guangxi_Clique_Song.ogg"
+	volume = 0.75
+}
+
+#Temporarily Removed due to HOI4 unable to play audio file

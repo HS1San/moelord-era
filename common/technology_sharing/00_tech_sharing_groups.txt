@@ -1,0 +1,41 @@
+technology_sharing_group = {
+	id = continuous_tech_share
+	name = continuous_tech_share_group_name
+	desc = continuous_tech_share_group_desc
+	picture = GFX_technology_sharing_default
+
+	research_sharing_per_country_bonus = 0.1
+	is_faction_sharing = yes
+
+	available = { is_in_faction = yes }
+}
+
+technology_sharing_group = {
+	id = North_China_Cooperation_Circle
+	name = North_China_Cooperation_Circle_name
+	desc = North_China_Cooperation_Circle_desc
+	picture = GFX_technology_sharing_default
+	research_sharing_per_country_bonus = 0.05
+
+	categories = { doctrine_tech }
+}
+
+technology_sharing_group = {
+	id = South_China_Cooperation_Circle
+	name = South_China_Cooperation_Circle_name
+	desc = South_China_Cooperation_Circle_desc
+	picture = GFX_technology_sharing_default
+	research_sharing_per_country_bonus = 0.05
+
+	categories = { doctrine_tech }
+}
+
+technology_sharing_group = {
+	id = Southwest_China_Cooperation_Circle
+	name = Southwest_China_Cooperation_Circle_name
+	desc = Southwest_China_Cooperation_Circle_desc
+	picture = GFX_technology_sharing_default
+	research_sharing_per_country_bonus = 0.05
+
+	categories = { doctrine_tech }
+}

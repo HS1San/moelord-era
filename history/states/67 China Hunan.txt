@@ -1,0 +1,91 @@
+state = {
+	id = 67
+	name = "STATE_67"
+	manpower = 15293700
+	state_category = developed_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 1
+		rubber = 0
+		tungsten = 8
+		steel = 17
+		chromium = 0
+	}
+	history = {
+		owner = CHN
+		add_core_of = CHN
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		victory_points = { 7097 4 }
+		victory_points = { 7101 3 }
+		victory_points = { 9999 1 }
+		victory_points = { 10377 1 }
+		victory_points = { 12483 1 }
+	}
+	provinces = {
+		1448 1640 7097 7101 7434 7502 9999 10377 10517 12017 12053 12310 12483 13140 13143 
+	}
+}
+
+state = {
+	id = 68
+	name = "STATE_68"
+	manpower = 8000000
+	state_category = impoverished_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 8
+		steel = 17
+		chromium = 0
+	}
+	history = {
+		owner = CHN
+		add_core_of = CHN
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = { 7665 1 }
+		victory_points = { 10335 2 }
+	}
+	provinces = {
+		4480 4896 7201 7279 7665 10006 10335 
+	}
+}
+
+state = {
+	id = 69
+	name = "STATE_69"
+	manpower = 5000000
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 1
+		rubber = 0
+		tungsten = 8
+		steel = 15
+		chromium = 0
+	}
+	history = {
+		owner = CHN
+		add_core_of = CHN
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		victory_points = { 7159 2 }
+	}
+	provinces = {
+		4125 7159 9982 11918 12350 12378 
+	}
+}

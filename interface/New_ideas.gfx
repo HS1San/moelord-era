@@ -1,0 +1,162 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_trait_General_is_a_HoS"
+		texturefile = "gfx/interface/traits/personal/trait_politically_connected.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_Devil_Training"
+		texturefile = "gfx/interface/traits/personal/trait_brilliant_strategist.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_Moderate_Leftist_group"
+		texturefile = "gfx/interface/ideology_socialism.tga"
+	}
+	spriteType = {
+		name = "GFX_ideology_Moderate_Rightist_group"
+		texturefile = "gfx/interface/ideology_conservatism_and_liberalism.tga"
+	}
+	spriteType = {
+		name = "GFX_ideology_Radical_Leftist_group"
+		texturefile = "gfx/interface/ideology_communism.tga"
+	}
+	spriteType = {
+		name = "GFX_ideology_Radical_Rightist_group"
+		texturefile = "gfx/interface/ideology_ultranationalism.tga"
+	}
+	spriteType = {
+		name = "GFX_ideology_Centrist_group"
+		texturefile = "gfx/interface/ideology_authoritarianism.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_minister_unknown"
+		texturefile = "gfx/interface/ideas/minister_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_profession_01"
+		texturefile = "gfx/interface/ideas/profession_01.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_profession_02"
+		texturefile = "gfx/interface/ideas/profession_02.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_profession_03"
+		texturefile = "gfx/interface/ideas/profession_03.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_profession_04"
+		texturefile = "gfx/interface/ideas/profession_04.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_profession_05"
+		texturefile = "gfx/interface/ideas/profession_05.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_profession_06"
+		texturefile = "gfx/interface/ideas/profession_06.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_profession_07"
+		texturefile = "gfx/interface/ideas/profession_07.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_profession_08"
+		texturefile = "gfx/interface/ideas/profession_08.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_profession_09"
+		texturefile = "gfx/interface/ideas/profession_09.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_profession_10"
+		texturefile = "gfx/interface/ideas/profession_10.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_profession_11"
+		texturefile = "gfx/interface/ideas/profession_11.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_profession_12"
+		texturefile = "gfx/interface/ideas/profession_12.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_profession_13"
+		texturefile = "gfx/interface/ideas/profession_13.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_profession_14"
+		texturefile = "gfx/interface/ideas/profession_14.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_profession_15"
+		texturefile = "gfx/interface/ideas/profession_15.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_profession_16"
+		texturefile = "gfx/interface/ideas/profession_16.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_profession_17"
+		texturefile = "gfx/interface/ideas/profession_17.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_profession_18"
+		texturefile = "gfx/interface/ideas/profession_18.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_British_Experience"
+		texturefile = "gfx/interface/ideas/British_Experience.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_German_Experience"
+		texturefile = "gfx/interface/ideas/German_Experience.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_French_Experience"
+		texturefile = "gfx/interface/ideas/French_Experience.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Italian_Experience"
+		texturefile = "gfx/interface/ideas/Italian_Experience.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_American_Experience"
+		texturefile = "gfx/interface/ideas/American_Experience.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Russian_Experience"
+		texturefile = "gfx/interface/ideas/Russian_Experience.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Free_Korea"
+		texturefile = "gfx/interface/ideas/free_korea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Mongol_Horseman"
+		texturefile = "gfx/interface/ideas/Mongol_Horseman.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Five_Races_Union"
+		texturefile = "gfx/interface/ideas/5_races_repulic_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Chinese_Mongolia"
+		texturefile = "gfx/interface/ideas/chinese_mongolia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Mongolia_Independent"
+		texturefile = "gfx/interface/ideas/mongolia_independent.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Jebtsundamba_Khutuktu"
+		texturefile = "gfx/interface/ideas/mongoloid.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Greater_Mongolia_Spirit"
+		texturefile = "gfx/interface/ideas/greater_mongolia_spirit.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_rus_origin"
+		texturefile = "gfx/interface/ideas/rus_origin.dds"
+	}
+}

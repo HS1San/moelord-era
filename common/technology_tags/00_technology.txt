@@ -1,0 +1,52 @@
+technology_categories = {
+	infantry_weapons
+	armor
+	air_equipment
+	naval_equipment
+
+	infantry_gun
+	rifle_tech
+	carbine_tech
+	machine_gun_tech
+
+	tp_tech
+	special_forces
+	marine_tech
+	mountaineers_tech
+	forest_infantry_tech
+	desert_infantry_tech
+	jungle_infantry_tech
+
+	support_tech
+	engineers_tech
+	recon_tech
+	logistics_tech
+	military_police_tech
+
+	artillery
+	cannon_tech
+	howitzer_tech
+	mortar_tech
+
+	agriculture_tech
+	light_industry_tech
+	heavy_industry_tech
+	science_tech
+
+	construction_tech
+	excavation_tech
+	architecture_tech
+
+	secret_action_tech
+
+	doctrine_tech
+	cat_superior_firepower
+	cat_grand_battle_plan
+	cat_mass_assault
+	cat_mobile_warfare
+}
+
+technology_folders = {
+	equipment_folder
+	theory_folder
+}

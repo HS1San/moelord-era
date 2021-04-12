@@ -1,0 +1,18 @@
+﻿capital = 1
+
+#oob = "empty_1919"
+
+#set_politics = {
+#	ruling_party = Centrist
+#	last_election = "1916.6.6"
+#	election_frequency = 24
+#	elections_allowed = no
+#}
+
+#set_popularities = {
+#    Moderate_Leftist = 0
+#    Moderate_Rightist = 0
+#    Radical_Rightist = 0
+#    Radical_Leftist = 0
+#    Centrist = 0
+#}

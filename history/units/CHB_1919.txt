@@ -1,0 +1,116 @@
+﻿########
+#Templates
+########
+division_template = {
+	name = "Bubingshi"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Qibingshi"
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Hunchenglü"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Buchonglü"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+	}
+	priority = 0
+}
+
+########
+#OOB
+########
+units = {
+	division = {
+		name = "Zhongyang Di 2 Shi"
+		location = 4619
+		division_template = "Bubingshi"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Zhongyang Di 18 Shi"
+		location = 4619
+		division_template = "Bubingshi"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Zhongyang Di 13 Hunchenglü"
+		location = 4619
+		division_template = "Hunchenglü"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Zhongyang Di 16 Hunchenglü"
+		location = 4619
+		division_template = "Hunchenglü"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Zhongyang Di 17 Hunchenglü"
+		location = 4619
+		division_template = "Hunchenglü"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Zhongyang Di 21 Hunchenglü"
+		location = 4619
+		division_template = "Hunchenglü"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Hubei Di 1 Lü"
+		location = 4619
+		division_template = "Buchonglü"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Hubei Di 2 Lü"
+		location = 4619
+		division_template = "Buchonglü"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Hubei Di 3 Lü"
+		location = 4619
+		division_template = "Buchonglü"
+		start_experience_factor = 0.1
+	}
+	### Nerf
+	#division = {
+	#	name = "Hubei Di 4 Lü"
+	#	location = 4619
+	#	division_template = "Buchonglü"
+	#	start_experience_factor = 0.1
+	#}
+	#division = {
+	#	name = "Hubei Di 5 Lü"
+	#	location = 4619
+	#	division_template = "Buchonglü"
+	#	start_experience_factor = 0.1
+	#}
+}

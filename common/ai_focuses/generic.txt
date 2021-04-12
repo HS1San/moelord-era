@@ -1,0 +1,54 @@
+ai_focus_defense = {
+	research = {
+		defensive = 5.0
+		artillery = 2.0
+	}
+}
+
+ai_focus_aggressive = {
+	research = {
+		offensive = 5.0
+		armor = 2.0
+	}
+}
+
+ai_focus_war_production = {
+	research = {
+	}
+}
+
+ai_focus_military_equipment = {
+	research = {
+		infantry_weapons = 50.0
+		support_tech = 6.5
+	}
+}
+
+ai_focus_military_advancements = {
+	research = {
+		armor = 10.0
+	}
+}
+
+ai_focus_peaceful = {
+	research = {
+	}
+}
+
+ai_focus_naval = {
+	research = {
+		naval_equipment = 5.0
+		cat_corvette = 3.0
+		cat_cruiser = 3.0
+		cat_seaplane_tender = 3.0
+	}
+}
+
+ai_focus_aviation = {
+	research = {
+		air_equipment = 5.0
+		light_air = 4.0	
+		medium_air = 4.0
+		heavy_air = 1.5
+	}
+}

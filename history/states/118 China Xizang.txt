@@ -1,0 +1,172 @@
+state = {
+	id = 118
+	name = "STATE_118"
+	manpower = 368200
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 1
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 3
+		chromium = 2
+	}
+	history = {
+		owner = CXZ
+		add_core_of = CXZ
+		add_core_of = CXK
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 8059 1 }
+		victory_points = { 10741 1 }
+	}
+	provinces = {
+		4407 5018 5080 5102 8041 8059 10741 10856 
+	}
+}
+
+state = {
+	id = 119
+	name = "STATE_119"
+	manpower = 1722000
+	state_category = impoverished_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 1
+		steel = 3
+		chromium = 14
+	}
+	history = {
+		owner = CXZ
+		add_core_of = CXZ
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+		}
+	}
+	provinces = {
+		2010 2093 4994 5011 7926 8068 10755 10918 
+	}
+}
+
+state = {
+	id = 120
+	name = "STATE_120"
+	manpower = 1000000
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = CXZ
+		add_core_of = CXZ
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = { 2014 2 }
+		victory_points = { 5033 3 }
+	}
+	provinces = {
+		1991 2014 2098 4900 5033 8121 12807 
+	}
+}
+
+state = {
+	id = 121
+	name = "STATE_121"
+	manpower = 1000000
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = CXZ
+		add_core_of = CXZ
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 10802 1 }
+	}
+	provinces = {
+		1961 5094 8029 10802 12784 12801 
+	}
+}
+
+state = {
+	id = 122
+	name = "STATE_122"
+	manpower = 1000000
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = IND
+		add_core_of = CXZ
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = {
+		5042 7273 8005 12884 
+	}
+}
+
+state = {
+	id = 123
+	name = "STATE_123"
+	manpower = 100000
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = IND
+		add_core_of = CXZ
+		buildings = {
+			industrial_complex = 1
+			infrastructure = 1
+		}
+	}
+	provinces = {
+		1996 10810 12730 
+	}
+}

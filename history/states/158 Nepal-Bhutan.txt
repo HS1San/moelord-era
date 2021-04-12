@@ -1,0 +1,59 @@
+state = {
+	id = 158
+	name = "STATE_158"
+	manpower = 5573791
+	state_category = town
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 2
+	}
+	history = {
+		owner = NEP
+		add_core_of = NEP
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+		}
+		victory_points = { 4987 3 }
+	}
+	provinces = {
+		4386 4987 5310 7374 10825 10910 12892 
+	}
+}
+
+state = {
+	id = 159
+	name = "STATE_159"
+	manpower = 450000
+	state_category = town
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 2
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = BHU
+		add_core_of = BHU
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 2 
+		}
+		victory_points = { 8010 3 }
+	}
+	provinces = {
+		8010 12860 
+	}
+}

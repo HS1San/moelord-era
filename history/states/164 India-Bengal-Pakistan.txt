@@ -1,0 +1,679 @@
+state = {
+	id = 164
+	name = "STATE_164"
+	manpower = 29147500
+	state_category = town
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 19
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = IND
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 1
+			10278 = { naval_base = 4 }
+		}
+		victory_points = { 10278 1 }
+	}
+	provinces = {
+		1238 1268 1321 1381 1409 4327 4416 4420 7265 7288 7363 7402 7436 7447 8067 10130 10246 10274 10278 10808 12164 12247 12275 
+	}
+}
+
+state = {
+	id = 165
+	name = "STATE_165"
+	manpower = 15791700
+	state_category = large_town
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = IND
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+		}
+	}
+	provinces = {
+		1228 1344 1430 4321 4365 4414 7297 7310 7340 10152 10296 10756 10897 12180 12779 
+	}
+}
+
+state = {
+	id = 166
+	name = "STATE_166"
+	manpower = 12348200
+	state_category = city
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 76
+		steel = 0
+		chromium = 10
+	}
+	history = {
+		owner = IND
+		add_core_of = IND
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+			dockyard = 1
+		}
+		victory_points = { 8011 1 }
+	}
+	provinces = {
+		1412 4278 4291 4315 4344 4395 5032 7244 7250 7391 7395 7411 8011 8100 10190 10208 10259 10799 12105 12146 12208 12295 12734 
+	}
+}
+
+state = {
+	id = 167
+	name = "STATE_167"
+	manpower = 14520100
+	state_category = town
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 1
+		rubber = 0
+		tungsten = 0
+		steel = 25
+		chromium = 20
+	}
+	history = {
+		owner = IND
+		add_core_of = IND
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+			industrial_complex = 1
+		}
+	}
+	provinces = {
+		1059 1101 1538 1579 1622 4104 4237 4513 7090 7372 7428 7465 9946 10001 10060 10088 10116 10171 10255 10428 10469 11924 11978 12063 12241 12462 12490 
+	}
+}
+
+state = {
+	id = 168
+	name = "STATE_168"
+	manpower = 14013400
+	state_category = city
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 6
+	}
+	history = {
+		owner = IND
+		add_core_of = IND
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 2
+			air_base = 3
+		}
+		victory_points = { 8087 1 }
+	}
+	provinces = {
+		1275 1317 1359 4280 4472 5019 5063 5104 8087 10311 10324 10511 11950 12114 12226 
+	}
+}
+
+state = {
+	id = 169
+	name = "STATE_169"
+	manpower = 10590200
+	state_category = city
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 3
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = IND
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+			industrial_complex = 2
+			dockyard = 1
+			9975 = { naval_base = 2 }
+		}
+		victory_points = { 9975 1 }
+	}
+	provinces = {
+		1061 1103 1144 1190 4064 4090 4132 4187 7020 7150 7165 7207 9975 10118 11952 12037 12092 
+	}
+}
+
+state = {
+	id = 170
+	name = "STATE_170"
+	manpower = 17355600
+	state_category = large_city
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 19
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = IND
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 4
+			air_base = 2
+			arms_factory = 2
+			1349 = { naval_base = 6 }
+		}
+		victory_points = { 1349 10 }
+	}
+	provinces = {
+		1349 1405 4072 4353 7013 7060 7119 7177 7232 10019 10210 10270 12142 12182 12269 
+	}
+}
+
+state = {
+	id = 171
+	name = "STATE_171"
+	manpower = 31973300
+	state_category = city
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = BNG
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 1
+			11968 = { naval_base = 3 }
+		}
+		victory_points = { 11929 1 }
+	}
+	provinces = {
+		997 1075 2843 4162 4616 7078 7124 7179 7634 9935 9991 9993 10035 10416 10443 11911 11929 11968 12010 12423 13208
+	}
+}
+
+state = {
+	id = 172
+	name = "STATE_172"
+	manpower = 18778100
+	state_category = large_city
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 11
+		steel = 13
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = IND
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 2
+			dockyard = 2
+			air_base = 2
+			4245 = { naval_base = 6 }
+		}
+		victory_points = { 4245 5 }
+	}
+	provinces = {
+		1159 1609 4062 4204 4245 4435 4644 7220 7475 7537 7565 7593 7662 10077 10389 12050 12338 
+	}
+}
+
+state = {
+	id = 173
+	name = "STATE_173"
+	manpower = 9177100
+	state_category = town
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 5
+		aluminium = 0
+		rubber = 0
+		tungsten = 49
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = IND
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
+	}
+	provinces = {
+		1116 1497 1525 1553 1581 7455 10090 10349 10514 12322 12366 12395 
+	}
+}
+
+state = {
+	id = 174
+	name = "STATE_174"
+	manpower = 11786000
+	state_category = town
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 32
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = IND
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+		}
+	}
+	provinces = {
+		1199 1908 2054 4149 4915 4971 4984 7905 7998 10847 10866 12041 12718 12743 12829 12844 12876 12886 
+	}
+}
+
+state = {
+	id = 175
+	name = "STATE_175"
+	manpower = 36574500
+	state_category = town
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = IND
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+		}
+		victory_points = { 4516 1 }
+	}
+	provinces = {
+		1444 1541 1569 1637 1656 4459 4516 4544 4571 7334 10358 10361 10471 10751 10878 12035 12307 12452 
+	}
+}
+
+state = {
+	id = 176
+	name = "STATE_176"
+	manpower = 14123100
+	state_category = developed_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 4
+	}
+	history = {
+		owner = IND
+		add_core_of = IND
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+	}
+	provinces = {
+		1510 4557 4883 4950 4953 7430 7497 7574 7619 8120 10030 10401 10801 10872 12375 12420 12480 12781 12799 12854 
+	}
+}
+
+state = {
+	id = 177
+	name = "STATE_177"
+	manpower = 8402500
+	state_category = developed_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = IND
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+		}
+	}
+	provinces = {
+		1949 2036 2092 2105 4106 7080 7205 8076 10807 10816 11993 11995 12080 
+	}
+}
+
+state = {
+	id = 178
+	name = "STATE_178"
+	manpower = 33491000
+	state_category = large_town
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = IND
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 3
+			arms_factory = 1
+		}
+		victory_points = { 12137 1 }
+	}
+	provinces = {
+		1377 1983 2005 4045 4299 4410 5040 5055 5086 5096 7064 7938 8082 8114 9951 9973 10332 10794 12137 12777 12786 
+	}
+}
+
+state = {
+	id = 179
+	name = "STATE_179"
+	manpower = 31136800
+	state_category = large_city
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = IND
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 3
+			arms_factory = 1
+			air_base = 4
+		}
+		victory_points = { 2086 15 }
+	}
+	provinces = {
+		1129 1898 2002 2032 2076 2086 3989 5002 5157 7106 10021 10729 11955 12708 12868 
+	}
+}
+
+state = {
+	id = 180
+	name = "STATE_180"
+	manpower = 13665000
+	state_category = town
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = PAK
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+		}
+	}
+	provinces = {
+		4979 8007 8022 8106 9084 10066 10139 10173 10772 10843 10887 10898 12005 12792 12822 
+	}
+}
+
+state = {
+	id = 181
+	name = "STATE_181"
+	manpower = 3539500
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = IND
+		add_core_of = PAK
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		1910 2041 7316 10821 10905 12754
+	}
+}
+
+state = {
+	id = 182
+	name = "STATE_182"
+	manpower = 4684400
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = PAK
+		buildings = {
+			infrastructure = 3
+			air_base = 3
+		}
+	}
+	provinces = {
+		1978 2084 4558 4998 12717 12763 
+	}
+}
+
+state = {
+	id = 183
+	name = "STATE_183"
+	manpower = 3887000
+	state_category = large_town
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = PAK
+		buildings = {
+			infrastructure = 5
+			dockyard = 2
+			3456 = { naval_base = 4 }
+		}
+		victory_points = { 3456 3 }
+	}
+	provinces = {
+		1147 1971 1980 3456 4003 4110 4382 7049 7084 10108 10735 
+	}
+}
+
+state = {
+	id = 184
+	name = "STATE_184"
+	manpower = 463500
+	state_category = wasteland
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = PAK
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		1179 5043 5075 7917 8013 8066 12761 12774 
+	}
+}
+
+state = {
+	id = 185
+	name = "STATE_185"
+	manpower = 405100
+	state_category = wasteland
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = PAK
+		buildings = {
+			infrastructure = 3
+			air_base = 4
+		}
+	}
+	provinces = {
+		1107 4990 5105 7847 7903 7975 8044 8098 10813 
+	}
+}
+
+state = {
+	id = 186
+	name = "STATE_186"
+	manpower = 29500
+	state_category = small_island
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = IND
+		add_core_of = IND
+		buildings = {
+			infrastructure = 3
+			12251 = { naval_base = 2 }
+		}
+	}
+	provinces = {
+		10321 12251 
+	}
+}

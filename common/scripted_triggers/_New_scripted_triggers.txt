@@ -1,0 +1,103 @@
+should_initiate_resistance = {
+    check_variable = { core_countries^num > 0 } # have no cores
+    NOT = { is_core_of = FROM  } # never for our cores
+}
+
+has_political_road = {
+	OR = {
+		has_country_flag = SH_CEM
+		has_country_flag = SH_CEH
+		has_country_flag = SH_BYC
+		has_country_flag = SH_PPC
+		has_country_flag = SH_ZPC
+		has_country_flag = SH_NPC
+		has_country_flag = SH_NLC
+		has_country_flag = SH_NRC
+		has_country_flag = SH_CPC
+		has_country_flag = SH_ASC
+	}
+}
+
+has_war_taxes = {
+	if = {
+		limit = { has_idea = War_Taxes_1 }
+		has_idea = War_Taxes_1
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_2 }
+		has_idea = War_Taxes_2
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_3 }
+		has_idea = War_Taxes_3
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_4 }
+		has_idea = War_Taxes_4
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_5 }
+		has_idea = War_Taxes_5
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_6 }
+		has_idea = War_Taxes_6
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_7 }
+		has_idea = War_Taxes_7
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_8 }
+		has_idea = War_Taxes_8
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_9 }
+		has_idea = War_Taxes_9
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_10 }
+		has_idea = War_Taxes_10
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_11 }
+		has_idea = War_Taxes_11
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_12 }
+		has_idea = War_Taxes_12
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_13 }
+		has_idea = War_Taxes_13
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_14 }
+		has_idea = War_Taxes_14
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_15 }
+		has_idea = War_Taxes_15
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_16 }
+		has_idea = War_Taxes_16
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_17 }
+		has_idea = War_Taxes_17
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_18 }
+		has_idea = War_Taxes_18
+	}
+	else = {		
+		has_idea = War_Taxes_1
+	}
+}
+can_delay_war_taxes = {
+	custom_trigger_tooltip = {
+		tooltip = can_delay_war_taxes
+		NOT = { has_idea = War_Taxes_18 }
+	}
+}

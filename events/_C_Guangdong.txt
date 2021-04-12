@@ -1,0 +1,475 @@
+﻿add_namespace = new_CGD
+
+country_event = {
+	id = new_CGD.1
+	title = new_CGD.1.t
+	desc = new_CGD.1.d
+	picture = GFX_report_event_physics_lab_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_CGD.1.a
+		add_to_tech_sharing_group = South_China_Cooperation_Circle
+		FROM = {
+			add_opinion_modifier = { target = ROOT modifier = New_friendship }
+			add_ai_strategy = { type = alliance id = "CGD" value = 100 }
+			add_ai_strategy = { type = protect id = "CGD" value = 100 }
+			add_ai_strategy = { type = send_volunteers_desire id = "CGD" value = 100 }
+			add_ai_strategy = { type = support id = "CGD" value = 100 }
+			news_event = new_News.1
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 175 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 150 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 125 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 100 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 75 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 50 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 25 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -25 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -50 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -75 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -100 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -125 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -150 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -175 } }
+			}
+		}
+	}
+	option = {
+		name = new_CGD.1.b
+		FROM = {
+			add_opinion_modifier = { target = ROOT modifier = New_contradiction }
+			news_event = new_News.2
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 175 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 150 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 125 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 100 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 75 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 50 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 25 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -25 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -50 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -75 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -100 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -125 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -150 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -175 } }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = new_CGD.2
+	title = new_CGD.2.t
+	desc = new_CGD.2.d
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_CGD.2.a
+		custom_effect_tooltip = GAME_OVER_TT
+		hidden_effect = {
+			FROM = {
+				annex_country = { target = ROOT transfer_troops = yes }
+				news_event = new_News.1
+			}
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 1.25
+				has_opinion = { target = FROM value > 175 }
+			}
+			modifier = {
+				factor = 1.25
+				has_opinion = { target = FROM value > 150 }
+			}
+			modifier = {
+				factor = 1.25
+				has_opinion = { target = FROM value > 125 }
+			}
+			modifier = {
+				factor = 1.25
+				has_opinion = { target = FROM value > 100 }
+			}
+			modifier = {
+				factor = 1.25
+				has_opinion = { target = FROM value > 75 }
+			}
+			modifier = {
+				factor = 1.25
+				has_opinion = { target = FROM value > 50 }
+			}
+			modifier = {
+				factor = 1.25
+				has_opinion = { target = FROM value > 25 }
+			}
+			modifier = {
+				factor = 0.75
+				has_opinion = { target = FROM value < -25 }
+			}
+			modifier = {
+				factor = 0.75
+				has_opinion = { target = FROM value < -50 }
+			}
+			modifier = {
+				factor = 0.75
+				has_opinion = { target = FROM value < -75 }
+			}
+			modifier = {
+				factor = 0.75
+				has_opinion = { target = FROM value < -100 }
+			}
+			modifier = {
+				factor = 0.75
+				has_opinion = { target = FROM value < -125 }
+			}
+			modifier = {
+				factor = 0.75
+				has_opinion = { target = FROM value < -150 }
+			}
+			modifier = {
+				factor = 0.75
+				has_opinion = { target = FROM value < -175 }
+			}
+		}
+	}
+	option = {
+		name = new_CGD.2.b
+		FROM = {
+			add_opinion_modifier = { target = ROOT modifier = New_contradiction }
+			news_event = new_News.2
+		}
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.75
+				has_opinion = { target = FROM value > 175 }
+			}
+			modifier = {
+				factor = 0.75
+				has_opinion = { target = FROM value > 150 }
+			}
+			modifier = {
+				factor = 0.75
+				has_opinion = { target = FROM value > 125 }
+			}
+			modifier = {
+				factor = 0.75
+				has_opinion = { target = FROM value > 100 }
+			}
+			modifier = {
+				factor = 0.75
+				has_opinion = { target = FROM value > 75 }
+			}
+			modifier = {
+				factor = 0.75
+				has_opinion = { target = FROM value > 50 }
+			}
+			modifier = {
+				factor = 0.75
+				has_opinion = { target = FROM value > 25 }
+			}
+			modifier = {
+				factor = 1.25
+				has_opinion = { target = FROM value < -25 }
+			}
+			modifier = {
+				factor = 1.25
+				has_opinion = { target = FROM value < -50 }
+			}
+			modifier = {
+				factor = 1.25
+				has_opinion = { target = FROM value < -75 }
+			}
+			modifier = {
+				factor = 1.25
+				has_opinion = { target = FROM value < -100 }
+			}
+			modifier = {
+				factor = 1.25
+				has_opinion = { target = FROM value < -125 }
+			}
+			modifier = {
+				factor = 1.25
+				has_opinion = { target = FROM value < -150 }
+			}
+			modifier = {
+				factor = 1.25
+				has_opinion = { target = FROM value < -175 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = new_CGD.3
+	title = new_CGD.3.t
+	desc = new_CGD.3.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_CGD.3.a
+		if = {
+			limit = { original_tag = CGD }
+			FROM = {
+				transfer_state = 70
+				set_state_controller = 70
+				add_state_core = 70
+				transfer_state = 71
+				set_state_controller = 71
+				add_state_core = 71
+				transfer_state = 72
+				set_state_controller = 72
+				add_state_core = 72
+				transfer_state = 73
+				set_state_controller = 73
+				add_state_core = 73
+				transfer_state = 74
+				set_state_controller = 74
+				add_state_core = 74
+				transfer_state = 75
+				set_state_controller = 75
+				add_state_core = 75
+				add_opinion_modifier = { target = ROOT modifier = New_friendship }
+			}
+			else = { FROM = { annex_country = { target = ROOT transfer_troops = yes } } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 175 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 150 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 125 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 100 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 75 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 50 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 25 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -25 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -50 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -75 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -100 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -125 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -150 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -175 } }
+			}
+		}
+	}
+	option = {
+		name = new_CGD.3.b
+		FROM = {
+			add_opinion_modifier = { target = ROOT modifier = New_contradiction }
+			news_event = new_News.2
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 175 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 150 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 125 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 100 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 75 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 50 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 25 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -25 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -50 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -75 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -100 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -125 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -150 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -175 } }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = new_CGD.4
+	title = new_CGD.4.t
+	desc = new_CGD.4.d
+	picture = GFX_report_event_chinese_soldiers_running
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_CGD.4.a
+		add_war_support = 0.05
+		declare_war_on = { target = CGD type = annex_everything }
+	}
+	option = {
+		name = new_CGD.4.b
+		add_stability = 0.05
+	}
+}

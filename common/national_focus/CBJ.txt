@@ -1,0 +1,824 @@
+focus_tree = {
+	id = CBJ_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CBJ
+		}
+	}
+
+	default = no
+	shared_focus = Shared_Plan_of_Reform
+	shared_focus = Shared_Extra_Tech_Slot
+
+	focus = {
+		id = CBJ_War_Plan
+		icon = GFX_focus_Risky_Deal
+		mutually_exclusive = { focus = CBJ_Peace_Plan focus = CBJ_Recreate_Democratic_National_Assembly }
+		x = 2
+		y = 0
+		cost = 3
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+			remove_political_road = yes
+			set_country_flag = SH_BYC
+			add_political_road = yes
+			unlock_decision_tooltip = Formable_BYC
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_Peace_Plan
+		icon = GFX_focus_generic_treaty
+		mutually_exclusive = { focus = CBJ_War_Plan focus = CBJ_Recreate_Democratic_National_Assembly }
+		x = 6
+		y = 0
+		cost = 3
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			remove_political_road = yes
+			set_country_flag = SH_BYC
+			add_political_road = yes
+			unlock_decision_tooltip = Formable_BYC
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_Recreate_Democratic_National_Assembly
+		icon = GFX_goal_support_democracy
+		mutually_exclusive = { focus = CBJ_War_Plan focus = CBJ_Peace_Plan }
+		x = 9
+		y = 0
+		cost = 3
+
+		bypass = {
+			OR = {
+				has_government = Moderate_Leftist
+				has_government = Moderate_Rightist
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+			remove_political_road = yes
+			custom_effect_tooltip = political_goal_tooltip_03
+			set_country_flag = SH_BYC
+			add_political_road = yes
+			set_party_name = { ideology = Moderate_Rightist long_name = New_party_03_long name = New_party_03 }
+			if = {
+				limit = { NOT = { has_idea = Blue_Flood } }
+				add_ideas = Blue_Flood
+			}
+			unlock_decision_tooltip = Formable_BYC
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_Invite_Henan
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = CBJ_War_Plan }
+		x = 0
+		y = 1
+		cost = 8
+
+		available = {
+			is_faction_leader = yes
+			CHE = {
+				exists = yes
+				is_subject = no
+				is_in_faction = no
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		cancel = {
+			OR = {
+				is_in_faction = no
+				CHE = { is_in_faction = yes }
+				CHE = { has_war_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			CHE = { country_event = new_Generic.3 }
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_Anfu_Club
+		icon = GFX_focus_Extravagance
+		prerequisite = { focus = CBJ_War_Plan }
+		x = 2
+		y = 1
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Anfu_Club } }
+				add_ideas = Anfu_Club
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_New_Army
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = CBJ_War_Plan focus = CBJ_Peace_Plan }
+		x = 4
+		y = 1
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_manpower = 50000
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+		}
+		
+		search_filters = { FOCUS_FILTER_MANPOWER } 
+	}
+	focus = {
+		id = CBJ_Yimo_Club
+		icon = GFX_focus_Extravagance
+		prerequisite = { focus = CBJ_Peace_Plan }
+		x = 6
+		y = 1
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Yimo_Club } }
+				add_ideas = Yimo_Club
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_Legacy_of_the_May_Fourth_Movement
+		icon = GFX_focus_research
+		prerequisite = { focus = CBJ_Recreate_Democratic_National_Assembly }
+		x = 9
+		y = 1
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Legacy_of_the_May_Fourth_Movement } }
+				add_ideas = Legacy_of_the_May_Fourth_Movement
+			}
+			add_named_threat = { threat = 5 name = threat.ROP }
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_Invite_Zhensongjun
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = CBJ_Invite_Henan }
+		x = 0
+		y = 2
+		cost = 8
+
+		available = {
+			is_faction_leader = yes
+			CYX = {
+				exists = yes
+				is_subject = no
+				is_in_faction = no
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		cancel = {
+			OR = {
+				is_in_faction = no
+				CYX = { is_in_faction = yes }
+				CYX = { has_war_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			CYX = { country_event = new_Generic.3 }
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_War_with_Zhili_Clique
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = CBJ_Anfu_Club }
+		will_lead_to_war_with = CZL
+		x = 2
+		y = 2
+		cost = 8
+
+		available = {
+			has_country_flag = Anhui_Member
+			is_faction_leader = yes
+			any_other_country = {
+				is_faction_leader = yes
+				has_country_flag = Zhili_Member
+				NOT = { has_war_with = ROOT }
+			}
+			NOT = {
+				has_global_flag = Anhui_Won
+				has_global_flag = Zhili_Won
+				has_global_flag = Zhili_Anhui_Alliance
+			}
+		}
+
+		bypass = {
+			OR = {
+				any_other_country = {
+					has_country_flag = Zhili_Member
+					has_war_with = ROOT
+				}
+				has_global_flag = Anhui_Won
+				has_global_flag = Zhili_Won
+				has_global_flag = Zhili_Anhui_Alliance
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = { threat = 10 name = threat.ZAW }
+			random_other_country = {
+				limit = {
+					is_faction_leader = yes
+					has_country_flag = Zhili_Member
+				}
+				add_named_threat = { threat = 10 name = threat.ZAW }
+				ROOT = { declare_war_on = { target = PREV type = annex_everything } }
+				every_other_country = {
+					limit = { is_in_faction_with = ROOT NOT = {has_idea = Puppeted_Mongolia} }
+					add_to_war = { targeted_alliance = ROOT enemy = PREV }
+				}
+				every_other_country = {
+					limit = { is_in_faction_with = PREV }
+					add_to_war = { targeted_alliance = PREV enemy = ROOT }
+				}
+			}
+			random_other_country = {
+				limit = {
+					is_faction_leader = yes
+					has_country_flag = Fengtian_Member
+				}
+				country_event = new_Fengtian.3
+			}
+			hidden_effect = { every_other_country = { news_event = new_News.4 } }
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_Establish_Great_Wall_Front
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = CBJ_New_Army }
+		x = 4
+		y = 2
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Great_Wall_Front } }
+				add_ideas = Great_Wall_Front
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_Alliance_with_Zhili_Clique
+		icon = GFX_Experience_Zhili_Clique
+		prerequisite = { focus = CBJ_Yimo_Club }
+		x = 6
+		y = 2
+		cost = 8
+
+		available = {
+			has_country_flag = Anhui_Member
+			is_faction_leader = yes
+			any_other_country = {
+				is_faction_leader = yes
+				has_country_flag = Zhili_Member
+				NOT = { has_war_with = ROOT }
+			}
+			NOT = {
+				has_global_flag = Anhui_Won
+				has_global_flag = Zhili_Won
+				has_global_flag = Zhili_Anhui_Alliance
+			}
+		}
+
+		bypass = {
+			OR = {
+				any_other_country = {
+					has_country_flag = Zhili_Member
+					has_war_with = ROOT
+				}
+				has_global_flag = Anhui_Won
+				has_global_flag = Zhili_Won
+				has_global_flag = Zhili_Anhui_Alliance
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = Attitude_determines_success_or_failure
+			custom_effect_tooltip = Formed_the_Peiyang_Clique
+			random_other_country = {
+				limit = {
+					is_faction_leader = yes
+					has_country_flag = Zhili_Member
+				}
+				country_event = new_Anhui.1
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_A_New_Anhui_Clique
+		icon = GFX_Experience_CPP
+		prerequisite = { focus = CBJ_Legacy_of_the_May_Fourth_Movement }
+		x = 9
+		y = 2
+		cost = 8
+
+		bypass = {
+			OR = {
+				has_government = Moderate_Leftist
+				has_government = Moderate_Rightist
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { is_in_faction = yes }
+				leave_faction = yes
+			}
+			set_politics = { ruling_party = Moderate_Rightist elections_allowed = yes }
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = CPP
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Beiyang_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Beiyang_Member
+			clr_country_flag = Old_Fengtian_Member
+			if = {
+				limit = { NOT = { has_idea = Statism } }
+				add_ideas = Statism
+			}
+			add_named_threat = { threat = 10 name = threat.ROP }
+			hidden_effect = { every_other_country = { news_event = new_News.28 } }
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_Second_Loan_of_Nishihara_Kamezo
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = CBJ_War_with_Zhili_Clique }
+		x = 1
+		y = 3
+		cost = 8
+
+		available = {
+			NOT = { has_war_with = JAP }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Second_Loan_of_Nishihara_Kamezo } }
+				add_timed_idea = { idea = Second_Loan_of_Nishihara_Kamezo days = 540 }
+			}
+			JAP = {
+				add_opinion_modifier = { target = ROOT modifier = New_friendship }
+				add_ai_strategy = { type = alliance id = "CBJ" value = 100 }
+				add_ai_strategy = { type = protect id = "CBJ" value = 100 }
+				add_ai_strategy = { type = send_volunteers_desire id = "CBJ" value = 100 }
+				add_ai_strategy = { type = support id = "CBJ" value = 100 }
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_Attack_Fengtian_Clique
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { focus = CBJ_Establish_Great_Wall_Front }
+		x = 4
+		y = 3
+		cost = 8
+
+		available = {
+			OR = {
+				has_global_flag = Anhui_Won
+				has_global_flag = Zhili_Won
+				has_global_flag = Zhili_Anhui_Alliance
+			}
+			any_other_country = {
+				is_faction_leader = yes
+				has_country_flag = Fengtian_Member
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+			NOT = { any_other_country = { has_country_flag = Fengtian_Member } }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_other_country = {
+				limit = {
+					is_faction_leader = yes
+					has_country_flag = Fengtian_Member
+				}
+				ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+			}
+			add_named_threat = { threat = 10 name = threat.FAW }
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_Westernized_Army
+		icon = GFX_focus_Hidden_Pacts
+		prerequisite = { focus = CBJ_Alliance_with_Zhili_Clique focus = CBJ_A_New_Anhui_Clique }
+		x = 7
+		y = 3
+		cost = 8
+
+		available = {
+			NOT = { has_war_with = CWH }
+			NOT = { has_war_with = CXG }
+			NOT = { has_war_with = BUR }
+			NOT = { has_war_with = IND }
+			NOT = { has_war_with = PAK }
+			NOT = { has_war_with = MAL }
+			NOT = { has_war_with = SIN }
+			NOT = { has_war_with = SWK }
+			NOT = { has_war_with = SAB }
+			NOT = { has_war_with = INC }
+			NOT = { has_war_with = PON }
+			NOT = { has_war_with = PHL }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = Cooperation_with_Japan }
+				remove_ideas = Cooperation_with_Japan
+			}
+			add_to_variable = { var = relationship_with_britain value = 50 tooltip = Increase_the_opinion_of_Britain_for_us_by_50 }
+			add_to_variable = { var = relationship_with_america value = 50 tooltip = Increase_the_opinion_of_America_for_us_by_50 }
+			add_to_variable = { var = relationship_with_france value = 50 tooltip = Increase_the_opinion_of_France_for_us_by_50 }
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_Bride_Gao
+		icon = GFX_focus_Reopen_the_Stock_Markets
+		prerequisite = { focus = CBJ_Attack_Fengtian_Clique }
+		x = 2
+		y = 4
+		cost = 8
+
+		available = {
+			CJL = { exists = no }
+			NOT = { has_global_flag = Rebellion_of_Gao }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = Bride_Gao
+			set_global_flag = Rebellion_of_Gao
+			add_timed_idea = { idea = Money_to_Gao days = 180 }
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CBJ_Recreate_Anhui_Clique
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = CBJ_Attack_Fengtian_Clique }
+		x = 4
+		y = 4
+		cost = 8
+
+		bypass = {
+			has_global_flag = Zhili_Anhui_Alliance
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { is_in_faction = no }
+				create_faction = "New_Anhui_Clique"
+			}
+			every_other_country = {
+				limit = {
+					is_in_faction = no
+					has_country_flag = SH_WAR
+					has_country_flag = Old_Anhui_Member
+				}
+				country_event = new_Generic.13
+				clr_country_flag = Old_Anhui_Member
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_Tsinghua_Peking_University
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = CBJ_Attack_Fengtian_Clique focus = CBJ_Westernized_Army }
+		x = 6
+		y = 4
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Tsinghua_Peking_University } }
+				add_ideas = Tsinghua_Peking_University
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_Democratic_Fort
+		icon = GFX_focus_Generic_Political
+		prerequisite = { focus = CBJ_A_New_Anhui_Clique }
+		mutually_exclusive = { focus = CBJ_Alliance_with_Guangdong_Government }
+		x = 8
+		y = 4
+		cost = 8
+
+		available = {
+			is_subject = no
+			is_in_faction = no
+		}
+
+		cancel = {
+			OR = {
+				is_subject = yes
+				is_in_faction = yes
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+			hidden_effect = { set_rule = { can_create_factions = yes } }
+			create_faction = "Democratic_Front"
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CBJ_Alliance_with_Guangdong_Government
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		prerequisite = { focus = CBJ_A_New_Anhui_Clique }
+		mutually_exclusive = { focus = CBJ_Democratic_Fort }
+		x = 10
+		y = 4
+		cost = 8
+
+		available = {
+			is_subject = no
+			is_in_faction = no
+			CGD = {
+				exists = yes
+				is_subject = no
+				NOT = { has_war_with = ROOT }
+				is_faction_leader = yes
+			}
+		}
+
+		cancel = {
+			OR = {
+				is_subject = yes
+				is_in_faction = yes
+			}
+		}
+
+		bypass = {
+			OR = {
+				CGD = { exists = no }
+				CGD = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = Attitude_determines_success_or_failure
+			add_stability = 0.05
+			CGD = { country_event = new_Generic.1 }
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_China_Japan_Treaty_of_Equality
+		icon = GFX_focus_jap_pacific_guardian
+		prerequisite = { focus = CBJ_Second_Loan_of_Nishihara_Kamezo }
+		x = 1
+		y = 5
+		cost = 8
+
+		available = {
+			OR = {
+				JAP = {
+					exists = yes
+					has_opinion = { target = ROOT value > 99 }
+				}
+				JAP = { exists = no }
+				has_government = Radical_Leftist
+				has_government = Radical_Rightist
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			if = {
+				limit = { has_idea = Cooperation_with_Japan }
+				swap_ideas = {
+					remove_idea = Cooperation_with_Japan
+					add_idea = Cooperation_with_Japan_Equality
+				}
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_Attack_Guangdong_Government
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = CBJ_Recreate_Anhui_Clique }
+		will_lead_to_war_with = CGD
+		x = 4
+		y = 5
+		cost = 8
+
+		available = {
+			CGD = {
+				exists = yes
+				is_subject = no
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = CGD }
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_Against_Japanese_Imperialism
+		icon = GFX_focus_AST_war_japan
+		prerequisite = { focus = CBJ_Westernized_Army }
+		x = 7
+		y = 5
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 3 }
+			if = {
+				limit = { has_idea = Cooperation_with_Japan }
+				swap_ideas = {
+					remove_idea = Cooperation_with_Japan
+					add_idea = Revival_of_National_Industry
+				}
+			}
+			JAP = { add_opinion_modifier = { target = ROOT modifier = New_contradiction } }
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	focus = {
+		id = CBJ_Spirit_of_May_Fourth
+		icon = GFX_focus_Recruitment_Drive
+		prerequisite = { focus = CBJ_Democratic_Fort focus = CBJ_Alliance_with_Guangdong_Government }
+		x = 9
+		y = 5
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Spirit_of_May_Fourth } }
+				add_ideas = Spirit_of_May_Fourth
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+}

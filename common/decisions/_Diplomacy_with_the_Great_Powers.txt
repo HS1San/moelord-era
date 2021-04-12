@@ -1,0 +1,259 @@
+Diplomacy_with_the_Great_Powers = {
+	Improve_Relations_with_Britain = {
+		icon = generic_decision_GBR
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 50
+				OR = {
+					has_completed_focus = Generic_Improve_Relations_with_Britain
+					has_completed_focus = CGD_Improve_Relations_with_the_Britain
+					has_completed_focus = CBJ_Westernized_Army
+					has_completed_focus = CYN_Improve_Relations_with_the_Britain
+					has_completed_focus = CZL_Westernized_Army
+					has_idea = Between_Britain_and_France
+					has_idea = Between_Britain_and_France_Equality
+					has_cosmetic_tag = Colonial_CXG
+					has_cosmetic_tag = Colonial_CWH
+					has_cosmetic_tag = Colonial_IND
+					has_cosmetic_tag = Colonial_BUR
+					has_cosmetic_tag = Colonial_PAK
+					has_cosmetic_tag = Colonial_MAL
+					has_cosmetic_tag = Colonial_SIN
+					has_cosmetic_tag = Colonial_SAB
+					has_cosmetic_tag = Colonial_SWK
+				}
+			}
+		}
+
+		cost = 50
+		days_remove = 100
+		days_re_enable = 50
+
+		modifier = {
+			political_power_cost = 1
+			min_export = 0.2
+			Moderate_Rightist_acceptance = 40
+			Radical_Rightist_acceptance = 10
+		}
+		visible = {
+			check_variable = { ROOT.relationship_with_britain < 100 }
+		}
+		available = {
+			NOT = { has_war_with = CWH }
+			NOT = { has_war_with = CXG }
+			NOT = { has_war_with = BUR }
+			NOT = { has_war_with = IND }
+			NOT = { has_war_with = PAK }
+			NOT = { has_war_with = MAL }
+			NOT = { has_war_with = SIN }
+			NOT = { has_war_with = SAB }
+			NOT = { has_war_with = SWK }
+		}
+		cancel_trigger = {
+			OR = {
+				has_war_with = CWH
+				has_war_with = CXG
+				has_war_with = BUR
+				has_war_with = IND
+				has_war_with = PAK
+				has_war_with = MAL
+				has_war_with = SIN
+				has_war_with = SAB
+				has_war_with = SWK
+			}
+		}
+		remove_effect = {
+			add_to_variable = { var = relationship_with_britain value = 15 tooltip = Increase_the_opinion_of_Britain_for_us_by_15 }
+			subtract_from_variable = { var = relationship_with_italy value = 15 tooltip = Reduce_the_opinion_of_Italy_for_us_by_15 }
+			add_popularity = { ideology = Moderate_Rightist popularity = 0.04 }
+			add_popularity = { ideology = Radical_Rightist popularity = 0.01 }
+		}
+	}
+	Improve_Relations_with_Italy = {
+		icon = generic_decision_ITA
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 50
+				has_completed_focus = Generic_Improve_Relations_with_Italy
+			}
+		}
+
+		cost = 50
+		days_remove = 100
+		days_re_enable = 50
+
+		modifier = {
+			political_power_cost = 1
+			min_export = 0.2
+			Radical_Rightist_acceptance = 50
+		}
+		visible = {
+			check_variable = { ROOT.relationship_with_italy < 100 }
+		}
+		remove_effect = {
+			add_to_variable = { var = relationship_with_italy value = 15 tooltip = Increase_the_opinion_of_Italy_for_us_by_15 }
+			subtract_from_variable = { var = relationship_with_britain value = 15 tooltip = Reduce_the_opinion_of_Britain_for_us_by_15 }
+			add_popularity = { ideology = Radical_Rightist popularity = 0.05 }
+		}
+	}
+	Improve_Relations_with_America = {
+		icon = generic_decision_USA
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 50
+				OR = {
+					has_completed_focus = Generic_Improve_Relations_with_America
+					has_completed_focus = CGD_Improve_Relations_with_the_America
+					has_completed_focus = CBJ_Westernized_Army
+					has_completed_focus = CSX_Improve_Relations_with_the_America
+					has_completed_focus = CZL_Westernized_Army
+					has_cosmetic_tag = Colonial_PHL
+				}
+			}
+		}
+
+		cost = 50
+		days_remove = 100
+		days_re_enable = 50
+
+		modifier = {
+			political_power_cost = 1
+			min_export = 0.2
+			Moderate_Leftist_acceptance = 40
+			Moderate_Rightist_acceptance = 10
+		}
+		visible = {
+			check_variable = { ROOT.relationship_with_america < 100 }
+		}
+		available = {
+			NOT = { has_war_with = PHL }
+		}
+		cancel_trigger = {
+			has_war_with = PHL
+		}
+		remove_effect = {
+			add_to_variable = { var = relationship_with_america value = 15 tooltip = Increase_the_opinion_of_America_for_us_by_15 }
+			subtract_from_variable = { var = relationship_with_germany value = 15 tooltip = Reduce_the_opinion_of_Germany_for_us_by_15 }
+			add_popularity = { ideology = Moderate_Leftist popularity = 0.04 }
+			add_popularity = { ideology = Moderate_Rightist popularity = 0.01 }
+		}
+	}
+	Improve_Relations_with_Germany = {
+		icon = generic_decision_GER
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 50
+				OR = {
+					has_completed_focus = Generic_Improve_Relations_with_Germany
+					has_completed_focus = CSX_Improve_Relations_with_the_Germany
+				}
+			}
+		}
+
+		cost = 50
+		days_remove = 100
+		days_re_enable = 50
+
+		modifier = {
+			political_power_cost = 1
+			min_export = 0.2
+			Moderate_Rightist_acceptance = 40
+			Moderate_Leftist_acceptance = 10
+		}
+		visible = {
+			check_variable = { ROOT.relationship_with_germany < 100 }
+		}
+		remove_effect = {
+			add_to_variable = { var = relationship_with_germany value = 15 tooltip = Increase_the_opinion_of_Germany_for_us_by_15 }
+			subtract_from_variable = { var = relationship_with_america value = 15 tooltip = Reduce_the_opinion_of_America_for_us_by_15 }
+			add_popularity = { ideology = Moderate_Rightist popularity = 0.04 }
+			add_popularity = { ideology = Moderate_Leftist popularity = 0.01 }
+		}
+	}
+	Improve_Relations_with_France = {
+		icon = generic_decision_FRA
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 50
+				OR = {
+					has_completed_focus = Generic_Improve_Relations_with_France
+					has_completed_focus = CBJ_Westernized_Army
+					has_completed_focus = CYN_Improve_Relations_with_the_France
+					has_completed_focus = CZL_Westernized_Army
+					has_idea = Between_Britain_and_France
+					has_idea = Between_Britain_and_France_Equality
+					has_cosmetic_tag = Colonial_INC
+					has_cosmetic_tag = Colonial_PON
+				}
+			}
+		}
+
+		cost = 50
+		days_remove = 100
+		days_re_enable = 50
+
+		modifier = {
+			political_power_cost = 1
+			min_export = 0.2
+			Moderate_Leftist_acceptance = 40
+			Radical_Leftist_acceptance = 10
+		}
+		visible = {
+			check_variable = { ROOT.relationship_with_france < 100 }
+		}
+		available = {
+			NOT = { has_war_with = INC }
+			NOT = { has_war_with = PON }
+		}
+		cancel_trigger = {
+			OR = {
+				has_war_with = INC
+				has_war_with = PON
+			}
+		}
+		remove_effect = {
+			add_to_variable = { var = relationship_with_france value = 15 tooltip = Increase_the_opinion_of_France_for_us_by_15 }
+			subtract_from_variable = { var = relationship_with_russia value = 15 tooltip = Reduce_the_opinion_of_Russia_for_us_by_15 }
+			add_popularity = { ideology = Moderate_Leftist popularity = 0.04 }
+			add_popularity = { ideology = Radical_Leftist popularity = 0.01 }
+		}
+	}
+	Improve_Relations_with_Russia = {
+		icon = generic_decision_RUS
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 50
+				OR = {
+					has_completed_focus = Generic_Improve_Relations_with_Russia
+					has_completed_focus = CGD_Improve_Relations_with_the_Russia
+					has_completed_focus = CSX_Improve_Relations_with_the_Russia
+				}
+			}
+		}
+
+		cost = 50
+		days_remove = 100
+		days_re_enable = 50
+
+		modifier = {
+			political_power_cost = 1
+			min_export = 0.2
+			Radical_Leftist_acceptance = 50
+		}
+		visible = {
+			NOT = { has_cosmetic_tag = MAN_RUS }
+			check_variable = { ROOT.relationship_with_russia < 100 }
+		}
+		remove_effect = {
+			add_to_variable = { var = relationship_with_russia value = 15 tooltip = Increase_the_opinion_of_Russia_for_us_by_15 }
+			subtract_from_variable = { var = relationship_with_france value = 15 tooltip = Reduce_the_opinion_of_France_for_us_by_15 }
+			add_popularity = { ideology = Radical_Leftist popularity = 0.05 }
+		}
+	}
+}

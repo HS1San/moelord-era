@@ -1,0 +1,43 @@
+﻿capital = 151
+
+oob = "SIA"
+
+set_country_flag = SH_OTH
+
+set_technology = {
+	rifle_equipment_0 = 1
+	support_class_equipment = 1
+	animal_combat_training = 1
+	military_police_0 = 1
+}
+
+add_ideas = {
+	Foreign_Power
+}
+
+set_convoys = 0
+set_research_slots = 1
+
+set_politics = {
+	ruling_party = Centrist
+	last_election = "1932.6.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    Moderate_Leftist = 0
+    Moderate_Rightist = 0
+    Radical_Rightist = 0
+    Radical_Leftist = 0
+    Centrist = 100
+}
+create_all_leaders = yes
+
+create_country_leader = {
+	name = "Vajiravudh"
+	picture = "Portrait_Siam_Vajiravudh.tga"
+	expire = "1925.11.26"
+	ideology = Centrist_ideology
+	traits = {}
+}

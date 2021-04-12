@@ -1,0 +1,1812 @@
+	shared_focus = {
+		id = Shared_Extra_Tech_Slot
+		icon = GFX_focus_Technological_Supremacy
+		x = 0
+		y = 0
+		cost = 10
+
+		available = {
+			has_global_flag = China_Unification
+			has_completed_focus = Shared_International_Study_Mission
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	shared_focus = {
+		id = Shared_Plan_of_Reform
+		icon = GFX_goal_generic_national_unity
+		x = 30
+		y = 0
+		cost = 4
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 70
+		}
+	}
+	shared_focus = {
+		id = Shared_Westernization_Movement
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = Shared_Plan_of_Reform }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -12
+		y = 1
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_goal_tooltip_00
+				bonus = 0.5
+				uses = 1
+				category = agriculture_tech
+				category = light_industry_tech
+				category = heavy_industry_tech
+				category = construction_tech
+				category = excavation_tech
+				category = architecture_tech
+				category = secret_action_tech
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Diplomatic_Action
+		icon = GFX_focus_Factory_Diplomacy
+		prerequisite = { focus = Shared_Plan_of_Reform }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 0
+		y = 1
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			unlock_decision_category_tooltip = Diplomacy_with_the_Great_Powers
+		}
+	}
+	shared_focus = {
+		id = Shared_Establish_Military_Academies
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = Shared_Plan_of_Reform }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 7
+		y = 1
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Military_Academies } }
+				add_ideas = Military_Academies
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Develop_Light_Industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = Shared_Westernization_Movement }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -14
+		y = 2
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_goal_tooltip_00_02
+				bonus = 0.5
+				uses = 1
+				category = light_industry_tech
+			}
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+	shared_focus = {
+		id = Shared_Construct_Roads
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = Shared_Westernization_Movement }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -12
+		y = 2
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_goal_tooltip_00_03
+				bonus = 0.5
+				uses = 1
+				category = construction_tech
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Develop_Heavy_Industry
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = Shared_Westernization_Movement }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -10
+		y = 2
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_goal_tooltip_00_02
+				bonus = 0.5
+				uses = 1
+				category = heavy_industry_tech
+			}
+			add_offsite_building = { type = arms_factory level = 1 }
+			
+		}
+	}
+	shared_focus = {
+		id = Shared_Reach_Out_To_the_Freedom_World
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = Shared_Diplomatic_Action }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -2
+		y = 2
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Liberty_Ethos_Ideas } }
+				add_ideas = Liberty_Ethos_Ideas
+			}
+			add_to_variable = { var = relationship_with_britain value = 15 tooltip = Increase_the_opinion_of_Britain_for_us_by_15 }
+			add_to_variable = { var = relationship_with_america value = 15 tooltip = Increase_the_opinion_of_America_for_us_by_15 }
+			add_to_variable = { var = relationship_with_france value = 15 tooltip = Increase_the_opinion_of_France_for_us_by_15 }
+		}
+	}
+	shared_focus = {
+		id = Shared_Reach_Out_To_the_Iron_Blood
+		icon = GFX_focus_ger_oppose_hitler
+		prerequisite = { focus = Shared_Diplomatic_Action }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 2
+		y = 2
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_rule = { can_send_volunteers = yes }
+			add_to_variable = { var = relationship_with_germany value = 15 tooltip = Increase_the_opinion_of_Germany_for_us_by_15 }
+			add_to_variable = { var = relationship_with_italy value = 15 tooltip = Increase_the_opinion_of_Italy_for_us_by_15 }
+			add_to_variable = { var = relationship_with_russia value = 15 tooltip = Increase_the_opinion_of_Russia_for_us_by_15 }
+		}
+	}
+	shared_focus = {
+		id = Shared_Aviation_Effort
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = Shared_Establish_Military_Academies }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 4
+		y = 2
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 25
+			random_owned_controlled_state = {
+				limit = { free_building_slots = { building = air_base size > 0 } }
+				add_building_construction = { type = air_base level = 2 instant_build = yes }
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Naval_Effort
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = Shared_Establish_Military_Academies }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 6
+		y = 2
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = { free_building_slots = { building = dockyard size < 1 include_locked = yes } }
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = dockyard level = 2 instant_build = yes }
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Army_Effort
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = Shared_Establish_Military_Academies }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 8
+		y = 2
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 25
+			if = {
+				limit = { NOT = { has_idea = Train_Officers } }
+				add_ideas = Train_Officers
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Expand_Military_Academies
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = Shared_Establish_Military_Academies }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 11
+		y = 2
+		cost = 14
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = { name = tech_goal_tooltip_05 bonus = 0.25 uses = 2 category = infantry_weapons category = support_tech }
+		}
+	}
+	shared_focus = {
+		id = Shared_Ban_the_Opium_Trade
+		icon = GFX_Ban_Opium
+		prerequisite = { focus = Shared_Develop_Light_Industry }
+		mutually_exclusive = { focus = Shared_Permit_Opium_Trade }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -18
+		y = 3
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_goal_tooltip_00
+				bonus = 0.5
+				uses = 1
+				category = agriculture_tech
+				category = light_industry_tech
+				category = heavy_industry_tech
+				category = construction_tech
+				category = excavation_tech
+				category = architecture_tech
+				category = secret_action_tech
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Permit_Opium_Trade
+		icon = GFX_Permit_Opium
+		prerequisite = { focus = Shared_Develop_Light_Industry }
+		mutually_exclusive = { focus = Shared_Ban_the_Opium_Trade }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -16
+		y = 3
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Small_Opium_Trade } }
+				add_ideas = Small_Opium_Trade
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Encourage_Study_Abroad
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = Shared_Develop_Heavy_Industry }
+		prerequisite = { focus = Shared_Reach_Out_To_the_Freedom_World }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -10
+		y = 3
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { amount_research_slots > 3 }
+				add_tech_bonus = {
+					name = tech_goal_tooltip_00
+					bonus = 0.5
+					uses = 1
+					category = agriculture_tech
+					category = light_industry_tech
+					category = heavy_industry_tech
+					category = construction_tech
+					category = excavation_tech
+					category = architecture_tech
+					category = secret_action_tech
+				}
+			}
+			if = {
+				limit = { amount_research_slots < 4 }
+				add_research_slot = 1
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_People_Morality
+		icon = GFX_focus_chi_examination_yuan
+		prerequisite = { focus = Shared_Reach_Out_To_the_Freedom_World }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -8
+		y = 3
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Moralism } }
+				add_ideas = Moralism
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_People_Welfare
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = Shared_Reach_Out_To_the_Freedom_World }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -6
+		y = 3
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	shared_focus = {
+		id = Shared_People_Government
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = Shared_Reach_Out_To_the_Freedom_World }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -4
+		y = 3
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	shared_focus = {
+		id = Shared_People_Power
+		icon = GFX_focus_chi_legislative_yuan
+		prerequisite = { focus = Shared_Reach_Out_To_the_Freedom_World }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -2
+		y = 3
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	shared_focus = {
+		id = Shared_Expand_Arsenals
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = Shared_Reach_Out_To_the_Freedom_World }
+		prerequisite = { focus = Shared_Reach_Out_To_the_Iron_Blood }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 0
+		y = 3
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+	}
+	shared_focus = {
+		id = Shared_Rectify_Discipline
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		prerequisite = { focus = Shared_Reach_Out_To_the_Iron_Blood }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 2
+		y = 3
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+		}
+	}
+	shared_focus = {
+		id = Shared_Flying_Circus
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = Shared_Reach_Out_To_the_Iron_Blood }
+		prerequisite = { focus = Shared_Aviation_Effort }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 4
+		y = 3
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_list = {
+				33 = { add_ace = { callsign = "Fighter Expert" type = fighter_genius} }
+				33 = { add_ace = { callsign = "Bomber Expert" type = bomber_genius} }
+				33 = { add_ace = { callsign = "Support Expert" type = support_genius} }
+				1 = { air_experience = 25 }
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Offensive_Effort
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = Shared_Army_Effort }
+		mutually_exclusive = { focus = Shared_Defensive_Effort }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 7
+		y = 3
+		cost = 14
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_army_leader = { add_attack = 1 }
+		}
+	}
+	shared_focus = {
+		id = Shared_Defensive_Effort
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = Shared_Army_Effort }
+		mutually_exclusive = { focus = Shared_Offensive_Effort }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 9
+		y = 3
+		cost = 14
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_army_leader = { add_defense = 1 }
+		}
+	}
+	shared_focus = {
+		id = Shared_Low_Level_Modern_Equipment
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = Shared_Expand_Military_Academies }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 11
+		y = 3
+		cost = 7
+
+		available = {
+			OR = {
+				num_of_factories > 25
+				original_tag = JAP
+				original_tag = IND
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = modern_equipment.tt
+		}
+	}
+	shared_focus = {
+		id = Shared_Develop_Modern_Agriculture
+		icon = GFX_focus_Agriculture_2
+		prerequisite = { focus = Shared_Ban_the_Opium_Trade }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -18
+		y = 4
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+			add_tech_bonus = {
+				name = tech_goal_tooltip_00_01
+				bonus = 0.5
+				uses = 1
+				category = agriculture_tech
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Expand_Opium_Cultivation
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = Shared_Permit_Opium_Trade }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -16
+		y = 4
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = { remove_idea = Small_Opium_Trade add_idea = Large_Opium_Trade }
+		}
+	}
+	shared_focus = {
+		id = Shared_Construct_Railways
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = Shared_Develop_Light_Industry }
+		prerequisite = { focus = Shared_Construct_Roads }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -13
+		y = 4
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Aid_Victims
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = Shared_People_Morality }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -8
+		y = 4
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Refugee_Tide } }
+				add_ideas = Refugee_Tide
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_National_Capitalism
+		icon = GFX_focus_Capitalist_Systems
+		prerequisite = { focus = Shared_People_Welfare }
+		prerequisite = { focus = Shared_People_Government }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -5
+		y = 4
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	}
+	shared_focus = {
+		id = Shared_Gender_Equality
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = Shared_People_Power }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -3
+		y = 4
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			set_rule = { can_generate_female_aces = yes }
+		}
+	}
+	shared_focus = {
+		id = Shared_Free_Press
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = Shared_People_Power }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -1
+		y = 4
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = -0.03
+			add_political_power = 300
+		}
+	}
+	shared_focus = {
+		id = Shared_Request_International_Assistance
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = Shared_Expand_Arsenals }
+		prerequisite = { focus = Shared_Rectify_Discipline }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 1
+		y = 4
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_tech = rifle_equipment_2 }
+				add_equipment_to_stockpile = { type = rifle_equipment_2 amount = 5000 }
+				else = {
+					if = {
+						limit = { has_tech = rifle_equipment_1 }
+						add_equipment_to_stockpile = { type = rifle_equipment_1 amount = 5000 }
+						else = { add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 5000 } }
+					}
+				}
+			}
+			add_equipment_to_stockpile = { type = carbine_equipment_0 amount = 1000 }
+		}
+	}
+	shared_focus = {
+		id = Shared_Purchase_Aircrafts
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = Shared_Flying_Circus }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 3
+		y = 4
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_tech = recon_plane_equipment }
+				add_equipment_to_stockpile = { type = recon_plane_equipment amount = 50 }
+				else = { set_technology = { recon_plane_equipment = 1 } }
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Sea_Air_Cooperative_Operation
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = Shared_Aviation_Effort }
+		prerequisite = { focus = Shared_Naval_Effort }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 5
+		y = 4
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = { name = tech_goal_tooltip_07 bonus = 0.5 uses = 1 category = naval_equipment }
+			add_tech_bonus = { name = tech_goal_tooltip_08 bonus = 0.5 uses = 1 category = air_equipment }
+		}
+	}
+	shared_focus = {
+		id = Shared_Special_Police_Force
+		icon = GFX_focus_Subterfuge
+		prerequisite = { focus = Shared_Offensive_Effort }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 7
+		y = 4
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = { name = tech_goal_tooltip_05_02_02 bonus = 0.25 uses = 1 category = special_forces }
+			add_tech_bonus = { name = tech_goal_tooltip_00_05 bonus = 0.5 uses = 1 category = secret_action_tech }
+		}
+	}
+	shared_focus = {
+		id = Shared_Legacy_of_the_Great_War
+		icon = GFX_focus_Lessons_from_the_Great_War
+		prerequisite = { focus = Shared_Defensive_Effort }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 9
+		y = 4
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Labour_Corps } }
+				add_ideas = Labour_Corps
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Advanced_Modern_Equipment
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = Shared_Low_Level_Modern_Equipment }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 11
+		y = 4
+		cost = 7
+
+		available = {
+			OR = {
+				num_of_factories > 50
+				original_tag = JAP
+				original_tag = IND
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = modern_equipment.tt
+		}
+	}
+	shared_focus = {
+		id = Shared_Expand_Railways
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = Shared_Construct_Railways }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -14
+		y = 5
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Plan_of_Exploration
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = Shared_Construct_Railways }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -12
+		y = 5
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_category_tooltip = prospect_for_resources
+			add_tech_bonus = {
+				name = tech_goal_tooltip_00_06
+				bonus = 0.5
+				uses = 1
+				category = excavation_tech
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Create_Research_Institutes
+		icon = GFX_focus_research2
+		prerequisite = { focus = Shared_Encourage_Study_Abroad }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -10
+		y = 5
+		cost = 7
+
+		available = {
+			num_of_factories > 15
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { amount_research_slots > 3 }
+				add_tech_bonus = {
+					name = tech_goal_tooltip_00
+					bonus = 0.5
+					uses = 1
+					category = agriculture_tech
+					category = light_industry_tech
+					category = heavy_industry_tech
+					category = construction_tech
+					category = excavation_tech
+					category = architecture_tech
+					category = secret_action_tech
+				}
+			}
+			if = {
+				limit = { amount_research_slots < 4 }
+				add_research_slot = 1
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Reform_Tax_System
+		icon = GFX_focus_Pile_of_Money
+		prerequisite = { focus = Shared_Aid_Victims }
+		prerequisite = { focus = Shared_National_Capitalism }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -8
+		y = 5
+		cost = 9
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Reform_Tax_System } }
+				add_ideas = Reform_Tax_System
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_New_Culture_Movement
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = Shared_National_Capitalism }
+		mutually_exclusive = { focus = Shared_New_Life_Movement }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -6
+		y = 5
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	shared_focus = {
+		id = Shared_New_Life_Movement
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = Shared_National_Capitalism }
+		mutually_exclusive = { focus = Shared_New_Culture_Movement }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -4
+		y = 5
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+	shared_focus = {
+		id = Shared_Purchase_Foreign_Cars
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = Shared_Request_International_Assistance }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -1
+		y = 5
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_tech = truck_equipment }
+				add_equipment_to_stockpile = { type = motorized_equipment_0 amount = 100 }
+				else = { set_technology = { truck_equipment = 1 } }
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Design_New_Rifles
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = Shared_Request_International_Assistance }
+		mutually_exclusive = { focus = Shared_Design_New_Artillery }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 1
+		y = 5
+		cost = 14
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_designer
+			custom_effect_tooltip = available_designer_rifle
+			add_tech_bonus = { name = tech_goal_tooltip_05_01 bonus = 0.5 ahead_reduction = 1 uses = 1 category = infantry_gun }
+		}
+	}
+	shared_focus = {
+		id = Shared_Design_New_Artillery
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = Shared_Request_International_Assistance }
+		mutually_exclusive = { focus = Shared_Design_New_Rifles }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 3
+		y = 5
+		cost = 14
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_designer
+			custom_effect_tooltip = available_designer_artillery
+			add_tech_bonus = { name = tech_goal_tooltip_05_03 bonus = 0.5 ahead_reduction = 1 uses = 1 category = artillery }
+		}
+	}
+	shared_focus = {
+		id = Shared_Extra_Navy_Leader
+		icon = GFX_focus_Status_of_the_Admirality
+		prerequisite = { focus = Shared_Naval_Effort }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 6
+		y = 5
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = Unlock_New_Admiral
+			hidden_effect = { create_navy_leader = { skill = 3 } }
+		}
+	}
+	shared_focus = {
+		id = Shared_Dare_To_Die_Corps
+		icon = GFX_focus_Death_or_Dishonor
+		prerequisite = { focus = Shared_Special_Police_Force focus = Shared_Legacy_of_the_Great_War }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 9
+		y = 5
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = kamikaze_focus_tooltip
+			custom_effect_tooltip = Unlock_New_Army_02
+			hidden_effect = {
+				set_rule = { can_use_kamikaze_pilots = yes }
+				division_template = {
+					name = "Dare To Die Corps"
+					priority = 3
+					is_locked = yes
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"1. Dare To Die Corps\" division_template = \"Dare To Die Corps\" start_experience_factor = 1.0 start_equipment_factor = 0.01" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"2. Dare To Die Corps\" division_template = \"Dare To Die Corps\" start_experience_factor = 1.0 start_equipment_factor = 0.01" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"3. Dare To Die Corps\" division_template = \"Dare To Die Corps\" start_experience_factor = 1.0 start_equipment_factor = 0.01" 
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Guarantee_Transportation
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = Shared_Develop_Modern_Agriculture }
+		prerequisite = { focus = Shared_Expand_Railways }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -18
+		y = 6
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_army_leader = { add_logistics = 1 }
+		}
+	}
+	shared_focus = {
+		id = Shared_Improve_Ironmaking
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = Shared_Plan_of_Exploration }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -15
+		y = 6
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = { type = steel amount = 15 }
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Forced_Loans
+		icon = GFX_focus_Democracy_Fund
+		prerequisite = { focus = Shared_Reform_Tax_System }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -9
+		y = 6
+		cost = 9
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = Forced_Loans
+		}
+	}
+	shared_focus = {
+		id = Shared_War_Taxes
+		icon = GFX_focus_Reopen_the_Stock_Markets
+		prerequisite = { focus = Shared_Reform_Tax_System }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -7
+		y = 6
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = War_Taxes_Decision
+		}
+	}
+	shared_focus = {
+		id = Shared_National_Compulsory_Education
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = Shared_New_Culture_Movement focus = Shared_New_Life_Movement }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -5
+		y = 6
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = National_Compulsory_Education } }
+				add_ideas = National_Compulsory_Education
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Bicycle_Infantry
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = Shared_Purchase_Foreign_Cars }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -2
+		y = 6
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_tech = bicycle_equipment } }
+				set_technology = { bicycle_equipment = 1 }
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Purchase_Foreign_Tanks
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = Shared_Purchase_Foreign_Cars }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 0
+		y = 6
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = { name = tech_goal_tooltip_06 bonus = 0.5 uses = 1 category = armor }
+		}
+	}
+	shared_focus = {
+		id = Shared_Anti_Aircraft_Warfare
+		icon = GFX_focus_generic_air_defense
+		prerequisite = { focus = Shared_Sea_Air_Cooperative_Operation focus = Shared_Flying_Circus }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 4
+		y = 6
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_capital = yes
+					free_building_slots = { building = anti_air_building size > 0 }
+				}
+				add_building_construction = { type = anti_air_building level = 3 instant_build = yes }
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Extra_Land_Leader
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = Shared_Special_Police_Force focus = Shared_Legacy_of_the_Great_War }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 7
+		y = 6
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = Unlock_New_General
+			hidden_effect = { create_corps_commander = { skill = 3 attack_skill = 2 defense_skill = 3 planning_skill = 3 logistics_skill = 2 } }
+		}
+	}
+	shared_focus = {
+		id = Shared_Firepower_Effort
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = Shared_Expand_Military_Academies }
+		mutually_exclusive = { focus = Shared_Mobility_Effort }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 10
+		y = 6
+		cost = 14
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_goal_tooltip_04
+				bonus = 0.5
+				uses = 1
+				category = cat_superior_firepower
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Mobility_Effort
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = Shared_Expand_Military_Academies }
+		mutually_exclusive = { focus = Shared_Firepower_Effort }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 12
+		y = 6
+		cost = 14
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_goal_tooltip_04
+				bonus = 0.5
+				uses = 1
+				category = cat_mass_assault
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Manage_Tungsten_Area
+		icon = GFX_focus_generic_tungsten
+		prerequisite = { focus = Shared_Improve_Ironmaking }
+		mutually_exclusive = { focus = Shared_Manage_Aluminium_Area }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -16
+		y = 7
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = { type = tungsten amount = 9 }
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Manage_Aluminium_Area
+		icon = GFX_focus_generic_aluminum
+		prerequisite = { focus = Shared_Improve_Ironmaking }
+		mutually_exclusive = { focus = Shared_Manage_Tungsten_Area }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -14
+		y = 7
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = { type = aluminium amount = 9 }
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Elite_Mountaineers
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = Shared_National_Compulsory_Education }
+		mutually_exclusive = { focus = Shared_Elite_Desert_Infantry }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -6
+		y = 7
+		cost = 9
+
+		available = { has_completed_focus = Shared_Army_Effort }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Elite_Special_Forces } }
+				add_ideas = Elite_Special_Forces
+			}
+			add_tech_bonus = { name = tech_goal_tooltip_05_02_02_01 bonus = 0.5 uses = 1 category = mountaineers_tech }
+		}
+	}
+	shared_focus = {
+		id = Shared_Elite_Desert_Infantry
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = Shared_National_Compulsory_Education }
+		mutually_exclusive = { focus = Shared_Elite_Mountaineers }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -4
+		y = 7
+		cost = 9
+
+		available = { has_completed_focus = Shared_Army_Effort }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Elite_Special_Forces } }
+				add_ideas = Elite_Special_Forces
+			}
+			add_tech_bonus = { name = tech_goal_tooltip_05_02_02_03 bonus = 0.5 uses = 1 category = desert_infantry_tech }
+		}
+	}
+	shared_focus = {
+		id = Shared_Recruit_Bandits
+		icon = GFX_focus_Enlist_the_Police
+		prerequisite = { focus = Shared_Design_New_Rifles focus = Shared_Design_New_Artillery }
+		mutually_exclusive = { focus = Shared_Guerilla_Tradition }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 1
+		y = 7
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = Recruit_Bandits
+			unlock_decision_tooltip = Recruit_Pirates
+		}
+	}
+	shared_focus = {
+		id = Shared_Guerilla_Tradition
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = Shared_Design_New_Rifles focus = Shared_Design_New_Artillery }
+		mutually_exclusive = { focus = Shared_Recruit_Bandits }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 3
+		y = 7
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Guerilla_Tradition } }
+				add_ideas = Guerilla_Tradition
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Eliteism
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = Shared_Extra_Land_Leader }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 6
+		y = 7
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = remove_all_old_guard
+			random_unit_leader = { add_skill_level = 1 }
+			random_unit_leader = { add_timed_unit_leader_trait = { trait = Devil_Training days = 360 } }
+			hidden_effect = { every_army_leader = { remove_unit_leader_trait = old_guard } }
+		}
+	}
+	shared_focus = {
+		id = Shared_Scorched_Earth_Tactics
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = Shared_Dare_To_Die_Corps }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 9
+		y = 7
+		cost = 9
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = Scorched_Earth_Tactics
+		}
+	}
+	shared_focus = {
+		id = Shared_Reorganize_the_Local_Army
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = Shared_Firepower_Effort focus = Shared_Mobility_Effort }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 11
+		y = 7
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_army_leader = { add_planning = 1 }
+		}
+	}
+	shared_focus = {
+		id = Shared_Industrial_Evacuations
+		icon = GFX_focus_The_Big_Push
+		prerequisite = { focus = Shared_Guarantee_Transportation }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -18
+		y = 8
+		cost = 9
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = Industrial_Evacuations
+		}
+	}
+	shared_focus = {
+		id = Shared_Rubber_Company
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = Shared_Manage_Tungsten_Area focus = Shared_Manage_Aluminium_Area }
+		mutually_exclusive = { focus = Shared_Drill_Oil }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -15
+		y = 8
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = { type = rubber amount = 6 }
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Drill_Oil
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = Shared_Plan_of_Exploration }
+		mutually_exclusive = { focus = Shared_Rubber_Company }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -12
+		y = 8
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = { type = oil amount = 6 }
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_International_Study_Mission
+		icon = GFX_goal_tfv_generic_tech_sharing
+		prerequisite = { focus = Shared_Create_Research_Institutes }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -10
+		y = 8
+		cost = 7
+
+		available = {
+			OR = {
+				num_of_factories > 30
+				any_other_country = {
+					is_in_faction_with = ROOT
+					num_of_factories > 30
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { amount_research_slots > 3 }
+				add_tech_bonus = {
+					name = tech_goal_tooltip_00
+					bonus = 0.5
+					uses = 1
+					category = agriculture_tech
+					category = light_industry_tech
+					category = heavy_industry_tech
+					category = construction_tech
+					category = excavation_tech
+					category = architecture_tech
+					category = secret_action_tech
+				}
+			}
+			if = {
+				limit = { amount_research_slots < 4 }
+				add_research_slot = 1
+			}
+		}
+	}
+	shared_focus = {
+		id = Shared_Elite_Forest_Infantry
+		icon = GFX_focus_Prepare_the_Troops
+		prerequisite = { focus = Shared_Elite_Mountaineers }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -7
+		y = 8
+		cost = 9
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = { name = tech_goal_tooltip_05_02_02_02 bonus = 0.5 uses = 1 category = forest_infantry_tech }
+		}
+	}
+	shared_focus = {
+		id = Shared_Elite_Marine
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = Shared_National_Compulsory_Education }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -5
+		y = 8
+		cost = 9
+
+		available = { has_completed_focus = Shared_Naval_Effort }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Elite_Special_Forces } }
+				add_ideas = Elite_Special_Forces
+			}
+			add_tech_bonus = { name = tech_goal_tooltip_05_02_02_05 bonus = 0.5 uses = 1 category = marine_tech }
+		}
+	}
+	shared_focus = {
+		id = Shared_Elite_Jungle_Infantry
+		icon = GFX_focus_RAJ_indian_gurkhas
+		prerequisite = { focus = Shared_Elite_Desert_Infantry }
+		relative_position_id = Shared_Plan_of_Reform
+		x = -3
+		y = 8
+		cost = 9
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = { name = tech_goal_tooltip_05_02_02_04 bonus = 0.5 uses = 1 category = jungle_infantry_tech }
+		}
+	}
+	shared_focus = {
+		id = Shared_Spirit_of_Knight_Errant
+		icon = GFX_focus_Swing_the_Sword
+		prerequisite = { focus = Shared_Recruit_Bandits focus = Shared_Guerilla_Tradition }
+		mutually_exclusive = { focus = Shared_Why_We_Fight }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 2
+		y = 8
+		cost = 9
+
+		available = {
+			OR = {
+				has_war = yes
+				has_war_support > 0.5
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = cost_reduced_last_stand
+			unlock_decision_tooltip = They_Shall_Not_Pass
+		}
+	}
+	shared_focus = {
+		id = Shared_Why_We_Fight
+		icon = GFX_focus_Rally
+		prerequisite = { focus = Shared_Eliteism }
+		mutually_exclusive = { focus = Shared_Spirit_of_Knight_Errant }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 6
+		y = 8
+		cost = 9
+
+		available = {
+			OR = {
+				has_war = yes
+				has_war_support > 0.5
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = CHI_50_cheaper_force_attack
+			unlock_decision_tooltip = We_Shall_Never_Surrender
+		}
+	}
+	shared_focus = {
+		id = Shared_Military_Youth
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = Shared_Extra_Land_Leader }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 8
+		y = 8
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_manpower = 50000
+		}
+	}
+	shared_focus = {
+		id = Shared_Modern_Cavalry
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = Shared_Reorganize_the_Local_Army }
+		mutually_exclusive = { focus = Shared_Experimental_Motorized_Infantry }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 10
+		y = 8
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = { name = tech_goal_tooltip_05_01_02 bonus = 0.5 uses = 1 category = carbine_tech }
+		}
+	}
+	shared_focus = {
+		id = Shared_Experimental_Motorized_Infantry
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = Shared_Reorganize_the_Local_Army }
+		mutually_exclusive = { focus = Shared_Modern_Cavalry }
+		relative_position_id = Shared_Plan_of_Reform
+		x = 12
+		y = 8
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = { name = tech_goal_tooltip_06 bonus = 0.5 uses = 1 category = armor }
+		}
+	}

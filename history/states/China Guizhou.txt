@@ -1,0 +1,86 @@
+state = {
+	id = 84
+	name = "STATE_84"
+	manpower = 6043200
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 6
+		rubber = 0
+		tungsten = 2
+		steel = 10
+		chromium = 0
+	}
+	history = {
+		owner = CGZ
+		add_core_of = CGZ
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = { 4325 1 }
+		victory_points = { 10616 3 }
+		victory_points = { 10763 2 }
+	}
+	provinces = {
+		1010 4325 4532 8095 10616 10763 
+	}
+}
+
+state = {
+	id = 85
+	name = "STATE_85"
+	manpower = 1500000
+	state_category = impoverished_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 5
+		rubber = 0
+		tungsten = 0
+		steel = 5
+		chromium = 0
+	}
+	history = {
+		owner = CGZ
+		add_core_of = CGZ
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 7577 2 }
+	}
+	provinces = {
+		1474 7521 7549 7577 9939 
+	}
+}
+
+state = {
+	id = 86
+	name = "STATE_86"
+	manpower = 1500000
+	state_category = impoverished_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 5
+		rubber = 0
+		tungsten = 0
+		steel = 5
+		chromium = 0
+	}
+	history = {
+		owner = CGZ
+		add_core_of = CGZ
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 1884 1 }
+	}
+	provinces = {
+		1884 4192 4504 
+	}
+}

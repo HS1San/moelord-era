@@ -1,0 +1,69 @@
+default_strategy_plan = {
+	name = "Default Strategy Plan"
+	desc = "Default Strategy Plan"
+
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	research = {
+		infantry_weapons = 20
+		doctrine_tech = 20
+		support_tech = 20
+		artillery = 20
+		agriculture_tech = 5
+		construction_tech = 5
+		science_tech = 3
+		light_industry_tech = 3
+		excavation_tech = 2
+		architecture_tech = 2
+		armor = 0
+		air_equipment = 0
+		naval_equipment = 0
+		heavy_industry_tech = 0
+		secret_action_tech = 0
+	}
+	traits = {
+		profession_01 = 5
+		profession_02 = 0
+		profession_03 = 0
+		profession_04 = 3
+		profession_05 = 2
+		profession_06 = 20
+		profession_07 = 20
+		profession_08 = 8
+		profession_09 = 0
+		profession_10 = 15
+		profession_11 = 2
+		profession_12 = 5
+		profession_13 = 3
+		profession_14 = 2
+		profession_15 = 12
+		profession_16 = 0
+		profession_17 = 25
+		profession_18 = 0
+		tank_manufacturer_01 = 7
+		tank_manufacturer_02 = 0
+		tank_manufacturer_03 = 0
+		naval_manufacturer_01 = 5
+		naval_manufacturer_02 = 5
+		naval_manufacturer_03 = 5
+		naval_manufacturer_04 = 0
+		aircraft_manufacturer_01 = 3
+		aircraft_manufacturer_02 = 0
+		aircraft_manufacturer_03 = 0
+		materiel_manufacturer_01 = 10
+		materiel_manufacturer_02 = 5
+		industrial_concern_01 = 15
+		industrial_concern_02 = 10
+		theorist_01 = 0
+		theorist_02 = 0
+		theorist_03 = 0
+		theorist_04 = 0
+	}
+	weight = {
+		factor = 1
+	}
+}

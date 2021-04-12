@@ -1,0 +1,69 @@
+﻿########
+#Templates
+########
+division_template = {
+	name = "Bubingshi"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Qibingshi"
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Hunchenglü"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+########
+#OOB
+########
+units = {
+	division = {
+		name = "Exi Lianjun Zhonglujun"
+		location = 12414
+		division_template = "Bubingshi"
+		start_experience_factor = 0.0
+	}
+	division = {
+		name = "Exi Lianjun Zuoyijun"
+		location = 12414
+		division_template = "Bubingshi"
+		start_experience_factor = 0.0
+	}
+	division = {
+		name = "Exi Lianjun Youyijun"
+		location = 12414
+		division_template = "Bubingshi"
+		start_experience_factor = 0.0
+	}
+	division = {
+		name = "Exi Lianjun Zongyubeidui"
+		location = 12414
+		division_template = "Bubingshi"
+		start_experience_factor = 0.0
+	}
+	division = {
+		name = "Exi Lianjun Houfangbudui"
+		location = 12414
+		division_template = "Bubingshi"
+		start_experience_factor = 0.0
+	}
+}

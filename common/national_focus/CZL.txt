@@ -1,0 +1,575 @@
+focus_tree = {
+	id = CZL_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CZL
+		}
+	}
+
+	default = no
+	shared_focus = Shared_Plan_of_Reform
+	shared_focus = Shared_Extra_Tech_Slot
+
+	focus = {
+		id = CZL_Expel_Zhang
+		icon = GFX_focus_The_Burgos_Meeting
+		mutually_exclusive = { focus = CZL_Assassinate_Xu }
+		x = 3
+		y = 0
+		cost = 5
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			CHN = {
+				if = {
+					limit = {
+						has_government = Centrist
+						NOT = { has_cosmetic_tag = CHN_modern }
+					}
+					country_event = new_CHN.1
+				}
+			}
+			remove_political_road = yes
+			set_country_flag = SH_BYC
+			add_political_road = yes
+			unlock_decision_tooltip = Formable_BYC
+		}
+	}
+	focus = {
+		id = CZL_Assassinate_Xu
+		icon = GFX_focus_Backstab
+		mutually_exclusive = { focus = CZL_Expel_Zhang }
+		x = 7
+		y = 0
+		cost = 5
+
+		available = {
+			CBJ = { any_unit_leader = { has_id = 2 } }
+		}
+
+		cancel = {
+			NOT = { CBJ = { any_unit_leader = { has_id = 2 } } }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = new_Zhili.2
+			remove_political_road = yes
+			set_country_flag = SH_BYC
+			add_political_road = yes
+			unlock_decision_tooltip = Formable_BYC
+		}
+	}
+	focus = {
+		id = CZL_Invite_Henan
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = CZL_Expel_Zhang }
+		x = 1
+		y = 1
+		cost = 8
+
+		available = {
+			is_faction_leader = yes
+			CHE = {
+				exists = yes
+				is_subject = no
+				is_in_faction = no
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		cancel = {
+			OR = {
+				is_in_faction = no
+				CHE = { is_in_faction = yes }
+				CHE = { has_war_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			CHE = { country_event = new_Generic.3 }
+		}
+	}
+	focus = {
+		id = CZL_New_Army
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = CZL_Expel_Zhang }
+		x = 3
+		y = 1
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_manpower = 50000
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+		}
+	}
+	focus = {
+		id = CZL_Baoding_Military_Academy
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = CZL_Expel_Zhang focus = CZL_Assassinate_Xu }
+		x = 5
+		y = 1
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Baoding_Military_Academy } }
+				add_ideas = Baoding_Military_Academy
+			}
+		}
+	}
+	focus = {
+		id = CZL_Cooperation_with_Japan
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = CZL_Assassinate_Xu }
+		x = 9
+		y = 1
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Cooperation_with_Japan } }
+				add_ideas = Cooperation_with_Japan
+			}
+			JAP = {
+				add_opinion_modifier = { target = ROOT modifier = New_friendship }
+				add_ai_strategy = { type = alliance id = "CZL" value = 100 }
+				add_ai_strategy = { type = protect id = "CZL" value = 100 }
+				add_ai_strategy = { type = send_volunteers_desire id = "CZL" value = 100 }
+				add_ai_strategy = { type = support id = "CZL" value = 100 }
+			}
+		}
+	}
+	focus = {
+		id = CZL_Invite_Zhensongjun
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = CZL_Invite_Henan }
+		x = 1
+		y = 2
+		cost = 8
+
+		available = {
+			is_faction_leader = yes
+			CYX = {
+				exists = yes
+				is_subject = no
+				is_in_faction = no
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		cancel = {
+			OR = {
+				is_in_faction = no
+				CYX = { is_in_faction = yes }
+				CYX = { has_war_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			CYX = { country_event = new_Generic.3 }
+		}
+	}
+	focus = {
+		id = CZL_War_with_Anhui_Clique
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = CZL_New_Army }
+		will_lead_to_war_with = CBJ
+		x = 3
+		y = 2
+		cost = 8
+
+		available = {
+			has_country_flag = Zhili_Member
+			is_faction_leader = yes
+			any_other_country = {
+				is_faction_leader = yes
+				has_country_flag = Anhui_Member
+				NOT = { has_war_with = ROOT }
+			}
+			NOT = {
+				has_global_flag = Zhili_Won
+				has_global_flag = Anhui_Won
+				has_global_flag = Zhili_Anhui_Alliance
+			}
+		}
+
+		bypass = {
+			OR = {
+				any_other_country = {
+					has_country_flag = Anhui_Member
+					has_war_with = ROOT
+				}
+				has_global_flag = Zhili_Won
+				has_global_flag = Anhui_Won
+				has_global_flag = Zhili_Anhui_Alliance
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = { threat = 10 name = threat.ZAW }
+			random_other_country = {
+				limit = {
+					is_faction_leader = yes
+					has_country_flag = Anhui_Member
+					NOT = {has_idea = Puppeted_Mongolia}
+				}
+				add_named_threat = { threat = 10 name = threat.ZAW }
+				ROOT = { declare_war_on = { target = PREV type = annex_everything } }
+				every_other_country = {
+					limit = {
+						is_in_faction_with = ROOT NOT = {has_idea = Puppeted_Mongolia}
+					}
+					add_to_war = { targeted_alliance = ROOT enemy = PREV }
+				}
+				every_other_country = {
+					limit = { is_in_faction_with = PREV NOT = {has_idea = Puppeted_Mongolia} }
+					add_to_war = { targeted_alliance = PREV enemy = ROOT }
+				}
+			}
+			random_other_country = {
+				limit = {
+					is_faction_leader = yes
+					has_country_flag = Fengtian_Member
+				}
+				country_event = new_Fengtian.3
+			}
+			hidden_effect = { every_other_country = { news_event = new_News.4 } }
+		}
+	}
+	focus = {
+		id = CZL_Establish_Great_Wall_Front
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = CZL_Baoding_Military_Academy }
+		x = 5
+		y = 2
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Great_Wall_Front } }
+				add_ideas = Great_Wall_Front
+			}
+		}
+	}
+	focus = {
+		id = CZL_Alliance_with_Anhui_Clique
+		icon = GFX_Experience_Anhui_Clique
+		prerequisite = { focus = CZL_Assassinate_Xu }
+		x = 7
+		y = 2
+		cost = 8
+
+		available = {
+			has_country_flag = Zhili_Member
+			is_faction_leader = yes
+			any_other_country = {
+				is_faction_leader = yes
+				has_country_flag = Anhui_Member
+				NOT = { has_war_with = ROOT }
+			}
+			NOT = {
+				has_global_flag = Zhili_Won
+				has_global_flag = Anhui_Won
+				has_global_flag = Zhili_Anhui_Alliance
+			}
+		}
+
+		bypass = {
+			OR = {
+				any_other_country = {
+					has_country_flag = Anhui_Member
+					has_war_with = ROOT
+				}
+				has_global_flag = Zhili_Won
+				has_global_flag = Anhui_Won
+				has_global_flag = Zhili_Anhui_Alliance
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = Attitude_determines_success_or_failure
+			custom_effect_tooltip = Formed_the_Peiyang_Clique
+			random_other_country = {
+				limit = {
+					is_faction_leader = yes
+					has_country_flag = Anhui_Member
+				}
+				country_event = new_Zhili.3
+			}
+		}
+	}
+	focus = {
+		id = CZL_Westernized_Army
+		icon = GFX_focus_Hidden_Pacts
+		prerequisite = { focus = CZL_War_with_Anhui_Clique }
+		x = 1
+		y = 3
+		cost = 8
+
+		available = {
+			NOT = { has_war_with = CWH }
+			NOT = { has_war_with = CXG }
+			NOT = { has_war_with = BUR }
+			NOT = { has_war_with = IND }
+			NOT = { has_war_with = PAK }
+			NOT = { has_war_with = MAL }
+			NOT = { has_war_with = SIN }
+			NOT = { has_war_with = SWK }
+			NOT = { has_war_with = SAB }
+			NOT = { has_war_with = INC }
+			NOT = { has_war_with = PON }
+			NOT = { has_war_with = PHL }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = Cooperation_with_Japan }
+				remove_ideas = Cooperation_with_Japan
+			}
+			add_to_variable = { var = relationship_with_britain value = 50 tooltip = Increase_the_opinion_of_Britain_for_us_by_50 }
+			add_to_variable = { var = relationship_with_america value = 50 tooltip = Increase_the_opinion_of_America_for_us_by_50 }
+			add_to_variable = { var = relationship_with_france value = 50 tooltip = Increase_the_opinion_of_France_for_us_by_50 }
+		}
+	}
+	focus = {
+		id = CZL_Attack_Fengtian_Clique
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { focus = CZL_Establish_Great_Wall_Front }
+		x = 5
+		y = 3
+		cost = 8
+
+		available = {
+			OR = {
+				has_global_flag = Zhili_Won
+				has_global_flag = Anhui_Won
+				has_global_flag = Zhili_Anhui_Alliance
+			}
+			any_other_country = {
+				is_faction_leader = yes
+				has_country_flag = Fengtian_Member
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+			NOT = { any_other_country = { has_country_flag = Fengtian_Member } }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_other_country = {
+				limit = {
+					is_faction_leader = yes
+					has_country_flag = Fengtian_Member
+				}
+				ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+			}
+			add_named_threat = { threat = 10 name = threat.FZW }
+		}
+	}
+	focus = {
+		id = CZL_China_Japan_Treaty_of_Equality
+		icon = GFX_focus_jap_pacific_guardian
+		prerequisite = { focus = CZL_Cooperation_with_Japan }
+		x = 9
+		y = 3
+		cost = 8
+
+		available = {
+			OR = {
+				JAP = {
+					exists = yes
+					has_opinion = { target = ROOT value > 99 }
+				}
+				JAP = { exists = no }
+				has_government = Radical_Leftist
+				has_government = Radical_Rightist
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			if = {
+				limit = { has_idea = Cooperation_with_Japan }
+				swap_ideas = {
+					remove_idea = Cooperation_with_Japan
+					add_idea = Cooperation_with_Japan_Equality
+				}
+			}
+		}
+	}
+	focus = {
+		id = CZL_Ganshiqiao_Club
+		icon = GFX_focus_Extravagance
+		prerequisite = { focus = CZL_Westernized_Army }
+		x = 1
+		y = 4
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Ganshiqiao_Club } }
+				add_ideas = Ganshiqiao_Club
+			}
+		}
+	}
+	focus = {
+		id = CZL_Bride_Gao
+		icon = GFX_focus_Reopen_the_Stock_Markets
+		prerequisite = { focus = CZL_Attack_Fengtian_Clique }
+		x = 3
+		y = 4
+		cost = 8
+
+		available = {
+			CJL = { exists = no }
+			NOT = { has_global_flag = Rebellion_of_Gao }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = Bride_Gao
+			set_global_flag = Rebellion_of_Gao
+			add_timed_idea = { idea = Money_to_Gao days = 180 }
+		}
+	}
+	focus = {
+		id = CZL_Recreate_Zhili_Clique
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = CZL_Attack_Fengtian_Clique }
+		x = 5
+		y = 4
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		bypass = {
+			has_global_flag = Zhili_Anhui_Alliance
+		}
+
+		completion_reward = {
+			if = {
+				limit = { is_in_faction = no }
+				create_faction = "New_Zhili_Clique"
+			}
+			every_other_country = {
+				limit = {
+					is_in_faction = no
+					has_country_flag = SH_WAR
+					has_country_flag = Old_Zhili_Member
+				}
+				country_event = new_Generic.13
+				clr_country_flag = Old_Zhili_Member
+			}
+		}
+	}
+	focus = {
+		id = CZL_Tsinghua_Peking_University
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = CZL_Attack_Fengtian_Clique focus = CZL_China_Japan_Treaty_of_Equality }
+		x = 7
+		y = 4
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Tsinghua_Peking_University } }
+				add_ideas = Tsinghua_Peking_University
+			}
+		}
+	}
+	focus = {
+		id = CZL_Attack_Guangdong_Government
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = CZL_Recreate_Zhili_Clique }
+		will_lead_to_war_with = CGD
+		x = 5
+		y = 5
+		cost = 8
+
+		available = {
+			CGD = {
+				exists = yes
+				is_subject = no
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = CGD }
+		}
+	}
+}

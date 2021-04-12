@@ -1,0 +1,56 @@
+difficulty_settings = {
+	difficulty_setting = {
+		key = "custom_diff_strong_cgd" # Guangdong
+		modifier = diff_strong_ai_generic
+		countries = { CGD }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_cft" # Fengtian
+		modifier = diff_strong_ai_generic
+		countries = { CFT }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_cbj" # Jiangzhao
+		modifier = diff_strong_ai_generic
+		countries = { CBJ }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_czl" # Zhili
+		modifier = diff_strong_ai_generic
+		countries = { CZL }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_csx" # Shanxi
+		modifier = diff_strong_ai_generic
+		countries = { CSX }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_cyn" # Yunnan
+		modifier = diff_strong_ai_generic
+		countries = { CYN }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_csc" # Sichuan
+		modifier = diff_strong_ai_generic
+		countries = { CSC }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_csh" # Shanghai
+		modifier = diff_strong_ai_generic
+		countries = { CSH }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_mon" # Mongolia
+		modifier = diff_strong_ai_generic
+		countries = { MON }
+		multiplier = 2.0
+	}
+}

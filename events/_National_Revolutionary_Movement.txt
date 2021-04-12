@@ -1,0 +1,1564 @@
+﻿add_namespace = new_NRM
+add_namespace = new_GMJ
+
+country_event = {
+	id = new_NRM.1
+	title = new_NRM.1.t
+	desc = new_NRM.1.d
+	picture = GFX_report_event_chinese_soldiers_running
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = CGD
+		OR = {
+			has_completed_focus = CGD_Remove_the_Warlord
+			AND = {
+				date > 1920.8.18
+				date < 1920.11.1
+			}
+		}
+		has_war = no
+		NOT = { owns_state = 194 }
+	}
+
+	mean_time_to_happen = {
+		days = 2
+		modifier = { factor = 0.5 date > 1920.9.1 }
+		modifier = { factor = 0.2 date > 1920.10.1 }
+	}
+
+	immediate = { hidden_effect = { every_other_country = { news_event = new_News.6 } } }
+
+	option = {
+		name = new_NRM.1.a
+		add_war_support = 0.05
+		add_named_threat = { threat = 5 name = threat.ROG }
+		random_other_country = {
+			limit = { owns_state = 194 }
+			CGD = {
+				transfer_state = 76
+				set_state_controller = 76
+				transfer_state = 77
+				set_state_controller = 77
+				transfer_state = 78
+				set_state_controller = 78
+				transfer_state = 79
+				set_state_controller = 79
+				transfer_state = 80
+				set_state_controller = 80
+				transfer_state = 81
+				set_state_controller = 81
+				transfer_state = 194
+				set_state_controller = 194
+				transfer_state = 195
+				set_state_controller = 195
+				declare_war_on = { target = PREV type = annex_everything }
+			}
+		}
+	}
+	option = {
+		name = new_NRM.1.b
+		add_named_threat = { threat = 5 name = threat.ROG }
+		random_other_country = {
+			limit = { owns_state = 194 }
+			CGD = {
+				transfer_state = 76
+				set_state_controller = 76
+				transfer_state = 77
+				set_state_controller = 77
+				transfer_state = 78
+				set_state_controller = 78
+				transfer_state = 79
+				set_state_controller = 79
+				transfer_state = 80
+				set_state_controller = 80
+				transfer_state = 81
+				set_state_controller = 81
+				transfer_state = 194
+				set_state_controller = 194
+				transfer_state = 195
+				set_state_controller = 195
+			}
+			country_event = new_CGD.4
+		}
+	}
+}
+
+country_event = {
+	id = new_NRM.2
+	title = new_NRM.2.t
+	desc = new_NRM.2.d
+	picture = GFX_report_event_generic_read_write
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = CGD
+		has_country_leader = { name = "Sun Wen" }
+		date > 1924.12.1
+		date < 1925.3.1
+	}
+
+	mean_time_to_happen = {
+		days = 12
+		modifier = { factor = 0.5 date > 1925.1.1 }
+		modifier = { factor = 0.2 date > 1925.2.1 }
+	}
+
+	option = {
+		name = new_NRM.2.a
+		custom_effect_tooltip = add_CNL_support_point
+		add_to_variable = { var = Support_CNL value = 1 }
+		add_war_support = 0.05
+	}
+	option = {
+		name = new_NRM.2.b
+		custom_effect_tooltip = add_CNR_support_point
+		add_to_variable = { var = Support_CNR value = 1 }
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = new_NRM.3
+	title = new_NRM.3.t
+	desc = new_NRM.3.d
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = CGD
+		has_country_leader = { name = "Sun Wen" }
+		date > 1925.3.1
+		date < 1925.6.1
+	}
+
+	mean_time_to_happen = {
+		days = 12
+		modifier = { factor = 0.5 date > 1925.4.1 }
+		modifier = { factor = 0.2 date > 1925.5.1 }
+	}
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = SH_NLC
+			clr_country_flag = SH_NPC
+			clr_country_flag = SH_NRC
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Liao Enxu"	# 廖恩煦
+				picture = "gfx/leaders/China/Portrait_China_Liao_Enxu.tga"
+				expire = "1936.1.1"
+				ideology = Moderate_Leftist_ideology
+				traits = {}
+			}
+			create_country_leader = {
+				name = "Wang Zhaoming"	# 汪兆铭
+				picture = "gfx/leaders/China/Portrait_China_Wang_Zhaoming.tga"
+				expire = "1936.1.1"
+				ideology = Centrist_ideology
+				traits = {}
+			}
+			create_country_leader = {
+				name = "Hu Yanhong" # 胡衍鸿
+				picture = "gfx/leaders/China/Portrait_China_Hu_Yanhong.tga"
+				expire = "1936.1.1"
+				ideology = Moderate_Rightist_ideology
+				traits = {}
+			}
+			set_party_name = { ideology = Moderate_Leftist long_name = New_party_06_long name = New_party_06 }
+			set_party_name = { ideology = Centrist long_name = New_party_05_long name = New_party_05 }
+			set_party_name = { ideology = Moderate_Rightist long_name = New_party_07_long name = New_party_07 }
+			activate_mission = Political_Murder_Case
+		}
+	}
+
+	option = {
+		name = new_NRM.3.a
+		custom_effect_tooltip = add_CNL_support_point
+		add_to_variable = { var = Support_CNL value = 1 }
+		add_popularity = { ideology = Moderate_Leftist popularity = 0.5 }
+		set_politics = { ruling_party = Moderate_Leftist elections_allowed = no }
+		remove_political_road = yes
+		set_country_flag = SH_NLC
+		add_political_road = yes
+		hidden_effect = { every_other_country = { news_event = new_News.8 } }
+	}
+	option = {
+		name = new_NRM.3.b
+		custom_effect_tooltip = add_CNP_support_point
+		add_to_variable = { var = Support_CNP value = 1 }
+		add_popularity = { ideology = Centrist popularity = 0.5 }
+		set_politics = { ruling_party = Centrist elections_allowed = no }
+		remove_political_road = yes
+		set_country_flag = SH_NPC
+		add_political_road = yes
+		hidden_effect = { every_other_country = { news_event = new_News.8 } }
+	}
+	option = {
+		name = new_NRM.3.c
+		custom_effect_tooltip = add_CNR_support_point
+		add_to_variable = { var = Support_CNR value = 1 }
+		add_popularity = { ideology = Moderate_Rightist popularity = 0.5 }
+		set_politics = { ruling_party = Moderate_Rightist elections_allowed = no }
+		remove_political_road = yes
+		set_country_flag = SH_NRC
+		add_political_road = yes
+		hidden_effect = { every_other_country = { news_event = new_News.8 } }
+	}
+}
+
+country_event = {
+	id = new_NRM.4
+	title = new_NRM.4.t
+	desc = new_NRM.4.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	immediate = { hidden_effect = { activate_mission = Canton_Coup } }
+
+	option = {
+		name = new_NRM.4.a
+		custom_effect_tooltip = add_CNL_support_point
+		custom_effect_tooltip = add_CNR_support_point
+		add_to_variable = { var = Support_CNL value = 1 }
+		add_to_variable = { var = Support_CNR value = 1 }
+	}
+	option = {
+		name = new_NRM.4.b
+		custom_effect_tooltip = add_CNR_support_point
+		add_to_variable = { var = Support_CNR value = 1 }
+		set_global_flag = Assassination_Liao_Zhongkai
+		add_stability = -0.05
+		create_country_leader = {
+			name = "Deng Yanda"	# 邓演达
+			picture = "gfx/leaders/China/Portrait_China_Deng_Yanda.tga"
+			expire = "1936.1.1"
+			ideology = Moderate_Leftist_ideology
+			traits = {}
+		}
+	}
+	option = {
+		name = new_NRM.4.c
+		custom_effect_tooltip = add_CNL_support_point
+		add_to_variable = { var = Support_CNL value = 1 }
+		set_global_flag = Assassination_Hu_Hanmin
+		add_stability = -0.05
+		create_country_leader = {
+			name = "Dai Chuanxian"	# 戴传贤
+			picture = "gfx/leaders/China/Portrait_China_Dai_Chuanxian.tga"
+			expire = "1936.1.1"
+			ideology = Moderate_Rightist_ideology
+			traits = {}
+		}
+	}
+	option = {
+		name = new_NRM.4.e
+		set_global_flag = Assassination_Liao_Zhongkai
+		set_global_flag = Assassination_Hu_Hanmin
+		custom_effect_tooltip = add_CNP_support_point
+		subtract_from_variable = { Support_CNP = 1 }
+		add_stability = -0.1
+		create_country_leader = {
+			name = "Deng Yanda"
+			picture = "gfx/leaders/China/Portrait_China_Deng_Yanda.tga"
+			expire = "1936.1.1"
+			ideology = Moderate_Leftist_ideology
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Dai Chuanxian"
+			picture = "gfx/leaders/China/Portrait_China_Dai_Chuanxian.tga"
+			expire = "1936.1.1"
+			ideology = Moderate_Rightist_ideology
+			traits = {}
+		}
+	}
+}
+
+country_event = {
+	id = new_NRM.5
+	title = new_NRM.5.t
+	desc = new_NRM.5.d
+	picture = GFX_report_event_china_politicians_captured
+
+	is_triggered_only = yes
+
+	immediate = { hidden_effect = { activate_mission = Disagreement_within_the_Military_Academy } }
+
+	option = {
+		name = new_NRM.5.a
+		add_political_power = -200
+		add_war_support = -0.05
+		add_stability = -0.05
+	}
+	option = {
+		name = new_NRM.5.b
+		retire_country_leader = yes
+		add_popularity = { ideology = Centrist popularity = 0.5 }
+		set_politics = { ruling_party = Centrist elections_allowed = no }
+		create_country_leader = {
+			name = "Jiang Zhongzheng"	# 蒋中正
+			picture = "gfx/leaders/China/Portrait_China_Jiang_Zhongzheng.tga"
+			expire = "1936.1.1"
+			ideology = Centrist_ideology
+			traits = {}
+		}
+	}
+}
+
+country_event = {
+	id = new_NRM.6
+	title = new_NRM.6.t
+	desc = new_NRM.6.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	immediate = { hidden_effect = { activate_mission = Chen_Sen_Incident } }
+
+	option = {
+		name = new_NRM.6.a
+		custom_effect_tooltip = add_CNL_support_point
+		add_to_variable = { var = Support_CNL value = 1 }
+		add_political_power = 100
+		add_war_support = -0.04
+		add_stability = 0.04
+	}
+	option = {
+		name = new_NRM.6.b
+		custom_effect_tooltip = add_CNP_support_point
+		add_to_variable = { var = Support_CNP value = 1 }
+		add_political_power = 100
+		add_war_support = -0.03
+		add_stability = 0.03
+	}
+	option = {
+		name = new_NRM.6.c
+		custom_effect_tooltip = add_CNR_support_point
+		add_to_variable = { var = Support_CNR value = 1 }
+		add_political_power = 100
+		add_war_support = -0.02
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = new_NRM.7
+	title = new_NRM.7.t
+	desc = new_NRM.7.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = {
+		name =new_NRM.7.a
+		custom_effect_tooltip = replace_guangdong_clique
+		add_war_support = 0.05
+		add_stability = -0.05
+		if = {
+			limit = { has_idea = Old_Guangdong_Clique }
+			remove_ideas = Old_Guangdong_Clique
+		}
+		hidden_effect = {
+			every_unit_leader = {
+				limit = {
+					OR = {
+						has_id = 25
+						has_id = 26
+						has_id = 27
+						has_id = 28
+						has_id = 29
+						has_id = 145
+						has_id = 146
+						has_id = 147
+						has_id = 148
+						has_id = 149
+					}
+				}
+				retire = yes
+			}
+			create_field_marshal = {
+				name = "Jiang Zhongzheng"	# 蒋中正
+				portrait_path = "gfx/leaders/China/Portrait_China_Jiang_Zhongzheng.tga"
+				traits = { trait_cautious inflexible_strategist politically_connected General_is_a_HoS }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 1
+				id = 150
+			}
+			create_corps_commander = {
+				name = "He Yingqin"	# 何应钦
+				portrait_path = "gfx/leaders/China/Portrait_China_He_Yingqin.tga"
+				traits = { career_officer politically_connected skilled_staffer }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 1
+				id = 151
+			}
+			create_corps_commander = {
+				name = "Tan Yankai"	# 谭延闿
+				portrait_path = "gfx/leaders/China/Portrait_China_Tan_Yankai.tga"
+				traits = { old_guard }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+				id = 152
+			}
+			create_corps_commander = {
+				name = "Zhu Peide"	# 朱培德
+				portrait_path = "gfx/leaders/China/Portrait_China_Zhu_Peide.tga"
+				traits = { career_officer skirmisher brilliant_strategist }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 3
+				logistics_skill = 2
+				id = 153
+			}
+			create_corps_commander = {
+				name = "Li_Jishen"	# 李济深
+				portrait_path = "gfx/leaders/China/Portrait_China_Li_Jishen.tga"
+				traits = { career_officer media_personality expert_improviser }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 1
+				id = 154
+			}
+			create_corps_commander = {
+				name = "Cheng Qian"	# 程潜
+				portrait_path = "gfx/leaders/China/Portrait_China_Cheng_Qian.tga"
+				traits = { career_officer ambusher }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+				id = 155
+			}
+			create_corps_commander = {
+				name = "He Chengjun"	# 何成濬
+				portrait_path = "gfx/leaders/China/Portrait_China_He_Chengjun.tga"
+				traits = { career_officer combined_arms_expert }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 1
+				id = 158
+			}
+			create_corps_commander = {
+				name = "Liu Zhi"	# 刘峙
+				portrait_path = "gfx/leaders/China/Portrait_China_Liu_Zhi.tga"
+				traits = { career_officer skilled_staffer }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+				id = 159
+			}
+			create_corps_commander = {
+				name = "Chen Cheng"	# 陈诚
+				portrait_path = "gfx/leaders/China/Portrait_China_Chen_Cheng.tga"
+				traits = { career_officer bearer_of_artillery }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+				id = 160
+			}
+			create_corps_commander = {
+				name = "Ye Ting"	# 叶挺
+				portrait_path = "gfx/leaders/China/Portrait_China_Ye_Ting.tga"
+				traits = { career_officer organizer brilliant_strategist }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 1
+				id = 208
+			}
+			create_corps_commander = {
+				name = "Zhang Fakui"	# 张发奎
+				portrait_path = "gfx/leaders/China/Portrait_China_Zhang_Fakui.tga"
+				traits = { career_officer bearer_of_artillery }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+				id = 212
+			}
+			create_corps_commander = {
+				name = "He Jian"	# 何健
+				portrait_path = "gfx/leaders/China/Portrait_China_He_Jian.tga"
+				traits = { career_officer cavalry_officer trait_reckless }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+				id = 213
+			}
+			create_corps_commander = {
+				name = "Liu Xing"	# 刘兴
+				portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+				traits = { career_officer aggressive_assaulter }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+				id = 214
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = New_Hunan_Faction
+						any_army_leader = { has_id = 157 }
+					}
+				}
+				create_corps_commander = {
+					name = "Tang Shengzhi"	# 唐生智
+					portrait_path = "gfx/leaders/China/Portrait_China_Tang_Shengzhi.tga"
+					traits = { career_officer trait_cautious }
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+					id = 157
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = New_Guangxi_Faction
+						any_army_leader = { has_id = 156 }
+					}
+				}
+				create_corps_commander = {
+					name = "Li Zongren"	# 李宗仁
+					portrait_path = "gfx/leaders/China/Portrait_China_Li_Zongren.tga"
+					traits = { career_officer infantry_expert }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 2
+					id = 156
+				}
+			}
+		}
+	}
+	option = {
+		name = new_NRM.7.b
+		trigger = { is_ai = no }
+		add_war_support = -0.05
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = new_NRM.8
+	title = new_NRM.8.t
+	desc = new_NRM.8.d
+	picture = GFX_report_event_chinese_officers
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = CGD
+		is_subject = no
+		has_civil_war = no
+		has_global_flag = Northern_Expedition
+		NOT = { has_country_leader = { name = "Sun Wen" } }
+		check_variable = { ROOT.num_owned_states > 34 }
+		OR = {
+			has_country_flag = SH_NPC
+			has_country_flag = SH_NLC
+			has_country_flag = SH_NRC
+		}
+		OR = {
+			NOT = { has_government = Centrist }
+			check_variable = { ROOT.Support_CNP < ROOT.Support_CNL }
+			check_variable = { ROOT.Support_CNP < ROOT.Support_CNR }
+			check_variable = { ROOT.Support_CNL < ROOT.Support_CNR }
+		}
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	immediate = {
+		hidden_effect = {
+			every_other_country = { news_event = new_News.10 }
+			if = {
+				limit = {
+					has_global_flag = New_Guangxi_Faction
+					CGX = { exists = no }
+					owns_state = 70
+					owns_state = 71
+					owns_state = 72
+					owns_state = 73
+					owns_state = 74
+					owns_state = 75
+				}
+				CGX = {
+					add_state_core = 76
+					add_state_core = 77
+					add_state_core = 78
+					add_state_core = 79
+					add_state_core = 80
+					add_state_core = 81
+				}
+				release = CGX
+				CGX = {
+					remove_political_road = yes
+					set_country_flag = SH_NRC
+					country_event = new_Generic.4
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = New_Hunan_Faction
+					CHN = { exists = no }
+					owns_state = 67
+					owns_state = 68
+					owns_state = 69
+				}
+				CHN = {
+					add_state_core = 45
+					add_state_core = 46
+					add_state_core = 47
+					add_state_core = 48
+				}
+				release = CHN
+				CHN = {
+					remove_political_road = yes
+					set_country_flag = SH_NLC
+					country_event = new_Generic.4
+				}
+			}
+			if = {
+				limit = {
+					CHN = {
+						exists = yes
+						has_war = no
+					}
+					CGX = {
+						exists = yes
+						has_war = no
+					}
+					has_global_flag = New_Guangxi_Faction
+					has_global_flag = New_Hunan_Faction
+				}
+				set_global_flag = Nanjing_Wuhan_War
+				CHN = { declare_war_on = { target = CGX type = annex_everything } }
+			}
+		}
+	}
+
+	option = {
+		name = new_NRM.8.a
+		trigger = {
+			OR = {
+				has_country_flag = SH_NPC
+				has_country_flag = SH_NLC
+			}
+		}
+		hidden_effect = { country_event = { id = new_NRM.12 days = 1 } }
+	}
+	option = {
+		name = new_NRM.8.b
+		trigger = {
+			OR = {
+				has_country_flag = SH_NPC
+				has_country_flag = SH_NRC
+			}
+		}
+		hidden_effect = { country_event = { id = new_NRM.13 days = 1 } }
+	}
+}
+
+country_event = {
+	id = new_NRM.9
+	title = new_NRM.9.t
+	desc = new_NRM.9.d
+	picture = GFX_report_event_chinese_soldiers_running
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { is_subject = yes }
+				random_other_country = {
+					limit = { ROOT = { is_subject_of = PREV } }
+					end_puppet = ROOT
+				}
+			}
+			if = {
+				limit = { is_in_faction = yes }
+				leave_faction = yes
+			}
+			if = {
+				limit = { original_tag = CGX }
+				set_global_flag = New_Guangxi_Faction
+			}
+			if = {
+				limit = { original_tag = CHN }
+				set_global_flag = New_Hunan_Faction
+			}
+			if = {
+				limit = { original_tag = CJX }
+				set_global_flag = New_Jiangxi_Faction
+			}
+			if = {
+				limit = { original_tag = CFJ }
+				set_global_flag = New_Fujian_Faction
+			}
+			drop_cosmetic_tag = yes
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+			remove_political_road = yes
+			set_country_flag = SH_NPC
+			add_political_road = yes
+			country_event = new_Generic.4
+			set_country_flag = Ignoring_The_Change
+			add_popularity = { ideology = Moderate_Leftist popularity = 0.3 }
+			add_popularity = { ideology = Moderate_Rightist popularity = 0.3 }
+			clr_country_flag = Ignoring_The_Change
+			set_party_name = { ideology = Moderate_Leftist long_name = New_party_05_long name = New_party_05 }
+			set_party_name = { ideology = Centrist long_name = New_party_05_long name = New_party_05 }
+			set_party_name = { ideology = Moderate_Rightist long_name = New_party_05_long name = New_party_05 }
+		}
+	}
+
+	option = {
+		name = new_NRM.9.a
+		trigger = { original_tag = CGX }
+		set_cosmetic_tag = CGX_modern
+		create_country_leader = {
+			name = "Li Zongren"
+			picture = "gfx/leaders/China/Portrait_China_Li_Zongren.tga"
+			expire = "1936.1.1"
+			ideology = Moderate_Rightist_ideology
+			traits = {}
+		}
+		set_politics = { ruling_party = Moderate_Rightist elections_allowed = no }
+		FROM = { add_to_faction = ROOT }
+		start_civil_war = { ideology = Centrist size = 0.5 }
+		random_other_country = {
+			limit = {
+				original_tag = CGX
+				has_government = Centrist
+			}
+			ROOT = {
+				random_army_leader = {
+					limit = { has_trait = General_is_a_HoS }
+					set_nationality = PREV
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { any_army_leader = { has_id = 156 } } } }
+			create_field_marshal = {
+				name = "Li Zongren"
+				portrait_path = "gfx/leaders/China/Portrait_China_Li_Zongren.tga"
+				traits = { career_officer trait_cautious General_is_a_HoS }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 3
+				id = 156
+			}
+			else = {
+				global_every_army_leader = {
+					limit = { has_id = 156 }
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+					set_nationality = CGX
+				}
+			}
+		}
+		add_ideas = National_Revolution
+	}
+	option = {
+		name = new_NRM.9.a
+		trigger = { original_tag = CHN }
+		set_cosmetic_tag = CHN_modern
+		create_country_leader = {
+			name = "Tang Shengzhi"
+			picture = "gfx/leaders/China/Portrait_China_Tang_Shengzhi.tga"
+			expire = "1936.1.1"
+			ideology = Moderate_Leftist_ideology
+			traits = {}
+		}
+		set_politics = { ruling_party = Moderate_Leftist elections_allowed = no }
+		FROM = { add_to_faction = ROOT }
+		start_civil_war = { ideology = Centrist size = 0.5 }
+		random_other_country = {
+			limit = {
+				original_tag = CHN
+				has_government = Centrist
+			}
+			ROOT = {
+				random_army_leader = {
+					limit = { has_trait = General_is_a_HoS }
+					set_nationality = PREV
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { any_army_leader = { has_id = 157 } } } }
+			create_field_marshal = {
+				name = "Tang Shengzhi"
+				portrait_path = "gfx/leaders/China/Portrait_China_Tang_Shengzhi.tga"
+				traits = { career_officer trait_cautious General_is_a_HoS }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 1
+				id = 157
+			}
+			else = {
+				global_every_army_leader = {
+					limit = { has_id = 157 }
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+					set_nationality = CHN
+				}
+			}
+		}
+		add_ideas = National_Revolution
+	}
+	option = {
+		name = new_NRM.9.a
+		trigger = { original_tag = CJX }
+		set_cosmetic_tag = CJX_modern
+		create_country_leader = {
+			name = "Li Liejun"
+			picture = "gfx/leaders/China/Portrait_China_Li_Liejun.tga"
+			expire = "1936.1.1"
+			ideology = Moderate_Leftist_ideology
+			traits = {}
+		}
+		set_politics = { ruling_party = Moderate_Leftist elections_allowed = no }
+		FROM = { add_to_faction = ROOT }
+		start_civil_war = { ideology = Centrist size = 0.5 }
+		random_other_country = {
+			limit = {
+				original_tag = CJX
+				has_government = Centrist
+			}
+			ROOT = {
+				random_army_leader = {
+					limit = { has_trait = General_is_a_HoS }
+					set_nationality = PREV
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { any_army_leader = { has_id = 145 } } } }
+			create_field_marshal = {
+				name = "Li Liejun"
+				portrait_path = "gfx/leaders/China/Portrait_China_Li_Liejun.tga"
+				traits = { career_officer war_hero General_is_a_HoS }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 4
+				planning_skill = 2
+				logistics_skill = 1
+				id = 145
+			}
+			else = {
+				global_every_army_leader = {
+					limit = { has_id = 145 }
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+					set_nationality = CJX
+				}
+			}
+		}
+		add_ideas = National_Revolution
+	}
+	option = {
+		name = new_NRM.9.a
+		trigger = { original_tag = CFJ }
+		set_cosmetic_tag = CFJ_modern
+		create_country_leader = {
+			name = "Xu Chongzhi"
+			picture = "gfx/leaders/China/Portrait_China_Xu_Chongzhi.tga"
+			expire = "1936.1.1"
+			ideology = Moderate_Rightist_ideology
+			traits = {}
+		}
+		set_politics = { ruling_party = Moderate_Rightist elections_allowed = no }
+		FROM = { add_to_faction = ROOT }
+		start_civil_war = { ideology = Centrist size = 0.5 }
+		random_other_country = {
+			limit = {
+				original_tag = CFJ
+				has_government = Centrist
+			}
+			ROOT = {
+				random_army_leader = {
+					limit = { has_trait = General_is_a_HoS }
+					set_nationality = PREV
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { any_army_leader = { has_id = 146 } } } }
+			create_field_marshal = {
+				name = "Xu Chongzhi"
+				portrait_path = "gfx/leaders/China/Portrait_China_Xu_Chongzhi.tga"
+				traits = { career_officer hidden_sympathies skirmisher General_is_a_HoS }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 4
+				logistics_skill = 1
+				id = 146
+			}
+			else = {
+				global_every_army_leader = {
+					limit = { has_id = 146 }
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = General_is_a_HoS } }
+						add_unit_leader_trait = General_is_a_HoS
+					}
+					set_nationality = CFJ
+				}
+			}
+		}
+		add_ideas = National_Revolution
+	}
+}
+
+country_event = {
+	id = new_NRM.10
+	title = new_NRM.10.t
+	desc = new_NRM.10.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_NRM.10.a
+		custom_effect_tooltip = add_CNL_support_point
+		add_to_variable = { var = Support_CNL value = 1 }
+		add_stability = 0.05
+	}
+	option = {
+		name = new_NRM.10.b
+		custom_effect_tooltip = add_CNR_support_point
+		add_to_variable = { var = Support_CNR value = 1 }
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = new_NRM.11
+	title = new_NRM.11.t
+	desc = new_NRM.11.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	immediate = { hidden_effect = { activate_mission = Finish_Party_Case } }
+
+	option = {
+		name = new_NRM.11.a
+		custom_effect_tooltip = add_CNP_support_point
+		subtract_from_variable = { Support_CNP = 1 }
+		add_stability = -0.2
+	}
+	option = {
+		name = new_NRM.11.b
+		custom_effect_tooltip = add_CNR_support_point
+		add_to_variable = { var = Support_CNR value = 1 }
+		add_stability = 0.05
+	}
+	option = {
+		name = new_NRM.11.c
+		custom_effect_tooltip = add_CNL_support_point
+		add_to_variable = { var = Support_CNL value = 1 }
+		add_stability = 0.05
+	}
+	option = {
+		name = new_NRM.11.e
+		custom_effect_tooltip = add_CNL_support_point
+		custom_effect_tooltip = add_CNR_support_point
+		add_to_variable = { var = Support_CNL value = 1 }
+		add_to_variable = { var = Support_CNR value = 1 }
+		add_stability = 0.1
+	}
+}
+
+country_event = {
+	id = new_NRM.12
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_country_leader = { name = "Jiang Zhongzheng" } }
+			create_country_leader = {
+				name = "Jiang Zhongzheng"
+				picture = "gfx/leaders/China/Portrait_China_Jiang_Zhongzheng.tga"
+				expire = "1936.1.1"
+				ideology = Moderate_Leftist_ideology
+				traits = {}
+			}
+		}
+		if = {
+			limit = { has_country_leader = { name = "Wang Zhaoming" } }
+			create_country_leader = {
+				name = "Wang Zhaoming"
+				picture = "gfx/leaders/China/Portrait_China_Wang_Zhaoming.tga"
+				expire = "1936.1.1"
+				ideology = Moderate_Leftist_ideology
+				traits = {}
+			}
+			create_country_leader = {
+				name = "Jiang Zhongzheng"
+				picture = "gfx/leaders/China/Portrait_China_Jiang_Zhongzheng.tga"
+				expire = "1936.1.1"
+				ideology = Moderate_Rightist_ideology
+				traits = {}
+			}
+		}
+		start_civil_war = {
+			ruling_party = Moderate_Leftist
+			ideology = Moderate_Rightist
+			size = 0.5
+			keep_unit_leaders = { 157 150 152 155 208 212 213 214 }
+		}
+		remove_political_road = yes
+		set_country_flag = SH_NLC
+		add_political_road = yes
+		drop_cosmetic_tag = yes
+		set_cosmetic_tag = CNL
+		if = {
+			limit = { is_in_faction = yes }
+			leave_faction = yes
+		}
+		create_faction = "Leftist_Kuomintang"
+		random_other_country = {
+			limit = {
+				original_tag = CGD
+				has_government = Moderate_Rightist
+			}
+			set_country_flag = SH_NRC
+			set_cosmetic_tag = CNR
+			global_every_army_leader = {
+				limit = {
+					OR = {
+						has_id = 156
+						has_id = 151
+						has_id = 153
+						has_id = 154
+						has_id = 158
+						has_id = 159
+						has_id = 160
+					}
+				}
+				set_nationality = PREV
+			}
+			if = {
+				limit = {
+					has_global_flag = New_Guangxi_Faction
+					CGX = { exists = yes }
+				}
+				random_unit_leader = {
+					limit = { has_id = 156 }
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					set_nationality = CGX
+				}
+			}
+			if = {
+				limit = { has_country_leader = { name = "Jiang Zhongzheng" } }
+				global_every_army_leader = {
+					limit = { has_id = 150 }
+					set_nationality = PREV
+				}
+			}
+			if = {
+				limit = { is_in_faction = yes }
+				leave_faction = yes
+			}
+			create_faction = "Rightist_Kuomintang"
+		}
+		if = {
+			limit = {
+				has_global_flag = New_Hunan_Faction
+				CHN = { exists = yes }
+			}
+			random_unit_leader = {
+				limit = { has_id = 157 }
+				if = {
+					limit = { is_field_marshal = no }
+					promote_leader = yes
+				}
+				set_nationality = CHN
+			}
+		}
+	}
+}
+
+country_event = {
+	id = new_NRM.13
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_country_leader = { name = "Wang Zhaoming" } }
+			create_country_leader = {
+				name = "Wang Zhaoming"
+				picture = "gfx/leaders/China/Portrait_China_Wang_Zhaoming.tga"
+				expire = "1936.1.1"
+				ideology = Moderate_Rightist_ideology
+				traits = {}
+			}
+		}
+		if = {
+			limit = { has_country_leader = { name = "Jiang Zhongzheng" } }
+			create_country_leader = {
+				name = "Jiang Zhongzheng"
+				picture = "gfx/leaders/China/Portrait_China_Jiang_Zhongzheng.tga"
+				expire = "1936.1.1"
+				ideology = Moderate_Rightist_ideology
+				traits = {}
+			}
+			create_country_leader = {
+				name = "Wang Zhaoming"
+				picture = "gfx/leaders/China/Portrait_China_Wang_Zhaoming.tga"
+				expire = "1936.1.1"
+				ideology = Moderate_Leftist_ideology
+				traits = {}
+			}
+		}
+		start_civil_war = {
+			ruling_party = Moderate_Rightist
+			ideology = Moderate_Leftist
+			size = 0.5
+			keep_unit_leaders = { 156 150 151 153 154 158 159 160 }
+		}
+		if = {
+			limit = { is_in_faction = yes }
+			leave_faction = yes
+		}
+		remove_political_road = yes
+		set_country_flag = SH_NRC
+		add_political_road = yes
+		drop_cosmetic_tag = yes
+		set_cosmetic_tag = CNR
+		create_faction = "Rightist_Kuomintang"
+		random_other_country = {
+			limit = {
+				original_tag = CGD
+				has_government = Moderate_Leftist
+			}
+			set_country_flag = SH_NLC
+			set_cosmetic_tag = CNL
+			global_every_army_leader = {
+				limit = {
+					OR = {
+						has_id = 157
+						has_id = 152
+						has_id = 155
+						has_id = 208
+						has_id = 212
+						has_id = 213
+						has_id = 214
+					}
+				}
+				set_nationality = PREV
+			}
+			if = {
+				limit = {
+					has_global_flag = New_Hunan_Faction
+					CHN = { exists = yes }
+				}
+				random_unit_leader = {
+					limit = { has_id = 157 }
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					set_nationality = CHN
+				}
+			}
+			if = {
+				limit = { has_country_leader = { name = "Jiang Zhongzheng" } }
+				global_every_army_leader = {
+					limit = { has_id = 150 }
+					set_nationality = PREV
+				}
+			}
+			if = {
+				limit = { is_in_faction = yes }
+				leave_faction = yes
+			}
+			create_faction = "Leftist_Kuomintang"
+		}
+		if = {
+			limit = {
+				has_global_flag = New_Guangxi_Faction
+				CGX = { exists = yes }
+			}
+			random_unit_leader = {
+				limit = { has_id = 156 }
+				if = {
+					limit = { is_field_marshal = no }
+					promote_leader = yes
+				}
+				set_nationality = CGX
+			}
+		}
+	}
+}
+
+country_event = {
+	id = new_NRM.14
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_named_threat = { threat = 5 name = threat.GCW }
+		start_civil_war = {
+			ruling_party = Moderate_Rightist
+			ideology = Moderate_Leftist
+			size = 0.4
+			keep_unit_leaders = { 25 26 27 28 29 }
+			states = { 77 195 }
+		}
+		every_other_country = { news_event = new_News.7 }
+		random_other_country = {
+			limit = {
+				original_tag = CGD
+				has_government = Moderate_Leftist
+			}
+			set_country_flag = SH_NPC
+			set_country_flag = SH_PAR
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = CNP
+			add_ideas = Legacy_of_the_Xinhai_Revolution
+			add_ideas = Old_Guangdong_Clique
+			global_every_army_leader = {
+				limit = {
+					OR = {
+						has_id = 145
+						has_id = 146
+						has_id = 147
+						has_id = 148
+						has_id = 149
+					}
+				}
+				set_nationality = PREV
+			}
+		}
+	}
+}
+
+country_event = {
+	id = new_NRM.15
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_named_threat = { threat = 5 name = threat.GCW }
+		start_civil_war = {
+			ruling_party = Moderate_Leftist
+			ideology = Moderate_Rightist
+			size = 0.4
+			keep_unit_leaders = { 145 146 147 148 149 }
+			states = { 77 195 }
+		}
+		every_other_country = { news_event = new_News.7 }
+		random_other_country = {
+			limit = {
+				original_tag = CGD
+				has_government = Moderate_Rightist
+			}
+			set_country_flag = SH_BYC
+			set_country_flag = SH_WAR
+			add_ideas = Legacy_of_the_Xinhai_Revolution
+			add_ideas = Old_Guangdong_Clique
+			global_every_army_leader = {
+				limit = {
+					OR = {
+						has_id = 25
+						has_id = 26
+						has_id = 27
+						has_id = 28
+						has_id = 29
+					}
+				}
+				set_nationality = PREV
+			}
+		}
+	}
+}
+
+country_event = {
+	id = new_GMJ.1
+	title = new_GMJ.1.t
+	desc = new_GMJ.1.d
+	picture = GFX_report_event_chinese_soldiers_running
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_GMJ.1.a
+		set_country_flag = Guomin_Army
+		if = {
+			limit = { is_subject = yes }
+			random_other_country = {
+				limit = { ROOT = { is_subject_of = PREV } }
+				end_puppet = ROOT
+			}
+		}
+		if = {
+			limit = { is_in_faction = yes }
+			leave_faction = yes
+		}
+		clr_country_flag = Anhui_Member
+		clr_country_flag = Zhili_Member
+		clr_country_flag = Fengtian_Member
+		remove_political_road = yes
+		add_political_road = yes
+		every_other_country = {
+			limit = { has_war_with = ROOT }
+			white_peace = ROOT
+		}
+		create_faction = "Guominjun"
+		if = {
+			limit = { has_global_flag = Anhui_Won }
+			random_other_country = {
+				limit = {
+					is_faction_leader = yes
+					has_country_flag = Anhui_Member
+				}
+				add_timed_idea = { idea = Coup_of_Guominjun days = 240 }
+				ROOT = { declare_war_on = { target = PREV type = puppet_wargoal_focus } }
+			}
+		}
+		if = {
+			limit = { has_global_flag = Zhili_Won }
+			random_other_country = {
+				limit = {
+					is_faction_leader = yes
+					has_country_flag = Zhili_Member
+				}
+				add_timed_idea = { idea = Coup_of_Guominjun days = 240 }
+				ROOT = { declare_war_on = { target = PREV type = puppet_wargoal_focus } }
+			}
+		}
+		if = {
+			limit = { NOT = { has_global_flag = Rebellion_of_Feng } }
+			set_global_flag = Rebellion_of_Feng
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Feng Yuxiang"	# 冯玉祥
+			picture = "gfx/leaders/China/Portrait_China_Feng_Yuxiang.tga"
+			expire = "1936.1.1"
+			ideology = Centrist_ideology
+			traits = {}
+		}
+		hidden_effect = {
+			every_other_country = { news_event = new_News.16 }
+			if = {
+				limit = {
+					tag = CCH
+					country_exists = CSY
+				}
+				CSY = { country_event = new_GMJ.2 }
+			}
+			global_every_army_leader = {
+				limit = { has_id = 109 }
+				set_nationality = ROOT
+				if = {
+					limit = { is_field_marshal = no }
+					promote_leader = yes
+				}
+				if = {
+					limit = { NOT = { has_trait = General_is_a_HoS } }
+					add_unit_leader_trait = General_is_a_HoS
+				}
+			}
+		}
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = new_GMJ.1.b
+		add_war_support = -0.05
+		add_stability = 0.05
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = CCH
+					country_exists = CSY
+				}
+				CSY = { country_event = new_GMJ.2 }
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = new_GMJ.2
+	title = new_GMJ.2.t
+	desc = new_GMJ.2.d
+	picture = GFX_report_event_chinese_soldiers_running
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_GMJ.2.a
+		set_country_flag = Guomin_Army
+		if = {
+			limit = { is_subject = yes }
+			random_other_country = {
+				limit = { ROOT = { is_subject_of = PREV } }
+				end_puppet = ROOT
+			}
+		}
+		if = {
+			limit = { is_in_faction = yes }
+			leave_faction = yes
+		}
+		if = {
+			limit = { NOT = { has_global_flag = Rebellion_of_Feng } }
+			set_global_flag = Rebellion_of_Feng
+		}
+		clr_country_flag = Anhui_Member
+		clr_country_flag = Zhili_Member
+		clr_country_flag = Fengtian_Member
+		remove_political_road = yes
+		add_political_road = yes
+		every_other_country = {
+			limit = { has_war_with = ROOT }
+			white_peace = ROOT
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Feng Yuxiang"	# 冯玉祥
+			picture = "gfx/leaders/China/Portrait_China_Feng_Yuxiang.tga"
+			expire = "1936.1.1"
+			ideology = Centrist_ideology
+			traits = {}
+		}
+		if = {
+			limit = { CCH = { has_country_flag = Guomin_Army } }
+			CCH = { add_to_faction = CSY }
+			random_other_country = {
+				limit = { has_war_with = CCH }
+				ROOT = { add_to_war = { targeted_alliance = CCH enemy = PREV } }
+			}
+			else = {
+				hidden_effect = { every_other_country = { news_event = new_News.16 } }
+				create_faction = "Guominjun"
+				if = {
+					limit = { has_global_flag = Anhui_Won }
+					random_other_country = {
+						limit = {
+							is_faction_leader = yes
+							has_country_flag = Anhui_Member
+						}
+						add_timed_idea = { idea = Coup_of_Guominjun days = 240 }
+						ROOT = { declare_war_on = { target = PREV type = puppet_wargoal_focus } }
+					}
+				}
+				if = {
+					limit = { has_global_flag = Zhili_Won }
+					random_other_country = {
+						limit = {
+							is_faction_leader = yes
+							has_country_flag = Zhili_Member
+						}
+						add_timed_idea = { idea = Coup_of_Guominjun days = 240 }
+						ROOT = { declare_war_on = { target = PREV type = puppet_wargoal_focus } }
+					}
+				}
+				hidden_effect = {
+					global_every_army_leader = {
+						limit = { has_id = 109 }
+						set_nationality = ROOT
+						if = {
+							limit = { is_field_marshal = no }
+							promote_leader = yes
+						}
+						if = {
+							limit = { NOT = { has_trait = General_is_a_HoS } }
+							add_unit_leader_trait = General_is_a_HoS
+						}
+					}
+				}
+			}
+		}
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = new_GMJ.2.b
+		add_war_support = -0.05
+		add_stability = 0.05
+		ai_chance = { factor = 0 }
+	}
+}

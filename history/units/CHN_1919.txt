@@ -1,0 +1,51 @@
+﻿########
+#Templates
+########
+division_template = {
+	name = "Bubingshi"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Qibingshi"
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Hunchenglü"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+########
+#OOB
+########
+units = {
+	division = {
+		name = "Zhongyang Di 11 Shi"
+		location = 7097
+		division_template = "Bubingshi"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Zhongyang Di 17 Shi"
+		location = 7097
+		division_template = "Bubingshi"
+		start_experience_factor = 0.1
+	}
+}

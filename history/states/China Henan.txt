@@ -1,0 +1,120 @@
+state = {
+	id = 26
+	name = "STATE_26"
+	manpower = 20000000
+	state_category = developed_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 1
+		aluminium = 5
+		rubber = 0
+		tungsten = 1
+		steel = 19
+		chromium = 1
+	}
+	history = {
+		owner = CHE
+		add_core_of = CHE
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+		}
+		victory_points = { 7540 1 }
+		victory_points = { 7656 3 }
+		victory_points = { 9958 1 }
+		victory_points = { 10364 1 }
+	}
+	provinces = {
+		4066 7085 7126 7540 7656 9958 9995 10098 10364 12012 
+	}
+}
+
+state = {
+	id = 27
+	name = "STATE_27"
+	manpower = 4289800
+	state_category = impoverished_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 1
+		rubber = 0
+		tungsten = 1
+		steel = 5
+		chromium = 1
+	}
+	history = {
+		owner = CHE
+		add_core_of = CHE
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = { 1139 2 }
+	}
+	provinces = {
+		1139 4606 7074 
+	}
+}
+
+state = {
+	id = 28
+	name = "STATE_28"
+	manpower = 5000000
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 1
+		rubber = 0
+		tungsten = 1
+		steel = 5
+		chromium = 1
+	}
+	history = {
+		owner = CHE
+		add_core_of = CHE
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = { 6932 1 }
+		victory_points = { 11931 2 }
+	}
+	provinces = {
+		1004 1603 6932 7508 11931 
+	}
+}
+
+state = {
+	id = 29
+	name = "STATE_29"
+	manpower = 5000000
+	state_category = impoverished_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 1
+		rubber = 0
+		tungsten = 1
+		steel = 5
+		chromium = 1
+	}
+	history = {
+		owner = CHE
+		add_core_of = CHE
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+		}
+		victory_points = { 7459 1 }
+		victory_points = { 10446 2 }
+	}
+	provinces = {
+		4158 4519 4547 7459 7568 10434 10446 12426 
+	}
+}

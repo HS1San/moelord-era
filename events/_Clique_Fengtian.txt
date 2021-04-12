@@ -1,0 +1,920 @@
+﻿add_namespace = new_Fengtian
+add_namespace = new_FUN
+
+country_event = {
+	id = new_Fengtian.1
+	title = new_Fengtian.1.t
+	desc = new_Fengtian.1.d
+	picture = GFX_report_event_chinese_soldiers_running
+
+	fire_only_once = yes
+
+	trigger = {
+		has_country_flag = Fengtian_Member
+		has_global_flag = Rebellion_of_Gao
+		is_faction_leader = yes
+		surrender_progress > 0.24
+		CJL = { exists = no }
+		OR = {
+			has_global_flag = Anhui_Won
+			has_global_flag = Zhili_Won
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	immediate = {
+		hidden_effect = {
+			CJL = {
+				transfer_state = 15
+				transfer_state = 16
+				transfer_state = 17
+				transfer_state = 18
+				clr_country_flag = Anhui_Member
+				clr_country_flag = Zhili_Member
+				clr_country_flag = Fengtian_Member
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Gao Shibin"	# 高士傧
+					picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+					expire = "1936.1.1"
+					ideology =  Centrist_ideology
+					traits = {}
+				}
+			}
+			global_every_army_leader = {
+				limit = { has_id = 63 }
+				set_nationality = CJL
+				if = {
+					limit = { NOT = { has_trait = General_is_a_HoS } }
+					add_unit_leader_trait = General_is_a_HoS
+				}
+			}
+		}
+	}
+
+	option = {
+		name = new_Fengtian.1.a
+		add_war_support = 0.05
+		declare_war_on = { target = CJL type = annex_everything }
+		ai_chance = { base = 90 }
+	}
+	option = {
+		name = new_Fengtian.1.b
+		add_stability = 0.05
+		ai_chance = { base = 10 }
+	}
+}
+
+country_event = {
+	id = new_Fengtian.3
+	title = new_Fengtian.3.t
+	desc = new_Fengtian.3.d
+	picture = GFX_report_event_chinese_soldiers_running
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Fengtian.3.a
+		trigger = {
+			any_other_country = {
+				has_country_flag = Zhili_Member
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		add_war_support = 0.05
+		if = {
+			limit = { FROM = { has_country_flag = Zhili_Member } }
+			random_other_country = {
+				limit = {
+					is_faction_leader = yes
+					has_country_flag = Anhui_Member
+					NOT = {has_idea = Puppeted_Mongolia}
+				}
+				ROOT = { add_to_war = { targeted_alliance = FROM enemy = PREV } }
+			}
+		}
+		if = {
+			limit = { FROM = { has_country_flag = Anhui_Member } }
+			random_other_country = {
+				limit = {
+					is_faction_leader = yes
+					has_country_flag = Zhili_Member
+				}
+				ROOT = { add_to_war = { targeted_alliance = PREV enemy = FROM } }
+			}
+		}
+		set_global_flag = Fengtian_Zhili_Union
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 2
+				CHJ = { is_in_faction_with = CBJ }
+			}
+			modifier = {
+				factor = 2
+				CJL = { is_in_faction_with = CBJ }
+			}
+			modifier = {
+				factor = 0
+				CHJ = { is_in_faction_with = CZL }
+			}
+			modifier = {
+				factor = 0
+				CJL = { is_in_faction_with = CZL }
+			}
+		}
+	}
+	option = {
+		name = new_Fengtian.3.b
+		trigger = {
+			any_other_country = {
+				has_country_flag = Anhui_Member
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		add_war_support = 0.05
+		if = {
+			limit = { FROM = { has_country_flag = Zhili_Member } }
+			random_other_country = {
+				limit = {
+					is_faction_leader = yes
+					has_country_flag = Anhui_Member
+				}
+				ROOT = { add_to_war = { targeted_alliance = PREV enemy = FROM } }
+			}
+		}
+		if = {
+			limit = { FROM = { has_country_flag = Anhui_Member } }
+			random_other_country = {
+				limit = {
+					is_faction_leader = yes
+					has_country_flag = Zhili_Member
+				}
+				ROOT = { add_to_war = { targeted_alliance = FROM enemy = PREV } }
+			}
+		}
+		set_global_flag = Fengtian_Anhui_Union
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				CHJ = { is_in_faction_with = CBJ }
+			}
+			modifier = {
+				factor = 0
+				CJL = { is_in_faction_with = CBJ }
+			}
+			modifier = {
+				factor = 2
+				CHJ = { is_in_faction_with = CZL }
+			}
+			modifier = {
+				factor = 2
+				CJL = { is_in_faction_with = CZL }
+			}
+		}
+	}
+	option = {
+		name = new_Fengtian.3.c
+		trigger = {
+			OR = {
+				is_ai = yes
+				AND = {
+					has_equipment = { rifle_equipment > 2999 }
+					has_equipment = { carbine_equipment > 299 }
+				}
+			}
+		}
+		add_war_support = 0.02
+		add_stability = 0.02
+		if = {
+			limit = {
+				has_equipment = { rifle_equipment > 2999 }
+				has_equipment = { carbine_equipment > 299 }
+			}
+			random_other_country = {
+				limit = {
+					is_faction_leader = yes
+					has_country_flag = Zhili_Member
+				}
+				send_equipment = { target = PREV type = rifle_equipment amount = 3000 }
+				send_equipment = { target = PREV type = carbine_equipment amount = 300 }
+			}
+		}
+		set_global_flag = Fengtian_Zhili_Support
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 2
+				CHJ = { is_in_faction_with = CBJ }
+			}
+			modifier = {
+				factor = 2
+				CJL = { is_in_faction_with = CBJ }
+			}
+			modifier = {
+				factor = 0
+				CHJ = { is_in_faction_with = CZL }
+			}
+			modifier = {
+				factor = 0
+				CJL = { is_in_faction_with = CZL }
+			}
+		}
+	}
+	option = {
+		name = new_Fengtian.3.e
+		trigger = {
+			OR = {
+				is_ai = yes
+				AND = {
+					has_equipment = { rifle_equipment > 2999 }
+					has_equipment = { carbine_equipment > 299 }
+				}
+			}
+		}
+		add_war_support = 0.02
+		add_stability = 0.02
+		if = {
+			limit = {
+				has_equipment = { rifle_equipment > 2999 }
+				has_equipment = { carbine_equipment > 299 }
+			}
+			random_other_country = {
+				limit = {
+					is_faction_leader = yes
+					has_country_flag = Anhui_Member
+				}
+				send_equipment = { target = PREV type = rifle_equipment amount = 3000 }
+				send_equipment = { target = PREV type = carbine_equipment amount = 300 }
+			}
+		}
+		set_global_flag = Fengtian_Anhui_Support
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0
+				CHJ = { is_in_faction_with = CBJ }
+			}
+			modifier = {
+				factor = 0
+				CJL = { is_in_faction_with = CBJ }
+			}
+			modifier = {
+				factor = 2
+				CHJ = { is_in_faction_with = CZL }
+			}
+			modifier = {
+				factor = 2
+				CJL = { is_in_faction_with = CZL }
+			}
+		}
+	}
+	option = {
+		name = new_Fengtian.3.f
+		add_war_support = -0.05
+		add_stability = 0.05
+		ai_chance = { base = 0 }
+	}
+}
+
+country_event = {
+	id = new_Fengtian.4
+	title = new_Fengtian.4.t
+	desc = new_Fengtian.4.d
+	picture = GFX_report_event_chinese_soldiers_running
+
+	fire_only_once = yes
+
+	trigger = {
+		is_faction_leader = yes
+		has_country_flag = Fengtian_Member
+		surrender_progress > 0.5
+		any_country = {
+			OR = {
+				has_cosmetic_tag = CNP
+				has_cosmetic_tag = CNL
+				has_cosmetic_tag = CNR
+			}
+			has_war_with = ROOT
+		}
+		NOT = { has_cosmetic_tag = MAN_CHI }
+		NOT = { has_cosmetic_tag = MAN_RUS }
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	immediate = {
+		hidden_effect = {
+			random_army_leader = {
+				limit = { has_id = 10 }
+				retire = yes
+			}
+			if = {
+				limit = { has_idea = Greenwood_Hero }
+				remove_ideas = Greenwood_Hero
+			}
+		}
+	}
+
+	option = {
+		name = new_Fengtian.4.a
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Zhang Xueliang"	# 张学良
+			picture = "gfx/leaders/China/Portrait_China_Zhang_Xueliang.tga"
+			expire = "1936.1.1"
+			ideology = Centrist_ideology
+			traits = {}
+		}
+		random_army_leader = {
+			limit = { has_id = 23 }
+			if = {
+				limit = { NOT = { has_trait = General_is_a_HoS } }
+				add_unit_leader_trait = General_is_a_HoS
+			}
+		}
+		country_event = new_Fengtian.5
+	}
+	option = {
+		name = new_Fengtian.4.b
+		trigger = { NOT = { has_global_flag = Death_of_Yang_Yuting } }
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Yang Yuting"	# 杨宇霆
+			picture = "gfx/leaders/China/Portrait_China_Yang_Yuting.tga"
+			expire = "1936.1.1"
+			ideology = Centrist_ideology
+			traits = {}
+		}
+		random_army_leader = {
+			limit = { has_id = 11 }
+			if = {
+				limit = { NOT = { has_trait = General_is_a_HoS } }
+				add_unit_leader_trait = General_is_a_HoS
+			}
+		}
+		country_event = new_Fengtian.5
+	}
+	option = {
+		name = new_Fengtian.4.c
+		trigger = { NOT = { has_global_flag = Death_of_Guo_Songling } }
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Guo Songling"	# 郭松龄
+			picture = "gfx/leaders/China/Portrait_China_Guo_Songling.tga"
+			expire = "1936.1.1"
+			ideology = Centrist_ideology
+			traits = {}
+		}
+		random_army_leader = {
+			limit = { has_id = 12 }
+			if = {
+				limit = { NOT = { has_trait = General_is_a_HoS } }
+				add_unit_leader_trait = General_is_a_HoS
+			}
+		}
+		country_event = new_Fengtian.5
+	}
+}
+
+country_event = {
+	id = new_Fengtian.5
+	title = new_Fengtian.5.t
+	desc = new_Fengtian.5.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Fengtian.5.a
+		hidden_effect = {
+			CFT = { save_event_target_as = white_peace_receiver }
+			CGD = { white_peace_with_TARGET = yes }
+			if = {
+				limit = { is_subject = yes }
+				random_other_country = {
+					limit = { ROOT = { is_subject_of = PREV } }
+					end_puppet = ROOT
+				}
+			}
+			if = {
+				limit = { is_faction_leader = yes }
+				dismantle_faction = yes
+			}
+			if = {
+				limit = { is_in_faction = yes }
+				leave_faction = yes
+			}
+			drop_cosmetic_tag = yes
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+			remove_political_road = yes
+			set_country_flag = SH_NPC
+			add_political_road = yes
+			country_event = new_Generic.4
+		}
+		every_owned_state = {
+			limit = {
+				NOT = { region = 6 }
+				NOT = { region = 42 }
+				NOT = { region = 43 }
+			}
+			random_other_country = {
+				limit = { original_tag = CGD }
+				transfer_state = PREV
+			}
+		}
+		CFT = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = CFT_modern
+		}
+		CJL = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = CJL_modern
+		}
+		CHJ = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = CHJ_modern
+		}
+		hidden_effect = { every_other_country = { news_event = new_News.17 } }
+	}
+	option = {
+		name = new_Fengtian.5.b
+		trigger = { is_ai = no }
+		add_war_support = -0.2
+		add_stability = 0.05
+		hidden_effect = { every_other_country = { news_event = new_News.18 } }
+	}
+}
+
+country_event = {
+	id = new_Fengtian.6
+	title = new_Fengtian.6.t
+	desc = new_Fengtian.6.d
+	picture = GFX_report_event_chinese_soldiers_running
+
+	fire_only_once = yes
+
+	trigger = {
+		is_faction_leader = yes
+		OR = {
+			AND = {
+				has_country_flag = Zhili_Member
+				has_global_flag = Zhili_Won
+				has_global_flag = Fengtian_Anhui_Union
+			}
+			AND = {
+				has_country_flag = Anhui_Member
+				has_global_flag = Anhui_Won
+				has_global_flag = Fengtian_Zhili_Union
+			}
+		}
+	}
+
+	mean_time_to_happen = { days = 2 }
+
+	immediate = {
+		hidden_effect = {
+			clr_global_flag = Fengtian_Anhui_Union
+			clr_global_flag = Fengtian_Zhili_Union
+		}
+	}
+
+	option = {
+		name = new_Fengtian.6.a
+		add_stability = 0.05
+		random_other_country = {
+			limit = {
+				is_faction_leader = yes
+				has_country_flag = Fengtian_Member
+			}
+			country_event = new_Fengtian.7
+		}
+	}
+	option = {
+		name = new_Fengtian.6.b
+		trigger = { is_ai = no }
+		add_war_support = -0.05
+		hidden_effect = {
+			every_country = {
+				limit = { has_country_flag = Old_Anhui_Member }
+				leave_faction = yes
+			}
+			every_country = {
+				limit = { has_country_flag = Old_Zhili_Member }
+				leave_faction = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = new_Fengtian.7
+	title = new_Fengtian.7.t
+	desc = new_Fengtian.7.d
+	picture = GFX_report_event_chinese_soldiers_running
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Fengtian.7.a
+		add_stability = 0.05
+		FROM = { white_peace_with_ROOT = yes }
+		hidden_effect = {
+			every_country = {
+				limit = { has_country_flag = Old_Anhui_Member }
+				leave_faction = yes
+			}
+			every_country = {
+				limit = { has_country_flag = Old_Zhili_Member }
+				leave_faction = yes
+			}
+		}
+	}
+	option = {
+		name = new_Fengtian.7.b
+		trigger = { is_ai = no }
+		add_war_support = -0.05
+	}
+}
+
+country_event = { #Destroying the Korean Independence Armies
+	id = new_Fengtian.8
+	title = new_Fengtian.8.t
+	desc = new_Fengtian.8.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Fengtian.8.a
+		add_political_power = 35
+		JAP = {
+			add_political_power = 35
+			add_opinion_modifier = {
+				target = CFT
+				modifier = medium_increase
+			}
+		}
+	}
+	option = {
+		name = new_Fengtian.8.b
+		add_political_power = 10
+		army_experience = 10
+		JAP = {
+			add_political_power = 5
+		}
+	}
+}
+
+country_event = {
+	id = new_FUN.1
+	title = new_FUN.1.t
+	desc = new_FUN.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_FUN.1.a
+		ai_chance = {
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_stability = 0.05
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Bao Guiqing"	# 鲍贵卿
+			picture = "gfx/leaders/China/Portrait_China_Bao_Guiqing.tga"
+			expire = "1934.3.1"
+			ideology =  Centrist_ideology
+			traits = {}
+		}
+		CHJ = {
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Sun Liechen"	# 孙烈臣
+				picture = "gfx/leaders/China/Portrait_China_Sun_Liechen.tga"
+				expire = "1924.4.25"
+				ideology =  Centrist_ideology
+				traits = {}
+			}
+		}
+		if = {
+			limit = { is_subject = yes }
+			random_other_country = {
+				limit = { ROOT = { is_subject_of = PREV } }
+				end_puppet = ROOT
+			}
+		}
+		if = {
+			limit = { is_in_faction = yes }
+			leave_faction = yes
+		}
+		clr_country_flag = Zhili_Member
+		clr_country_flag = Anhui_Member
+		FROM = { add_to_faction = ROOT
+ }
+		add_ai_strategy = { type = alliance id = "CFT" value = 200 }
+		hidden_effect = {
+			global_every_army_leader = {
+				limit = { has_id = 13 }
+				set_nationality = CHJ
+				if = {
+					limit = { is_field_marshal = no }
+					promote_leader = yes
+				}
+				if = {
+					limit = { NOT = { has_trait = General_is_a_HoS } }
+					add_unit_leader_trait = General_is_a_HoS
+				}
+			}
+			global_every_army_leader = {
+				limit = { has_id = 50 }
+				if = {
+					limit = { is_field_marshal = no }
+					promote_leader = yes
+				}
+				if = {
+					limit = { NOT = { has_trait = General_is_a_HoS } }
+					add_unit_leader_trait = General_is_a_HoS
+				}
+				set_nationality = CJL
+			}
+			random_army_leader = {
+				limit = { has_id = 62 }
+				retire = yes
+			}
+			every_other_country = { news_event = new_News.12 }
+		}
+	}
+	option = {
+		name = new_FUN.1.b
+		random_other_country = {
+			limit = {
+				has_country_flag = Zhili_Member
+				is_faction_leader = yes
+			}
+			country_event = new_FUN.2
+		}
+	}
+}
+
+country_event = {
+	id = new_FUN.2
+	title = new_FUN.2.t
+	desc = new_FUN.2.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_FUN.2.a
+		ai_chance = {
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+		CFT = { add_opinion_modifier = { target = ROOT modifier = New_friendship } }
+		CJL = {
+			add_opinion_modifier = { target = ROOT modifier = New_contradiction }
+			country_event = new_FUN.3
+		}
+	}
+	option = {
+		name = new_FUN.2.b
+		ai_chance = {
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+		add_to_faction = FROM
+		CJL = {
+			add_ai_strategy = { type = alliance id = ROOT value = 200 }
+			add_opinion_modifier = { target = ROOT modifier = New_friendship }
+		}
+		CFT = {
+			add_opinion_modifier = { target = ROOT modifier = New_contradiction }
+			country_event = new_FUN.4
+		}
+	}
+}
+
+country_event = {
+	id = new_FUN.3
+	title = new_FUN.3.t
+	desc = new_FUN.3.d
+	picture = GFX_report_event_chinese_soldiers_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_FUN.3.a
+		ai_chance = {
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+		retire_country_leader = yes
+		custom_effect_tooltip = GAME_OVER_TT
+		hidden_effect = {
+			CFT = { annex_country = { target = ROOT transfer_troops = yes } }
+			every_other_country = { news_event = new_News.12 }
+		}
+	}
+	option = {
+		name = new_FUN.3.b
+		ai_chance = {
+			modifier = {
+				factor = 3
+				is_historical_focus_on = yes
+			}
+		}
+		CFT = { declare_war_on = { target = CJL type = annex_everything } }
+		hidden_effect = { every_other_country = { news_event = new_News.13 } }
+	}
+}
+
+country_event = {
+	id = new_FUN.4
+	title = new_FUN.4.t
+	desc = new_FUN.4.d
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_FUN.4.a
+		trigger = {
+			JAP = {
+				exists = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		JAP = { country_event = new_FUN.5 }
+		ai_chance = { base = 80 }
+	}
+	option = {
+		name = new_FUN.4.b
+		add_war_support = -0.05
+		hidden_effect = { every_other_country = { news_event = new_News.14 } }
+		ai_chance = { base = 20 }
+	}
+	option = {
+		name = new_FUN.4.c
+		trigger = { is_ai = no }
+		declare_war_on = { target = CJL type = annex_everything }
+		hidden_effect = { every_other_country = { news_event = new_News.13 } }
+	}
+}
+
+country_event = {
+	id = new_FUN.5
+	title = new_FUN.5.t
+	desc = new_FUN.5.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_FUN.5.a
+		add_war_support = 0.05
+		CFT = { add_opinion_modifier = { target = ROOT modifier = New_friendship } }
+		CJL = { country_event = new_FUN.6 }
+		ai_chance = { base = 80 }
+	}
+	option = {
+		name = new_FUN.5.b
+		add_war_support = -0.05
+		CFT = {
+			add_opinion_modifier = { target = ROOT modifier = New_contradiction }
+			country_event = new_FUN.7
+		}
+		ai_chance = { base = 20 }
+	}
+}
+
+country_event = {
+	id = new_FUN.6
+	title = new_FUN.6.t
+	desc = new_FUN.6.d
+	picture = GFX_report_event_chinese_soldiers_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_FUN.6.a
+		retire_country_leader = yes
+		custom_effect_tooltip = GAME_OVER_TT
+		hidden_effect = {
+			CFT = { annex_country = { target = ROOT transfer_troops = yes } }
+			every_other_country = { news_event = new_News.12 }
+		}
+		ai_chance = { base = 95 }
+	}
+	option = {
+		name = new_FUN.6.b
+		add_stability = -0.25
+		add_war_support = -0.25
+		CFT = { declare_war_on = { target = CJL type = annex_everything } }
+		hidden_effect = { every_other_country = { news_event = new_News.13 } }
+		ai_chance = { base = 5 }
+	}
+}
+
+country_event = {
+	id = new_FUN.7
+	title = new_FUN.7.t
+	desc = new_FUN.7.d
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_FUN.7.a
+		add_war_support = -0.05
+		hidden_effect = { every_other_country = { news_event = new_News.14 } }
+		ai_chance = { base = 20 }
+	}
+	option = {
+		name = new_FUN.7.b
+		declare_war_on = { target = CJL type = annex_everything }
+		hidden_effect = { every_other_country = { news_event = new_News.13 } }
+		ai_chance = { base = 80 }
+	}
+}
+
+country_event = {
+	id = new_FUN.8
+	title = new_FUN.8.t
+	desc = new_FUN.8.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_FUN.8.a
+		add_stability = 0.05
+		CHJ = {
+			transfer_state = 20
+			set_state_controller = 20
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = -100
+				NOT = { has_government = Centrist }
+			}
+		}
+	}
+	option = {
+		name = new_FUN.8.b
+		add_stability = -0.05
+		CFT = { country_event = new_FUN.9 }
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 100
+				NOT = { has_government = Centrist }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = new_FUN.9
+	title = new_FUN.9.t
+	desc = new_FUN.9.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_FUN.9.a
+		add_war_support = 0.05
+		create_wargoal = {
+			type = take_state_focus
+			target = FROM
+			generator = { 20 }
+		}
+		ai_chance = { base = 60 }
+	}
+	option = {
+		name = new_FUN.9.b
+		add_war_support = -0.05
+		ai_chance = { base = 40 }
+	}
+}

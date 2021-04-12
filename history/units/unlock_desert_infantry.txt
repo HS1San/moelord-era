@@ -1,0 +1,9 @@
+﻿division_template = {
+	name = "Desert Infantry Division"
+	regiments = {
+		desert_infantry = { x = 0 y = 0 }
+		desert_infantry = { x = 0 y = 1 }
+		desert_infantry = { x = 1 y = 0 }
+		desert_infantry = { x = 1 y = 1 }
+	}
+}

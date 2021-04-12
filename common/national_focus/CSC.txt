@@ -1,0 +1,610 @@
+focus_tree = {
+	id = CSC_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CSC
+		}
+	}
+
+	default = no
+	shared_focus = Shared_Plan_of_Reform
+	shared_focus = Shared_Extra_Tech_Slot
+
+	focus = {
+		id = CSC_End_of_War
+		icon = GFX_focus_Heavy_Strike
+		x = 5
+		y = 0
+		cost = 8
+
+		available = {
+			has_war = no
+			has_idea = Split_in_Sichuan
+		}
+
+		bypass = { NOT = { has_idea = Split_in_Sichuan } }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = Split_in_Sichuan }
+				remove_ideas = Split_in_Sichuan
+				add_timed_idea = { idea = Split_in_Sichuan_End days = 180 }
+			}
+			country_event = new_CSC.1
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSC_Electric_Company
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = CSC_End_of_War }
+		mutually_exclusive = {
+			focus = CSC_Land_Reclamation
+			focus = CSC_Minerals
+			focus = CSC_Middle_School
+			focus = CSC_Military_Offices
+			focus = CSC_Financial_Reform
+		}
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			has_country_flag = CSC_faction_1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Sichuan_Electric_Company } }
+				add_ideas = Sichuan_Electric_Company
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = CSC_Land_Reclamation
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = CSC_End_of_War }
+		mutually_exclusive = {
+			focus = CSC_Electric_Company
+			focus = CSC_Minerals
+			focus = CSC_Middle_School
+			focus = CSC_Military_Offices
+			focus = CSC_Financial_Reform
+		}
+		x = 2
+		y = 1
+		cost = 5
+
+		available = {
+			has_country_flag = CSC_faction_2
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Sichuan_Land_Reclamation } }
+				add_ideas = Sichuan_Land_Reclamation
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = CSC_Minerals
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = CSC_End_of_War }
+		mutually_exclusive = {
+			focus = CSC_Electric_Company
+			focus = CSC_Land_Reclamation
+			focus = CSC_Middle_School
+			focus = CSC_Military_Offices
+			focus = CSC_Financial_Reform
+		}
+		x = 4
+		y = 1
+		cost = 5
+
+		available = {
+			has_country_flag = CSC_faction_3
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Sichuan_Minerals } }
+				add_ideas = Sichuan_Minerals
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = CSC_Middle_School
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = CSC_End_of_War }
+		mutually_exclusive = {
+			focus = CSC_Electric_Company
+			focus = CSC_Land_Reclamation
+			focus = CSC_Minerals
+			focus = CSC_Military_Offices
+			focus = CSC_Financial_Reform
+		}
+		x = 6
+		y = 1
+		cost = 5
+
+		available = {
+			has_country_flag = CSC_faction_4
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Sichuan_Middle_School } }
+				add_ideas = Sichuan_Middle_School
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = CSC_Military_Offices
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = CSC_End_of_War }
+		mutually_exclusive = {
+			focus = CSC_Electric_Company
+			focus = CSC_Land_Reclamation
+			focus = CSC_Minerals
+			focus = CSC_Middle_School
+			focus = CSC_Financial_Reform
+		}
+		x = 8
+		y = 1
+		cost = 5
+
+		available = {
+			has_country_flag = CSC_faction_5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Sichuan_Military_Offices } }
+				add_ideas = Sichuan_Military_Offices
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSC_Financial_Reform
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = CSC_End_of_War }
+		mutually_exclusive = {
+			focus = CSC_Electric_Company
+			focus = CSC_Land_Reclamation
+			focus = CSC_Minerals
+			focus = CSC_Middle_School
+			focus = CSC_Military_Offices
+		}
+		x = 10
+		y = 1
+		cost = 5
+
+		available = {
+			has_country_flag = CSC_faction_6
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Sichuan_Financial_Reform } }
+				add_ideas = Sichuan_Financial_Reform
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = CSC_Peace_Plan
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = {
+			focus = CSC_Electric_Company
+			focus = CSC_Land_Reclamation
+			focus = CSC_Minerals
+			focus = CSC_Middle_School
+			focus = CSC_Military_Offices
+			focus = CSC_Financial_Reform
+		}
+		mutually_exclusive = { focus = CSC_War_Plan }
+		x = 3
+		y = 2
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_political_road = yes
+			set_country_flag = SH_BYC
+			add_political_road = yes
+			add_offsite_building = { type = industrial_complex level = 2 }
+			add_manpower = 50000
+			CYN = { add_opinion_modifier = { target = ROOT modifier = New_friendship } }
+			CGZ = { add_opinion_modifier = { target = ROOT modifier = New_friendship } }
+			CXK = { add_opinion_modifier = { target = ROOT modifier = New_friendship } }
+			unlock_decision_tooltip = Formable_BYC
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSC_War_Plan
+		icon = GFX_goal_generic_major_war
+		prerequisite = {
+			focus = CSC_Electric_Company
+			focus = CSC_Land_Reclamation
+			focus = CSC_Minerals
+			focus = CSC_Middle_School
+			focus = CSC_Military_Offices
+			focus = CSC_Financial_Reform
+		}
+		mutually_exclusive = { focus = CSC_Peace_Plan }
+		x = 7
+		y = 2
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_political_road = yes
+			set_country_flag = SH_NPC
+			add_political_road = yes
+			add_offsite_building = { type = arms_factory level = 1 }
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+			CYN = { add_opinion_modifier = { target = ROOT modifier = New_contradiction } }
+			CGZ = { add_opinion_modifier = { target = ROOT modifier = New_contradiction } }
+			CXK = { add_opinion_modifier = { target = ROOT modifier = New_contradiction } }
+			unlock_decision_tooltip = Formable_ROC
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = CSC_Autonomous_Government
+		icon = GFX_focus_Generic_Political
+		prerequisite = { focus = CSC_Peace_Plan }
+		x = 3
+		y = 3
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_to_tech_sharing_group = Southwest_China_Cooperation_Circle
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSC_Cooperation_with_Guangdong
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		prerequisite = { focus = CSC_War_Plan }
+		x = 7
+		y = 3
+		cost = 8
+
+		available = {
+			is_subject = no
+			is_in_faction = no
+			CGD = {
+				exists = yes
+				is_subject = no
+				NOT = { has_war_with = ROOT }
+				is_faction_leader = yes
+			}
+		}
+
+		cancel = {
+			OR = {
+				is_subject = yes
+				is_in_faction = yes
+			}
+		}
+
+		bypass = {
+			OR = {
+				CGD = { exists = no }
+				CGD = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = Attitude_determines_success_or_failure
+			add_war_support = 0.05
+			CGD = { country_event = new_Generic.1 }
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSC_Invite_Yungui
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = CSC_Autonomous_Government }
+		x = 2
+		y = 4
+		cost = 8
+
+		available = {
+			is_subject = no
+			has_war = no
+			OR = {
+				CYN = { exists = yes }
+				CGZ = { exists = yes }
+			}
+		}
+
+		cancel = {
+			OR = {
+				is_subject = yes
+				AND = {
+					CYN = { exists = no }
+					CGZ = { exists = no }
+				}
+				AND = {
+					CYN = { has_war_with = ROOT }
+					CGZ = { has_war_with = ROOT }
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = Attitude_determines_success_or_failure
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = CYN
+						original_tag = CGZ
+					}
+					NOT = { has_war_with = ROOT }
+				}
+				country_event = new_CSC.4
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSC_Invite_Xikang
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = CSC_Autonomous_Government }
+		x = 4
+		y = 4
+		cost = 8
+
+		available = {
+			is_subject = no
+			has_war = no
+			CXK = { exists = yes }
+		}
+
+		cancel = {
+			OR = {
+				is_subject = yes
+				CXK = { exists = no }
+				CXK = { has_war_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = Attitude_determines_success_or_failure
+			every_other_country = {
+				limit = {
+					original_tag = CXK
+					NOT = { has_war_with = ROOT }
+				}
+				country_event = new_CSC.4
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSC_War_With_Yungui
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = CSC_Cooperation_with_Guangdong }
+		will_lead_to_war_with = CYN
+		will_lead_to_war_with = CGZ
+		x = 6
+		y = 4
+		cost = 8
+
+		available = {
+			is_subject = no
+			has_war = no
+			OR = {
+				CYN = { exists = yes }
+				CGZ = { exists = yes }
+			}
+		}
+
+		cancel = {
+			OR = {
+				is_subject = yes
+				AND = {
+					CYN = { exists = no }
+					CGZ = { exists = no }
+				}
+				AND = {
+					CYN = { has_war_with = ROOT }
+					CGZ = { has_war_with = ROOT }
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { CYN = { exists = yes } }
+				create_wargoal = { type = annex_everything target = CYN }
+			}
+			if = {
+				limit = { CGZ = { exists = yes } }
+				create_wargoal = { type = annex_everything target = CGZ }
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSC_War_With_Xikang
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = CSC_Cooperation_with_Guangdong }
+		will_lead_to_war_with = CXK
+		x = 8
+		y = 4
+		cost = 8
+
+		available = {
+			is_subject = no
+			has_war = no
+			CXK = { exists = yes }
+		}
+
+		cancel = {
+			OR = {
+				is_subject = yes
+				CXK = { exists = no }
+				CXK = { has_war_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = CXK }
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSC_Unite_Southwest
+		icon = GFX_focus_Hidden_Pacts
+		prerequisite = { focus = CSC_Invite_Yungui }
+		prerequisite = { focus = CSC_Invite_Xikang }
+		x = 3
+		y = 5
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = Attitude_determines_success_or_failure
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = CRR
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = CYN
+						original_tag = CGZ
+						original_tag = CXK
+					}
+					NOT = { has_war_with = ROOT }
+				}
+				country_event = new_CSC.5
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSC_War_With_Xizang
+		icon = GFX_focus_The_Big_Push
+		prerequisite = { focus = CSC_War_With_Yungui }
+		prerequisite = { focus = CSC_War_With_Xikang }
+		will_lead_to_war_with = CXZ
+		x = 7
+		y = 5
+		cost = 8
+
+		available = {
+			is_subject = no
+			has_war = no
+			CXZ = { exists = yes }
+		}
+
+		cancel = {
+			OR = {
+				is_subject = yes
+				CXZ = { exists = no }
+				CXZ = { has_war_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = CXZ }
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+}

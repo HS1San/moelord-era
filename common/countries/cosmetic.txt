@@ -1,0 +1,96 @@
+CNW = {
+	color = rgb { 107  205  192 }
+	color_ui = rgb { 107  205  192 }
+}
+CSW = {
+	color = rgb { 40  180  137 }
+	color_ui = rgb { 40  180  137 }
+}
+CNE = {
+	color = rgb { 106  123  236 }
+	color_ui = rgb { 106  123  236 }
+}
+CSE = {
+	color = rgb { 135  115  123 }
+	color_ui = rgb { 135  115  123 }
+}
+CMA = {
+	color = rgb { 235  208  176 }
+	color_ui = rgb { 235  208  176 }
+}
+CNL = {
+	color = rgb { 127  0  0 }
+	color_ui = rgb { 127  0  0 }
+}
+CNR = {
+	color = rgb { 0  0  255 }
+	color_ui = rgb { 0  0  255 }
+}
+CNP = {
+	color = rgb { 20  100  157 }
+	color_ui = rgb { 20  100  157 }
+}
+CZP = {
+	color = rgb { 194 30 86 }
+	color_ui = rgb { 194 30 86 }
+}
+CPP = {
+	color = rgb { 222 222 222 }
+	color_ui = rgb { 222 222 222 }
+}
+CCP = {
+	color = rgb { 255  48  48 }
+	color_ui = rgb { 255  48  48 }
+}
+CAF = {
+	color = rgb { 255 0 0 }
+	color_ui = rgb { 255 0 0 }
+}
+BYC_1 = {
+	color = rgb { 255 244 190 }
+	color_ui = rgb { 255 244 190 }
+}
+BYC_2 = {
+	color = rgb { 255 244 190 }
+	color_ui = rgb { 255 244 190 }
+}
+BYC_3 = {
+	color = rgb { 255 244 190 }
+	color_ui = rgb { 255 244 190 }
+}
+BYC_4 = {
+	color = rgb { 255 244 190 }
+	color_ui = rgb { 255 244 190 }
+}
+ROC_1 = {
+	color = rgb { 20  100  157 }
+	color_ui = rgb { 20  100  157 }
+}
+ROC_2 = {
+	color = rgb { 20  100  157 }
+	color_ui = rgb { 20  100  157 }
+}
+ROC_3 = {
+	color = rgb { 20  100  157 }
+	color_ui = rgb { 20  100  157 }
+}
+ROC_4 = {
+	color = rgb { 20  100  157 }
+	color_ui = rgb { 20  100  157 }
+}
+PEC = {
+	color = rgb { 255  48  48 }
+	color_ui = rgb { 255  48  48 }
+}
+WPC = {
+	color = rgb { 255 0 0 }
+	color_ui = rgb { 255 0 0 }
+}
+CEM = {
+	color = rgb { 237  152  18 }
+	color_ui = rgb { 237  152  18 }
+}
+CEH = {
+	color = rgb { 179  128  104 }
+	color_ui = rgb { 179  128  104 }
+}

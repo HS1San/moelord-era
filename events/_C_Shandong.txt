@@ -1,0 +1,94 @@
+﻿add_namespace = new_CSD
+
+country_event = {
+	id = new_CSD.1
+	title = new_CSD.1.t
+	desc = new_CSD.1.d
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_CSD.1.a
+		random_other_country = {
+			limit = { owns_state = 32 }
+			transfer_state = 157
+		}
+		add_opinion_modifier = { target = FROM modifier = New_friendship }
+		FROM = { add_opinion_modifier = { target = ROOT modifier = New_friendship } }
+		hidden_effect = { every_other_country = { news_event = new_News.22 } }
+		ai_chance = { base = 90 }
+	}
+	option = {
+		name = new_CSD.1.b
+		add_threat = 1
+		subtract_from_variable = { var = relationship_with_britain value = 15 tooltip = Reduce_the_opinion_of_Britain_for_us_by_15 }
+		subtract_from_variable = { var = relationship_with_france value = 15 tooltip = Reduce_the_opinion_of_France_for_us_by_15 }
+		subtract_from_variable = { var = relationship_with_america value = 15 tooltip = Reduce_the_opinion_of_America_for_us_by_15 }
+		subtract_from_variable = { var = relationship_with_germany value = 15 tooltip = Reduce_the_opinion_of_Germany_for_us_by_15 }
+		subtract_from_variable = { var = relationship_with_italy value = 15 tooltip = Reduce_the_opinion_of_Italy_for_us_by_15 }
+		subtract_from_variable = { var = relationship_with_russia value = 15 tooltip = Reduce_the_opinion_of_Russia_for_us_by_15 }
+		157 = {
+			damage_building = { type = infrastructure damage = 1 }
+			damage_building = { type = industrial_complex damage = 1 }
+			damage_building = { type = arms_factory damage = 1 }
+		}
+		FROM = {
+			create_wargoal = {
+				type = take_state_focus
+				target = JAP
+				generator = { 157 }
+			}
+		}
+		hidden_effect = { every_other_country = { news_event = new_News.23 } }
+		ai_chance = { base = 10 }
+	}
+}
+
+country_event = {
+	id = new_CSD.2
+	title = new_CSD.2.t
+	desc = new_CSD.2.d
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_CSD.2.a
+		random_other_country = {
+			limit = { 
+				AND = {
+					owns_state = 32
+					check_variable = {
+						relationship_with_britain > 30
+					}
+				} 
+			}
+			transfer_state = 156
+		}
+		hidden_effect = { every_other_country = { news_event = new_News.29 } }
+		ai_chance = { base = 90 }
+	}
+	option = {
+		name = new_CSD.2.b
+		add_threat = 1
+		subtract_from_variable = { var = relationship_with_britain value = 15 tooltip = Reduce_the_opinion_of_Britain_for_us_by_15 }
+		subtract_from_variable = { var = relationship_with_france value = 15 tooltip = Reduce_the_opinion_of_France_for_us_by_15 }
+		subtract_from_variable = { var = relationship_with_america value = 15 tooltip = Reduce_the_opinion_of_America_for_us_by_15 }
+		subtract_from_variable = { var = relationship_with_germany value = 15 tooltip = Reduce_the_opinion_of_Germany_for_us_by_15 }
+		subtract_from_variable = { var = relationship_with_italy value = 15 tooltip = Reduce_the_opinion_of_Italy_for_us_by_15 }
+		subtract_from_variable = { var = relationship_with_russia value = 15 tooltip = Reduce_the_opinion_of_Russia_for_us_by_15 }
+		156 = {
+			damage_building = { type = infrastructure damage = 1 }
+		}
+		FROM = {
+			create_wargoal = {
+				type = take_state_focus
+				target = CWH
+				generator = { 156 }
+			}
+		}
+		hidden_effect = { every_other_country = { news_event = new_News.30 } }
+		ai_chance = { base = 10 }
+	}
+}

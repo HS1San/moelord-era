@@ -1,0 +1,504 @@
+﻿add_namespace = new_CSC
+
+country_event = {
+	id = new_CSC.1
+	title = new_CSC.1.t
+	desc = new_CSC.1.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_CSC.1.a
+		add_stability = 0.05
+		custom_effect_tooltip = political_goal_tooltip_04
+		remove_political_road = yes
+		set_country_flag = SH_NPC
+		add_political_road = yes
+		country_event = new_CSC.2
+	}
+	option = {
+		name = new_CSC.1.b
+		custom_effect_tooltip = political_goal_tooltip_03
+		remove_political_road = yes
+		set_country_flag = SH_BYC
+		add_political_road = yes
+		add_war_support = 0.05
+		country_event = new_CSC.3
+	}
+}
+
+country_event = {
+	id = new_CSC.2
+	title = new_CSC.2.t
+	desc = new_CSC.2.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_CSC.2.a
+		clr_country_flag = CSC_faction_2
+		clr_country_flag = CSC_faction_3
+		clr_country_flag = CSC_faction_4
+		clr_country_flag = CSC_faction_5
+		clr_country_flag = CSC_faction_6
+		if = {
+			limit = { NOT = { has_country_flag = CSC_faction_1 } }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Xiong Kewu"	# 熊克武
+				picture = "gfx/leaders/China/Portrait_China_Xiong_Kewu.tga"
+				expire = "1936.1.1"
+				ideology = Centrist_ideology
+				traits = { dealbroker }
+			}
+			set_country_flag = CSC_faction_1
+		}
+		random_army_leader = {
+			limit = { has_id = 88 }
+			if = {
+				limit = { is_field_marshal = no }
+				promote_leader = yes
+			}
+		}
+	}
+	option = {
+		name = new_CSC.2.b
+		clr_country_flag = CSC_faction_1
+		clr_country_flag = CSC_faction_3
+		clr_country_flag = CSC_faction_4
+		clr_country_flag = CSC_faction_5
+		clr_country_flag = CSC_faction_6
+		if = {
+			limit = { NOT = { has_country_flag = CSC_faction_2 } }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Lü Chao"	# 吕超
+				picture = "gfx/leaders/China/Portrait_China_Lv_Chao.tga"
+				expire = "1936.1.1"
+				ideology = Centrist_ideology
+				traits = { captain_of_industry }
+			}
+			set_country_flag = CSC_faction_2
+		}
+		random_army_leader = {
+			limit = { has_id = 90 }
+			if = {
+				limit = { is_field_marshal = no }
+				promote_leader = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = new_CSC.3
+	title = new_CSC.3.t
+	desc = new_CSC.3.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_CSC.3.a
+		clr_country_flag = CSC_faction_1
+		clr_country_flag = CSC_faction_2
+		clr_country_flag = CSC_faction_4
+		clr_country_flag = CSC_faction_5
+		clr_country_flag = CSC_faction_6
+		if = {
+			limit = { NOT = { has_country_flag = CSC_faction_3 } }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Liu Cunhou"	# 刘存厚
+				picture = "gfx/leaders/China/Portrait_China_Liu_Cunhou.tga"
+				expire = "1936.1.1"
+				ideology = Centrist_ideology
+				traits = { political_dancer }
+			}
+			set_country_flag = CSC_faction_3
+		}
+		random_army_leader = {
+			limit = { has_id = 89 }
+			if = {
+				limit = { is_field_marshal = no }
+				promote_leader = yes
+			}
+		}
+	}
+	option = {
+		name = new_CSC.3.b
+		clr_country_flag = CSC_faction_1
+		clr_country_flag = CSC_faction_2
+		clr_country_flag = CSC_faction_3
+		clr_country_flag = CSC_faction_5
+		clr_country_flag = CSC_faction_6
+		if = {
+			limit = { NOT = { has_country_flag = CSC_faction_4 } }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Li Jiayu"	# 李家钰
+				picture = "gfx/leaders/China/Portrait_China_Li_Jiayu.tga"
+				expire = "1936.1.1"
+				ideology = Centrist_ideology
+				traits = { popular_figurehead2 }
+			}
+			set_country_flag = CSC_faction_4
+		}
+		random_army_leader = {
+			limit = { has_id = 96 }
+			if = {
+				limit = { is_field_marshal = no }
+				promote_leader = yes
+			}
+		}
+	}
+	option = {
+		name = new_CSC.3.c
+		clr_country_flag = CSC_faction_1
+		clr_country_flag = CSC_faction_2
+		clr_country_flag = CSC_faction_3
+		clr_country_flag = CSC_faction_4
+		clr_country_flag = CSC_faction_6
+		if = {
+			limit = { NOT = { has_country_flag = CSC_faction_5 } }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Liu Wenhui"	# 刘文辉
+				picture = "gfx/leaders/China/Portrait_China_Liu_Wenhui.tga"
+				expire = "1936.1.1"
+				ideology = Centrist_ideology
+				traits = { war_industrialist }
+			}
+			set_country_flag = CSC_faction_5
+		}
+		random_army_leader = {
+			limit = { has_id = 97 }
+			if = {
+				limit = { is_field_marshal = no }
+				promote_leader = yes
+			}
+		}
+	}
+	option = {
+		name = new_CSC.3.e
+		clr_country_flag = CSC_faction_1
+		clr_country_flag = CSC_faction_2
+		clr_country_flag = CSC_faction_3
+		clr_country_flag = CSC_faction_4
+		clr_country_flag = CSC_faction_5
+		if = {
+			limit = { NOT = { has_country_flag = CSC_faction_6 } }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Liu Xiang"	# 刘湘
+				picture = "gfx/leaders/China/Portrait_China_Liu_Xiang.tga"
+				expire = "1936.1.1"
+				ideology = Centrist_ideology
+				traits = { financial_expert }
+			}
+			set_country_flag = CSC_faction_6
+		}
+		random_army_leader = {
+			limit = { has_id = 93 }
+			if = {
+				limit = { is_field_marshal = no }
+				promote_leader = yes
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = new_CSC.4
+	title = new_CSC.4.t
+	desc = new_CSC.4.d
+	picture = GFX_report_event_physics_lab_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_CSC.4.a
+		add_to_tech_sharing_group = Southwest_China_Cooperation_Circle
+		FROM = {
+			add_opinion_modifier = { target = ROOT modifier = New_friendship }
+			add_ai_strategy = { type = alliance id = ROOT value = 100 }
+			add_ai_strategy = { type = protect id = ROOT value = 100 }
+			add_ai_strategy = { type = send_volunteers_desire id = ROOT value = 100 }
+			add_ai_strategy = { type = support id = ROOT value = 100 }
+			news_event = new_News.1
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 175 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 150 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 125 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 100 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 75 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 50 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 25 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -25 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -50 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -75 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -100 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -125 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -150 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -175 } }
+			}
+		}
+	}
+	option = {
+		name = new_CSC.4.b
+		FROM = {
+			add_opinion_modifier = { target = ROOT modifier = New_contradiction }
+			news_event = new_News.2
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 175 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 150 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 125 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 100 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 75 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 50 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 25 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -25 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -50 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -75 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -100 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -125 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -150 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -175 } }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = new_CSC.5
+	title = new_CSC.5.t
+	desc = new_CSC.5.d
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_CSC.5.a
+		custom_effect_tooltip = GAME_OVER_TT
+		hidden_effect = {
+			FROM = {
+				annex_country = { target = ROOT transfer_troops = yes }
+				news_event = new_News.1
+			}
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 175 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 150 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 125 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 100 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 75 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 50 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 25 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -25 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -50 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -75 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -100 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -125 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -150 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -175 } }
+			}
+		}
+	}
+	option = {
+		name = new_CSC.5.b
+		FROM = {
+			add_opinion_modifier = { target = ROOT modifier = New_contradiction }
+			news_event = new_News.2
+		}
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 175 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 150 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 125 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 100 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 75 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 50 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 25 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -25 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -50 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -75 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -100 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -125 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -150 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -175 } }
+			}
+		}
+	}
+}

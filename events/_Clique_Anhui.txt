@@ -1,0 +1,263 @@
+﻿add_namespace = new_Anhui
+
+country_event = {
+	id = new_Anhui.1
+	title = new_Anhui.1.t
+	desc = new_Anhui.1.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Anhui.1.a
+		set_global_flag = Zhili_Anhui_Alliance
+		every_country = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Zhili_Member
+				}
+			}
+			set_country_flag = Beiyang_Member
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+		}
+		dismantle_faction = yes
+		add_ai_strategy = { type = alliance id = FROM value = 200 }
+		add_named_threat = { threat = 10 name = threat.ZAA }
+		FROM = {
+			dismantle_faction = yes
+			create_faction = "Beiyang_Clique"
+			add_to_faction = ROOT
+			add_ai_strategy = { type = alliance id = ROOT value = 200 }
+			random_army_leader = {
+				limit = { has_id = 2 }
+				retire = yes
+			}
+			add_named_threat = { threat = 10 name = threat.ZAA }
+		}
+		random_army_leader = {
+			limit = { has_id = 134 }
+			set_nationality = CHN
+		}
+		CZJ = {
+			if = {
+				limit = { has_idea = Control_Shanghai }
+				remove_ideas = Control_Shanghai
+			}
+		}
+		CJS = {
+			if = {
+				limit = { NOT = { has_idea = Control_Shanghai } }
+				add_ideas = Control_Shanghai
+			}
+		}
+		CHN = {
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Wu Peifu"	# 吴佩孚
+				picture = "gfx/leaders/China/Portrait_China_Wu_Peifu.tga"
+				expire = "1936.1.1"
+				ideology =  Centrist_ideology
+				traits = {}
+			}
+			random_army_leader = {
+				limit = { has_id = 53 }
+				if = {
+					limit = { is_field_marshal = yes }
+					demote_leader = yes
+				}
+				set_nationality = CBJ
+			}
+		}
+		every_other_country = {
+			limit = {
+				is_in_faction = no
+				has_country_flag = Beiyang_Member
+			}
+			country_event = new_Anhui.3
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 175 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 150 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 125 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 100 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 75 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 50 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 25 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -25 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -50 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -75 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -100 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -125 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -150 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -175 } }
+			}
+		}
+	}
+	option = {
+		name = new_Anhui.1.b
+		FROM = {
+			add_opinion_modifier = { target = ROOT modifier = New_Clique_refused_us }
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = ROOT
+				}
+			}
+			country_event = new_Anhui.2
+		}
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 175 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 150 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 125 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 100 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 75 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 50 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 25 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -25 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -50 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -75 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -100 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -125 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -150 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -175 } }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = new_Anhui.2
+	title = new_Anhui.2.t
+	desc = new_Anhui.2.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Anhui.2.a
+		set_global_flag = Zhili_Anhui_Broken
+		create_wargoal = { type = annex_everything target = FROM }
+		add_named_threat = { threat = 10 name = threat.ZAW }
+		random_other_country = {
+			limit = {
+				is_faction_leader = yes
+				has_country_flag = Zhili_Member
+			}
+			add_named_threat = { threat = 10 name = threat.ZAW }
+		}
+	}
+}
+
+country_event = {
+	id = new_Anhui.3
+	title = new_Anhui.3.t
+	desc = new_Anhui.3.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Anhui.3.a
+		random_other_country = {
+			limit = {
+				is_faction_leader = yes
+				has_country_flag = Beiyang_Member
+			}
+			add_to_faction = ROOT
+			add_ai_strategy = { type = alliance id = ROOT value = 200 }
+			ROOT = { add_ai_strategy = { type = alliance id = PREV value = 200 } }
+		}
+	}
+	option = {
+		name = new_Anhui.3.b
+		clr_country_flag = Beiyang_Member
+		CBJ = { add_opinion_modifier = { target = ROOT modifier = New_Clique_refused_us } }
+		CZL = { add_opinion_modifier = { target = ROOT modifier = New_Clique_refused_us } }
+	}
+}

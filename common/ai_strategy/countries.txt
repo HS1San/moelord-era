@@ -1,0 +1,753 @@
+﻿Kuomintang_leftist_support = {
+	enable = {
+		OR = {
+			has_country_flag = SH_WAR
+			has_country_flag = SH_PAR
+		}
+		OR = {
+			has_government = Radical_Leftist
+			has_government = Moderate_Leftist
+		}
+		CGD = {
+			has_war = yes
+			exists = yes
+			OR = {
+				has_cosmetic_tag = CNP
+				has_cosmetic_tag = CNL
+				has_government = Radical_Leftist
+				has_government = Moderate_Leftist
+			}
+		}
+		has_war = no
+		is_subject = no
+	}
+	abort = {
+		OR = {
+			AND = {
+				NOT = { has_government = Radical_Leftist }
+				NOT = { has_government = Moderate_Leftist }
+			}
+			CGD = {
+				OR = {
+					has_war = no
+					exists = no
+					AND = {
+						NOT = { has_cosmetic_tag = CNP }
+						NOT = { has_cosmetic_tag = CNL }
+						NOT = { has_government = Radical_Leftist }
+						NOT = { has_government = Moderate_Leftist }
+					}
+				}
+			}
+			has_war = yes
+			is_subject = yes
+		}
+
+	}
+
+	ai_strategy = { type = send_volunteers_desire id = "CGD" value = 100 }
+	ai_strategy = { type = support id = "CGD" value = 100 }
+}
+Kuomintang_rightist_support = {
+	enable = {
+		OR = {
+			has_country_flag = SH_WAR
+			has_country_flag = SH_PAR
+		}
+		OR = {
+			has_government = Radical_Rightist
+			has_government = Moderate_Rightist
+		}
+		CGD = {
+			has_war = yes
+			exists = yes
+			OR = {
+				has_cosmetic_tag = CNP
+				has_cosmetic_tag = CNR
+				has_government = Radical_Rightist
+				has_government = Moderate_Rightist
+			}
+		}
+		has_war = no
+		is_subject = no
+	}
+	abort = {
+		OR = {
+			AND = {
+				NOT = { has_government = Radical_Rightist }
+				NOT = { has_government = Moderate_Rightist }
+			}
+			CGD = {
+				OR = {
+					has_war = no
+					exists = no
+					AND = {
+						NOT = { has_cosmetic_tag = CNP }
+						NOT = { has_cosmetic_tag = CNR }
+						NOT = { has_government = Radical_Rightist }
+						NOT = { has_government = Moderate_Rightist }
+					}
+				}
+			}
+			has_war = yes
+			is_subject = yes
+		}
+
+	}
+
+	ai_strategy = { type = send_volunteers_desire id = "CGD" value = 100 }
+	ai_strategy = { type = support id = "CGD" value = 100 }
+}
+Kuomintang_national_revolution_front = {
+	enable = {
+		OR = {
+			AND = {
+				tag  = CGX
+				has_global_flag = New_Guangxi_Faction
+			}
+			AND = {
+				tag  = CHN
+				has_global_flag = New_Hunan_Faction
+			}
+			AND = {
+				tag  = CJX
+				has_global_flag = New_Jiangxi_Faction
+			}
+			AND = {
+				tag  = CFJ
+				has_global_flag = New_Fujian_Faction
+			}
+			AND = {
+				tag  = CCH
+				has_country_flag = Guomin_Army
+			}
+			AND = {
+				tag  = CSY
+				has_country_flag = Guomin_Army
+			}
+			AND = {
+				tag  = CSA
+				has_country_flag = Guomin_Army
+			}
+			AND = {
+				tag  = CSA
+				has_country_flag = Jingguo_Army
+			}
+			AND = {
+				tag  = CJG
+				has_country_flag = Jingguo_Army
+			}
+			AND = {
+				tag  = CEX
+				has_country_flag = Jingguo_Army
+			}
+		}
+		CGD = {
+			exists = yes
+			OR = {
+				has_cosmetic_tag = CNP
+				has_cosmetic_tag = CNL
+				has_cosmetic_tag = CNR
+			}
+		}
+	}
+	abort = {
+		CGD = {
+			OR = {
+				exists = no
+				AND = {
+					NOT = { has_cosmetic_tag = CNP }
+					NOT = { has_cosmetic_tag = CNL }
+					NOT = { has_cosmetic_tag = CNR }
+				}
+			}
+		}
+	}
+
+	ai_strategy = { type = alliance id = "CGD" value = 200 }
+	ai_strategy = { type = befriend id = "CGD" value = 200 }
+	ai_strategy = { type = send_volunteers_desire id = "CGD" value = 200 }
+	ai_strategy = { type = support id = "CGD" value = 200 }
+}
+
+Yunnan_democrat_support = {
+	enable = {
+		OR = {
+			has_country_flag = SH_WAR
+			has_country_flag = SH_PAR
+		}
+		OR = {
+			has_government = Moderate_Leftist
+			has_government = Moderate_Rightist
+			AND = {
+				tag  = CGD
+				OR = {
+					has_cosmetic_tag = CNP
+					has_cosmetic_tag = CNL
+					has_cosmetic_tag = CNR
+				}
+			}
+		}
+		CYN = {
+			has_war = yes
+			exists = yes
+			OR = {
+				has_government = Moderate_Leftist
+				has_government = Moderate_Rightist
+			}
+			has_completed_focus = CYN_Support_Gu
+		}
+		has_war = no
+		is_subject = no
+	}
+	abort = {
+		OR = {
+			AND = {
+				NOT = { tag  = CGD }
+				NOT = { has_government = Moderate_Leftist }
+				NOT = { has_government = Moderate_Rightist }
+			}
+			AND = {
+				tag  = CGD
+				NOT = {
+					has_cosmetic_tag = CNP
+					has_cosmetic_tag = CNL
+					has_cosmetic_tag = CNR
+				}
+			}
+			CYN = {
+				OR = {
+					has_war = no
+					exists = no
+					AND = {
+						NOT = { has_government = Moderate_Leftist }
+						NOT = { has_government = Moderate_Rightist }
+					}
+				}
+			}
+			has_war = yes
+			is_subject = yes
+		}
+	}
+
+	ai_strategy = { type = befriend id = "CYN" value = 200 }
+	ai_strategy = { type = send_volunteers_desire id = "CYN" value = 100 }
+	ai_strategy = { type = support id = "CYN" value = 100 }
+}
+Beijing_democrat_support = {
+	enable = {
+		OR = {
+			has_country_flag = SH_WAR
+			has_country_flag = SH_PAR
+		}
+		OR = {
+			has_government = Moderate_Leftist
+			has_government = Moderate_Rightist
+			AND = {
+				tag  = CGD
+				OR = {
+					has_cosmetic_tag = CNP
+					has_cosmetic_tag = CNL
+					has_cosmetic_tag = CNR
+				}
+			}
+		}
+		CBJ = {
+			has_war = yes
+			exists = yes
+			OR = {
+				has_government = Moderate_Leftist
+				has_government = Moderate_Rightist
+			}
+			has_completed_focus = CBJ_Recreate_Democratic_National_Assembly
+		}
+		has_war = no
+		is_subject = no
+	}
+	abort = {
+		OR = {
+			AND = {
+				NOT = { tag  = CGD }
+				NOT = { has_government = Moderate_Leftist }
+				NOT = { has_government = Moderate_Rightist }
+			}
+			AND = {
+				tag  = CGD
+				NOT = {
+					has_cosmetic_tag = CNP
+					has_cosmetic_tag = CNL
+					has_cosmetic_tag = CNR
+				}
+			}
+			CBJ = {
+				OR = {
+					has_war = no
+					exists = no
+					AND = {
+						NOT = { has_government = Moderate_Leftist }
+						NOT = { has_government = Moderate_Rightist }
+					}
+				}
+			}
+			has_war = yes
+			is_subject = yes
+		}
+	}
+
+	ai_strategy = { type = befriend id = "CBJ" value = 200 }
+	ai_strategy = { type = send_volunteers_desire id = "CBJ" value = 100 }
+	ai_strategy = { type = support id = "CBJ" value = 100 }
+}
+Shaanxi_Jingguo_democrat_support = {
+	enable = {
+		OR = {
+			has_country_flag = SH_WAR
+			has_country_flag = SH_PAR
+		}
+		OR = {
+			has_government = Moderate_Leftist
+			has_government = Moderate_Rightist
+			AND = {
+				tag  = CGD
+				OR = {
+					has_cosmetic_tag = CNP
+					has_cosmetic_tag = CNL
+					has_cosmetic_tag = CNR
+				}
+			}
+		}
+		CJG = {
+			has_war = yes
+			exists = yes
+			has_country_flag = Jingguo_Army
+		}
+		has_war = no
+		is_subject = no
+	}
+	abort = {
+		OR = {
+			AND = {
+				NOT = { tag  = CGD }
+				NOT = { has_government = Moderate_Leftist }
+				NOT = { has_government = Moderate_Rightist }
+			}
+			AND = {
+				tag  = CGD
+				NOT = {
+					has_cosmetic_tag = CNP
+					has_cosmetic_tag = CNL
+					has_cosmetic_tag = CNR
+				}
+			}
+			CJG = {
+				OR = {
+					has_war = no
+					exists = no
+					NOT = { has_country_flag = Jingguo_Army }
+				}
+			}
+			has_war = yes
+			is_subject = yes
+		}
+	}
+
+	ai_strategy = { type = befriend id = "CJG" value = 200 }
+	ai_strategy = { type = send_volunteers_desire id = "CJG" value = 100 }
+	ai_strategy = { type = support id = "CJG" value = 100 }
+}
+Hubei_Jingguo_democrat_support = {
+	enable = {
+		OR = {
+			has_country_flag = SH_WAR
+			has_country_flag = SH_PAR
+		}
+		OR = {
+			has_government = Moderate_Leftist
+			has_government = Moderate_Rightist
+			AND = {
+				tag  = CGD
+				OR = {
+					has_cosmetic_tag = CNP
+					has_cosmetic_tag = CNL
+					has_cosmetic_tag = CNR
+				}
+			}
+		}
+		CEX = {
+			has_war = yes
+			exists = yes
+			has_country_flag = Jingguo_Army
+		}
+		has_war = no
+		is_subject = no
+	}
+	abort = {
+		OR = {
+			AND = {
+				NOT = { tag  = CGD }
+				NOT = { has_government = Moderate_Leftist }
+				NOT = { has_government = Moderate_Rightist }
+			}
+			AND = {
+				tag  = CGD
+				NOT = {
+					has_cosmetic_tag = CNP
+					has_cosmetic_tag = CNL
+					has_cosmetic_tag = CNR
+				}
+			}
+			CEX = {
+				OR = {
+					has_war = no
+					exists = no
+					NOT = { has_country_flag = Jingguo_Army }
+				}
+			}
+			has_war = yes
+			is_subject = yes
+		}
+	}
+
+	ai_strategy = { type = befriend id = "CEX" value = 200 }
+	ai_strategy = { type = send_volunteers_desire id = "CEX" value = 100 }
+	ai_strategy = { type = support id = "CEX" value = 100 }
+}
+
+Jingguo_vs_Zhengsong = {
+	enable = {
+		tag  = CJG
+		CYX = { exists = yes }
+	}
+	abort = {
+		CYX = { exists = no }
+	}
+
+	ai_strategy = { type = antagonize id = "CYX" value = 200 }
+	ai_strategy = { type = conquer id = "CYX" value = 100 }
+	ai_strategy = { type = invade id = "CYX" value = 100 }
+	ai_strategy = { type = declare_war id = "CYX" value = 100 }
+}
+Zhengsong_vs_Jingguo = {
+	enable = {
+		tag  = CYX
+		CJG = { exists = yes }
+	}
+	abort = {
+		CJG = { exists = no }
+	}
+
+	ai_strategy = { type = antagonize id = "CJG" value = 200 }
+	ai_strategy = { type = conquer id = "CJG" value = 100 }
+	ai_strategy = { type = invade id = "CJG" value = 100 }
+	ai_strategy = { type = declare_war id = "CJG" value = 100 }
+}
+
+Anhui_Clique_Fengtian_support = {
+	enable = {
+		is_subject = no
+		has_country_flag = Fengtian_Member
+		has_global_flag = Fengtian_Anhui_Support
+		CBJ = {
+			exists = yes
+			is_subject = no
+			has_country_flag = Anhui_Member
+		}
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			NOT = { has_country_flag = Fengtian_Member }
+			NOT = { has_global_flag = Fengtian_Anhui_Support }
+			CBJ = { exists = no }
+			CBJ = { is_subject = yes }
+			CBJ = { NOT = { has_country_flag = Anhui_Member } }
+		}
+	}
+
+	ai_strategy = { type = send_volunteers_desire id = "CBJ" value = 100 }
+	ai_strategy = { type = support id = "CBJ" value = 100 }
+}
+Zhili_Clique_Fengtian_support = {
+	enable = {
+		is_subject = no
+		has_country_flag = Fengtian_Member
+		has_global_flag = Fengtian_Zhili_Support
+		CBJ = {
+			exists = yes
+			is_subject = no
+			has_country_flag = Zhili_Member
+		}
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			NOT = { has_country_flag = Fengtian_Member }
+			NOT = { has_global_flag = Fengtian_Zhili_Support }
+			CZL = { exists = no }
+			CZL = { is_subject = yes }
+			CZL = { NOT = { has_country_flag = Zhili_Member } }
+		}
+	}
+
+	ai_strategy = { type = send_volunteers_desire id = "CZL" value = 100 }
+	ai_strategy = { type = support id = "CZL" value = 100 }
+}
+Anhui_Clique_Japan_support = {
+	enable = {
+		original_tag = JAP
+		has_war = no
+		is_subject = no
+		CBJ = {
+			exists = yes
+			is_subject = no
+			NOT = { has_cosmetic_tag = CBJ_modern }
+		}
+		has_global_flag = Anhui_Won
+	}
+	abort = {
+		OR = {
+			has_war = yes
+			is_subject = yes
+			CBJ = { exists = no }
+			CBJ = { is_subject = yes }
+			CBJ = { has_cosmetic_tag = CBJ_modern }
+		}
+	}
+
+	ai_strategy = { type = befriend id = "CBJ" value = 200 }
+	ai_strategy = { type = send_volunteers_desire id = "CBJ" value = 100 }
+	ai_strategy = { type = support id = "CBJ" value = 100 }
+}
+Fengtian_Clique_Japan_support = {
+	enable = {
+		original_tag = JAP
+		has_war = no
+		is_subject = no
+		CFT = {
+			exists = yes
+			is_subject = no
+			NOT = { has_cosmetic_tag = CFT_modern }
+		}
+		has_global_flag = Zhili_Won
+	}
+	abort = {
+		OR = {
+			has_war = yes
+			is_subject = yes
+			CFT = { exists = no }
+			CFT = { is_subject = yes }
+			CFT = { has_cosmetic_tag = CFT_modern }
+		}
+	}
+
+	ai_strategy = { type = befriend id = "CFT" value = 200 }
+	ai_strategy = { type = send_volunteers_desire id = "CFT" value = 100 }
+	ai_strategy = { type = support id = "CFT" value = 100 }
+}
+Fengtian_Clique_JAP_invasions = {
+	enable = {
+		original_tag = JAP
+		OR = {
+			CFT = {
+				exists = yes
+				has_cosmetic_tag = CFT_modern
+			}
+			CJL = {
+				exists = yes
+				has_cosmetic_tag = CJL_modern
+			}
+			CHJ = {
+				exists = yes
+				has_cosmetic_tag = CHJ_modern
+			}
+		}
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = { type = antagonize id = "CFT" value = 200 }
+	ai_strategy = { type = antagonize id = "CJL" value = 175 }
+	ai_strategy = { type = antagonize id = "CHJ" value = 175 }
+	ai_strategy = { type = conquer id = "CFT" value = 100 }
+	ai_strategy = { type = conquer id = "CJL" value = 75 }
+	ai_strategy = { type = conquer id = "CHJ" value = 75 }
+	ai_strategy = { type = invade id = "CFT" value = 100 }
+	ai_strategy = { type = invade id = "CJL" value = 75 }
+	ai_strategy = { type = invade id = "CHJ" value = 75 }
+	ai_strategy = { type = declare_war id = "CFT" value = 100 }
+	ai_strategy = { type = declare_war id = "CJL" value = 75 }
+	ai_strategy = { type = declare_war id = "CHJ" value = 75 }
+}
+
+Anhui_Clique_vs_Zhili_Clique = {
+	enable = {
+		OR = {
+			has_country_flag = Anhui_Member
+			has_country_flag = Old_Anhui_Member
+		}
+		country_exists = CZL
+		NOT = { has_global_flag = Anhui_Won }
+		NOT = { has_global_flag = Zhili_Anhui_Alliance }
+		CBJ = { has_country_flag = Anhui_Member }
+		CZL = { has_country_flag = Zhili_Member }
+	}
+	abort = {
+		OR = {
+			AND = {
+				NOT = { has_country_flag = Anhui_Member }
+				NOT = { has_country_flag = Old_Anhui_Member }
+			}
+			NOT = { country_exists = CZL }
+			has_global_flag = Anhui_Won
+			has_global_flag = Zhili_Anhui_Alliance
+			CBJ = { NOT = { has_country_flag = Anhui_Member } }
+			CZL = { NOT = { has_country_flag = Zhili_Member } }
+		}
+	}
+
+	ai_strategy = { type = contain id = "CZL" value = 100 }
+	ai_strategy = { type = conquer id = "CZL" value = 100 }
+	ai_strategy = { type = antagonize id = "CZL" value = 100 }
+}
+Zhili_Clique_vs_Anhui_Clique = {
+	enable = {
+		OR = {
+			has_country_flag = Zhili_Member
+			has_country_flag = Old_Zhili_Member
+		}
+		country_exists = CBJ
+		NOT = { has_global_flag = Zhili_Won }
+		NOT = { has_global_flag = Zhili_Anhui_Alliance }
+		CZL = { has_country_flag = Zhili_Member }
+		CBJ = { has_country_flag = Anhui_Member }
+	}
+	abort = {
+		OR = {
+			AND = {
+				NOT = { has_country_flag = Zhili_Member }
+				NOT = { has_country_flag = Old_Zhili_Member }
+			}
+			NOT = { country_exists = CBJ }
+			has_global_flag = Zhili_Won
+			has_global_flag = Zhili_Anhui_Alliance
+			CZL = { NOT = { has_country_flag = Zhili_Member } }
+			CBJ = { NOT = { has_country_flag = Anhui_Member } }
+		}
+	}
+
+	ai_strategy = { type = contain id = "CBJ" value = 100 }
+	ai_strategy = { type = conquer id = "CBJ" value = 100 }
+	ai_strategy = { type = antagonize id = "CBJ" value = 100 }
+}
+Anhui_Clique_vs_Fengtian_Clique = {
+	enable = {
+		OR = {
+			has_country_flag = Anhui_Member
+			has_country_flag = Old_Anhui_Member
+			has_country_flag = Beiyang_Member
+			has_country_flag = Old_Beiyang_Member
+		}
+		OR = {
+			NOT = { country_exists = CZL }
+			has_global_flag = Anhui_Won
+			has_global_flag = Zhili_Anhui_Alliance
+		}
+		country_exists = CFT
+		CBJ = {
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Beiyang_Member
+			}
+		}
+		CFT = { has_country_flag = Fengtian_Member }
+	}
+	abort = {
+		OR = {
+			AND = {
+				NOT = { has_country_flag = Anhui_Member }
+				NOT = { has_country_flag = Old_Anhui_Member }
+				NOT = { has_country_flag = Beiyang_Member }
+				NOT = { has_country_flag = Old_Beiyang_Member }
+			}
+			AND = {
+				country_exists = CZL
+				NOT = { has_global_flag = Anhui_Won }
+				NOT = { has_global_flag = Zhili_Anhui_Alliance }
+			}
+			NOT = { country_exists = CFT }
+			CBJ = {
+				AND = {
+					NOT = { has_country_flag = Anhui_Member }
+					NOT = { has_country_flag = Beiyang_Member }
+				}
+			}
+			CFT = { NOT = { has_country_flag = Fengtian_Member } }
+		}
+	}
+
+	ai_strategy = { type = contain id = "CFT" value = 100 }
+	ai_strategy = { type = conquer id = "CFT" value = 100 }
+	ai_strategy = { type = antagonize id = "CFT" value = 100 }
+}
+Zhili_Clique_vs_Fengtian_Clique = {
+	enable = {
+		OR = {
+			has_country_flag = Zhili_Member
+			has_country_flag = Old_Zhili_Member
+			has_country_flag = Beiyang_Member
+			has_country_flag = Old_Beiyang_Member
+		}
+		OR = {
+			NOT = { country_exists = CBJ }
+			has_global_flag = Zhili_Won
+			has_global_flag = Zhili_Anhui_Alliance
+		}
+		country_exists = CFT
+		CZL = {
+			OR = {
+				has_country_flag = Zhili_Member
+				has_country_flag = Beiyang_Member
+			}
+		}
+		CFT = { has_country_flag = Fengtian_Member }
+	}
+	abort = {
+		OR = {
+			AND = {
+				NOT = { has_country_flag = Zhili_Member }
+				NOT = { has_country_flag = Old_Zhili_Member }
+				NOT = { has_country_flag = Beiyang_Member }
+				NOT = { has_country_flag = Old_Beiyang_Member }
+			}
+			AND = {
+				country_exists = CBJ
+				NOT = { has_global_flag = Zhili_Won }
+				NOT = { has_global_flag = Zhili_Anhui_Alliance }
+			}
+			NOT = { country_exists = CFT }
+			CZL = {
+				AND = {
+					NOT = { has_country_flag = Zhili_Member }
+					NOT = { has_country_flag = Beiyang_Member }
+				}
+			}
+			CFT = { NOT = { has_country_flag = Fengtian_Member } }
+		}
+	}
+
+	ai_strategy = { type = contain id = "CFT" value = 100 }
+	ai_strategy = { type = conquer id = "CFT" value = 100 }
+	ai_strategy = { type = antagonize id = "CFT" value = 100 }
+}
+KIA_hates_Japan = {
+	enable = {
+		original_tag = KIA
+		country_exists = KOR
+	}
+	abort = {
+		NOT = { country_exists = KOR }
+	}
+	
+	ai_strategy = { type = antagonize id = "KOR" value = 100 }
+}

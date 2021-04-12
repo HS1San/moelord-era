@@ -1,0 +1,57 @@
+state = {
+	id = 133
+	name = "STATE_133"
+	manpower = 987688
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 1
+		rubber = 0
+		tungsten = 1
+		steel = 17
+		chromium = 5
+	}
+	history = {
+		owner = CRH
+		add_core_of = CRH
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 3877 1 }
+		victory_points = { 7633 1 }
+		victory_points = { 11801 2 }
+	}
+	provinces = {
+		881 972 1508 3877 3978 3955 6937 6988 7575 7633 9768 9873 10331 10426 10429 10499 11801 12478 
+	}
+}
+
+state = {
+	id = 134
+	name = "STATE_134"
+	manpower = 987689
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 1
+		steel = 15
+		chromium = 5
+	}
+	history = {
+		owner = CRH
+		add_core_of = CRH
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 3934 1 }
+	}
+	provinces = {
+		814 934 3814 3828 3881 3934 4514 6852 6898 9788 9905 9927 11855 
+	}
+}

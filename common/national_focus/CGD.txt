@@ -1,0 +1,647 @@
+focus_tree = {
+	id = CGD_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CGD
+		}
+	}
+
+	default = no
+	shared_focus = Shared_Plan_of_Reform
+	shared_focus = Shared_Extra_Tech_Slot
+
+	focus = {
+		id = CGD_Remove_the_Warlord
+		icon = GFX_focus_Freedom
+		x = 5
+		y = 0
+		cost = 10
+
+		available = {
+			has_war = no
+			NOT = { owns_state = 194 }
+		}
+
+		bypass = {
+			owns_state = 194
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { country_event = new_NRM.1 }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CGD_Federalism
+		icon = GFX_Experience_BYC
+		prerequisite = { focus = CGD_Remove_the_Warlord }
+		mutually_exclusive = { focus = CGD_Centralism }
+		x = 2
+		y = 1
+		cost = 10
+
+		available = {
+			has_war = no
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_capital = 194
+			set_country_flag = SH_BYC
+			if = {
+				limit = { CGX = { exists = no } }
+				every_state = {
+					limit = {
+						region = 37
+						is_owned_by = ROOT
+					}
+					CGX = { transfer_state = PREV }
+				}
+				else = {
+					if = {
+						limit = { CGX = { is_subject_of = PREV } }
+						end_puppet = CGX
+					}
+					every_state = {
+						limit = {
+							region = 37
+							is_owned_by = ROOT
+						}
+						CGX = { transfer_state = PREV }
+					}
+				}
+			}
+			if = {
+				limit = { CQY = { exists = no } }
+				every_state = {
+					limit = {
+						OR = {
+							state = 79
+							state = 80
+							state = 81
+						}
+						is_owned_by = ROOT
+					}
+					CQY = { transfer_state = PREV }
+				}
+				else = {
+					if = {
+						limit = { CQY = { is_subject_of = PREV } }
+						end_puppet = CQY
+					}
+					every_state = {
+						limit = {
+							OR = {
+								state = 79
+								state = 80
+								state = 81
+							}
+							is_owned_by = ROOT
+						}
+						CQY = { transfer_state = PREV }
+					}
+				}
+			}
+			if = {
+				limit = { CFJ = { exists = no } }
+				every_state = {
+					limit = {
+						region = 32
+						is_owned_by = ROOT
+					}
+					CFJ = { transfer_state = PREV }
+				}
+				else = {
+					if = {
+						limit = { CFJ = { is_subject_of = PREV } }
+						end_puppet = CFJ
+					}
+					every_state = {
+						limit = {
+							region = 32
+							is_owned_by = ROOT
+						}
+						CFJ = { transfer_state = PREV }
+					}
+				}
+			}
+			unlock_decision_tooltip = Formable_BYC
+			hidden_effect = { country_event = { id = new_NRM.14 days = 7 } }
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CGD_Centralism
+		icon = GFX_Experience_ROC
+		prerequisite = { focus = CGD_Remove_the_Warlord }
+		mutually_exclusive = { focus = CGD_Federalism }
+		x = 8
+		y = 1
+		cost = 10
+
+		available = {
+			has_war = no
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_capital = 194
+			clr_country_flag = SH_WAR
+			set_country_flag = SH_PAR
+			set_country_flag = SH_NPC
+			if = {
+				limit = { CGX = { exists = no } }
+				every_state = {
+					limit = {
+						region = 37
+						is_owned_by = ROOT
+					}
+					CGX = { transfer_state = PREV }
+				}
+				else = {
+					if = {
+						limit = { CGX = { is_subject_of = PREV } }
+						end_puppet = CGX
+					}
+					every_state = {
+						limit = {
+							region = 37
+							is_owned_by = ROOT
+						}
+						CGX = { transfer_state = PREV }
+					}
+				}
+			}
+			if = {
+				limit = { CQY = { exists = no } }
+				every_state = {
+					limit = {
+						OR = {
+							state = 79
+							state = 80
+							state = 81
+						}
+						is_owned_by = ROOT
+					}
+					CQY = { transfer_state = PREV }
+				}
+				else = {
+					if = {
+						limit = { CQY = { is_subject_of = PREV } }
+						end_puppet = CQY
+					}
+					every_state = {
+						limit = {
+							OR = {
+								state = 79
+								state = 80
+								state = 81
+							}
+							is_owned_by = ROOT
+						}
+						CQY = { transfer_state = PREV }
+					}
+				}
+			}
+			if = {
+				limit = { CFJ = { exists = no } }
+				every_state = {
+					limit = {
+						region = 32
+						is_owned_by = ROOT
+					}
+					CFJ = { transfer_state = PREV }
+				}
+				else = {
+					if = {
+						limit = { CFJ = { is_subject_of = PREV } }
+						end_puppet = CFJ
+					}
+					every_state = {
+						limit = {
+							region = 32
+							is_owned_by = ROOT
+						}
+						CFJ = { transfer_state = PREV }
+					}
+				}
+			}
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = CNP
+			unlock_decision_tooltip = Formable_ROC
+			hidden_effect = { country_event = { id = new_NRM.15 days = 7 } }
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CGD_Formed_Merchant_Volunteers_Corps
+		icon = GFX_focus_Prepare_the_Troops
+		prerequisite = { focus = CGD_Federalism }
+		mutually_exclusive = { focus = CGD_Restrict_Merchant_Groups }
+		x = 1
+		y = 2
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = Canton_Merchant }
+				swap_ideas = {
+					remove_idea = Canton_Merchant
+					add_idea = Support_Canton_Merchant
+				}
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CGD_Restrict_Merchant_Groups
+		icon = GFX_focus_Collaborate_with_Local_Elites
+		prerequisite = { focus = CGD_Federalism }
+		mutually_exclusive = { focus = CGD_Formed_Merchant_Volunteers_Corps }
+		x = 3
+		y = 2
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = Canton_Merchant }
+				swap_ideas = {
+					remove_idea = Canton_Merchant
+					add_idea = Oppose_Canton_Merchant
+				}
+			}
+		}
+	}
+	focus = {
+		id = CGD_Destroy_Merchant_Groups
+		icon = GFX_focus_Planned_Economy
+		prerequisite = { focus = CGD_Centralism }
+		mutually_exclusive = { focus = CGD_Guide_Merchant_Groups }
+		x = 7
+		y = 2
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = Canton_Merchant }
+				remove_ideas = Canton_Merchant
+				add_timed_idea = { idea = Rebellion_of_Canton_Merchant days = 180 }
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CGD_Guide_Merchant_Groups
+		icon = GFX_focus_Hidden_Pacts
+		prerequisite = { focus = CGD_Centralism }
+		mutually_exclusive = { focus = CGD_Destroy_Merchant_Groups }
+		x = 9
+		y = 2
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = Canton_Merchant }
+				swap_ideas = {
+					remove_idea = Canton_Merchant
+					add_idea = Guide_Canton_Merchant
+				}
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CGD_Improve_Relations_with_the_Britain
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = CGD_Formed_Merchant_Volunteers_Corps }
+		x = 1
+		y = 3
+		cost = 8
+
+		available = {
+			NOT = { has_war_with = CWH }
+			NOT = { has_war_with = CXG }
+			NOT = { has_war_with = BUR }
+			NOT = { has_war_with = IND }
+			NOT = { has_war_with = PAK }
+			NOT = { has_war_with = MAL }
+			NOT = { has_war_with = SIN }
+			NOT = { has_war_with = SWK }
+			NOT = { has_war_with = SAB }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = relationship_with_britain value = 100 tooltip = Increase_the_opinion_of_Britain_for_us_by_100 }
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CGD_South_China_Cooperation_Circle
+		icon = GFX_focus_Kanslergade_Meeting
+		prerequisite = { focus = CGD_Restrict_Merchant_Groups }
+		x = 3
+		y = 3
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = Attitude_determines_success_or_failure
+			add_to_tech_sharing_group = South_China_Cooperation_Circle
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = CGX
+						original_tag = CQY
+						original_tag = CHN
+						original_tag = CJX
+						original_tag = CFJ
+					}
+					NOT = { has_war_with = ROOT }
+				}
+				country_event = new_CGD.1
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CGD_Improve_Relations_with_the_Russia
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = { focus = CGD_Restrict_Merchant_Groups focus = CGD_Destroy_Merchant_Groups }
+		x = 5
+		y = 3
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = relationship_with_russia value = 100 tooltip = Increase_the_opinion_of_Russia_for_us_by_100 }
+		}
+	}
+	focus = {
+		id = CGD_Whampoa_Military_Academy
+		icon = GFX_focus_chi_whampoa_military_academy
+		prerequisite = { focus = CGD_Destroy_Merchant_Groups }
+		x = 7
+		y = 3
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Whampoa_Military_Academy } }
+				add_ideas = Whampoa_Military_Academy
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CGD_Improve_Relations_with_the_America
+		icon = GFX_focus_chi_mission_to_the_us
+		prerequisite = { focus = CGD_Guide_Merchant_Groups }
+		x = 9
+		y = 3
+		cost = 8
+
+		available = {
+			NOT = { has_war_with = PHL }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = relationship_with_america value = 100 tooltip = Increase_the_opinion_of_America_for_us_by_100 }
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CGD_Chinese_Washington
+		icon = GFX_Experience_CMP
+		prerequisite = { focus = CGD_Improve_Relations_with_the_Britain }
+		x = 1
+		y = 4
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_country_flag = SH_BYC
+			if = {
+				limit = { has_government = Moderate_Rightist }
+				retire_country_leader = yes
+				else = {
+					set_politics = { ruling_party = Moderate_Rightist elections_allowed = no }
+					retire_country_leader = yes
+				}
+			}
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = CMP
+			every_state = {
+				limit = {
+					OR = {
+						region = 32
+						region = 34
+						region = 35
+						region = 37
+					}
+					NOT = { is_core_of = ROOT }
+				}
+				add_core_of = ROOT
+			}
+			unlock_decision_category_tooltip = National_Revolution
+			if = {
+				limit = { owns_state = 194 }
+				custom_effect_tooltip = Unlock_New_Fleet
+				hidden_effect = { load_oob = "CGD_ships" }
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CGD_Socialism_of_all_Mankind
+		icon = GFX_Experience_CZP
+		prerequisite = { focus = CGD_South_China_Cooperation_Circle }
+		prerequisite = { focus = CGD_Improve_Relations_with_the_Russia }
+		x = 3
+		y = 4
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_country_flag = SH_BYC
+			custom_effect_tooltip = Attitude_determines_success_or_failure
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = CZP
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = CGX
+						original_tag = CQY
+						original_tag = CHN
+						original_tag = CJX
+						original_tag = CFJ
+					}
+					NOT = { has_war_with = ROOT }
+				}
+				country_event = new_CGD.2
+			}
+			unlock_decision_category_tooltip = National_Revolution
+			if = {
+				limit = { owns_state = 194 }
+				custom_effect_tooltip = Unlock_New_Fleet
+				hidden_effect = { load_oob = "CGD_ships" }
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CGD_Prepare_to_the_Northern_Expedition
+		icon = GFX_Experience_CNP
+		prerequisite = { focus = CGD_Improve_Relations_with_the_Russia }
+		prerequisite = { focus = CGD_Whampoa_Military_Academy }
+		x = 7
+		y = 4
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = New_Democratic_Revolution
+			add_stability = 0.05
+			add_war_support = 0.05
+			unlock_decision_category_tooltip = National_Revolution
+			if = {
+				limit = { owns_state = 194 }
+				custom_effect_tooltip = Unlock_New_Fleet
+				hidden_effect = { load_oob = "CGD_ships" }
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CGD_Genuine_Three_Peoples_Principles
+		icon = GFX_Experience_SDC
+		prerequisite = { focus = CGD_Improve_Relations_with_the_America }
+		x = 9
+		y = 4
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = Old_Democratic_Revolution
+			unlock_decision_category_tooltip = National_Revolution
+			if = {
+				limit = { owns_state = 194 }
+				custom_effect_tooltip = Unlock_New_Fleet
+				hidden_effect = { load_oob = "CGD_ships" }
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CGD_Guangdong_Finance_Department
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = CGD_Chinese_Washington focus = CGD_Socialism_of_all_Mankind }
+		x = 2
+		y = 5
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Guangdong_Finance_Department } }
+				add_ideas = Guangdong_Finance_Department
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CGD_Guangdong_National_University
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = CGD_Prepare_to_the_Northern_Expedition focus = CGD_Genuine_Three_Peoples_Principles }
+		x = 8
+		y = 5
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Guangdong_National_University } }
+				add_ideas = Guangdong_National_University
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+}

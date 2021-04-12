@@ -1,0 +1,27 @@
+﻿add_namespace = new_CJS
+
+country_event = {
+	id = new_CJS.1
+	title = new_CJS.1.t
+	desc = new_CJS.1.d
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = CJS
+		has_country_leader = { name = "Li Chun" } # 李纯
+		has_global_flag = { flag =  Zhili_Won days > 90 }
+	}
+
+	mean_time_to_happen = { days = 3 }
+
+	option = {
+		name = new_CJS.1.a
+		kill_country_leader = yes
+		random_army_leader = {
+			limit = { has_id = 67 }
+			retire = yes
+		}
+	}
+}

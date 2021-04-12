@@ -1,0 +1,81 @@
+﻿########
+#Templates
+########
+division_template = {
+	name = "Bubingshi"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Qibingshi"
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Hunchenglü"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+########
+#OOB
+########
+units = {
+	division = {
+		name = "Guangxi Di 1 Shi"
+		location = 7137
+		division_template = "Bubingshi"
+		start_experience_factor = 0.4
+	}
+	division = {
+		name = "Guangxi Di 2 Shi"
+		location = 7137
+		division_template = "Bubingshi"
+		start_experience_factor = 0.4
+	}
+	division = {
+		name = "Guangxi Di 3 Shi"
+		location = 1047
+		division_template = "Bubingshi"
+		start_experience_factor = 0.4
+	}
+	division = {
+		name = "Guangdong Di 1 Shi"
+		location = 1047
+		division_template = "Bubingshi"
+		start_experience_factor = 0.4
+	}
+	division = {
+		name = "Guangdong Di 2 Shi"
+		location = 1047
+		division_template = "Bubingshi"
+		start_experience_factor = 0.4
+	}
+	division = {
+		name = "Guangdong Di 3 Shi"
+		location = 1047
+		division_template = "Bubingshi"
+		start_experience_factor = 0.4
+	}
+	division = {
+		name = "Guangdong Di 4 Shi"
+		location = 1047
+		division_template = "Bubingshi"
+		start_experience_factor = 0.4
+	}
+}

@@ -1,0 +1,9 @@
+﻿division_template = {
+	name = "Forest Infantry Division"
+	regiments = {
+		forest_infantry = { x = 0 y = 0 }
+		forest_infantry = { x = 0 y = 1 }
+		forest_infantry = { x = 1 y = 0 }
+		forest_infantry = { x = 1 y = 1 }
+	}
+}

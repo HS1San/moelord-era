@@ -1,0 +1,107 @@
+units = {
+
+	### Naval OOB ###
+	fleet = {
+		name = "Dongbei Haiphong Fleet"
+		naval_base = 11764
+		task_force = {
+			name = "Dongbei Haiphong Fleet"
+			location = 11764
+			ship = {
+				name = "Jiangheng"	# 江亨号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CFT } }
+			}
+			ship = {
+				name = "Lijie"	# 利捷号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CFT } }
+			}
+			ship = {
+				name = "Lisui"	# 利绥号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CFT } }
+			}
+			ship = {
+				name = "Lichuan"	# 利川号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CFT } }
+			}
+			ship = {
+				name = "Jiangping"	# 江平号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CFT } }
+			}
+			ship = {
+				name = "Jiangan"	# 江安号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CFT } }
+			}
+			ship = {
+				name = "Jiangtong"	# 江通号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CFT } }
+			}
+			ship = {
+				name = "Liji"	# 利济号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CFT } }
+			}
+			ship = {
+				name = "Maopeng"	# 毛鹏号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CFT } }
+			}
+			ship = {
+				name = "Yungxiang"	# 永翔号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CFT } }
+			}
+			ship = {
+				name = "Ch'uyü"	# 楚豫号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CFT } }
+			}
+			ship = {
+				name = "Jiangli"	# 江利号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CFT } }
+			}
+			ship = {
+				name = "Haiqi"	# 海圻号
+				definition = cruiser
+				equipment = { cruiser_equipment_0 = { amount = 1 owner = CFT } }
+			}
+			ship = {
+				name = "Haichen"	# 海琛号
+				definition = cruiser
+				equipment = { cruiser_equipment_0 = { amount = 1 owner = CFT } }
+			}
+			ship = {
+				name = "Zhaohe"	# 肇和号
+				definition = cruiser
+				equipment = { cruiser_equipment_0 = { amount = 1 owner = CFT } }
+			}
+			ship = {
+				name = "Zhenhai"	# 镇海号
+				definition = corvette
+				equipment = { corvette_equipment_0 = { amount = 1 owner = CFT } }
+			}
+			ship = {
+				name = "Weihai"	# 威海号
+				definition = corvette
+				equipment = { corvette_equipment_0 = { amount = 1 owner = CFT } }
+			}
+			ship = {
+				name = "Dinghai"	# 定海号
+				definition = corvette
+				equipment = { corvette_equipment_0 = { amount = 1 owner = CFT } }
+			}
+			ship = {
+				name = "Tongan"	# 同安号
+				definition = corvette
+				equipment = { corvette_equipment_0 = { amount = 1 owner = CFT } }
+			}
+		}
+	}
+}

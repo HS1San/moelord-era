@@ -1,0 +1,12 @@
+opinion_modifiers = {
+	New_same_road = { value = 40 }
+	New_similar_road = { value = 20 }
+	New_different_road = { value = -30 }
+
+	New_friendship = { value = 40 months = 12 }
+	New_contradiction = { value = -30 months = 12 }
+	New_CNP_affect_us = { value = -80 days = 360 }
+	New_Empire_refused_us = { value = -80 months = 12 min_trust = -80 decay = 1 }
+	New_Clique_refused_us = { value = -80 months = 12 min_trust = -80 decay = 1 }
+	New_Union_refused_us = { value = -80 months = 12 min_trust = -80 decay = 1 }
+}

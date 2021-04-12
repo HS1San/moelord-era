@@ -1,0 +1,1306 @@
+equipments = {
+
+	rifle_equipment = {
+		year = 1900
+
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		active = yes
+
+		reliability = 0.7
+		maximum_speed = 3
+		hardness = 0
+
+		defense = 4.5
+		breakthrough = 5.5
+
+		soft_attack = 4
+		hard_attack = 1
+		ap_attack = 3
+		air_attack = 0
+
+		lend_lease_cost = 1
+		
+		build_cost_ic = 0.4
+		resources = {
+			steel = 1
+		}
+		
+	}
+	rifle_equipment_0 = {
+		year = 1900
+
+		archetype = rifle_equipment
+		priority = 05
+		visual_level = 0
+	}
+	rifle_equipment_1 = {
+		year = 1924
+
+		archetype = rifle_equipment
+		parent = rifle_equipment_0
+		priority = 10
+		visual_level = 2
+
+		reliability = 0.75
+		maximum_speed = 3
+
+		defense = 6
+		breakthrough = 7
+
+		soft_attack = 5.5
+		hard_attack = 1
+		ap_attack = 3
+
+		build_cost_ic = 0.55
+		resources = {
+			steel = 2
+		}
+	}
+	rifle_equipment_2 = {
+		year = 1930
+
+		archetype = rifle_equipment
+		parent = rifle_equipment_1
+		priority = 10
+		visual_level = 3
+
+		reliability = 0.75
+		maximum_speed = 3
+
+		defense = 12.5
+		breakthrough = 13.5
+
+		soft_attack = 12
+		hard_attack = 4
+		ap_attack = 3
+
+		build_cost_ic = 0.67
+		resources = {
+			steel = 3
+		}
+	}
+
+	carbine_equipment = {
+		year = 1918
+
+		is_archetype = yes
+		picture = archetype_infantry_equipment
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+
+		active = yes
+
+		interface_category = interface_category_land
+
+		reliability = 0.95
+		maximum_speed = 4
+
+		defense = 7
+		breakthrough = 8
+
+		soft_attack = 5
+		hard_attack = 1
+		ap_attack = 3
+
+		lend_lease_cost = 1
+		
+		build_cost_ic = 0.52
+		resources = {
+			steel = 2
+		}
+		
+	}
+	carbine_equipment_0 = {
+		year = 1918
+
+		archetype = carbine_equipment
+		priority = 05
+	}
+
+	lmg_equipment = {
+		year = 1924
+
+		is_archetype = yes
+		picture = archetype_infantry_equipment
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+
+		active = yes
+
+		interface_category = interface_category_land
+
+		reliability = 0.65
+		maximum_speed = 2
+
+		defense = 10.5
+		breakthrough = 12
+
+		soft_attack = 10
+		hard_attack = 3.5
+		ap_attack = 3
+
+		lend_lease_cost = 1
+		
+		build_cost_ic = 0.7
+		resources = {
+			steel = 3
+		}
+		
+	}
+	lmg_equipment_0 = {
+		year = 1924
+
+		archetype = lmg_equipment
+		priority = 07
+	}
+
+	support_equipment = {
+		year = 1900
+
+		is_archetype = yes
+		picture = archetype_support_equipment
+		is_buildable = no
+		type = {
+			infantry
+			motorized
+		}
+		group_by = archetype
+
+		active = yes
+		
+		interface_category = interface_category_land
+
+		reliability = 0.8
+
+		lend_lease_cost = 1
+
+		build_cost_ic = 3.75
+		resources = {
+			aluminium = 1
+			steel = 2
+		}
+	}
+	support_equipment_0 = {
+		year = 1900
+
+		archetype = support_equipment
+		priority = 20	
+	}
+
+	gw_artillery_equipment = {
+		year = 1918
+
+		is_archetype = yes
+		type = {
+			artillery
+			motorized
+		}
+		group_by = archetype
+		interface_category = interface_category_land
+
+		reliability = 0.8
+
+		defense = 6
+		breakthrough = 2
+		hardness = 0
+		armor_value = 0
+
+		soft_attack = 15
+		hard_attack = 2
+		ap_attack = 5
+		air_attack = 0
+		lend_lease_cost = 4
+
+		build_cost_ic = 4
+		resources = {
+			steel = 1
+		}
+	}
+	gw_artillery_equipment_0 = {
+		year = 1918
+
+		archetype = gw_artillery_equipment
+		priority = 35
+	}
+
+	cannon_equipment = {
+		year = 1924
+
+		is_archetype = yes
+		picture = archetype_artillery_equipment
+		type = {
+			artillery
+			infantry
+		}
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		reliability = 0.8
+
+		defense = 4
+		breakthrough = 0
+		hardness = 0
+		armor_value = 0
+
+		soft_attack = 4
+		hard_attack = 15
+		ap_attack = 35
+		air_attack = 0
+
+		lend_lease_cost = 3
+				
+		build_cost_ic = 8
+		resources = {
+			tungsten = 2
+			steel = 2
+		}
+	}
+	cannon_equipment_1 = {
+		year = 1924
+
+		archetype = cannon_equipment
+		priority = 90
+		visual_level = 0
+	}
+	cannon_equipment_2 = {
+		year = 1926
+
+		archetype = cannon_equipment
+		parent = cannon_equipment_1
+		priority = 90
+		visual_level = 1
+
+		hard_attack = 22
+		ap_attack = 56
+		
+		build_cost_ic = 10
+		resources = {
+			tungsten = 2
+			steel = 2
+		}
+	}
+	cannon_equipment_3 = {
+		year = 1928
+
+		archetype = cannon_equipment
+		parent = cannon_equipment_2
+		priority = 90
+		visual_level = 2
+
+		hard_attack = 30
+		ap_attack = 88
+
+		build_cost_ic = 12
+		resources = {
+			tungsten = 2
+			steel = 3
+		}
+	}
+
+	howitzer_equipment = {
+		year = 1924
+
+		is_archetype = yes
+		picture = archetype_artillery_equipment
+		type = {
+			artillery
+			infantry
+		}
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		reliability = 0.8
+
+		defense = 10
+		breakthrough = 6
+		hardness = 0
+		armor_value = 0
+
+		soft_attack = 25
+		hard_attack = 2
+		ap_attack = 5
+		air_attack = 0
+
+		lend_lease_cost = 8
+
+		build_cost_ic = 3
+		resources = {
+			tungsten = 1
+			steel = 2
+		}
+	}
+	howitzer_equipment_1 = {
+		year = 1924
+
+		archetype = howitzer_equipment
+		priority = 50
+		visual_level = 0
+	}
+	howitzer_equipment_2 = {
+		year = 1926
+
+		archetype = howitzer_equipment
+		parent = howitzer_equipment_1
+		priority = 50
+		visual_level = 1
+
+		defense = 15
+		breakthrough = 7
+		soft_attack = 30
+		
+		build_cost_ic = 7
+		resources = {
+			tungsten = 1
+			steel = 2
+		}
+	}
+	howitzer_equipment_3 = {
+		year = 1928
+
+		archetype = howitzer_equipment
+		parent = howitzer_equipment_2
+		priority = 50
+		visual_level = 2
+		
+		defense = 18
+		breakthrough = 8
+		soft_attack = 34
+		
+		build_cost_ic = 8
+		resources = {
+			tungsten = 1
+			steel = 3
+		}
+	}
+
+	mortar_equipment = {
+		year = 1924
+
+		is_archetype = yes
+		picture = archetype_artillery_equipment
+		type = {
+			artillery
+			infantry
+		}
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		reliability = 0.8
+
+		defense = 4
+		breakthrough = 4
+		hardness = 0
+		armor_value = 0
+
+		soft_attack = 36
+		hard_attack = 0.5
+		ap_attack = 3
+		air_attack = 0
+
+		lend_lease_cost = 3
+
+		build_cost_ic = 7
+		resources = {
+			steel = 3
+		}
+	}
+	mortar_equipment_1 = {
+		year = 1924
+
+		archetype = mortar_equipment
+		priority = 50
+		visual_level = 0
+	}
+	mortar_equipment_2 = {
+		year = 1926
+
+		archetype = mortar_equipment
+		parent = mortar_equipment_1
+		priority = 50
+		visual_level = 1
+
+		defense = 4
+		breakthrough = 4
+		soft_attack = 44
+		
+		build_cost_ic = 8
+		resources = {
+			tungsten = 1
+			steel = 3
+		}
+	}
+	mortar_equipment_3 = {
+		year = 1928
+
+		archetype = mortar_equipment
+		parent = mortar_equipment_2
+		priority = 50
+		visual_level = 2
+		
+		defense = 4
+		breakthrough = 4
+		soft_attack = 52
+		
+		build_cost_ic = 9
+		resources = {
+			tungsten = 1
+			steel = 4
+		}
+	}
+
+	motorized_equipment = {
+		year = 1900
+
+		is_archetype = yes
+		picture = archetype_motorized_equipment
+		is_buildable = no
+		type = motorized
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		maximum_speed = 12
+		reliability = 0.8
+		hardness = 0.1
+
+		lend_lease_cost = 5
+
+		build_cost_ic = 2.5
+		resources = {
+			#oil = 1
+			rubber = 1
+			steel = 1
+		}
+		fuel_consumption = 1
+	}
+	motorized_equipment_0 = {
+		year = 1900
+
+		archetype = motorized_equipment
+		priority = 30
+	}
+
+	tankette_equipment = {
+		year = 1918
+
+		is_archetype = yes
+		is_buildable = no
+		is_convertable = yes
+		picture = archetype_light_tank_equipment
+		type = armor
+		group_by = archetype
+
+		interface_category = interface_category_armor
+
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_gun_upgrade
+		}
+
+		maximum_speed = 12
+		reliability = 0.8
+
+		defense = 4
+		breakthrough = 26
+		hardness = 0.75
+		armor_value = 10
+
+		soft_attack = 13
+		hard_attack = 4
+		ap_attack = 7
+		air_attack = 0
+
+		lend_lease_cost = 10
+
+		build_cost_ic = 9
+		resources = {
+			#oil = 1
+			steel = 2
+		}
+		fuel_consumption = 1
+	}
+	tankette_equipment_0 = {
+		year = 1918
+
+		archetype = tankette_equipment
+		priority = 5
+		visual_level = 0
+	}
+
+	light_tank_equipment = {
+		year = 1918
+
+		is_archetype = yes
+		is_convertable = yes
+		picture = archetype_light_tank_equipment
+		is_buildable = no
+		is_convertable = yes
+		type = armor
+		group_by = archetype
+
+		interface_category = interface_category_armor
+
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_gun_upgrade
+		}
+
+		maximum_speed = 6
+		reliability = 0.7
+
+		defense = 5
+		breakthrough = 36
+		hardness = 0.8
+		armor_value = 25
+
+		soft_attack = 19
+		hard_attack = 14
+		ap_attack = 40
+		air_attack = 0
+
+		lend_lease_cost = 12
+
+		build_cost_ic = 18
+		resources = {
+			#oil = 1
+			tungsten = 2
+			steel = 2
+		}
+		fuel_consumption = 2
+	}
+	light_tank_equipment_0 = {
+		year = 1918
+
+		archetype = light_tank_equipment
+		priority = 50
+		visual_level = 0
+		is_convertable = yes
+	}
+	medium_tank_equipment = {
+		year = 1918
+
+		is_archetype = yes
+		is_convertable = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		is_convertable = yes
+		type = armor
+		group_by = archetype
+		
+		interface_category = interface_category_armor
+		
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_gun_upgrade
+		}
+
+		maximum_speed = 4
+		reliability = 0.6
+
+		defense = 8
+		breakthrough = 52
+		hardness = 0.85
+		armor_value = 40
+
+		soft_attack = 27
+		hard_attack = 30
+		ap_attack = 64
+		air_attack = 0
+
+		lend_lease_cost = 14
+		
+		build_cost_ic = 30
+		resources = {
+			#oil = 1
+			tungsten = 3
+			steel = 3
+		}
+		fuel_consumption = 1
+	}
+	medium_tank_equipment_0 = {
+		year = 1918
+
+		archetype = medium_tank_equipment
+		priority = 90
+		visual_level = 0
+		is_convertable = yes
+	}
+	heavy_tank_equipment = {
+		year = 1918
+
+		is_archetype = yes
+		is_convertable = yes
+		picture = archetype_heavy_tank_equipment
+		is_buildable = no
+		is_convertable = yes
+		type = armor
+		group_by = archetype
+		
+		interface_category = interface_category_armor
+		
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_gun_upgrade
+		}
+
+		maximum_speed = 3.5
+		reliability = 0.5
+
+		defense = 10
+		breakthrough = 67
+		hardness = 0.9
+		armor_value = 70
+
+		soft_attack = 35
+		hard_attack = 56
+		ap_attack = 112
+		air_attack = 0
+
+		lend_lease_cost = 15
+		
+		build_cost_ic = 80
+		resources = {
+			#oil = 2
+			steel = 3
+			chromium = 4
+		}
+		fuel_consumption = 1
+	}
+	heavy_tank_equipment_0 = {
+		year = 1918
+
+		archetype = heavy_tank_equipment		
+		priority = 130
+		visual_level = 0
+		is_convertable = yes
+	}
+
+	torpedo_boat_equipment = {
+		year = 1918
+
+		is_archetype = yes
+		is_buildable = no
+		type = screen_ship
+
+		interface_category = interface_category_screen_ships
+
+		upgrades = {
+			ship_torpedo_upgrade
+			destroyer_engine_upgrade
+			ship_gun_upgrade
+			ship_anti_air_upgrade
+		}
+
+		lg_armor_piercing = 0.5
+		lg_attack = 0.5
+		torpedo_attack = 1
+		sub_attack = 1
+		anti_air_attack = 0.25
+
+		armor_value = 0
+
+		surface_detection = 10
+		sub_detection = 10
+		surface_visibility = 4
+		naval_speed = 40
+		reliability = 0.6
+
+		naval_range = 400
+		max_strength = 20
+
+		build_cost_ic = 400
+		manpower = 120
+		resources = {
+			steel = 1
+		}
+		fuel_consumption = 2
+	}
+	torpedo_boat_equipment_0 = {
+		year = 1918
+
+		archetype = torpedo_boat_equipment
+		priority = 40
+	}
+
+	convoy_equipment = {
+		year = 1900
+
+		is_archetype = yes
+		type = convoy
+		picture = archetype_convoy		
+		group_by = archetype
+		sprite = convoy
+
+		interface_category = interface_category_other_ships
+
+		surface_detection = 5
+		sub_detection = 5
+		reliability = 0.8
+		surface_visibility = 10
+		torpedo_attack = 0.5 #Changed from 0 to 0.5
+		lg_attack = 0.5
+		lg_armor_piercing = 0.5
+		naval_speed = 12
+		max_strength = 30
+		max_organisation = 30
+		anti_air_attack = 0.5
+
+		lend_lease_cost = 0
+		offensive_weapons = no
+
+		build_cost_ic = 70
+		resources = {
+			#oil = 1
+			steel = 1
+		}
+	}
+	convoy_equipment_0 = {
+		year = 1900
+
+		active = yes
+
+		archetype = convoy_equipment
+		priority = 10
+	}
+
+	corvette_equipment = {
+		year = 1918
+
+		is_archetype = yes
+		is_buildable = no
+		type = screen_ship
+
+		interface_category = interface_category_screen_ships
+
+		upgrades = {
+			ship_torpedo_upgrade
+			destroyer_engine_upgrade
+			ship_ASW_upgrade
+			ship_anti_air_upgrade
+		}
+
+		lg_armor_piercing = 1
+		lg_attack = 1
+		torpedo_attack = 3
+		sub_attack = 6
+		anti_air_attack = 1.5
+
+		armor_value = 0
+
+		surface_detection = 20
+		sub_detection = 50
+		surface_visibility = 10
+		naval_speed = 33
+		reliability = 0.80
+
+		naval_range = 1500
+		max_strength = 25
+
+		build_cost_ic = 1800
+		manpower = 250
+		resources = {
+			#oil = 1
+			steel = 2
+		}
+		fuel_consumption = 5
+	}
+	corvette_equipment_0 = {
+		year = 1918
+
+		archetype = corvette_equipment
+		priority = 20
+	}
+
+	cruiser_equipment = {
+		year = 1918
+
+		is_archetype = yes
+		is_buildable = no
+		type = capital_ship
+
+		upgrades = {
+			ship_reliability_upgrade
+			ship_engine_upgrade
+			ship_gun_upgrade
+			ship_anti_air_upgrade
+		}
+
+		interface_category = interface_category_screen_ships
+
+		lg_armor_piercing = 5.5
+		lg_attack = 7
+		torpedo_attack = 5
+		sub_attack = 2
+		anti_air_attack = 3
+
+		armor_value = 5
+
+		surface_detection = 15
+		sub_detection = 20
+		surface_visibility = 15
+		naval_speed = 28
+		reliability = 0.8
+
+		naval_range = 2400
+		max_strength = 100
+
+		build_cost_ic = 6000
+		manpower = 600
+		resources = {
+			#oil = 1
+			steel = 2
+		}
+		fuel_consumption = 20
+	}
+	cruiser_equipment_0 = {
+		year = 1918
+
+		archetype = cruiser_equipment
+		priority = 30
+	}
+
+	seaplane_tender_equipment = {
+		year = 1918
+
+		is_archetype = yes
+		is_buildable = no
+		type = carrier
+		sprite = carrier
+		group_by = archetype
+		
+		interface_category = interface_category_capital_ships
+		
+		upgrades = {
+			ship_deckspace_upgrade
+			carrier_armor_upgrade
+			ship_engine_upgrade
+			ship_reliability_upgrade			
+		}
+		offensive_weapons = no
+
+		lg_armor_piercing = 0
+		lg_attack = 0.5
+		torpedo_attack = 0
+		carrier_size = 22
+
+		anti_air_attack = 5
+
+		armor_value = 5
+
+		surface_detection = 5
+		sub_detection = 1
+		surface_visibility = 22
+		naval_speed = 21
+		reliability = 0.65
+
+		naval_range = 2000
+		max_strength = 150
+
+		build_cost_ic = 2000
+		manpower = 7600
+		resources = {
+			#oil = 1
+			steel = 3
+			chromium = 1
+		}
+		fuel_consumption = 10
+	}
+	seaplane_tender_equipment_0 = {
+		year = 1918
+
+		archetype = seaplane_tender_equipment
+		priority = 100
+	}
+
+	submarine_equipment = {
+		year = 1918
+
+		is_archetype = yes
+		is_buildable = no
+		type = submarine
+		group_by = archetype
+
+		interface_category = interface_category_other_ships
+
+		upgrades = {
+			ship_reliability_upgrade
+			sub_engine_upgrade
+			sub_stealth_upgrade
+			sub_torpedo_upgrade
+		}
+
+		torpedo_attack = 10
+
+		anti_air_attack = 0.5
+
+		surface_detection = 30
+		sub_detection = 0
+		surface_visibility = 1
+		sub_visibility = 30
+		naval_speed = 14
+		reliability = 0.60
+
+		naval_range = 2500
+		max_strength = 10
+
+		build_cost_ic = 450
+		manpower = 200
+		resources = {
+			#oil = 1
+			steel = 1
+		}
+		fuel_consumption = 1
+	}
+	submarine_equipment_0 = {
+		year = 1918
+
+		archetype = submarine_equipment
+		priority = 80
+	}
+
+	battleship_equipment = { 
+		year = 1918
+
+		is_archetype = yes
+		is_buildable = no
+		type = capital_ship
+		group_by = archetype
+
+		interface_category = interface_category_capital_ships
+
+		upgrades = {
+			ship_reliability_upgrade
+			ship_engine_upgrade
+			ship_armor_upgrade
+			ship_gun_upgrade
+		}
+
+		hg_armor_piercing = 31
+		hg_attack = 18
+		lg_armor_piercing = 5.5
+		lg_attack = 4
+
+		anti_air_attack = 4
+
+		armor_value = 26
+
+		surface_detection = 12
+		sub_detection = 5
+		surface_visibility = 30
+		naval_speed = 20
+		reliability = 0.80
+
+		naval_range = 3000
+		max_strength = 350
+
+		build_cost_ic = 9600
+		manpower = 6000
+		resources = {
+			#oil = 1
+			steel = 3
+			chromium = 1
+		}
+		fuel_consumption = 50
+	}
+	battleship_equipment_0 = {
+		year = 1918
+
+		archetype = battleship_equipment
+		priority = 60
+	}
+
+	fighter_equipment = {
+		year = 1918
+
+		is_archetype = yes
+		is_buildable = no
+		is_convertable = yes
+		picture = archetype_fighter_equipment
+		type = {
+			fighter
+			interceptor
+		}
+		group_by = archetype
+		sprite = medium_plane
+		air_map_icon_frame = 1
+
+		interface_category = interface_category_air
+
+		interface_overview_category_index = 1
+
+		upgrades = {
+			plane_gun_upgrade
+			plane_range_upgrade
+			plane_engine_upgrade
+			plane_reliability_upgrade
+		}
+
+		air_superiority = 1
+		reliability = 0.8
+
+		air_range = 700
+		maximum_speed = 500
+		air_agility = 50
+		air_attack = 18
+		air_defence = 10
+
+		naval_strike_attack = 2
+		naval_strike_targetting = 10
+
+		lend_lease_cost = 8
+		
+		build_cost_ic = 25
+		manpower = 20
+		resources = {
+			#oil = 1
+			aluminium = 2
+			rubber = 1
+		}
+		fuel_consumption = 0.2
+	}
+	fighter_equipment_0 = {
+		year = 1918
+
+		archetype = fighter_equipment
+		priority = 10
+	}
+
+	attacker_equipment = {
+		year = 1918
+
+		is_archetype = yes
+		is_buildable = no
+		is_convertable = yes
+		picture = archetype_CAS_equipment
+		type = {
+			cas
+			fighter
+		}
+		group_by = archetype
+		sprite = light_plane
+		air_map_icon_frame = 2
+
+		interface_category = interface_category_air
+		interface_overview_category_index = 0
+
+		upgrades = {
+			plane_cas_upgrade
+			plane_range_upgrade
+			plane_engine_upgrade
+			plane_reliability_upgrade
+		}
+
+		air_superiority = 1
+		reliability = 0.8
+
+		air_range = 700
+		maximum_speed = 390 
+		air_agility = 35
+		air_attack = 6
+		air_defence = 14
+		air_ground_attack = 10
+
+		naval_strike_attack = 3
+		naval_strike_targetting = 10
+		
+		build_cost_ic = 22
+		manpower = 20
+		resources = {
+			#oil = 1
+			aluminium = 2
+			rubber = 1
+		}
+		fuel_consumption = 0.25
+	}
+	attacker_equipment_0 = {
+		year = 1918
+
+		archetype = attacker_equipment
+		priority = 10
+	}
+
+	bomber_equipment = {
+		year = 1918
+
+		is_archetype = yes
+		is_buildable = no
+		is_convertable = yes
+		picture = archetype_strat_bomber_equipment
+		type = {
+			tactical_bomber
+		}
+		group_by = archetype
+		sprite = heavy_plane
+		air_map_icon_frame = 6
+
+		interface_category = interface_category_air
+		interface_overview_category_index = 4
+		
+		upgrades = {
+			plane_tac_bomb_upgrade
+			plane_range_upgrade
+			plane_engine_upgrade
+			plane_reliability_upgrade
+		}
+
+		air_superiority = 1
+		reliability = 0.8
+
+		air_range = 1400
+		maximum_speed = 250
+		air_agility = 16
+		air_attack = 5
+		air_defence = 15
+		air_bombing = 10
+		air_ground_attack = 3
+
+		naval_strike_attack = 4
+		naval_strike_targetting = 6
+
+		lend_lease_cost = 10
+
+		build_cost_ic = 35
+		manpower = 40
+		resources = {
+			#oil = 1
+			aluminium = 2
+			rubber = 1
+		}
+		fuel_consumption = 0.75
+	}
+	bomber_equipment_0 = {
+		year = 1928
+
+		archetype = bomber_equipment
+		priority = 10
+	}
+
+	seaplane_equipment = {
+		year = 1918
+
+		is_archetype = yes
+		is_convertable = yes
+		picture = archetype_heavy_fighter_equipment
+		is_buildable = no
+		type = naval_bomber
+		group_by = archetype
+		sprite = light_plane
+		carrier_capable = yes
+		default_carrier_composition_weight = 1
+		air_map_icon_frame = 3
+		
+		interface_category = interface_category_air
+
+		interface_overview_category_index = 2
+
+		upgrades = {
+			cv_plane_naval_upgrade
+			cv_plane_range_upgrade
+			plane_engine_upgrade
+			plane_reliability_upgrade
+		}
+
+		air_superiority = 1
+		reliability = 0.8
+
+		air_range = 680
+		maximum_speed =	207
+		air_agility = 30
+		air_attack = 6
+		air_defence = 13
+
+		naval_strike_attack = 15
+		naval_strike_targetting = 7.5
+		
+		build_cost_ic = 24
+		manpower = 20
+		resources = {
+			#oil = 1
+			aluminium = 2
+			rubber = 1
+		}
+		fuel_consumption = 0.2
+	}
+	seaplane_equipment_0 = {
+		year = 1918
+
+		archetype = seaplane_equipment
+		carrier_capable = yes
+		priority = 70
+	}
+
+	recon_plane_equipment = {
+		year = 1918
+
+		is_archetype = yes
+		is_buildable = no
+		is_convertable = yes
+		picture = archetype_fighter_equipment
+		type = {
+			cas
+			fighter
+		}
+		group_by = archetype
+		sprite = medium_plane
+		air_map_icon_frame = 1
+
+		interface_category = interface_category_air
+
+		interface_overview_category_index = 0
+
+		upgrades = {
+			plane_cas_upgrade
+			plane_range_upgrade
+			plane_engine_upgrade
+			plane_reliability_upgrade
+		}
+
+		air_superiority = 1
+		reliability = 0.8
+
+		air_range = 520
+		maximum_speed = 250
+		air_agility = 30
+		air_attack = 4
+		air_defence = 2
+		air_ground_attack = 1
+
+		naval_strike_attack = 1
+		naval_strike_targetting = 5
+
+		lend_lease_cost = 5
+		
+		build_cost_ic = 20
+		manpower = 20
+		resources = {
+			#oil = 1
+			rubber = 1
+		}
+		fuel_consumption = 0.15
+	}
+	recon_plane_equipment_0 = {
+		year = 1918
+		archetype = recon_plane_equipment
+		priority = 40
+	}
+}

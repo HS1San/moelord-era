@@ -1,0 +1,17 @@
+can_lose_unity = {
+	has_stability > 60
+	OR = {
+		has_war = no
+		AND = {
+			has_war = yes
+			surrender_progress < 0.1
+		}
+	}
+}
+
+can_lose_democracy_support = {
+	Radical_Leftist < 0.18
+	Radical_Rightist < 0.18
+	Moderate_Leftist > 0.32
+	Moderate_Rightist > 0.32
+}

@@ -1,0 +1,134 @@
+armor_generic = {
+	roles = { armor }
+	upgrade_prio = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { has_tech = tankette_equipment }
+		}
+		modifier = {
+			factor = 5
+			num_of_military_factories > 14
+		}
+		modifier = {
+			factor = 2
+			num_of_military_factories > 14
+			has_tech = light_tank_equipment
+		}
+		modifier = {
+			factor = 2
+			num_of_military_factories > 14
+			has_tech = medium_tank_equipment
+		}
+	}
+	match_to_count = 0.5
+
+	LIGHT_ARMOR_TEMPLATE = {
+		upgrade_prio = {
+			factor = 10
+		}
+		production_prio = {
+			factor = 10
+			modifier = {
+				factor = 0
+				num_of_military_factories > 14
+				has_template_containing_unit = light_tank
+			}
+		}
+
+		can_upgrade_in_field = {
+			has_equipment = { tankette_equipment < 500 }
+		}
+
+		target_width = 18.0
+		width_weight = 1.0
+		column_swap_factor = 0.5
+		reinforce_prio = 1
+
+		target_template = {
+			weight = 0.9
+			match_value = 10000.0
+
+			regiments = {
+				tankette = 5
+				cavalry = 4
+			}
+
+			support = {
+				engineer = 1
+				recon = 1
+				cannon = 1
+			}
+		}
+
+		allowed_types = {
+			tankette
+			light_tank
+			cavalry
+			mounted_infantry
+			engineer
+			recon
+			cannon
+		}
+
+		replace_at_match = 0.4
+		replace_with = MEDIUM_ARMOR_TEMPLATE
+		target_min_match = 0.5
+	}
+	MEDIUM_ARMOR_TEMPLATE = {
+		upgrade_prio = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOT = { has_tech = light_tank_equipment }
+			}
+			modifier = {
+				factor = 10
+				num_of_military_factories > 14
+				NOT = { has_template_containing_unit = light_tank }
+			}
+		}
+		production_prio = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOT = { has_tech = light_tank_equipment }
+			}
+		}
+
+		target_width = 20.0
+		width_weight = 1.5
+		column_swap_factor = 0.5
+		reinforce_prio = 1
+
+		target_template = {
+			weight = 0.9
+			match_value = 10000.0
+
+			regiments = {
+				light_tank = 6
+				cavalry = 4
+			}
+
+			support = {
+				engineer = 1
+				recon = 1
+				logistics_company = 1
+				cannon = 1
+				howitzer = 1
+			}
+		}
+
+		allowed_types = {
+			light_tank
+			cavalry
+			mounted_infantry
+			engineer
+			recon
+			maintenance_company
+			logistics_company
+			cannon
+			howitzer
+		}
+	}
+}

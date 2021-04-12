@@ -1,0 +1,89 @@
+state = {
+	id = 23
+	name = "STATE_23"
+	manpower = 5601000
+	state_category = developed_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 32
+		rubber = 0
+		tungsten = 0
+		steel = 43
+		chromium = 0
+	}
+	history = {
+		owner = CSX
+		add_core_of = CSX
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		victory_points = { 4074 1 }
+		victory_points = { 12344 3 }
+	}
+	provinces = {
+		1180 1519 4074 4174 4538 10367 10421 12078 12344 
+	}
+}
+
+state = {
+	id = 24
+	name = "STATE_24"
+	manpower = 3000000
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 10
+		rubber = 0
+		tungsten = 0
+		steel = 20
+		chromium = 0
+	}
+	history = {
+		owner = CSX
+		add_core_of = CSX
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = { 12432 2 }
+	}
+	provinces = {
+		1027 1203 1438 4469 10480 10507 12300 12432 
+	}
+}
+
+state = {
+	id = 25
+	name = "STATE_25"
+	manpower = 3000000
+	state_category = impoverished_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 10
+		rubber = 0
+		tungsten = 0
+		steel = 20
+		chromium = 0
+	}
+	history = {
+		owner = CSX
+		add_core_of = CSX
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+		}
+		victory_points = { 1575 2 }
+		victory_points = { 7571 1 }
+	}
+	provinces = {
+		1034 1531 1575 4634 7571 
+	}
+}

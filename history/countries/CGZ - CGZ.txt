@@ -1,0 +1,88 @@
+﻿capital = 84
+
+oob = "CGZ_1919"
+
+set_country_flag = SH_WAR
+
+set_technology = {
+	rifle_equipment_0 = 1
+	support_class_equipment = 1
+	animal_combat_training = 1
+	military_police_0 = 1
+}
+
+add_ideas = {
+	limited_conscription
+	limited_exports
+	low_economic_mobilisation
+}
+
+set_convoys = 0
+set_research_slots = 1
+
+set_party_name = { ideology = Centrist long_name = New_party_02_long name = New_party_02 }
+
+set_politics = {
+	ruling_party = Centrist
+	last_election = "1916.6.6"
+	election_frequency = 24
+	elections_allowed = no
+}
+
+set_popularities = {
+    Moderate_Leftist = 0
+    Moderate_Rightist = 0
+    Radical_Rightist = 0
+    Radical_Leftist = 0
+    Centrist = 100
+}
+create_all_leaders = yes
+
+create_country_leader = {
+	name = "Guo Zechen"	# 郭则沉
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
+	expire = "1936.1.1"
+	ideology = Moderate_Leftist_ideology
+	traits = {
+		propaganda_expert
+	}
+}
+create_country_leader = {
+	name = "Wang Boqun"	# 王伯群
+	picture = "gfx/leaders/China/Portrait_China_Wang_Boqun.tga"
+	expire = "1936.1.1"
+	ideology = Moderate_Rightist_ideology
+	traits = {
+		nationalist_symbol
+	}
+}
+create_country_leader = {
+	name = "Qin Tianzhen"	# 秦天真
+	picture = "gfx/leaders/China/Portrait_China_Qin_Tianzhen.tga"
+	expire = "1936.1.1"
+	ideology = Radical_Leftist_ideology
+	traits = {
+		propaganda_expert
+	}
+}
+create_country_leader = {
+	name = "Liu Xianshi"	# 刘显世
+	picture = "gfx/leaders/China/Portrait_China_Liu_Xianshi.tga"
+	expire = "1927.10.14"
+	ideology = Centrist_ideology
+	traits = {
+		our_right_to_survive
+	}
+}
+
+create_field_marshal = {
+	name = "Liu Xianshi"	# 刘显世
+	portrait_path = "gfx/leaders/China/Portrait_China_Liu_Xianshi.tga"
+	traits = { old_guard trait_cautious General_is_a_HoS }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	id = 46
+}

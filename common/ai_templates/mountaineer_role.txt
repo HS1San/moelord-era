@@ -1,0 +1,112 @@
+mountaineer_early = {
+	roles = { mountaineer }
+	upgrade_prio = { factor = 0 }
+	match_to_count = 0.8
+
+	EARLY_MOUNTAINEER_TEMPLATE_1 = {
+		upgrade_prio = { factor = 0 }
+		production_prio = { factor = 0.01 }
+
+		target_width = 16
+		width_weight = 1
+		column_swap_factor = 0.7
+		reinforce_prio = 2
+
+		target_template = {
+			weight = 0.9
+			match_value = 10000.0
+
+			regiments = {
+				mountaineers = 8
+			}
+		}
+		allowed_types = {
+			mountaineers
+		}
+	}
+}
+
+mountaineer_generic = {
+	roles = { mountaineer }
+	upgrade_prio = { factor = 1 }
+	match_to_count = 0.8
+
+	MOUNTAINEER_TEMPLATE = {
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+
+		target_width = 18
+		width_weight = 1
+		column_swap_factor = 0.7
+		reinforce_prio = 2
+
+		target_template = {
+			weight = 0.9
+			match_value = 10000
+
+			regiments = {
+				mountaineers = 9
+			}
+			support = {
+				engineer = 1
+				howitzer = 1
+				cannon = 1
+				logistics_company = 1
+			}
+		}
+		allowed_types = {
+			mountaineers
+			engineer
+			howitzer
+			cannon
+			logistics_company
+			recon
+		}
+	}
+	MOUNTAINEER_TEMPLATE_UPGRADE = {
+		production_prio = {
+			base = 0
+			modifier = {
+				add = 20
+				num_of_military_factories > 24
+			}
+		}
+		upgrade_prio = {
+			base = 0
+			modifier = {
+				add = 20
+				num_of_military_factories > 24
+			}
+		}
+
+		target_width = 20
+		width_weight = 1
+		column_swap_factor = 0.7
+		reinforce_prio = 2
+
+		target_template = {
+			weight = 0.9
+			match_value = 10000
+
+			regiments = {
+				mountaineers = 7
+				howitzer_brigade = 2
+			}
+			support = {
+				engineer = 1
+				howitzer = 1
+				cannon = 1
+				logistics_company = 1
+				recon = 1
+			}
+		}
+		allowed_types = {
+			mountaineers
+			engineer
+			howitzer
+			cannon
+			logistics_company
+			recon
+		}
+	}
+}

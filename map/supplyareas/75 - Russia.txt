@@ -1,0 +1,6 @@
+supply_area={
+	id=75
+	name="SUPPLYAREA_COMMON"
+	value=2
+	states={ 301 304 }
+}

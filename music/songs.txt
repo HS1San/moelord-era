@@ -1,0 +1,453 @@
+
+music_station = "base_music"
+
+music = {
+	song = "maintheme"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+
+# PEACE SONGS ##################
+music = {
+	song = "general_peace_1"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = no
+		}		
+	}	
+}
+
+music = {
+	song = "general_peace_2"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = no
+		}		
+	}	
+}
+
+music = {
+	song = "general_peace_3"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = no
+		}		
+	}
+}
+
+music = {
+	song = "allies_peace_1"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = Moderate_Leftist
+		}		
+	}	
+}
+
+music = {
+	song = "allies_peace_2"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = Moderate_Rightist
+		}		
+	}	
+}
+
+music = {
+	song = "axis_peace_1"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = Radical_Rightist
+		}		
+	}	
+}
+
+music = {
+	song = "axis_peace_2"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = Radical_Rightist
+		}		
+	}	
+}
+
+# WAR SONGS ####################
+
+music = {
+	song = "general_war_1"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = yes
+		}		
+	}	
+}
+
+music = {
+	song = "general_war_2"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = yes
+		}		
+	}	
+}
+
+music = {
+	song = "axis_war_1"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = Radical_Rightist
+		}		
+	}	
+}
+
+music = {
+	song = "axis_war_2"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = Radical_Rightist
+		}		
+	}	
+}
+
+music = {
+	song = "axis_war_3"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = Radical_Rightist
+		}		
+	}	
+}
+
+music = {
+	song = "axis_war_4"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = Radical_Rightist
+		}		
+	}	
+}
+
+music = {
+	song = "allies_war_1"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = Moderate_Leftist
+		}		
+	}	
+}
+
+music = {
+	song = "allies_war_2"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = Moderate_Rightist
+		}		
+	}	
+}
+
+music = {
+	song = "comintern_peace_1"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = Radical_Leftist
+		}		
+	}	
+}
+
+music = {
+	song = "comintern_peace_2"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = Radical_Leftist
+		}		
+	}	
+}
+
+music = {
+	song = "comintern_peace_3"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = Radical_Leftist
+		}		
+	}	
+}
+
+
+music = {
+	song = "comintern_war_1"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = Radical_Leftist
+		}		
+	}	
+}
+
+music = {
+	song = "comintern_war_2"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = Radical_Leftist
+		}		
+	}	
+}
+
+music = {
+	song = "comintern_war_3"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = Radical_Leftist
+		}		
+	}	
+}
+
+music = {
+	song = "NRA_war_1"
+
+	chance = { 
+		modifier={
+			factor = 2
+
+			has_war = yes
+			OR = {
+				has_country_flag = SH_NPC
+				has_country_flag = SH_NRC
+				has_country_flag = SH_NLC
+			}
+		}
+	}
+}
+
+# NEW ANTHEMS ##################
+
+music = {
+	song = "ROC_anthem_1"
+
+	chance = { 
+		modifier={
+			factor = 2
+
+			has_war = no
+			OR = {
+				has_country_flag = SH_NPC
+				has_country_flag = SH_NRC
+				has_country_flag = SH_NLC
+			}
+		}
+	}
+}
+
+music = {
+	song = "ROC_anthem_2"
+
+	chance = { 
+		modifier={
+			factor = 2
+
+			has_war = no
+			OR = {
+				has_country_flag = SH_NPC
+				has_country_flag = SH_NRC
+				has_country_flag = SH_NLC
+			}
+		}
+	}
+}
+
+music = {
+	song = "bey_anthem_1"
+
+	chance = { 
+		modifier={
+			factor = 2
+
+			has_war = no
+			has_country_flag = SH_BYC	
+		}
+	}
+}
+
+music = {
+	song = "fed_anthem_1"
+
+	chance = { 
+		modifier={
+			factor = 2
+
+			has_war = no
+
+			tag = CGD
+			has_country_flag = SH_BYC	
+		}
+	}
+}
+
+music = {
+	song = "monarchy_anthem_1"
+
+	chance = { 
+		modifier={
+			factor = 2
+
+			has_war = no
+
+			OR = {
+				has_country_flag = SH_CEH	
+				has_country_flag = SH_CEM
+			}
+		}
+	}
+}
+
+
+music = {
+	song = "socialist_anthem_1"
+
+	chance = { 
+		modifier={
+			factor = 2
+
+			OR = {
+				has_country_flag = SH_CPC	
+				has_country_flag = SH_ASC
+			}
+		}
+	}
+}
+
+music = {
+	song = "socialist_anthem_2"
+
+	chance = { 
+		modifier={
+			factor = 2
+
+			OR = {
+				has_country_flag = SH_CPC	
+				has_country_flag = SH_ASC
+			}
+		}
+	}
+}
+
+music = {
+	song = "mymotherland_1"
+
+	chance = { 
+		modifier={
+			factor = 2
+		}
+	}
+}
+music = {
+	song = "mymotherland_2"
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "Bey_war_1"
+
+	chance = { 
+		modifier={
+			factor = 2
+			has_war = yes
+			has_country_flag = SH_BYC	
+		}
+	}
+}
+music = {
+	song = "Guangxi"
+
+	chance = { 
+		modifier={
+			factor = 2
+			has_war = yes
+			tag = CGX
+		}
+	}
+}

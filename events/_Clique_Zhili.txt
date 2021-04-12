@@ -1,0 +1,451 @@
+﻿add_namespace = new_Zhili
+
+country_event = {
+	id = new_Zhili.1
+	title = new_Zhili.1.t
+	desc = new_Zhili.1.d
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = yes
+
+	trigger = {
+		has_country_flag = Zhili_Member
+		is_faction_leader = yes
+		has_country_leader = { name = "Feng Guozhang" }	# 冯国璋
+		date > 1919.12.1
+	}
+
+	mean_time_to_happen = {
+		days = 28
+		modifier = { factor = 0.5 date > 1920.1.1 }
+		modifier = { factor = 0.2 date > 1920.2.1 }
+	}
+
+	immediate = {
+		hidden_effect = { kill_country_leader = yes }
+	}
+
+	option = {
+		name = new_Zhili.1.a
+		hidden_effect = {
+			random_other_country = {
+				limit = { has_country_leader = { name = "Cao Kun" } }
+				retire_country_leader = yes
+				random_army_leader = {
+					limit = { has_id = 133 }
+					set_nationality = ROOT
+				}
+			}
+		}
+		ai_chance = {
+			modifier = {
+				factor = 4
+				is_historical_focus_on = yes
+			}
+		}
+		create_country_leader = {
+			name = "Cao Kun"	# 曹锟
+			picture = "gfx/leaders/China/Portrait_China_Cao_Kun.tga"
+			expire = "1936.1.1"
+			ideology = Centrist_ideology
+			traits = { propaganda_expert }
+		}
+		hidden_effect = { every_other_country = { news_event = new_News.3 } }
+	}
+	option = {
+		name = new_Zhili.1.b
+		hidden_effect = {
+			random_other_country = {
+				limit = { has_country_leader = { name = "Li Chun" } }
+				retire_country_leader = yes
+				random_army_leader = {
+					limit = { has_id = 67 }
+					set_nationality = ROOT
+				}
+			}
+		}
+		create_country_leader = {
+			name = "Li Chun"	# 李纯
+			picture = "gfx/leaders/China/Portrait_China_Li_Chun.tga"
+			expire = "1936.1.1"
+			ideology = Centrist_ideology
+			traits = { popular_figurehead }
+		}
+		hidden_effect = { every_other_country = { news_event = new_News.3 } }
+	}
+	option = {
+		name = new_Zhili.1.c
+		hidden_effect = {
+			random_other_country = {
+				limit = { has_country_leader = { name = "Wang Shizhen" } }
+				retire_country_leader = yes
+			}
+			create_field_marshal = {
+				name = "Wang Shizhen"
+				portrait_path = "gfx/leaders/China/Portrait_China_Wang_Shizhen.tga"
+				traits = { trickster war_hero General_is_a_HoS }
+				skill = 4
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 5
+				id = 198
+			}
+		}
+		create_country_leader = {
+			name = "Wang Shizhen"	# 王士珍
+			picture = "gfx/leaders/China/Portrait_China_Wang_Shizhen.tga"
+			expire = "1930.7.1"
+			ideology = Centrist_ideology
+			traits = {}
+		}
+		hidden_effect = { every_other_country = { news_event = new_News.3 } }
+	}
+}
+
+country_event = {
+	id = new_Zhili.2
+	title = new_Zhili.2.t
+	desc = new_Zhili.2.d
+	picture = GFX_report_event_chinese_soldiers_running
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Zhili.2.a
+		random_list = {
+			25 = {
+				CBJ = {
+					news_event = { id = new_News.24 }
+					random_army_leader = {
+						limit = { has_id = 2 }
+						retire = yes
+					}
+				}
+				set_global_flag = Death_of_Xu_Shuzheng
+			}
+			25 = {
+				CBJ = {
+					news_event = { id = new_News.25 }
+					random_army_leader = {
+						limit = { has_id = 2 }
+						retire = yes
+					}
+				}
+				set_global_flag = Death_of_Xu_Shuzheng
+				add_political_power = -100
+				add_opinion_modifier = { target = ROOT modifier = New_contradiction }
+			}
+			25 = {
+				CBJ = {
+					news_event = { id = new_News.26 }
+				}
+				add_war_support = -0.05
+			}
+			25 = {
+				CBJ = {
+					news_event = { id = new_News.27 }
+				}
+				add_stability = -0.05
+				add_opinion_modifier = { target = ROOT modifier = New_contradiction }
+			}
+		}
+	}
+	option = {
+		name = new_Zhili.2.b
+		create_corps_commander = {
+			name = "Feng Yuxiang"
+			portrait_path = "gfx/leaders/China/Portrait_China_Feng_Yuxiang.tga"
+			traits = { career_officer offensive_doctrine organisational_leader trickster }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			id = 109
+		}
+		random_list = {
+			25 = {
+				CBJ = {
+					news_event = { id = new_News.24 }
+					random_army_leader = {
+						limit = { has_id = 2 }
+						retire = yes
+					}
+				}
+				set_global_flag = Death_of_Xu_Shuzheng
+			}
+			75 = {
+				CBJ = {
+					news_event = { id = new_News.27 }
+				}
+				add_political_power = -100
+				add_stability = -0.05
+				add_war_support = -0.05
+				add_opinion_modifier = { target = ROOT modifier = New_contradiction }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = new_Zhili.3
+	title = new_Zhili.3.t
+	desc = new_Zhili.3.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Zhili.3.a
+		set_global_flag = Zhili_Anhui_Alliance
+		every_country = {
+			limit = {
+				OR = {
+					has_country_flag = Anhui_Member
+					has_country_flag = Zhili_Member
+				}
+			}
+			set_country_flag = Beiyang_Member
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+		}
+		dismantle_faction = yes
+		add_ai_strategy = { type = alliance id = FROM value = 200 }
+		add_named_threat = { threat = 10 name = threat.ZAA }
+		random_army_leader = {
+			limit = { has_id = 2 }
+			retire = yes
+		}
+		FROM = {
+			dismantle_faction = yes
+			create_faction = "Beiyang_Clique"
+			add_to_faction = ROOT
+			add_ai_strategy = { type = alliance id = ROOT value = 200 }
+			random_army_leader = {
+				limit = { has_id = 134 }
+				set_nationality = CHN
+			}
+			add_named_threat = { threat = 10 name = threat.ZAA }
+		}
+		CZJ = {
+			if = {
+				limit = { has_idea = Control_Shanghai }
+				remove_ideas = Control_Shanghai
+			}
+		}
+		CJS = {
+			if = {
+				limit = { NOT = { has_idea = Control_Shanghai } }
+				add_ideas = Control_Shanghai
+			}
+		}
+		CHN = {
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Wu Peifu"	# 吴佩孚
+				picture = "gfx/leaders/China/Portrait_China_Wu_Peifu.tga"
+				expire = "1936.1.1"
+				ideology =  Centrist_ideology
+				traits = {}
+			}
+			random_army_leader = {
+				limit = { has_id = 53 }
+				if = {
+					limit = { is_field_marshal = yes }
+					demote_leader = yes
+				}
+				set_nationality = CBJ
+			}
+		}
+		every_other_country = {
+			limit = {
+				is_in_faction = no
+				has_country_flag = Beiyang_Member
+			}
+			country_event = new_Zhili.5
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 175 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 150 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 125 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 100 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 75 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 50 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 25 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -25 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -50 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -75 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -100 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -125 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -150 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -175 } }
+			}
+		}
+	}
+	option = {
+		name = new_Zhili.3.b
+		FROM = {
+			add_opinion_modifier = { target = ROOT modifier = New_Clique_refused_us }
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = ROOT
+				}
+			}
+			country_event = new_Zhili.4
+		}
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 175 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 150 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 125 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 100 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 75 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 50 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 25 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -25 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -50 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -75 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -100 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -125 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -150 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -175 } }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = new_Zhili.4
+	title = new_Zhili.4.t
+	desc = new_Zhili.4.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Zhili.4.a
+		set_global_flag = Zhili_Anhui_Broken
+		create_wargoal = { type = annex_everything target = FROM }
+		add_named_threat = { threat = 10 name = threat.ZAW }
+		random_other_country = {
+			limit = {
+				is_faction_leader = yes
+				has_country_flag = Anhui_Member
+			}
+			add_named_threat = { threat = 10 name = threat.ZAW }
+		}
+	}
+}
+
+country_event = {
+	id = new_Zhili.5
+	title = new_Zhili.5.t
+	desc = new_Zhili.5.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Zhili.5.a
+		random_other_country = {
+			limit = {
+				is_faction_leader = yes
+				has_country_flag = Beiyang_Member
+			}
+			add_to_faction = ROOT
+			add_ai_strategy = { type = alliance id = ROOT value = 200 }
+			ROOT = { add_ai_strategy = { type = alliance id = PREV value = 200 } }
+		}
+	}
+	option = {
+		name = new_Zhili.5.b
+		clr_country_flag = Beiyang_Member
+		CBJ = { add_opinion_modifier = { target = ROOT modifier = New_Clique_refused_us } }
+		CZL = { add_opinion_modifier = { target = ROOT modifier = New_Clique_refused_us } }
+	}
+}

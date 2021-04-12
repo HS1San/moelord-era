@@ -1,0 +1,837 @@
+create_all_leaders = {
+	if = {
+		limit = {
+			OR = {
+				tag = CSH
+				tag = MON
+				tag = CXZ
+				tag = IND
+				tag = JAP
+				tag = KOR
+				tag = INC
+				tag = IND
+				tag = BUR
+				AND = {
+					#has_country_flag = SH_WAR
+					#has_country_flag = SH_PAR
+					is_actual_major = yes
+				}
+			}
+		}
+		set_major = yes
+	}
+	set_variable = { var = relationship_with_britain value = 0 }
+	set_variable = { var = relationship_with_france value = 0 }
+	set_variable = { var = relationship_with_america value = 0 }
+	set_variable = { var = relationship_with_germany value = 0 }
+	set_variable = { var = relationship_with_italy value = 0 }
+	set_variable = { var = relationship_with_russia value = 0 }
+}
+
+create_all_leaders_RCW = {
+	set_major = yes
+}
+
+remove_political_road = {
+	hidden_effect = {
+		clr_country_flag = SH_CEM
+		clr_country_flag = SH_CEH
+		clr_country_flag = SH_BYC
+		clr_country_flag = SH_NPC
+		clr_country_flag = SH_NLC
+		clr_country_flag = SH_NRC
+		clr_country_flag = SH_CPC
+		clr_country_flag = SH_ASC
+	}
+}
+
+add_political_road = {
+	hidden_effect = {
+		every_country = {
+			limit = { NOT = { tag = ROOT } }
+			remove_opinion_modifier = { target = ROOT modifier = New_same_road }
+			remove_opinion_modifier = { target = ROOT modifier = New_similar_road }
+			remove_opinion_modifier = { target = ROOT modifier = New_different_road }
+			ROOT = {
+				remove_opinion_modifier = { target = PREV modifier = New_same_road }
+				remove_opinion_modifier = { target = PREV modifier = New_similar_road }
+				remove_opinion_modifier = { target = PREV modifier = New_different_road }
+			}
+		}
+		if = {
+			limit = { has_country_flag = SH_CEM }
+			every_country = {
+				limit = {
+					has_country_flag = SH_CEM
+					NOT = { tag = ROOT }
+				}
+				add_opinion_modifier = { target = ROOT modifier = New_same_road }
+				reverse_add_opinion_modifier = { target = ROOT modifier = New_same_road }
+			}
+			every_country = {
+				limit = {
+					has_country_flag = SH_CEH
+					NOT = { tag = ROOT }
+				}
+				add_opinion_modifier = { target = ROOT modifier = New_similar_road }
+				reverse_add_opinion_modifier = { target = ROOT modifier = New_similar_road }
+			}
+			every_country = {
+				limit = {
+					NOT = {
+						tag = ROOT
+						has_country_flag = SH_CEM
+						has_country_flag = SH_CEH
+					}
+				}
+				add_opinion_modifier = { target = ROOT modifier = New_different_road }
+				reverse_add_opinion_modifier = { target = ROOT modifier = New_different_road }
+			}
+		}
+		if = {
+			limit = { has_country_flag = SH_CEH }
+			every_country = {
+				limit = {
+					has_country_flag = SH_CEH
+					NOT = { tag = ROOT }
+				}
+				add_opinion_modifier = { target = ROOT modifier = New_same_road }
+				reverse_add_opinion_modifier = { target = ROOT modifier = New_same_road }
+			}
+			every_country = {
+				limit = {
+					has_country_flag = SH_CEM
+					NOT = { tag = ROOT }
+				}
+				add_opinion_modifier = { target = ROOT modifier = New_similar_road }
+				reverse_add_opinion_modifier = { target = ROOT modifier = New_similar_road }
+			}
+			every_country = {
+				limit = {
+					NOT = {
+						tag = ROOT
+						has_country_flag = SH_CEH
+						has_country_flag = SH_CEM
+					}
+				}
+				add_opinion_modifier = { target = ROOT modifier = New_different_road }
+				reverse_add_opinion_modifier = { target = ROOT modifier = New_different_road }
+			}
+		}
+		if = {
+			limit = { has_country_flag = SH_BYC }
+			every_country = {
+				limit = {
+					has_country_flag = SH_BYC
+					NOT = { tag = ROOT }
+				}
+				add_opinion_modifier = { target = ROOT modifier = New_same_road }
+				reverse_add_opinion_modifier = { target = ROOT modifier = New_same_road }
+			}
+			every_country = {
+				limit = {
+					OR = {
+						has_country_flag = SH_NPC
+						has_country_flag = SH_NLC
+						has_country_flag = SH_NRC
+					}
+					NOT = { tag = ROOT }
+				}
+				add_opinion_modifier = { target = ROOT modifier = New_similar_road }
+				reverse_add_opinion_modifier = { target = ROOT modifier = New_similar_road }
+			}
+			every_country = {
+				limit = {
+					NOT = {
+						tag = ROOT
+						has_country_flag = SH_BYC
+						has_country_flag = SH_NPC
+						has_country_flag = SH_NLC
+						has_country_flag = SH_NRC
+					}
+				}
+				add_opinion_modifier = { target = ROOT modifier = New_different_road }
+				reverse_add_opinion_modifier = { target = ROOT modifier = New_different_road }
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = SH_NPC
+					has_country_flag = SH_NLC
+					has_country_flag = SH_NRC
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						has_country_flag = SH_NPC
+						has_country_flag = SH_NLC
+						has_country_flag = SH_NRC
+					}
+					NOT = { tag = ROOT }
+				}
+				add_opinion_modifier = { target = ROOT modifier = New_same_road }
+				reverse_add_opinion_modifier = { target = ROOT modifier = New_same_road }
+			}
+			every_country = {
+				limit = {
+					has_country_flag = SH_BYC
+					NOT = { tag = ROOT }
+				}
+				add_opinion_modifier = { target = ROOT modifier = New_similar_road }
+				reverse_add_opinion_modifier = { target = ROOT modifier = New_similar_road }
+			}
+			every_country = {
+				limit = {
+					NOT = {
+						tag = ROOT
+						has_country_flag = SH_NPC
+						has_country_flag = SH_NLC
+						has_country_flag = SH_NRC
+						has_country_flag = SH_BYC
+					}
+				}
+				add_opinion_modifier = { target = ROOT modifier = New_different_road }
+				reverse_add_opinion_modifier = { target = ROOT modifier = New_different_road }
+			}
+		}
+		if = {
+			limit = { has_country_flag = SH_CPC }
+			every_country = {
+				limit = {
+					has_country_flag = SH_CPC
+					NOT = { tag = ROOT }
+				}
+				add_opinion_modifier = { target = ROOT modifier = New_same_road }
+				reverse_add_opinion_modifier = { target = ROOT modifier = New_same_road }
+			}
+			every_country = {
+				limit = {
+					has_country_flag = SH_ASC
+					NOT = { tag = ROOT }
+				}
+				add_opinion_modifier = { target = ROOT modifier = New_similar_road }
+				reverse_add_opinion_modifier = { target = ROOT modifier = New_similar_road }
+			}
+			every_country = {
+				limit = {
+					NOT = {
+						tag = ROOT
+						has_country_flag = SH_CPC
+						has_country_flag = SH_ASC
+					}
+				}
+				add_opinion_modifier = { target = ROOT modifier = New_different_road }
+				reverse_add_opinion_modifier = { target = ROOT modifier = New_different_road }
+			}
+		}
+		if = {
+			limit = { has_country_flag = SH_ASC }
+			every_country = {
+				limit = {
+					has_country_flag = SH_ASC
+					NOT = { tag = ROOT }
+				}
+				add_opinion_modifier = { target = ROOT modifier = New_same_road }
+				reverse_add_opinion_modifier = { target = ROOT modifier = New_same_road }
+			}
+			every_country = {
+				limit = {
+					has_country_flag = SH_CPC
+					NOT = { tag = ROOT }
+				}
+				add_opinion_modifier = { target = ROOT modifier = New_similar_road }
+				reverse_add_opinion_modifier = { target = ROOT modifier = New_similar_road }
+			}
+			every_country = {
+				limit = {
+					NOT = {
+						tag = ROOT
+						has_country_flag = SH_ASC
+						has_country_flag = SH_CPC
+					}
+				}
+				add_opinion_modifier = { target = ROOT modifier = New_different_road }
+				reverse_add_opinion_modifier = { target = ROOT modifier = New_different_road }
+			}
+		}
+	}
+}
+
+add_politics_election = {
+	custom_effect_tooltip = add_politics_election.tt
+	hidden_effect = {
+		set_country_flag = Ignoring_The_Change
+		if = {
+			limit = { has_government = Radical_Leftist }
+			set_politics = { ruling_party = Radical_Leftist elections_allowed = yes }
+		}
+		if = {
+			limit = { has_government = Radical_Rightist }
+			set_politics = { ruling_party = Radical_Rightist elections_allowed = yes }
+		}
+		if = {
+			limit = { has_government = Moderate_Leftist }
+			set_politics = { ruling_party = Moderate_Leftist elections_allowed = yes }
+		}
+		if = {
+			limit = { has_government = Moderate_Rightist }
+			set_politics = { ruling_party = Moderate_Rightist elections_allowed = yes }
+		}
+		if = {
+			limit = { has_government = Centrist }
+			set_politics = { ruling_party = Centrist elections_allowed = yes }
+		}
+		clr_country_flag = Ignoring_The_Change
+	}
+}
+
+war_taxes_level_up = {
+	if = {
+		limit = { has_idea = War_Taxes_17 }
+		swap_ideas = {
+			remove_idea = War_Taxes_17
+			add_idea = War_Taxes_18
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_16 }
+		swap_ideas = {
+			remove_idea = War_Taxes_16
+			add_idea = War_Taxes_17
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_15 }
+		swap_ideas = {
+			remove_idea = War_Taxes_15
+			add_idea = War_Taxes_16
+		}		
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_14 }
+		swap_ideas = {
+			remove_idea = War_Taxes_14
+			add_idea = War_Taxes_15
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_13 }
+		swap_ideas = {
+			remove_idea = War_Taxes_13
+			add_idea = War_Taxes_14
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_12 }
+		swap_ideas = {
+			remove_idea = War_Taxes_12
+			add_idea = War_Taxes_13
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_11 }
+		swap_ideas = {
+			remove_idea = War_Taxes_11
+			add_idea = War_Taxes_12
+		}		
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_10 }
+		swap_ideas = {
+			remove_idea = War_Taxes_10
+			add_idea = War_Taxes_11
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_9 }
+		swap_ideas = {
+			remove_idea = War_Taxes_9
+			add_idea = War_Taxes_10
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_8 }
+		swap_ideas = {
+			remove_idea = War_Taxes_8
+			add_idea = War_Taxes_9
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_7 }
+		swap_ideas = {
+			remove_idea = War_Taxes_7
+			add_idea = War_Taxes_8
+		}		
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_6 }
+		swap_ideas = {
+			remove_idea = War_Taxes_6
+			add_idea = War_Taxes_7
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_5 }
+		swap_ideas = {
+			remove_idea = War_Taxes_5
+			add_idea = War_Taxes_6
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_4 }
+		swap_ideas = {
+			remove_idea = War_Taxes_4
+			add_idea = War_Taxes_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_3 }
+		swap_ideas = {
+			remove_idea = War_Taxes_3
+			add_idea = War_Taxes_4
+		}		
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_2 }
+		swap_ideas = {
+			remove_idea = War_Taxes_2
+			add_idea = War_Taxes_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_1 }
+		swap_ideas = {
+			remove_idea = War_Taxes_1
+			add_idea = War_Taxes_2
+		}
+	}
+}
+remove_war_taxes = {
+	if = {
+		limit = { has_idea = War_Taxes_1 }
+		remove_ideas = War_Taxes_1
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_2 }
+		remove_ideas = War_Taxes_2
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_3 }
+		remove_ideas = War_Taxes_3
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_4 }
+		remove_ideas = War_Taxes_4
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_5 }
+		remove_ideas = War_Taxes_5
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_6 }
+		remove_ideas = War_Taxes_6
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_7 }
+		remove_ideas = War_Taxes_7
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_8 }
+		remove_ideas = War_Taxes_8
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_9 }
+		remove_ideas = War_Taxes_9
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_10 }
+		remove_ideas = War_Taxes_10
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_11 }
+		remove_ideas = War_Taxes_11
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_12 }
+		remove_ideas = War_Taxes_12
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_13 }
+		remove_ideas = War_Taxes_13
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_14 }
+		remove_ideas = War_Taxes_14
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_15 }
+		remove_ideas = War_Taxes_15
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_16 }
+		remove_ideas = War_Taxes_16
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_17 }
+		remove_ideas = War_Taxes_17
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_18 }
+		remove_ideas = War_Taxes_18
+	}
+}
+war_taxes_level_down = {
+	if = {
+		limit = { has_idea = War_Taxes_2 }
+		swap_ideas = {
+			remove_idea = War_Taxes_2
+			add_idea = War_Taxes_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_3 }
+		swap_ideas = {
+			remove_idea = War_Taxes_3
+			add_idea = War_Taxes_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_4 }
+		swap_ideas = {
+			remove_idea = War_Taxes_4
+			add_idea = War_Taxes_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_5 }
+		swap_ideas = {
+			remove_idea = War_Taxes_5
+			add_idea = War_Taxes_4
+		}		
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_6 }
+		swap_ideas = {
+			remove_idea = War_Taxes_6
+			add_idea = War_Taxes_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_7 }
+		swap_ideas = {
+			remove_idea = War_Taxes_7
+			add_idea = War_Taxes_6
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_8 }
+		swap_ideas = {
+			remove_idea = War_Taxes_8
+			add_idea = War_Taxes_7
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_9 }
+		swap_ideas = {
+			remove_idea = War_Taxes_9
+			add_idea = War_Taxes_8
+		}		
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_10 }
+		swap_ideas = {
+			remove_idea = War_Taxes_10
+			add_idea = War_Taxes_9
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_11 }
+		swap_ideas = {
+			remove_idea = War_Taxes_11
+			add_idea = War_Taxes_10
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_12 }
+		swap_ideas = {
+			remove_idea = War_Taxes_12
+			add_idea = War_Taxes_11
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_13 }
+		swap_ideas = {
+			remove_idea = War_Taxes_13
+			add_idea = War_Taxes_12
+		}		
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_14 }
+		swap_ideas = {
+			remove_idea = War_Taxes_14
+			add_idea = War_Taxes_13
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_15 }
+		swap_ideas = {
+			remove_idea = War_Taxes_15
+			add_idea = War_Taxes_14
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_16 }
+		swap_ideas = {
+			remove_idea = War_Taxes_16
+			add_idea = War_Taxes_15
+		}
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_17 }
+		swap_ideas = {
+			remove_idea = War_Taxes_17
+			add_idea = War_Taxes_16
+		}		
+	}
+	else_if = {
+		limit = { has_idea = War_Taxes_18 }
+		swap_ideas = {
+			remove_idea = War_Taxes_18
+			add_idea = War_Taxes_17
+		}
+	}
+}
+
+white_peace_with_ROOT = {
+	hidden_effect = {
+		save_event_target_as = peace_country
+		if = {
+			limit = {
+				is_in_faction = yes
+				is_faction_leader = no
+			}
+			set_country_flag = war_skip
+			random_country = {
+				limit = {
+					is_in_faction_with = event_target:peace_country
+					is_faction_leader = yes
+					has_war_with = ROOT
+				}
+				white_peace = ROOT
+			}
+		}
+		if = {
+			limit = {
+				ROOT = {
+					is_in_faction = yes
+					is_faction_leader = no
+				}
+			}
+			set_country_flag = war_skip
+			random_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					is_faction_leader = yes
+					has_war_with = event_target:peace_country
+				}
+				white_peace = event_target:peace_country
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+				overlord = { has_war_with = ROOT }
+			}
+			set_country_flag = war_skip
+			overlord = { white_peace = ROOT }
+		}
+		if = {
+			limit = {
+				ROOT = { is_subject = yes }
+			}
+			set_country_flag = war_skip
+			random_country = {
+				limit = {
+					ROOT = { is_subject_of = PREV }
+					has_war_with = event_target:peace_country
+				}
+				white_peace = event_target:peace_country
+			}
+		}
+	}
+	if = {
+		limit = { has_country_flag = war_skip }
+		clr_country_flag = war_skip
+		country_event = { id = new_Generic.14 hours = 2 }
+		else = { white_peace = ROOT }
+	}
+	hidden_effect = {
+		every_country = {
+			limit = {
+				is_in_faction_with = event_target:peace_country
+				has_war_with = ROOT
+			}
+			country_event = { id = new_Generic.14 hours = 2 }
+		}
+		every_country = {
+			limit = {
+				is_in_faction_with = ROOT
+				has_war_with = event_target:peace_country
+			}
+			country_event = { id = new_Generic.15 hours = 2 }
+		}
+		every_country = {
+			limit = {
+				is_subject_of = ROOT
+				has_war_with = event_target:peace_country
+			}
+			country_event = { id = new_Generic.15 hours = 2 }
+		}
+		every_country = {
+			limit = {
+				is_subject_of = event_target:peace_country
+				has_war_with = ROOT
+			}
+			country_event = { id = new_Generic.14 hours = 2 }
+		}
+	}
+}
+
+white_peace_with_TARGET = {
+	hidden_effect = {
+		save_event_target_as = peace_country
+		if = {
+			limit = {
+				is_in_faction = yes
+				is_faction_leader = no
+			}
+			set_country_flag = war_skip
+			random_country = {
+				limit = {
+					is_in_faction_with = event_target:peace_country
+					is_faction_leader = yes
+					has_war_with = event_target:white_peace_receiver
+				}
+				white_peace = event_target:white_peace_receiver
+			}
+		}
+		if = {
+			limit = {
+				event_target:white_peace_receiver = {
+					is_in_faction = yes
+					is_faction_leader = no
+				}
+			}
+			set_country_flag = war_skip
+			random_country = {
+				limit = {
+					is_in_faction_with = event_target:white_peace_receiver
+					is_faction_leader = yes
+					has_war_with = event_target:peace_country
+				}
+				white_peace = event_target:peace_country
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+				overlord = { has_war_with = event_target:white_peace_receiver }
+			}
+			set_country_flag = war_skip
+			overlord = { white_peace = event_target:white_peace_receiver }
+		}
+		if = {
+			limit = {
+				event_target:white_peace_receiver = { is_subject = yes }
+			}
+			set_country_flag = war_skip
+			random_country = {
+				limit = {
+					event_target:white_peace_receiver = { is_subject_of = PREV }
+					has_war_with = event_target:peace_country
+				}
+				white_peace = event_target:peace_country
+			}
+		}
+	}
+	if = {
+		limit = { has_country_flag = war_skip }
+		clr_country_flag = war_skip
+		country_event = { id = new_Generic.16 hours = 2 }
+		else = {
+			white_peace = event_target:white_peace_receiver
+		}
+	}
+	hidden_effect = {
+		every_country = {
+			limit = {
+				is_in_faction_with = event_target:peace_country
+				has_war_with = event_target:white_peace_receiver
+			}
+			country_event = { id = new_Generic.16 hours = 2 }
+		}
+		every_country = {
+			limit = {
+				is_in_faction_with = event_target:white_peace_receiver
+				has_war_with = event_target:peace_country
+			}
+			country_event = { id = new_Generic.15 hours = 2 }
+		}
+		every_country = {
+			limit = {
+				is_subject_of = event_target:white_peace_receiver
+				has_war_with = event_target:peace_country
+			}
+			country_event = { id = new_Generic.15 hours = 2 }
+		}
+		every_country = {
+			limit = {
+				is_subject_of = event_target:peace_country
+				has_war_with = event_target:white_peace_receiver
+			}
+			country_event = { id = new_Generic.16 hours = 2 }
+		}
+	}
+}
+
+force_recalculate_factories = {
+	hidden_effect = {
+		if = {
+			limit = { has_idea = undisturbed_isolation }
+			add_ideas = isolation
+			add_ideas = undisturbed_isolation
+		}
+		else_if = {
+			limit = { has_idea = isolation }
+			add_ideas = civilian_economy
+			add_ideas = isolation
+		}
+		else_if = {
+			limit = { has_idea = civilian_economy }
+			add_ideas = low_economic_mobilisation
+			add_ideas = civilian_economy
+		}
+		else_if = {
+			limit = { has_idea = low_economic_mobilisation }
+			add_ideas = partial_economic_mobilisation
+			add_ideas = low_economic_mobilisation
+		}
+		else_if = {
+			limit = { has_idea = partial_economic_mobilisation }
+			add_ideas = war_economy
+			add_ideas = partial_economic_mobilisation
+		}
+		else_if = {
+			limit = { has_idea = war_economy }
+			add_ideas = tot_economic_mobilisation
+			add_ideas = war_economy
+		}
+		else_if = {
+			limit = { has_idea = tot_economic_mobilisation }
+			add_ideas = war_economy
+			add_ideas = tot_economic_mobilisation
+		}
+	}
+}

@@ -1,0 +1,189 @@
+CSX_strategy_plan = {
+	name = "CSX Strategy Plan"
+	desc = "CSX Strategy Plan"
+
+	enable = {
+		original_tag = CSX
+		is_historical_focus_on = no
+	}
+	abort = {
+		OR = {
+			has_completed_focus = CSX_Wutai_Clique
+			has_completed_focus = CSX_Guoxian_Clique
+			has_completed_focus = CSX_Jinnan_Clique
+		}
+	}
+	focus_factors = {
+		CSX_Taiyuan_Arsenal = 1000
+		CSX_Wutai_Clique = 950
+		CSX_Guoxian_Clique = 950
+		CSX_Jinnan_Clique = 950
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+CSX_strategy_plan_A = {
+	name = "CSX Strategy Plan A"
+	desc = "CSX Strategy Plan A"
+
+	enable = {
+		is_historical_focus_on = no
+		has_completed_focus = CSX_Wutai_Clique
+	}
+	abort = {
+		always = no
+	}
+	ai_national_focuses = {
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		Shared_Expand_Military_Academies
+		CSX_Control_Suiyuan
+		CSX_Improve_Relations_with_the_Japan
+		CSX_Shanxi_First
+		CSX_Northwest_Industrial_Company
+		Shared_Westernization_Movement
+		Shared_Construct_Roads
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		CSX_Control_Shaanxi
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+CSX_strategy_plan_B = {
+	name = "CSX Strategy Plan B"
+	desc = "CSX Strategy Plan B"
+
+	enable = {
+		is_historical_focus_on = no
+		has_completed_focus = CSX_Guoxian_Clique
+	}
+	abort = {
+		always = no
+	}
+	ai_national_focuses = {
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		CSX_Control_Suiyuan
+		CSX_Improve_Relations_with_the_Japan
+		CSX_Cooperation_with_Fengtian
+		CSX_Northwest_Industrial_Company
+		Shared_Expand_Military_Academies
+		Shared_Westernization_Movement
+		Shared_Construct_Roads
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		CSX_Shanxi_Bank
+		CSX_Improve_Relations_with_the_Germany
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+		CSX_China_Japan_Treaty_of_Equality
+	}
+	weight = {
+		factor = 1
+	}
+	ai_strategy = { type = befriend id = "JAP" value = 200 }
+	ai_strategy = { type = befriend id = "CFT" value = 200 }
+	ai_strategy = { type = send_volunteers_desire id = "CFT" value = 100 }
+	ai_strategy = { type = support id = "CFT" value = 100 }
+}
+
+CSX_strategy_plan_C = {
+	name = "CSX Strategy Plan C"
+	desc = "CSX Strategy Plan C"
+
+	enable = {
+		is_historical_focus_on = no
+		has_completed_focus = CSX_Jinnan_Clique
+	}
+	abort = {
+		always = no
+	}
+	ai_national_focuses = {
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		CSX_Control_Shaanxi
+		CSX_Improve_Relations_with_the_Russia
+		CSX_Cooperation_with_Guangdong
+		CSX_Northwest_Industrial_Company
+		Shared_Expand_Military_Academies
+		Shared_Westernization_Movement
+		Shared_Construct_Roads
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		CSX_Shanxi_Railway
+		CSX_Improve_Relations_with_the_America
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		CSX_Against_the_Central_Government
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+	ai_strategy = { type = befriend id = "CGD" value = 200 }
+	ai_strategy = { type = send_volunteers_desire id = "CGD" value = 100 }
+	ai_strategy = { type = support id = "CGD" value = 100 }
+}

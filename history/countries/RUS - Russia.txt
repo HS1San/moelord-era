@@ -1,0 +1,44 @@
+﻿capital = 341
+
+oob = "empty_1919"
+
+set_technology = {
+	rifle_equipment_0 = 1
+	rifle_equipment_1 = 1
+	rifle_equipment_2 = 1
+	animal_combat_training = 1
+	lmg_equipment_0 = 1
+	support_class_equipment = 1
+	truck_equipment = 1
+	bicycle_equipment = 1
+	tankette_equipment = 1
+	light_tank_equipment = 1
+	medium_tank_equipment = 1
+	heavy_tank_equipment = 1
+	torpedo_boat_equipment = 1
+	corvette_equipment = 1
+	cruiser_equipment = 1
+	seaplane_tender_equipment = 1
+	submarine_equipment = 1
+	battleship_equipment = 1
+	seaplane_equipment = 1
+	recon_plane_equipment = 1
+	attacker_equipment = 1
+	fighter_equipment = 1
+	bomber_equipment = 1
+}
+
+set_politics = {
+	ruling_party = Radical_Leftist
+	last_election = "1916.6.6"
+	election_frequency = 24
+	elections_allowed = no
+}
+
+set_popularities = {
+    Moderate_Leftist = 0
+    Moderate_Rightist = 0
+    Radical_Rightist = 0
+    Radical_Leftist = 100
+    Centrist = 0
+}

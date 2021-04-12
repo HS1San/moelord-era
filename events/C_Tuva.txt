@@ -1,0 +1,21 @@
+﻿add_namespace = new_TAN
+
+country_event = {
+	id = new_TAN.1
+	title = new_TAN.1.t
+	desc = new_TAN.1.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_TAN.1.a
+	}
+	option = {
+		name = new_TAN.1.b
+		declare_war_on = {
+			target = TAN
+			type = puppet_wargoal_focus
+		}
+	}
+}

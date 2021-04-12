@@ -1,0 +1,93 @@
+﻿########
+#Templates
+########
+division_template = {
+	name = "Bubingshi"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Qibingshi"
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Hunchenglü"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+########
+#OOB
+########
+units = {
+	division = {
+		name = "Jingguojun Di 1 Jun"
+		location = 7294
+		division_template = "Bubingshi"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Jingguojun Di 2 Jun"
+		location = 7294
+		division_template = "Bubingshi"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Jingguojun Di 3 Jun"
+		location = 7446
+		division_template = "Bubingshi"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Jingguojun Di 4 Jun"
+		location = 7446
+		division_template = "Bubingshi"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Jingguojun Di 5 Jun"
+		location = 1120
+		division_template = "Bubingshi"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Jingguojun Di 6 Jun"
+		location = 9938
+		division_template = "Bubingshi"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Jingguojun Di 7 Jun"
+		location = 1114
+		division_template = "Bubingshi"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Jingguojun Di 8 Jun"
+		location = 10257
+		division_template = "Bubingshi"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Zifei Juntuan"
+		location = 7446
+		division_template = "Bubingshi"
+		start_experience_factor = 0.3
+	}
+}

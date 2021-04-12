@@ -1,0 +1,112 @@
+technologies = {
+	bicycle_equipment = {
+		allow = { always = no }
+		enable_subunits = { bicycle_battalion }
+		research_cost = 1
+	}
+	tankette_equipment = {
+		allow = { always = no }
+		enable_equipments = { tankette_equipment_0 }
+		research_cost = 1
+	}
+	light_tank_equipment = {
+		allow = { always = no }
+		enable_equipments = { light_tank_equipment_0 }
+		research_cost = 1
+	}
+	medium_tank_equipment = {
+		allow = { always = no }
+		enable_equipments = { medium_tank_equipment_0 }
+		research_cost = 1
+	}
+	heavy_tank_equipment = {
+		allow = { always = no }
+		enable_equipments = { heavy_tank_equipment_0 }
+		research_cost = 1
+	}
+	corvette_equipment = {
+		allow = { always = no }
+		enable_equipments = { corvette_equipment_0 }
+		research_cost = 1
+	}
+	cruiser_equipment = {
+		allow = { always = no }
+		enable_equipments = { cruiser_equipment_0 }
+		research_cost = 1
+	}
+	seaplane_tender_equipment = {
+		allow = { always = no }
+		enable_equipments = { seaplane_tender_equipment_0 }
+		research_cost = 1
+	}
+	submarine_equipment = {
+		allow = { always = no }
+		enable_equipments = { submarine_equipment_0 }
+		research_cost = 1
+	}
+	battleship_equipment = {
+		allow = { always = no }
+		enable_equipments = { battleship_equipment_0 }
+		research_cost = 1
+	}
+	fighter_equipment = {
+		allow = { always = no }
+		enable_equipments = { fighter_equipment_0 }
+		research_cost = 1
+	}
+	attacker_equipment = {
+		allow = { always = no }
+		enable_equipments = { attacker_equipment_0 }
+		research_cost = 1
+	}
+	bomber_equipment = {
+		allow = { always = no }
+		enable_equipments = { bomber_equipment_0 }
+		research_cost = 1
+	}
+	doctrine_superior_firepower = {
+		allow = { always = no }
+		enable_tactic = tactic_overwhelming_fire
+		category_front_line = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		research_cost = 3
+	}
+	doctrine_grand_battle_plan = {
+		allow = { always = no }
+		enable_tactic = tactic_planned_attack
+		category_army = {
+			breakthrough = 0.1
+			soft_attack = 0.05
+		}
+		research_cost = 3
+	}
+	doctrine_mass_assault = {
+		allow = { always = no }
+		conscription = 0.03
+		infantry = {
+			combat_width = -0.4
+		}
+		land_reinforce_rate = 0.06
+		research_cost = 3
+	}
+	doctrine_mobile_warfare = {
+		allow = { always = no }
+		enable_tactic = tactic_blitz
+		army_speed_factor = 0.05
+		category_tanks = {
+			max_organisation = 3
+			breakthrough = 0.2
+		}
+		research_cost = 3
+	}
+	doctrine_modern_warfare = {
+		allow = { always = no }
+		army_bonus_air_superiority_factor = 0.2
+		category_front_line = { 
+			max_organisation = 15
+		}
+		research_cost = 3
+	}
+}

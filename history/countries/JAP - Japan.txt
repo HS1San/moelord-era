@@ -1,0 +1,139 @@
+﻿capital = 139
+
+oob = "JAP"
+
+set_technology = {
+	rifle_equipment_0 = 1
+	self_defense_equipment_0 = 1
+	support_class_equipment = 1
+	animal_combat_training = 1
+	gw_artillery_equipment = 1
+	howitzer_equipment_1 = 1
+	truck_equipment = 1
+	torpedo_boat_equipment = 1
+	corvette_equipment = 1
+	cruiser_equipment = 1
+	seaplane_tender_equipment = 1
+	submarine_equipment = 1
+	battleship_equipment = 1
+	seaplane_equipment = 1
+	recon_plane_equipment = 1
+	tankette_equipment = 1
+	military_police_0 = 1
+}
+
+add_ideas = {
+	limited_conscription
+	limited_exports
+
+	Taisho_Democracy
+	State_Shintoism
+}
+
+set_convoys = 200
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = Centrist
+	last_election = "1916.6.6"
+	election_frequency = 24
+	elections_allowed = no
+}
+
+set_popularities = {
+    Moderate_Leftist = 15
+    Moderate_Rightist = 15
+    Radical_Rightist = 10
+    Radical_Leftist = 5
+    Centrist = 55
+}
+create_all_leaders = yes
+
+give_guarantee = CSH
+give_guarantee = CAO
+give_guarantee = INC
+give_guarantee = PHL
+give_guarantee = SIA
+give_guarantee = GOA
+
+set_autonomy = { target = KOR autonomous_state = autonomy_wtt_imperial_protectorate freedom_level = 0.35 }
+set_autonomy = { target = CTW autonomous_state = autonomy_wtt_imperial_protectorate freedom_level = 0.25 }
+set_autonomy = { target = CLS autonomous_state = autonomy_wtt_imperial_protectorate freedom_level = 0.15 }
+
+add_offsite_building = {type = industrial_complex level = 12}
+add_offsite_building = {type = arms_factory level = 5}
+
+create_faction = Japanese_Sphere
+
+create_country_leader = {
+	name = "Katō Takaaki"
+	picture = "Portrait_Japan_Kato_Takaaki.tga"
+	expire = "1926.1.28"
+	ideology = Moderate_Rightist_ideology
+	traits = {
+		silent_workhorse
+	}
+}
+create_country_leader = {
+	name = "Tanaka Giichi"
+	picture = "Portrait_Japan_Tanaka_Giichi.tga"
+	expire = "1929.9.29"
+	ideology = Moderate_Rightist_ideology
+	traits = {
+		silent_workhorse
+	}
+}
+create_country_leader = {
+	name = "Yoshihito"
+	picture = "Portrait_Japan_Emperor_Yoshihito.tga"
+	expire = "1925.12.25"
+	ideology =  Centrist_ideology
+	traits = {
+		imperial_connections
+	}
+}
+
+create_field_marshal = {
+	name = "Kotohito"
+	picture = "Portrait_Japan_Kotohito.tga"
+	traits = { war_hero politically_connected career_officer }
+	skill = 4
+	attack_skill = 5
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 2
+	id = 242
+}
+create_corps_commander = {
+	name = "Akiyama Yoshifuru"
+	picture = "Portrait_Japan_Akiyama_Yoshifuru.tga"
+	traits = { cavalry_officer trait_reckless }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 5
+	planning_skill = 2
+	logistics_skill = 2
+	id = 243
+}
+create_corps_commander = {
+	name = "Nobuyoshi Muto"
+	picture = "Portrait_Japan_Nobuyoshi_Muto_new.tga"
+	traits = { infantry_officer career_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 1
+	id = 244
+}
+create_field_marshal = {
+	name = "Yoshinori Shirakawa"
+	picture = "Portrait_Japan_Yoshinori_Shirakawa.tga"
+	traits = { trait_reckless media_personality }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+	id = 245
+}

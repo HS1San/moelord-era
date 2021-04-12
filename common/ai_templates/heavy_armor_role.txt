@@ -1,0 +1,76 @@
+heavy_armor_generic = {
+	roles = { heavy_armor }
+	upgrade_prio = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { has_tech = medium_tank_equipment }
+		}
+		modifier = {
+			factor = 5
+			num_of_military_factories > 25
+		}
+	}
+	match_to_count = 0.6
+
+	HEAVY_ARMOR_TEMPLATE = {
+		upgrade_prio = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOT = { has_tech = medium_tank_equipment }
+			}
+			modifier = {
+				factor = 10
+				num_of_military_factories > 25
+				NOT = { has_template_containing_unit = medium_tank }
+			}
+		}
+		production_prio = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOT = { has_tech = medium_tank_equipment }
+			}
+			modifier = {
+				factor = 0
+				num_of_military_factories > 25
+				has_template_containing_unit = medium_tank
+			}
+		}
+
+		target_width = 18.0
+		width_weight = 3.0
+		column_swap_factor = 0.1
+		reinforce_prio = 1
+
+		target_template = {
+			weight = 0.5
+			match_value = 1000.0
+
+			regiments = {
+				medium_tank = 6
+				infantry = 3
+			}
+
+			support = {
+				engineer = 1
+				recon = 1
+				logistics_company = 1
+			}
+		}
+
+		allowed_types = {
+			medium_tank
+			cavalry
+			mounted_infantry
+			infantry
+			howitzer_brigade
+			engineer
+			recon
+			logistics_company
+			cannon
+			howitzer
+		}
+	}
+}

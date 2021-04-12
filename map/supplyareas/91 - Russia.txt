@@ -1,0 +1,6 @@
+supply_area={
+	id=91
+	name="SUPPLYAREA_COMMON"
+	value=11
+	states={ 209 276 292 317 }
+}

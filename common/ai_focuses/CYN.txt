@@ -1,0 +1,40 @@
+ai_historical_focus_list_CYN = {
+	ai_national_focuses = {
+		CYN_Support_Tang
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		Shared_Expand_Military_Academies
+		Shared_Westernization_Movement
+		Shared_Construct_Roads
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+		CYN_Yunnan_Military_Academy
+		CYN_Improve_Relations_with_the_France
+		CYN_Improve_Relations_with_the_Britain
+		CYN_Yunnan_University
+		CYN_Invite_French_Generals
+		CYN_Invite_British_Generals
+		CYN_Abolish_the_Unequal_Treaties
+	}
+}

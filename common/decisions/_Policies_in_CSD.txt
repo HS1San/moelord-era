@@ -1,0 +1,102 @@
+Diplomacy_with_CBJ = {
+	Reoccupy_Qingdao = {
+		icon = infiltrate_state
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				date > 1921.1.1
+			}
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_country_flag = SH_WAR
+				has_country_flag = SH_PAR
+				tag = TIB
+				tag = MON
+				tag = TAN
+			}
+			owns_state = 32
+			JAP = { owns_state = 157 }
+		}
+		available = {
+			always = yes
+		}
+		complete_effect = {
+			JAP = { country_event = new_CSD.1 }
+		}
+	}
+	Reoccupy_Weihaiwei = {
+		icon = infiltrate_state
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				date > 1930.10.1
+			}
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_country_flag = SH_WAR
+				has_country_flag = SH_PAR
+				has_country_flag = SH_BYC
+				has_country_flag = SH_NPC
+				has_country_flag = SH_NPL
+				has_country_flag = SH_NPR
+				tag = TIB
+				tag = MON
+				tag = TAN
+			}
+			owns_state = 32
+			CWH = { owns_state = 156 }
+		}
+		available = {
+			check_variable = { ROOT.relationship_with_britain > 0 }
+			date > 1928.10.1
+		}
+		complete_effect = {
+			CWH = { country_event = new_CSD.2 }
+		}
+	}
+	Rename_Weihaiwei = {
+		icon = infiltrate_state
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 150
+				OR = {
+					has_government = radical_leftist
+					has_government = moderate_leftist
+				}
+				
+			}
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 156
+		}
+		available = {
+			owns_state = 156
+		}
+		complete_effect = {
+			156 = {
+				set_state_name = "Weihai"
+			}
+			set_province_name = {
+				id = 4205
+				name = "Weihai"
+			}
+		}
+	}
+}

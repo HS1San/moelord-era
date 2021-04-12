@@ -1,0 +1,27 @@
+﻿add_namespace = new_CZJ
+
+country_event = {
+	id = new_CZJ.1
+	title = new_CZJ.1.t
+	desc = new_CZJ.1.d
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = CZJ
+		has_country_leader = { name = "Yang Shande" } # 杨善德
+		date > 1919.8.1
+	}
+
+	mean_time_to_happen = {
+		days = 12
+		modifier = { factor = 0.5 date > 1919.9.1 }
+		modifier = { factor = 0.2 date > 1919.10.1 }
+	}
+
+	option = {
+		name = new_CZJ.1.a
+		kill_country_leader = yes
+	}
+}

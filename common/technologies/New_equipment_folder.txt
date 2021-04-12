@@ -1,0 +1,4117 @@
+technologies = {
+	rifle_equipment_0 = {
+
+		enable_equipments = {
+			rifle_equipment_0
+		}
+		enable_subunits = {
+			infantry
+		}
+		
+		path = {
+			leads_to_tech = self_defense_equipment_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = hmg_equipment_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = animal_combat_training
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = training_special_forces_0
+			research_cost_coeff = 1
+		}
+
+		research_cost = 0.5
+		start_year = 1900
+
+		folder = {
+			name = equipment_folder
+			position = { x = 5 y = 0 }
+		}
+
+		categories = {
+			infantry_weapons
+			infantry_gun
+			rifle_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				date > 1919.1.1
+			}
+		}
+	}
+	rifle_equipment_1 = {
+
+		enable_equipments = {
+			rifle_equipment_1
+		}
+
+		path = {
+			leads_to_tech = self_defense_equipment_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1922
+
+		folder = {
+			name = equipment_folder
+			position = { x = 5 y = 4 }
+		}
+
+		categories = {
+			infantry_weapons
+			infantry_gun
+			rifle_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 10
+				date > 1922.1.1
+			}
+		}
+	}
+	rifle_equipment_2 = {
+
+		enable_equipments = {
+			rifle_equipment_2
+		}
+
+		research_cost = 2
+		start_year = 1926
+
+		folder = {
+			name = equipment_folder
+			position = { x = 4 y = 10 }
+		}
+
+		categories = {
+			infantry_weapons
+			infantry_gun
+			rifle_tech
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+			modifier = {
+				factor = 5
+				date > 1927.1.1
+			}
+		}
+	}
+	self_defense_equipment_0 = {
+
+		category_light_infantry = {
+			defense = 0.05
+			soft_attack = 0.05
+		}
+		cavalry = {
+			defense = 0.05
+			soft_attack = 0.05
+		}
+		mounted_infantry = {
+			defense = 0.05
+			soft_attack = 0.05
+		}
+
+		path = {
+			leads_to_tech = rifle_equipment_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = sniper_equipment_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 5 y = 2 }
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 10
+				date > 1919.1.1
+			}
+		}
+	}
+	self_defense_equipment_1 = {
+
+		category_light_infantry = {
+			defense = 0.02
+		}
+		cavalry = {
+			defense = 0.02
+		}
+		mounted_infantry = {
+			defense = 0.02
+		}
+
+		path = {
+			leads_to_tech = throw_equipment_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = self_defense_equipment_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1924
+
+		folder = {
+			name = equipment_folder
+			position = { x = 5 y = 6 }
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+			modifier = {
+				factor = 5
+				date > 1925.1.1
+			}
+		}
+	}
+	self_defense_equipment_2 = {
+
+		category_light_infantry = {
+			defense = 0.05
+			breakthrough = 0.1
+		}
+		cavalry = {
+			defense = 0.05
+			breakthrough = 0.1
+		}
+		mounted_infantry = {
+			defense = 0.05
+			breakthrough = 0.1
+		}
+
+		path = {
+			leads_to_tech = rifle_equipment_2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = flame_equipment
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = radio_equipment
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1928
+
+		folder = {
+			name = equipment_folder
+			position = { x = 4 y = 8 }
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1928.1.1
+			}
+			modifier = {
+				factor = 5
+				date > 1929.1.1
+			}
+		}
+	}
+	throw_equipment_0 = {
+
+		category_all_infantry = {
+			hard_attack = 0.15
+			ap_attack = 0.5
+		}
+
+		path = {
+			leads_to_tech = throw_equipment_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.5
+		start_year = 1926
+
+		folder = {
+			name = equipment_folder
+			position = { x = 6 y = 8 }
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1927.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1928.1.1
+			}
+		}
+	}
+	throw_equipment_1 = {
+
+		category_all_infantry = {
+			hard_attack = 0.15
+			ap_attack = 0.5
+		}
+
+		research_cost = 2.5
+		start_year = 1928
+
+		folder = {
+			name = equipment_folder
+			position = { x = 6 y = 10 }
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1928.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1928.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1929.1.1
+			}
+		}
+	}
+	flame_equipment = {
+
+		infantry = {
+			soft_attack = 0.05
+			urban = { attack = 0.1 }
+			fort = { attack = 0.2 }
+		}
+
+		research_cost = 2.5
+		start_year = 1928
+
+		folder = {
+			name = equipment_folder
+			position = { x = 0 y = 10 }
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1928.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1928.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1929.1.1
+			}
+		}
+	}
+	radio_equipment = {
+
+		land_reinforce_rate = 0.05
+		infantry = {
+			initiative = 0.03
+		}
+
+		research_cost = 2.5
+		start_year = 1928
+
+		folder = {
+			name = equipment_folder
+			position = { x = 2 y = 10 }
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 3
+				date > 1928.1.1
+			}
+		}
+	}
+	animal_combat_training = {
+
+		enable_equipments = {
+			carbine_equipment_0
+		}
+		enable_subunits = {
+			cavalry
+			mounted_infantry
+		}
+
+		path = {
+			leads_to_tech = cavalry_equipment_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = sniper_equipment_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 1 y = 2 }
+		}
+
+		categories = {
+			infantry_weapons
+			infantry_gun
+			carbine_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 10
+				date > 1919.1.1
+			}
+		}
+	}
+	cavalry_equipment_0 = {
+
+		cavalry = {
+			defense = 0.02
+			maximum_speed = 0.05
+			default_morale = 0.05
+		}
+		mounted_infantry = {
+			defense = 0.02
+			maximum_speed = 0.05
+			default_morale = 0.05
+		}
+
+		path = {
+			leads_to_tech = cavalry_equipment_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1922
+
+		folder = {
+			name = equipment_folder
+			position = { x = 0 y = 4 }
+		}
+
+		categories = {
+			infantry_weapons
+			infantry_gun
+			carbine_tech
+		}
+
+		ai_will_do = {
+			factor = 0.8
+		}
+	}
+	cavalry_equipment_1 = {
+
+		cavalry = {
+			defense = 0.02
+			soft_attack = 0.05
+			maximum_speed = 0.1
+			default_morale = 0.05
+		}
+		mounted_infantry = {
+			defense = 0.02
+			soft_attack = 0.05
+			maximum_speed = 0.1
+			default_morale = 0.05
+		}
+		
+		path = {
+			leads_to_tech = cavalry_equipment_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1924
+
+		folder = {
+			name = equipment_folder
+			position = { x = 0 y = 6 }
+		}
+
+		categories = {
+			infantry_weapons
+			infantry_gun
+			carbine_tech
+		}
+
+		ai_will_do = {
+			factor = 0.7
+		}
+	}
+	cavalry_equipment_2 = {
+
+		cavalry = {
+			defense = 0.05
+			breakthrough = 0.1
+			maximum_speed = 0.15
+			default_morale = 0.1
+		}
+		mounted_infantry = {
+			defense = 0.05
+			breakthrough = 0.1
+			maximum_speed = 0.15
+			default_morale = 0.1
+		}
+
+		research_cost = 1.5
+		start_year = 1926
+
+		folder = {
+			name = equipment_folder
+			position = { x = 0 y = 8 }
+		}
+
+		categories = {
+			infantry_weapons
+			infantry_gun
+			carbine_tech
+		}
+
+		ai_will_do = {
+			factor = 0.6
+		}
+	}
+	hmg_equipment_0 = {
+
+		category_light_infantry = {
+			breakthrough = 0.1
+		}
+		
+		path = {
+			leads_to_tech = lmg_equipment_0
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.5
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 8 y = 2 }
+		}
+
+		categories = {
+			infantry_weapons
+			infantry_gun
+			machine_gun_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				date > 1919.1.1
+			}
+		}
+	}
+	hmg_equipment_1 = {
+
+		category_light_infantry = {
+			defense = 0.02
+			breakthrough = 0.1
+		}
+
+		path = {
+			leads_to_tech = hmg_equipment_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1926
+
+		folder = {
+			name = equipment_folder
+			position = { x = 8 y = 8 }
+		}
+
+		categories = {
+			infantry_weapons
+			infantry_gun
+			machine_gun_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1926.1.1
+			}
+			modifier = {
+				factor = 5
+				date > 1927.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1928.1.1
+			}
+		}
+	}
+	hmg_equipment_2 = {
+
+		category_light_infantry = {
+			defense = 0.02
+			breakthrough = 0.1
+		}
+
+		research_cost = 1.5
+		start_year = 1928
+
+		folder = {
+			name = equipment_folder
+			position = { x = 8 y = 10 }
+		}
+
+		categories = {
+			infantry_weapons
+			infantry_gun
+			machine_gun_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1928.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1928.1.1
+			}
+			modifier = {
+				factor = 5
+				date > 1929.1.1
+			}
+		}
+	}
+	lmg_equipment_0 = {
+
+		enable_equipments = {
+			lmg_equipment_0
+		}
+		enable_subunits = {
+			assault_battalion
+		}
+
+		path = {
+			leads_to_tech = hmg_equipment_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1924
+
+		folder = {
+			name = equipment_folder
+			position = { x = 8 y = 6 }
+		}
+
+		categories = {
+			infantry_weapons
+			infantry_gun
+			machine_gun_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1924.1.1
+			}
+			modifier = {
+				factor = 5
+				date > 1925.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1926.1.1
+			}
+		}
+	}
+	sniper_equipment_1 = {
+
+		category_special_forces = {
+			recon = 0.5
+		}
+		category_light_infantry = {
+			soft_attack = 0.02
+		}
+
+		path = {
+			leads_to_tech = sniper_equipment_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1922
+
+		folder = {
+			name = equipment_folder
+			position = { x = 2 y = 4 }
+		}
+
+		categories = {
+			infantry_weapons
+			infantry_gun
+		}
+
+		ai_will_do = {
+			factor = 0.7
+		}
+	}
+	sniper_equipment_2 = {
+
+		category_special_forces = {
+			recon = 0.5
+		}
+		category_light_infantry = {
+			soft_attack = 0.02
+		}
+
+		path = {
+			leads_to_tech = sniper_equipment_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1924
+
+		folder = {
+			name = equipment_folder
+			position = { x = 2 y = 6 }
+		}
+
+		categories = {
+			infantry_weapons
+			infantry_gun
+		}
+
+		ai_will_do = {
+			factor = 0.6
+		}
+	}
+	sniper_equipment_3 = {
+
+		category_special_forces = {
+			recon = 0.5
+		}
+		category_light_infantry = {
+			soft_attack = 0.02
+		}
+
+		research_cost = 1.5
+		start_year = 1926
+
+		folder = {
+			name = equipment_folder
+			position = { x = 2 y = 8 }
+		}
+
+		categories = {
+			infantry_weapons
+			infantry_gun
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+	training_special_forces_0 = {
+
+		land_reinforce_rate = 0.01
+		category_special_forces = {
+			acclimatization_hot_climate_gain_factor = 0.05
+			acclimatization_cold_climate_gain_factor = 0.05
+		}
+
+		path = {
+			leads_to_tech = training_special_forces_1_A
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = training_special_forces_1_B
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 11 y = 2 }
+		}
+
+		categories = {
+			support_tech
+			special_forces
+		}
+
+		ai_will_do = {
+			factor = 0.7
+			modifier = {
+				factor = 0
+				date < 1920.1.1
+			}
+		}
+	}
+	training_special_forces_1_A = {
+		xor={ training_special_forces_1_B }
+
+		category_special_forces = {
+			max_organisation = 5
+			defense = 0.05
+		}
+
+		special_forces_training_time_factor = 0.1
+		
+		path = {
+			leads_to_tech = training_special_forces_2_A
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1922
+
+		folder = {
+			name = equipment_folder
+			position = { x = 10 y = 4 }
+		}
+
+		categories = {
+			support_tech
+			special_forces
+		}
+
+		ai_will_do = {
+			factor = 0.7
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+		}
+	}
+	training_special_forces_1_B = {
+		xor={ training_special_forces_1_A }
+
+		special_forces_cap = 0.1
+		special_forces_training_time_factor = -0.1
+		
+		path = {
+			leads_to_tech = training_special_forces_2_B
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1922
+
+		folder = {
+			name = equipment_folder
+			position = { x = 12 y = 4 }
+		}
+
+		categories = {
+			support_tech
+			special_forces
+		}
+
+		ai_will_do = {
+			factor = 0.7
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+		}
+	}
+	training_special_forces_2_A = {
+		category_special_forces = {
+			acclimatization_hot_climate_gain_factor = 0.50
+			acclimatization_cold_climate_gain_factor = 0.50
+		}
+
+		special_forces_no_supply_grace = 48
+		special_forces_training_time_factor = 0.1
+
+		path = {
+			leads_to_tech = training_special_forces_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1926
+
+		folder = {
+			name = equipment_folder
+			position = { x = 10 y = 8 }
+		}
+
+		categories = {
+			support_tech
+			special_forces
+		}
+
+		ai_will_do = {
+			factor = 0.7
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+		}
+	}
+	training_special_forces_2_B = {
+		category_special_forces = {
+			acclimatization_hot_climate_gain_factor = 0.20
+			acclimatization_cold_climate_gain_factor = 0.20
+		}
+
+		special_forces_out_of_supply_factor = -0.1
+
+		path = {
+			leads_to_tech = training_special_forces_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1926
+
+		folder = {
+			name = equipment_folder
+			position = { x = 12 y = 8 }
+		}
+
+		categories = {
+			support_tech
+			special_forces
+		}
+
+		ai_will_do = {
+			factor = 0.7
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+		}
+	}
+	training_special_forces_3 = {
+
+		land_reinforce_rate = 0.03
+		category_special_forces = {
+			acclimatization_hot_climate_gain_factor = 0.20
+			acclimatization_cold_climate_gain_factor = 0.20
+			max_organisation = 5
+			soft_attack = 0.05
+		}
+
+		special_forces_no_supply_grace = 48
+
+		research_cost = 1.5
+		start_year = 1928
+
+		folder = {
+			name = equipment_folder
+			position = { x = 11 y = 10 }
+		}
+
+		categories = {
+			support_tech
+			special_forces
+		}
+
+		ai_will_do = {
+			factor = 0.7
+			modifier = {
+				factor = 0
+				date < 1928.1.1
+			}
+		}
+	}
+
+	support_class_equipment = {
+
+		enable_equipments = {
+			support_equipment_0
+		}
+
+		path = {
+			leads_to_tech = transport_ship_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = training_mountaineers_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = training_marines_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = training_forest_infantry_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = training_desert_infantry_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = training_jungle_infantry_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = recon_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = engineers_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = military_police_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = logistics_company_0
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1900
+
+		folder = {
+			name = equipment_folder
+			position = { x = 9 y = 0 }
+		}
+
+		categories = {
+			support_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 4
+				date > 1920.1.1
+			}
+			modifier = {
+				factor = 4
+				date > 1921.1.1
+			}
+			modifier = {
+				factor = 4
+				date > 1922.1.1
+			}
+		}
+	}
+	transport_ship_0 = {
+
+		transport_capacity = -0.5
+		naval_invasion_capacity = 10
+
+		path = {
+			leads_to_tech = transport_ship_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 0 y = 2 }
+		}
+
+		categories = {
+			support_tech
+			tp_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				NOT = { has_war = yes }
+			}
+		}
+	}
+	transport_ship_1 = {
+
+		invasion_preparation = -0.5
+		amphibious_invasion_defence = 0.15
+		naval_invasion_capacity = 40
+
+		research_cost = 2
+		start_year = 1928
+
+		folder = {
+			name = equipment_folder
+			position = { x = 0 y = 10 }
+		}
+
+		dependencies = {
+			transport_ship_0 = 1
+		}
+
+		categories = {
+			support_tech
+			tp_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0.5
+				NOT = { has_war = yes }
+			}
+			modifier = {
+				factor = 0
+				date < 1928.1.1
+			}
+		}
+	}
+	training_marines_0 = {
+
+		enable_subunits = {
+			marine
+		}
+
+		on_research_complete = {
+			limit = { NOT = { has_template_containing_unit = marine } }
+			hidden_effect = {
+				load_oob = "unlock_marines"
+			}			
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		path = {
+			leads_to_tech = training_marines_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = transport_ship_0
+			research_cost_coeff = 0.5
+		}
+
+		research_cost = 2
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 2 y = 2 }
+		}
+
+		categories = {
+			special_forces
+			marine_tech
+		}
+
+		ai_will_do = {
+			factor = 0.7
+		}
+	}
+	training_marines_1 = {
+
+		marine = {
+			max_organisation = 5
+		}
+
+		path = {
+			leads_to_tech = training_marines_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1924
+
+		folder = {
+			name = equipment_folder
+			position = { x = 2 y = 6 }
+		}
+
+		categories = {
+			special_forces
+			marine_tech
+		}
+
+		ai_will_do = {
+			factor = 0.7
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+		}
+	}
+	training_marines_2 = {
+
+		marine = {
+			max_organisation = 5
+			soft_attack = 0.05
+		}
+
+		path = {
+			leads_to_tech = transport_ship_1
+			research_cost_coeff = 0.5
+		}
+
+		research_cost = 2
+		start_year = 1928
+
+		folder = {
+			name = equipment_folder
+			position = { x = 2 y = 10 }
+		}
+
+		categories = {
+			special_forces
+			marine_tech
+		}
+
+		ai_will_do = {
+			factor = 0.7
+			modifier = {
+				factor = 0
+				date < 1928.1.1
+			}
+		}
+	}
+	training_mountaineers_0 = {
+
+		enable_subunits = {
+			mountaineers
+		}
+
+		on_research_complete = {
+			limit = { NOT = { has_template_containing_unit = mountaineers } }
+			hidden_effect = {
+				load_oob = "unlock_mountineers"
+			}
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		path = {
+			leads_to_tech = training_mountaineers_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = winter_combat_0
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 4 y = 2 }
+		}
+
+		categories = {
+			special_forces
+			mountaineers_tech
+		}
+
+		ai_will_do = {
+			factor = 0.7
+		}
+	}
+	training_mountaineers_1 = {
+
+		mountaineers = {
+			max_organisation = 5
+		}
+
+		path = {
+			leads_to_tech = training_mountaineers_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1924
+
+		folder = {
+			name = equipment_folder
+			position = { x = 4 y = 6 }
+		}
+
+		categories = {
+			special_forces
+			mountaineers_tech
+		}
+
+		ai_will_do = {
+			factor = 0.7
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+		}
+	}
+	training_mountaineers_2 = {
+
+		mountaineers = {
+			max_organisation = 5
+			soft_attack = 0.05
+		}
+
+		research_cost = 2
+		start_year = 1928
+
+		folder = {
+			name = equipment_folder
+			position = { x = 4 y = 10 }
+		}
+
+		categories = {
+			special_forces
+			mountaineers_tech
+		}
+
+		ai_will_do = {
+			factor = 0.7
+			modifier = {
+				factor = 0
+				date < 1928.1.1
+			}
+		}
+	}
+	training_forest_infantry_0 = {
+
+		enable_subunits = {
+			forest_infantry
+		}
+
+		on_research_complete = {
+			limit = { NOT = { has_template_containing_unit = forest_infantry } }
+			hidden_effect = {
+				load_oob = "unlock_forest_infantry"
+			}			
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		path = {
+			leads_to_tech = training_forest_infantry_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = winter_combat_0
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 6 y = 2 }
+		}
+
+		categories = {
+			special_forces
+			forest_infantry_tech
+		}
+
+		ai_will_do = {
+			factor = 0.7
+		}
+	}
+	training_forest_infantry_1 = {
+
+		forest_infantry = {
+			max_organisation = 5
+		}
+
+		path = {
+			leads_to_tech = training_forest_infantry_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1924
+
+		folder = {
+			name = equipment_folder
+			position = { x = 6 y = 6 }
+		}
+
+		categories = {
+			special_forces
+			forest_infantry_tech
+		}
+
+		ai_will_do = {
+			factor = 0.7
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+		}
+	}
+	training_forest_infantry_2 = {
+
+		forest_infantry = {
+			max_organisation = 5
+			soft_attack = 0.05
+		}
+
+		research_cost = 2
+		start_year = 1928
+
+		folder = {
+			name = equipment_folder
+			position = { x = 6 y = 10 }
+		}
+
+		categories = {
+			special_forces
+			forest_infantry_tech
+		}
+
+		ai_will_do = {
+			factor = 0.7
+			modifier = {
+				factor = 0
+				date < 1928.1.1
+			}
+		}
+	}
+	training_desert_infantry_0 = {
+
+		enable_subunits = {
+			desert_infantry
+		}
+
+		on_research_complete = {
+			limit = { NOT = { has_template_containing_unit = desert_infantry } }
+			hidden_effect = {
+				load_oob = "unlock_desert_infantry"
+			}			
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		path = {
+			leads_to_tech = training_desert_infantry_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = hot_combat_0
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 8 y = 2 }
+		}
+
+		categories = {
+			special_forces
+			desert_infantry_tech
+		}
+
+		ai_will_do = {
+			factor = 0.7
+		}
+	}
+	training_desert_infantry_1 = {
+
+		desert_infantry = {
+			max_organisation = 5
+		}
+
+		path = {
+			leads_to_tech = training_desert_infantry_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1924
+
+		folder = {
+			name = equipment_folder
+			position = { x = 8 y = 6 }
+		}
+
+		categories = {
+			special_forces
+			desert_infantry_tech
+		}
+
+		ai_will_do = {
+			factor = 0.7
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+		}
+	}
+	training_desert_infantry_2 = {
+
+		desert_infantry = {
+			max_organisation = 5
+			soft_attack = 0.05
+		}
+
+		research_cost = 2
+		start_year = 1928
+
+		folder = {
+			name = equipment_folder
+			position = { x = 8 y = 10 }
+		}
+
+		categories = {
+			special_forces
+			desert_infantry_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1928.1.1
+			}
+		}
+	}
+	training_jungle_infantry_0 = {
+
+		enable_subunits = {
+			jungle_infantry
+		}
+
+		on_research_complete = {
+			limit = { NOT = { has_template_containing_unit = jungle_infantry } }
+			hidden_effect = {
+				load_oob = "unlock_jungle_infantry"
+			}			
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		path = {
+			leads_to_tech = training_jungle_infantry_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = hot_combat_0
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 10 y = 2 }
+		}
+
+		categories = {
+			special_forces
+			jungle_infantry_tech
+		}
+
+		ai_will_do = {
+			factor = 0.7
+		}
+	}
+	training_jungle_infantry_1 = {
+
+		jungle_infantry = {
+			max_organisation = 5
+		}
+
+		path = {
+			leads_to_tech = training_jungle_infantry_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1924
+
+		folder = {
+			name = equipment_folder
+			position = { x = 10 y = 6 }
+		}
+
+		categories = {
+			special_forces
+			jungle_infantry_tech
+		}
+
+		ai_will_do = {
+			factor = 0.7
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+		}
+	}
+	training_jungle_infantry_2 = {
+
+		jungle_infantry = {
+			max_organisation = 5
+			soft_attack = 0.05
+		}
+
+		research_cost = 2
+		start_year = 1928
+
+		folder = {
+			name = equipment_folder
+			position = { x = 10 y = 10 }
+		}
+
+		categories = {
+			special_forces
+			jungle_infantry_tech
+		}
+
+		ai_will_do = {
+			factor = 0.7
+			modifier = {
+				factor = 0
+				date < 1928.1.1
+			}
+		}
+	}
+	winter_combat_0 = {
+
+		modifier = {
+			winter_attrition_factor = -0.05
+		}
+
+		category_light_infantry = {
+			acclimatization_cold_climate_gain_factor = 0.03
+			default_morale = 0.05
+		}
+
+		path = {
+			leads_to_tech = winter_combat_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1922
+
+		folder = {
+			name = equipment_folder
+			position = { x = 5 y = 4 }
+		}
+
+		categories = {
+			special_forces
+		}
+
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+		}
+	}
+	winter_combat_1 = {
+
+		modifier = {
+			winter_attrition_factor = -0.05
+		}
+
+		category_light_infantry = {
+			acclimatization_cold_climate_gain_factor = 0.03
+			default_morale = 0.05
+		}
+
+		research_cost = 1.5
+		start_year = 1926
+
+		folder = {
+			name = equipment_folder
+			position = { x = 5 y = 8 }
+		}
+
+		categories = {
+			special_forces
+		}
+
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+		}
+	}
+	hot_combat_0 = {
+
+		modifier = {
+			heat_attrition_factor = -0.05
+		}
+
+		category_light_infantry = {
+			acclimatization_hot_climate_gain_factor = 0.03
+			default_morale = 0.05
+		}
+
+		path = {
+			leads_to_tech = hot_combat_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1922
+
+		folder = {
+			name = equipment_folder
+			position = { x = 9 y = 4 }
+		}
+
+		categories = {
+			special_forces
+		}
+
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+		}
+	}
+	hot_combat_1 = {
+
+		modifier = {
+			heat_attrition_factor = -0.05
+		}
+
+		category_light_infantry = {
+			acclimatization_hot_climate_gain_factor = 0.03
+			default_morale = 0.05
+		}
+
+		research_cost = 1.5
+		start_year = 1926
+
+		folder = {
+			name = equipment_folder
+			position = { x = 9 y = 8 }
+		}
+
+		categories = {
+			special_forces
+		}
+
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+		}
+	}
+	recon_0 = {
+
+		enable_subunits = {
+			recon
+		}
+
+		path = {
+			leads_to_tech = recon_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 12 y = 2 }
+		}
+
+		categories = {
+			support_tech
+			recon_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				is_actual_major = yes
+			}
+			modifier = {
+				factor = 1.2
+				date > 1920.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1921.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1922.1.1
+			}
+			modifier = {
+				factor = 10
+				date > 1923.1.1
+			}
+		}
+	}
+	recon_1 = {
+
+		recon = {
+			recon = 2
+		}
+
+		path = {
+			leads_to_tech = recon_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1924
+
+		folder = {
+			name = equipment_folder
+			position = { x = 12 y = 6 }
+		}
+
+		categories = {
+			support_tech
+			recon_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1925.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1926.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1927.1.1
+			}
+		}
+	}
+	recon_2 = {
+
+		recon = {
+			recon = 2
+		}
+
+		research_cost = 1.5
+		start_year = 1928
+
+		folder = {
+			name = equipment_folder
+			position = { x = 12 y = 10 }
+		}
+
+		categories = {
+			support_tech
+			recon_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1928.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1928.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1929.1.1
+			}
+		}
+	}
+	engineers_0 = {
+
+		enable_subunits = {
+			engineer
+		}
+
+		path = {
+			leads_to_tech = engineers_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 14 y = 2 }
+		}
+
+		categories = {
+			support_tech
+			engineers_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				is_actual_major = yes
+			}
+			modifier = {
+				factor = 1.2
+				date > 1920.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1921.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1922.1.1
+			}
+			modifier = {
+				factor = 10
+				date > 1923.1.1
+			}
+		}
+	}
+	engineers_1 = {
+
+		engineer = {
+			entrenchment  = 1
+			fort = {
+				defence = 0.05
+				attack = 0.1
+			}
+		}
+
+		path = {
+			leads_to_tech = engineers_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1924
+
+		folder = {
+			name = equipment_folder
+			position = { x = 14 y = 6 }
+		}
+
+		categories = {
+			support_tech
+			engineers_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1925.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1926.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1927.1.1
+			}
+		}
+	}
+	engineers_2 = {
+
+		engineer = {
+			entrenchment  = 1
+			fort = {
+				defence = 0.05
+				attack = 0.1
+			}
+		}
+
+		research_cost = 1.5
+		start_year = 1928
+
+		folder = {
+			name = equipment_folder
+			position = { x = 14 y = 10 }
+		}
+
+		categories = {
+			support_tech
+			engineers_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1928.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1928.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1929.1.1
+			}
+		}
+	}
+	military_police_0 = {
+
+		enable_subunits = {
+			military_police
+		}
+
+		path = {
+			leads_to_tech = military_police_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 16 y = 2 }
+		}
+
+		categories = {
+			support_tech
+			military_police_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+	}
+	military_police_1 = {
+
+		military_police = {
+			suppression_factor = 0.1
+		}
+
+		path = {
+			leads_to_tech = military_police_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1924
+
+		folder = {
+			name = equipment_folder
+			position = { x = 16 y = 6 }
+		}
+
+		categories = {
+			support_tech
+			military_police_tech
+		}
+
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+		}
+	}
+	military_police_2 = {
+
+		military_police = {
+			suppression_factor = 0.1
+		}
+
+		research_cost = 1.5
+		start_year = 1928
+
+		folder = {
+			name = equipment_folder
+			position = { x = 16 y = 10 }
+		}
+
+		categories = {
+			support_tech
+			military_police_tech
+		}
+
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				date < 1928.1.1
+			}
+		}
+	}
+	logistics_company_0 = {
+
+		enable_subunits = {
+			logistics_company
+		}
+
+		path = {
+			leads_to_tech = logistics_company_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 18 y = 2 }
+		}
+
+		dependencies = {
+			truck_equipment = 1
+		}
+
+		categories = {
+			support_tech
+			logistics_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.2
+				date > 1920.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1921.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1922.1.1
+			}
+			modifier = {
+				factor = 5
+				date > 1923.1.1
+			}
+		}
+	}
+	logistics_company_1 = {
+
+		logistics_company = {
+			supply_consumption_factor = -0.1
+		}
+
+		path = {
+			leads_to_tech = logistics_company_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1924
+
+		folder = {
+			name = equipment_folder
+			position = { x = 18 y = 6 }
+		}
+
+		dependencies = {
+			truck_equipment = 1
+		}
+
+		categories = {
+			support_tech
+			logistics_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1925.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1926.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1927.1.1
+			}
+		}
+	}
+	logistics_company_2 = {
+
+		logistics_company = {
+			supply_consumption_factor = -0.1
+		}
+
+		research_cost = 1.5
+		start_year = 1928
+
+		folder = {
+			name = equipment_folder
+			position = { x = 18 y = 10 }
+		}
+
+		dependencies = {
+			truck_equipment = 1
+		}
+
+		categories = {
+			support_tech
+			logistics_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1928.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1928.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1929.1.1
+			}
+		}
+	}
+
+	gw_artillery_equipment = {
+
+		enable_equipments = {
+			gw_artillery_equipment_0
+		}
+		
+		path = {
+			leads_to_tech = cannon_equipment_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = howitzer_equipment_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = mortar_equipment_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1900
+
+		folder = {
+			name = equipment_folder
+			position = { x = 3 y = 0 }
+		}
+
+		categories = {
+			artillery
+		}
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				date > 1920.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1921.1.1
+			}
+			modifier = {
+				factor = 5
+				date > 1922.1.1
+			}
+		}
+	}
+	cannon_equipment_1 = {
+
+		enable_equipments = {
+			cannon_equipment_1
+		}
+		enable_subunits = {
+			cannon
+			cannon_brigade
+		}
+
+		path = {
+			leads_to_tech = cannon_upgrade_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 0 y = 2 }
+		}
+
+		categories = {
+			artillery
+			cannon_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				date > 1920.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1921.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1922.1.1
+			}
+			modifier = {
+				factor = 10
+				any_enemy_country = { ROOT = { estimated_intel_max_armor = { tag = PREV value > 30 } } }
+			}
+		}
+	}
+	cannon_upgrade_1 = {
+
+		cannon = {
+			hard_attack = 0.1
+			ap_attack = 0.2
+		}
+		cannon_brigade = {
+			hard_attack = 0.1
+			ap_attack = 0.2
+		}
+
+		path = {
+			leads_to_tech = cannon_equipment_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1922
+
+		folder = {
+			name = equipment_folder
+			position = { x = 0 y = 4 }
+		}
+
+		categories = {
+			artillery
+			cannon_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+			modifier = {
+				factor = 10
+				any_enemy_country = { ROOT = { estimated_intel_max_armor = { tag = PREV value > 30 } } }
+			}
+			modifier = {
+				factor = 2
+				date > 1922.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1923.1.1
+			}
+		}
+	}
+	cannon_equipment_2 = {
+
+		enable_equipments = {
+			cannon_equipment_2
+		}
+
+		path = {
+			leads_to_tech = cannon_upgrade_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1924
+
+		folder = {
+			name = equipment_folder
+			position = { x = 0 y = 6 }
+		}
+
+		categories = {
+			artillery
+			cannon_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+			modifier = {
+				factor = 10
+				any_enemy_country = { ROOT = { estimated_intel_max_armor = { tag = PREV value > 32 } } }
+			}
+			modifier = {
+				factor = 2
+				date > 1924.1.1
+			}
+		}
+	}
+	cannon_upgrade_2 = {
+
+		cannon = {
+			hard_attack = 0.1
+			ap_attack = 0.2
+		}
+		cannon_brigade = {
+			hard_attack = 0.1
+			ap_attack = 0.2
+		}
+
+		path = {
+			leads_to_tech = cannon_equipment_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1926
+
+		folder = {
+			name = equipment_folder
+			position = { x = 0 y = 8 }
+		}
+
+		categories = {
+			artillery
+			cannon_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+			modifier = {
+				factor = 10
+				any_enemy_country = { ROOT = { estimated_intel_max_armor = { tag = PREV value > 32 } } }
+			}
+			modifier = {
+				factor = 2
+				date > 1926.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1927.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1928.1.1
+			}
+		}
+	}
+	cannon_equipment_3 = {
+
+		enable_equipments = {
+			cannon_equipment_3
+		}
+
+		research_cost = 1.5
+		start_year = 1928
+
+		folder = {
+			name = equipment_folder
+			position = { x = 0 y = 10 }
+		}
+
+		categories = {
+			artillery
+			cannon_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1928.1.1
+			}
+			modifier = {
+				factor = 10
+				any_enemy_country = { ROOT = { estimated_intel_max_armor = { tag = PREV value > 35 } } }
+			}
+			modifier = {
+				factor = 2
+				date > 1928.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1929.1.1
+			}
+		}
+	}
+	howitzer_equipment_1 = {
+
+		enable_equipments = {
+			howitzer_equipment_1
+		}
+		enable_subunits = {
+			howitzer
+			howitzer_brigade
+		}
+
+		path = {
+			leads_to_tech = howitzer_upgrade_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 3 y = 2 }
+		}
+
+		categories = {
+			artillery
+			howitzer_tech
+		}
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				date > 1920.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1921.1.1
+			}
+			modifier = {
+				factor = 5
+				date > 1922.1.1
+			}
+		}
+	}
+	howitzer_upgrade_1 = {
+
+		howitzer = {
+			soft_attack = 0.1
+		}
+		howitzer_brigade = {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = howitzer_equipment_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1922
+
+		folder = {
+			name = equipment_folder
+			position = { x = 3 y = 4 }
+		}
+
+		categories = {
+			artillery
+			howitzer_tech
+		}
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1923.1.1
+			}
+		}
+	}
+	howitzer_equipment_2 = {
+
+		enable_equipments = {
+			howitzer_equipment_2
+		}
+
+		path = {
+			leads_to_tech = howitzer_upgrade_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1924
+
+		folder = {
+			name = equipment_folder
+			position = { x = 3 y = 6 }
+		}
+
+		categories = {
+			artillery
+			howitzer_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1924.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1925.1.1
+			}
+			modifier = {
+				factor = 5
+				date > 1926.1.1
+			}
+		}
+	}
+	howitzer_upgrade_2 = {
+
+		howitzer = {
+			soft_attack = 0.1
+		}
+		howitzer_brigade = {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = howitzer_equipment_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1926
+
+		folder = {
+			name = equipment_folder
+			position = { x = 3 y = 8 }
+		}
+
+		categories = {
+			artillery
+			howitzer_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1926.1.1
+			}
+			modifier = {
+				factor = 5
+				date > 1927.1.1
+			}
+		}
+	}
+	howitzer_equipment_3 = {
+
+		enable_equipments = {
+			howitzer_equipment_3
+		}
+
+		research_cost = 1.5
+		start_year = 1928
+
+		folder = {
+			name = equipment_folder
+			position = { x = 3 y = 10 }
+		}
+
+		categories = {
+			artillery
+			howitzer_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				date < 1928.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1928.1.1
+			}
+			modifier = {
+				factor = 5
+				date > 1929.1.1
+			}
+		}
+	}
+	mortar_equipment_1 = {
+
+		enable_equipments = {
+			mortar_equipment_1
+		}
+		enable_subunits = {
+			mortar
+			mortar_brigade
+		}
+
+		path = {
+			leads_to_tech = mortar_upgrade_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 6 y = 2 }
+		}
+
+		categories = {
+			artillery
+			mortar_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				date > 1920.1.1
+			}
+			modifier = {
+				factor = 5
+				date > 1921.1.1
+			}
+			modifier = {
+				factor = 5
+				date > 1922.1.1
+			}
+		}
+	}
+	mortar_upgrade_1 = {
+
+		mortar = {
+			soft_attack = 0.02
+			mountain = {
+				movement = 0.15
+			}
+		}
+		mortar_brigade = {
+			soft_attack = 0.02
+			mountain = {
+				movement = 0.15
+			}
+		}
+
+		path = {
+			leads_to_tech = mortar_equipment_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1922
+
+		folder = {
+			name = equipment_folder
+			position = { x = 6 y = 4 }
+		}
+
+		categories = {
+			artillery
+			mortar_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+		}
+	}
+	mortar_equipment_2 = {
+
+		enable_equipments = {
+			mortar_equipment_2
+		}
+
+		path = {
+			leads_to_tech = mortar_upgrade_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1924
+
+		folder = {
+			name = equipment_folder
+			position = { x = 6 y = 6 }
+		}
+
+		categories = {
+			artillery
+			mortar_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+		}
+	}
+	mortar_upgrade_2 = {
+
+		mortar = {
+			soft_attack = 0.02
+			mountain = {
+				movement = 0.15
+			}
+		}
+		mortar_brigade = {
+			soft_attack = 0.02
+			mountain = {
+				movement = 0.15
+			}
+		}
+
+		path = {
+			leads_to_tech = mortar_equipment_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1926
+
+		folder = {
+			name = equipment_folder
+			position = { x = 6 y = 8 }
+		}
+
+		categories = {
+			artillery
+			mortar_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+		}
+	}
+	mortar_equipment_3 = {
+
+		enable_equipments = {
+			mortar_equipment_3
+		}
+
+		research_cost = 1.5
+		start_year = 1928
+
+		folder = {
+			name = equipment_folder
+			position = { x = 6 y = 10 }
+		}
+
+		categories = {
+			artillery
+			mortar_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1928.1.1
+			}
+		}
+	}
+
+	truck_equipment = {
+
+		enable_equipments = {
+			motorized_equipment_0
+		}
+
+		path = {
+			leads_to_tech = training_armored_soldiers_0_A
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = training_armored_soldiers_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = training_armored_soldiers_0_B
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1900
+
+		folder = {
+			name = equipment_folder
+			position = { x = 2 y = 0 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				is_actual_major = yes
+			}
+			modifier = {
+				factor = 2
+				date > 1920.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1921.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1922.1.1
+			}
+			modifier = {
+				factor = 2
+				num_of_military_factories > 20
+			}
+		}
+	}
+	training_armored_soldiers_0_A = {
+
+		category_all_armor = {
+			reliability = 0.05
+		}
+
+		xor = { training_armored_soldiers_0_B }
+
+		path = {
+			leads_to_tech = training_armored_soldiers_1_A
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+
+		folder = {
+			name = equipment_folder
+			position = { x = 0 y = 2 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 0.4
+			modifier = {
+				factor = 0
+				NOT ={ has_tech = tankette_equipment }
+				NOT ={ has_tech = light_tank_equipment }
+				NOT ={ has_tech = medium_tank_equipment }
+				NOT ={ has_tech = heavy_tank_equipment }
+			}
+			modifier = {
+				factor = 2.5
+				num_of_military_factories < 10
+			}
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 4
+			}
+		}
+	}
+	training_armored_soldiers_0_B = {
+
+		on_research_complete = {
+			add_ideas = Hearts_of_Iron
+		}
+
+		xor = { training_armored_soldiers_0_A }
+
+		path = {
+			leads_to_tech = training_armored_soldiers_1_B
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+
+		folder = {
+			name = equipment_folder
+			position = { x = 4 y = 2 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 0.4
+			modifier = {
+				factor = 0
+				NOT ={ has_tech = tankette_equipment }
+				NOT ={ has_tech = light_tank_equipment }
+				NOT ={ has_tech = medium_tank_equipment }
+				NOT ={ has_tech = heavy_tank_equipment }
+			}
+			modifier = {
+				factor = 4.5
+				num_of_military_factories > 20
+			}
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 4
+			}
+		}
+	}
+	training_armored_soldiers_1_A = {
+
+		category_all_armor = {
+			max_organisation = 3
+			default_morale = 0.1
+		}
+
+		research_cost = 1.5
+
+		folder = {
+			name = equipment_folder
+			position = { x = 0 y = 4 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 0.4
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 4
+			}
+		}
+	}
+	training_armored_soldiers_1_B = {
+
+		category_all_armor = {
+			breakthrough = 0.20
+			maximum_speed = 0.05
+		}
+
+		research_cost = 1.5
+
+		folder = {
+			name = equipment_folder
+			position = { x = 4 y = 4 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 0.4
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 4
+			}
+		}
+	}
+	training_armored_soldiers_0 = {
+
+		enable_subunits = {
+			tankette
+			light_tank
+			medium_tank
+			heavy_tank
+		}
+		on_research_complete = {
+			limit = {
+				NOT = { has_template_containing_unit = tankette }
+			}
+			hidden_effect = {
+				load_oob = "unlock_tankettes"
+			}			
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		path = {
+			leads_to_tech = training_armored_soldiers_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 2 y = 2 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 0.9
+			modifier = {
+				factor = 0
+				NOT ={ has_tech = tankette_equipment }
+				NOT ={ has_tech = light_tank_equipment }
+				NOT ={ has_tech = medium_tank_equipment }
+				NOT ={ has_tech = heavy_tank_equipment }
+			}
+			modifier = {
+				factor = 1.2
+				date > 1920.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1921.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1922.1.1
+			}
+			modifier = {
+				factor = 2
+				has_tech = doctrine_stormtrooper
+			}
+			modifier = {
+				factor = 3
+				num_of_military_factories > 20
+			}
+		}
+	}
+	training_armored_soldiers_1 = {
+
+		category_all_armor = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			max_organisation = 1
+		}
+
+		path = {
+			leads_to_tech = training_armored_soldiers_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1922
+
+		folder = {
+			name = equipment_folder
+			position = { x = 2 y = 4 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 0.9
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+			modifier = {
+				factor = 1.1
+				date > 1922.1.1
+			}
+			modifier = {
+				factor = 1.1
+				date > 1923.1.1
+			}
+			modifier = {
+				factor = 1.1
+				date > 1924.1.1
+			}
+			modifier = {
+				factor = 2
+				has_tech = doctrine_stormtrooper
+			}
+			modifier = {
+				factor = 3
+				num_of_military_factories > 20
+			}
+		}
+	}
+	training_armored_soldiers_2 = {
+
+		category_all_armor = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			max_organisation = 2
+		}
+
+		research_cost = 1.5
+		start_year = 1924
+
+		folder = {
+			name = equipment_folder
+			position = { x = 2 y = 6 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 0.9
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+			modifier = {
+				factor = 1.1
+				date > 1925.1.1
+			}
+
+			modifier = {
+				factor = 1.1
+				date > 1926.1.1
+			}
+
+			modifier = {
+				factor = 1.1
+				date > 1927.1.1
+			}
+			modifier = {
+				factor = 2
+				has_tech = doctrine_stormtrooper
+			}
+			modifier = {
+				factor = 3
+				num_of_military_factories > 20
+			}
+		}
+	}
+
+	torpedo_boat_equipment = {
+
+		enable_equipments = {
+			torpedo_boat_equipment_0
+		}
+
+		path = {
+			leads_to_tech = training_crew_0_A
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = training_crew_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = training_crew_0_B
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 2 y = 0 }
+		}
+
+		categories = {
+			naval_equipment
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				is_actual_major = yes
+			}
+		}
+	}
+	training_crew_0_A = {
+
+		torpedo_boat = {
+			surface_detection = 0.1
+			search_and_destroy_coordination = 0.5
+		}
+		corvette = {
+			surface_detection = 0.1
+			search_and_destroy_coordination = 0.5
+		}
+		cruiser = {
+			surface_detection = 0.1
+			search_and_destroy_coordination = 0.5
+		}
+		seaplane_tender = {
+			surface_detection = 0.1
+			search_and_destroy_coordination = 0.5
+		}
+		submarine = {
+			surface_detection = 0.1
+			search_and_destroy_coordination = 0.5
+		}
+		battleship = {
+			surface_detection = 0.1
+			search_and_destroy_coordination = 0.5
+		}
+
+		path = {
+			leads_to_tech = training_crew_1_A
+			research_cost_coeff = 1
+		}
+
+		xor = { training_crew_0_B }
+
+		research_cost = 1.5
+
+		folder = {
+			name = equipment_folder
+			position = { x = 0 y = 2 }
+		}
+
+		categories = {
+			naval_equipment
+		}
+
+		ai_will_do = {
+			factor = 0.4
+			modifier = {
+				factor = 0
+				NOT ={ has_tech = corvette_equipment }
+				NOT ={ has_tech = cruiser_equipment }
+				NOT ={ has_tech = seaplane_tender_equipment }
+				NOT ={ has_tech = submarine_equipment }
+				NOT ={ has_tech = battleship_equipment }
+			}
+			modifier = {
+				factor = 0
+				NOT = { any_owned_state = { is_coastal = yes } }
+			}
+			modifier = {
+				factor = 0.5
+				num_of_naval_factories < 12
+			}
+			modifier = {
+				factor = 2
+				has_navy_size = { size > 20 }
+			}
+			modifier = {
+				factor = 2
+				has_navy_size = { size > 50 }
+			}
+			modifier = {
+				factor = 0.5
+				amount_research_slots < 5
+			}
+		}
+	}
+	training_crew_0_B = {
+
+		torpedo_boat = {
+			surface_visibility = -0.25
+			convoy_raiding_coordination = 0.1
+		}
+		corvette = {
+			surface_visibility = -0.25
+			convoy_raiding_coordination = 0.1
+		}
+		cruiser = {
+			surface_visibility = -0.25
+			convoy_raiding_coordination = 0.1
+		}
+		seaplane_tender = {
+			surface_visibility = -0.25
+			convoy_raiding_coordination = 0.1
+		}
+		submarine = {
+			surface_visibility = -0.25
+			convoy_raiding_coordination = 0.1
+		}
+		battleship = {
+			surface_visibility = -0.25
+			convoy_raiding_coordination = 0.1
+		}
+
+		xor = { training_crew_0_A }
+
+		path = {
+			leads_to_tech = training_crew_1_B
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+
+		folder = {
+			name = equipment_folder
+			position = { x = 4 y = 2 }
+		}
+
+		categories = {
+			naval_equipment
+		}
+
+		ai_will_do = {
+			factor = 0.4
+			modifier = {
+				factor = 0
+				NOT ={ has_tech = corvette_equipment }
+				NOT ={ has_tech = cruiser_equipment }
+				NOT ={ has_tech = seaplane_tender_equipment }
+				NOT ={ has_tech = submarine_equipment }
+				NOT ={ has_tech = battleship_equipment }
+			}
+			modifier = {
+				factor = 0
+				NOT = { any_owned_state = { is_coastal = yes } }
+			}
+			modifier = {
+				factor = 2
+				has_navy_size = { size > 20 }
+			}
+			modifier = {
+				factor = 2
+				has_navy_size = { size > 50 }
+			}
+			modifier = {
+				factor = 0.5
+				amount_research_slots < 5
+			}
+		}
+	}
+	training_crew_1_A = {
+
+		navy_capital_ship_attack_factor = 0.1
+		navy_capital_ship_defence_factor = 0.1
+		convoy_escort_efficiency = 0.1
+
+		research_cost = 1.5
+
+		folder = {
+			name = equipment_folder
+			position = { x = 0 y = 4 }
+		}
+
+		categories = {
+			naval_equipment
+		}
+
+		ai_will_do = {
+			factor = 0.4
+			modifier = {
+				factor = 2
+				has_navy_size = { size > 20 }
+			}
+			modifier = {
+				factor = 2
+				has_navy_size = { size > 50 }
+			}
+			modifier = {
+				factor = 0.5
+				amount_research_slots < 5
+			}
+		}
+	}
+	training_crew_1_B = {
+
+		port_strike = 0.5
+		sortie_efficiency = 0.1
+		modifier = {
+			naval_strike_targetting_factor = 0.1
+		}
+
+		research_cost = 1.5
+
+		folder = {
+			name = equipment_folder
+			position = { x = 4 y = 4 }
+		}
+
+		categories = {
+			naval_equipment
+		}
+
+		ai_will_do = {
+			factor = 0.4
+			modifier = {
+				factor = 2
+				has_navy_size = { size > 20 }
+			}
+			modifier = {
+				factor = 2
+				has_navy_size = { size > 50 }
+			}
+			modifier = {
+				factor = 0.5
+				amount_research_slots < 5
+			}
+		}
+	}
+	training_crew_0 = {
+
+		torpedo_boat = {
+			max_organisation = 10
+		}
+		corvette = {
+			max_organisation = 10
+		}
+		cruiser = {
+			max_organisation = 10
+		}
+		seaplane_tender = {
+			max_organisation = 10
+		}
+		submarine = {
+			max_organisation = 10
+		}
+		battleship = {
+			max_organisation = 10
+		}
+
+		path = {
+			leads_to_tech = training_crew_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 2 y = 2 }
+		}
+
+		categories = {
+			naval_equipment
+		}
+
+		ai_will_do = {
+			factor = 0.9
+			modifier = {
+				factor = 0
+				NOT ={ has_tech = corvette_equipment }
+				NOT ={ has_tech = cruiser_equipment }
+				NOT ={ has_tech = seaplane_tender_equipment }
+				NOT ={ has_tech = submarine_equipment }
+				NOT ={ has_tech = battleship_equipment }
+			}
+		}
+	}
+	training_crew_1 = {
+
+		torpedo_boat = {
+			max_organisation = 10
+		}
+		corvette = {
+			max_organisation = 10
+		}
+		cruiser = {
+			max_organisation = 10
+		}
+		seaplane_tender = {
+			max_organisation = 10
+		}
+		submarine = {
+			max_organisation = 10
+		}
+		battleship = {
+			max_organisation = 10
+		}
+
+		path = {
+			leads_to_tech = training_crew_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1922
+
+		folder = {
+			name = equipment_folder
+			position = { x = 2 y = 4 }
+		}
+
+		categories = {
+			naval_equipment
+		}
+
+		ai_will_do = {
+			factor = 0.9
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+		}
+	}
+	training_crew_2 = {
+
+		torpedo_boat = {
+			max_organisation = 10
+		}
+		corvette = {
+			max_organisation = 10
+		}
+		cruiser = {
+			max_organisation = 10
+		}
+		seaplane_tender = {
+			max_organisation = 10
+		}
+		submarine = {
+			max_organisation = 10
+		}
+		battleship = {
+			max_organisation = 10
+		}
+
+		research_cost = 1.5
+		start_year = 1924
+
+		folder = {
+			name = equipment_folder
+			position = { x = 2 y = 6 }
+		}
+
+		categories = {
+			naval_equipment
+		}
+
+		ai_will_do = {
+			factor = 0.9
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+		}
+	}
+
+	recon_plane_equipment = {
+
+		enable_equipments = {
+			recon_plane_equipment_0
+		}
+
+		path = {
+			leads_to_tech = training_pilots_0_A
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = training_pilots_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = training_pilots_0_B
+			research_cost_coeff = 1
+		}
+
+		sub_technologies = {
+			seaplane_equipment
+		}
+
+		research_cost = 1
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 2 y = 0 }
+		}
+
+		categories = {
+			air_equipment
+		}
+
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 2
+				is_actual_major = yes
+			}
+		}
+	}
+	seaplane_equipment = {
+
+		enable_equipments = {
+			seaplane_equipment_0
+		}
+
+		research_cost = 1
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 2 y = 0 }
+		}
+
+		categories = {
+			air_equipment
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				has_navy_size = { type = carrier size > 0 }
+			}
+			modifier = {
+				factor = 0
+				has_navy_size = { type = carrier size < 1 }
+			}
+		}
+	}
+	training_pilots_0_A = {
+
+		air_ace_generation_chance_factor = 0.25
+
+		xor = { training_pilots_0_B }
+
+		path = {
+			leads_to_tech = training_pilots_1_A
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+
+		folder = {
+			name = equipment_folder
+			position = { x = 0 y = 2 }
+		}
+
+		categories = {
+			air_equipment
+		}
+
+		ai_will_do = {
+			factor = 0.4
+			modifier = {
+				factor = 0
+				NOT ={ has_tech = fighter_equipment }
+				NOT ={ has_tech = attacker_equipment }
+				NOT ={ has_tech = bomber_equipment }
+			}
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				num_of_factories > 50
+			}
+			modifier = {
+				factor = 0.5
+				num_of_factories < 20
+			}
+		}
+	}
+	training_pilots_0_B = {
+
+		fighter = {
+			air_agility = 0.2
+		}
+
+		xor = { training_pilots_0_A }
+
+		path = {
+			leads_to_tech = training_pilots_1_B
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+
+		folder = {
+			name = equipment_folder
+			position = { x = 4 y = 2 }
+		}
+
+		categories = {
+			air_equipment
+		}
+
+		ai_will_do = {
+			factor = 0.4
+			modifier = {
+				factor = 0
+				NOT ={ has_tech = fighter_equipment }
+				NOT ={ has_tech = attacker_equipment }
+				NOT ={ has_tech = bomber_equipment }
+			}
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				num_of_factories > 50
+			}
+			modifier = {
+				factor = 0.5
+				num_of_factories < 20
+			}
+		}
+	}
+	training_pilots_1_A = {
+
+		air_strategic_bomber_bombing_factor = 0.3
+
+		research_cost = 1.5
+
+		folder = {
+			name = equipment_folder
+			position = { x = 0 y = 4 }
+		}
+
+		categories = {
+			air_equipment
+		}
+
+		ai_will_do = {
+			factor = 0.4
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				num_of_factories > 50
+			}
+			modifier = {
+				factor = 0.5
+				num_of_factories < 20
+			}
+		}
+	}
+	training_pilots_1_B = {
+
+		air_strategic_bomber_night_penalty = -0.5
+
+		research_cost = 1.5
+
+		folder = {
+			name = equipment_folder
+			position = { x = 4 y = 4 }
+		}
+
+		categories = {
+			air_equipment
+		}
+
+		ai_will_do = {
+			factor = 0.4
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				num_of_factories > 50
+			}
+			modifier = {
+				factor = 0.5
+				num_of_factories < 20
+			}
+		}
+	}
+	training_pilots_0 = {
+
+		air_superiority_efficiency = 0.1
+		army_bonus_air_superiority_factor = 0.05
+
+		path = {
+			leads_to_tech = training_pilots_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1918
+
+		folder = {
+			name = equipment_folder
+			position = { x = 2 y = 2 }
+		}
+
+		categories = {
+			air_equipment
+		}
+
+		ai_will_do = {
+			factor = 0.9
+			modifier = {
+				factor = 0
+				NOT ={ has_tech = fighter_equipment }
+				NOT ={ has_tech = attacker_equipment }
+				NOT ={ has_tech = bomber_equipment }
+			}
+			modifier = {
+				factor = 2
+				is_actual_major = yes
+			}
+			modifier = {
+				factor = 1.2
+				date > 1920.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1921.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1922.1.1
+			}
+			modifier = {
+				factor = 5
+				date > 1923.1.1
+			}
+		}
+	}
+	training_pilots_1 = {
+
+		air_superiority_efficiency = 0.2
+		army_bonus_air_superiority_factor = 0.15
+
+		path = {
+			leads_to_tech = training_pilots_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1922
+
+		folder = {
+			name = equipment_folder
+			position = { x = 2 y = 4 }
+		}
+
+		categories = {
+			air_equipment
+		}
+
+		ai_will_do = {
+			factor = 0.9
+			modifier = {
+				factor = 4
+				is_actual_major = yes
+			}
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1923.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1924.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1925.1.1
+			}
+			modifier = {
+				factor = 5
+				date > 1926.1.1
+			}
+		}
+	}
+	training_pilots_2 = {
+
+		air_superiority_efficiency = 0.2
+		army_bonus_air_superiority_factor = 0.15
+
+		research_cost = 1.5
+		start_year = 1924
+
+		folder = {
+			name = equipment_folder
+			position = { x = 2 y = 6 }
+		}
+
+		categories = {
+			air_equipment
+		}
+
+		ai_will_do = {
+			factor = 0.9
+			modifier = {
+				factor = 4
+				is_actual_major = yes
+			}
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1925.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1926.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1927.1.1
+			}
+			modifier = {
+				factor = 5
+				date > 1928.1.1
+			}
+		}
+	}
+}

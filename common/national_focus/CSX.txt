@@ -1,0 +1,550 @@
+focus_tree = {
+	id = CSX_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CSX
+		}
+	}
+
+	default = no
+	shared_focus = Shared_Plan_of_Reform
+	shared_focus = Shared_Extra_Tech_Slot
+
+	focus = {
+		id = CSX_Taiyuan_Arsenal
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 5
+		y = 0
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+	}
+	focus = {
+		id = CSX_Guoxian_Clique
+		icon = GFX_focus_Agriculture
+		prerequisite = { focus = CSX_Taiyuan_Arsenal }
+		mutually_exclusive = { focus = CSX_Wutai_Clique focus = CSX_Jinnan_Clique }
+		x = 3
+		y = 1
+		cost = 6
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			create_corps_commander = {
+				name = "Xu Yongchang"
+				portrait_path = "gfx/leaders/China/Portrait_China_Xu_Yongchang.tga"
+				traits = { career_officer brilliant_strategist unyielding_defender }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+				id = 106
+			}
+		}
+	}
+	focus = {
+		id = CSX_Wutai_Clique
+		icon = GFX_focus_Automobile_Production
+		prerequisite = { focus = CSX_Taiyuan_Arsenal }
+		mutually_exclusive = { focus = CSX_Guoxian_Clique focus = CSX_Jinnan_Clique }
+		x = 5
+		y = 1
+		cost = 6
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+			create_corps_commander = {
+				name = "Zhao Daiwen"
+				portrait_path = "gfx/leaders/China/Portrait_China_Zhao_Daiwen.tga"
+				traits = { war_hero career_officer unyielding_defender }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+				id = 200
+			}
+		}
+	}
+	focus = {
+		id = CSX_Jinnan_Clique
+		icon = GFX_focus_Root_out_Funding
+		prerequisite = { focus = CSX_Taiyuan_Arsenal }
+		mutually_exclusive = { focus = CSX_Guoxian_Clique focus = CSX_Wutai_Clique }
+		x = 7
+		y = 1
+		cost = 6
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+			create_corps_commander = {
+				name = "Fu Zuoyi"
+				portrait_path = "gfx/leaders/China/Portrait_China_Fu_Zuoyi.tga"
+				traits = { career_officer unyielding_defender urban_assault_specialist }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+				id = 107
+			}
+		}
+	}
+	focus = {
+		id = CSX_Shanxi_Bank
+		icon = GFX_focus_Pile_of_Money
+		prerequisite = { focus = CSX_Guoxian_Clique }
+		x = 2
+		y = 2
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Shanxi_Bank } }
+				add_ideas = Shanxi_Bank
+			}
+		}
+	}
+	focus = {
+		id = CSX_Control_Suiyuan
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { focus = CSX_Guoxian_Clique focus = CSX_Wutai_Clique }
+		x = 4
+		y = 2
+		cost = 8
+
+		available = {
+			OR = {
+				has_global_flag = Anhui_Won
+				has_global_flag = Zhili_Won
+				has_global_flag = Zhili_Anhui_Alliance
+			}
+			CSY = {
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+			}
+		}
+
+		bypass = {
+			CSY = { exists = no }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = CSY }
+		}
+	}
+	focus = {
+		id = CSX_Control_Shaanxi
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { focus = CSX_Wutai_Clique focus = CSX_Jinnan_Clique }
+		x = 6
+		y = 2
+		cost = 8
+
+		available = {
+			OR = {
+				has_global_flag = Anhui_Won
+				has_global_flag = Zhili_Won
+				has_global_flag = Zhili_Anhui_Alliance
+			}
+			CSA = {
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+			}
+		}
+
+		bypass = {
+			CSA = { exists = no }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = CSA }
+		}
+	}
+	focus = {
+		id = CSX_Shanxi_Railway
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = CSX_Jinnan_Clique }
+		x = 8
+		y = 2
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Shanxi_Railway } }
+				add_ideas = Shanxi_Railway
+			}
+		}
+	}
+	focus = {
+		id = CSX_Improve_Relations_with_the_Japan
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		prerequisite = { focus = CSX_Control_Suiyuan focus = CSX_Control_Shaanxi }
+		mutually_exclusive = { focus = CSX_Improve_Relations_with_the_Russia }
+		x = 3
+		y = 3
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_political_road = yes
+			set_country_flag = SH_BYC
+			add_political_road = yes
+			if = {
+				limit = { NOT = { has_idea = Cooperation_with_Japan } }
+				add_ideas = Cooperation_with_Japan
+			}
+			add_stability = 0.05
+			JAP = {
+				add_opinion_modifier = { target = ROOT modifier = New_friendship }
+				add_ai_strategy = { type = alliance id = "CSX" value = 100 }
+				add_ai_strategy = { type = protect id = "CSX" value = 100 }
+				add_ai_strategy = { type = send_volunteers_desire id = "CSX" value = 100 }
+				add_ai_strategy = { type = support id = "CSX" value = 100 }
+			}
+			unlock_decision_tooltip = Formable_BYC
+		}
+	}
+	focus = {
+		id = CSX_Improve_Relations_with_the_Russia
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = { focus = CSX_Control_Suiyuan focus = CSX_Control_Shaanxi }
+		mutually_exclusive = { focus = CSX_Improve_Relations_with_the_Japan }
+		x = 7
+		y = 3
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_political_road = yes
+			set_country_flag = SH_NPC
+			add_political_road = yes
+			add_to_variable = { var = relationship_with_russia value = 100 tooltip = Increase_the_opinion_of_Russia_for_us_by_100 }
+			unlock_decision_tooltip = Formable_ROC
+		}
+	}
+	focus = {
+		id = CSX_Improve_Relations_with_the_Germany
+		icon = GFX_Experience_GER
+		prerequisite = { focus = CSX_Shanxi_Bank }
+		x = 1
+		y = 4
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = relationship_with_germany value = 100 tooltip = Increase_the_opinion_of_Germany_for_us_by_100 }
+		}
+	}
+	focus = {
+		id = CSX_Cooperation_with_Fengtian
+		icon = GFX_Experience_Fengtian_Clique
+		prerequisite = { focus = CSX_Improve_Relations_with_the_Japan }
+		mutually_exclusive = { focus = CSX_Shanxi_First focus = CSX_Cooperation_with_Guangdong }
+		x = 3
+		y = 4
+		cost = 8
+
+		available = {
+			has_war = no
+			is_subject = no
+			is_in_faction = no
+			any_other_country = {
+				has_country_flag = Fengtian_Member
+				is_faction_leader = yes
+				has_capitulated = no
+			}
+		}
+
+		bypass = {
+			any_other_country = {
+				has_country_flag = Fengtian_Member
+				is_faction_leader = yes
+				is_in_faction_with = ROOT
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = Attitude_determines_success_or_failure
+			random_other_country = {
+				limit = {
+					has_country_flag = Fengtian_Member
+					is_faction_leader = yes
+					has_capitulated = no
+				}
+				country_event = new_Generic.1
+			}
+		}
+	}
+	focus = {
+		id = CSX_Shanxi_First
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = CSX_Improve_Relations_with_the_Japan focus = CSX_Improve_Relations_with_the_Russia }
+		mutually_exclusive = { focus = CSX_Cooperation_with_Fengtian focus = CSX_Cooperation_with_Guangdong }
+		x = 5
+		y = 4
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			set_rule = { can_create_factions = yes }
+		}
+	}
+	focus = {
+		id = CSX_Cooperation_with_Guangdong
+		icon = GFX_Experience_CNP
+		prerequisite = { focus = CSX_Improve_Relations_with_the_Russia }
+		mutually_exclusive = { focus = CSX_Cooperation_with_Fengtian focus = CSX_Shanxi_First }
+		x = 7
+		y = 4
+		cost = 8
+
+		available = {
+			is_subject = no
+			is_in_faction = no
+			CGD = {
+				exists = yes
+				is_subject = no
+				NOT = { has_war_with = ROOT }
+				is_faction_leader = yes
+			}
+		}
+
+		cancel = {
+			OR = {
+				is_subject = yes
+				is_in_faction = yes
+			}
+		}
+
+		bypass = {
+			OR = {
+				CGD = { exists = no }
+				CGD = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = Attitude_determines_success_or_failure
+			add_war_support = 0.05
+			CGD = { country_event = new_Generic.1 }
+		}
+	}
+	focus = {
+		id = CSX_Improve_Relations_with_the_America
+		icon = GFX_Experience_USA
+		prerequisite = { focus = CSX_Shanxi_Railway }
+		x = 9
+		y = 4
+		cost = 8
+
+		available = {
+			NOT = { has_war_with = PHL }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = relationship_with_america value = 100 tooltip = Increase_the_opinion_of_America_for_us_by_100 }
+		}
+	}
+	focus = {
+		id = CSX_China_Japan_Treaty_of_Equality
+		icon = GFX_focus_jap_pacific_guardian
+		prerequisite = { focus = CSX_Cooperation_with_Fengtian focus = CSX_Shanxi_First }
+		prerequisite = { focus = CSX_Shanxi_Bank }
+		x = 2
+		y = 5
+		cost = 8
+
+		available = {
+			OR = {
+				JAP = {
+					exists = yes
+					has_opinion = { target = ROOT value > 99 }
+				}
+				JAP = { exists = no }
+				has_government = Radical_Leftist
+				has_government = Radical_Rightist
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 3 }
+			if = {
+				limit = { has_idea = Cooperation_with_Japan }
+				swap_ideas = {
+					remove_idea = Cooperation_with_Japan
+					add_idea = Cooperation_with_Japan_Equality
+				}
+			}
+		}
+	}
+	focus = {
+		id = CSX_Northwest_Industrial_Company
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = CSX_Cooperation_with_Fengtian focus = CSX_Shanxi_First focus = CSX_Cooperation_with_Guangdong }
+		x = 5
+		y = 5
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Northwest_Industrial_Company } }
+				add_ideas = Northwest_Industrial_Company
+			}
+		}
+	}
+	focus = {
+		id = CSX_Against_the_Central_Government
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = CSX_Shanxi_First focus = CSX_Cooperation_with_Guangdong }
+		prerequisite = { focus = CSX_Shanxi_Railway }
+		x = 8
+		y = 5
+		cost = 8
+
+		available = {
+			OR = {
+				AND = {
+					has_global_flag = Anhui_Won
+					any_other_country = {
+						is_faction_leader = yes
+						has_country_flag = Anhui_Member
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				AND = {
+					has_global_flag = Zhili_Won
+					any_other_country = {
+						is_faction_leader = yes
+						has_country_flag = Zhili_Member
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				AND = {
+					has_global_flag = Zhili_Anhui_Alliance
+					any_other_country = {
+						is_faction_leader = yes
+						has_country_flag = Beiyang_Member
+						NOT = { has_war_with = ROOT }
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_global_flag = Anhui_Won }
+				random_other_country = {
+					limit = {
+						is_faction_leader = yes
+						has_country_flag = Anhui_Member
+					}
+					ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = Zhili_Won
+						has_global_flag = Zhili_Anhui_Alliance
+					}
+				}
+				random_other_country = {
+					limit = {
+						is_faction_leader = yes
+						has_country_flag = Zhili_Member
+					}
+					ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+				}
+			}
+			if = {
+				limit = { has_global_flag = Zhili_Anhui_Alliance }
+				random_other_country = {
+					limit = {
+						is_faction_leader = yes
+						has_country_flag = Beiyang_Member
+					}
+					ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+				}
+			}
+		}
+	}
+}

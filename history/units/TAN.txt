@@ -1,0 +1,23 @@
+﻿########
+#Templates
+########
+division_template = {
+	name = "Strelkovaya Polk"
+	division_names_group = TAN_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+}
+
+########
+#OOB
+########
+units = {
+	division = {
+		name = "1ya Polk"
+		location = 10627
+		division_template = "Strelkovaya Polk"
+		start_equipment_factor = 0.7
+	}
+}

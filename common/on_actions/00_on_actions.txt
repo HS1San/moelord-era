@@ -1,0 +1,660 @@
+on_actions = {
+	on_new_term_election = {
+		random_events = {
+			100 = election.2
+			100 = election.3
+			100 = election.4
+			100 = election.5
+			100 = election.6
+			100 = election.11
+			100 = election.12
+			100 = election.13
+			100 = election.14
+			100 = election.15
+		}
+	}
+
+	on_ace_promoted = {
+		random_events = {
+			100 = ace_promoted.1
+			5 = ace_promoted.2
+		}
+	}
+	on_aces_killed_each_other = {
+		random_events = {
+			100 = aces_killed_each_other.1
+		}
+	}
+	on_ace_killed_by_ace = {
+		random_events = {
+			100 = ace_killed_by_ace.1
+		}
+	}
+	on_ace_killed_other_ace = {
+		random_events = {
+			100 = ace_killed_other_ace.1
+		}
+	}
+	on_ace_killed = {
+		random_events = {
+			100 = ace_died.1
+		}
+	}
+	on_justifying_wargoal_pulse = {
+		random_events = {
+			100 = war_justification.1
+			100 = war_justification.2
+			100 = war_justification.3
+			100 = war_justification.4
+			100 = war_justification.5
+			100 = war_justification.6
+			100 = war_justification.7
+			100 = war_justification.8
+			100 = war_justification.9
+			100 = war_justification.10
+			100 = war_justification.11
+			100 = war_justification.12
+			100 = war_justification.13
+			100 = war_justification.14
+			100 = war_justification.15
+			100 = war_justification.16
+			100 = war_justification.17
+			100 = war_justification.18
+			100 = war_justification.19
+			17000 = 0
+		}
+	}
+	on_wargoal_expire = {
+		random_events = {
+			100 = war_justification.301
+		}
+	}
+	on_leave_faction = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = Zhili_Member
+					NOT = { has_country_flag = Ignoring_The_Change }
+				}
+				clr_country_flag = Zhili_Member
+			}
+			if = {
+				limit = {
+					has_country_flag = Anhui_Member
+					NOT = { has_country_flag = Ignoring_The_Change }
+				}
+				clr_country_flag = Anhui_Member
+			}
+			if = {
+				limit = {
+					has_country_flag = Fengtian_Member
+					NOT = { has_country_flag = Ignoring_The_Change }
+				}
+				clr_country_flag = Fengtian_Member
+			}
+			if = {
+				limit = { NOT = { has_country_flag = Ignoring_The_Change } }
+				FROM = {
+					add_opinion_modifier = { modifier = faction_traitor target = ROOT days = 365 }
+					add_opinion_modifier = { modifier = faction_traitor_trade target = ROOT days = 365 }
+				}
+			}
+		}
+	}
+	on_create_faction = {
+		effect = {
+		}
+	}
+	on_offer_join_faction = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = SH_WAR
+					FROM = {
+						has_country_flag = SH_WAR
+						NOT = {
+							has_country_flag = Zhili_Member
+							has_country_flag = Anhui_Member
+							has_country_flag = Fengtian_Member
+						}
+					}
+				}
+				if = {
+					limit = { has_country_flag = Zhili_Member }
+					FROM = { set_country_flag = Zhili_Member }
+				}
+				if = {
+					limit = { has_country_flag = Anhui_Member }
+					FROM = { set_country_flag = Anhui_Member }
+				}
+				if = {
+					limit = { has_country_flag = Fengtian_Member }
+					FROM = { set_country_flag = Fengtian_Member }
+				}
+			}
+		}
+	}
+	on_join_faction = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = SH_WAR
+					NOT = {
+						has_country_flag = Zhili_Member
+						has_country_flag = Anhui_Member
+						has_country_flag = Fengtian_Member
+					}
+					FROM = { has_country_flag = SH_WAR }
+				}
+				if = {
+					limit = { FROM = { has_country_flag = Zhili_Member } }
+					set_country_flag = Zhili_Member
+				}
+				if = {
+					limit = { FROM = { has_country_flag = Anhui_Member } }
+					set_country_flag = Anhui_Member
+				}
+				if = {
+					limit = { FROM = { has_country_flag = Fengtian_Member } }
+					set_country_flag = Fengtian_Member
+				}
+			}
+		}
+	}
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							has_cosmetic_tag = Colonial_CWH
+							has_cosmetic_tag = Colonial_CXG
+							has_cosmetic_tag = Colonial_BUR
+							has_cosmetic_tag = Colonial_IND
+							has_cosmetic_tag = Colonial_PAK
+							has_cosmetic_tag = Colonial_MAL
+							has_cosmetic_tag = Colonial_SIN
+							has_cosmetic_tag = Colonial_SAB
+							has_cosmetic_tag = Colonial_SWK
+						}
+					}
+				}
+				subtract_from_variable = { var = relationship_with_britain value = 100 }
+			}
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							has_cosmetic_tag = Colonial_INC
+							has_cosmetic_tag = Colonial_PON
+						}
+					}
+				}
+				subtract_from_variable = { var = relationship_with_france value = 100 }
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_cosmetic_tag = Colonial_PHL
+					}
+				}
+				subtract_from_variable = { var = relationship_with_america value = 100 }
+			}
+			if = {
+				limit = {
+					has_idea = Control_Shanghai
+					FROM = { tag = CSH }
+				}
+				remove_ideas = Control_Shanghai
+			}
+			if = {
+				limit = {
+					FROM = { has_idea = Control_Shanghai }
+					tag = CSH
+				}
+				FROM = { remove_ideas = Control_Shanghai }
+			}
+			if = {
+				limit = {
+					has_idea = Cooperation_with_Japan
+					FROM = { tag = JAP }
+				}
+				remove_ideas = Cooperation_with_Japan
+			}
+			if = {
+				limit = {
+					FROM = { has_idea = Second_Loan_of_Nishihara_Kamezo }
+					tag = JAP
+				}
+				FROM = { remove_ideas = Second_Loan_of_Nishihara_Kamezo }
+			}
+			if = {
+				limit = {
+					has_idea = Second_Loan_of_Nishihara_Kamezo
+					FROM = { tag = JAP }
+				}
+				remove_ideas = Second_Loan_of_Nishihara_Kamezo
+			}
+			if = {
+				limit = {
+					FROM = { has_idea = Cooperation_with_Japan }
+					tag = JAP
+				}
+				FROM = { remove_ideas = Cooperation_with_Japan }
+			}
+			if = {
+				limit = {
+					has_idea = Between_Britain_and_France
+					FROM = {
+						OR = {
+							tag = BUR
+							tag = INC
+						}
+					}
+				}
+				remove_ideas = Between_Britain_and_France
+			}
+			if = {
+				limit = {
+					FROM = { has_idea = Between_Britain_and_France }
+					OR = {
+						tag = BUR
+						tag = INC
+					}
+				}
+				FROM = { remove_ideas = Between_Britain_and_France }
+			}
+			if = {
+				limit = {
+					has_idea = Crashing_into_Manchuria
+					FROM = {
+						OR = {
+							tag = CFT
+							tag = CJL
+							tag = CHJ
+						}
+					}
+				}
+				remove_ideas = Crashing_into_Manchuria
+			}
+			if = {
+				limit = {
+					FROM = { has_idea = Crashing_into_Manchuria }
+					OR = {
+						tag = CFT
+						tag = CJL
+						tag = CHJ
+					}
+				}
+				FROM = { remove_ideas = Crashing_into_Manchuria }
+			}
+			if = {
+				limit = {
+					has_idea = Influence_of_Kuomintang
+					FROM = { tag = CGD }
+				}
+				remove_ideas = Influence_of_Kuomintang
+			}
+			if = {
+				limit = {
+					FROM = { has_idea = Influence_of_Kuomintang }
+					tag = CGD
+				}
+				FROM = { remove_ideas = Influence_of_Kuomintang }
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_civil_war = yes
+						has_country_flag = siphoned_equipment_stockpiles_for_civil_war
+					}
+					has_civil_war = yes
+				}
+				FROM = {
+					clr_country_flag = siphoned_equipment_stockpiles_for_civil_war
+					add_equipment_to_stockpile = {
+						type = rifle_equipment
+						amount = 1000
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_civil_war = yes
+						has_country_flag = formulated_surprise_attack_plan_for_civil_war
+					}
+					has_civil_war = yes
+				}
+				FROM = {
+					clr_country_flag = formulated_surprise_attack_plan_for_civil_war
+					add_timed_idea = {
+						idea = civil_war_surprise_attack_plan
+						days = 30
+					}
+				}
+			}
+		}
+	}
+	on_faction_formed = {
+		effect = {
+			news_event = { id = news.159 }
+		}
+	}
+	on_capitulation = {
+		effect = {
+			news_event = { id = country_capitulated.0 days = 0 }
+		}
+	}
+	on_annex = {
+		effect = {
+			if = {
+				limit = { FROM = { has_idea = Influence_of_Kuomintang } }
+				remove_ideas = Influence_of_Kuomintang
+			}
+			if = {
+				limit = {
+					tag = CHN
+					has_global_flag = New_Hunan_Faction
+					FROM = {
+						tag = CGX
+						has_global_flag = New_Guangxi_Faction
+					}
+					has_global_flag = Nanjing_Wuhan_War
+				}
+				clr_global_flag = Nanjing_Wuhan_War
+				every_other_country = { news_event = new_News.20 }
+			}
+			if = {
+				limit = {
+					tag = CGX
+					has_global_flag = New_Guangxi_Faction
+					FROM = {
+						tag = CHN
+						has_global_flag = New_Hunan_Faction
+					}
+					has_global_flag = Nanjing_Wuhan_War
+				}
+				clr_global_flag = Nanjing_Wuhan_War
+				every_other_country = { news_event = new_News.21 }
+			}
+			if = {
+				limit = {
+					has_country_flag = Anhui_Member
+					FROM = { has_country_flag = Zhili_Member }
+					NOT = {
+						has_global_flag = Anhui_Won
+						has_global_flag = Zhili_Won
+					}
+				}
+				set_global_flag = Anhui_Won
+				clr_global_flag = Fengtian_Zhili_Support
+				clr_global_flag = Fengtian_Anhui_Support
+				if = {
+					limit = { MON = { has_country_flag = Zhili_MON } }
+					MON = {
+						clr_country_flag = Zhili_MON
+						set_country_flag = Zhili_GIE
+					}
+				}
+				every_country = {
+					limit = {
+						has_country_flag = Anhui_Member
+						is_faction_leader = no
+					}
+					set_country_flag = Old_Anhui_Member
+					clr_country_flag = Anhui_Member
+				}
+				every_country = {
+					limit = { has_country_flag = Zhili_Member }
+					set_country_flag = Old_Zhili_Member
+					clr_country_flag = Zhili_Member
+				}
+				if = {
+					limit = {
+						NOT = { has_global_flag = Fengtian_Zhili_Union }
+					}
+					every_country = {
+						limit = { has_country_flag = Old_Anhui_Member }
+						#leave_faction = yes
+					}
+				}
+				CGS = { country_event = { id = new_CGS.1 days = 7 } }
+			}
+			if = {
+				limit = {
+					has_country_flag = Zhili_Member
+					FROM = { has_country_flag = Anhui_Member }
+					NOT = {
+						has_global_flag = Zhili_Won
+						has_global_flag = Anhui_Won
+					}
+				}
+				set_global_flag = Zhili_Won
+				clr_global_flag = Fengtian_Anhui_Support
+				clr_global_flag = Fengtian_Zhili_Support
+				if = {
+					limit = { MON = { has_country_flag = Anhui_MON } }
+					MON = {
+						clr_country_flag = Anhui_MON
+						set_country_flag = Anhui_GIE
+					}
+				}
+				every_country = {
+					limit = {
+						has_country_flag = Zhili_Member
+						is_faction_leader = no
+					}
+					set_country_flag = Old_Zhili_Member
+					clr_country_flag = Zhili_Member
+				}
+				every_country = {
+					limit = { has_country_flag = Anhui_Member }
+					set_country_flag = Old_Anhui_Member
+					clr_country_flag = Anhui_Member
+				}
+				if = {
+					limit = {
+						NOT = { has_global_flag = Fengtian_Anhui_Union }
+					}
+					every_country = {
+						limit = { has_country_flag = Old_Zhili_Member }
+						#leave_faction = yes
+					}
+				}
+				CGS = { country_event = { id = new_CGS.1 days = 7 } }
+			}
+			if = {
+				limit = {
+					FROM = { has_idea = Control_Shanghai }
+				}
+				FROM = { remove_ideas = Control_Shanghai }
+				ROOT = { add_ideas = Control_Shanghai }
+			}
+			if = {
+				limit = {
+					FROM = { has_idea = Lost_Qingdao }
+				}
+				FROM = { remove_ideas = Lost_Qingdao }
+				ROOT = { add_ideas = Lost_Qingdao }
+			}
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							has_cosmetic_tag = CNW
+							has_cosmetic_tag = CNE
+							has_cosmetic_tag = CSW
+							has_cosmetic_tag = CSE
+							has_cosmetic_tag = CMA
+						}
+					}
+				}
+				FROM = { drop_cosmetic_tag = yes }
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_country_flag = Zhili_Member
+						NOT = { has_country_flag = Ignoring_The_Change }
+					}
+				}
+				FROM = { clr_country_flag = Zhili_Member }
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_country_flag = Anhui_Member
+						NOT = { has_country_flag = Ignoring_The_Change }
+					}
+				}
+				FROM = { clr_country_flag = Anhui_Member }
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_country_flag = Fengtian_Member
+						NOT = { has_country_flag = Ignoring_The_Change }
+					}
+				}
+				FROM = { clr_country_flag = Fengtian_Member }
+			}
+			if = {
+				limit = { FROM = { has_country_flag = King_of_Northeast } }
+				FROM = { clr_country_flag = King_of_Northeast }
+			}
+			if = {
+				limit = { FROM = { has_country_flag = King_of_Northwest } }
+				FROM = { clr_country_flag = King_of_Northwest }
+			}
+			if = {
+				limit = { FROM = { has_country_flag = King_of_Southeast } }
+				FROM = { clr_country_flag = King_of_Southeast }
+			}
+			if = {
+				limit = { FROM = { has_country_flag = King_of_Southwest } }
+				FROM = { clr_country_flag = King_of_Southwest }
+			}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM.FROM = {
+						is_controlled_by = ROOT
+						state = 343
+					}
+					NOT = {
+						OR = {
+							ROOT = { has_idea = Maimaicheng_Trade }
+							ROOT = { has_government = Radical_Rightist }
+							ROOT = { has_government = Radical_Leftist }
+						}
+					}
+				}
+				FROM = {remove_ideas = Maimaicheng_Trade}
+				ROOT = {add_ideas = Maimaicheng_Trade}
+			}
+			if = {
+				limit = {
+					NOT = { has_war_with = FROM }
+					FROM.FROM = {
+						is_owned_by = ROOT
+						state = 157
+					}
+					ROOT = { has_idea = Lost_Qingdao }
+				}
+				ROOT = { remove_ideas = Lost_Qingdao }
+			}
+			if = {
+				limit = {
+					NOT = { has_war_with = JAP }
+					FROM.FROM = {
+						is_owned_by = ROOT
+						state = 157
+					}
+					any_country = {
+						NOT = { tag = ROOT }
+						has_idea = Lost_Qingdao
+					}
+				}
+				random_country = {
+					limit = { has_idea = Lost_Qingdao }
+					remove_ideas = Lost_Qingdao
+				}
+			}
+		}
+	}
+	on_army_leader_daily = {
+		effect = {
+			if = {
+				limit = {
+					check_variable = { random < 0.02 }
+					NOT = { has_trait = sick }
+					set_temp_variable = { temp = sum_unit_terrain_modifier@sickness_chance }
+					divide_temp_variable = { temp = num_units }
+					check_variable = { temp > 0.75 }
+					NOT = { has_unit_leader_flag = recently_sick }
+				}
+				add_timed_unit_leader_trait = { trait = sick days = 30 }
+				unit_leader_event = { id = generic.17 }
+			}
+		}
+	}
+	on_army_leader_won_combat = {
+		effect = {
+			if = {
+				limit = {
+					set_temp_variable = { chance = 0.001 }
+					set_temp_variable = { factor = 1.0 }
+					add_to_temp_variable = { factor = leader_modifier@wounded_chance_factor } 
+					multiply_temp_variable = { chance = factor }
+					check_variable = { random < chance }
+					NOT = { has_trait = wounded }
+				}
+				add_timed_unit_leader_trait = { trait = wounded days = 90 }
+				unit_leader_event = { id = generic.18 }
+			}
+		}
+	}
+	on_army_leader_lost_combat = {
+		effect = {
+			if = {
+				limit = {
+					set_temp_variable = { chance = 0.005 }
+					set_temp_variable = { factor = 1.0 }
+					add_to_temp_variable = { factor = leader_modifier@wounded_chance_factor } 
+					multiply_temp_variable = { chance = factor }
+					check_variable = { random < chance }
+					NOT = { has_trait = wounded }
+				}
+				add_timed_unit_leader_trait = { trait = wounded days = 90 }
+				unit_leader_event = { id = generic.18 }
+			}
+		}
+	}
+	on_army_leader_promoted = {
+		effect = {
+			add_timed_unit_leader_trait = { trait = recently_promoted days = 100 }
+		}
+	}
+	on_paradrop = {
+	    effect = {
+		    set_country_flag = has_paradropped_flag
+		}
+	}
+	on_ruling_party_change = { 
+		# temp var old_ideology_token is available for effects
+		effect = {
+			every_controlled_state = {
+				limit = {
+					has_resistance = yes
+				}
+				set_temp_variable = { new_compliance = compliance }
+				multiply_temp_variable = { new_compliance = 0.5 }
+				set_compliance = new_compliance
+			}
+		}
+	}
+}

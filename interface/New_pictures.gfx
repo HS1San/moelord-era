@@ -1,0 +1,298 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_select_date_WE"
+		texturefile = "gfx/interface/select_date_WE.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_RCW"
+		texturefile = "gfx/interface/select_date_RCW.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_generic_decision_GBR"
+		texturefile = "gfx/interface/decisions/decision_generic_decision_GBR.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_generic_decision_ITA"
+		texturefile = "gfx/interface/decisions/decision_generic_decision_ITA.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_generic_decision_USA"
+		texturefile = "gfx/interface/decisions/decision_generic_decision_USA.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_generic_decision_GER"
+		texturefile = "gfx/interface/decisions/decision_generic_decision_GER.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_generic_decision_FRA"
+		texturefile = "gfx/interface/decisions/decision_generic_decision_FRA.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_generic_decision_RUS"
+		texturefile = "gfx/interface/decisions/decision_generic_decision_RUS.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_generic_industry_GBR"
+		texturefile = "gfx/interface/decisions/decision_generic_industry_GBR.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_generic_industry_ITA"
+		texturefile = "gfx/interface/decisions/decision_generic_industry_ITA.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_generic_industry_USA"
+		texturefile = "gfx/interface/decisions/decision_generic_industry_USA.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_generic_industry_GER"
+		texturefile = "gfx/interface/decisions/decision_generic_industry_GER.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_generic_industry_FRA"
+		texturefile = "gfx/interface/decisions/decision_generic_industry_FRA.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_generic_industry_RUS"
+		texturefile = "gfx/interface/decisions/decision_generic_industry_RUS.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_flag_of_CEM"
+		texturefile = "gfx/interface/decisions/flag_of_CEM.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_flag_of_CEH"
+		texturefile = "gfx/interface/decisions/flag_of_CEH.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_flag_of_BYC"
+		texturefile = "gfx/interface/decisions/flag_of_BYC.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_flag_of_ROC"
+		texturefile = "gfx/interface/decisions/flag_of_ROC.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_flag_of_PEC"
+		texturefile = "gfx/interface/decisions/flag_of_PEC.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_flag_of_WPC"
+		texturefile = "gfx/interface/decisions/flag_of_WPC.dds"
+	}
+	spriteType = {
+		name = "GFX_new_country_event_replace_flag_BYC"
+		texturefile = "gfx/event_pictures/new_country_event_replace_flag_BYC.dds"
+	}
+	spriteType = {
+		name = "GFX_new_country_event_replace_flag_ROC"
+		texturefile = "gfx/event_pictures/new_country_event_replace_flag_ROC.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_flag_of_GBR"
+		texturefile = "gfx/interface/decisions/flag_of_GBR.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_flag_of_USA"
+		texturefile = "gfx/interface/decisions/flag_of_USA.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_flag_of_FRA"
+		texturefile = "gfx/interface/decisions/flag_of_FRA.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_flag_of_ITA"
+		texturefile = "gfx/interface/decisions/flag_of_ITA.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_flag_of_GER"
+		texturefile = "gfx/interface/decisions/flag_of_GER.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_flag_of_RUS"
+		texturefile = "gfx/interface/decisions/flag_of_RUS.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_00"
+		texturefile = "gfx/event_pictures/new_news_event_00.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_01"
+		texturefile = "gfx/event_pictures/new_news_event_01.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_02"
+		texturefile = "gfx/event_pictures/new_news_event_02.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_03"
+		texturefile = "gfx/event_pictures/new_news_event_03.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_04"
+		texturefile = "gfx/event_pictures/new_news_event_04.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_05"
+		texturefile = "gfx/event_pictures/new_news_event_05.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_06"
+		texturefile = "gfx/event_pictures/new_news_event_06.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_07"
+		texturefile = "gfx/event_pictures/new_news_event_07.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_08"
+		texturefile = "gfx/event_pictures/new_news_event_08.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_09"
+		texturefile = "gfx/event_pictures/new_news_event_09.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_10"
+		texturefile = "gfx/event_pictures/new_news_event_10.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_11"
+		texturefile = "gfx/event_pictures/new_news_event_11.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_12"
+		texturefile = "gfx/event_pictures/new_news_event_12.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_13"
+		texturefile = "gfx/event_pictures/new_news_event_13.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_14"
+		texturefile = "gfx/event_pictures/new_news_event_14.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_15"
+		texturefile = "gfx/event_pictures/new_news_event_15.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_16"
+		texturefile = "gfx/event_pictures/new_news_event_16.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_17"
+		texturefile = "gfx/event_pictures/new_news_event_17.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_18"
+		texturefile = "gfx/event_pictures/new_news_event_18.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_19"
+		texturefile = "gfx/event_pictures/new_news_event_19.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_20"
+		texturefile = "gfx/event_pictures/new_news_event_20.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_21"
+		texturefile = "gfx/event_pictures/new_news_event_21.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_22"
+		texturefile = "gfx/event_pictures/new_news_event_22.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_23"
+		texturefile = "gfx/event_pictures/new_news_event_23.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_24"
+		texturefile = "gfx/event_pictures/new_news_event_24.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_25"
+		texturefile = "gfx/event_pictures/new_news_event_25.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_26"
+		texturefile = "gfx/event_pictures/new_news_event_26.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_27"
+		texturefile = "gfx/event_pictures/new_news_event_27.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_28"
+		texturefile = "gfx/event_pictures/new_news_event_28.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_29"
+		texturefile = "gfx/event_pictures/new_news_event_29.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_30"
+		texturefile = "gfx/event_pictures/new_news_event_30.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_31"
+		texturefile = "gfx/event_pictures/new_news_event_31.dds"
+	}
+	spriteType = {
+		name = "GFX_new_news_event_32"
+		texturefile = "gfx/event_pictures/new_news_event_32.dds"
+	}
+	spriteType = {
+		name = "GFX_Urga_Map"
+		texturefile = "gfx/event_pictures/Urga.dds"
+	}
+	spriteType = {
+		name = "GFX_China_Mongolia"
+		texturefile = "gfx/event_pictures/china_mongolia_meeting.dds"
+	}
+	spriteType = {
+		name = "GFX_China_Mongolia_2"
+		texturefile = "gfx/event_pictures/china_mongolia_meeting_2.dds"
+	}
+	spriteType = {
+		name = "GFX_China_Troop_North"
+		texturefile = "gfx/event_pictures/chinese_soldier_north.dds"
+	}
+	spriteType = {
+		name = "GFX_Warlord_Mongol_Meeting"
+		texturefile = "gfx/event_pictures/warlord_mongol_meeting.dds"
+	}
+	spriteType = {
+		name = "GFX_Mongol_Meeting"
+		texturefile = "gfx/event_pictures/mongol_meeting.dds"
+	}
+	spriteType = {
+		name = "GFX_Red_Mongol"
+		texturefile = "gfx/event_pictures/red_mongolia.dds"
+	}
+	spriteType = {
+		name = "GFX_Russian_Mongolian_Treaty"
+		texturefile = "gfx/event_pictures/russian_treaty.dds"
+	}
+	spriteType = {
+		name = "GFX_Chinese_Population"
+		texturefile = "gfx/event_pictures/chinese_ppl.dds"
+	}
+	spriteType = {
+		name = "GFX_Mongol_Nobility"
+		texturefile = "gfx/event_pictures/mongol_nobility.dds"
+	}
+	spriteType = {
+		name = "GFX_Mongol_Army"
+		texturefile = "gfx/event_pictures/mongol_army.dds"
+	}
+	spriteType = {
+		name = "GFX_Bogd_Khan_Flag"
+		texturefile = "gfx/event_pictures/bogd_khan_flag.dds"
+	}
+	spriteType = {
+		name = "GFX_Khanate_Court"
+		texturefile = "gfx/event_pictures/bogd_khan_court.dds"
+	}
+}

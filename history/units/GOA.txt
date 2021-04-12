@@ -1,0 +1,25 @@
+﻿########
+#Templates
+########
+division_template = {
+	name = "Força de Caçadores"
+	division_names_group = POR_CAC_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+########
+#OOB
+########
+units = {
+	division= {	
+		name = "Caçadores de Goa"	
+		location = 1273
+		division_template = "Força de Caçadores"
+		start_experience_factor = 0.1
+
+	}
+}

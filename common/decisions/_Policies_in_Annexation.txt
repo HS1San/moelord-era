@@ -1,0 +1,921 @@
+Diplomacy_with_CBJ = {
+	annexation_DONGBEI_CONQ = {
+		icon = generic_independence
+		allowed = {
+			NOT = {
+				original_tag = CFT
+				original_tag = CHJ
+				original_tag = CJL
+			}
+		}
+		activation = {
+			owns_state = 12
+			12 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			is_subject = no
+			has_war = no
+			CFT = { exists = no }
+			NOT = { has_country_flag = annexation_DONGBEI_CONQ }
+			NOT = { has_country_flag = Fengtian_Member }
+			NOT = { has_country_flag = Old_Fengtian_Member }
+			NOT = { has_cosmetic_tag = CNE }
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+				has_country_flag = Old_Anhui_Member
+				has_country_flag = Old_Zhili_Member
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = { owns_state = 12 }
+		}
+		complete_effect = {
+			set_country_flag = annexation_DONGBEI_CONQ
+			country_event = new_Annex.1
+		}
+		timeout_effect = {
+			set_country_flag = annexation_DONGBEI_CONQ
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = { base = 100 }
+	}
+	annexation_ANHUI_CONQ = {
+		icon = generic_independence
+		allowed = {
+			NOT = { original_tag = CAH }
+		}
+		activation = {
+			owns_state = 37
+			37 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			is_subject = no
+			has_war = no
+			CAH = { exists = no }
+			NOT = { has_country_flag = annexation_ANHUI_CONQ }
+			NOT = { has_cosmetic_tag = CSE }
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+				has_country_flag = Fengtian_Member
+				has_country_flag = Old_Anhui_Member
+				has_country_flag = Old_Zhili_Member
+				has_country_flag = Old_Fengtian_Member
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = { owns_state = 37 }
+		}
+		complete_effect = {
+			set_country_flag = annexation_ANHUI_CONQ
+			country_event = new_Annex.2
+		}
+		timeout_effect = {
+			set_country_flag = annexation_ANHUI_CONQ
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = { base = 99 }
+	}
+	annexation_CHAHAER_CONQ = {
+		icon = generic_independence
+		allowed = {
+			NOT = { original_tag = CCH }
+		}
+		activation = {
+			owns_state = 6
+			6 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			is_subject = no
+			has_war = no
+			CCH = { exists = no }
+			NOT = { has_country_flag = annexation_CHAHAER_CONQ }
+			NOT = { has_cosmetic_tag = CNW }
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+				has_country_flag = Old_Anhui_Member
+				has_country_flag = Old_Zhili_Member
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = { owns_state = 6 }
+		}
+		complete_effect = {
+			set_country_flag = annexation_CHAHAER_CONQ
+			country_event = new_Annex.3
+		}
+		timeout_effect = {
+			set_country_flag = annexation_CHAHAER_CONQ
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = { base = 98 }
+	}
+	annexation_FUJIAN_CONQ = {
+		icon = generic_independence
+		allowed = {
+			NOT = { original_tag = CFJ }
+		}
+		activation = {
+			owns_state = 63
+			63 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			is_subject = no
+			has_war = no
+			CFJ = { exists = no }
+			NOT = { has_country_flag = annexation_FUJIAN_CONQ }
+			NOT = { has_cosmetic_tag = CSE }
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+				has_country_flag = Fengtian_Member
+				has_country_flag = Old_Anhui_Member
+				has_country_flag = Old_Zhili_Member
+				has_country_flag = Old_Fengtian_Member
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = { owns_state = 63 }
+		}
+		complete_effect = {
+			set_country_flag = annexation_FUJIAN_CONQ
+			country_event = new_Annex.4
+		}
+		timeout_effect = {
+			set_country_flag = annexation_FUJIAN_CONQ
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = { base = 97 }
+	}
+	annexation_GUANGDONG_CONQ = {
+		icon = generic_independence
+		allowed = {
+			NOT = { original_tag = CGD }
+		}
+		activation = {
+			owns_state = 76
+			76 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			is_subject = no
+			has_war = no
+			CGD = { exists = no }
+			NOT = { has_country_flag = annexation_GUANGDONG_CONQ }
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+				has_country_flag = Fengtian_Member
+				has_country_flag = Old_Anhui_Member
+				has_country_flag = Old_Zhili_Member
+				has_country_flag = Old_Fengtian_Member
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = { owns_state = 76 }
+		}
+		complete_effect = {
+			set_country_flag = annexation_GUANGDONG_CONQ
+			country_event = new_Annex.5
+		}
+		timeout_effect = {
+			set_country_flag = annexation_GUANGDONG_CONQ
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = { base = 96 }
+	}
+	annexation_GUANGXI_CONQ = {
+		icon = generic_independence
+		allowed = {
+			NOT = { original_tag = CGX }
+		}
+		activation = {
+			owns_state = 71
+			71 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			is_subject = no
+			has_war = no
+			CGX = { exists = no }
+			NOT = { has_country_flag = annexation_GUANGXI_CONQ }
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+				has_country_flag = Fengtian_Member
+				has_country_flag = Old_Anhui_Member
+				has_country_flag = Old_Zhili_Member
+				has_country_flag = Old_Fengtian_Member
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = { owns_state = 71 }
+		}
+		complete_effect = {
+			set_country_flag = annexation_GUANGXI_CONQ
+			country_event = new_Annex.6
+		}
+		timeout_effect = {
+			set_country_flag = annexation_GUANGXI_CONQ
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = { base = 95 }
+	}
+	annexation_HUBEI_CONQ = {
+		icon = generic_independence
+		allowed = {
+			NOT = {
+				original_tag = CHB
+				original_tag = CEX
+			}
+		}
+		activation = {
+			owns_state = 45
+			45 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			is_subject = no
+			has_war = no
+			CHB = { exists = no }
+			NOT = { has_country_flag = annexation_HUBEI_CONQ }
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+				has_country_flag = Fengtian_Member
+				has_country_flag = Old_Anhui_Member
+				has_country_flag = Old_Zhili_Member
+				has_country_flag = Old_Fengtian_Member
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = { owns_state = 45 }
+		}
+		complete_effect = {
+			set_country_flag = annexation_HUBEI_CONQ
+			country_event = new_Annex.7
+		}
+		timeout_effect = {
+			set_country_flag = annexation_HUBEI_CONQ
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = { base = 94 }
+	}
+	annexation_HENAN_CONQ = {
+		icon = generic_independence
+		allowed = {
+			NOT = { original_tag = CHE }
+		}
+		activation = {
+			owns_state = 26
+			26 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			is_subject = no
+			has_war = no
+			CHE = { exists = no }
+			NOT = { has_country_flag = annexation_HENAN_CONQ }
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+				has_country_flag = Fengtian_Member
+				has_country_flag = Old_Anhui_Member
+				has_country_flag = Old_Zhili_Member
+				has_country_flag = Old_Fengtian_Member
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = { owns_state = 26 }
+		}
+		complete_effect = {
+			set_country_flag = annexation_HENAN_CONQ
+			country_event = new_Annex.8
+		}
+		timeout_effect = {
+			set_country_flag = annexation_HENAN_CONQ
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = { base = 93 }
+	}
+	annexation_HUNAN_CONQ = {
+		icon = generic_independence
+		allowed = {
+			NOT = { original_tag = CHN }
+		}
+		activation = {
+			owns_state = 67
+			67 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			is_subject = no
+			has_war = no
+			CHN = { exists = no }
+			NOT = { has_country_flag = annexation_HUNAN_CONQ }
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+				has_country_flag = Fengtian_Member
+				has_country_flag = Old_Anhui_Member
+				has_country_flag = Old_Zhili_Member
+				has_country_flag = Old_Fengtian_Member
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = { owns_state = 67 }
+		}
+		complete_effect = {
+			set_country_flag = annexation_HUNAN_CONQ
+			country_event = new_Annex.9
+		}
+		timeout_effect = {
+			set_country_flag = annexation_HUNAN_CONQ
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = { base = 92 }
+	}
+	annexation_JIANGSU_CONQ = {
+		icon = generic_independence
+		allowed = {
+			NOT = { original_tag = CJS }
+		}
+		activation = {
+			owns_state = 43
+			43 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			is_subject = no
+			has_war = no
+			CJS = { exists = no }
+			NOT = { has_country_flag = annexation_JIANGSU_CONQ }
+			NOT = { has_cosmetic_tag = CSE }
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+				has_country_flag = Fengtian_Member
+				has_country_flag = Old_Anhui_Member
+				has_country_flag = Old_Zhili_Member
+				has_country_flag = Old_Fengtian_Member
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = { owns_state = 43 }
+		}
+		complete_effect = {
+			set_country_flag = annexation_JIANGSU_CONQ
+			country_event = new_Annex.10
+		}
+		timeout_effect = {
+			set_country_flag = annexation_JIANGSU_CONQ
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = { factor = 100 }
+	}
+	annexation_JIANGXI_CONQ = {
+		icon = generic_independence
+		allowed = {
+			NOT = { original_tag = CJX }
+		}
+		activation = {
+			owns_state = 59
+			59 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			is_subject = no
+			has_war = no
+			CJX = { exists = no }
+			NOT = { has_country_flag = annexation_JIANGXI_CONQ }
+			NOT = { has_cosmetic_tag = CSE }
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+				has_country_flag = Fengtian_Member
+				has_country_flag = Old_Anhui_Member
+				has_country_flag = Old_Zhili_Member
+				has_country_flag = Old_Fengtian_Member
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = { owns_state = 59 }
+		}
+		complete_effect = {
+			set_country_flag = annexation_JIANGXI_CONQ
+			country_event = new_Annex.11
+		}
+		timeout_effect = {
+			set_country_flag = annexation_JIANGXI_CONQ
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = { base = 91 }
+	}
+	annexation_REHE_CONQ = {
+		icon = generic_independence
+		allowed = {
+			NOT = { original_tag = CRH }
+		}
+		activation = {
+			owns_state = 134
+			134 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			is_subject = no
+			has_war = no
+			CRH = { exists = no }
+			NOT = { has_country_flag = annexation_REHE_CONQ }
+			NOT = { has_cosmetic_tag = CNE }
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+				has_country_flag = Old_Anhui_Member
+				has_country_flag = Old_Zhili_Member
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = { owns_state = 134 }
+		}
+		complete_effect = {
+			set_country_flag = annexation_REHE_CONQ
+			country_event = new_Annex.12
+		}
+		timeout_effect = {
+			set_country_flag = annexation_REHE_CONQ
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = { base = 90 }
+	}
+	annexation_SHAANXI_CONQ = {
+		icon = generic_independence
+		allowed = {
+			NOT = {
+				original_tag = CSA
+				original_tag = CJG
+				original_tag = CYX
+			}
+		}
+		activation = {
+			owns_state = 35
+			35 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			is_subject = no
+			has_war = no
+			CSA = { exists = no }
+			NOT = { has_country_flag = annexation_SHAANXI_CONQ }
+			NOT = { has_cosmetic_tag = CNW }
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+				has_country_flag = Fengtian_Member
+				has_country_flag = Old_Anhui_Member
+				has_country_flag = Old_Zhili_Member
+				has_country_flag = Old_Fengtian_Member
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = { owns_state = 35 }
+		}
+		complete_effect = {
+			set_country_flag = annexation_SHAANXI_CONQ
+			country_event = new_Annex.13
+		}
+		timeout_effect = {
+			set_country_flag = annexation_SHAANXI_CONQ
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = { base = 89 }
+	}
+	annexation_SHANDONG_CONQ = {
+		icon = generic_independence
+		allowed = {
+			NOT = { original_tag = CSD }
+		}
+		activation = {
+			owns_state = 30
+			30 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			is_subject = no
+			has_war = no
+			CSD = { exists = no }
+			NOT = { has_country_flag = annexation_SHANDONG_CONQ }
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+				has_country_flag = Fengtian_Member
+				has_country_flag = Old_Anhui_Member
+				has_country_flag = Old_Zhili_Member
+				has_country_flag = Old_Fengtian_Member
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = { owns_state = 30 }
+		}
+		complete_effect = {
+			set_country_flag = annexation_SHANDONG_CONQ
+			country_event = new_Annex.14
+		}
+		timeout_effect = {
+			set_country_flag = annexation_SHANDONG_CONQ
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = { base = 88 }
+	}
+	annexation_SHANXI_CONQ = {
+		icon = generic_independence
+		allowed = {
+			NOT = { original_tag = CSX }
+		}
+		activation = {
+			owns_state = 23
+			23 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			is_subject = no
+			has_war = no
+			CSX = { exists = no }
+			NOT = { has_country_flag = annexation_SHANXI_CONQ }
+			NOT = { has_cosmetic_tag = CNW }
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+				has_country_flag = Fengtian_Member
+				has_country_flag = Old_Anhui_Member
+				has_country_flag = Old_Zhili_Member
+				has_country_flag = Old_Fengtian_Member
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = { owns_state = 23 }
+		}
+		complete_effect = {
+			set_country_flag = annexation_SHANXI_CONQ
+			country_event = new_Annex.15
+		}
+		timeout_effect = {
+			set_country_flag = annexation_SHANXI_CONQ
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = { base = 87 }
+	}
+	annexation_SUIYUAN_CONQ = {
+		icon = generic_independence
+		allowed = {
+			NOT = { original_tag = CSY }
+		}
+		activation = {
+			owns_state = 10
+			10 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			is_subject = no
+			has_war = no
+			CSY = { exists = no }
+			NOT = { has_country_flag = annexation_SUIYUAN_CONQ }
+			NOT = { has_cosmetic_tag = CNW }
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+				has_country_flag = Old_Anhui_Member
+				has_country_flag = Old_Zhili_Member
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = { owns_state = 10 }
+		}
+		complete_effect = {
+			set_country_flag = annexation_SUIYUAN_CONQ
+			country_event = new_Annex.16
+		}
+		timeout_effect = {
+			set_country_flag = annexation_SUIYUAN_CONQ
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = { base = 86 }
+	}
+	annexation_ZHEJIANG_CONQ = {
+		icon = generic_independence
+		allowed = {
+			NOT = { original_tag = CZJ }
+		}
+		activation = {
+			owns_state = 55
+			55 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			is_subject = no
+			has_war = no
+			CZJ = { exists = no }
+			NOT = { has_country_flag = annexation_ZHEJIANG_CONQ }
+			NOT = { has_cosmetic_tag = CSE }
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+				has_country_flag = Fengtian_Member
+				has_country_flag = Old_Anhui_Member
+				has_country_flag = Old_Zhili_Member
+				has_country_flag = Old_Fengtian_Member
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = { owns_state = 55 }
+		}
+		complete_effect = {
+			set_country_flag = annexation_ZHEJIANG_CONQ
+			country_event = new_Annex.17
+		}
+		timeout_effect = {
+			set_country_flag = annexation_ZHEJIANG_CONQ
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = { base = 85 }
+	}
+	annexation_SICHUAN_CONQ = {
+		icon = generic_independence
+		allowed = {
+			NOT = { original_tag = CSC }
+		}
+		activation = {
+			owns_state = 50
+			50 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			is_subject = no
+			has_war = no
+			CSC = { exists = no }
+			NOT = { has_country_flag = annexation_SICHUAN_CONQ }
+			NOT = { has_cosmetic_tag = CSW }
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+				has_country_flag = Fengtian_Member
+				has_country_flag = Old_Anhui_Member
+				has_country_flag = Old_Zhili_Member
+				has_country_flag = Old_Fengtian_Member
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = { owns_state = 50 }
+		}
+		complete_effect = {
+			set_country_flag = annexation_SICHUAN_CONQ
+			country_event = new_Annex.18
+		}
+		timeout_effect = {
+			set_country_flag = annexation_SICHUAN_CONQ
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = { base = 84 }
+	}
+	annexation_GUIZHOU_CONQ = {
+		icon = generic_independence
+		allowed = {
+			NOT = { original_tag = CGZ }
+		}
+		activation = {
+			owns_state = 84
+			84 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			is_subject = no
+			has_war = no
+			CGZ = { exists = no }
+			NOT = { has_country_flag = annexation_GUIZHOU_CONQ }
+			NOT = { has_cosmetic_tag = CSW }
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+				has_country_flag = Fengtian_Member
+				has_country_flag = Old_Anhui_Member
+				has_country_flag = Old_Zhili_Member
+				has_country_flag = Old_Fengtian_Member
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = { owns_state = 84 }
+		}
+		complete_effect = {
+			set_country_flag = annexation_GUIZHOU_CONQ
+			country_event = new_Annex.19
+		}
+		timeout_effect = {
+			set_country_flag = annexation_GUIZHOU_CONQ
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = { base = 83 }
+	}
+	annexation_YUNNAN_CONQ = {
+		icon = generic_independence
+		allowed = {
+			NOT = { original_tag = CYN }
+		}
+		activation = {
+			owns_state = 87
+			87 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			is_subject = no
+			has_war = no
+			CYN = { exists = no }
+			NOT = { has_country_flag = annexation_YUNNAN_CONQ }
+			NOT = { has_cosmetic_tag = CSW }
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+				has_country_flag = Fengtian_Member
+				has_country_flag = Old_Anhui_Member
+				has_country_flag = Old_Zhili_Member
+				has_country_flag = Old_Fengtian_Member
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 60
+		is_good = no
+		cost = 0
+		fire_only_once = no
+		cancel_trigger = {
+			NOT = { owns_state = 87 }
+		}
+		complete_effect = {
+			set_country_flag = annexation_YUNNAN_CONQ
+			country_event = new_Annex.20
+		}
+		timeout_effect = {
+			set_country_flag = annexation_YUNNAN_CONQ
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = { base = 82 }
+	}
+}

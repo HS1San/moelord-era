@@ -1,0 +1,541 @@
+focus_tree = {
+	id = TAN_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TAN
+		}
+	}
+	
+	default = no
+	shared_focus = Shared_Plan_of_Reform
+	shared_focus = Shared_Extra_Tech_Slot
+	
+	#Focus for Declare the Tuvan People's Republic
+	focus = {
+		id = TAN_declare_the_tuvan_peoples_republic
+		icon = GFX_focus_generic_join_comintern
+		x = 9
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAN_allow_the_party }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = radical_leftist
+			}
+		}
+	}
+	#Focus for Recruit Mercenaries
+	focus = {
+		id = TAN_recruit_mercenaries
+		icon = GFX_focus_secret_rearmament
+		x = 4
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAN_war_of_independence }
+		search_filters = { FOCUS_FILTER_MANPOWER } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 1000
+			add_equipment_to_stockpile = {
+				type = rifle_equipment
+				amount = 100
+				producer = TAN
+			}
+		}
+	}
+	#Focus for Recruit Mongolian Separatists
+	focus = {
+		id = TAN_recruit_mongolian_separatists
+		icon = GFX_goal_rhineland
+		x = 6
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAN_war_of_independence }
+		search_filters = { FOCUS_FILTER_MANPOWER } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			117 = {
+				create_unit = {
+					division = "name = \"2ya Polk\" division_template = \"Strelkovaya Polk\" start_experience_factor = 0.0 start_equipment_factor = 1"
+					owner = TAN
+					prioritize_location = 10627
+				}
+			}
+		}
+	}
+	#Focus for Expel the Party
+	focus = {
+		id = TAN_expel_the_party
+		icon = GFX_goal_generic_war_with_comintern
+		x = 7
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAN_the_tuvan_peoples_revolutionary_party }
+		mutually_exclusive = { focus = TAN_allow_the_party }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = radical_leftist
+				popularity = -0.15
+			}
+		}
+	}
+	#Focus for Prepare Defenses Against the Soviets!
+	focus = {
+		id = TAN_prepare_defenses_against_the_soviets
+		icon = GFX_goal_generic_construct_military
+		x = 7
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAN_expel_the_party }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	#Focus for Allow the Party
+	focus = {
+		id = TAN_allow_the_party
+		icon = GFX_goal_support_communism
+		x = 9
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAN_the_tuvan_peoples_revolutionary_party }
+		mutually_exclusive = { focus = TAN_expel_the_party }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = radical_leftist
+				popularity = 0.4
+			}
+		}
+	}
+	#Focus for The Tuvan People's Revolutionary Party
+	focus = {
+		id = TAN_the_tuvan_peoples_revolutionary_party
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 8
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = radical_leftist
+				popularity = 0.2
+			}
+		}
+	}
+	#Focus for Support Mongolia
+	focus = {
+		id = TAN_support_mongolia
+		icon = GFX_focus_Prepare_the_Troops
+		x = 8
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAN_abdicate_to_the_chinese }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = { 
+				limit = {
+					D01 = {
+						has_country_leader = {
+							name = "Roman von Ungern-Sternberg"
+							ruling_only = yes
+						}
+					}
+				}
+				add_to_war = { 
+					targeted_alliance = MON
+					enemy = D01
+					hostility_reason = asked_to_join
+				}
+			}
+			if = { 
+				limit = {
+					D02 = {
+						has_country_leader = {
+							name = "Roman von Ungern-Sternberg"
+							ruling_only = yes
+						}
+					}
+				}
+				add_to_war = { 
+					targeted_alliance = MON
+					enemy = D02
+					hostility_reason = asked_to_join
+				}
+			}
+			if = { 
+				limit = {
+					D03 = {
+						has_country_leader = {
+							name = "Roman von Ungern-Sternberg"
+							ruling_only = yes
+						}
+					}
+				}
+				add_to_war = { 
+					targeted_alliance = MON
+					enemy = D03
+					hostility_reason = asked_to_join
+				}
+			}
+			if = { 
+				limit = {
+					D04 = {
+						has_country_leader = {
+							name = "Roman von Ungern-Sternberg"
+							ruling_only = yes
+						}
+					}
+				}
+				add_to_war = { 
+					targeted_alliance = MON
+					enemy = D04
+					hostility_reason = asked_to_join
+				}
+			}
+			if = { 
+				limit = {
+					D05 = {
+						has_country_leader = {
+							name = "Roman von Ungern-Sternberg"
+							ruling_only = yes
+						}
+					}
+				}
+				add_to_war = { 
+					targeted_alliance = MON
+					enemy = D05
+					hostility_reason = asked_to_join
+				}
+			}
+			if = { 
+				limit = {
+					D06 = {
+						has_country_leader = {
+							name = "Roman von Ungern-Sternberg"
+							ruling_only = yes
+						}
+					}
+				}
+				add_to_war = { 
+					targeted_alliance = MON
+					enemy = D06
+					hostility_reason = asked_to_join
+				}
+			}
+		}
+	}
+	#Focus for Abdicate to the Whites
+	focus = {
+		id = TAN_abdicate_to_the_whites
+		icon = GFX_Experience_RUS
+		x = 2
+		y = 1
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAN_preserve_uryankhay_autonomy }
+		mutually_exclusive = { 
+			focus = TAN_abdicate_to_the_chinese 
+		}
+		mutually_exclusive = { 
+			focus = TAN_war_of_independence 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 0.25
+		}
+		completion_reward = {
+			#tag = {
+			#	puppet = TAN
+			#}
+		}
+	}
+	#Focus for Support Sternberg
+	focus = {
+		id = TAN_support_sternberg
+		icon = GFX_focus_Death_or_Dishonor
+		x = 2
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		available = {
+			has_country_leader = {
+				name = "Roman von Ungern-Sternberg"
+				ruling_only = yes
+			}
+		}
+		prerequisite = { focus = TAN_abdicate_to_the_whites }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					MON = {
+						has_civil_war = yes
+					}
+					any_country = {
+						has_country_leader = {
+							name = "Roman von Ungern-Sternberg"
+							ruling_only = yes
+						}
+					}
+				}
+				D01 = {
+					add_to_faction = TAN
+				}
+				add_to_war = { 
+					targeted_alliance = D01
+					enemy = MON
+					hostility_reason = asked_to_join
+				}
+			}
+			if = {
+				limit = {
+					D02 = {
+						has_country_leader = {
+							name = "Roman von Ungern-Sternberg"
+							ruling_only = yes
+						}
+					}
+				}
+				D02 = {
+					add_to_faction = TAN
+				}
+				add_to_war = { 
+					targeted_alliance = D02
+					enemy = MON
+					hostility_reason = asked_to_join
+				}
+			}
+			if = {
+				limit = {
+					D03 = {
+						has_country_leader = {
+							name = "Roman von Ungern-Sternberg"
+							ruling_only = yes
+						}
+					}
+				}
+				D03 = {
+					add_to_faction = TAN
+				}
+				add_to_war = { 
+					targeted_alliance = D03
+					enemy = MON
+					hostility_reason = asked_to_join
+				}
+			}
+			if = {
+				limit = {
+					D04 = {
+						has_country_leader = {
+							name = "Roman von Ungern-Sternberg"
+							ruling_only = yes
+						}
+					}
+				}
+				D04 = {
+					add_to_faction = TAN
+				}
+				add_to_war = { 
+					targeted_alliance = D04
+					enemy = MON
+					hostility_reason = asked_to_join
+				}
+			}
+			if = {
+				limit = {
+					D05 = {
+						has_country_leader = {
+							name = "Roman von Ungern-Sternberg"
+							ruling_only = yes
+						}
+					}
+				}
+				D05 = {
+					add_to_faction = TAN
+				}
+				add_to_war = { 
+					targeted_alliance = D05
+					enemy = MON
+					hostility_reason = asked_to_join
+				}
+			}
+			if = {
+				limit = {
+					D06 = {
+						has_country_leader = {
+							name = "Roman von Ungern-Sternberg"
+							ruling_only = yes
+						}
+					}
+				}
+				D06 = {
+					add_to_faction = TAN
+				}
+				add_to_war = { 
+					targeted_alliance = D06
+					enemy = MON
+					hostility_reason = asked_to_join
+				}
+			}
+		}
+	}
+	#Focus for Abdicate to the Chinese
+	focus = {
+		id = TAN_abdicate_to_the_chinese
+		icon = GFX_Experience_BYC
+		x = 8
+		y = 1
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAN_preserve_uryankhay_autonomy }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		mutually_exclusive = { 
+			focus = TAN_war_of_independence 
+		}
+		mutually_exclusive = { 
+			focus = TAN_abdicate_to_the_whites 
+		}
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 500
+				is_puppet_of = CBJ
+			}
+		}
+		completion_reward = {
+			CBJ = {
+				puppet = TAN
+			}
+		}
+	}
+	#Focus for War of Independence
+	focus = {
+		id = TAN_war_of_independence
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = 5
+		y = 1
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAN_preserve_uryankhay_autonomy }
+		mutually_exclusive = { focus = TAN_abdicate_to_the_whites }
+		mutually_exclusive = { focus = TAN_abdicate_to_the_chinese }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			CBJ = {
+				country_event = {
+					id = new_TAN.1
+					days = 1
+					random = 3
+				}
+			}
+		}
+	}
+	#Focus for Preserve Uryankhay Autonomy
+	focus = {
+		id = TAN_preserve_uryankhay_autonomy
+		icon = GFX_focus_generic_self_management
+		x = 5
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	#Focus for Victory against all the odds!
+	focus = {
+		id = TAN_victory_against_all_the_odds
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		x = 5
+		y = 3
+		cost = 8
+		available_if_capitulated = no
+		
+		available = {
+			has_war = no
+		}
+
+		prerequisite = { 
+			focus = TAN_recruit_mercenaries 
+		}
+		prerequisite = { 
+			focus = TAN_recruit_mongolian_separatists 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_political_power = 100
+		}
+	}
+	#Focus for Redeclare the Uryankhay Republic
+	focus = {
+		id = TAN_redeclare_the_uryankhay_republic
+		icon = GFX_goal_generic_forceful_treaty
+		x = 5
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAN_victory_against_all_the_odds
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_cosmetic_tag = TANR
+		}
+	}
+}

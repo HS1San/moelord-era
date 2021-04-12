@@ -1,0 +1,314 @@
+﻿########
+#Templates
+########
+division_template = {
+	name = "Hohei Shidan"
+	division_names_group = JAP_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+		infantry = { x = 3 y = 3 }
+	}
+	support = {
+		howitzer = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Kihei Shidan"
+	division_names_group = JAP_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Chuton-chi Shidan"
+	division_names_group = JAP_GAR_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+	}
+	priority = 0
+}
+
+########
+#OOB
+########
+units = {
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 12421
+		division_template = "Hohei Shidan"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Ominato Kichi Kaiheidan"
+		location = 9859
+		division_template = "Chuton-chi Shidan"
+		start_experience_factor = 0.1
+		
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 7087
+		division_template = "Hohei Shidan"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Osaka Kichi Kaiheidan"
+		location = 7072
+		division_template = "Chuton-chi Shidan"
+		start_experience_factor = 0.1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 9950
+		division_template = "Hohei Shidan"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Kure Kichi Kaiheidan"
+		location = 1092
+		division_template = "Chuton-chi Shidan"
+		start_experience_factor = 0.1
+		
+	}
+	division = {
+		name = "Sasebo Kichi Kaiheidan"
+		location = 9950
+		division_template = "Chuton-chi Shidan"
+		start_experience_factor = 0.1	
+	}
+	division = {
+		name = "Okinawa Kichi Shubitai"
+		location = 11932
+		division_template = "Chuton-chi Shidan"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Karafuto Kichi Shubitai"
+		location = 12446
+		division_template = "Chuton-chi Shidan"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Chishima Kichi Shubitai"
+		location = 1399
+		division_template = "Chuton-chi Shidan"
+		start_experience_factor = 0.1
+	}
+	fleet = {
+		name = "Imperial Japanese Navy"
+		naval_base = 9950 
+		task_force = {
+			name = "Battle Taskforce"
+			location = 9950 # Nagasaki
+			
+### https://en.wikipedia.org/wiki/List_of_ships_of_the_Imperial_Japanese_Navy
+### All ships par May 1919
+
+### Maybe we should add Aircraft Carrier Tech?
+
+### Seaplane Tender
+			ship = { name = "Wakayama" definition = seaplane_tender equipment = { seaplane_tender_equipment_0 = { amount = 1 owner = JAP } } 
+			air_wings = { } }
+### Battleship
+			ship = { name = "Fuji" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Shikishima" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Asahi" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Mikasa" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Tango" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Suwo" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Hizen" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Iwami" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Mishima" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Okinoshima" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Katori" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kashima" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Satsuma" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Aki" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Settsu" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kongō" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Hiei" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Haruna" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kirishima" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Fusō" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Yamashiro" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Ise" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Hyūga" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+### Corvette
+			ship = { name = "Uji" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Yamato" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Musashi" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+### Protected Cruiser
+			ship = { name = "Chiyoda" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Itsukushima" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Hashidate" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Akitsushima" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Suma" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Akashi" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Chitose" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Niitaka" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Tsushima" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Tone" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Chikuma" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Hirado" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Yahagi" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Tsugaru" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+### Light Cruiser
+			ship = { name = "Tenryū" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Tatsuta" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+### Armoured Cruiser
+			ship = { name = "Asama" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Tokiwa" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Izumo" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Iwate" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Yakumo" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Azuma" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kasuga" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Nisshin" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Aso" definition = cruiser equipment = { cruiser_equipment_0 = { amount = 1 owner = JAP } } }
+### Battlecruiser
+			ship = { name = "Tsukuba" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Ikoma" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Ibuki" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kurama" definition = battleship equipment = { battleship_equipment_0 = { amount = 1 owner = JAP } } }
+### Heavy Cruiser
+### Destroyer
+	### 1st Class
+			ship = { name = "Urakaze" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Isokatze" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Amatsukaze" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Hamakaze" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Tokitsukaze" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kanran" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Sendan" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kawakaze" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Tanikaze" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Minekaze" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Sawakaze" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+	### 2nd Class
+			ship = { name = "Sakura" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Tachibana" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kaba" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kashiwa" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Sakaki" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Katsura" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Sugi" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kaede" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Ume" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kiri" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kusunoki" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Matsu" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Mono" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kashi" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Hinoki" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Yanagi" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Enoki" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Maki" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Nara" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Keyaki" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kuwa" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Tsubaki" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Momi" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kaya" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+	### 3rd Class
+			ship = { name = "Murakumo" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Yūgiri" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Shiranui" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kagerō" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Akebono" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Oboro" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Shirakumo" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Asashio" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Harusame" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Murasame" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Asagiri" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Ariake" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Fubuki" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kamikaze" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Hatsushimo" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Yayoi" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kisaragi" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Asakaze" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Shiratsuyu" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Shirayuki" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Matsukaze" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Harukaze" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Hayate" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Oite" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Yūnagi" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Yūgure" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Yūdachi" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Mikazuki" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Nowaki" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Ushio" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Nenohi" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Hibiki" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Hatsuharu" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Wakaba" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Hatsuyuki" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Uzuki" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Minatsuki" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Nagatsuki" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kikutsuki" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Uranami" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Isonami" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Ayanami" definition = corvette equipment = { corvette_equipment_0 = { amount = 1 owner = JAP } } }
+### Submarines https://en.wikipedia.org/wiki/Submarines_of_the_Imperial_Japanese_Navy
+### Torpedo Boats
+			ship = { name = "Shirataka" definition = torpedo_boat equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Manazuru" definition = torpedo_boat equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Aotaka" definition = torpedo_boat equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kari" definition = torpedo_boat equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Hato" definition = torpedo_boat equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Tsubame" definition = torpedo_boat equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Hibari" definition = torpedo_boat equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kiji" definition = torpedo_boat equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Hashitaka" definition = torpedo_boat equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Sagi" definition = torpedo_boat equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Uzura" definition = torpedo_boat equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Kamome" definition = torpedo_boat equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = JAP } } }
+			ship = { name = "Õtori" definition = torpedo_boat equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = JAP } } }
+### River Gunboats
+	### Hahaha, good joke. Did you really think I'm really going to add river gunboats? For what, river warfare? Hahaha.
+### Minesweepers
+### Patrol Boa - No, not doing that.
+		}
+	}
+}

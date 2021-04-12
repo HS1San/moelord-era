@@ -1,0 +1,247 @@
+units = {
+
+	### Naval OOB ###
+	fleet = {
+		name = "Guangdong Haiphong Fleet"
+		naval_base = 1047
+		task_force = {
+			name = "Guangdong Haiphong Fleet"
+			location = 1047
+			ship = {
+				name = "Ziyou"	# 自由号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Pingnan"	# 平南号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Anpo"	# 安坡号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Guangxing"	# 广兴号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Wuping"	# 武平号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Lushun"	# 陆顺号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Tongjiang"	# 同江号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Anshun"	# 安顺号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Sujiang"	# 宿江号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Longmeng"	# 隆梦号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Fatong"	# 发同号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Faping"	# 发平号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Jiangshun"	# 江顺号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Yijiang"	# 宜江号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Gengjian"	# 庚建号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Lishun"	# 利顺号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Jiangping"	# 江平号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Fuhai"	# 福海号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Guangan"	# 广安号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Guangwei"	# 广威号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Gu'an"	# 固安号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Annan"	# 安南号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Tongyuan"	# 通远号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Anshun"	# 安顺号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Yuanwu"	# 远武号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Guanghong"	# 广鸿号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Guangji"	# 广吉号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Hongsheng"	# 鸿升号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Chaojiang"	# 潮江号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Guangbo"	# 广波号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Jinmao"	# 金茂号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Chengzhi"	# 城直号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Baoan"	# 鲍安号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Luxin"	# 路新号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Jiangtuo"	# 江脱号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Yongxing"	# 永兴号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Baolai"	# 报来号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Famao"	# 发茂号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Xixing"	# 西兴号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Zhili"	# 直隶号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Penggu"	# 鹏古号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Fashun"	# 发顺号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Yongteng"	# 永腾号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Yongheng"	# 永亨号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Dongjiang"	# 东江号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Beijiang"	# 北江号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+			ship = {
+				name = "Liuxing"	# 留兴号
+				definition = torpedo_boat
+				equipment = { torpedo_boat_equipment_0 = { amount = 1 owner = CGD } }
+			}
+		}
+	}
+}

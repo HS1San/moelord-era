@@ -1,0 +1,26 @@
+leader_traits = {
+	General_is_a_HoS = { 
+		type = all
+		trait_type = personality_trait
+		gain_xp = { always = no }
+		allowed = { always = yes }
+		modifier = {  }
+		ai_will_do = { factor = 1 }
+		new_commander_weight = { factor = 0 }
+	}
+	Devil_Training = { 
+		type = all
+		trait_type = personality_trait
+		gain_xp = { always = no }
+		allowed = { always = yes }
+		non_shared_modifier = {
+			experience_gain_factor = 0.25
+		}
+		trait_xp_factor = {
+			infantry_leader = 1
+			cavalry_leader = 1
+		}
+		ai_will_do = { factor = 1 }
+		new_commander_weight = { factor = 0 }
+	}
+}

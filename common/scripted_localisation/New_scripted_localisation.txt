@@ -1,0 +1,170 @@
+defined_text = {
+	name = GetRelationshipWithBritain
+	text = {
+		trigger = { check_variable = { var = ROOT.relationship_with_britain value = 0 compare = less_than } }
+		localization_key = New_enemy
+	}
+	text = {
+		trigger = {
+			check_variable = { var = ROOT.relationship_with_britain value = 0 compare = greater_than_or_equals }
+			check_variable = { var = ROOT.relationship_with_britain value = 50 compare = less_than }
+		}
+		localization_key = New_stranger
+	}
+	text = {
+		trigger = {
+			check_variable = { var = ROOT.relationship_with_britain value = 50 compare = greater_than_or_equals }
+			check_variable = { var = ROOT.relationship_with_britain value = 100 compare = less_than }
+		}
+		localization_key = New_acquaintance
+	}
+	text = {
+		trigger = { check_variable = { var = ROOT.relationship_with_britain value = 100 compare = greater_than_or_equals } }
+		localization_key = New_friend
+	}
+}
+
+defined_text = {
+	name = GetRelationshipWithFrance
+	text = {
+		trigger = { check_variable = { var = ROOT.relationship_with_france value = 0 compare = less_than } }
+		localization_key = New_enemy
+	}
+	text = {
+		trigger = {
+			check_variable = { var = ROOT.relationship_with_france value = 0 compare = greater_than_or_equals }
+			check_variable = { var = ROOT.relationship_with_france value = 50 compare = less_than }
+		}
+		localization_key = New_stranger
+	}
+	text = {
+		trigger = {
+			check_variable = { var = ROOT.relationship_with_france value = 50 compare = greater_than_or_equals }
+			check_variable = { var = ROOT.relationship_with_france value = 100 compare = less_than }
+		}
+		localization_key = New_acquaintance
+	}
+	text = {
+		trigger = { check_variable = { var = ROOT.relationship_with_france value = 100 compare = greater_than_or_equals } }
+		localization_key = New_friend
+	}
+}
+
+defined_text = {
+	name = GetRelationshipWithAmerica
+	text = {
+		trigger = { check_variable = { var = ROOT.relationship_with_america value = 0 compare = less_than } }
+		localization_key = New_enemy
+	}
+	text = {
+		trigger = {
+			check_variable = { var = ROOT.relationship_with_america value = 0 compare = greater_than_or_equals }
+			check_variable = { var = ROOT.relationship_with_america value = 50 compare = less_than }
+		}
+		localization_key = New_stranger
+	}
+	text = {
+		trigger = {
+			check_variable = { var = ROOT.relationship_with_america value = 50 compare = greater_than_or_equals }
+			check_variable = { var = ROOT.relationship_with_america value = 100 compare = less_than }
+		}
+		localization_key = New_acquaintance
+	}
+	text = {
+		trigger = { check_variable = { var = ROOT.relationship_with_america value = 100 compare = greater_than_or_equals } }
+		localization_key = New_friend
+	}
+}
+
+defined_text = {
+	name = GetRelationshipWithGermany
+	text = {
+		trigger = { check_variable = { var = ROOT.relationship_with_germany value = 0 compare = less_than } }
+		localization_key = New_enemy
+	}
+	text = {
+		trigger = {
+			check_variable = { var = ROOT.relationship_with_germany value = 0 compare = greater_than_or_equals }
+			check_variable = { var = ROOT.relationship_with_germany value = 50 compare = less_than }
+		}
+		localization_key = New_stranger
+	}
+	text = {
+		trigger = {
+			check_variable = { var = ROOT.relationship_with_germany value = 50 compare = greater_than_or_equals }
+			check_variable = { var = ROOT.relationship_with_germany value = 100 compare = less_than }
+		}
+		localization_key = New_acquaintance
+	}
+	text = {
+		trigger = { check_variable = { var = ROOT.relationship_with_germany value = 100 compare = greater_than_or_equals } }
+		localization_key = New_friend
+	}
+}
+
+defined_text = {
+	name = GetRelationshipWithItaly
+	text = {
+		trigger = { check_variable = { var = ROOT.relationship_with_italy value = 0 compare = less_than } }
+		localization_key = New_enemy
+	}
+	text = {
+		trigger = {
+			check_variable = { var = ROOT.relationship_with_italy value = 0 compare = greater_than_or_equals }
+			check_variable = { var = ROOT.relationship_with_italy value = 50 compare = less_than }
+		}
+		localization_key = New_stranger
+	}
+	text = {
+		trigger = {
+			check_variable = { var = ROOT.relationship_with_italy value = 50 compare = greater_than_or_equals }
+			check_variable = { var = ROOT.relationship_with_italy value = 100 compare = less_than }
+		}
+		localization_key = New_acquaintance
+	}
+	text = {
+		trigger = { check_variable = { var = ROOT.relationship_with_italy value = 100 compare = greater_than_or_equals } }
+		localization_key = New_friend
+	}
+}
+
+defined_text = {
+	name = GetRelationshipWithRussia
+	text = {
+		trigger = { check_variable = { var = ROOT.relationship_with_russia value = 0 compare = less_than } }
+		localization_key = New_enemy
+	}
+	text = {
+		trigger = {
+			check_variable = { var = ROOT.relationship_with_russia value = 0 compare = greater_than_or_equals }
+			check_variable = { var = ROOT.relationship_with_russia value = 50 compare = less_than }
+		}
+		localization_key = New_stranger
+	}
+	text = {
+		trigger = {
+			check_variable = { var = ROOT.relationship_with_russia value = 50 compare = greater_than_or_equals }
+			check_variable = { var = ROOT.relationship_with_russia value = 100 compare = less_than }
+		}
+		localization_key = New_acquaintance
+	}
+	text = {
+		trigger = { check_variable = { var = ROOT.relationship_with_russia value = 100 compare = greater_than_or_equals } }
+		localization_key = New_friend
+	}
+}
+defined_text = {
+	name = GetMissionOfTheCurrentPoliticalGoals
+	text = {
+		trigger = { has_country_flag = land_reform }
+		localization_key = New_land_reform
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = land_reform
+			}
+		}
+		localization_key = New_no_mission
+	}
+}

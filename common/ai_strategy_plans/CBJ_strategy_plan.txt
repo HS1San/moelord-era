@@ -1,0 +1,310 @@
+CBJ_strategy_plan_History = {
+	name = "CBJ Strategy Plan History"
+	desc = "CBJ Strategy Plan History"
+
+	enable = {
+		original_tag = CBJ
+		is_historical_focus_on = yes
+	}
+	abort = {
+		always = no
+	}
+	weight = {
+		factor = 1
+	}
+
+	ai_strategy = { type = antagonize id = "CZL" value = 100 }
+	ai_strategy = { type = conquer id = "CZL" value = 100 }
+	ai_strategy = { type = invade id = "CZL" value = 100 }
+	ai_strategy = { type = declare_war id = "CZL" value = 100 }
+	ai_strategy = { type = antagonize id = "CFT" value = 50 }
+	ai_strategy = { type = conquer id = "CFT" value = 50 }
+	ai_strategy = { type = invade id = "CFT" value = 50 }
+	ai_strategy = { type = declare_war id = "CFT" value = 50 }
+	ai_strategy = { type = antagonize id = "CGD" value = 50 }
+	ai_strategy = { type = conquer id = "CGD" value = 50 }
+	ai_strategy = { type = invade id = "CGD" value = 50 }
+	ai_strategy = { type = declare_war id = "CGD" value = 50 }
+	ai_strategy = { type = befriend id = "JAP" value = 200 }
+}
+
+CBJ_strategy_plan = {
+	name = "CBJ Strategy Plan"
+	desc = "CBJ Strategy Plan"
+
+	enable = {
+		original_tag = CBJ
+		is_historical_focus_on = no
+	}
+	abort = {
+		OR = {
+			has_completed_focus = CBJ_War_Plan
+			has_completed_focus = CBJ_Peace_Plan
+			has_completed_focus = CBJ_Recreate_Democratic_National_Assembly
+		}
+	}
+	focus_factors = {
+		CBJ_War_Plan = 1000
+		CBJ_Peace_Plan = 1000
+		CBJ_Recreate_Democratic_National_Assembly = 1000
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+CBJ_strategy_plan_A = {
+	name = "CBJ Strategy Plan A"
+	desc = "CBJ Strategy Plan A"
+
+	enable = {
+		has_completed_focus = CBJ_War_Plan
+		is_historical_focus_on = no
+	}
+	abort = {
+		always = no
+	}
+	ai_national_focuses = {
+		CBJ_Anfu_Club
+		CBJ_New_Army
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		CBJ_Invite_Henan
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		CBJ_War_with_Zhili_Clique
+		Shared_Expand_Military_Academies
+		Shared_Westernization_Movement
+		Shared_Construct_Roads
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		CBJ_Establish_Great_Wall_Front
+		CBJ_Attack_Fengtian_Clique
+		CBJ_Bride_Gao
+		CBJ_Second_Loan_of_Nishihara_Kamezo
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		CBJ_Recreate_Anhui_Clique
+		CBJ_Attack_Guangdong_Government
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+		CBJ_China_Japan_Treaty_of_Equality
+	}
+	weight = {
+		factor = 1
+	}
+
+	ai_strategy = { type = antagonize id = "CZL" value = 100 }
+	ai_strategy = { type = conquer id = "CZL" value = 100 }
+	ai_strategy = { type = invade id = "CZL" value = 100 }
+	ai_strategy = { type = declare_war id = "CZL" value = 100 }
+	ai_strategy = { type = antagonize id = "CFT" value = 50 }
+	ai_strategy = { type = conquer id = "CFT" value = 50 }
+	ai_strategy = { type = invade id = "CFT" value = 50 }
+	ai_strategy = { type = declare_war id = "CFT" value = 50 }
+	ai_strategy = { type = befriend id = "JAP" value = 200 }
+}
+
+CBJ_strategy_plan_B_A = {
+	name = "CBJ Strategy Plan B"
+	desc = "CBJ Strategy Plan B"
+
+	enable = {
+		has_completed_focus = CBJ_Peace_Plan
+		NOT = { has_global_flag = Zhili_Anhui_Broken }
+		is_historical_focus_on = no
+	}
+	abort = {
+		has_global_flag = Zhili_Anhui_Broken
+	}
+	ai_national_focuses = {
+		CBJ_Yimo_Club
+		CBJ_New_Army
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		CBJ_Alliance_with_Zhili_Clique
+		Shared_Expand_Military_Academies
+		Shared_Westernization_Movement
+		Shared_Construct_Roads
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		Shared_Expand_Military_Academies
+		CBJ_Establish_Great_Wall_Front
+		CBJ_Attack_Fengtian_Clique
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		CBJ_Recreate_Anhui_Clique
+		CBJ_Attack_Guangdong_Government
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+
+	ai_strategy = { type = antagonize id = "CFT" value = 100 }
+	ai_strategy = { type = conquer id = "CFT" value = 100 }
+	ai_strategy = { type = invade id = "CFT" value = 100 }
+	ai_strategy = { type = declare_war id = "CFT" value = 100 }
+	ai_strategy = { type = befriend id = "IND" value = 200 }
+	ai_strategy = { type = befriend id = "INC" value = 200 }
+}
+
+CBJ_strategy_plan_B_B = {
+	name = "CBJ Strategy Plan B"
+	desc = "CBJ Strategy Plan B"
+
+	enable = {
+		has_completed_focus = CBJ_Peace_Plan
+		has_global_flag = Zhili_Anhui_Broken
+		is_historical_focus_on = no
+	}
+	abort = {
+		NOT = { has_global_flag = Zhili_Anhui_Broken }
+	}
+	ai_national_focuses = {
+		CBJ_Yimo_Club
+		CBJ_New_Army
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		CBJ_Alliance_with_Zhili_Clique
+		Shared_Expand_Military_Academies
+		Shared_Westernization_Movement
+		Shared_Construct_Roads
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		Shared_Expand_Military_Academies
+		CBJ_Establish_Great_Wall_Front
+		CBJ_Attack_Fengtian_Clique
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		CBJ_Recreate_Anhui_Clique
+		CBJ_Attack_Guangdong_Government
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+
+	ai_strategy = { type = antagonize id = "CZL" value = 100 }
+	ai_strategy = { type = conquer id = "CZL" value = 100 }
+	ai_strategy = { type = invade id = "CZL" value = 100 }
+	ai_strategy = { type = declare_war id = "CZL" value = 100 }
+	ai_strategy = { type = antagonize id = "CFT" value = 50 }
+	ai_strategy = { type = conquer id = "CFT" value = 50 }
+	ai_strategy = { type = invade id = "CFT" value = 50 }
+	ai_strategy = { type = declare_war id = "CFT" value = 50 }
+	ai_strategy = { type = befriend id = "JAP" value = 200 }
+}
+
+CBJ_strategy_plan_C = {
+	name = "CBJ Strategy Plan C"
+	desc = "CBJ Strategy Plan C"
+
+	enable = {
+		has_completed_focus = CBJ_Recreate_Democratic_National_Assembly
+		is_historical_focus_on = no
+	}
+	abort = {
+		always = no
+	}
+	ai_national_focuses = {
+		CBJ_Legacy_of_the_May_Fourth_Movement
+		CBJ_A_New_Anhui_Clique
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		Shared_Expand_Military_Academies
+		Shared_Westernization_Movement
+		Shared_Construct_Roads
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		Shared_Establish_Military_Academies
+		CBJ_Westernized_Army
+		CBJ_Tsinghua_Peking_University
+		Shared_Army_Effort
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		CBJ_Democratic_Fort
+		CBJ_Against_Japanese_Imperialism
+		CBJ_Spirit_of_May_Fourth
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+	ai_strategy = { type = befriend id = "CGD" value = 200 }
+	ai_strategy = { type = send_volunteers_desire id = "CGD" value = 100 }
+	ai_strategy = { type = support id = "CGD" value = 100 }
+	ai_strategy = { type = antagonize id = "CFT" value = 100 }
+	ai_strategy = { type = antagonize id = "CZL" value = 100 }
+	ai_strategy = { type = conquer id = "CFT" value = 100 }
+	ai_strategy = { type = conquer id = "CZL" value = 100 }
+	ai_strategy = { type = invade id = "CFT" value = 100 }
+	ai_strategy = { type = invade id = "CZL" value = 100 }
+	ai_strategy = { type = declare_war id = "CFT" value = 100 }
+	ai_strategy = { type = declare_war id = "CZL" value = 100 }
+}

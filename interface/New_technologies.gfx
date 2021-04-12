@@ -1,0 +1,1093 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_equipment_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_infantry_tab.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_technology_equipment_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_equipment_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_equipment_folder_small_branch_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_branch_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_equipment_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_equipment_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+	spriteType = {
+		name = "GFX_theory_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_special_tab.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_technology_theory_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_theory_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_theory_folder_small_branch_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_branch_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_theory_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_theory_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+	SpriteType = {
+		name = "GFX_rifle_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/rifle_equipment_0.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_rifle_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/rifle_equipment_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_rifle_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/rifle_equipment_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_self_defense_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/infantry_weapons.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_self_defense_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/infantry_weapons2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_self_defense_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/infantry_weapons3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_throw_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/infantry_at.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_throw_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/infantry_at2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_flame_equipment_medium"
+		texturefile = "gfx/interface/technologies/flame_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_radio_equipment_medium"
+		texturefile = "gfx/interface/technologies/radio.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_animal_combat_training_medium"
+		texturefile = "gfx/interface/technologies/carbine.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_cavalry_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/cavalry_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_cavalry_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/cavalry_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_cavalry_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/cavalry_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_hmg_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/support_weapons.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_hmg_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/support_weapons2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_hmg_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/support_weapons3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_lmg_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/light_machine_gun.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_sniper_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/sniper_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_sniper_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/sniper_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_sniper_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/sniper_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_special_forces_0_medium"
+		texturefile = "gfx/interface/technologies/tech_special_forces.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_special_forces_1_A_medium"
+		texturefile = "gfx/interface/technologies/tech_advanced_special_forces_training.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_special_forces_1_B_medium"
+		texturefile = "gfx/interface/technologies/tech_improved_special_forces.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_special_forces_2_A_medium"
+		texturefile = "gfx/interface/technologies/tech_extreme_environment_training.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_special_forces_2_B_medium"
+		texturefile = "gfx/interface/technologies/tech_survival_training.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_special_forces_3_medium"
+		texturefile = "gfx/interface/technologies/tech_elite_forces.dds"
+		alwaystransparent = yes
+	}
+
+	SpriteType = {
+		name = "GFX_truck_equipment_medium"
+		texturefile = "gfx/interface/technologies/truck_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_armored_soldiers_0_A_medium"
+		texturefile = "gfx/interface/technologies/deep_operations.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_armored_soldiers_0_B_medium"
+		texturefile = "gfx/interface/technologies/armored_operations.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_armored_soldiers_1_A_medium"
+		texturefile = "gfx/interface/technologies/combined_arms.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_armored_soldiers_1_B_medium"
+		texturefile = "gfx/interface/technologies/mechanized_wave.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_armored_soldiers_0_medium"
+		texturefile = "gfx/interface/technologies/tank_equipment_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_armored_soldiers_1_medium"
+		texturefile = "gfx/interface/technologies/tank_equipment_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_armored_soldiers_2_medium"
+		texturefile = "gfx/interface/technologies/tank_equipment_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_tankette_equipment_medium"
+		texturefile = "gfx/interface/technologies/tankette_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_light_tank_equipment_medium"
+		texturefile = "gfx/interface/technologies/light_tank_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_medium_tank_equipment_medium"
+		texturefile = "gfx/interface/technologies/medium_tank_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_heavy_tank_equipment_medium"
+		texturefile = "gfx/interface/technologies/heavy_tank_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_tankette_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/tankette_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_light_tank_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/light_tank_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_medium_tank_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/medium_tank_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_heavy_tank_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/heavy_tank_equipment.dds"
+		alwaystransparent = yes
+	}
+
+	SpriteType = {
+		name = "GFX_torpedo_boat_equipment_medium"
+		texturefile = "gfx/interface/technologies/torpedo_boat_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_convoy_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/convoy.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_crew_0_A_medium"
+		texturefile = "gfx/interface/technologies/battlefleet_concentration.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_crew_0_B_medium"
+		texturefile = "gfx/interface/technologies/trade_interdiction.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_crew_1_A_medium"
+		texturefile = "gfx/interface/technologies/capital_ship_raiders.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_crew_1_B_medium"
+		texturefile = "gfx/interface/technologies/base_strike.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_crew_0_medium"
+		texturefile = "gfx/interface/technologies/ship_equipment_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_crew_1_medium"
+		texturefile = "gfx/interface/technologies/ship_equipment_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_crew_2_medium"
+		texturefile = "gfx/interface/technologies/ship_equipment_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_corvette_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/corvette_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_cruiser_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/cruiser_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_seaplane_tender_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/seaplane_tender_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_submarine_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/submarine_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_battleship_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/battleship_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_corvette_equipment_medium"
+		texturefile = "gfx/interface/technologies/corvette_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_cruiser_equipment_medium"
+		texturefile = "gfx/interface/technologies/cruiser_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_seaplane_tender_equipment_medium"
+		texturefile = "gfx/interface/technologies/seaplane_tender_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_submarine_equipment_medium"
+		texturefile = "gfx/interface/technologies/submarine_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_battleship_equipment_medium"
+		texturefile = "gfx/interface/technologies/battleship_equipment.dds"
+		alwaystransparent = yes
+	}
+
+	SpriteType = {
+		name = "GFX_recon_plane_equipment_medium"
+		texturefile = "gfx/interface/technologies/recon_plane_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_seaplane_equipment_medium"
+		texturefile = "gfx/interface/technologies/seaplane_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_pilots_0_A_medium"
+		texturefile = "gfx/interface/technologies/fighter_ace_initiative.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_pilots_0_B_medium"
+		texturefile = "gfx/interface/technologies/fighter_veteran_initiative.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_pilots_1_A_medium"
+		texturefile = "gfx/interface/technologies/day_bombing.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_pilots_1_B_medium"
+		texturefile = "gfx/interface/technologies/night_bombing.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_pilots_0_medium"
+		texturefile = "gfx/interface/technologies/plane_equipment_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_pilots_1_medium"
+		texturefile = "gfx/interface/technologies/plane_equipment_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_pilots_2_medium"
+		texturefile = "gfx/interface/technologies/plane_equipment_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_fighter_equipment_medium"
+		texturefile = "gfx/interface/technologies/fighter_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_attacker_equipment_medium"
+		texturefile = "gfx/interface/technologies/attacker_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_bomber_equipment_medium"
+		texturefile = "gfx/interface/technologies/bomber_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_fighter_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/fighter_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_attacker_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/attacker_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_bomber_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/bomber_equipment.dds"
+		alwaystransparent = yes
+	}
+
+	SpriteType = {
+		name = "GFX_support_class_equipment_medium"
+		texturefile = "gfx/interface/technologies/support_equipment_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_mountaineers_0_medium"
+		texturefile = "gfx/interface/technologies/mountain.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_mountaineers_1_medium"
+		texturefile = "gfx/interface/technologies/mountain2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_mountaineers_2_medium"
+		texturefile = "gfx/interface/technologies/mountain3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_marines_0_medium"
+		texturefile = "gfx/interface/technologies/marines.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_marines_1_medium"
+		texturefile = "gfx/interface/technologies/marines2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_marines_2_medium"
+		texturefile = "gfx/interface/technologies/marines3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_forest_infantry_0_medium"
+		texturefile = "gfx/interface/technologies/forest_infantry_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_forest_infantry_1_medium"
+		texturefile = "gfx/interface/technologies/forest_infantry_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_forest_infantry_2_medium"
+		texturefile = "gfx/interface/technologies/forest_infantry_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_desert_infantry_0_medium"
+		texturefile = "gfx/interface/technologies/desert_infantry_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_desert_infantry_1_medium"
+		texturefile = "gfx/interface/technologies/desert_infantry_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_desert_infantry_2_medium"
+		texturefile = "gfx/interface/technologies/desert_infantry_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_jungle_infantry_0_medium"
+		texturefile = "gfx/interface/technologies/jungle_infantry_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_jungle_infantry_1_medium"
+		texturefile = "gfx/interface/technologies/jungle_infantry_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_training_jungle_infantry_2_medium"
+		texturefile = "gfx/interface/technologies/jungle_infantry_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_transport_ship_0_medium"
+		texturefile = "gfx/interface/technologies/transport.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_transport_ship_1_medium"
+		texturefile = "gfx/interface/technologies/landing_craft.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_winter_combat_0_medium"
+		texturefile = "gfx/interface/technologies/acclimatization_cold.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_winter_combat_1_medium"
+		texturefile = "gfx/interface/technologies/acclimatization_cold.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_hot_combat_0_medium"
+		texturefile = "gfx/interface/technologies/acclimatization_hot.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_hot_combat_1_medium"
+		texturefile = "gfx/interface/technologies/acclimatization_hot.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_recon_0_medium"
+		texturefile = "gfx/interface/technologies/recon.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_recon_1_medium"
+		texturefile = "gfx/interface/technologies/recon2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_recon_2_medium"
+		texturefile = "gfx/interface/technologies/recon3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_engineers_0_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_engineers_1_medium"
+		texturefile = "gfx/interface/technologies/engineers2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_engineers_2_medium"
+		texturefile = "gfx/interface/technologies/engineers3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_military_police_0_medium"
+		texturefile = "gfx/interface/technologies/tech_military_police.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_military_police_1_medium"
+		texturefile = "gfx/interface/technologies/tech_military_police2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_military_police_2_medium"
+		texturefile = "gfx/interface/technologies/tech_military_police3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_logistics_company_0_medium"
+		texturefile = "gfx/interface/technologies/tech_logistics_company.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_logistics_company_1_medium"
+		texturefile = "gfx/interface/technologies/tech_logistics_company2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_logistics_company_2_medium"
+		texturefile = "gfx/interface/technologies/tech_logistics_company3.dds"
+		alwaystransparent = yes
+	}
+
+	SpriteType = {
+		name = "GFX_gw_artillery_equipment_medium"
+		texturefile = "gfx/interface/technologies/gw_artillery_equipment.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_cannon_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/cannon_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_cannon_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/cannon_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_cannon_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/cannon_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_howitzer_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/howitzer_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_howitzer_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/howitzer_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_howitzer_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/howitzer_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_mortar_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/mortar_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_mortar_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/mortar_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_mortar_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/mortar_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_cannon_upgrade_1_medium"
+		texturefile = "gfx/interface/technologies/cannon_upgrade_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_cannon_upgrade_2_medium"
+		texturefile = "gfx/interface/technologies/cannon_upgrade_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_howitzer_upgrade_1_medium"
+		texturefile = "gfx/interface/technologies/howitzer_upgrade_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_howitzer_upgrade_2_medium"
+		texturefile = "gfx/interface/technologies/howitzer_upgrade_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_mortar_upgrade_1_medium"
+		texturefile = "gfx/interface/technologies/mortar_upgrade_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_mortar_upgrade_2_medium"
+		texturefile = "gfx/interface/technologies/mortar_upgrade_2.dds"
+		alwaystransparent = yes
+	}
+
+	SpriteType = {
+		name = "GFX_hand_tools_medium"
+		texturefile = "gfx/interface/technologies/hand_tools.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_agriculture_1_medium"
+		texturefile = "gfx/interface/technologies/agriculture_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_agriculture_2_medium"
+		texturefile = "gfx/interface/technologies/agriculture_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_agriculture_3_medium"
+		texturefile = "gfx/interface/technologies/agriculture_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_agriculture_4_medium"
+		texturefile = "gfx/interface/technologies/agriculture_4.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_agriculture_5_medium"
+		texturefile = "gfx/interface/technologies/agriculture_5.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_machine_tools_1_medium"
+		texturefile = "gfx/interface/technologies/machine_tools_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_machine_tools_2_medium"
+		texturefile = "gfx/interface/technologies/machine_tools_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_machine_tools_3_medium"
+		texturefile = "gfx/interface/technologies/machine_tools_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_machine_tools_3_medium"
+		texturefile = "gfx/interface/technologies/machine_tools_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_accuracy_focus_medium"
+		texturefile = "gfx/interface/technologies/flexible_line.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_speed_focus_medium"
+		texturefile = "gfx/interface/technologies/streamlined_line.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_concentrated_industry_1_medium"
+		texturefile = "gfx/interface/technologies/concentrated_industry_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_concentrated_industry_2_medium"
+		texturefile = "gfx/interface/technologies/concentrated_industry_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_concentrated_industry_3_medium"
+		texturefile = "gfx/interface/technologies/concentrated_industry_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_concentrated_industry_4_medium"
+		texturefile = "gfx/interface/technologies/concentrated_industry_4.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_concentrated_industry_5_medium"
+		texturefile = "gfx/interface/technologies/concentrated_industry_5.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_dispersed_industry_1_medium"
+		texturefile = "gfx/interface/technologies/dispersed_industry_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_dispersed_industry_2_medium"
+		texturefile = "gfx/interface/technologies/dispersed_industry_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_dispersed_industry_3_medium"
+		texturefile = "gfx/interface/technologies/dispersed_industry_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_dispersed_industry_4_medium"
+		texturefile = "gfx/interface/technologies/dispersed_industry_4.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_dispersed_industry_5_medium"
+		texturefile = "gfx/interface/technologies/dispersed_industry_5.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_science_1_medium"
+		texturefile = "gfx/interface/technologies/science_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_science_2_medium"
+		texturefile = "gfx/interface/technologies/science_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_science_3_medium"
+		texturefile = "gfx/interface/technologies/science_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_science_4_medium"
+		texturefile = "gfx/interface/technologies/science_4.dds"
+		alwaystransparent = yes
+	}
+
+	SpriteType = {
+		name = "GFX_construction_1_medium"
+		texturefile = "gfx/interface/technologies/construction_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_construction_2_medium"
+		texturefile = "gfx/interface/technologies/construction_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_construction_3_medium"
+		texturefile = "gfx/interface/technologies/construction_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_construction_4_medium"
+		texturefile = "gfx/interface/technologies/construction_4.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_construction_5_medium"
+		texturefile = "gfx/interface/technologies/construction_5.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_excavation_1_medium"
+		texturefile = "gfx/interface/technologies/excavation_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_excavation_2_medium"
+		texturefile = "gfx/interface/technologies/excavation_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_excavation_3_medium"
+		texturefile = "gfx/interface/technologies/excavation_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_excavation_4_medium"
+		texturefile = "gfx/interface/technologies/excavation_4.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_excavation_5_medium"
+		texturefile = "gfx/interface/technologies/excavation_5.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_bunker_1_medium"
+		texturefile = "gfx/interface/technologies/bunker_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_bunker_2_medium"
+		texturefile = "gfx/interface/technologies/bunker_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_bunker_3_medium"
+		texturefile = "gfx/interface/technologies/bunker_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_hospital_1_medium"
+		texturefile = "gfx/interface/technologies/hospital_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_hospital_2_medium"
+		texturefile = "gfx/interface/technologies/hospital_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_hospital_3_medium"
+		texturefile = "gfx/interface/technologies/hospital_3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_physiological_medicine_medium"
+		texturefile = "gfx/interface/technologies/physiological_medicine.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_psychological_medicine_medium"
+		texturefile = "gfx/interface/technologies/psychological_medicine.dds"
+		alwaystransparent = yes
+	}
+
+	SpriteType = {
+		name = "GFX_homeland_defense_medium"
+		texturefile = "gfx/interface/technologies/homeland_defense.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_secret_action_1_medium"
+		texturefile = "gfx/interface/technologies/secret_action_1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_secret_action_2_medium"
+		texturefile = "gfx/interface/technologies/secret_action_2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_encryption_1_medium"
+		texturefile = "gfx/interface/technologies/basic_encryption.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_encryption_2_medium"
+		texturefile = "gfx/interface/technologies/improved_encryption.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_encryption_3_medium"
+		texturefile = "gfx/interface/technologies/advanced_encryption.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_decryption_1_medium"
+		texturefile = "gfx/interface/technologies/basic_decryption.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_decryption_2_medium"
+		texturefile = "gfx/interface/technologies/improved_decryption.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_decryption_3_medium"
+		texturefile = "gfx/interface/technologies/advanced_decryption.dds"
+		alwaystransparent = yes
+	}
+
+	SpriteType = {
+		name = "GFX_doctrine_art_of_command_medium"
+		texturefile = "gfx/interface/technologies/forward_observers.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_firepower_focus_medium"
+		texturefile = "gfx/interface/technologies/superior_firepower.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_manpower_focus_medium"
+		texturefile = "gfx/interface/technologies/mass_assault.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_mobility_focus_medium"
+		texturefile = "gfx/interface/technologies/mobile_warfare.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_trench_warfare_medium"
+		texturefile = "gfx/interface/technologies/trench_warfare.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_penetrate_and_outflank_medium"
+		texturefile = "gfx/interface/technologies/backhand_blow.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_surround_and_lure_medium"
+		texturefile = "gfx/interface/technologies/schwerpunk.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_bloodthirsty_fortification_medium"
+		texturefile = "gfx/interface/technologies/assault_breakthrough.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_large_depth_combat_medium"
+		texturefile = "gfx/interface/technologies/defence_in_depth.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_stormtrooper_medium"
+		texturefile = "gfx/interface/technologies/infiltration_assault.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_suppressive_fire_medium"
+		texturefile = "gfx/interface/technologies/overwhelming_firepower.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_heavily_encirclement_medium"
+		texturefile = "gfx/interface/technologies/breakthrough_priority.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_elaborate_ambush_medium"
+		texturefile = "gfx/interface/technologies/prepared_defense.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_modern_cavalry_medium"
+		texturefile = "gfx/interface/technologies/mass_motorization.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_stormtrooper_medium"
+		texturefile = "gfx/interface/technologies/infiltration_assault.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_desperate_breakout_medium"
+		texturefile = "gfx/interface/technologies/infiltration_in_depth.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_iron_blood_delay_medium"
+		texturefile = "gfx/interface/technologies/pocket_defence.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_night_assault_medium"
+		texturefile = "gfx/interface/technologies/night_assault_tactics.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_armor_experiment_medium"
+		texturefile = "gfx/interface/technologies/armored_spearhead.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_retreat_and_battle_medium"
+		texturefile = "gfx/interface/technologies/continuous_offensive.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_wear_and_tear_medium"
+		texturefile = "gfx/interface/technologies/guerilla_warfare.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_paralyzed_crush_medium"
+		texturefile = "gfx/interface/technologies/blitzkrieg.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_mobile_annihilation_medium"
+		texturefile = "gfx/interface/technologies/regimental_combat_teams.dds"
+		alwaystransparent = yes
+	}
+}

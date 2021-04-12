@@ -1,0 +1,28 @@
+﻿########
+#Templates
+########
+division_template = {
+	name = "Chuton-chi Shidan"
+	division_names_group = JAP_GAR_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+########
+#OOB
+########
+units = {
+	division = {
+		name = "Taiwan Kichi Shubitai"
+		location = 7186
+		division_template = "Chuton-chi Shidan"
+		start_experience_factor = 0.1
+	}
+}

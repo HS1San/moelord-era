@@ -1,0 +1,154 @@
+has_cosmetic_tag_modern = {
+	if = {
+		limit = { original_tag = CAH }
+		has_cosmetic_tag = CAH_modern
+	}
+	if = {
+		limit = { original_tag = CAO }
+		has_cosmetic_tag = CAO_modern
+	}
+	if = {
+		limit = { original_tag = CBJ }
+		has_cosmetic_tag = CBJ_modern
+	}
+	if = {
+		limit = { original_tag = CCH }
+		has_cosmetic_tag = CCH_modern
+	}
+	if = {
+		limit = { original_tag = CEX }
+		has_cosmetic_tag = CEX_modern
+	}
+	if = {
+		limit = { original_tag = CFJ }
+		has_cosmetic_tag = CFJ_modern
+	}
+	if = {
+		limit = { original_tag = CGD }
+		has_cosmetic_tag = CGD_modern
+	}
+	if = {
+		limit = { original_tag = CGS }
+		has_cosmetic_tag = CGS_modern
+	}
+	if = {
+		limit = { original_tag = CGX }
+		has_cosmetic_tag = CGX_modern
+	}
+	if = {
+		limit = { original_tag = CGZ }
+		has_cosmetic_tag = CGZ_modern
+	}
+	if = {
+		limit = { original_tag = CHB }
+		has_cosmetic_tag = CHB_modern
+	}
+	if = {
+		limit = { original_tag = CHE }
+		has_cosmetic_tag = CHE_modern
+	}
+	if = {
+		limit = { original_tag = CHJ }
+		has_cosmetic_tag = CHJ_modern
+	}
+	if = {
+		limit = { original_tag = CHN }
+		has_cosmetic_tag = CHN_modern
+	}
+	if = {
+		limit = { original_tag = CJG }
+		has_cosmetic_tag = CJG_modern
+	}
+	if = {
+		limit = { original_tag = CJL }
+		has_cosmetic_tag = CJL_modern
+	}
+	if = {
+		limit = { original_tag = CJS }
+		has_cosmetic_tag = CJS_modern
+	}
+	if = {
+		limit = { original_tag = CJX }
+		has_cosmetic_tag = CJX_modern
+	}
+	if = {
+		limit = { original_tag = CLS }
+		has_cosmetic_tag = CLS_modern
+	}
+	if = {
+		limit = { original_tag = CNX }
+		has_cosmetic_tag = CNX_modern
+	}
+	if = {
+		limit = { original_tag = CQH }
+		has_cosmetic_tag = CQH_modern
+	}
+	if = {
+		limit = { original_tag = CQY }
+		has_cosmetic_tag = CQY_modern
+	}
+	if = {
+		limit = { original_tag = CRH }
+		has_cosmetic_tag = CRH_modern
+	}
+	if = {
+		limit = { original_tag = CSA }
+		has_cosmetic_tag = CSA_modern
+	}
+	if = {
+		limit = { original_tag = CSC }
+		has_cosmetic_tag = CSC_modern
+	}
+	if = {
+		limit = { original_tag = CSD }
+		has_cosmetic_tag = CSD_modern
+	}
+	if = {
+		limit = { original_tag = CSH }
+		has_cosmetic_tag = CSH_modern
+	}
+	if = {
+		limit = { original_tag = CSX }
+		has_cosmetic_tag = CSX_modern
+	}
+	if = {
+		limit = { original_tag = CSY }
+		has_cosmetic_tag = CSY_modern
+	}
+	if = {
+		limit = { original_tag = CTW }
+		has_cosmetic_tag = CTW_modern
+	}
+	if = {
+		limit = { original_tag = CWH }
+		has_cosmetic_tag = CWH_modern
+	}
+	if = {
+		limit = { original_tag = CXG }
+		has_cosmetic_tag = CXG_modern
+	}
+	if = {
+		limit = { original_tag = CXJ }
+		has_cosmetic_tag = CXJ_modern
+	}
+	if = {
+		limit = { original_tag = CXZ }
+		has_cosmetic_tag = CXZ_modern
+	}
+	if = {
+		limit = { original_tag = CYN }
+		has_cosmetic_tag = CYN_modern
+	}
+	if = {
+		limit = { original_tag = CYX }
+		has_cosmetic_tag = CYX_modern
+	}
+	if = {
+		limit = { original_tag = CZJ }
+		has_cosmetic_tag = CZJ_modern
+	}
+	if = {
+		limit = { original_tag = CZL }
+		has_cosmetic_tag = CZL_modern
+	}
+}

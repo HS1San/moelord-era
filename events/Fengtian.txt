@@ -1,0 +1,30 @@
+add_namespace = fengtian
+
+country_event = { #Destroying the Korean Independence Armies
+	id = fengtian.1
+	title = fengtian.1.t
+	desc = fengtian.1.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = fengtian.1.a
+		add_political_power = 5
+		JAP = {
+			add_political_power = 35
+			add_opinion_modifier = {
+				target = FNG
+				modifier = medium_increases
+			}
+		}
+	}
+	option = {
+		name = fengtian.1.b
+		add_political_power = 35
+		army_experience = 10
+		JAP = {
+			add_political_power = 5
+		}
+	}
+}

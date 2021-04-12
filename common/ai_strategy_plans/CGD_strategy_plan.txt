@@ -1,0 +1,231 @@
+CGD_strategy_plan = {
+	name = "CGD Strategy Plan"
+	desc = "CGD Strategy Plan"
+
+	enable = {
+		original_tag = CGD
+		is_historical_focus_on = no
+	}
+	abort = {
+		OR = {
+			has_completed_focus = CGD_Formed_Merchant_Volunteers_Corps
+			has_completed_focus = CGD_Restrict_Merchant_Groups
+			has_completed_focus = CGD_Destroy_Merchant_Groups
+			has_completed_focus = CGD_Guide_Merchant_Groups
+		}
+	}
+	focus_factors = {
+		CGD_Remove_the_Warlord = 1000
+		CGD_Federalism = 950
+		CGD_Centralism = 950
+		CGD_Formed_Merchant_Volunteers_Corps = 900
+		CGD_Restrict_Merchant_Groups = 900
+		CGD_Destroy_Merchant_Groups = 900
+		CGD_Guide_Merchant_Groups = 900
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+CGD_strategy_plan_A = {
+	name = "CGD Strategy Plan A"
+	desc = "CGD Strategy Plan A"
+
+	enable = {
+		is_historical_focus_on = no
+		has_completed_focus = CGD_Formed_Merchant_Volunteers_Corps
+	}
+	abort = {
+		always = no
+	}
+	ai_national_focuses = {
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		Shared_Expand_Military_Academies
+		CGD_Improve_Relations_with_the_Britain
+		Shared_Westernization_Movement
+		Shared_Construct_Roads
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		CGD_Chinese_Washington
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		CGD_Guangdong_Finance_Department
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+CGD_strategy_plan_B = {
+	name = "CGD Strategy Plan B"
+	desc = "CGD Strategy Plan B"
+
+	enable = {
+		is_historical_focus_on = no
+		has_completed_focus = CGD_Restrict_Merchant_Groups
+	}
+	abort = {
+		always = no
+	}
+	ai_national_focuses = {
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		Shared_Expand_Military_Academies
+		CGD_South_China_Cooperation_Circle
+		CGD_Improve_Relations_with_the_Russia
+		Shared_Westernization_Movement
+		Shared_Construct_Roads
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		CGD_Socialism_of_all_Mankind
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		CGD_Guangdong_Finance_Department
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+	ai_strategy = { type = befriend id = "CHN" value = 200 }
+	ai_strategy = { type = befriend id = "CJX" value = 200 }
+	ai_strategy = { type = befriend id = "CFJ" value = 200 }
+	ai_strategy = { type = befriend id = "CGX" value = 200 }
+}
+
+CGD_strategy_plan_C = {
+	name = "CGD Strategy Plan C"
+	desc = "CGD Strategy Plan C"
+
+	enable = {
+		is_historical_focus_on = no
+		has_completed_focus = CGD_Destroy_Merchant_Groups
+	}
+	abort = {
+		always = no
+	}
+	ai_national_focuses = {
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		Shared_Expand_Military_Academies
+		CGD_Whampoa_Military_Academy
+		CGD_Improve_Relations_with_the_Russia
+		Shared_Westernization_Movement
+		Shared_Construct_Roads
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		CGD_Prepare_to_the_Northern_Expedition
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		CGD_Guangdong_National_University
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+CGD_strategy_plan_D = {
+	name = "CGD Strategy Plan D"
+	desc = "CGD Strategy Plan D"
+
+	enable = {
+		is_historical_focus_on = no
+		has_completed_focus = CGD_Guide_Merchant_Groups
+	}
+	abort = {
+		always = no
+	}
+	ai_national_focuses = {
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		Shared_Expand_Military_Academies
+		CGD_Improve_Relations_with_the_America
+		Shared_Westernization_Movement
+		Shared_Construct_Roads
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		CGD_Genuine_Three_Peoples_Principles
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		CGD_Guangdong_National_University
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+}

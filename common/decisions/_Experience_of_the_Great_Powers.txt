@@ -1,0 +1,557 @@
+Diplomacy_with_the_Great_Powers = {
+	British_Experience_1 = {
+		icon = generic_industry_GBR
+		ai_will_do = { base = 100 }
+
+		cost = 25
+		days_remove = 70
+
+		modifier = { civilian_factory_use = 1 }
+		visible = {
+			check_variable = { ROOT.relationship_with_britain > 49 }
+			NOT = { has_idea = British_Experience_1 }
+			NOT = { has_idea = British_Experience_2 }
+			NOT = { has_idea = British_Experience_3 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 0
+			NOT = { has_war_with = CWH }
+			NOT = { has_war_with = CXG }
+			NOT = { has_war_with = BUR }
+			NOT = { has_war_with = IND }
+			NOT = { has_war_with = PAK }
+			NOT = { has_war_with = MAL }
+			NOT = { has_war_with = SIN }
+			NOT = { has_war_with = SAB }
+			NOT = { has_war_with = SWK }
+		}
+		cancel_trigger = {
+			OR = {
+				has_war_with = CWH
+				has_war_with = CXG
+				has_war_with = BUR
+				has_war_with = IND
+				has_war_with = PAK
+				has_war_with = MAL
+				has_war_with = SIN
+				has_war_with = SAB
+				has_war_with = SWK
+			}
+		}
+		remove_effect = {
+			add_ideas = British_Experience_1
+		}
+	}
+	British_Experience_2 = {
+		icon = generic_industry_GBR
+		ai_will_do = { base = 100 }
+
+		cost = 50
+		days_remove = 70
+
+		modifier = { civilian_factory_use = 2 }
+		visible = {
+			check_variable = { ROOT.relationship_with_britain > 74 }
+			has_idea = British_Experience_1
+			NOT = { has_idea = British_Experience_2 }
+			NOT = { has_idea = British_Experience_3 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			NOT = { has_war_with = CWH }
+			NOT = { has_war_with = CXG }
+			NOT = { has_war_with = BUR }
+			NOT = { has_war_with = IND }
+			NOT = { has_war_with = PAK }
+			NOT = { has_war_with = MAL }
+			NOT = { has_war_with = SIN }
+			NOT = { has_war_with = SAB }
+			NOT = { has_war_with = SWK }
+		}
+		cancel_trigger = {
+			OR = {
+				has_war_with = CWH
+				has_war_with = CXG
+				has_war_with = BUR
+				has_war_with = IND
+				has_war_with = PAK
+				has_war_with = MAL
+				has_war_with = SIN
+				has_war_with = SAB
+				has_war_with = SWK
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = { has_idea = British_Experience_1 }
+				swap_ideas = {
+					remove_idea = British_Experience_1
+					add_idea = British_Experience_2
+				}
+			}
+		}
+	}
+	British_Experience_3 = {
+		icon = generic_industry_GBR
+		ai_will_do = { base = 100 }
+
+		cost = 75
+		days_remove = 70
+
+		modifier = { civilian_factory_use = 3 }
+		visible = {
+			check_variable = { ROOT.relationship_with_britain > 99 }
+			has_idea = British_Experience_2
+			NOT = { has_idea = British_Experience_1 }
+			NOT = { has_idea = British_Experience_3 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			NOT = { has_war_with = CWH }
+			NOT = { has_war_with = CXG }
+			NOT = { has_war_with = BUR }
+			NOT = { has_war_with = IND }
+			NOT = { has_war_with = PAK }
+			NOT = { has_war_with = MAL }
+			NOT = { has_war_with = SIN }
+			NOT = { has_war_with = SAB }
+			NOT = { has_war_with = SWK }
+		}
+		cancel_trigger = {
+			OR = {
+				has_war_with = CWH
+				has_war_with = CXG
+				has_war_with = BUR
+				has_war_with = IND
+				has_war_with = PAK
+				has_war_with = MAL
+				has_war_with = SIN
+				has_war_with = SAB
+				has_war_with = SWK
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = { has_idea = British_Experience_2 }
+				swap_ideas = {
+					remove_idea = British_Experience_2
+					add_idea = British_Experience_3
+				}
+			}
+		}
+	}
+	Italian_Experience_1 = {
+		icon = generic_industry_ITA
+		ai_will_do = { base = 100 }
+
+		cost = 25
+		days_remove = 70
+
+		modifier = { civilian_factory_use = 1 }
+		visible = {
+			check_variable = { ROOT.relationship_with_italy > 49 }
+			NOT = { has_idea = Italian_Experience_1 }
+			NOT = { has_idea = Italian_Experience_2 }
+			NOT = { has_idea = Italian_Experience_3 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		remove_effect = {
+			add_ideas = Italian_Experience_1
+		}
+	}
+	Italian_Experience_2 = {
+		icon = generic_industry_ITA
+		ai_will_do = { base = 100 }
+
+		cost = 50
+		days_remove = 70
+
+		modifier = { civilian_factory_use = 2 }
+		visible = {
+			check_variable = { ROOT.relationship_with_italy > 74 }
+			has_idea = Italian_Experience_1
+			NOT = { has_idea = Italian_Experience_2 }
+			NOT = { has_idea = Italian_Experience_3 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		remove_effect = {
+			if = {
+				limit = { has_idea = Italian_Experience_1 }
+				swap_ideas = {
+					remove_idea = Italian_Experience_1
+					add_idea = Italian_Experience_2
+				}
+			}
+		}
+	}
+	Italian_Experience_3 = {
+		icon = generic_industry_ITA
+		ai_will_do = { base = 100 }
+
+		cost = 75
+		days_remove = 70
+
+		modifier = { civilian_factory_use = 3 }
+		visible = {
+			check_variable = { ROOT.relationship_with_italy > 99 }
+			has_idea = Italian_Experience_2
+			NOT = { has_idea = Italian_Experience_1 }
+			NOT = { has_idea = Italian_Experience_3 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+		remove_effect = {
+			if = {
+				limit = { has_idea = Italian_Experience_2 }
+				swap_ideas = {
+					remove_idea = Italian_Experience_2
+					add_idea = Italian_Experience_3
+				}
+			}
+		}
+	}
+	American_Experience_1 = {
+		icon = generic_industry_USA
+		ai_will_do = { base = 100 }
+
+		cost = 25
+		days_remove = 70
+
+		modifier = { civilian_factory_use = 1 }
+		visible = {
+			check_variable = { ROOT.relationship_with_america > 49 }
+			NOT = { has_idea = American_Experience_1 }
+			NOT = { has_idea = American_Experience_2 }
+			NOT = { has_idea = American_Experience_3 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 0
+			NOT = { has_war_with = PHL }
+		}
+		cancel_trigger = {
+			has_war_with = PHL
+		}
+		remove_effect = {
+			add_ideas = American_Experience_1
+		}
+	}
+	American_Experience_2 = {
+		icon = generic_industry_USA
+		ai_will_do = { base = 100 }
+
+		cost = 50
+		days_remove = 70
+
+		modifier = { civilian_factory_use = 2 }
+		visible = {
+			check_variable = { ROOT.relationship_with_america > 74 }	
+			has_idea = American_Experience_1
+			NOT = { has_idea = American_Experience_2 }
+			NOT = { has_idea = American_Experience_3 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			NOT = { has_war_with = PHL }
+		}
+		cancel_trigger = {
+			has_war_with = PHL
+		}
+		remove_effect = {
+			if = {
+				limit = { has_idea = American_Experience_1 }
+				swap_ideas = {
+					remove_idea = American_Experience_1
+					add_idea = American_Experience_2
+				}
+			}
+		}
+	}
+	American_Experience_3 = {
+		icon = generic_industry_USA
+		ai_will_do = { base = 100 }
+
+		cost = 75
+		days_remove = 70
+
+		modifier = { civilian_factory_use = 3 }
+		visible = {
+			check_variable = { ROOT.relationship_with_america > 99 }	
+			has_idea = American_Experience_2
+			NOT = { has_idea = American_Experience_1 }
+			NOT = { has_idea = American_Experience_3 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			NOT = { has_war_with = PHL }
+		}
+		cancel_trigger = {
+			has_war_with = PHL
+		}
+		remove_effect = {
+			if = {
+				limit = { has_idea = American_Experience_2 }
+				swap_ideas = {
+					remove_idea = American_Experience_2
+					add_idea = American_Experience_3
+				}
+			}
+		}
+	}
+	German_Experience_1 = {
+		icon = generic_industry_GER
+		ai_will_do = { base = 100 }
+
+		cost = 25
+		days_remove = 70
+
+		modifier = { civilian_factory_use = 1 }
+		visible = {
+			check_variable = { ROOT.relationship_with_germany > 49 }
+			NOT = { has_idea = German_Experience_1 }
+			NOT = { has_idea = German_Experience_2 }
+			NOT = { has_idea = German_Experience_3 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		remove_effect = {
+			add_ideas = German_Experience_1
+		}
+	}
+	German_Experience_2 = {
+		icon = generic_industry_GER
+		ai_will_do = { base = 100 }
+
+		cost = 50
+		days_remove = 70
+
+		modifier = { civilian_factory_use = 2 }
+		visible = {
+			check_variable = { ROOT.relationship_with_germany > 74 }
+			has_idea = German_Experience_1
+			NOT = { has_idea = German_Experience_2 }
+			NOT = { has_idea = German_Experience_3 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		remove_effect = {
+			if = {
+				limit = { has_idea = German_Experience_1 }
+				swap_ideas = {
+					remove_idea = German_Experience_1
+					add_idea = German_Experience_2
+				}
+			}
+		}
+	}
+	German_Experience_3 = {
+		icon = generic_industry_GER
+		ai_will_do = { base = 100 }
+
+		cost = 75
+		days_remove = 70
+
+		modifier = { civilian_factory_use = 3 }
+		visible = {
+			check_variable = { ROOT.relationship_with_germany > 99 }
+			has_idea = German_Experience_2
+			NOT = { has_idea = German_Experience_1 }
+			NOT = { has_idea = German_Experience_3 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+		remove_effect = {
+			if = {
+				limit = { has_idea = German_Experience_2 }
+				swap_ideas = {
+					remove_idea = German_Experience_2
+					add_idea = German_Experience_3
+				}
+			}
+		}
+	}
+	French_Experience_1 = {
+		icon = generic_industry_FRA
+		ai_will_do = { base = 100 }
+
+		cost = 25
+		days_remove = 70
+
+		modifier = { civilian_factory_use = 1 }
+		visible = {
+			check_variable = { ROOT.relationship_with_france > 49 }
+			NOT = { has_idea = French_Experience_1 }
+			NOT = { has_idea = French_Experience_2 }
+			NOT = { has_idea = French_Experience_3 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 0
+			NOT = { has_war_with = INC }
+			NOT = { has_war_with = PON }
+		}
+		cancel_trigger = {
+			OR = {
+				has_war_with = INC
+				has_war_with = PON
+			}
+		}
+		remove_effect = {
+			add_ideas = French_Experience_1
+		}
+	}
+	French_Experience_2 = {
+		icon = generic_industry_FRA
+		ai_will_do = { base = 100 }
+
+		cost = 50
+		days_remove = 70
+
+		modifier = { civilian_factory_use = 2 }
+		visible = {
+			check_variable = { ROOT.relationship_with_france > 74 }
+			has_idea = French_Experience_1
+			NOT = { has_idea = French_Experience_2 }
+			NOT = { has_idea = French_Experience_3 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			NOT = { has_war_with = INC }
+			NOT = { has_war_with = PON }
+		}
+		cancel_trigger = {
+			OR = {
+				has_war_with = INC
+				has_war_with = PON
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = { has_idea = French_Experience_1 }
+				swap_ideas = {
+					remove_idea = French_Experience_1
+					add_idea = French_Experience_2
+				}
+			}
+		}
+	}
+	French_Experience_3 = {
+		icon = generic_industry_FRA
+		ai_will_do = { base = 100 }
+
+		cost = 75
+		days_remove = 70
+
+		modifier = { civilian_factory_use = 3 }
+		visible = {
+			check_variable = { ROOT.relationship_with_france > 99 }
+			has_idea = French_Experience_2
+			NOT = { has_idea = French_Experience_1 }
+			NOT = { has_idea = French_Experience_3 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			NOT = { has_war_with = INC }
+			NOT = { has_war_with = PON }
+		}
+		cancel_trigger = {
+			OR = {
+				has_war_with = INC
+				has_war_with = PON
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = { has_idea = French_Experience_2 }
+				swap_ideas = {
+					remove_idea = French_Experience_2
+					add_idea = French_Experience_3
+				}
+			}
+		}
+	}
+	Russian_Experience_1 = {
+		icon = generic_industry_RUS
+		ai_will_do = { base = 100 }
+
+		cost = 25
+		days_remove = 70
+
+		modifier = { civilian_factory_use = 1 }
+		visible = {
+			check_variable = { ROOT.relationship_with_russia > 49 }
+			NOT = { has_idea = Russian_Experience_1 }
+			NOT = { has_idea = Russian_Experience_2 }
+			NOT = { has_idea = Russian_Experience_3 }
+			NOT = { has_cosmetic_tag = MAN_RUS }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		remove_effect = {
+			add_ideas = Russian_Experience_1
+		}
+	}
+	Russian_Experience_2 = {
+		icon = generic_industry_RUS
+		ai_will_do = { base = 100 }
+
+		cost = 50
+		days_remove = 70
+
+		modifier = { civilian_factory_use = 2 }
+		visible = {
+			check_variable = { ROOT.relationship_with_russia > 75 }
+			has_idea = Russian_Experience_1
+			NOT = { has_idea = Russian_Experience_2 }
+			NOT = { has_idea = Russian_Experience_3 }
+			NOT = { has_cosmetic_tag = MAN_RUS }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		remove_effect = {
+			if = {
+				limit = { has_idea = Russian_Experience_1 }
+				swap_ideas = {
+					remove_idea = Russian_Experience_1
+					add_idea = Russian_Experience_2
+				}
+			}
+		}
+	}
+	Russian_Experience_3 = {
+		icon = generic_industry_RUS
+		ai_will_do = { base = 100 }
+
+		cost = 75
+		days_remove = 70
+
+		modifier = { civilian_factory_use = 3 }
+		visible = {
+			check_variable = { ROOT.relationship_with_russia > 99 }
+			has_idea = Russian_Experience_2
+			NOT = { has_idea = Russian_Experience_1 }
+			NOT = { has_idea = Russian_Experience_3 }
+			NOT = { has_cosmetic_tag = MAN_RUS }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+		remove_effect = {
+			if = {
+				limit = { has_idea = Russian_Experience_2 }
+				swap_ideas = {
+					remove_idea = Russian_Experience_2
+					add_idea = Russian_Experience_3
+				}
+			}
+		}
+	}
+}

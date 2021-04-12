@@ -1,0 +1,205 @@
+state = {
+	id = 112
+	name = "STATE_112"
+	manpower = 509520
+	state_category = developed_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 2
+		chromium = 0
+	}
+	history = {
+		owner = MON
+		add_core_of = MON
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 1
+		}
+		victory_points = { 1787 1 }
+		victory_points = { 4801 3 }
+		victory_points = { 7752 1 }
+		victory_points = { 10554 1 }
+	}
+	provinces = {
+		1723 1787 1853 4732 4801 4856 7752 10632 12539 12686 
+	}
+}
+
+state = {
+	id = 113
+	name = "STATE_113"
+	manpower = 64333
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 1
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = MON
+		add_core_of = MON
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 7885 1 }
+		victory_points = { 12557 1 }
+		victory_points = { 12612 1 }
+	}
+	provinces = {
+		1743 1868 4655 4792 4873 7749 7823 7885 10575 10578 10647 10708 12533 12557 12612 12629 12665 
+	}
+}
+
+state = {
+	id = 114
+	name = "STATE_114"
+	manpower = 64333
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 1
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = MON
+		add_core_of = MON
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 1728 1 }
+	}
+	provinces = {
+		1725 1728 1798 1859 4697 4729 7806 7881 10558 10623 10689 10704 12614 12669 12675 
+	}
+}
+
+state = {
+	id = 115
+	name = "STATE_115"
+	manpower = 77200
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = MON
+		add_core_of = MON
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 7799 1 }
+		victory_points = { 10560 1 }
+		victory_points = { 12541 1 }
+	}
+	provinces = {
+		1689 1781 1791 1834 1855 4777 4786 4858 4882 7676 7799 7864 10560 10563 10634 10695 12541 12544 12579 12649 
+	}
+}
+
+state = {
+	id = 116
+	name = "STATE_116"
+	manpower = 64333
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = MON
+		add_core_of = MON
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 1774 2 }
+	}
+	provinces = {
+		1774 4751 7773 7808 7843 7870 10539 10669 12520 12695 
+	}
+}
+
+state = {
+	id = 117
+	name = "STATE_117"
+	manpower = 85000
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = TAN
+		add_core_of = TAN
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		victory_points = { 10627 3 }
+	}
+	provinces = {
+		1676 1877 4680 7703 7731 7804 7819 10597 10627 10646 12610 12625 
+	}
+}
+state = {
+	id = 343
+	name = "STATE_343"
+	manpower = 5146
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = MON
+		add_core_of = MON
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 10554 2 }
+	}
+	provinces = {
+		4862 7717 10554 12605  
+	}
+}

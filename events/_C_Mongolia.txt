@@ -1,0 +1,1691 @@
+﻿add_namespace = new_RAM
+add_namespace = mon_COM
+
+country_event = {
+	id = new_RAM.1
+	title = new_RAM.1.t
+	desc = new_RAM.1.d
+	picture = GFX_report_event_polish_army
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = MON
+		date > 1920.9.10
+		has_war = no
+		NOT = {
+			OR = {
+				has_country_leader = {name = "Bogd Khan"}
+				has_government = Radical_Rightist
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			create_country_leader = {
+				name = "Roman von Ungern-Sternberg"
+				picture = "gfx/leaders/Foreigner/Portrait_Foreigner_Roman_von_Ungern_Sternberg.tga"
+				expire = "1936.1.1"
+				ideology = Radical_Rightist_ideology
+				traits = { spirit_of_genghis }
+			}
+			add_popularity = { ideology = Moderate_Rightist popularity = 0.5 }
+			every_other_country = { news_event = new_News.5 }
+		}
+	}
+
+	option = {
+		name = new_RAM.1.a
+		start_civil_war = {
+			ideology = Radical_Rightist
+			size = 0.3
+			states = { 
+				113
+			}
+		}
+		random_other_country = {
+			limit = {
+				original_tag = MON
+				has_government = Radical_Rightist
+			}
+			remove_ideas = Northwestern_Border_Army
+			remove_ideas = Puppeted_Mongolia
+			remove_ideas = Chinese_Occupation_Mongolia
+			remove_ideas = Chinese_Mongolian_Unity
+			remove_ideas = Threat_of_the_Russian_Revolution
+			remove_ideas = Threat_of_the_Russian_Revolution_reduced
+			add_ideas = White_Russian_Origin
+			add_ideas = Russian_Revolution_is_here
+			
+			inherit_technology = MON
+			load_focus_tree = MON_White_Focus
+			country_event = new_Generic.4
+			add_named_threat = { threat = 5 name = threat.MWR }
+			create_field_marshal = {
+				name = "Roman von Ungern-Sternberg"
+				portrait_path = "gfx/leaders/Foreigner/Portrait_Foreigner_Roman_von_Ungern_Sternberg.tga"
+				traits = { cavalry_officer trickster General_is_a_HoS }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+				id = 190
+			}
+			if = {
+				limit = {
+					country_exists = TAN
+					TAN = {
+						NOT = {
+							has_government = Radical_Rightist
+						}
+					}
+				}
+				declare_war_on = { target = TAN type = civil_war }
+			}
+		}
+		random_other_country = {
+			limit = {
+				OR = {
+					AND = {
+						owns_state = 1
+						is_subject = no
+					}
+					AND = {
+						any_other_country = {
+							owns_state = 1
+							is_subject_of = PREV
+						}
+					}
+				}
+				has_capitulated = no
+			}
+			country_event = new_RAM.2
+		}
+		ROOT = {
+			remove_ideas = Threat_of_the_Russian_Revolution
+			remove_ideas = Threat_of_the_Russian_Revolution_reduced			
+			add_timed_idea = { idea = Russian_Revolution_is_here days = 100 }		
+			if = {
+				limit = { has_idea = Chinese_Mongolian_Unity }
+				hidden_effect = {	
+					add_manpower = 9000
+					division_template = {
+						name = "Mongolian Cavalry Division"
+						priority = 2
+						is_locked = yes
+						regiments = {
+							cavalry = { x = 0 y = 0 }
+							cavalry = { x = 0 y = 1 }
+							cavalry = { x = 1 y = 0 }
+							cavalry = { x = 1 y = 1 }
+							cavalry = { x = 2 y = 0 }
+							cavalry = { x = 2 y = 1 }
+						}
+					}
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"1. Mongolian Cavalry Division\" division_template = \"Mongolian Cavalry Division\" start_experience_factor = 0.5" 
+							owner = ROOT
+						}
+						create_unit = {
+							division = "name = \"2. Mongolian Cavalry Division\" division_template = \"Mongolian Cavalry Division\" start_experience_factor = 0.5" 
+							owner = ROOT
+						}
+						create_unit = {
+							division = "name = \"3. Mongolian Cavalry Division\" division_template = \"Mongolian Cavalry Division\" start_experience_factor = 0.5" 
+							owner = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = new_RAM.1.b
+		start_civil_war = {
+			ideology = Radical_Rightist
+			size = 0.4
+			states = { 
+				113
+			}
+		}
+		random_other_country = {
+			limit = {
+				original_tag = MON
+				has_government = Radical_Rightist
+			}
+			remove_ideas = Northwestern_Border_Army
+			remove_ideas = Puppeted_Mongolia
+			remove_ideas = Chinese_Occupation_Mongolia
+			remove_ideas = Chinese_Mongolian_Unity
+			remove_ideas = Threat_of_the_Russian_Revolution
+			remove_ideas = Threat_of_the_Russian_Revolution_reduced
+			add_ideas = White_Russian_Origin
+			add_ideas = Russian_Revolution_is_here
+			
+			inherit_technology = MON
+			load_focus_tree = MON_White_Focus
+			country_event = new_Generic.4
+			country_event = {
+		    	id = new_RAM.10 
+		    	days = 5
+			}
+			add_named_threat = { threat = 5 name = threat.MWR }
+			create_field_marshal = {
+				name = "Roman von Ungern-Sternberg"
+				portrait_path = "gfx/leaders/Foreigner/Portrait_Foreigner_Roman_von_Ungern_Sternberg.tga"
+				traits = { cavalry_officer trickster General_is_a_HoS }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+				id = 190
+			}
+			if = {
+				limit = {
+					country_exists = TAN
+					TAN = {
+						NOT = {
+							has_government = Radical_Rightist
+						}
+					}
+				}
+				declare_war_on = { target = TAN type = civil_war }
+			}
+		}
+		random_other_country = {
+			limit = {
+				OR = {
+					AND = {
+						owns_state = 1
+						is_subject = no
+					}
+					AND = {
+						any_other_country = {
+							owns_state = 1
+							is_subject_of = PREV
+						}
+					}
+				}
+				has_capitulated = no
+			}
+			country_event = new_RAM.2
+		}
+		ROOT = {
+			remove_ideas = Threat_of_the_Russian_Revolution
+			remove_ideas = Threat_of_the_Russian_Revolution_reduced		
+			add_timed_idea = { idea = Russian_Revolution_is_here days = 100 }		
+			if = {
+				limit = { has_idea = Chinese_Mongolian_Unity }
+				hidden_effect = {
+					add_manpower = 9000
+					division_template = {
+						name = "Mongolian Cavalry Division"
+						priority = 2
+						is_locked = yes
+						regiments = {
+							cavalry = { x = 0 y = 0 }
+							cavalry = { x = 0 y = 1 }
+							cavalry = { x = 1 y = 0 }
+							cavalry = { x = 1 y = 1 }
+							cavalry = { x = 2 y = 0 }
+							cavalry = { x = 2 y = 1 }
+						}
+					}
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"1. Mongolian Cavalry Division\" division_template = \"Mongolian Cavalry Division\" start_experience_factor = 0.5" 
+							owner = ROOT
+						}
+						create_unit = {
+							division = "name = \"2. Mongolian Cavalry Division\" division_template = \"Mongolian Cavalry Division\" start_experience_factor = 0.5" 
+							owner = ROOT
+						}
+						create_unit = {
+							division = "name = \"3. Mongolian Cavalry Division\" division_template = \"Mongolian Cavalry Division\" start_experience_factor = 0.5" 
+							owner = ROOT
+						}
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = MON
+					has_government = Radical_Rightist
+				}
+				change_tag_from = ROOT
+			}
+		}
+	}
+}
+
+country_event = { #Do something about Ungern? (Zhili)
+	id = new_RAM.2
+	title = new_RAM.2.t
+	desc = new_RAM.2.d
+	picture = GFX_Warlord_Mongol_Meeting
+
+	is_triggered_only = yes
+
+	option = { #Go to war!
+		name = new_RAM.2.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0.1
+				is_historical_focus_on = yes
+			}
+		}
+		random_other_country = {
+			limit = {
+				original_tag = MON
+				has_government = Radical_Rightist
+			}
+			ROOT = { add_to_war = { targeted_alliance = MON enemy = PREV } }
+		}
+	}
+	option = { # Who cares?
+		name = new_RAM.2.b
+		add_stability = 0.05
+		add_war_support = -0.05
+	}
+	option = { # Let Fengtian deal with it lol
+		name = new_RAM.2.c
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 2.0
+				is_historical_focus_on = yes
+			}
+		}
+		trigger = {
+			NOT = {
+				has_country_flag = Fengtian_Member
+				any_other_country = {
+					has_country_flag = Fengtian_Member
+					has_war_with = ROOT
+				}
+			}
+			any_other_country = {
+				has_country_flag = Fengtian_Member
+				is_faction_leader = yes
+				has_capitulated = no
+			}
+		}
+		random_other_country = {
+			limit = {
+				has_country_flag = Fengtian_Member
+				is_faction_leader = yes
+			}
+			country_event = new_RAM.3
+		}
+		
+	}
+}
+
+country_event = { #Do something about Ungern? (Fengtian)
+	id = new_RAM.3
+	title = new_RAM.3.t
+	desc = new_RAM.3.d
+	picture = GFX_Warlord_Mongol_Meeting
+
+	is_triggered_only = yes
+
+	option = { # Go to war!
+		name = new_RAM.3.a
+		
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		random_other_country = {
+			limit = {
+				original_tag = MON
+				has_government = Radical_Rightist
+			}
+			ROOT = { add_to_war = { targeted_alliance = MON enemy = PREV } }
+		}
+	}
+	option = { # Who cares?
+		name = new_RAM.3.b
+		add_stability = 0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = { #Rescue Bogd Khan
+	id = new_RAM.4
+	title = new_RAM.4.t
+	desc = new_RAM.4.d
+	picture = GFX_Mongol_Army #GFX WIP
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = MON
+		has_government = Radical_Rightist
+		has_civil_war = yes
+		OR = {
+			controls_province = 10554
+			controls_province = 7752
+		}
+		any_enemy_country = {
+			OR = {
+				has_country_flag = Bogd_Khan_Imprisoned			
+				has_country_flag = Bogd_Khan_Murdered
+			}
+		}
+	}
+	
+	option = { #Let's go rescue the princess!
+		name = new_RAM.4.a
+		add_political_power = -50
+		random_other_country = {
+			limit = {		
+				original_tag = MON
+				has_civil_war = yes
+				OR = {
+					has_country_flag = Bogd_Khan_Imprisoned			
+					has_country_flag = Bogd_Khan_Murdered
+				}
+			}
+			country_event = {
+		    	id = new_RAM.5 
+		    	days = 5
+			}
+		}
+	}
+
+	option = { #I'm a sissie
+		name = new_RAM.4.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = { #Rescue Bogd Khan - Chinese Response
+	id = new_RAM.5
+	title = new_RAM.5.t
+	desc = new_RAM.5.d
+	picture = GFX_Mongol_Nobility
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+	
+	option = { #Nah, we don't care
+		trigger = { has_country_flag = Bogd_Khan_Imprisoned }		
+		name = new_RAM.5.a
+		random_list = {
+			90 = { #Sucessful Rescue		
+				clr_country_flag = Bogd_Khan_Imprisoned
+				FROM = {
+					country_event = {
+						id = new_RAM.6 
+						days = 2
+					}
+				}
+			}
+			10 = { #Spooked
+				FROM = {
+					country_event = {
+						id = new_RAM.7 
+						days = 2
+					}
+				}
+			}
+		}
+	}
+	option = { #Increase Guard Patrols!
+		trigger = { has_country_flag = Bogd_Khan_Imprisoned }		
+		name = new_RAM.5.b
+		add_manpower = -100
+		add_equipment_to_stockpile = { type = carbine_equipment_0 amount = -100 }
+		add_political_power = -50
+		random_list = {
+			60 = { #Sucessful Rescue		
+				clr_country_flag = Bogd_Khan_Imprisoned
+				FROM = {
+					country_event = {
+						id = new_RAM.6 
+						days = 2
+					}
+				}
+			}
+			40 = { #Spooked
+				FROM = {
+					country_event = {
+						id = new_RAM.7 
+						days = 2
+					}
+				}
+			}
+		}
+	}	
+	option = { #Hahaha, try to rescue a corpse lol
+		trigger = { has_country_flag = Bogd_Khan_Murdered }
+		name = new_RAM.5.c
+		FROM = {
+			country_event = {
+				id = new_RAM.8
+				days = 2
+			}
+		}
+	}
+	option = { #We'll murder him before Ungern gets him
+		trigger = { has_country_flag = Bogd_Khan_Imprisoned }
+		name = new_RAM.5.d
+		clr_country_flag = Bogd_Khan_Imprisoned
+		set_country_flag = Bogd_Khan_Murdered
+		add_stability = -0.1
+		add_war_support = -0.1
+		add_political_power = -200
+		#add timed idea
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		FROM = {
+			country_event = {
+				id = new_RAM.8
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = { #Successful Rescue!
+	id = new_RAM.6
+	title = new_RAM.6.t
+	desc = new_RAM.6.d
+	picture = GFX_Mongol_Nobility
+
+	is_triggered_only = yes 
+
+	option = {
+		name = new_RAM.6.a
+		add_political_power = 100
+		add_stability = 0.05
+		add_war_support = 0.05
+		set_country_flag = Bogd_Khan_Rescued
+	}
+}
+
+country_event = { #Failed Rescue!
+	id = new_RAM.7
+	title = new_RAM.7.t
+	desc = new_RAM.7.d
+	picture = GFX_report_event_indian_parade
+
+	is_triggered_only = yes 
+
+	option = {
+		name = new_RAM.7.a #Absolute Buffoonery
+		add_political_power = -100
+		add_war_support = -0.1
+	}
+}
+
+country_event = { #Too late!
+	id = new_RAM.8
+	title = new_RAM.8.t
+	desc = new_RAM.8.d
+	picture = GFX_report_event_indian_parade
+
+	is_triggered_only = yes 
+
+	option = {
+		name = new_RAM.8.a
+		set_country_flag = Bogd_Khan_Murdered
+		add_political_power = 200
+		add_stability = -0.1
+		add_war_support = 0.2
+	}
+}
+
+country_event = { #Entering Urga
+	id = new_RAM.9
+	title = new_RAM.9.t
+	desc = new_RAM.9.d
+	picture = GFX_Urga_Map
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = MON
+		has_government = Radical_Rightist
+		has_civil_war = yes
+		controls_province = 4801
+	}
+
+	option = {
+		name = new_RAM.9.a
+		add_political_power = 50 
+		hidden_effect = {
+			if = {
+				limit = {
+					any_enemy_country = {
+						original_tag = MON
+						has_country_flag = Bogd_Khan_Imprisoned 
+					}
+				}			
+				ROOT = {				
+					set_country_flag = Bogd_Khan_Rescued
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Oops, forgot to add Ungern Intro
+	id = new_RAM.10
+	title = new_RAM.10.t
+	desc = new_RAM.10.d
+	picture = GFX_Russian_Mongolian_Treaty
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = new_RAM.10.a
+		add_political_power = 10 #Free pp
+		add_stability = -0.05
+	}
+}
+
+country_event = { #Coronation of the Khan
+	id = new_RAM.11
+	title = new_RAM.11.t
+	desc = new_RAM.11.d
+	picture = GFX_Khanate_Court
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = new_RAM.11.a
+		trigger = { has_country_flag = Bogd_Khan_Rescued }
+		add_ideas = Jebtsundamba_Khutuktu
+		create_country_leader = {
+            name = "Bogd Khan"
+	        picture = "Portrait_Mongolia_Bogd_Khan.tga"
+	        expire = "1924.5.20"
+	        ideology = Moderate_Leftist_ideology
+	        traits = {
+				popular_figurehead
+			}
+        }
+		create_country_leader = {
+            name = "Bogd Khan"
+	        picture = "Portrait_Mongolia_Bogd_Khan.tga"
+	        expire = "1924.5.20"
+	        ideology = Centrist_ideology
+	        traits = {
+				popular_figurehead
+			}
+        }
+		create_country_leader = {
+            name = "Bogd Khan"
+	        picture = "Portrait_Mongolia_Bogd_Khan.tga"
+	        expire = "1924.5.20"
+	        ideology = Moderate_Rightist_ideology
+	        traits = {
+				popular_figurehead
+			}
+        }
+		create_country_leader = {
+            name = "Bogd Khan"
+	        picture = "Portrait_Mongolia_Bogd_Khan.tga"
+	        expire = "1924.5.20"
+	        ideology = Radical_Rightist_ideology
+	        traits = {
+				popular_figurehead
+			}
+        }
+	}
+
+	option = {
+		name = new_RAM.11.b
+		trigger = { has_country_flag = Bogd_Khan_Murdered }
+		add_ideas = Search_for_a_new_Reincarnation
+		create_country_leader = {
+            name = "Regent Navaanneren"
+			picture = "Portrait_Mongolia_Navaanneren.tga"
+	        expire = "1936.1.1"
+	        ideology = Moderate_Leftist_ideology
+	        traits = {
+				popular_figurehead
+			}
+        }
+		create_country_leader = {
+            name = "Regent Navaanneren"
+			picture = "Portrait_Mongolia_Navaanneren.tga"
+	        expire = "1936.1.1"
+	        ideology = Centrist_ideology
+	        traits = {
+				popular_figurehead
+			}
+        }
+		create_country_leader = {
+            name = "Regent Navaanneren"
+			picture = "Portrait_Mongolia_Navaanneren.tga"
+	        expire = "1936.1.1"
+	        ideology = Moderate_Rightist_ideology
+	        traits = {
+				popular_figurehead
+			}
+        }
+		create_country_leader = {
+            name = "Regent Navaanneren"
+			picture = "Portrait_Mongolia_Navaanneren.tga"
+	        expire = "1936.1.1"
+	        ideology = Radical_Rightist_ideology
+	        traits = {
+				popular_figurehead
+			}
+        }
+	}
+}
+
+country_event = { #(Natural) Death of Bogd Khan (monarchist)
+	id = new_RAM.12
+	title = new_RAM.12.t
+	desc = new_RAM.12.d
+	picture = GFX_Mongol_Meeting
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = MON
+		date > 1924.5.20
+		has_idea = Jebtsundamba_Khutuktu
+		has_country_leader = { name = "Bogd Khan" }
+	}
+
+	option = {
+		name = new_RAM.12.a
+		remove_ideas = Jebtsundamba_Khutuktu
+		add_ideas = Search_for_a_new_Reincarnation
+		retire_country_leader = yes
+		create_country_leader = {
+            name = "Regent Navaanneren"
+			picture = "Portrait_Mongolia_Navaanneren.tga"
+	        expire = "1936.1.1"
+	        ideology = Centrist_ideology
+	        traits = {
+				popular_figurehead
+			}
+        }
+		create_country_leader = {
+            name = "Regent Navaanneren"
+			picture = "Portrait_Mongolia_Navaanneren.tga"
+	        expire = "1936.1.1"
+	        ideology = Radical_Rightist_ideology
+	        traits = {
+				popular_figurehead
+			}
+        }
+	}
+}
+
+country_event = { #(Natural) Death of Bogd Khan (communist)
+	id = new_RAM.13
+	title = new_RAM.13.t
+	desc = new_RAM.13.d
+	picture = GFX_Mongol_Meeting
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = MON
+		OR = {
+			has_government = Radical_Leftist
+			has_government = Moderate_Leftist
+		}
+		AND = {
+			date > 1924.5.20
+			has_idea = Jebtsundamba_Khutuktu
+		}
+	}
+
+	option = {
+		name = new_RAM.13.a #The Constitutional Monarchy Continues
+		remove_ideas = Jebtsundamba_Khutuktu
+		add_ideas = Search_for_a_new_Reincarnation
+	}
+	option = {
+		name = new_RAM.13.b #Forbid the incarnation!
+		trigger = { has_government = Radical_Leftist }
+		remove_ideas = Jebtsundamba_Khutuktu
+		remove_ideas = Search_for_a_new_Reincarnation
+		complete_national_focus = MON_Forced_Abdication
+		add_ideas = Religious_Unrest
+	}
+}
+
+country_event = { #(Natural) Death of Bogd Khan (Semyonov)
+	id = new_RAM.14
+	title = new_RAM.14.t
+	desc = new_RAM.14.d
+	picture = GFX_Mongol_Meeting
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = MON
+		date > 1924.5.20
+		NOT = {
+			OR = {
+				has_country_leader = { name = "Bogd Khan" }				
+				has_country_leader = { name = "Regent Navaanneren" }
+			}
+		}
+		has_government = Radical_Rightist
+	}
+
+	option = {
+		name = new_RAM.14.a #Does not concern us too much
+		remove_ideas = Jebtsundamba_Khutuktu
+		add_ideas = Search_for_a_new_Reincarnation
+	}
+}
+
+country_event = {
+	id = new_RAM.15 #Response to Invitation from MON to join the Monarchist Front
+	title = new_RAM.15.t
+	desc = new_RAM.15.d
+	picture = GFX_Mongol_Meeting
+
+	is_triggered_only = yes
+	
+	option = {
+		name = new_RAM.15.a #Join
+		
+		FROM = {add_to_faction = ROOT}
+		add_ai_strategy = { type = alliance id = ROOT value = 200 }
+		ROOT = { add_ai_strategy = { type = alliance id = PREV value = 200 } }
+		
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 1.25
+				ROOT = { has_opinion = { target = FROM value > 175 } }
+			}
+			modifier = {
+				factor = 1.25
+				ROOT = { has_opinion = { target = FROM value > 150 } }
+			}
+			modifier = {
+				factor = 1.25
+				ROOT = { has_opinion = { target = FROM value > 125 } }
+			}
+			modifier = {
+				factor = 1.25
+				ROOT = { has_opinion = { target = FROM value > 100 } }
+			}
+			modifier = {
+				factor = 1.25
+				ROOT = { has_opinion = { target = FROM value > 75 } }
+			}
+			modifier = {
+				factor = 1.25
+				ROOT = { has_opinion = { target = FROM value > 50 } }
+			}
+			modifier = {
+				factor = 1.25
+				ROOT = { has_opinion = { target = FROM value > 25 } }
+			}
+			modifier = {
+				factor = 0.75
+				ROOT = { has_opinion = { target = FROM value < -25 } }
+			}
+			modifier = {
+				factor = 0.75
+				ROOT = { has_opinion = { target = FROM value < -50 } }
+			}
+			modifier = {
+				factor = 0.75
+				ROOT = { has_opinion = { target = FROM value < -75 } }
+			}
+			modifier = {
+				factor = 0.75
+				ROOT = { has_opinion = { target = FROM value < -100 } }
+			}
+			modifier = {
+				factor = 0.75
+				ROOT = { has_opinion = { target = FROM value < -125 } }
+			}
+			modifier = {
+				factor = 0.75
+				ROOT = { has_opinion = { target = FROM value < -150 } }
+			}
+			modifier = {
+				factor = 0.75
+				ROOT = { has_opinion = { target = FROM value < -175 } }
+			}
+		}
+	}
+
+	option = {
+		name = new_RAM.15.b #Refuse
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0.75
+				ROOT = { has_opinion = { target = FROM value > 175 } }
+			}
+			modifier = {
+				factor = 0.75
+				ROOT = { has_opinion = { target = FROM value > 150 } }
+			}
+			modifier = {
+				factor = 0.75
+				ROOT = { has_opinion = { target = FROM value > 125 } }
+			}
+			modifier = {
+				factor = 0.75
+				ROOT = { has_opinion = { target = FROM value > 100 } }
+			}
+			modifier = {
+				factor = 0.75
+				ROOT = { has_opinion = { target = FROM value > 75 } }
+			}
+			modifier = {
+				factor = 0.75
+				ROOT = { has_opinion = { target = FROM value > 50 } }
+			}
+			modifier = {
+				factor = 0.75
+				ROOT = { has_opinion = { target = FROM value > 25 } }
+			}
+			modifier = {
+				factor = 1.25
+				ROOT = { has_opinion = { target = FROM value < -25 } }
+			}
+			modifier = {
+				factor = 1.25
+				ROOT = { has_opinion = { target = FROM value < -50 } }
+			}
+			modifier = {
+				factor = 1.25
+				ROOT = { has_opinion = { target = FROM value < -75 } }
+			}
+			modifier = {
+				factor = 1.25
+				ROOT = { has_opinion = { target = FROM value < -100 } }
+			}
+			modifier = {
+				factor = 1.25
+				ROOT = { has_opinion = { target = FROM value < -125 } }
+			}
+			modifier = {
+				factor = 1.25
+				ROOT = { has_opinion = { target = FROM value < -150 } }
+			}
+			modifier = {
+				factor = 1.25
+				ROOT = { has_opinion = { target = FROM value < -175 } }
+			}
+		}	
+		FROM = {		
+			create_wargoal = { type = annex_everything target = ROOT }
+		}
+	}
+}
+
+country_event = {
+	id = mon_COM.1
+	title = mon_COM.1.t
+	desc = mon_COM.1.d
+	picture = GFX_report_event_worker_protests
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = MON
+		date > 1921.6.1
+		has_war = no
+		has_government = Radical_Rightist
+	}
+
+	mean_time_to_happen = {
+		days = 30
+		modifier = { factor = 0.5 date > 1921.7.1 }
+		modifier = { factor = 0.2 date > 1921.8.1 }
+	}
+
+	immediate = {
+		hidden_effect = {
+			create_country_leader = {
+				name = "Dogsomyn Bodoo"
+				picture = "gfx/leaders/MON/Portrait_Mongolia_Dogsomyn_Bodoo.tga"
+				expire = "1936.1.1"
+				ideology = Radical_Leftist_ideology
+				traits = { cornered_fox }
+			}
+			add_popularity = { ideology = Radical_Leftist popularity = 0.1 }
+			if = {
+				limit = { is_faction_leader = yes }
+				dismantle_faction = yes
+			}
+		}
+	}
+
+	option = {
+		name = mon_COM.1.a
+		remove_ideas = Threat_of_the_Russian_Revolution
+		remove_ideas = Threat_of_the_Russian_Revolution_reduced
+		add_timed_idea ={ idea = Russian_Revolution_is_here days = 100 }
+		start_civil_war = {
+			ideology = Radical_Leftist
+			size = 0.5
+			states = {
+				343
+			}
+			keep_unit_leaders = { 190 }
+		}
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = MON
+					has_government = Radical_Leftist
+				}
+				create_country_leader = {
+					name = "Soliin Danzan"
+					picture = "gfx/leaders/MON/Portrait_Mongolia_Soliin_Danzan.tga"
+					expire = "1936.1.1"
+					ideology = Moderate_Leftist_ideology
+					traits = {
+						popular_figurehead
+					}
+				}
+				create_field_marshal = {
+					name = "Damdin Sukhbaatar"
+					picture = "gfx/leaders/MON/Portrait_Mongolia_Damdin_Sukhbaatar.tga"
+					traits = { cavalry_officer trickster media_personality }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 3
+					id = 191
+				}
+				set_popularities = {
+					Radical_Leftist = 45
+					Moderate_Leftist = 40
+					Centrist = 5
+					Moderate_Rightist = 10
+					Radical_Rightist = 0
+				}
+				remove_ideas = Pan_Mongolism
+				remove_ideas = Descendants_of_Chenghis
+				remove_ideas = White_Russian_Origin
+				remove_ideas = Eight_Banners
+				add_ideas = Russian_Revolution_is_here
+				load_focus_tree = MON_Red_Focus
+				inherit_technology = ROOT
+				clr_country_flag = SH_CEM
+				set_country_flag = SH_OTH
+				add_political_road = no
+				set_variable = {
+					var = relationship_with_russia
+					value = 100
+				}
+				add_ideas = Russian_Experience_3
+				add_named_threat = { threat = 5 name = threat.MRR }
+				change_tag_from = ROOT		
+			}
+		}
+	}
+	option = {
+		name = mon_COM.1.b
+		remove_ideas = Threat_of_the_Russian_Revolution
+		remove_ideas = Threat_of_the_Russian_Revolution_reduced
+		add_timed_idea ={ idea = Russian_Revolution_is_here days = 100 }
+		start_civil_war = {
+			ideology = Radical_Leftist
+			size = 0.4
+			states = {
+				343
+			}
+			keep_unit_leaders = { 190 }
+		}
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = MON
+					has_government = Radical_Leftist
+				}
+				set_popularities = {
+					Radical_Leftist = 45
+					Moderate_Leftist = 40
+					Centrist = 5
+					Moderate_Rightist = 10
+					Radical_Rightist = 0
+				}
+				create_country_leader = {
+					name = "Soliin Danzan"
+					picture = "gfx/leaders/MON/Portrait_Mongolia_Soliin_Danzan.tga"
+					expire = "1936.1.1"
+					ideology = Moderate_Leftist_ideology
+					traits = {
+						popular_figurehead
+					}
+				}
+				create_field_marshal = {
+					name = "Damdin Sukhbaatar"
+					picture = "gfx/leaders/MON/Portrait_Mongolia_Damdin_Sukhbaatar.tga"
+					traits = { cavalry_officer trickster media_personality }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 3
+					id = 191
+				}
+				remove_ideas = Pan_Mongolism
+				remove_ideas = Descendants_of_Chenghis
+				remove_ideas = White_Russian_Origin
+				remove_ideas = Eight_Banners
+				add_ideas = Russian_Revolution_is_here
+				set_variable = {
+					var = relationship_with_russia
+					value = 100
+				}
+				add_ideas = Russian_Experience_3
+				load_focus_tree = MON_Red_Focus
+				inherit_technology = ROOT
+				set_country_flag = SH_OTH
+				add_named_threat = { threat = 5 name = threat.MRR }
+			}
+		}
+	}
+}
+
+country_event = { #Irkutsk Delegation
+	id = mon_COM.2
+	title = mon_COM.2.t
+	desc = mon_COM.2.d
+	picture = GFX_Red_Mongol
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = MPP_in_Power
+			add_popularity = {
+				ideology = Radical_Leftist
+				popularity = 0.1
+			}
+		}
+		add_ideas = Communist_Power_Struggle
+	}
+	option = {
+		name = mon_COM.2.a
+	}
+}
+
+country_event = { #Monarchy Referendum Intro
+	id = mon_COM.3
+	title = mon_COM.3.t
+	desc = mon_COM.3.d
+	picture = GFX_report_event_election_vote
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			add_popularity = {
+				ideology = Moderate_Leftist 
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = Centrist 
+				popularity = 0.1
+			}
+		}
+	}
+	option = {
+		name = mon_COM.3.a
+		random_list = {
+     		50 = { country_event = { id = mon_COM.4 days = 15 } }
+     		50 = { country_event = { id = mon_COM.5 days = 15 } }
+		}
+	}
+}
+
+country_event = { #Monarchy Remains!
+	id = mon_COM.4
+	title = mon_COM.4.t
+	desc = mon_COM.4.d
+	picture = GFX_Bogd_Khan_Flag
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mon_COM.4.a
+		add_political_power = 100
+		swap_ideas = {
+			remove_idea = Defenders_of_Mongolia_1
+			add_idea = Defenders_of_Mongolia_2
+		}
+		hidden_effect = {
+			add_popularity = {
+				ideology = Moderate_Rightist 
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = Centrist 
+				popularity = 0.1
+			}
+		}
+	}
+}
+
+country_event = { #A Republic!
+	id = mon_COM.5
+	title = mon_COM.5.t
+	desc = mon_COM.5.d
+	picture = GFX_report_event_election_vote
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			add_popularity = {
+				ideology = Moderate_Rightist 
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = Moderate_Leftist 
+				popularity = 0.1
+			}
+		}
+		remove_ideas = Jebtsundamba_Khutuktu
+		remove_ideas = Search_for_a_new_Reincarnation
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = -100
+		swap_ideas = {
+			remove_idea = Defenders_of_Mongolia_1
+			add_idea = Defenders_of_Mongolia_2
+		}
+		set_cosmetic_tag = MON_rep
+	}
+	option = {
+		name = mon_COM.5.a
+	}
+}
+
+country_event = { #Proclaim the People's Republic!
+	id = mon_COM.6
+	title = mon_COM.6.t
+	desc = mon_COM.6.d
+	picture = GFX_Red_Mongol
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_popularity = {
+				ideology = Radical_Leftist 
+				popularity = 0.3
+			}
+		}
+		set_cosmetic_tag = MON_ppl
+	}
+	option = {
+		name = mon_COM.6.a
+	}
+}
+
+country_event = { #RadLeft Civil War!
+	id = mon_COM.7
+	title = mon_COM.7.t
+	desc = mon_COM.7.d
+	picture = GFX_China_Troop_North
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {		
+		start_civil_war = {
+			ideology = Radical_Leftist
+			size = 0.5
+		}
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = MON
+					has_government = Radical_Leftist
+				}
+				remove_ideas = Jebtsundamba_Khutuktu
+				remove_ideas = Search_for_a_new_Reincarnation
+				load_focus_tree = MON_Red_Focus
+				unlock_national_focus = MON_Mongolian_People's_Party
+				unlock_national_focus = MON_Delegation_to_Irkutsk
+				unlock_national_focus = MON_Revolution
+				unlock_national_focus = MON_Forced_Abdication
+				complete_national_focus = MON_Revolutionary_Socialism
+				add_ideas = Religious_Unrest
+				inherit_technology = ROOT
+				clr_country_flag = MON_SocDem
+			}
+		}
+		remove_ideas = Communist_Power_Struggle
+	}
+
+	option = { #Stay with Modleft
+		name = mon_COM.7.a
+		add_political_power = 50
+	}
+	
+	option = { #Go with RadLeft
+		name = mon_COM.7.b
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = MON
+					has_government = Radical_Leftist
+				}
+				change_tag_from = FROM
+			}
+		}
+	}
+}
+
+##### Actual Power Struggle #####
+
+country_event = { #Bodoo's Modernization Reforms!
+	id = mon_COM.8
+	title = mon_COM.8.t
+	desc = mon_COM.8.d
+	picture = GFX_Red_Mongol
+	
+	trigger = {
+		original_tag = MON
+		has_civil_war = no
+		has_country_leader = {name = "Dogsomyn Bodoo"}
+	}
+
+	fire_only_once = yes
+
+	option = { #Radical
+		name = mon_COM.8.a
+		add_political_power = -50
+		add_popularity = {
+			ideology = Radical_Leftist 
+			popularity = 0.1
+		}
+		hidden_effect = {
+			country_event = {
+				id = mon_COM.9
+				days = 60
+			}
+			add_timed_idea = {
+				idea = Public_Dissent
+				days = 60
+			}
+		}
+	}
+	option = { #Moderate
+		name = mon_COM.8.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -100
+		add_popularity = {
+			ideology = Moderate_Leftist 
+			popularity = 0.05
+			hidden_effect = {
+				country_event = {
+					id = mon_COM.10
+					days = 60
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Bodoo's Modernization Backfires!
+	id = mon_COM.9
+	title = mon_COM.9.t
+	desc = mon_COM.9.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Execute Bodoo
+		name = mon_COM.9.a
+		add_political_power = 100
+		add_popularity = {
+			ideology = Moderate_Leftist 
+			popularity = 0.2
+		}
+		ROOT = {
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Tseren-Ochiryn Dambadorj"	
+				picture = "gfx/leaders/MON/Portrait_Mongolia_Tseren-Ochiryn_Dambadorj.tga"
+				expire = "1936.1.1"
+				ideology = Radical_Leftist_ideology
+				traits = { dealbroker }
+			}
+		}
+		set_politics = {
+			ruling_party = Moderate_Leftist
+			elections_allowed = no
+		}
+		hidden_effect = {
+			country_event = {
+				id = mon_COM.10
+				days = 90
+			}
+		}
+	}
+	option = { #Let Bodoo Resign
+		name = mon_COM.9.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		set_politics = {
+			ruling_party = Moderate_Leftist
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = Moderate_Leftist 
+			popularity = 0.1
+		}
+		hidden_effect = {
+			country_event = {
+				id = mon_COM.10
+				days = 90
+			}
+		}
+	}
+}
+
+country_event = { #Danzan's Capitalist Connections 
+	id = mon_COM.10
+	title = mon_COM.10.t
+	desc = mon_COM.10.d
+	picture = GFX_report_event_soviet_purge_trial
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Execute Danzan
+		name = mon_COM.10.a
+		add_political_power = 100
+		add_popularity = {
+			ideology = Radical_Leftist 
+			popularity = 0.3
+		}
+		ROOT = {
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Tseren-Ochiryn Dambadorj"	
+				picture = "gfx/leaders/MON/Portrait_Mongolia_Tseren-Ochiryn_Dambadorj.tga"
+				expire = "1936.1.1"
+				ideology = Moderate_Leftist_ideology
+				traits = { dealbroker }
+			}
+		}
+		set_politics = {
+			ruling_party = Radical_Leftist
+			elections_allowed = no
+		}
+	}
+	option = { #Danzan Persuades the Council
+		name = mon_COM.10.b
+		trigger = { has_government = Moderate_Leftist }
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -100
+		add_popularity = {
+			ideology = Moderate_Leftist 
+			popularity = 0.1
+		}
+		set_country_flag = MON_SocDem
+		hidden_effect = {
+			country_event = {
+				id = mon_COM.7
+				days = 30
+			}
+		}
+	}
+}
+
+country_event = { #Soviet Aid
+	id = mon_COM.11
+	title = mon_COM.11.t
+	desc = mon_COM.11.d
+	picture = GFX_Mongol_Army
+
+	trigger = {
+		original_tag = MON
+		has_civil_war = yes
+		has_government = Radical_Leftist
+		has_completed_focus = MON_Revolutionary_Socialism
+	}
+	
+	fire_only_once = yes
+	option = {
+		name = mon_COM.11.a
+		add_popularity = {
+			ideology = Radical_Leftist
+			popularity = 0.5
+		}
+		add_equipment_to_stockpile = { type = rifle_equipment_1 amount = 6000 }
+		add_manpower = 3000
+		division_template = {
+			name = "Soviet Division"
+			priority = 2
+			is_locked = yes
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "name = \"1. Soviet Division\" division_template = \"Soviet Division\" start_experience_factor = 0.5" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"2. Soviet Division\" division_template = \"Soviet Division\" start_experience_factor = 0.5" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"3. Soviet Division\" division_template = \"Soviet Division\" start_experience_factor = 0.5" 
+				owner = ROOT
+			}
+		}
+	}
+}
+country_event = { #Death of Sukhbaatar
+	id = mon_COM.12
+	title = mon_COM.12.t
+	desc = mon_COM.12.d
+	picture = GFX_Mongol_Army
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 1923.2.20
+		original_tag = MON
+		has_unit_leader = 191
+	}
+
+	option = {
+		name = mon_COM.12.a
+		remove_unit_leader = 191
+	}
+}
+#country_event = { #Mongolian Annexation
+#	id = new_RAM.7
+#	title = new_RAM.7.t
+#	desc = new_RAM.7.d
+#	picture = GFX_report_event_chinese_japanese_handshake
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = new_RAM.7.a
+#		add_stability = 0.03
+#		MON = {
+#			retire_country_leader = yes
+#			create_country_leader = {
+#				name = "Chen Yi"	# 陈毅
+#				picture = "gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
+#				expire = "1936.1.1"
+#				ideology = Centrist_ideology
+#				traits = { dealbroker }
+#			}
+#		}
+#		hidden_effect = { every_other_country = { news_event = new_News.15 } }
+#	}
+#	option = {
+#		name = new_RAM.7.b
+#		trigger = { has_country_flag = Anhui_Member }
+#		add_stability = 0.01
+#		MON = {
+#			retire_country_leader = yes
+#			set_country_flag = Anhui_MON
+#			create_country_leader = {
+#				name = "Xu Shuzheng"	# 徐树铮
+#				picture = "gfx/leaders/China/Portrait_China_Xu_Shuzheng.tga"
+#				expire = "1936.1.1"
+#				ideology = Centrist_ideology
+#				traits = { prince_of_terror }
+#			}
+#		}
+#		hidden_effect = {
+#			random_country = {
+#				limit = { any_army_leader = { has_id = 2 } }
+#				random_unit_leader = {
+#					limit = { has_id = 2 }
+#					set_nationality = MON
+#					if = {
+#						limit = { is_field_marshal = no }
+#						promote_leader = yes
+#					}
+#					if = {
+#						limit = { NOT = { has_trait = General_is_a_HoS } }
+#						add_unit_leader_trait = General_is_a_HoS
+#					}
+#				}
+#			}
+#			every_other_country = { news_event = new_News.15 }
+#		}
+#	}
+#	option = {
+#		name = new_RAM.7.c
+#		trigger = { has_country_flag = Zhili_Member }
+#		add_stability = 0.01
+#		MON = {
+#			retire_country_leader = yes
+#			set_country_flag = Zhili_MON
+#			create_country_leader = {
+#				name = "Zhang Shaoceng"	# 张绍曾
+#				picture = "gfx/leaders/China/Portrait_China_Zhang_Shaoceng.tga"
+#				expire = "1936.1.1"
+#				ideology = Centrist_ideology
+#				traits = { propaganda_expert }
+#			}
+#		}
+#		hidden_effect = {
+#			random_country = {
+#				limit = { any_army_leader = { has_id = 246 } }
+#				random_unit_leader = {
+#					limit = { has_id = 246 }
+#					if = {
+#						limit = { is_field_marshal = no }
+#						promote_leader = yes
+#					}
+#					if = {
+#						limit = { NOT = { has_trait = General_is_a_HoS } }
+#						add_unit_leader_trait = General_is_a_HoS
+#					}
+#					set_nationality = MON
+#				}
+#			}
+#			every_other_country = { news_event = new_News.15 }
+#		}
+#	}
+#	option = {
+#		name = new_RAM.7.e
+##		trigger = { has_country_flag = Fengtian_Member }
+#		add_stability = 0.01
+#		MON = {
+#			retire_country_leader = yes
+#			set_country_flag = Fengtian_MON
+#			create_country_leader = {
+#				name = "Wu Junsheng"	# 吴俊升
+#				picture = "gfx/leaders/China/Portrait_China_Wu_Junsheng.tga"
+#				expire = "1936.1.1"
+#				ideology = Centrist_ideology
+#				traits = { war_industrialist }
+#			}
+##		}
+#		hidden_effect = {
+##			random_country = {
+#				limit = { any_army_leader = { has_id = 14 } }
+#				random_unit_leader = {
+#					limit = { has_id = 14 }
+#					if = {
+#						limit = { is_field_marshal = no }
+#						promote_leader = yes
+#					}
+#					if = {
+#						limit = { NOT = { has_trait = General_is_a_HoS } }
+#						add_unit_leader_trait = General_is_a_HoS
+#					}
+#					set_nationality = MON
+#				}
+#			}
+#			every_other_country = { news_event = new_News.15 }
+#		}
+#	}
+#}

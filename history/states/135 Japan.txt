@@ -1,0 +1,324 @@
+state = {
+	id = 135
+	name = "STATE_135"
+	manpower = 15000
+	state_category = small_island
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = JAP
+		add_core_of = JAP
+		add_core_of = SAK
+		buildings = {
+			infrastructure = 3
+			1399 = { naval_base = 1 }
+		}
+	}
+	provinces = {
+		1399 1515 13037 
+	}
+}
+
+state = {
+	id = 136
+	name = "STATE_136"
+	manpower = 578000
+	state_category = developed_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = JAP
+		add_core_of = JAP
+		add_core_of = RYU
+		buildings = {
+			infrastructure = 3
+			air_base = 3
+			dockyard = 2
+			11932 = { naval_base = 1 }
+		}
+		victory_points = { 11932 1 }
+	}
+	provinces = {
+		1123 7115 10124 11932 
+	}
+}
+
+state = {
+	id = 137
+	name = "STATE_137"
+	manpower = 2812000
+	state_category = large_town
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = JAP
+		add_core_of = JAP
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+		}
+		victory_points = { 10444 4 }
+		victory_points = { 12421 1 }
+	}
+	provinces = {
+		1512 1642 3962 4576 4646 7532 7595 10444 10512 12352 12421 12493 
+	}
+}
+
+state = {
+	id = 138
+	name = "STATE_138"
+	manpower = 6575000
+	state_category = metropolis
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 25
+		chromium = 0
+	}
+	history = {
+		owner = JAP
+		add_core_of = JAP
+		buildings = {
+			industrial_complex = 5
+			arms_factory = 2
+			infrastructure = 3
+			air_base = 2
+			9859 = { naval_base = 3 }
+		}
+		victory_points = { 6994 1 }
+		victory_points = { 7169 5 }
+	}
+	provinces = {
+		1024 1063 1165 3848 4067 4118 4122 4153 6870 6873 6994 7169 9807 9859 9865 11847 12056 
+	}
+}
+
+state = {
+	id = 139
+	name = "STATE_139"
+	manpower = 13773000
+	state_category = megalopolis
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 1
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = JAP
+		add_core_of = JAP
+		buildings = {
+			infrastructure = 6
+			air_base = 2
+			industrial_complex = 3
+			arms_factory = 4
+			dockyard = 2
+			9998 = { naval_base = 2 }
+		}
+		victory_points = { 1182 30 }
+	}
+	provinces = {
+		993 1097 1113 1182 4000 4100 4184 4188 7016 9998 11908 
+	}
+}
+
+state = {
+	id = 140
+	name = "STATE_140"
+	manpower = 11978000
+	state_category = megalopolis
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 8
+		steel = 27
+		chromium = 0
+	}
+	history = {
+		owner = JAP
+		add_core_of = JAP
+		buildings = {
+			infrastructure = 7
+			arms_factory = 4
+			industrial_complex = 4
+			dockyard = 2
+		}
+		victory_points = { 1117 3 }
+		victory_points = { 7087 1 }
+		victory_points = { 10032 3 }
+		victory_points = { 10125 6 }
+	}
+	provinces = {
+		998 1117 4069 4172 7087 7102 7157 7187 7217 9952 10015 10032 10100 10125 10128 11930 11989 12007 12072 12097 
+	}
+}
+
+state = {
+	id = 141
+	name = "STATE_141"
+	manpower = 11015000
+	state_category = megalopolis
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 3
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = JAP
+		add_core_of = JAP
+		buildings = {
+			infrastructure = 5
+			arms_factory = 3
+			industrial_complex = 4
+			dockyard = 2
+			1136 = { naval_base = 3 }
+			7072 = { naval_base = 1 }
+
+		}
+		victory_points = { 7072 10 }
+	}
+	provinces = {
+		1051 1067 1133 1136 4054 4142 7072 7113 9985 11960 12031 
+	}
+}
+
+state = {
+	id = 142
+	name = "STATE_142"
+	manpower = 5341000
+	state_category = metropolis
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = JAP
+		add_core_of = JAP
+		buildings = {
+			infrastructure = 7
+			air_base = 3
+			dockyard = 3
+			arms_factory = 2
+			industrial_complex = 2
+			1092 = { naval_base = 6 }
+		}
+		victory_points = { 1092 8 }
+	}
+	provinces = {
+		1092 1167 1191 4197 7050 7145 7212 9968 10052 10055 11946 11985 
+	}
+}
+
+state = {
+	id = 143
+	name = "STATE_143"
+	manpower = 3310000
+	state_category = city
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = JAP
+		add_core_of = JAP
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			air_base = 1
+			industrial_complex = 2
+		}
+		victory_points = { 7197 3 }
+	}
+	provinces = {
+		4094 4179 7046 7197 9965 11997 12028 
+	}
+}
+
+state = {
+	id = 144
+	name = "STATE_144"
+	manpower = 9069000
+	state_category = metropolis
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 52
+	}
+	history = {
+		owner = JAP
+		add_core_of = JAP
+		buildings = {
+			infrastructure = 4
+			air_base = 1
+			dockyard = 5
+			arms_factory = 1
+			industrial_complex = 1
+			9950 = { naval_base = 2 }
+
+		}
+		victory_points = { 1025 2 }
+		victory_points = { 4102 3 }
+		victory_points = { 9950 8 }
+	}
+	provinces = {
+		1020 1025 1158 1183 4027 4102 4164 4198 7110 7178 9950 10011 10020 10092 11925 11949 12006 12032 
+	}
+}

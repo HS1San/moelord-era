@@ -1,0 +1,1695 @@
+focus_tree = {
+	id = MON_focus
+
+	# Historical AI Path Choosing is done in events instead
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MON
+		}
+	}
+
+	default = no
+	shared_focus = Shared_Plan_of_Reform
+	shared_focus = Shared_Extra_Tech_Slot
+	shared_focus = MON_Sanitation_and_Cleaning
+
+	focus = {
+		id = MON_Surrounded_On_All_Sides
+		icon = GFX_focus_Agression
+		x = 5
+		y = 0
+		cost = 10
+
+		available = {
+			always = no
+		}
+
+		bypass = {
+			or = {
+				has_country_flag = chinese_mongolia
+				has_country_flag = pan_mongolia
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			#country_event = { id = mongolia.2 }
+		}
+	}
+
+	focus = {
+		id = MON_Semyonovs_Dream
+		icon = GFX_focus_Into_the_Flames
+		relative_position_id = MON_Surrounded_On_All_Sides
+		x = -4
+		y = 1
+		cost = 8
+
+		available = {
+			has_country_flag = expansionist_mongolia
+			has_war = no
+		}
+		prerequisite = {
+			focus = MON_Surrounded_On_All_Sides
+		}
+
+		mutually_exclusive = {
+			focus = MON_Accept_Chinese_Sovereignty
+			focus = MON_Preserving_Our_Independence
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = partial_economic_mobilisation
+			add_ideas = Defenders_of_Mongolia_1
+			add_threat = 5
+		}
+	}
+
+	focus = {
+		id = MON_Kick_Out_the_Chinese
+		icon = GFX_focus_Stomp_out_the_Weak
+		relative_position_id = MON_Semyonovs_Dream
+		x = -1
+		y = 1
+		cost = 8
+
+		prerequisite = {
+			focus = MON_Semyonovs_Dream
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = {
+				ideology = centrist
+				popularity = -0.3
+			}
+			add_timed_idea = {
+				idea = Chinese_Exodus
+				days = 120
+			}
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = MON_Heal_the_Rifts
+		icon = GFX_focus_Risky_Deal
+		relative_position_id = MON_Semyonovs_Dream
+		x = 1
+		y = 1
+		cost = 8
+
+		prerequisite = {
+			focus = MON_Semyonovs_Dream
+		}
+		ai_will_do = {
+			factor = 1.5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = Pan_Mongolism
+			add_political_power = 50
+			add_manpower = 3000
+		}
+	}
+
+	focus = {
+		id = MON_Greater_Mongolia
+		icon = GFX_focus_Death_or_Dishonor
+		relative_position_id = MON_Heal_the_Rifts
+		x = -1
+		y = 1
+		cost = 8
+
+		prerequisite = {
+			focus = MON_Heal_the_Rifts
+		}
+		prerequisite = {
+			focus = MON_Kick_Out_the_Chinese
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = Descendants_of_Chenghis
+			add_state_claim = 100
+			add_state_claim = 8
+			add_state_claim = 9
+			add_state_claim = 10
+			add_state_claim = 6
+			add_state_claim = 7
+			add_state_claim = 20
+			add_state_claim = 133
+			add_state_claim = 21
+			add_state_claim = 345
+			add_state_claim = 108
+			add_state_claim = 102
+			every_other_country = {
+				limit = {
+					OR = {
+						owns_state = 100
+						owns_state = 10
+						owns_state = 9
+						owns_state = 8
+						owns_state = 7
+						owns_state = 6
+						owns_state = 20
+						owns_state = 133
+						owns_state = 21
+						owns_state = 345
+						owns_state = 108
+						owns_state = 102
+					}
+				}
+				ROOT = { 
+					create_wargoal = {
+						target = PREV
+						type = take_claimed_state
+						generator = { 100 8 9 10 6 7 20 133 21 345 108 102}
+					}
+				}	
+			}
+		}
+	}
+
+	focus = {
+		id = MON_Liberation_of_Tuva
+		icon = GFX_Retake_Tannu_Uriankhai
+		relative_position_id = MON_Greater_Mongolia
+		x = 0
+		y = 1
+		cost = 8
+
+		prerequisite = {
+			focus = MON_Greater_Mongolia
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = mongolia.20 }
+		}
+	}
+
+	focus = {
+		id = MON_Our_Place_In_the_World
+		icon = GFX_Greater_Mongolia
+		relative_position_id = MON_Liberation_of_Tuva
+		x = 0
+		y = 1
+		cost = 8
+
+		prerequisite = {
+			focus = MON_Liberation_of_Tuva
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		available = {
+			OR = {
+				controls_state = 100
+				controls_state = 20
+				controls_state = 8
+				controls_state = 9
+				controls_state = 10
+				controls_state = 6
+				controls_state = 7
+				controls_state = 102
+				controls_state = 108
+				controls_state = 133
+				controls_state = 21
+				controls_state = 345
+			}
+		}
+
+		completion_reward = {
+			#More to be added after Map Rework
+			add_political_power = -150
+			if = {
+				limit = {controls_state = 100}
+				100 = {
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {controls_state = 20}
+				20 = {
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {controls_state = 133}
+				133 = {
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {controls_state = 21}
+				21 = {
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {controls_state = 345}
+				345 = {
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 8
+					controls_state = 9
+					controls_state = 10
+				}
+				8 = {
+					add_core_of = ROOT
+				}
+				9 = {
+					add_core_of = ROOT
+				}
+				10 = {
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 102
+					controls_state = 108
+				}
+				102 = {
+					add_core_of = ROOT
+				}
+				108 = {
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 6
+					controls_state = 7
+				}
+				7 = {
+					add_core_of = ROOT
+				}
+				6 = {
+					add_core_of = ROOT
+				}
+			}
+			set_cosmetic_tag = MON_Greater
+		}
+	}
+
+	focus = {
+		id = MON_Accept_Chinese_Sovereignty
+		icon = GFX_focus_Hidden_Pacts
+		relative_position_id = MON_Surrounded_On_All_Sides
+		x = 0
+		y = 1
+		cost = 4
+
+		prerequisite = {
+			focus = MON_Surrounded_On_All_Sides
+		}
+
+		available = {
+			always = no
+		}
+		
+		bypass = {
+			or = {
+				has_country_flag = sixty_four_points
+				has_country_flag = eight_articles
+			}
+		}
+
+		mutually_exclusive = {
+			focus = MON_Semyonovs_Dream
+			focus = MON_Preserving_Our_Independence
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MON_Aid_Against_Semyonov
+		icon = GFX_Greater_Mongolia_No_More
+		relative_position_id = MON_Accept_Chinese_Sovereignty
+		x = 0
+		y = 1
+		cost = 8
+
+		prerequisite = {
+			focus = MON_Accept_Chinese_Sovereignty
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = {id = mongolia.17}
+		}
+	}
+
+	focus = {
+		id = MON_Eight_Articles
+		icon = GFX_focus_Fascist_Treaties
+		relative_position_id = MON_Aid_Against_Semyonov
+		x = -1
+		y = 1
+		cost = 8
+
+		prerequisite = {
+			focus = MON_Aid_Against_Semyonov
+		}
+
+		available = {
+			has_country_flag = eight_articles
+		}
+
+		mutually_exclusive = {
+			focus = MON_Sixty_Four_Points
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = mongolia.19 }
+		}
+	}
+
+	focus = {
+		id = MON_Replace_Mongol_Officials
+		icon = GFX_focus_Subterfuge
+		relative_position_id = MON_Eight_Articles
+		x = 0
+		y = 1
+		cost = 8
+
+		prerequisite = {
+			focus = MON_Eight_Articles
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = -100
+			add_manpower = 3000
+			remove_ideas = Yellow_Party_and_Black_Party
+		}
+	}
+
+	focus = {
+		id = MON_Introduce_Chinese_Garrisons
+		icon = GFX_focus_Kanslergade_Meeting
+		relative_position_id = MON_Replace_Mongol_Officials
+		x = 0
+		y = 1
+		cost = 8
+
+		prerequisite = {
+			focus = MON_Replace_Mongol_Officials
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = -100
+			add_equipment_to_stockpile = { type = carbine_equipment_0 amount = 1000 }
+			add_manpower = 3000
+			swap_ideas = {
+				remove_idea = Threat_of_the_Russian_Revolution
+				add_idea = Threat_of_the_Russian_Revolution_reduced
+			}
+		}
+	}
+
+	focus = {
+		id = MON_Sixty_Four_Points
+		icon = GFX_focus_hol_the_foundations_of_defense
+		relative_position_id = MON_Aid_Against_Semyonov
+		x = 1
+		y = 1
+		cost = 8
+
+		prerequisite = {
+			focus = MON_Aid_Against_Semyonov
+		}
+
+		available = {
+			has_country_flag = sixty_four_points
+		}
+
+		mutually_exclusive = {
+			focus = MON_Eight_Articles
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = mongolia.18 }
+		}
+	}
+
+	focus = {
+		id = MON_Lock_the_Old_Ministries
+		icon = GFX_focus_The_Russian_Bear_Curtailed
+		relative_position_id = MON_Sixty_Four_Points
+		x = 0
+		y = 1
+		cost = 8
+
+		prerequisite = {
+			focus = MON_Sixty_Four_Points
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = -150
+			remove_ideas = Yellow_Party_and_Black_Party
+			swap_ideas = {
+				remove_idea = Threat_of_the_Russian_Revolution
+				add_idea = Threat_of_the_Russian_Revolution_reduced
+			}
+		}
+	}
+
+	focus = {
+		id = MON_A_New_Government
+		icon = GFX_focus_Torch_of_Liberty
+		relative_position_id = MON_Lock_the_Old_Ministries
+		x = 0
+		y = 1
+		cost = 8
+
+		prerequisite = {
+			focus = MON_Lock_the_Old_Ministries
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.05
+			add_ideas = Defenders_of_Mongolia_1
+			add_ideas = Zhangjiakou_Urga_Trade 
+		}
+	}
+
+	focus = {
+		id = MON_Preserving_Our_Independence
+		icon = GFX_Mongolian_Independence
+		relative_position_id = MON_Surrounded_On_All_Sides
+		x = 4
+		y = 1
+		cost = 8
+
+		prerequisite = {
+			focus = MON_Surrounded_On_All_Sides
+		}
+
+		available = {
+			has_country_flag = isolationist_mongolia
+			has_war = no
+		}
+
+		mutually_exclusive = {
+			focus = MON_Semyonovs_Dream
+			focus = MON_Accept_Chinese_Sovereignty
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {		
+			add_ideas= low_economic_mobilisation
+			add_ideas= Preserve_Mongolian_Independence
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = MON_Fight_Back_Against_the_Chinese
+		icon = GFX_focus_Into_the_Flames
+		relative_position_id = MON_Preserving_Our_Independence
+		x = -1
+		y = 1
+		cost = 8
+
+		prerequisite = {
+			focus = MON_Preserving_Our_Independence
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_manpower = -3000
+			add_political_power = 50
+			add_ideas = Defenders_of_Mongolia_1
+		}
+	}
+
+	focus = {
+		id = MON_Fight_Back_Against_Semyonov
+		icon = GFX_Greater_Mongolia_No_More
+		relative_position_id = MON_Preserving_Our_Independence
+		x = 1
+		y = 1
+		cost = 8
+
+		prerequisite = {
+			focus = MON_Preserving_Our_Independence
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = mongolia.17 }
+			swap_ideas = {
+				remove_idea = Threat_of_the_Russian_Revolution
+				add_idea = Threat_of_the_Russian_Revolution_reduced
+			}
+		}
+	}
+
+	focus = {
+		id = MON_Lone_Wolf
+		icon = GFX_Retake_Tannu_Uriankhai
+		relative_position_id = MON_Fight_Back_Against_Semyonov
+		x = -1
+		y = 1
+		cost = 8
+
+		prerequisite = {
+			focus = MON_Fight_Back_Against_Semyonov
+		}
+
+		prerequisite = {
+			focus = MON_Fight_Back_Against_the_Chinese
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = mongolia.20 }
+		}
+	}
+
+	focus = {
+		id = MON_Reject_the_Points
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		relative_position_id = MON_Lone_Wolf
+		x = -1
+		y = 1
+		cost = 8
+
+		prerequisite = {
+			focus = MON_Lone_Wolf
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_manpower = 5000
+		}
+	}
+
+	focus = {
+		id = MON_A_Strong_Mongol_Army
+		icon = GFX_focus_Prepare_the_Troops
+		relative_position_id = MON_Lone_Wolf
+		x = 1
+		y = 1
+		cost = 8
+
+		prerequisite = {
+			focus = MON_Lone_Wolf
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 30
+			add_tech_bonus = {
+					name = tech_goal_tooltip_00
+					bonus = 0.5
+					uses = 1
+					category = doctrine_tech
+			}
+		}
+	}
+
+	focus = {
+		id = MON_A_Protected_Sovereignty
+		icon = GFX_focus_Fortification_Effort
+		relative_position_id = MON_A_Strong_Mongol_Army
+		x = -1
+		y = 1
+		cost = 8
+
+		prerequisite = {
+			focus = MON_A_Strong_Mongol_Army
+		}
+		prerequisite = {
+			focus = MON_Reject_the_Points
+		}
+		ai_will_do = {
+			factor = 1.5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Defenders_of_Mongolia_1
+				add_idea = Defenders_of_Mongolia_2
+			}
+			remove_ideas = Threat_of_the_Russian_Revolution_reduced
+		}
+	}
+}
+
+focus_tree = {
+	id = MON_White_Focus
+	country = {
+		factor = 0
+	}
+	default = no
+	
+	shared_focus = Shared_Plan_of_Reform
+	shared_focus = Shared_Extra_Tech_Slot
+	shared_focus = MON_Sanitation_and_Cleaning
+
+	focus = {
+		id = MON_Ungern's_Invasion
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = 2
+		y = 0
+		cost = 5
+
+		available =	{
+			always = no
+		}
+		bypass = {
+			has_civil_war = yes
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MON_An_Asian_Cavalry
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = MON_Ungern's_Invasion }
+		relative_position_id = MON_Ungern's_Invasion
+		x = -1
+		y = 1
+		cost = 4
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			division_template = {
+					name = "Asian Cavalry Division"
+					priority = 2
+					is_locked = yes
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+						cavalry = { x = 2 y = 0 }
+						cavalry = { x = 2 y = 1 }
+					}
+				}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"1. Asian Cavalry Division\" division_template = \"Asian Cavalry Division\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"2. Asian Cavalry Division\" division_template = \"Asian Cavalry Division\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"3. Asian Cavalry Division\" division_template = \"Asian Cavalry Division\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+			}
+		}
+	}
+	focus = {
+		id = MON_Arouse_Mongolian_Resistance
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = MON_Ungern's_Invasion }
+		relative_position_id = MON_Ungern's_Invasion
+		x = 1
+		y = 1
+		cost = 4
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_manpower = 10000
+			add_war_support = 0.05
+			add_ideas = Mongolian_Awakening
+		}
+	}
+	focus = {
+		id = MON_Friends_Across_the_Sea
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		prerequisite = { focus = MON_An_Asian_Cavalry }
+		relative_position_id = MON_Ungern's_Invasion
+		x = -1
+		y = 2
+		cost = 4
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			JAP = {
+				add_opinion_modifier = {
+					target = ROOT 
+			 		modifier = New_friendship
+				}
+			}
+			add_equipment_to_stockpile = { type = carbine_equipment_0 amount = 4000 } 
+		}
+	}
+	focus = {
+		id = MON_Spirit_of_Chinggis_Khan
+		icon = GFX_Mongolian_Independence
+		prerequisite = { focus = MON_Friends_Across_the_Sea }
+		relative_position_id = MON_Ungern's_Invasion
+		x = -1
+		y = 3
+		cost = 4
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = Descendants_of_Chenghis
+		}
+	}
+	focus = {
+		id = MON_Loot_Chinese_Merchants
+		icon = GFX_focus_Stomp_out_the_Weak
+		prerequisite = { focus = MON_Arouse_Mongolian_Resistance }
+		relative_position_id = MON_Ungern's_Invasion
+		x = 1
+		y = 2
+		cost = 4
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		available = {
+			controls_state = 343
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = centrist
+				popularity = -0.3
+			}
+			add_timed_idea = {
+				idea = Merchants_Looted
+				days = 60
+			}
+			add_timed_idea = {
+				idea = Chinese_Exodus
+				days = 120
+			}
+		}
+	}
+	focus = {
+		id = MON_Purge_Reds_and_Jews
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = MON_Loot_Chinese_Merchants }
+		relative_position_id = MON_Ungern's_Invasion
+		x = 1
+		y = 3
+		cost = 4
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = 150
+			add_popularity = {
+				ideology = Radical_Leftist
+				popularity = -0.5
+			}
+			add_popularity = {
+				ideology = Moderate_Leftist
+				popularity = -0.3
+			}
+			swap_ideas = {
+				add_idea = Threat_of_the_Russian_Revolution
+				remove_idea = Russian_Revolution_is_here
+			}
+		}
+	}
+	focus = {
+		id = MON_Bogd_Khan_Restored
+		icon = GFX_focus_man_claim_the_mandate_of_heaven
+		prerequisite = { focus = MON_Purge_Reds_and_Jews }
+		prerequisite = { focus = MON_Spirit_of_Chinggis_Khan }
+		relative_position_id = MON_Ungern's_Invasion
+		x = 0
+		y = 4
+		cost = 5
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		available = {
+			controls_province = 4801
+			controls_state = 112
+			controls_state = 113
+			controls_state = 114
+			controls_state = 115
+			controls_state = 116
+			controls_state = 343
+		}
+		completion_reward = {
+			remove_ideas = White_Russian_Origin
+			swap_ideas = {
+				add_idea = Threat_of_the_Russian_Revolution_reduced
+				remove_idea = Threat_of_the_Russian_Revolution
+			}
+			country_event = { id = new_RAM.11 }
+			if = {
+				limit = { TAN = { has_government = Radical_Rightist} }
+				country_event = { id = mongolia.20 }
+			}
+			if = {
+				limit = {
+					112 = { is_capital = no }
+				}
+				set_capital = 112
+			}
+		}
+	}
+
+	focus = {
+		id = MON_Restore_Religious_Rule
+		icon = GFX_focus_generic_monarchy_2
+		relative_position_id = MON_Ungern's_Invasion
+		x = 3
+		y = 0
+		cost = 5
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		available = {
+			has_completed_focus = MON_Bogd_Khan_Restored
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = MON_A_Theocratic_Alliance
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = MON_Restore_Religious_Rule }
+		relative_position_id =  MON_Restore_Religious_Rule		
+		x = 0
+		y = 1
+		cost = 10
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			create_faction = Monarchy_Restoration_Front
+			custom_effect_tooltip = political_goal_tooltip_02
+			set_country_flag = SH_CEM
+			add_political_road = yes
+			set_party_name = { ideology = Radical_Rightist long_name = New_party_00_long name = New_party_00 }
+			if = {
+				limit = { NOT = { has_idea = Eight_Banners } }
+				add_ideas = Eight_Banners
+			}
+			unlock_decision_tooltip = Formable_CEM
+		}
+	}
+	focus = {
+		id = MON_The_Monarchist_Front
+		icon = GFX_focus_hun_elect_a_king
+		prerequisite = { focus = MON_A_Theocratic_Alliance }
+		relative_position_id =  MON_A_Theocratic_Alliance
+		x = 0
+		y = 1
+		cost = 10
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			every_other_country = {
+				limit = { has_country_flag = SH_CEM }
+				country_event = {
+					id = new_RAM.15
+				}
+			}
+			CXZ = {
+				country_event = {
+					id = new_RAM.15
+				}
+			}
+		}
+	}
+	focus = {
+		id = MON_Against_Republicanism
+		icon = GFX_Experience_CEM
+		prerequisite = { focus = MON_The_Monarchist_Front }
+		relative_position_id =  MON_The_Monarchist_Front
+		x = 0
+		y = 1
+		cost = 10
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			remove_ideas = Threat_of_the_Russian_Revolution_reduced
+			add_state_claim = 1
+			add_state_claim = 43
+			add_state_claim = 45
+			add_state_claim = 12
+			add_state_claim = 194
+			every_other_country = {
+				limit = {
+					OR = {
+						owns_state = 1
+						owns_state = 43
+						owns_state = 12
+						owns_state = 45
+						owns_state = 194
+					}
+				}
+				ROOT = { 
+					create_wargoal = {
+						target = PREV
+						type = take_claimed_state
+						generator = { 1 43 12 45 194 }
+					}
+				}	
+			}
+			ROOT = {
+				create_wargoal = {
+					target = CGS
+					type = annex_everything
+				}
+				create_wargoal = {
+					target = CNX
+					type = annex_everything
+				}
+				create_wargoal = {
+					target = CQH
+					type = annex_everything
+				}
+			}
+		}
+	}
+}
+
+focus_tree = {
+	id = MON_Red_Focus
+	country = {
+		factor = 0
+	}
+	
+	default = no
+
+	shared_focus = Shared_Plan_of_Reform
+	shared_focus = Shared_Extra_Tech_Slot
+	shared_focus = MON_Sanitation_and_Cleaning
+
+	focus = {
+		id = MON_Mongolian_People's_Party
+		icon = GFX_Focus_MAN
+		x = 5
+		y = 0
+		cost = 4
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = MON_Delegation_to_Irkutsk
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = { focus = MON_Mongolian_People's_Party }
+		relative_position_id = MON_Mongolian_People's_Party
+		x = 0
+		y = 1
+		cost = 4
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_equipment_to_stockpile = { type = carbine_equipment_0 amount = 3000 }
+			add_manpower = 3000
+			division_template = {
+				name = "Red Cavalry Division"
+				priority = 2
+				is_locked = yes
+				regiments = {
+					cavalry = { x = 0 y = 0 }
+					cavalry = { x = 0 y = 1 }
+					cavalry = { x = 1 y = 0 }
+					cavalry = { x = 1 y = 1 }
+					cavalry = { x = 2 y = 0 }
+					cavalry = { x = 2 y = 1 }
+				}
+			}
+			country_event = { id = mon_COM.2 }
+		}
+	}
+	focus = {
+		id = MON_Revolution
+		icon = GFX_focus_focus_fra_revolution_utmost
+		prerequisite = { focus = MON_Delegation_to_Irkutsk }
+		relative_position_id = MON_Delegation_to_Irkutsk
+		x = 0
+		y = 1
+		cost = 6
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = 100
+			343 = {
+				create_unit = {
+					division = "name = \"1. Red Cavalry Division\" division_template = \"Red Cavalry Division\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"2. Red Cavalry Division\" division_template = \"Red Cavalry Division\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"3. Red Cavalry Division\" division_template = \"Red Cavalry Division\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+			}
+		}
+	}
+	focus = {
+		id = MON_Monarchy_for_Now 
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = MON_Revolution }
+		mutually_exclusive = {
+			focus = MON_Forced_Abdication
+		}
+		available = {
+			has_civil_war = no
+		}
+		bypass = {
+			date > 1924.5.20
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		relative_position_id = MON_Revolution
+		x = -1
+		y = 1
+		cost = 4
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = Moderate_Leftist
+				popularity = 0.1
+			}
+			swap_ideas = {
+				remove_idea = Russian_Revolution_is_here
+				add_idea = Threat_of_the_Russian_Revolution_reduced
+			}
+			if = {
+				limit = {
+					112 = { is_capital = no }
+				}
+				set_capital = 112
+			}
+		}
+	}
+	focus = {
+		id = MON_Forced_Abdication
+		icon = GFX_focus_rom_abdicate
+		prerequisite = { focus = MON_Revolution }
+		mutually_exclusive = {
+			focus = MON_Monarchy_for_Now
+		}
+		available = {
+			has_civil_war = no
+		}
+		relative_position_id = MON_Revolution
+		x = 1
+		y = 1
+		cost = 4
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = 150
+			add_ideas = Religious_Unrest
+			add_popularity = {
+				ideology = Radical_Leftist
+				popularity = 0.1
+			}
+			swap_ideas = {
+				remove_idea = Russian_Revolution_is_here
+				add_idea = Threat_of_the_Russian_Revolution
+			}
+			if = {
+				limit = {
+					112 = { is_capital = no }
+				}
+				set_capital = 112
+			}
+		}
+	}
+	focus = {
+		id = MON_A_Democratic_Future
+		icon = GFX_Experience_SDC
+		prerequisite = { focus = MON_Monarchy_for_Now }
+		mutually_exclusive = {
+			focus = MON_Revolutionary_Socialism
+		}
+		available = {
+			has_government = Moderate_Leftist
+			has_country_flag = MON_SocDem
+		}
+		relative_position_id = MON_Monarchy_for_Now
+		x = 0
+		y = 1
+		cost = 4
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = Defenders_of_Mongolia_1
+		}
+	}
+	focus = {
+		id = MON_Revolutionary_Socialism
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = {
+			focus = MON_Monarchy_for_Now
+			focus = MON_Forced_Abdication
+		}
+		mutually_exclusive = {
+			focus = MON_A_Democratic_Future
+		}
+		available = {
+			has_civil_war = no
+			NOT = {
+				has_country_flag = MON_SocDem
+			}
+		}
+		relative_position_id = MON_Forced_Abdication
+		x = 0
+		y = 1
+		cost = 4
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_popularity = {
+				ideology = Radical_Leftist
+				popularity = 0.2
+			}
+			add_political_power = 100
+			add_equipment_to_stockpile = { type = carbine_equipment_0 amount = 3000 }
+			swap_ideas = {
+				remove_idea = Threat_of_the_Russian_Revolution
+				add_idea = Threat_of_the_Russian_Revolution_reduced
+			}
+		}
+	}
+	focus = {
+		id = MON_Republic_or_Monarchy
+		icon = GFX_focus_hol_the_foundations_of_defense
+		prerequisite = { focus = MON_A_Democratic_Future }
+		available = {
+			controls_state = 112
+			has_war = no
+		}
+		relative_position_id = MON_A_Democratic_Future
+		x = 0
+		y = 1
+		cost = 8
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			country_event = { id = mon_COM.3 }
+			remove_ideas = Threat_of_the_Russian_Revolution_reduced
+		}
+	}
+	focus = {
+		id = MON_Proclaim_the_Republic
+		icon = GFX_Focus_MPR
+		prerequisite = { focus = MON_Revolutionary_Socialism }
+		available = {
+			controls_state = 112
+			has_war = no
+		}
+		relative_position_id = MON_Revolutionary_Socialism
+		x = 0
+		y = 1
+		cost = 8
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			country_event = { id = mon_COM.6 }
+			remove_ideas = Threat_of_the_Russian_Revolution_reduced
+			if = {
+				limit = {
+					112 = { is_capital = no }
+				}
+				set_capital = 112
+			}
+		}
+	}
+#	focus = {
+#		id = MON_People's_Party_Reforms
+#		icon = wip
+#		x = 9
+#		y = 0
+#		cost = 4
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#		completion_reward = {
+#		}
+#	}
+#	focus = {
+#		id = MON_Campaign_against_Feudalism
+#		icon = wip
+#		prerequisite = { focus = MON_People's_Party_Reforms }
+#		mutually_exclusive = {
+#			focus = MON_Reform_our_Culture
+#		}
+#		relative_position_id = MON_People's_Party_Reforms
+#		x = 1
+#		y = 1
+#		cost = 4
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#		completion_reward = {
+#		}
+#	}
+#	focus = {
+#		id = MON_Reform_our_Culture
+#		icon = wip
+#		prerequisite = { focus = MON_People's_Party_Reforms }
+#		mutually_exclusive = {
+#			focus = MON_Campaign_against_Feudalism
+#		}
+#		relative_position_id = MON_People's_Party_Reforms
+#		x = -1
+#		y = 1
+#		cost = 4
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#		completion_reward = {
+#		}
+#	}
+#	focus = {
+#		id = MON_Leap_into_Socialism
+#		icon = wip
+#		prerequisite = { focus = MON_Campaign_against_Feudalism }
+#		mutually_exclusive = {
+#			focus = MON_Limited_Capitalism
+#		}
+#		relative_position_id = MON_Campaign_against_Feudalism
+#		x = 0
+#		y = 1
+#		cost = 4
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#		completion_reward = {
+#		}
+#	}
+#	focus = {
+#		id = MON_Limited_Capitalism
+#		icon = wip
+#		prerequisite = { focus = MON_Reform_our_Culture focus = MON_Campaign_against_Feudalism }
+#		mutually_exclusive = {
+#			focus = MON_Leap_into_Socialism
+#		}
+#		relative_position_id = MON_Reform_our_Culture
+#		x = 0
+#		y = 1
+#		cost = 4
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#		completion_reward = {
+#		}
+#	}
+#	focus = {
+#		id = MON_Mixed_Economy
+#		icon = wip
+#		prerequisite = { focus = MON_Limited_Capitalism }
+#		mutually_exclusive = {
+#			focus = MON_Leap_into_Socialism
+#		}
+#		relative_position_id = MON_Limited_Capitalism
+#		x = 0
+#		y = 1
+#		cost = 4
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#		completion_reward = {
+#		}
+#	}
+#	focus = {
+#		id = MON_Leftist_Socialism
+#		icon = wip
+#		prerequisite = { focus = MON_Limited_Capitalism focus = MON_Leap_into_Socialism }
+#		mutually_exclusive = {
+#			focus = MON_Mixed_Economy
+#		}
+#		relative_position_id = MON_Leap_into_Socialism
+#		x = 0
+#		y = 1
+#		cost = 4
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#		completion_reward = {
+#		}
+#	}
+}
+	#MON_ECON TREE
+	
+	shared_focus = {
+		id = MON_Sanitation_and_Cleaning
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		x = 5
+		y = 7
+		cost = 10
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		available = {
+			OR = {
+				has_completed_focus = MON_A_Protected_Sovereignty
+				has_completed_focus = MON_Our_Place_In_the_World
+				has_completed_focus = MON_A_New_Government
+				has_completed_focus = MON_Replace_Mongol_Officials
+				has_completed_focus = MON_Bogd_Khan_Restored
+				has_completed_focus = MON_Monarchy_for_Now
+				has_completed_focus = MON_Forced_Abdication
+			}
+			date > 1921.1.1
+			has_war = no
+			AND = {
+				controls_province = 4801
+				controls_state = 112
+				controls_state = 113
+				controls_state = 114
+				controls_state = 115
+				controls_state = 116
+				controls_state = 343
+			}
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_ideas = Sanitation
+		}
+	}
+	shared_focus = {
+		id = MON_Develop_Urga
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = MON_Sanitation_and_Cleaning }
+		relative_position_id =  MON_Sanitation_and_Cleaning		
+		x = 0
+		y = 1
+		cost = 10
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		available = {
+			controls_state = 112
+			has_war = no
+		}
+		completion_reward = {
+			112 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	shared_focus = {
+		id = MON_Cultural_Modernization
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		prerequisite = { focus = MON_Develop_Urga }
+		relative_position_id = MON_Develop_Urga		
+		x = 0
+		y = 1
+		cost = 10
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			remove_ideas = Yellow_Party_and_Black_Party
+			add_stability = 0.05
+			add_research_slot = 1
+		}
+	}
+	shared_focus = {
+		id = MON_Enlighten_the_Nobility
+		icon = GFX_focus_hun_elect_a_king
+		prerequisite = { focus = MON_Cultural_Modernization }
+		mutually_exclusive = {
+			focus = MON_Land_Reform
+		}
+		relative_position_id = MON_Cultural_Modernization		
+		x = -1
+		y = 1
+		cost = 10
+		available = {
+			has_war = no
+			NOT = {
+				has_government = Radical_Leftist
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_popularity = {
+				ideology = Radical_Rightist
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = Moderate_Rightist
+				popularity = 0.2
+			}
+			add_ideas = MON_Gentry
+		}
+	}
+	shared_focus = {
+		id = MON_Land_Reform
+		icon = GFX_focus_prc_agrarian_socialism
+		prerequisite = { focus = MON_Cultural_Modernization }
+		mutually_exclusive = {
+			focus = MON_Enlighten_the_Nobility
+		}
+		relative_position_id = MON_Cultural_Modernization		
+		x = 1
+		y = 1
+		cost = 10
+		available = {
+			has_war = no
+			OR = {
+				has_government = Moderate_Leftist
+				has_government = Radical_Leftist
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_popularity = {
+				ideology = Radical_Leftist
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = Moderate_Leftist
+				popularity = 0.2
+			}
+			add_ideas = MON_Farmer
+		}
+	}
+	shared_focus = {
+		id = MON_Foundations_of_Industry
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { 
+			focus = MON_Enlighten_the_Nobility
+			focus = MON_Land_Reform 
+		}
+		relative_position_id = MON_Land_Reform		
+		x = -1
+		y = 1
+		cost = 10
+		available = {
+			has_war = no
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = Foundations_of_Industry
+			every_owned_state = {
+				limit = { is_core_of = ROOT }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}

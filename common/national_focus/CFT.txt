@@ -1,0 +1,791 @@
+focus_tree = {
+	id = CFT_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CFT
+		}
+	}
+
+	default = no
+	shared_focus = Shared_Plan_of_Reform
+	shared_focus = Shared_Extra_Tech_Slot
+
+	focus = {
+		id = CFT_Deport_Meng
+		icon = GFX_focus_The_Big_Push
+		x = 4
+		y = 0
+		cost = 10
+
+		available = {
+			has_war = no
+			is_subject = no
+			CJL = {
+				exists = yes
+				NOT = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cancel = {
+			OR = {
+				has_war = yes
+				is_subject = yes
+			}
+		}
+
+		bypass = {
+			CJL = {
+				OR = {
+					exists = no
+					is_in_faction_with = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { CJL = { country_event = new_FUN.1 } }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CFT_Reoccupy_Hulun
+		icon = GFX_focus_Crush_Resistance
+		x = 6
+		y = 0
+		cost = 10
+
+		available = {
+			has_war = no
+			is_subject = no
+			NOT = { owns_state = 20 }
+			any_other_country = {
+				owns_state = 20
+				NOT = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cancel = {
+			OR = {
+				has_war = yes
+				is_subject = yes
+			}
+		}
+
+		bypass = {
+			OR = {
+				owns_state = 20
+				any_other_country = {
+					owns_state = 20
+					OR = {
+						is_in_faction_with = ROOT
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_country = {
+				limit = { owns_state = 20 }
+				country_event = new_FUN.8
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = CFT_Unite_Manchuria
+		icon = GFX_focus_Generic_Political
+		prerequisite = { focus = CFT_Deport_Meng }
+		prerequisite = { focus = CFT_Reoccupy_Hulun }
+		x = 5
+		y = 1
+		cost = 8
+
+		available = {
+			OR = {
+				CJL = {
+					OR = {
+						is_in_faction_with = ROOT
+						exists = no
+					}
+				}
+				CHJ = {
+					OR = {
+						is_in_faction_with = ROOT
+						exists = no
+					}
+				}
+			}
+		}
+
+		bypass = {
+			CJL = { is_ai = no }
+			CHJ = { is_ai = no }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_country_flag = King_of_Northeast
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = CNE
+			if = {
+				limit = {
+					CJL = {
+						OR = {
+							is_in_faction_with = ROOT
+							exists = no
+						}
+						is_ai = yes
+					}
+				}
+				CJL = {
+					every_unit_leader = {
+						if = {
+							limit = { is_field_marshal = yes }
+							demote_leader = yes
+						}
+						if = {
+							limit = { has_trait = General_is_a_HoS }
+							remove_unit_leader_trait = General_is_a_HoS
+						}
+						set_nationality = CFT
+					}
+					every_owned_state = {
+						limit = { is_core_of = CJL }
+						add_core_of = CFT
+					}
+				}
+				add_political_power = CJL.political_power
+				add_command_power = CJL.command_power
+				annex_country = { target = CJL transfer_troops = yes }
+			}
+			if = {
+				limit = {
+					CHJ = {
+						OR = {
+							is_in_faction_with = ROOT
+							exists = no
+						}
+						is_ai = yes
+					}
+				}
+				CHJ = {
+					every_unit_leader = {
+						if = {
+							limit = { is_field_marshal = yes }
+							demote_leader = yes
+						}
+						if = {
+							limit = { has_trait = General_is_a_HoS }
+							remove_unit_leader_trait = General_is_a_HoS
+						}
+						set_nationality = CFT
+					}
+					every_owned_state = {
+						limit = { is_core_of = CHJ }
+						add_core_of = CFT
+					}
+				}
+				add_political_power = CHJ.political_power
+				add_command_power = CHJ.command_power
+				annex_country = { target = CHJ transfer_troops = yes }
+			}
+			if = {
+				limit = { owns_state = 12 }
+				custom_effect_tooltip = Unlock_New_Fleet
+				hidden_effect = { load_oob = "CFT_ships" }
+			}
+			hidden_effect = {
+				random_army_leader = {
+					limit = { has_id = 62 }
+					retire = yes
+				}
+				every_state = {
+					limit = {
+						OR = {
+							region = 6
+							region = 42
+							region = 43
+						}
+					}
+					add_core_of = CFT
+				}
+				set_rule = { can_create_factions = yes }
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CFT_Mantetsu_Collaboration
+		icon = GFX_Experience_JAP
+		prerequisite = { focus = CFT_Unite_Manchuria }
+		mutually_exclusive = { focus = CFT_Neutralism focus = CFT_Admit_White_Russians }
+		x = 2
+		y = 2
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Cooperation_with_Japan } }
+				add_ideas = Cooperation_with_Japan
+			}
+			add_stability = 0.05
+			JAP = {
+				add_opinion_modifier = { target = ROOT modifier = New_friendship }
+				add_ai_strategy = { type = alliance id = "CFT" value = 100 }
+				add_ai_strategy = { type = protect id = "CFT" value = 100 }
+				add_ai_strategy = { type = send_volunteers_desire id = "CFT" value = 100 }
+				add_ai_strategy = { type = support id = "CFT" value = 100 }
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = CFT_Neutralism
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = CFT_Unite_Manchuria }
+		mutually_exclusive = { focus = CFT_Mantetsu_Collaboration focus = CFT_Admit_White_Russians }
+		x = 5
+		y = 2
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+			remove_political_road = yes
+			set_country_flag = SH_BYC
+			add_political_road = yes
+			unlock_decision_tooltip = Formable_BYC
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CFT_Admit_White_Russians
+		icon = GFX_Experience_RUS
+		prerequisite = { focus = CFT_Unite_Manchuria }
+		mutually_exclusive = { focus = CFT_Mantetsu_Collaboration focus = CFT_Neutralism }
+		x = 8
+		y = 2
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = Feng_Bill }
+				swap_ideas = {
+					remove_idea = Feng_Bill
+					add_idea = Qiang_Bill
+				}
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CFT_Obtain_Japanese_Instructors
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = CFT_Mantetsu_Collaboration }
+		x = 1
+		y = 3
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 3 }
+			add_offsite_building = { type = arms_factory level = 1 }
+			if = {
+				limit = { has_idea = Greenwood_Hero }
+				remove_ideas = Greenwood_Hero
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CFT_Develop_the_Nine_Provinces
+		icon = GFX_focus_Automobile_Production
+		prerequisite = { focus = CFT_Mantetsu_Collaboration focus = CFT_Neutralism }
+		x = 3
+		y = 3
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_owned_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CFT_Control_Rehe
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { focus = CFT_Neutralism }
+		x = 5
+		y = 3
+		cost = 8
+
+		available = {
+			is_subject = no
+			CRH = { exists = yes }
+		}
+
+		bypass = {
+			OR = {
+				CRH = { exists = no }
+				CRH = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = CRH }
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CFT_Help_the_Korean_Separatists
+		icon = GFX_focus_The_Burgos_Meeting
+		prerequisite = { focus = CFT_Neutralism focus = CFT_Admit_White_Russians }
+		x = 7
+		y = 3
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_manpower = 50000
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+		}
+		
+		search_filters = { FOCUS_FILTER_MANPOWER }
+	}
+	focus = {
+		id = CFT_Establish_Naturalized_Troops
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = CFT_Admit_White_Russians }
+		x = 9
+		y = 3
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_corps_commander = {
+				name = "Moloqikofsky"
+				portrait_path = "gfx/leaders/Europe/portrait_europe_generic_land_16.dds"
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 3
+				traits = { armor_officer bearer_of_artillery }
+				id = 199
+			}
+			if = {
+				limit = { has_idea = Greenwood_Hero }
+				remove_ideas = Greenwood_Hero
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CFT_Create_Concordia_Association
+		icon = GFX_focus_jap_manchurian_project
+		prerequisite = { focus = CFT_Obtain_Japanese_Instructors }
+		prerequisite = { focus = CFT_Develop_the_Nine_Provinces }
+		x = 2
+		y = 4
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_political_road = yes
+			set_country_flag = SH_CEM
+			add_political_road = yes
+			set_party_name = { ideology = Radical_Rightist long_name = New_party_11_long name = New_party_11 }
+			create_country_leader = {
+				name = "Aisin-Gioro Puyi"
+				picture = "gfx/leaders/China/Portrait_China_Aisin_Gioro_Puyi.tga"
+				expire = "1936.1.1"
+				ideology = Radical_Rightist_ideology
+				traits = {}
+			}
+			unlock_decision_tooltip = Formable_CEM
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CFT_Establish_Higher_Industry_School
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = CFT_Control_Rehe }
+		x = 4
+		y = 4
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Fengtian_Higher_Industry_School } }
+				add_ideas = Fengtian_Higher_Industry_School
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CFT_Develop_the_Mukden_Arsenal
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = CFT_Control_Rehe }
+		x = 6
+		y = 4
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Mukden_Arsenal } }
+				add_ideas = Mukden_Arsenal
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = CFT_Empower_the_Russian_Generals
+		icon = GFX_focus_Military_Government
+		prerequisite = { focus = CFT_Help_the_Korean_Separatists }
+		prerequisite = { focus = CFT_Establish_Naturalized_Troops }
+		x = 8
+		y = 4
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_political_road = yes
+			add_political_road = yes
+			set_party_name = { ideology = Radical_Rightist long_name = New_party_12_long name = New_party_12 }
+			create_country_leader = {
+				name = "Grigory Semyonov"
+				picture = "gfx/leaders/Foreigner/Portrait_Foreigner_Grigory_Semyonov.tga"
+				expire = "1936.1.1"
+				ideology = Radical_Rightist_ideology
+				traits = {}
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CFT_Begonia_Leaf
+		icon = GFX_focus_Burning_Globe
+		prerequisite = { focus = CFT_Create_Concordia_Association }
+		x = 1
+		y = 5
+		cost = 8
+
+		available = {
+			is_subject = no
+			has_civil_war = no
+			has_government = Radical_Rightist
+			has_completed_focus = CFT_Pre_Emptive_Coup
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = Cooperation_with_Japan }
+				swap_ideas = {
+					remove_idea = Cooperation_with_Japan
+					add_idea = Cooperation_with_Japan_Equality
+				}
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CFT_Pre_Emptive_Coup
+		icon = GFX_focus_jap_cast_the_die
+		prerequisite = { focus = CFT_Create_Concordia_Association }
+		x = 3
+		y = 5
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = MAN_CHI
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+			start_civil_war = {
+				ruling_party = Radical_Rightist
+				ideology = Centrist
+				size = 0.5
+			}
+			hidden_effect = {
+				random_other_country = {
+					limit = {
+						original_tag = CFT
+						has_government = Centrist
+					}
+					set_country_flag = SH_WAR
+					global_every_army_leader = {
+						limit = {
+							OR = {
+								has_id = 10
+								has_id = 23
+							}
+						}
+						set_nationality = PREV
+					}
+				}
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CFT_Against_the_Central_Government
+		icon = GFX_focus_chi_one_china_policy
+		prerequisite = { focus = CFT_Establish_Higher_Industry_School }
+		prerequisite = { focus = CFT_Develop_the_Mukden_Arsenal }
+		x = 5
+		y = 5
+		cost = 8
+
+		available = {
+			is_subject = no
+			OR = {
+				AND = {
+					has_global_flag = Anhui_Won
+					any_other_country = {
+						is_faction_leader = yes
+						has_country_flag = Anhui_Member
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				AND = {
+					has_global_flag = Zhili_Won
+					any_other_country = {
+						is_faction_leader = yes
+						has_country_flag = Zhili_Member
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				AND = {
+					has_global_flag = Zhili_Anhui_Alliance
+					any_other_country = {
+						is_faction_leader = yes
+						has_country_flag = Beiyang_Member
+						NOT = { has_war_with = ROOT }
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_global_flag = Anhui_Won }
+				random_other_country = {
+					limit = {
+						is_faction_leader = yes
+						has_country_flag = Anhui_Member
+					}
+					ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+				}
+				add_named_threat = { threat = 10 name = threat.FAW }
+			}
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = Zhili_Won
+						has_global_flag = Zhili_Anhui_Alliance
+					}
+				}
+				random_other_country = {
+					limit = {
+						is_faction_leader = yes
+						has_country_flag = Zhili_Member
+					}
+					ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+				}
+				add_named_threat = { threat = 10 name = threat.FZW }
+			}
+			if = {
+				limit = { has_global_flag = Zhili_Anhui_Alliance }
+				random_other_country = {
+					limit = {
+						is_faction_leader = yes
+						has_country_flag = Beiyang_Member
+					}
+					ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+				}
+				add_named_threat = { threat = 5 name = threat.FAW }
+				add_named_threat = { threat = 5 name = threat.FZW }
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CFT_Cast_the_Die
+		icon = GFX_focus_Death_Tracks_2
+		prerequisite = { focus = CFT_Empower_the_Russian_Generals }
+		x = 7
+		y = 5
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = Ban_Communist_Russia
+			subtract_from_variable = { var = relationship_with_russia value = 150 }
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = MAN_RUS
+			clr_country_flag = SH_WAR
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			clr_country_flag = Old_Anhui_Member
+			clr_country_flag = Old_Zhili_Member
+			clr_country_flag = Old_Fengtian_Member
+			start_civil_war = {
+				ruling_party = Radical_Rightist
+				ideology = Centrist
+				size = 0.5
+				keep_unit_leaders = { 199 }
+			}
+			hidden_effect = {
+				random_other_country = {
+					limit = {
+						original_tag = CFT
+						has_government = Centrist
+					}
+					set_country_flag = SH_WAR
+					global_every_army_leader = {
+						limit = {
+							OR = {
+								has_id = 10
+								has_id = 23
+							}
+						}
+						set_nationality = PREV
+					}
+				}
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CFT_Anti_Commusim_Movement
+		icon = GFX_goal_anti_comintern_pact
+		prerequisite = { focus = CFT_Empower_the_Russian_Generals }
+		x = 9
+		y = 5
+		cost = 8
+
+		available = {
+			is_subject = no
+			has_civil_war = no
+			has_government = Radical_Rightist
+			has_completed_focus = CFT_Cast_the_Die
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					has_government = Radical_Leftist
+					NOT = { is_in_faction_with = ROOT }
+					NOT = { is_subject_of = ROOT }
+				}
+				ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+}

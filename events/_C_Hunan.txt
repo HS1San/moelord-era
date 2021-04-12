@@ -1,0 +1,184 @@
+﻿add_namespace = new_CHN
+
+country_event = {
+	id = new_CHN.1
+	title = new_CHN.1.t
+	desc = new_CHN.1.d
+	picture = GFX_report_event_chinese_soldiers_running
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { is_subject = yes }
+				random_other_country = {
+					limit = { ROOT = { is_subject_of = PREV } }
+					end_puppet = ROOT
+				}
+			}
+			if = {
+				limit = { is_in_faction = yes }
+				leave_faction = yes
+			}
+			clr_country_flag = Anhui_Member
+			clr_country_flag = Zhili_Member
+			clr_country_flag = Fengtian_Member
+			create_country_leader = {
+				name = "Zhao Hengti"	# 赵恒惕
+				picture = "gfx/leaders/China/Portrait_China_Zhao_Hengti.tga"
+				expire = "1936.1.1"
+				ideology = Moderate_Rightist_ideology
+				traits = {}
+			}
+			create_field_marshal = {
+				name = "Zhao Hengti"	# 赵恒惕
+				portrait_path = "gfx/leaders/China/Portrait_China_Zhao_Hengti.tga"
+				traits = { old_guard trait_reckless General_is_a_HoS }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+				id = 205
+			}
+		}
+	}
+
+	option = {
+		name = new_CHN.1.a
+		start_civil_war = {
+			ruling_party = Moderate_Rightist
+			ideology = Centrist
+			size = 0.25
+			keep_unit_leaders = { 205 }
+			states = { 68 69 }
+		}
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = CHN
+					has_government = Centrist
+				}
+				set_country_flag = SH_PAR
+				set_country_flag = Old_Anhui_Member
+				global_every_army_leader = {
+					limit = { has_id = 53 }
+					set_nationality = PREV
+				}
+			}
+			add_popularity = {
+				ideology = Moderate_Rightist
+				popularity = 0.1
+			}
+		}
+		if = {
+			limit = { CEX = { exists = yes } }
+			CEX = { country_event = new_CHN.2 }
+		}
+		ai_chance = { factor = 75 }
+	}
+	option = {
+		name = new_CHN.1.b
+		start_civil_war = {
+			ruling_party = Centrist
+			ideology = Moderate_Rightist
+			size = 0.25
+			keep_unit_leaders = { 53 }
+			states = { 68 69 }
+		}
+		set_country_flag = Old_Anhui_Member
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = CHN
+					has_government = Moderate_Rightist
+				}
+				add_popularity = {
+					ideology = Moderate_Leftist
+					popularity = 0.2
+				}	
+				set_country_flag = SH_PAR
+				global_every_army_leader = {
+					limit = { has_id = 205 }
+					set_nationality = PREV
+				}
+			}
+			add_popularity = {
+				ideology = Centrist
+				popularity = 1
+			}	
+		}
+		if = {
+			limit = { CEX = { exists = yes } }
+			CEX = { country_event = new_CHN.2 }
+		}
+		ai_chance = { factor = 25 }
+	}
+}
+
+country_event = {
+	id = new_CHN.2
+	title = new_CHN.2.t
+	desc = new_CHN.2.d
+	picture = GFX_report_event_chinese_soldiers_running
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_CHN.2.a
+		add_war_support = 0.05
+		if = {
+			limit = { CHN = { has_government = Moderate_Rightist } }
+			random_other_country = {
+				limit = {
+					original_tag = CHN
+					has_government = Centrist
+				}
+				ROOT = { add_to_war = { targeted_alliance = CHN enemy = PREV } }
+			}
+			CHN = { add_opinion_modifier = { target = ROOT modifier = New_friendship } }
+			add_ai_strategy = { type = support id = "CHN" value = 200 }
+		}
+		if = {
+			limit = { CHN = { has_government = Centrist } }
+			random_other_country = {
+				limit = {
+					original_tag = CHN
+					has_government = Moderate_Rightist
+				}
+				ROOT = {
+					add_to_war = { targeted_alliance = PREV enemy = CHN }
+					add_ai_strategy = { type = support id = PREV value = 200 }
+				}
+				add_opinion_modifier = { target = ROOT modifier = New_friendship }
+			}
+		}
+		CHB = { add_opinion_modifier = { target = ROOT modifier = New_contradiction } }
+	}
+	option = {
+		name = new_CHN.2.b
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = new_CHN.3
+	title = new_CHN.3.t
+	desc = new_CHN.3.d
+	picture = GFX_report_event_chinese_soldiers_running
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_CHN.3.a
+		add_war_support = 0.05
+		add_to_war = { targeted_alliance = CEX enemy = CHB }
+		add_ai_strategy = { type = support id = "CEX" value = 200 }
+		CEX = { add_opinion_modifier = { target = ROOT modifier = New_friendship } }
+	}
+	option = {
+		name = new_CHN.3.b
+		add_stability = 0.05
+	}
+}

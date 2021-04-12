@@ -1,0 +1,686 @@
+war_measures = {
+	Recruit_Bandits = {
+		icon = generic_civil_support
+		ai_will_do = { factor = 0 }
+
+		cost = 50
+		days_remove = 120
+		days_re_enable = 30
+
+		modifier = {
+			stability_weekly = -0.001
+			political_power_cost = 0.05
+		}
+		visible = {
+			OR = {
+				has_completed_focus = Generic_Recruit_Bandits
+				has_completed_focus = Shared_Recruit_Bandits
+			}
+		}
+		available = {
+			has_war = no
+		}
+		remove_effect = {
+			army_experience = 15
+			custom_effect_tooltip = Unlock_New_Army_03
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_country_flag = bandits_recruited } }
+					division_template = {
+						name = "Redemption Army"
+						priority = 1
+						is_locked = yes
+						regiments = {
+							cavalry = { x = 0 y = 0 }
+							cavalry = { x = 0 y = 1 }
+							cavalry = { x = 1 y = 0 }
+							cavalry = { x = 1 y = 1 }
+						}
+					}
+					set_country_flag = bandits_recruited
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"1. Redemption Army\" division_template = \"Redemption Army\" start_experience_factor = 0.5" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"2. Redemption Army\" division_template = \"Redemption Army\" start_experience_factor = 0.5" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"3. Redemption Army\" division_template = \"Redemption Army\" start_experience_factor = 0.5" 
+						owner = ROOT
+					}
+				}
+			}
+			if = {
+				limit = { has_idea = Greenwood_Hero }
+				remove_ideas = Greenwood_Hero
+			}
+		}
+	}
+	Recruit_Pirates = {
+		icon = generic_civil_support
+		ai_will_do = { factor = 0 }
+
+		cost = 50
+		days_remove = 120
+		days_re_enable = 30
+
+		modifier = {
+			stability_weekly = -0.001
+			political_power_cost = 0.05
+		}
+		visible = {
+			OR = {
+				has_completed_focus = Generic_Recruit_Bandits
+				has_completed_focus = Shared_Recruit_Bandits
+			}
+		}
+		available = {
+			has_war = no
+			any_owned_state = { free_building_slots = { building = dockyard size > 0 include_locked = yes } }
+		}
+		remove_effect = {
+			navy_experience = 15
+			add_equipment_to_stockpile = { type = convoy_equipment_0 amount = 50 }
+		}
+	}
+	Invite_Billy_Sing = {
+		icon = generic_army_support
+		ai_will_do = { factor = 0 }
+
+		cost = 25
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_country_flag = SH_WAR
+				has_country_flag = SH_PAR
+			}
+			NOT = { has_global_flag = Billy_Sing_has_been_invited }
+		}
+		available = {
+			has_war = no
+			custom_trigger_tooltip = {
+				tooltip = GBR_Root_Opinion_100
+				check_variable = { ROOT.relationship_with_britain > 99 }
+			}
+		}
+		complete_effect = {
+			set_global_flag = Billy_Sing_has_been_invited
+			if = {
+				limit = { NOT = { has_idea = Legend_of_Billy_Sing } }
+				add_ideas = Legend_of_Billy_Sing
+			}
+		}
+	}
+}
+
+propaganda_efforts = {
+	They_Shall_Not_Pass = {
+		icon = generic_prepare_civil_war
+		ai_will_do = { factor = 0 }
+
+		cost = 50
+		days_remove = 360
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_completed_focus = Generic_Spirit_of_Knight_Errant
+				has_completed_focus = Shared_Spirit_of_Knight_Errant
+			}
+		}
+		available = {
+			surrender_progress > 0.25
+			custom_trigger_tooltip = {
+				tooltip = war_with_major
+				has_war = yes
+				has_civil_war = no
+				any_enemy_country = { is_actual_major = yes }
+			}
+			OR = {
+				has_government = Moderate_Leftist
+				has_government = Moderate_Rightist
+			}
+		}
+		complete_effect = {
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+		modifier = {
+			army_core_attack_factor = -0.1
+			army_core_defence_factor = 0.2
+		}
+	}
+	We_Shall_Never_Surrender = {
+		icon = generic_prepare_civil_war
+		ai_will_do = { factor = 0 }
+
+		cost = 50
+		days_remove = 360
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_completed_focus = Generic_Why_We_Fight
+				has_completed_focus = Shared_Why_We_Fight
+			}
+		}
+		available = {
+			surrender_progress > 0.25
+			custom_trigger_tooltip = {
+				tooltip = war_with_major
+				has_war = yes
+				has_civil_war = no
+				any_enemy_country = { is_actual_major = yes }
+			}
+			OR = {
+				has_government = Moderate_Leftist
+				has_government = Moderate_Rightist
+			}
+		}
+		complete_effect = {
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+		modifier = {
+			army_core_attack_factor = 0.2
+			army_core_defence_factor = -0.1
+		}
+	}
+}
+
+economy_decisions = {
+	Scorched_Earth_Tactics = {
+		icon = generic_scorched_earth
+		ai_will_do = { factor = 0 }
+
+		cost = 25
+		days_re_enable = 60
+
+		visible = {
+			OR = {
+				has_completed_focus = Generic_Scorched_Earth_Tactics
+				has_completed_focus = Shared_Scorched_Earth_Tactics
+			}
+		}
+		available = {
+			has_war = yes
+			any_owned_state = {
+				is_controlled_by = ROOT
+				infrastructure > 0
+				any_neighbor_state = {
+					NOT = { is_fully_controlled_by = ROOT }
+					controller = { has_war_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					infrastructure > 0
+					any_neighbor_state = {
+						NOT = { is_fully_controlled_by = ROOT }
+						controller = { has_war_with = ROOT }
+					}
+				}
+				damage_building = {
+					type = infrastructure
+					damage = 3
+				}
+			}
+			add_stability = -0.03
+			add_war_support = -0.03
+		}
+	}
+	Industrial_Evacuations = {
+		icon = generic_construction
+		ai_will_do = { factor = 0 }
+
+		cost = 25
+		days_remove = 15
+		days_re_enable = 360
+
+		visible = {
+			OR = {
+				has_completed_focus = Generic_Industrial_Evacuations
+				has_completed_focus = Shared_Industrial_Evacuations
+			}
+		}
+		available = {
+			surrender_progress > 0.2
+			custom_trigger_tooltip = {
+				tooltip = war_with_major
+				has_war = yes
+				has_civil_war = no
+				any_enemy_country = { is_actual_major = yes }
+			}
+			any_owned_state = {
+				is_controlled_by = ROOT
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+				any_neighbor_state = {
+					NOT = { is_fully_controlled_by = ROOT }
+					controller = { has_war_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+					}
+					any_neighbor_state = {
+						NOT = { is_fully_controlled_by = ROOT }
+						controller = { has_war_with = ROOT }
+					}
+				}
+				set_variable = {
+					var = af_level
+					value = arms_factory_level
+				}
+				set_variable = {
+					var = af_to_move
+					value = arms_factory_level
+				}
+				multiply_variable = {
+					var = af_to_move
+					value = 0.75
+				}
+				set_variable = {
+					var = ic_level
+					value = industrial_complex_level
+				}
+				set_variable = {
+					var = ic_to_move
+					value = industrial_complex_level
+				}
+				multiply_variable = {
+					var = ic_to_move
+					value = 0.75
+				}
+				custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
+				custom_effect_tooltip = CHI_industrial_evacuations_remove_IC
+				hidden_effect = {
+					remove_building = {
+						type = arms_factory
+						level = af_level
+					}
+					remove_building = {
+						type = industrial_complex
+						level = ic_level
+					}
+				}
+				CONTROLLER = {
+					random_owned_controlled_state = {
+						limit = {
+							is_fully_controlled_by = ROOT
+							any_neighbor_state = {
+								is_controlled_by = ROOT
+							}
+							free_building_slots = {
+								building = arms_factory
+								size > 2
+								include_locked = yes
+							}
+						}
+						custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
+						hidden_effect = {
+							add_extra_state_shared_building_slots = af_to_move
+							add_building_construction = {
+								type = arms_factory
+								level = af_to_move
+								instant_build = yes
+							}
+							CONTROLLER = { set_country_flag = industrial_evacuations_moved_AF }
+						}
+					}
+					if = {
+						limit = {
+							NOT = { has_country_flag = industrial_evacuations_moved_AF }
+							NOT = {
+								any_state = {
+									is_fully_controlled_by = ROOT
+									any_neighbor_state = {
+										is_controlled_by = ROOT
+									}
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+							}
+						}
+						random_owned_controlled_state = {
+							limit = {
+								is_controlled_by = ROOT
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
+							hidden_effect = {
+								add_extra_state_shared_building_slots = af_to_move
+								add_building_construction = {
+									type = arms_factory
+									level = af_to_move
+									instant_build = yes
+								}
+							}
+						}
+					}
+					clr_country_flag = industrial_evacuations_moved_AF
+					random_owned_controlled_state = {
+						limit = {
+							is_fully_controlled_by = ROOT
+							any_neighbor_state = {
+								is_controlled_by = ROOT
+							}
+							free_building_slots = {
+								building = industrial_complex
+								size > 2
+								include_locked = yes
+							}
+						}
+						custom_effect_tooltip = CHI_industrial_evacuations_add_IC
+						hidden_effect = {
+							add_extra_state_shared_building_slots = ic_to_move
+							add_building_construction = {
+								type = industrial_complex
+								level = ic_to_move
+								instant_build = yes
+							}
+							CONTROLLER = { set_country_flag = industrial_evacuations_moved_IC }
+						}
+					}
+					if = {
+						limit = {
+							NOT = { has_country_flag = industrial_evacuations_moved_IC }
+							NOT = {
+								any_state = {
+									is_fully_controlled_by = ROOT
+									any_neighbor_state = {
+										is_controlled_by = ROOT
+									}
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+							}
+						}
+						random_owned_controlled_state = {
+							limit = {
+								is_controlled_by = ROOT
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
+							hidden_effect = {
+							add_extra_state_shared_building_slots = ic_to_move
+								add_building_construction = {
+									type = industrial_complex
+									level = ic_to_move
+									instant_build = yes
+								}
+							}
+						}
+					}
+					clr_country_flag = industrial_evacuations_moved_IC
+				}
+			}
+		}
+	}
+	War_Taxes_Decision = {
+		icon = ger_mefo_bills
+		ai_will_do = { factor = 0 }
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_completed_focus = Generic_War_Taxes
+				has_completed_focus = Shared_War_Taxes
+			}
+		}
+		available = {
+			has_war = yes
+			has_war_support > 0.49
+		}
+		complete_effect = {
+			add_ideas = War_Taxes_1
+			activate_mission = War_Taxes_Mission
+		}
+	}
+	War_Taxes_Mission = {
+		icon = ger_mefo_bills
+		allowed = { always = no }
+		available = {
+			can_delay_war_taxes = yes
+			has_political_power > 0
+		}
+		selectable_mission = yes
+		days_mission_timeout = 180
+		is_good = no
+		fire_only_once = yes
+		days_remove = extend_war_taxes_days?0
+		cancel_trigger = {
+			hidden_trigger = {
+				OR = {
+					NOT = { has_war_taxes = yes }
+					has_idea = War_Taxes_Ended
+				}
+			}
+		}
+		remove_effect = {
+			war_taxes_level_up = yes
+			if = {
+				limit = {
+					check_variable = { var = war_taxes_counter value = 15 compare = less_than }
+				}
+				set_variable = { var = war_taxes_counter value = 10 }
+			}
+			add_to_variable = { var = war_taxes_counter value = 10 }
+			hidden_effect = { activate_mission = War_Taxes_Mission }
+		}
+		complete_effect = {
+			custom_effect_tooltip = war_taxes_mission_tt
+			custom_effect_tooltip = war_taxes_effect_in_days
+			effect_tooltip = { war_taxes_level_up = yes }
+			hidden_effect = { set_variable = { extend_war_taxes_days = days_mission_timeout@War_Taxes_Mission } }
+		}
+		timeout_effect = {
+			remove_war_taxes = yes
+			#1
+			if = {
+				limit = {
+					check_variable = { var = war_taxes_counter value = 15 compare = less_than }
+				}
+				add_political_power = -20
+				add_timed_idea = { idea = War_Taxes_Ended days = 60 }
+			}
+			#2
+			if = {
+				limit = {
+					check_variable = { var = war_taxes_counter value = 20 compare = equals }
+				}
+				add_political_power = -40
+				add_timed_idea = { idea = War_Taxes_Ended days = 80 }
+			}
+			#3
+			if = {
+				limit = {
+					check_variable = { var = war_taxes_counter value = 30 compare = equals }
+				}
+				add_political_power = -60
+				add_timed_idea = { idea = War_Taxes_Ended days = 100 }
+			}
+			#4
+			if = {
+				limit = {
+					check_variable = { var = war_taxes_counter value = 40 compare = equals }
+				}
+				add_political_power = -80
+				add_timed_idea = { idea = War_Taxes_Ended days = 120 }
+			}
+			#5
+			if = {
+				limit = {
+					check_variable = { var = war_taxes_counter value = 50 compare = equals }
+				}
+				add_political_power = -100
+				add_timed_idea = { idea = War_Taxes_Ended days = 140 }
+			}
+			#6
+			if = {
+				limit = {
+					check_variable = { var = war_taxes_counter value = 60 compare = equals }
+				}
+				add_political_power = -120
+				add_timed_idea = { idea = War_Taxes_Ended days = 160 }
+			}
+			#7
+			if = {
+				limit = {
+					check_variable = { var = war_taxes_counter value = 70 compare = equals }
+				}
+				add_political_power = -140
+				add_timed_idea = { idea = War_Taxes_Ended days = 180 }
+			}
+			#8
+			if = {
+				limit = {
+					check_variable = { var = war_taxes_counter value = 80 compare = equals }
+				}
+				add_political_power = -160
+				add_timed_idea = { idea = War_Taxes_Ended days = 200 }
+			}
+			#9
+			if = {
+				limit = {
+					check_variable = { var = war_taxes_counter value = 90 compare = equals }
+				}
+				add_political_power = -180
+				add_timed_idea = { idea = War_Taxes_Ended days = 220 }
+			}
+			#10
+			if = {
+				limit = {
+					check_variable = { var = war_taxes_counter value = 100 compare = equals }
+				}
+				add_political_power = -200
+				add_timed_idea = { idea = War_Taxes_Ended days = 240 }
+			}
+			#11
+			if = {
+				limit = {
+					check_variable = { var = war_taxes_counter value = 110 compare = equals }
+				}
+				add_political_power = -220
+				add_timed_idea = { idea = War_Taxes_Ended days = 260 }
+			}
+			#12
+			if = {
+				limit = {
+					check_variable = { var = war_taxes_counter value = 120 compare = equals }
+				}
+				add_political_power = -240
+				add_timed_idea = { idea = War_Taxes_Ended days = 280 }
+			}
+			#13
+			if = {
+				limit = {
+					check_variable = { var = war_taxes_counter value = 130 compare = equals }
+				}
+				add_political_power = -260
+				add_timed_idea = { idea = War_Taxes_Ended days = 300 }
+			}
+			#14
+			if = {
+				limit = {
+					check_variable = { var = war_taxes_counter value = 140 compare = equals }
+				}
+				add_political_power = -280
+				add_timed_idea = { idea = War_Taxes_Ended days = 320 }
+			}
+			#15
+			if = {
+				limit = {
+					check_variable = { var = war_taxes_counter value = 150 compare = equals }
+				}
+				add_political_power = -300
+				add_timed_idea = { idea = War_Taxes_Ended days = 340 }
+			}
+			#16
+			if = {
+				limit = {
+					check_variable = { var = war_taxes_counter value = 160 compare = equals }
+				}
+				add_political_power = -320
+				add_timed_idea = { idea = War_Taxes_Ended days = 360 }
+			}
+			#17
+			if = {
+				limit = {
+					check_variable = { var = war_taxes_counter value = 170 compare = equals }
+				}
+				add_political_power = -340
+				add_timed_idea = { idea = War_Taxes_Ended days = 380 }
+			}
+			#18
+			if = {
+				limit = {
+					check_variable = { var = war_taxes_counter value = 180 compare = equals }
+				}
+				add_political_power = -360
+				add_timed_idea = { idea = War_Taxes_Ended days = 400 }
+			}
+			if = {
+				limit = {
+					check_variable = { var = war_taxes_counter value = 180 compare = greater_than }
+				}
+				add_political_power = -380
+				add_timed_idea = { idea = War_Taxes_Ended days = 420 }
+			}			
+		}
+	}
+	Forced_Loans = {
+		icon = ger_mefo_bills
+		ai_will_do = { factor = 0 }
+
+		cost = 10
+		days_remove = 180
+
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+		visible = {
+			OR = {
+				has_completed_focus = Generic_Forced_Loans
+				has_completed_focus = Shared_Forced_Loans
+			}
+			NOT = { has_idea = Repayment }
+		}
+		available = {
+			has_stability > 0.49
+		}
+		remove_effect = {
+			add_timed_idea = { idea = Repayment days = 180 }
+		}
+	}
+}

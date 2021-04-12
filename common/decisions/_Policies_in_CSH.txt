@@ -1,0 +1,6 @@
+Diplomacy_with_CBJ = {
+
+}
+
+Diplomacy_with_CNP = {
+}

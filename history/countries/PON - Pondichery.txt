@@ -1,0 +1,43 @@
+﻿capital = 161
+
+oob = "PON"
+
+set_technology = {
+	rifle_equipment_0 = 1
+	support_class_equipment = 1
+	animal_combat_training = 1
+	military_police_0 = 1
+}
+
+add_ideas = {
+	Foreign_Power
+}
+
+set_convoys = 0
+set_research_slots = 1
+
+set_cosmetic_tag = Colonial_PON
+
+set_politics = {
+	ruling_party = Centrist
+	last_election = "1916.6.6"
+	election_frequency = 24
+	elections_allowed = no
+}
+
+set_popularities = {
+    Moderate_Leftist = 0
+    Moderate_Rightist = 0
+    Radical_Rightist = 0
+    Radical_Leftist = 0
+    Centrist = 100
+}
+create_all_leaders = yes
+
+create_country_leader = {
+	name = "Alfred Albert Martineau"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+	expire = "1936.1.1"
+	ideology = Centrist_ideology
+	traits = {}
+}

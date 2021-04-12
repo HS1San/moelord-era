@@ -1,0 +1,112 @@
+﻿capital = 18
+
+oob = "KIA"
+
+set_technology = {
+	rifle_equipment_0 = 1
+	support_class_equipment = 1
+	animal_combat_training = 1
+	military_police_0 = 1
+	gw_artillery_equipment = 1
+	truck_equipment = 1
+	torpedo_boat_equipment = 1
+	recon_plane_equipment = 1
+}
+
+
+add_ideas = {
+	limited_conscription
+	limited_exports
+
+	Spirit_of_Tonghak
+	Makeshift_Weapons
+}
+
+set_convoys = 0
+set_research_slots = 1
+
+set_politics = {
+	ruling_party = Centrist
+	last_election = "1916.6.6"
+	election_frequency = 24
+	elections_allowed = no
+}
+
+set_popularities = {
+    Moderate_Leftist = 25
+    Moderate_Rightist = 25
+    Radical_Rightist = 20
+    Radical_Leftist = 20
+    Centrist = 10
+}
+create_all_leaders = yes
+
+create_country_leader = {
+	name = "Military Council"
+	picture = "Portrait_Daehan_Korea_Conference.tga"
+	expire = "1936.1.1"
+	ideology = Moderate_Leftist_ideology
+	traits = {
+		silent_workhorse
+	}
+}
+create_country_leader = {
+	name = "Lee Bum Suk"
+	picture = "Portrait_Daehan_Lee_Beom_Seok.tga"
+	expire = "1936.1.1"
+	ideology = Moderate_Rightist_ideology
+	traits = {
+		silent_workhorse
+	}
+}
+create_country_leader = {
+	name = "Kim Chwa-chin"
+	picture = "Portrait_Daehan_Kim_Chwa_Chin.tga"
+	expire = "1924.1.27"
+	ideology = Centrist_ideology
+	traits = {
+		anarchist_zeal
+	}
+}
+create_country_leader = {
+	name = "Kim Il-sung"
+	picture = "Portrait_Daehan_Kim_Il_Sung.tga"
+	expire = "1936.1.1"
+	ideology = Radical_Leftist_ideology
+	traits = {
+		silent_workhorse
+	}
+}
+create_field_marshal = {
+	name = "Kim Chwa-chin"	#
+	portrait_path = "gfx/leaders/KIA/Portrait_Daehan_Kim_Chwa_Chin.tga"
+	traits = { organizer logistics_wizard General_is_a_HoS }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 6
+	logistics_skill = 4
+	id = 456
+}
+create_corps_commander = {
+	name = "Lee Bum Suk"	# 郭松龄
+	portrait_path = "gfx/leaders/KIA/Portrait_Daehan_Lee_Beom_Seok.tga"
+	traits = { career_officer politically_connected }
+	skill = 5
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+	id = 1223452
+}
+create_corps_commander = {
+	name = "Hong Beom do"	# 郭松龄
+	portrait_path = "gfx/leaders/China/KIA/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 5
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+	id = 1256
+}

@@ -1,0 +1,54 @@
+﻿capital = 117
+
+oob = "TAN"
+
+set_country_flag = SH_OTH
+set_cosmetic_tag = TAN_BYC
+
+set_technology = {
+	rifle_equipment_0 = 1
+	support_class_equipment = 1
+	animal_combat_training = 1
+	military_police_0 = 1
+}
+
+add_ideas = {
+	extensive_conscription
+	limited_exports
+	
+	Threat_of_the_Russian_Revolution
+}
+
+set_convoys = 0
+set_research_slots = 1
+
+set_politics = {
+	ruling_party = Centrist
+	last_election = "1916.6.6"
+	election_frequency = 24
+	elections_allowed = no
+}
+
+set_popularities = {
+    Moderate_Leftist = 0
+    Moderate_Rightist = 0
+    Radical_Rightist = 0
+    Radical_Leftist = 0
+    Centrist = 100
+}
+create_all_leaders = yes
+
+create_country_leader = {
+	name = "Donduk Kuular"
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_2.dds"
+	expire = "1936.1.1"
+	ideology = Radical_Leftist_ideology
+	traits = {}
+}
+create_country_leader = {
+	name = "Sodnam Blachir"	# 严世超
+	picture = "Sodnam_Blachir.dds"
+	expire = "1936.1.1"
+	ideology = Centrist_ideology
+	traits = {}
+}

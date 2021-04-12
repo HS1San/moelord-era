@@ -1,0 +1,85 @@
+state = {
+	id = 8
+	name = "STATE_8"
+	manpower = 500000
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 1
+		rubber = 0
+		tungsten = 0
+		steel = 15
+		chromium = 1
+	}
+	history = {
+		owner = CSY
+		add_core_of = CSY
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = {
+		1959 3427 4960 4986 10451 10854 12706 
+	}
+}
+
+state = {
+	id = 9
+	name = "STATE_9"
+	manpower = 1083700
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 1
+		rubber = 0
+		tungsten = 0
+		steel = 15
+		chromium = 2
+	}
+	history = {
+		owner = CSY
+		add_core_of = CSY
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = { 2087 1 }
+		victory_points = { 4525 1 }
+		victory_points = { 7048 1 }
+	}
+	provinces = {
+		2087 4525 7048 10629 12331 12609 12880 
+	}
+}
+
+state = {
+	id = 10
+	name = "STATE_10"
+	manpower = 500000
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 13
+		chromium = 2
+	}
+	history = {
+		owner = CSY
+		add_core_of = CSY
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 10424 2 }
+	}
+	provinces = {
+		7631 10424 
+	}
+}

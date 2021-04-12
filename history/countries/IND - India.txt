@@ -1,0 +1,89 @@
+﻿capital = 179
+
+oob = "IND"
+
+set_technology = {
+	rifle_equipment_0 = 1
+	support_class_equipment = 1
+	animal_combat_training = 1
+	military_police_0 = 1
+	submarine_equipment = 1
+	cruiser_equipment = 1
+}
+
+add_ideas = {
+	Princely_States
+	Marginalized_Muslim_Community
+	Agrarian_Society
+	Risk_of_Famine
+	Foreign_Power
+}
+
+set_convoys = 0
+set_research_slots = 1
+
+set_cosmetic_tag = Colonial_IND
+
+set_politics = {
+	ruling_party = Centrist
+	last_election = "1916.6.6"
+	election_frequency = 24
+	elections_allowed = no
+}
+
+set_popularities = {
+    Moderate_Leftist = 10
+    Moderate_Rightist = 10
+    Radical_Rightist = 0
+    Radical_Leftist = 0
+    Centrist = 80
+}
+create_all_leaders = yes
+
+create_country_leader = {
+	name = "Mahatma Gandhi"
+	picture = "Portrait_India_Mahatma_Gandhi.tga"
+	expire = "1936.1.1"
+	ideology = Moderate_Leftist_ideology
+	traits = {}
+}
+create_country_leader = {
+	name = "Bhogaraju Pattabhi Sitaramayya"
+	picture = "Portrait_India_Bhogaraju_Pattabhi_Sitaramayya.tga"
+	expire = "1936.1.1"
+	ideology = Moderate_Rightist_ideology
+	traits = {}
+}
+create_country_leader = {
+	name = "Frederic Thesiger"
+	picture = "gfx/leaders/Foreigner/Portrait_Foreigner_Frederic_Thesiger.tga"
+	expire = "1933.4.1"
+	ideology = Centrist_ideology
+	traits = {}
+}
+create_country_leader = {
+	name = "Abani Mukherji"
+	picture = "Portrait_India_Abani_Mukherji.tga"
+	expire = "1936.1.1"
+	ideology = Radical_Leftist_ideology
+	traits = {}
+}
+
+give_guarantee = CSH
+give_guarantee = CAO
+give_guarantee = INC
+give_guarantee = PHL
+give_guarantee = SIA
+give_guarantee = GOA
+
+create_faction = British_Sphere
+add_to_faction = CWH
+add_to_faction = CXG
+add_to_faction = NEP
+add_to_faction = BHU
+add_to_faction = BRU
+add_to_faction = BUR
+add_to_faction = MAL
+add_to_faction = SIN
+add_to_faction = SAB
+add_to_faction = SWK

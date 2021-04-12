@@ -1,0 +1,955 @@
+focus_tree = {
+	id = generic_focus
+
+	country = { factor = 1 }
+
+	default = yes
+	reset_on_civilwar = yes
+
+	shared_focus = Shared_Plan_of_Reform
+#	focus = {
+#		id = generic_focus_
+#		icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = 
+#		y = 
+#		cost = 
+#		relative_position_id = 
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#
+#		cancel = {
+#
+#		}
+#
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = 
+#		continue_if_invalid = 
+#		available_if_capitulated = 
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+	focus = {
+		id = Generic_Support_Monarchy
+		icon = GFX_focus_man_claim_the_mandate_of_heaven
+		mutually_exclusive = { focus = Generic_Support_Republic focus = Generic_Third_Way }
+		x = 1
+		y = 0
+		cost = 5
+
+		allow_branch = {
+			OR = {
+				has_country_flag = SH_WAR
+				has_country_flag = SH_PAR
+			}
+		}
+
+		ai_will_do = { factor = 0 }
+
+		available = {
+			has_country_flag = SH_WAR
+			has_government = Centrist
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Black_Flood } }
+				add_ideas = Black_Flood
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_Support_Republic
+		icon = GFX_goal_support_democracy
+		mutually_exclusive = { focus = Generic_Support_Monarchy focus = Generic_Third_Way }
+		x = 5
+		y = 0
+		cost = 5
+
+		allow_branch = {
+			OR = {
+				has_country_flag = SH_WAR
+				has_country_flag = SH_PAR
+			}
+		}
+
+		ai_will_do = { factor = 0 }
+
+		available = {
+			has_country_flag = SH_WAR
+			has_government = Centrist
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Blue_Flood } }
+				add_ideas = Blue_Flood
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_Third_Way
+		icon = GFX_focus_generic_join_comintern
+		mutually_exclusive = { focus = Generic_Support_Monarchy focus = Generic_Support_Republic }
+		x = 9
+		y = 0
+		cost = 5
+
+		allow_branch = {
+			OR = {
+				has_country_flag = SH_WAR
+				has_country_flag = SH_PAR
+			}
+		}
+
+		ai_will_do = { factor = 0 }
+
+		available = {
+			has_country_flag = SH_WAR
+			has_government = Centrist
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Red_Flood } }
+				add_ideas = Red_Flood
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_Emprie_of_Han
+		icon = GFX_Experience_CEH
+		prerequisite = { focus = Generic_Support_Monarchy }
+		mutually_exclusive = { focus = Generic_Emprie_of_Manchu }
+		x = 0
+		y = 1
+		cost = 7
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = NOT_HAS_WAR_WITH_CEH
+				NOT = {
+					any_country = {
+						has_cosmetic_tag = CEH
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = political_goal_tooltip_01
+			set_country_flag = SH_CEH
+			add_political_road = yes
+			set_party_name = { ideology = Radical_Rightist long_name = New_party_01_long name = New_party_01 }
+			if = {
+				limit = { NOT = { has_idea = Three_Battalion } }
+				add_ideas = Three_Battalion
+			}
+			unlock_decision_tooltip = Formable_CEH
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_Emprie_of_Manchu
+		icon = GFX_Experience_CEM
+		prerequisite = { focus = Generic_Support_Monarchy }
+		mutually_exclusive = { focus = Generic_Emprie_of_Han }
+		x = 2
+		y = 1
+		cost = 7
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = NOT_HAS_WAR_WITH_CEM
+				NOT = {
+					any_country = {
+						has_cosmetic_tag = CEM
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = political_goal_tooltip_02
+			set_country_flag = SH_CEM
+			add_political_road = yes
+			set_party_name = { ideology = Radical_Rightist long_name = New_party_00_long name = New_party_00 }
+			if = {
+				limit = { NOT = { has_idea = Eight_Banners } }
+				add_ideas = Eight_Banners
+			}
+			unlock_decision_tooltip = Formable_CEM
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_Republic_of_Beiyang
+		icon = GFX_Experience_BYC
+		prerequisite = { focus = Generic_Support_Republic }
+		mutually_exclusive = { focus = Generic_Republic_of_Kuomintang }
+		x = 4
+		y = 1
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = political_goal_tooltip_03
+			set_country_flag = SH_BYC
+			add_political_road = yes
+			set_party_name = { ideology = Moderate_Leftist long_name = New_party_03_long name = New_party_03 }
+			set_party_name = { ideology = Moderate_Rightist long_name = New_party_03_long name = New_party_03 }
+			if = {
+				limit = { NOT = { has_idea = Statism } }
+				add_ideas = Statism
+			}
+			unlock_decision_tooltip = Formable_BYC
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_Republic_of_Kuomintang
+		icon = GFX_Experience_CNP
+		prerequisite = { focus = Generic_Support_Republic }
+		mutually_exclusive = { focus = Generic_Republic_of_Beiyang }
+		x = 6
+		y = 1
+		cost = 7
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = NOT_HAS_WAR_WITH_CNP
+				NOT = {
+					any_country = {
+						has_cosmetic_tag = CNP
+						has_war_with = ROOT
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = NOT_HAS_WAR_WITH_CNL
+				NOT = {
+					any_country = {
+						has_cosmetic_tag = CNL
+						has_war_with = ROOT
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = NOT_HAS_WAR_WITH_CNR
+				NOT = {
+					any_country = {
+						has_cosmetic_tag = CNR
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = political_goal_tooltip_04
+			set_country_flag = SH_NPC
+			add_political_road = yes
+			set_party_name = { ideology = Moderate_Leftist long_name = New_party_05_long name = New_party_05 }
+			set_party_name = { ideology = Moderate_Rightist long_name = New_party_05_long name = New_party_05 }
+			if = {
+				limit = { NOT = { has_idea = Populism } }
+				add_ideas = Populism
+			}
+			unlock_decision_tooltip = Formable_ROC
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_Union_of_Communism
+		icon = GFX_Experience_CCP
+		prerequisite = { focus = Generic_Third_Way }
+		mutually_exclusive = { focus = Generic_Union_of_Anarchism }
+		x = 8
+		y = 1
+		cost = 7
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = NOT_HAS_WAR_WITH_CCP
+				NOT = {
+					any_country = {
+						has_cosmetic_tag = CCP
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = political_goal_tooltip_05
+			set_country_flag = SH_CPC
+			add_political_road = yes
+			set_party_name = { ideology = Radical_Leftist long_name = New_party_08_long name = New_party_08 }
+			if = {
+				limit = { NOT = { has_idea = Revolution_in_Rural } }
+				add_ideas = Revolution_in_Rural
+			}
+			unlock_decision_tooltip = Formable_PEC
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_Union_of_Anarchism
+		icon = GFX_Experience_CAF
+		prerequisite = { focus = Generic_Third_Way }
+		mutually_exclusive = { focus = Generic_Union_of_Communism }
+		x = 10
+		y = 1
+		cost = 7
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = NOT_HAS_WAR_WITH_CAF
+				NOT = {
+					any_country = {
+						has_cosmetic_tag = CAF
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = political_goal_tooltip_06
+			set_country_flag = SH_ASC
+			add_political_road = yes
+			set_party_name = { ideology = Radical_Leftist long_name = New_party_09_long name = New_party_09 }
+			if = {
+				limit = { NOT = { has_idea = Revolution_in_City } }
+				add_ideas = Revolution_in_City
+			}
+			unlock_decision_tooltip = Formable_ASC
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_Anti_Corruption_Movement
+		icon = GFX_focus_Root_out_Funding
+		prerequisite = { focus = Generic_Emprie_of_Han focus = Generic_Emprie_of_Manchu }
+		x = 1
+		y = 2
+		cost = 9
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 200
+			add_tech_bonus = {
+				name = tech_goal_tooltip_00_05
+				bonus = 0.5
+				uses = 1
+				category = secret_action_tech
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		search_filters = {FOCUS_FILTER_RESEARCH}
+	}
+	focus = {
+		id = Generic_Create_Democratic_Factories
+		icon = GFX_focus_Automobile_Production
+		prerequisite = { focus = Generic_Republic_of_Beiyang focus = Generic_Republic_of_Kuomintang }
+		x = 5
+		y = 2
+		cost = 9
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_tech_bonus = {
+				name = tech_goal_tooltip_00_02
+				bonus = 0.5
+				uses = 1
+				category = light_industry_tech
+				category = heavy_industry_tech
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+	}
+	focus = {
+		id = Generic_Develop_Traditional_Economics
+		icon = GFX_focus_Agriculture
+		prerequisite = { focus = Generic_Union_of_Communism focus = Generic_Union_of_Anarchism }
+		x = 9
+		y = 2
+		cost = 9
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_tech_bonus = {
+				name = tech_goal_tooltip_00_01
+				bonus = 0.5
+				uses = 1
+				category = agriculture_tech
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		search_filters = {FOCUS_FILTER_STABILITY}
+	}
+	focus = {
+		id = Generic_Improve_Relations_with_Britain
+		icon = GFX_Experience_GBR
+		prerequisite = { focus = Generic_Anti_Corruption_Movement }
+		mutually_exclusive = { focus = Generic_Improve_Relations_with_Italy }
+		x = 0
+		y = 3
+		cost = 7
+
+		available = {
+			NOT = { has_war_with = CWH }
+			NOT = { has_war_with = CXG }
+			NOT = { has_war_with = BUR }
+			NOT = { has_war_with = IND }
+			NOT = { has_war_with = PAK }
+			NOT = { has_war_with = MAL }
+			NOT = { has_war_with = SIN }
+			NOT = { has_war_with = SWK }
+			NOT = { has_war_with = SAB }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = relationship_with_britain value = 25 tooltip = Increase_the_opinion_of_Britain_for_us_by_25 }
+		}
+	}
+	focus = {
+		id = Generic_Improve_Relations_with_Italy
+		prerequisite = { focus = Generic_Anti_Corruption_Movement }
+		mutually_exclusive = { focus = Generic_Improve_Relations_with_Britain }
+		icon = GFX_Experience_ITA
+		x = 2
+		y = 3
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = relationship_with_italy value = 25 tooltip = Increase_the_opinion_of_Italy_for_us_by_25 }
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_Improve_Relations_with_America
+		prerequisite = { focus = Generic_Create_Democratic_Factories }
+		mutually_exclusive = { focus = Generic_Improve_Relations_with_Germany }
+		icon = GFX_Experience_USA
+		x = 4
+		y = 3
+		cost = 7
+
+		available = {
+			NOT = { has_war_with = PHL }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = relationship_with_america value = 25 tooltip = Increase_the_opinion_of_America_for_us_by_25 }
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_Improve_Relations_with_Germany
+		prerequisite = { focus = Generic_Create_Democratic_Factories }
+		mutually_exclusive = { focus = Generic_Improve_Relations_with_America }
+		icon = GFX_Experience_GER
+		x = 6
+		y = 3
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = relationship_with_germany value = 25 tooltip = Increase_the_opinion_of_Germany_for_us_by_25 }
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_Improve_Relations_with_France
+		prerequisite = { focus = Generic_Develop_Traditional_Economics }
+		mutually_exclusive = { focus = Generic_Improve_Relations_with_Russia }
+		icon = GFX_Experience_FRA
+		x = 8
+		y = 3
+		cost = 7
+
+		available = {
+			NOT = { has_war_with = INC }
+			NOT = { has_war_with = PON }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = relationship_with_france value = 25 tooltip = Increase_the_opinion_of_France_for_us_by_25 }
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_Improve_Relations_with_Russia
+		prerequisite = { focus = Generic_Develop_Traditional_Economics }
+		mutually_exclusive = { focus = Generic_Improve_Relations_with_France }
+		icon = GFX_Experience_SOV
+		x = 10
+		y = 3
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = relationship_with_russia value = 25 tooltip = Increase_the_opinion_of_Russia_for_us_by_25 }
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_Protect_National_Citizens
+		icon = GFX_focus_Generic_Political
+		prerequisite = {
+			focus = Generic_Improve_Relations_with_Britain
+			focus = Generic_Improve_Relations_with_France
+			focus = Generic_Improve_Relations_with_America
+			focus = Generic_Improve_Relations_with_Germany
+			focus = Generic_Improve_Relations_with_Italy
+			focus = Generic_Improve_Relations_with_Russia
+		}
+		x = 2
+		y = 4
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_War_Plan_Against_Neighbors
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = {
+			focus = Generic_Improve_Relations_with_Britain
+			focus = Generic_Improve_Relations_with_France
+			focus = Generic_Improve_Relations_with_America
+			focus = Generic_Improve_Relations_with_Germany
+			focus = Generic_Improve_Relations_with_Italy
+			focus = Generic_Improve_Relations_with_Russia
+		}
+		x = 8
+		y = 4
+		cost = 10
+
+		bypass = { has_global_flag = China_Unification }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_threat = 5
+			every_neighbor_country = {
+				limit = {
+					NOT = {
+						is_subject_of = ROOT
+						is_in_faction_with = ROOT
+					}
+					has_country_flag = SH_WAR
+				}
+				ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_Join_to_Anhui_Clique
+		icon = GFX_Experience_Anhui_Clique
+		prerequisite = { focus = Generic_Protect_National_Citizens }
+		mutually_exclusive = { focus = Generic_Join_to_Zhili_Clique focus = Generic_Join_to_Fengtian_Clique }
+		x = 0
+		y = 5
+		cost = 7
+
+		available = {
+			has_war = no
+			is_subject = no
+			is_in_faction = no
+			any_other_country = {
+				has_country_flag = Anhui_Member
+				is_faction_leader = yes
+				has_capitulated = no
+			}
+			any_neighbor_country = {
+				has_country_flag = Anhui_Member
+			}
+			NOT = { has_country_flag = Old_Anhui_Member }
+			NOT = { has_country_flag = Old_Zhili_Member }
+			NOT = { has_country_flag = Old_Fengtian_Member }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					original_tag = CRH
+					original_tag = CGS
+					original_tag = CQH
+					original_tag = CNX
+					original_tag = CXJ
+					original_tag = CGX
+					original_tag = CGZ
+					original_tag = CXK
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = Attitude_determines_success_or_failure
+			random_other_country = {
+				limit = {
+					has_country_flag = Anhui_Member
+					is_faction_leader = yes
+					has_capitulated = no
+				}
+				country_event = new_Generic.1
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_Join_to_Zhili_Clique
+		icon = GFX_Experience_Zhili_Clique
+		prerequisite = { focus = Generic_Protect_National_Citizens }
+		mutually_exclusive = { focus = Generic_Join_to_Anhui_Clique focus = Generic_Join_to_Fengtian_Clique }
+		x = 2
+		y = 5
+		cost = 7
+
+		available = {
+			has_war = no
+			is_subject = no
+			is_in_faction = no
+			any_other_country = {
+				has_country_flag = Zhili_Member
+				is_faction_leader = yes
+				has_capitulated = no
+			}
+			any_neighbor_country = {
+				has_country_flag = Zhili_Member
+			}
+			NOT = { has_country_flag = Old_Anhui_Member }
+			NOT = { has_country_flag = Old_Zhili_Member }
+			NOT = { has_country_flag = Old_Fengtian_Member }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					original_tag = CRH
+					original_tag = CGS
+					original_tag = CQH
+					original_tag = CNX
+					original_tag = CXJ
+					original_tag = CGX
+					original_tag = CGZ
+					original_tag = CXK
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = Attitude_determines_success_or_failure
+			random_other_country = {
+				limit = {
+					has_country_flag = Zhili_Member
+					is_faction_leader = yes
+					has_capitulated = no
+				}
+				country_event = new_Generic.1
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_Join_to_Fengtian_Clique
+		icon = GFX_Experience_Fengtian_Clique
+		prerequisite = { focus = Generic_Protect_National_Citizens }
+		mutually_exclusive = { focus = Generic_Join_to_Anhui_Clique focus = Generic_Join_to_Zhili_Clique }
+		x = 4
+		y = 5
+		cost = 7
+
+		available = {
+			has_war = no
+			is_subject = no
+			is_in_faction = no
+			any_other_country = {
+				has_country_flag = Fengtian_Member
+				is_faction_leader = yes
+				has_capitulated = no
+			}
+			any_neighbor_country = {
+				has_country_flag = Fengtian_Member
+			}
+			NOT = { has_country_flag = Old_Anhui_Member }
+			NOT = { has_country_flag = Old_Zhili_Member }
+			NOT = { has_country_flag = Old_Fengtian_Member }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					original_tag = CRH
+					original_tag = CGS
+					original_tag = CQH
+					original_tag = CNX
+					original_tag = CXJ
+					original_tag = CGX
+					original_tag = CGZ
+					original_tag = CXK
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = Attitude_determines_success_or_failure
+			random_other_country = {
+				limit = {
+					has_country_flag = Fengtian_Member
+					is_faction_leader = yes
+					has_capitulated = no
+				}
+				country_event = new_Generic.1
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_Remove_Political_Parties
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		prerequisite = { focus = Generic_War_Plan_Against_Neighbors }
+		x = 6
+		y = 5
+		cost = 7
+
+		available = {
+			has_war = no
+			has_global_flag = China_Unification
+		}
+
+		ai_will_do = { factor = 0 }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_threat = 5
+			every_other_country = {
+				limit = {
+					NOT = {
+						is_subject_of = ROOT
+						is_in_faction_with = ROOT
+					}
+					has_country_flag = SH_PAR
+				}
+				ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_Defeat_Imperialist
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = Generic_War_Plan_Against_Neighbors }
+		x = 8
+		y = 5
+		cost = 7
+
+		available = {
+			has_war = no
+			has_global_flag = China_Unification
+		}
+
+		ai_will_do = { factor = 0 }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_threat = 5
+			every_other_country = {
+				limit = {
+					NOT = {
+						is_subject_of = ROOT
+						is_in_faction_with = ROOT
+					}
+					has_country_flag = SH_COL
+				}
+				ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	focus = {
+		id = Generic_Legacy_of_the_Ancient_Empire
+		icon = GFX_focus_jap_strike_south
+		prerequisite = { focus = Generic_War_Plan_Against_Neighbors }
+		x = 10
+		y = 5
+		cost = 7
+
+		available = {
+			has_war = no
+			has_global_flag = China_Unification
+		}
+
+		ai_will_do = { factor = 0 }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_threat = 5
+			every_other_country = {
+				limit = {
+					NOT = {
+						is_subject_of = ROOT
+						is_in_faction_with = ROOT
+					}
+					has_country_flag = SH_OTH
+				}
+				ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+}

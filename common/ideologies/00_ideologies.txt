@@ -1,0 +1,237 @@
+ideologies = {
+	Moderate_Leftist = {
+		types = {
+			Moderate_Leftist_ideology = {}
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_DEMOCRATIC_1"
+			"FACTION_NAME_DEMOCRATIC_2"
+			"FACTION_NAME_DEMOCRATIC_3"
+			"FACTION_NAME_DEMOCRATIC_4"
+			"FACTION_NAME_DEMOCRATIC_5"
+			"FACTION_NAME_DEMOCRATIC_6"
+		}
+		color = { 0 0 255 }
+		ai_democratic = yes
+		rules = {
+			can_join_opposite_factions = yes
+			can_create_factions = no
+			can_use_kamikaze_pilots = no
+			can_declare_war_on_same_ideology = yes
+			can_force_government = no
+			can_send_volunteers = no
+			can_puppet = no
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = yes
+			can_not_declare_war = no
+			can_decline_call_to_war = yes
+			units_deployed_to_overlord = no
+			can_boost_other_ideologies = no
+			can_generate_female_aces = no
+			can_join_factions = yes
+			can_declare_war_without_wargoal_when_in_war = no
+			can_occupy_non_war = yes
+		}
+		modifiers = {
+			generate_wargoal_tension = 0.05
+			join_faction_tension = 0.4
+			lend_lease_tension = 0.00
+			send_volunteers_tension = 0.00
+			guarantee_tension = 0.00
+		}
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.5
+		}
+		can_be_boosted = no
+		can_collaborate = yes
+	}
+	Moderate_Rightist = {
+		types = {
+			Moderate_Rightist_ideology = {}
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_DEMOCRATIC_1"
+			"FACTION_NAME_DEMOCRATIC_2"
+			"FACTION_NAME_DEMOCRATIC_3"
+			"FACTION_NAME_DEMOCRATIC_4"
+			"FACTION_NAME_DEMOCRATIC_5"
+			"FACTION_NAME_DEMOCRATIC_6"
+		}
+		color = { 255 170 0 }
+		ai_democratic = yes
+		rules = {
+			can_join_opposite_factions = yes
+			can_create_factions = no
+			can_use_kamikaze_pilots = no
+			can_declare_war_on_same_ideology = yes
+			can_force_government = no
+			can_send_volunteers = no
+			can_puppet = no
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = yes
+			can_not_declare_war = no
+			can_decline_call_to_war = yes
+			units_deployed_to_overlord = no
+			can_boost_other_ideologies = no
+			can_generate_female_aces = no
+			can_join_factions = yes
+			can_declare_war_without_wargoal_when_in_war = no
+			can_occupy_non_war = yes
+		}
+		modifiers = {
+			generate_wargoal_tension = 0.05
+			join_faction_tension = 0.4
+			lend_lease_tension = 0.00
+			send_volunteers_tension = 0.00
+			guarantee_tension = 0.00
+		}
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.5
+		}
+		can_be_boosted = no
+		can_collaborate = yes
+	}
+	Radical_Leftist = {
+		types = {
+			Radical_Leftist_ideology = {
+			}
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_COMMUNIST_1"
+			"FACTION_NAME_COMMUNIST_2"
+			"FACTION_NAME_COMMUNIST_3"
+			"FACTION_NAME_COMMUNIST_4"
+			"FACTION_NAME_COMMUNIST_5"
+		}
+		color = { 255 0 0 }
+		ai_communist = yes
+		rules = {
+			can_join_opposite_factions = yes
+			can_create_factions = no
+			can_use_kamikaze_pilots = no
+			can_declare_war_on_same_ideology = yes
+			can_force_government = no
+			can_send_volunteers = no
+			can_puppet = no
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = yes
+			can_not_declare_war = no
+			can_decline_call_to_war = yes
+			units_deployed_to_overlord = no
+			can_boost_other_ideologies = yes
+			can_generate_female_aces = no
+			can_join_factions = yes
+			can_declare_war_without_wargoal_when_in_war = no
+			can_occupy_non_war = no
+		}
+		modifiers = {
+			generate_wargoal_tension = 0.0
+			join_faction_tension = 0.4
+			lend_lease_tension = 0.00
+			send_volunteers_tension = 0.00
+			guarantee_tension = 0.00
+		}
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.5
+		}
+		can_be_boosted = no
+		can_collaborate = yes
+	}
+	Radical_Rightist = {
+		types = {
+			Radical_Rightist_ideology = {
+			}
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_FASCIST_1"
+			"FACTION_NAME_FASCIST_2"
+			"FACTION_NAME_FASCIST_3"
+			"FACTION_NAME_FASCIST_4"
+			"FACTION_NAME_FASCIST_5"
+		}
+		color = { 142 57 0 }
+		ai_fascist = yes
+		rules = {
+			can_join_opposite_factions = yes
+			can_create_factions = no
+			can_use_kamikaze_pilots = no
+			can_declare_war_on_same_ideology = yes
+			can_force_government = no
+			can_send_volunteers = no
+			can_puppet = no
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = yes
+			can_not_declare_war = no
+			can_decline_call_to_war = yes
+			units_deployed_to_overlord = no
+			can_boost_other_ideologies = yes
+			can_generate_female_aces = no
+			can_join_factions = yes
+			can_declare_war_without_wargoal_when_in_war = no
+			can_occupy_non_war = no
+		}
+		modifiers = {
+			generate_wargoal_tension = 0.0
+			join_faction_tension = 0.4
+			lend_lease_tension = 0.00
+			send_volunteers_tension = 0.00
+			guarantee_tension = 0.00
+		}
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.5
+		}
+		can_be_boosted = no
+		can_collaborate = yes
+	}
+	Centrist = {
+		types = {
+			Centrist_ideology  = {
+			}
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_NONALIGNED_1"
+			"FACTION_NAME_NONALIGNED_2"
+			"FACTION_NAME_NONALIGNED_3"
+			"FACTION_NAME_NONALIGNED_4"
+			"FACTION_NAME_NONALIGNED_5"
+		}
+		color = { 124 124 124 }
+		ai_neutral = yes
+		rules = {
+			can_join_opposite_factions = yes
+			can_create_factions = no
+			can_use_kamikaze_pilots = no
+			can_declare_war_on_same_ideology = yes
+			can_force_government = no
+			can_send_volunteers = no
+			can_puppet = no
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = yes
+			can_not_declare_war = no
+			can_decline_call_to_war = yes
+			units_deployed_to_overlord = no
+			can_boost_other_ideologies = yes
+			can_generate_female_aces = no
+			can_join_factions = yes
+			can_declare_war_without_wargoal_when_in_war = no
+			can_occupy_non_war = yes
+		}
+		modifiers = {
+			generate_wargoal_tension = 0.15
+			join_faction_tension = 0.5
+			lend_lease_tension = 0.05
+			send_volunteers_tension = 0.05
+			guarantee_tension = 0.05
+		}
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.5
+		}
+		can_be_boosted = no
+		can_collaborate = yes
+	}
+}

@@ -1,0 +1,332 @@
+CSH_strategy_plan = {
+	name = "CSH Strategy Plan"
+	desc = "CSH Strategy Plan"
+
+	enable = {
+		original_tag = CSH
+		is_historical_focus_on = no
+	}
+	abort = {
+		OR = {
+			has_completed_focus = CSH_Police_State
+			has_completed_focus = CSH_Green_Gang
+			has_completed_focus = CSH_Huangdaohui
+			has_completed_focus = CSH_Manipulating_Elections
+			has_completed_focus = CSH_Invite_Chamber_of_Commerce
+			has_completed_focus = CSH_Eve_of_Revolution
+		}
+	}
+	focus_factors = {
+		CSH_Military_Martial_Law = 1000
+		CSH_Manage_Together_With_Chinese = 1000
+		CSH_Eve_of_Revolution = 1000
+		CSH_Police_State = 950
+		CSH_Criminal_City = 950
+		CSH_Manipulating_Elections = 950
+		CSH_Invite_Chamber_of_Commerce = 950
+		CSH_Green_Gang = 900
+		CSH_Huangdaohui = 900
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+CSH_strategy_plan_A = {
+	name = "CSH Strategy Plan A"
+	desc = "CSH Strategy Plan A"
+
+	enable = {
+		is_historical_focus_on = no
+		has_completed_focus = CSH_Police_State
+	}
+	abort = {
+		always = no
+	}
+	ai_national_focuses = {
+		Shared_Plan_of_Reform
+		CSH_Ban_Public_Gatherings
+		Shared_Diplomatic_Action
+		CSH_Safeguard_Capital_Inflows
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		Shared_Expand_Military_Academies
+		Shared_Westernization_Movement
+		CSH_Establish_Armed_Positions
+		Shared_Construct_Roads
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		CSH_Security_Force
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+CSH_strategy_plan_B = {
+	name = "CSH Strategy Plan B"
+	desc = "CSH Strategy Plan B"
+
+	enable = {
+		is_historical_focus_on = no
+		has_completed_focus = CSH_Green_Gang
+	}
+	abort = {
+		always = no
+	}
+	ai_national_focuses = {
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		CSH_Forged_Passport
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		Shared_Expand_Military_Academies
+		Shared_Westernization_Movement
+		CSH_Protection_Fees
+		Shared_Construct_Roads
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		CSH_Cheap_Pirated_Goods
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+CSH_strategy_plan_C = {
+	name = "CSH Strategy Plan C"
+	desc = "CSH Strategy Plan C"
+
+	enable = {
+		is_historical_focus_on = no
+		has_completed_focus = CSH_Huangdaohui
+	}
+	abort = {
+		always = no
+	}
+	ai_national_focuses = {
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		CSH_Drug_Smuggling
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		Shared_Expand_Military_Academies
+		Shared_Westernization_Movement
+		CSH_Trafficking_Population
+		Shared_Construct_Roads
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		CSH_Arms_Trade
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+CSH_strategy_plan_D = {
+	name = "CSH Strategy Plan D"
+	desc = "CSH Strategy Plan D"
+
+	enable = {
+		is_historical_focus_on = no
+		has_completed_focus = CSH_Manipulating_Elections
+	}
+	abort = {
+		always = no
+	}
+	ai_national_focuses = {
+		Shared_Plan_of_Reform
+		CSH_Expand_Foreign_Capital
+		Shared_Diplomatic_Action
+		CSH_Golden_Age_of_Radio
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		Shared_Expand_Military_Academies
+		Shared_Westernization_Movement
+		CSH_Civilian_Low_Rent_Housing
+		Shared_Construct_Roads
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		CSH_Home_of_the_Free
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+CSH_strategy_plan_E = {
+	name = "CSH Strategy Plan E"
+	desc = "CSH Strategy Plan E"
+
+	enable = {
+		is_historical_focus_on = no
+		has_completed_focus = CSH_Invite_Chamber_of_Commerce
+	}
+	abort = {
+		always = no
+	}
+	ai_national_focuses = {
+		Shared_Plan_of_Reform
+		CSH_Develop_Domestic_Sales
+		Shared_Diplomatic_Action
+		CSH_Golden_Age_of_Radio
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		Shared_Expand_Military_Academies
+		Shared_Westernization_Movement
+		CSH_Civilian_Low_Rent_Housing
+		Shared_Construct_Roads
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		CSH_Home_of_the_Free
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+CSH_strategy_plan_F = {
+	name = "CSH Strategy Plan F"
+	desc = "CSH Strategy Plan F"
+
+	enable = {
+		is_historical_focus_on = no
+		has_completed_focus = CSH_Eve_of_Revolution
+	}
+	abort = {
+		always = no
+	}
+	ai_national_focuses = {
+		CSH_Worker_Picket_Brigade
+		Shared_Plan_of_Reform
+		CSH_Improve_Union_Management
+		Shared_Diplomatic_Action
+		CSH_Spirit_of_Dedication
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		Shared_Expand_Military_Academies
+		Shared_Westernization_Movement
+		CSH_Mass_Production
+		Shared_Construct_Roads
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		CSH_Industrial_Modern_City
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+}

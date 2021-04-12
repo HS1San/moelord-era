@@ -1,0 +1,86 @@
+Diplomacy_with_CNP = {
+	icon = power_struggle
+	allowed = { always = yes }
+}
+Diplomacy_with_CBJ = {
+	icon = power_struggle
+	allowed = { always = yes }
+}
+National_Revolution = {
+	icon = military_operation
+	picture = GFX_decision_cat_picture_chi_infiltration
+	visible = {
+		OR = {
+			has_completed_focus = CGD_Chinese_Washington
+			has_completed_focus = CGD_Socialism_of_all_Mankind
+			has_completed_focus = CGD_Prepare_to_the_Northern_Expedition
+			has_completed_focus = CGD_Genuine_Three_Peoples_Principles
+			has_completed_focus = CYN_Revival_Kuomintang
+		}
+	}
+}
+Diplomacy_with_the_Great_Powers = {
+	icon = generic_political_actions
+	picture = GFX_decision_cat_generic_mefo_bills
+	visible = {
+		OR = {
+			has_completed_focus = Generic_Diplomatic_Action
+			has_completed_focus = Shared_Diplomatic_Action
+		}
+	}
+}
+Mongolian_Foreign_Policy = {
+	icon = power_struggle
+	allowed = { original_tag = MON }
+}
+Revolutionary_Mongolia = {
+	icon = power_struggle
+	picture = GFX_Red_Mongol
+	allowed = { original_tag = MON }
+	visible = {
+		has_country_flag = MPP_in_Power
+	}
+}
+Peace_with_CHI = {
+	icon = power_struggle
+	visible = {
+		tag = JAP
+		OR = {
+			has_war_with = KIA
+			has_war_with = CFT
+			has_war_with = CHJ
+			has_war_with = CRH
+			has_war_with = CCH
+			has_war_with = CZL
+			has_war_with = CBJ
+			has_war_with = CSD
+			has_war_with = CJS
+			has_war_with = CSH
+			has_war_with = CZJ
+			has_war_with = CFJ
+			has_war_with = CGD
+			has_war_with = CGX
+			has_war_with = CQY
+			has_war_with = CYN
+			has_war_with = CGZ
+			has_war_with = CHN
+			has_war_with = CEX
+			has_war_with = CHB
+			has_war_with = CAH
+			has_war_with = CHE
+			has_war_with = CSX
+			has_war_with = CSY
+			has_war_with = CSA
+			has_war_with = CJG
+			has_war_with = CYX
+			has_war_with = CNX
+			has_war_with = CGS
+			has_war_with = CQH
+			has_war_with = CXK
+			has_war_with = CXJ
+			has_war_with = CXZ
+			has_war_with = MON
+			has_war_with = MAN
+		}
+	}
+}

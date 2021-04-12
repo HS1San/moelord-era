@@ -1,0 +1,154 @@
+Diplomacy_with_CBJ = {
+	Beiyang_Plan_A = {
+		icon = generic_political_discourse
+
+		cost = 0
+		ai_will_do = { base = 80 }
+		fire_only_once = yes
+
+		visible = {
+			has_global_flag = Northern_Expedition
+			is_faction_leader = yes
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+			}
+			NOT = { has_country_flag = King_of_Northeast }
+			any_country = {
+				has_capitulated = no
+				is_subject = no
+				has_country_flag = King_of_Northeast
+				NOT = {
+					is_in_faction_with = CGD
+					has_war_with = CGD
+					has_war_with = ROOT
+				}
+			}
+			has_war = yes
+		}
+		available = {
+			surrender_progress > 0.25
+			any_enemy_country = { tag = CGD }
+		}
+		complete_effect = {
+			random_other_country = {
+				limit = { has_country_flag = King_of_Northeast }
+				country_event = new_Generic.5
+			}
+		}
+	}
+	Beiyang_Plan_B = {
+		icon = generic_political_discourse
+
+		cost = 0
+		ai_will_do = { base = 100 }
+		fire_only_once = yes
+
+		visible = {
+			has_global_flag = Northern_Expedition
+			is_faction_leader = yes
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+			}
+			NOT = { has_country_flag = King_of_Southeast }
+			any_country = {
+				has_capitulated = no
+				is_subject = no
+				has_country_flag = King_of_Southeast
+				NOT = {
+					is_in_faction_with = CGD
+					has_war_with = CGD
+					has_war_with = ROOT
+				}
+			}
+			has_war = yes
+		}
+		available = {
+			surrender_progress > 0.25
+			any_enemy_country = { tag = CGD }
+		}
+		complete_effect = {
+			random_other_country = {
+				limit = { has_country_flag = King_of_Southeast }
+				country_event = new_Generic.5
+			}
+		}
+	}
+	Beiyang_Plan_C = {
+		icon = generic_political_discourse
+
+		cost = 0
+		ai_will_do = { base = 60 }
+		fire_only_once = yes
+
+		visible = {
+			has_global_flag = Northern_Expedition
+			is_faction_leader = yes
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+			}
+			NOT = { has_country_flag = King_of_Northwest }
+			any_country = {
+				has_capitulated = no
+				is_subject = no
+				has_country_flag = King_of_Northwest
+				NOT = {
+					is_in_faction_with = CGD
+					has_war_with = CGD
+					has_war_with = ROOT
+				}
+			}
+			has_war = yes
+		}
+		available = {
+			surrender_progress > 0.25
+			any_enemy_country = { tag = CGD }
+		}
+		complete_effect = {
+			random_other_country = {
+				limit = { has_country_flag = King_of_Northwest }
+				country_event = new_Generic.5
+			}
+		}
+	}
+	Beiyang_Plan_D = {
+		icon = generic_political_discourse
+
+		cost = 0
+		ai_will_do = { base = 40 }
+		fire_only_once = yes
+
+		visible = {
+			has_global_flag = Northern_Expedition
+			is_faction_leader = yes
+			OR = {
+				has_country_flag = Anhui_Member
+				has_country_flag = Zhili_Member
+			}
+			NOT = { has_country_flag = King_of_Southwest }
+			any_country = {
+				has_capitulated = no
+				is_subject = no
+				has_country_flag = King_of_Southwest
+				NOT = {
+					is_in_faction_with = CGD
+					has_war_with = CGD
+					has_war_with = ROOT
+				}
+			}
+			has_war = yes
+		}
+		available = {
+			surrender_progress > 0.25
+			any_enemy_country = { tag = CGD }
+		}
+		complete_effect = {
+			random_other_country = {
+				limit = { has_country_flag = King_of_Southwest }
+				country_event = new_Generic.5
+			}
+		}
+	}
+}

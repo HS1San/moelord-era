@@ -1,0 +1,280 @@
+leader_traits = {
+	profession_01 = {
+		random = no
+		monthly_population = 0.03
+		cavalry_attack_factor = 0.05
+		cavalry_defence_factor = 0.05
+		naval_detection = 0.1
+
+		ai_will_do = { factor = 1 }
+	}
+	profession_02 = {
+		random = no
+		out_of_supply_factor = -0.1
+		supply_consumption_factor = -0.05
+
+		ai_will_do = { factor = 1 }
+	}
+	profession_03 = {
+		random = no
+		winter_attrition_factor = -0.25
+		heat_attrition_factor = -0.25
+		special_forces_cap = 0.02
+
+		ai_will_do = { factor = 1 }
+	}
+	profession_04 = {
+		random = no
+		army_speed_factor = 0.05
+		air_accidents_factor = -0.05
+		transport_capacity = -0.05
+
+		ai_will_do = { factor = 1 }
+	}
+	profession_05 = {
+		random = no
+		no_supply_grace = 6
+		experience_loss_factor = -0.1
+
+		ai_will_do = { factor = 1 }
+	}
+	profession_06 = {
+		random = no
+		research_speed_factor = 0.02
+		political_power_factor = 0.1
+
+		ai_will_do = { factor = 1 }
+	}
+	profession_07 = {
+		random = no
+		war_support_factor = 0.05
+		stability_factor = 0.05
+
+		ai_will_do = { factor = 1 }
+	}
+	profession_08 = {
+		random = no
+		production_speed_bunker_factor = 0.2
+		production_speed_coastal_bunker_factor = 0.2
+		production_speed_anti_air_building_factor = 0.2
+
+		ai_will_do = { factor = 1 }
+	}
+	profession_09 = {
+		random = no
+		political_power_factor = 0.05
+		drift_defence_factor = 0.15
+
+		ai_will_do = { factor = 1 }
+	}
+	profession_10 = {
+		random = no
+		production_speed_arms_factory_factor = 0.15
+		production_speed_dockyard_factor = 0.05
+
+		ai_will_do = { factor = 1 }
+	}
+	profession_11 = {
+		random = no
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+
+		ai_will_do = { factor = 1 }
+	}
+	profession_12 = {
+		random = no
+		research_speed_factor = 0.03
+		conversion_cost_civ_to_mil_factor= -0.25
+
+		ai_will_do = { factor = 1 }
+	}
+	profession_13 = {
+		random = no
+		trade_opinion_factor = 0.1
+		land_reinforce_rate = 0.01
+		recon_factor = 0.1
+
+		ai_will_do = { factor = 1 }
+	}
+	profession_14 = {
+		random = no
+		local_resources_factor = 0.1
+		consumer_goods_factor = -0.07
+
+		ai_will_do = { factor = 1 }
+	}
+	profession_15 = {
+		random = no
+		consumer_goods_factor = -0.05
+		production_speed_air_base_factor = 0.1
+		production_speed_naval_base_factor = 0.1
+
+		ai_will_do = { factor = 1 }
+	}
+	profession_16 = {
+		random = no
+		resistance_damage_to_garrison = -0.15
+		foreign_subversive_activites = -0.2
+		non_core_manpower = 0.01
+
+		ai_will_do = { factor = 1 }
+	}
+	profession_17 = {
+		random = no
+		opinion_gain_monthly_factor = 0.1
+		political_power_factor = 0.15
+
+		ai_will_do = { factor = 1 }
+	}
+	profession_18 = {
+		random = no
+		defensive_war_stability_factor = 0.3
+		justify_war_goal_time = 0.15
+		subversive_activites_upkeep = 0.15
+
+		ai_will_do = { factor = 1 }
+	}
+
+	tank_manufacturer_01 = {
+		random = no
+		equipment_bonus = { armor = { maximum_speed = 0.05 reliability = 0.1 } }
+
+		ai_will_do = { factor = 1 }
+	}
+	tank_manufacturer_02 = {
+		random = no
+		equipment_bonus = { armor = { reliability = 0.05 soft_attack = 0.05 } }
+
+		ai_will_do = { factor = 1 }
+	}
+	tank_manufacturer_03 = {
+		random = no
+		equipment_bonus = { armor = { armor_value = 0.05 hard_attack = 0.05 } }
+
+		ai_will_do = { factor = 1 }
+	}
+
+	naval_manufacturer_01 = {
+		random = no
+		equipment_bonus = {
+			carrier = { surface_visibility = -0.1 naval_speed = 0.1 carrier_size = -0.1 }
+			capital_ship = { surface_visibility = -0.1 naval_speed = 0.1 hg_attack = -0.1 }
+			screen_ship = { surface_visibility = -0.1 naval_speed = 0.1 }
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	naval_manufacturer_02 = {
+		random = no
+		equipment_bonus = { screen_ship = { naval_range = 0.3 sub_detection = 0.1 naval_speed = 0.1 build_cost_ic = 0.1 } }
+
+		ai_will_do = { factor = 1 }
+	}
+	naval_manufacturer_03 = {
+		random = no
+		equipment_bonus = {
+			carrier = { build_cost_ic = -0.25 carrier_size = -0.2 naval_range = -0.5 }
+			capital_ship = { build_cost_ic = -0.25 armor_value = -0.2 hg_attack = -0.2 naval_range = -0.5 }
+			screen_ship = { build_cost_ic = -0.25 naval_range = -0.5 }
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	naval_manufacturer_04 = {
+		random = no
+		equipment_bonus = {
+			capital_ship = { armor_value = 0.15 hg_attack = 0.15 }
+			screen_ship = { torpedo_attack = 0.25 sub_detection = -0.25 }
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	aircraft_manufacturer_01 = {
+		random = no
+		equipment_bonus = { attacker_equipment = { air_agility = 0.1 maximum_speed = 0.1 } }
+
+		ai_will_do = { factor = 1 }
+	}
+	aircraft_manufacturer_02 = {
+		random = no
+		equipment_bonus = { fighter_equipment = { reliability = 0.2 } }
+
+		ai_will_do = { factor = 1 }
+	}
+	aircraft_manufacturer_03 = {
+		random = no
+		equipment_bonus = { bomber_equipment = { air_bombing = 0.1 } }
+
+		ai_will_do = { factor = 1 }
+	}
+
+	materiel_manufacturer_01 = {
+		random = no
+		ai_will_do = { factor = 1 }
+	}
+	materiel_manufacturer_01_01 = {
+		random = no
+		equipment_bonus = { rifle_equipment = { soft_attack = 0.1 defense = 0.1 build_cost_ic = 0.1 } }
+		ai_will_do = { factor = 1 }
+	}
+	materiel_manufacturer_01_02 = {
+		random = no
+		equipment_bonus = { carbine_equipment = { soft_attack = 0.25 reliability = 0.1 build_cost_ic = 0.15 } }
+		ai_will_do = { factor = 1 }
+	}
+	materiel_manufacturer_01_03 = {
+		random = no
+		equipment_bonus = { lmg_equipment = { soft_attack = 0.1 build_cost_ic = 0.05 } }
+		ai_will_do = { factor = 1 }
+	}
+	materiel_manufacturer_02 = {
+		random = no
+		ai_will_do = { factor = 1 }
+	}
+	materiel_manufacturer_02_01 = {
+		random = no
+		equipment_bonus = { cannon_equipment = { hard_attack = 0.1 ap_attack = 0.1 } }
+		ai_will_do = { factor = 1 }
+	}
+	materiel_manufacturer_02_02 = {
+		random = no
+		equipment_bonus = { howitzer_equipment = { soft_attack = 0.1 defense = 0.1 } }
+		ai_will_do = { factor = 1 }
+	}
+	materiel_manufacturer_02_03 = {
+		random = no
+		equipment_bonus = { mortar_equipment = { soft_attack = 0.05 build_cost_ic = -0.05 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	industrial_concern_01 = {
+		random = no
+		ai_will_do = { factor = 1 }
+	}
+	industrial_concern_02 = {
+		random = no
+		ai_will_do = { factor = 1 }
+	}
+
+	theorist_01 = {
+		random = no
+		experience_gain_army = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	theorist_02 = {
+		random = no
+		experience_gain_army = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	theorist_03 = {
+		random = no
+		experience_gain_army = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	theorist_04 = {
+		random = no
+		experience_gain_army = 0.05
+		ai_will_do = { factor = 1 }
+	}
+}

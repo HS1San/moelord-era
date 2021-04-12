@@ -1,0 +1,159 @@
+bookmarks = {
+	bookmark = {
+		name = "MAY_FOURTH_MOVEMENT_NAME"
+		desc = "MAY_FOURTH_MOVEMENT_DESC"
+		date = 1919.5.4.12
+		picture = "GFX_select_date_WE"
+		default_country = "CGD"
+		default = yes
+
+		"CGD"={
+			history = "CGD_MAY_FOURTH_MOVEMENT_DESC"
+			ideology = Centrist
+			ideas = {
+				Canton_Merchant
+				Legacy_of_the_Xinhai_Revolution
+				Old_Guangdong_Clique
+			}
+			focuses = {
+				CGD_Federalism
+				CGD_Centralism
+				CGD_Improve_Relations_with_the_Russia
+			}
+		}
+		"CFT"={
+			history = "CFT_MAY_FOURTH_MOVEMENT_DESC"
+			ideology = Centrist
+			ideas = {
+				Feng_Bill
+				Greenwood_Hero
+				Winter_General
+			}
+			focuses = {
+				CFT_Mantetsu_Collaboration
+				CFT_Neutralism
+				CFT_Admit_White_Russians
+			}
+		}
+		"CZL"={
+			history = "CZL_MAY_FOURTH_MOVEMENT_DESC"
+			ideology = Centrist
+			ideas = {
+				Crashing_into_Manchuria
+				Baoding_Military_Academy
+				Ganshiqiao_Club
+			}
+			focuses = {
+				CZL_Expel_Zhang
+				CZL_Assassinate_Xu
+				CZL_Baoding_Military_Academy
+			}
+		}
+		"CBJ"={
+			history = "CBJ_MAY_FOURTH_MOVEMENT_DESC"
+			ideology = Centrist
+			ideas = {
+				Cooperation_with_Japan
+				Anfu_Club
+				Yimo_Club
+			}
+			focuses = {
+				CBJ_New_Army
+				CBJ_Attack_Fengtian_Clique
+				CBJ_A_New_Anhui_Clique
+			}
+		}
+		"CSX"={
+			history = "CSX_MAY_FOURTH_MOVEMENT_DESC"
+			ideology = Centrist
+			ideas = {
+				Shanxi_PJAM
+				Shanxi_LZSS
+				Shanxi_CBZZ
+			}
+			focuses = {
+				CSX_Guoxian_Clique
+				CSX_Wutai_Clique
+				CSX_Jinnan_Clique
+			}
+		}
+		"CSC"={
+			history = "CSC_MAY_FOURTH_MOVEMENT_DESC"
+			ideology = Centrist
+			ideas = {
+				Sichuan_ROSCA
+				Sichuan_Land_Reclamation
+				Sichuan_Military_Offices
+			}
+			focuses = {
+				CSC_End_of_War
+				CSC_Cooperation_with_Guangdong
+				CSC_Unite_Southwest
+			}
+		}
+		"CYN"={
+			history = "CYN_MAY_FOURTH_MOVEMENT_DESC"
+			ideology = Centrist
+			ideas = {
+				Between_Britain_and_France
+				Yunnan_Military_Academy
+				Yunnan_University
+			}
+			focuses = {
+				CYN_Improve_Relations_with_the_France
+				CYN_Improve_Relations_with_the_Britain
+				CYN_Abolish_the_Unequal_Treaties
+			}
+		}
+
+		"---"={
+			history = "OTHER_MAY_FOURTH_MOVEMENT_DESC"
+		}
+
+		"CSH"={
+			minor = yes
+			history = "CSH_MAY_FOURTH_MOVEMENT_DESC"
+			ideology = Moderate_Rightist
+			ideas = {
+				Home_of_the_Free
+				Develop_Domestic_Sales
+				Forged_Passport
+			}
+			focuses = {
+				CSH_Security_Force
+				CSH_Manage_Together_With_Chinese
+				CSH_Worker_Picket_Brigade
+			}
+		}
+		"MON"={
+			minor = yes
+			history = "MON_MAY_FOURTH_MOVEMENT_DESC"
+			ideology = Centrist
+			ideas = {
+				Jebtsundamba_Khutuktu
+				Maimaicheng_Trade
+				Threat_of_the_Russian_Revolution
+			}
+			focuses = {
+				MON_A_New_Government
+				MON_Greater_Mongolia
+				MON_Preserving_Our_Independence
+			}
+		}
+		"TAN"={
+			minor = yes
+			history = "TAN_MAY_FOURTH_MOVEMENT_DESC"
+			ideology = Centrist
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+
+		effect = {
+			randomize_weather = 12345
+		}
+	}
+}

@@ -1,0 +1,277 @@
+state = {
+	id = 124
+	name = "STATE_124"
+	manpower = 841465
+	state_category = large_town
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 28
+	}
+	history = {
+	}
+	provinces = {
+		664 681 837 957 3695 3723 3739 3753 3787 3811 3977 6684 6686 6715 6833 6838 6961 6989 9639 9641 9762 9895 9926 11624 11626 11629 11643 11745 11750 11765 11777 11879 11904 
+	}
+}
+
+state = {
+	id = 125
+	name = "STATE_125"
+	manpower = 295605
+	state_category = town
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 12
+	}
+	history = {
+	}
+	provinces = {
+		725 739 753 1267 1325 1343 1397 1504 3756 3963 4404 6774 7249 7266 7309 9589 9604 9733 9749 10466 11575 11719 12136 12189 
+	}
+}
+
+state = {
+	id = 126
+	name = "STATE_126"
+	manpower = 97663
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 24
+		chromium = 0
+	}
+	history = {
+	}
+	provinces = {
+		1724 1772 1807 1842 3664 4290 4841 4844 7748 7868 7871 9659 10571 10577 10590 12559 12569 12638 
+	}
+}
+
+state = {
+	id = 127
+	name = "STATE_127"
+	manpower = 454281
+	state_category = town
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+	}
+	provinces = {
+		1730 1739 1845 4731 4847 7691 7754 7763 7785 7851 10678 12543 12591 12657 12660 
+	}
+}
+
+state = {
+	id = 128
+	name = "STATE_128"
+	manpower = 308380
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 24
+		chromium = 0
+	}
+	history = {
+	}
+	provinces = {
+		675 1802 4246 4701 4725 4779 4805 4829 7616 7672 7801 10655 10722 12192 12261 12263 12654 12678 
+	}
+}
+
+state = {
+	id = 129
+	name = "STATE_129"
+	manpower = 94759
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = JAP
+		add_core_of = JAP
+		add_core_of = SAK
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+		}
+	}
+	provinces = {
+		855 1742 1755 
+	}
+}
+
+state = {
+	id = 130
+	name = "STATE_130"
+	manpower = 295196
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 10
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = JAP
+		add_core_of = JAP
+		add_core_of = SAK
+		buildings = {
+			infrastructure = 3
+			12446 = { naval_base = 1 }
+		}
+	}
+	provinces = {
+		1322 1820 12446 
+	}
+}
+
+state = {
+	id = 200
+	name = "STATE_200"
+	manpower = 1044310
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 9
+		chromium = 8
+	}
+	history = {
+	}
+	provinces = {
+		1672 1826 4675 4677 4719 4832 7725 7786 10559 10565 10574 10643 10681 10683 12556 12622 12641 
+	}
+}
+
+state = {
+	id = 201
+	name = "STATE_201"
+	manpower = 370893
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 4
+		rubber = 0
+		tungsten = 10
+		steel = 10
+		chromium = 12
+	}
+	history = {
+	}
+	provinces = {
+		1696 4705 4766 4837 7751 7816 7835 7860 10528 10658 12507 12644 
+	}
+}
+
+state = {
+	id = 202
+	name = "STATE_202"
+	manpower = 195325
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 10
+		chromium = 5
+	}
+	history = {
+	}
+	provinces = {
+		1666 1761 4716 4762 4795 4835 4868 7736 7759 7854 10583 10654 12506 12538 12575 
+	}
+}
+
+state = {
+	id = 203
+	name = "STATE_203"
+	manpower = 126961
+	state_category = wasteland
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+	}
+	provinces = {
+		1714 1805 1865 4810 4881 7772 10540 10572 10598 11607 12518 12551 12650 12683 
+	}
+}
+
+state = {
+	id = 204
+	name = "STATE_204"
+	manpower = 48831
+	state_category = wasteland
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+	}
+	provinces = {
+		1823 1839 1863 4728 7878 12207 12522 
+	}
+}

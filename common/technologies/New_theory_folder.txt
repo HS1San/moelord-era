@@ -1,0 +1,2817 @@
+technologies = {
+	hand_tools = {
+
+		production_factory_max_efficiency_factor = 0.1
+
+		path = {
+			leads_to_tech = agriculture_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = machine_tools_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = concentrated_industry_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = dispersed_industry_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = science_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1918
+
+		folder = {
+			name = theory_folder
+			position = { x = 3 y = 0 }
+		}
+
+		categories = {
+			light_industry_tech
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	agriculture_1 = {
+
+		modifier = {
+			conscription_factor = 0.025
+		}
+
+		path = {
+			leads_to_tech = agriculture_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1918
+
+		folder = {
+			name = theory_folder
+			position = { x = 0 y = 2 }
+		}
+
+		categories = {
+			agriculture_tech
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	agriculture_2 = {
+
+		modifier = {
+			conscription_factor = 0.025
+		}
+
+		path = {
+			leads_to_tech = agriculture_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1920
+
+		folder = {
+			name = theory_folder
+			position = { x = 0 y = 4 }
+		}
+
+		categories = {
+			agriculture_tech
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				date < 1920.1.1
+			}
+		}
+	}
+	agriculture_3 = {
+
+		modifier = {
+			conscription_factor = 0.025
+		}
+
+		path = {
+			leads_to_tech = agriculture_4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1922
+
+		folder = {
+			name = theory_folder
+			position = { x = 0 y = 6 }
+		}
+
+		categories = {
+			agriculture_tech
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+		}
+	}
+	agriculture_4 = {
+
+		modifier = {
+			conscription_factor = 0.025
+		}
+
+		path = {
+			leads_to_tech = agriculture_5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1924
+
+		folder = {
+			name = theory_folder
+			position = { x = 0 y = 8 }
+		}
+
+		categories = {
+			agriculture_tech
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+		}
+	}
+	agriculture_5 = {
+
+		modifier = {
+			conscription_factor = 0.025
+		}
+
+		research_cost = 1.5
+		start_year = 1926
+
+		folder = {
+			name = theory_folder
+			position = { x = 0 y = 10 }
+		}
+
+		categories = {
+			agriculture_tech
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+		}
+	}
+	machine_tools_1 = {
+
+		production_factory_max_efficiency_factor = 0.1
+
+		path = {
+			leads_to_tech = machine_tools_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1920
+
+		folder = {
+			name = theory_folder
+			position = { x = 3 y = 4 }
+		}
+
+		categories = {
+			light_industry_tech
+		}
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 0
+				date < 1920.1.1
+			}
+		}
+	}
+	machine_tools_2 = {
+
+		production_factory_max_efficiency_factor = 0.1
+
+		path = {
+			leads_to_tech = machine_tools_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1922
+
+		folder = {
+			name = theory_folder
+			position = { x = 3 y = 6 }
+		}
+
+		categories = {
+			light_industry_tech
+		}
+
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+		}
+	}
+	machine_tools_3 = {
+
+		production_factory_max_efficiency_factor = 0.1
+		equipment_conversion_speed = 0.4
+
+		path = {
+			leads_to_tech = accuracy_focus
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = speed_focus
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1924
+
+		folder = {
+			name = theory_folder
+			position = { x = 3 y = 8 }
+		}
+
+		categories = {
+			light_industry_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+		}
+	}
+	accuracy_focus = {
+		xor = { speed_focus }
+
+		production_factory_max_efficiency_factor = 0.1
+		line_change_production_efficiency_factor = 0.2
+		equipment_conversion_speed = 0.4
+
+		research_cost = 2.5
+		start_year = 1926
+
+		folder = {
+			name = theory_folder
+			position = { x = 2 y = 10 }
+		}
+
+		categories = {
+			light_industry_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+		}
+	}
+	speed_focus = {
+		xor = { accuracy_focus }
+
+		production_factory_max_efficiency_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.1
+		equipment_conversion_speed = 0.4
+
+		research_cost = 2.5
+		start_year = 1926
+
+		folder = {
+			name = theory_folder
+			position = { x = 4 y = 10 }
+		}
+
+		categories = {
+			light_industry_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+		}
+	}
+	concentrated_industry_1 = {
+		xor = { dispersed_industry_1 }
+
+		industrial_capacity_factory = 0.15
+		industrial_capacity_dockyard = 0.1
+		global_building_slots_factor = 0.2
+
+		path = {
+			leads_to_tech = concentrated_industry_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1918
+
+		folder = {
+			name = theory_folder
+			position = { x = 6 y = 2 }
+		}
+
+		categories = {
+			heavy_industry_tech
+		}
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 0
+				has_tech = dispersed_industry_1
+			}
+			modifier = {
+				factor = 0
+				is_researching_technology = dispersed_industry_1
+			}
+			modifier = {
+				factor = 5
+				date > 1920.1.1
+			}
+		}
+	}
+	concentrated_industry_2 = {
+
+		industrial_capacity_factory = 0.15
+		industrial_capacity_dockyard = 0.1
+		global_building_slots_factor = 0.2
+
+		path = {
+			leads_to_tech = concentrated_industry_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1920
+
+		folder = {
+			name = theory_folder
+			position = { x = 6 y = 4 }
+		}
+
+		categories = {
+			heavy_industry_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				date < 1920.1.1
+			}
+		}
+	}
+	concentrated_industry_3 = {
+
+		industrial_capacity_factory = 0.15
+		industrial_capacity_dockyard = 0.1
+		global_building_slots_factor = 0.2
+
+		path = {
+			leads_to_tech = concentrated_industry_4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1922
+
+		folder = {
+			name = theory_folder
+			position = { x = 6 y = 6 }
+		}
+
+		categories = {
+			heavy_industry_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+		}
+	}
+	concentrated_industry_4 = {
+
+		industrial_capacity_factory = 0.15
+		industrial_capacity_dockyard = 0.1
+		global_building_slots_factor = 0.2
+
+		path = {
+			leads_to_tech = concentrated_industry_5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1924
+
+		folder = {
+			name = theory_folder
+			position = { x = 6 y = 8 }
+		}
+
+		categories = {
+			heavy_industry_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+		}
+	}
+	concentrated_industry_5 = {
+
+		industrial_capacity_factory = 0.15
+		industrial_capacity_dockyard = 0.1
+		global_building_slots_factor = 0.2
+
+		research_cost = 2
+		start_year = 1926
+
+		folder = {
+			name = theory_folder
+			position = { x = 6 y = 10 }
+		}
+
+		categories = {
+			heavy_industry_tech
+		}
+
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+		}
+	}
+	dispersed_industry_1 = {
+		xor = { concentrated_industry_1 }
+
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
+		line_change_production_efficiency_factor = 0.1
+		production_factory_start_efficiency_factor = 0.05
+		equipment_conversion_speed = 0.2
+		industry_air_damage_factor = -0.1
+		global_building_slots_factor = 0.2
+
+		path = {
+			leads_to_tech = dispersed_industry_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1918
+
+		folder = {
+			name = theory_folder
+			position = { x = 8 y = 2 }
+		}
+
+		categories = {
+			heavy_industry_tech
+		}
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 0
+				has_tech = concentrated_industry_1
+			}
+			modifier = {
+				factor = 0
+				is_researching_technology = concentrated_industry_1
+			}
+			modifier = {
+				factor = 5
+				date > 1920.1.1
+			}
+		}
+	}
+	dispersed_industry_2 = {
+
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
+		line_change_production_efficiency_factor = 0.1
+		production_factory_start_efficiency_factor = 0.05
+		industry_air_damage_factor = -0.1
+		global_building_slots_factor = 0.2
+
+		path = {
+			leads_to_tech = dispersed_industry_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1920
+
+		folder = {
+			name = theory_folder
+			position = { x = 8 y = 4 }
+		}
+
+		categories = {
+			heavy_industry_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				date < 1920.1.1
+			}
+		}
+	}
+	dispersed_industry_3 = {
+
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
+		line_change_production_efficiency_factor = 0.1
+		production_factory_start_efficiency_factor = 0.05
+		industry_air_damage_factor = -0.1
+		global_building_slots_factor = 0.2
+
+		path = {
+			leads_to_tech = dispersed_industry_4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1922
+
+		folder = {
+			name = theory_folder
+			position = { x = 8 y = 6 }
+		}
+
+		categories = {
+			heavy_industry_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+		}
+	}
+	dispersed_industry_4 = {
+
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
+		line_change_production_efficiency_factor = 0.1
+		production_factory_start_efficiency_factor = 0.05
+		industry_air_damage_factor = -0.1
+		global_building_slots_factor = 0.2
+
+		path = {
+			leads_to_tech = dispersed_industry_5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1924
+
+		folder = {
+			name = theory_folder
+			position = { x = 8 y = 8 }
+		}
+
+		categories = {
+			heavy_industry_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+		}
+	}
+	dispersed_industry_5 = {
+
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
+		line_change_production_efficiency_factor = 0.1
+		production_factory_start_efficiency_factor = 0.05
+		industry_air_damage_factor = -0.1
+		global_building_slots_factor = 0.2
+
+		research_cost = 2
+		start_year = 1926
+
+		folder = {
+			name = theory_folder
+			position = { x = 8 y = 10 }
+		}
+
+		categories = {
+			heavy_industry_tech
+		}
+
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+		}
+	}
+	science_1 = {
+
+		research_speed_factor = 0.02
+
+		path = {
+			leads_to_tech = science_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.5
+		start_year = 1920
+
+		folder = {
+			name = theory_folder
+			position = { x = 10 y = 4 }
+		}
+
+		categories = {
+			science_tech
+		}
+
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 0
+				date < 1920.1.1
+			}
+			modifier = {
+				factor = 3
+				date > 1921.1.1
+			}
+			modifier = {
+				factor = 3
+				date > 1922.1.1
+			}
+		}
+	}
+	science_2 = {
+
+		research_speed_factor = 0.03
+
+		path = {
+			leads_to_tech = science_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.5
+		start_year = 1922
+
+		folder = {
+			name = theory_folder
+			position = { x = 10 y = 6 }
+		}
+
+		categories = {
+			science_tech
+		}
+
+		ai_will_do = {
+			factor = 7
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+			modifier = {
+				factor = 3
+				date > 1923.1.1
+			}
+			modifier = {
+				factor = 3
+				date > 1924.1.1
+			}
+		}
+	}
+	science_3 = {
+
+		research_speed_factor = 0.04
+
+		path = {
+			leads_to_tech = science_4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.5
+		start_year = 1924
+
+		folder = {
+			name = theory_folder
+			position = { x = 10 y = 8 }
+		}
+
+		categories = {
+			science_tech
+		}
+
+		ai_will_do = {
+			factor = 6
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+			modifier = {
+				factor = 3
+				date > 1925.1.1
+			}
+			modifier = {
+				factor = 3
+				date > 1926.1.1
+			}
+		}
+	}
+	science_4 = {
+
+		research_speed_factor = 0.05
+
+		research_cost = 2.5
+		start_year = 1926
+
+		folder = {
+			name = theory_folder
+			position = { x = 10 y = 10 }
+		}
+
+		categories = {
+			science_tech
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+			modifier = {
+				factor = 3
+				date > 1927.1.1
+			}
+			modifier = {
+				factor = 3
+				date > 1928.1.1
+			}
+		}
+	}
+
+	construction_1 = {
+
+		production_speed_buildings_factor = 0.1
+		industry_repair_factor = 0.1
+
+		path = {
+			leads_to_tech = excavation_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = construction_2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = bunker_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = hospital_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1918
+
+		folder = {
+			name = theory_folder
+			position = { x = 4 y = 0 }
+		}
+
+		categories = {
+			construction_tech
+		}
+
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 5
+				date > 1920.1.1
+			}
+		}
+	}
+	construction_2 = {
+
+		production_speed_buildings_factor = 0.1
+		industry_repair_factor = 0.1
+
+		path = {
+			leads_to_tech = excavation_2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = construction_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1920
+
+		folder = {
+			name = theory_folder
+			position = { x = 6 y = 4 }
+		}
+
+		categories = {
+			construction_tech
+		}
+
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 0
+				date < 1920.1.1
+			}
+		}
+	}
+	construction_3 = {
+
+		production_speed_buildings_factor = 0.1
+		industry_repair_factor = 0.1
+
+		path = {
+			leads_to_tech = excavation_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = construction_4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1922
+
+		folder = {
+			name = theory_folder
+			position = { x = 6 y = 6 }
+		}
+
+		categories = {
+			construction_tech
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { has_war = yes }
+			}
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+			modifier = {
+				factor = 3
+				date > 1923.1.1
+			}
+		}
+	}
+	construction_4 = {
+
+		production_speed_buildings_factor = 0.1
+		industry_repair_factor = 0.1
+
+		path = {
+			leads_to_tech = excavation_4
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = construction_5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1924
+
+		folder = {
+			name = theory_folder
+			position = { x = 6 y = 8 }
+		}
+
+		categories = {
+			construction_tech
+		}
+
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+		}
+	}
+	construction_5 = {
+
+		production_speed_buildings_factor = 0.1
+		industry_repair_factor = 0.1
+
+		path = {
+			leads_to_tech = excavation_5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1926
+
+		folder = {
+			name = theory_folder
+			position = { x = 6 y = 10 }
+		}
+
+		categories = {
+			construction_tech
+		}
+
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+		}
+	}
+	excavation_1 = {
+
+		local_resources_factor = 0.1
+
+		research_cost = 2
+		start_year = 1918
+
+		folder = {
+			name = theory_folder
+			position = { x = 8 y = 2 }
+		}
+
+		categories = {
+			excavation_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				OR = {
+					oil > 0
+					aluminium > 0
+					rubber > 0
+					tungsten > 0
+					steel > 0
+					chromium > 0
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					oil > 8
+					aluminium > 8
+					rubber > 8
+					tungsten > 8
+					steel > 8
+					chromium > 8
+				}
+			}
+		}
+	}
+	excavation_2 = {
+
+		local_resources_factor = 0.1
+
+		research_cost = 2
+		start_year = 1920
+
+		folder = {
+			name = theory_folder
+			position = { x = 8 y = 4 }
+		}
+
+		categories = {
+			excavation_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1920.1.1
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					oil > 0
+					aluminium > 0
+					rubber > 0
+					tungsten > 0
+					steel > 0
+					chromium > 0
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					oil > 8
+					aluminium > 8
+					rubber > 8
+					tungsten > 8
+					steel > 8
+					chromium > 8
+				}
+			}
+		}
+	}
+	excavation_3 = {
+
+		local_resources_factor = 0.1
+
+		research_cost = 2
+		start_year = 1922
+
+		folder = {
+			name = theory_folder
+			position = { x = 8 y = 6 }
+		}
+
+		categories = {
+			excavation_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					oil > 0
+					aluminium > 0
+					rubber > 0
+					tungsten > 0
+					steel > 0
+					chromium > 0
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					oil > 8
+					aluminium > 8
+					rubber > 8
+					tungsten > 8
+					steel > 8
+					chromium > 8
+				}
+			}
+		}
+	}
+	excavation_4 = {
+
+		local_resources_factor = 0.1
+
+		research_cost = 2
+		start_year = 1924
+
+		folder = {
+			name = theory_folder
+			position = { x = 8 y = 8 }
+		}
+
+		categories = {
+			excavation_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					oil > 0
+					aluminium > 0
+					rubber > 0
+					tungsten > 0
+					steel > 0
+					chromium > 0
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					oil > 8
+					aluminium > 8
+					rubber > 8
+					tungsten > 8
+					steel > 8
+					chromium > 8
+				}
+			}
+		}
+	}
+	excavation_5 = {
+
+		local_resources_factor = 0.1
+
+		research_cost = 2
+		start_year = 1926
+
+		folder = {
+			name = theory_folder
+			position = { x = 8 y = 10 }
+		}
+
+		categories = {
+			excavation_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					oil > 0
+					aluminium > 0
+					rubber > 0
+					tungsten > 0
+					steel > 0
+					chromium > 0
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					oil > 8
+					aluminium > 8
+					rubber > 8
+					tungsten > 8
+					steel > 8
+					chromium > 8
+				}
+			}
+		}
+	}
+	bunker_1 = {
+
+		enable_building = {
+			building = bunker
+			level = 3
+		}
+		enable_building = {
+			building = coastal_bunker
+			level = 3
+		}
+
+		path = {
+			leads_to_tech = bunker_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1918
+
+		folder = {
+			name = theory_folder
+			position = { x = 0 y = 2 }
+		}
+
+		categories = {
+			architecture_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	bunker_2 = {
+
+		enable_building = {
+			building = bunker
+			level = 7
+		}
+		enable_building = {
+			building = coastal_bunker
+			level = 7
+		}
+
+		path = {
+			leads_to_tech = bunker_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1922
+
+		folder = {
+			name = theory_folder
+			position = { x = 0 y = 6 }
+		}
+
+		categories = {
+			architecture_tech
+		}
+
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+		}
+	}
+	bunker_3 = {
+
+		enable_building = {
+			building = bunker
+			level = 10
+		}
+		enable_building = {
+			building = coastal_bunker
+			level = 10
+		}
+
+		research_cost = 1.5
+		start_year = 1926
+
+		folder = {
+			name = theory_folder
+			position = { x = 0 y = 10 }
+		}
+
+		categories = {
+			architecture_tech
+		}
+
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+		}
+	}
+	hospital_1 = {
+
+		category_light_infantry = {
+			maximum_speed = 0.03
+			max_strength = 0.05
+		}
+
+		path = {
+			leads_to_tech = hospital_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1920
+
+		folder = {
+			name = theory_folder
+			position = { x = 3 y = 4 }
+		}
+
+		categories = {
+			architecture_tech
+		}
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 0
+				date < 1920.1.1
+			}
+		}
+	}
+	hospital_2 = {
+
+		category_light_infantry = {
+			maximum_speed = 0.03
+			max_strength = 0.05
+		}
+
+		path = {
+			leads_to_tech = hospital_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1922
+
+		folder = {
+			name = theory_folder
+			position = { x = 3 y = 6 }
+		}
+
+		categories = {
+			architecture_tech
+		}
+
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+		}
+	}
+	hospital_3 = {
+
+		category_light_infantry = {
+			maximum_speed = 0.03
+			max_strength = 0.05
+		}
+
+		path = {
+			leads_to_tech = physiological_medicine
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = psychological_medicine
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1924
+
+		folder = {
+			name = theory_folder
+			position = { x = 3 y = 8 }
+		}
+
+		categories = {
+			architecture_tech
+		}
+
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+		}
+	}
+	physiological_medicine = {
+		xor = { psychological_medicine }
+
+		category_light_infantry = {
+			casualty_trickleback = 0.25
+			experience_loss_factor = -0.25
+		}
+
+		research_cost = 2.5
+		start_year = 1926
+
+		folder = {
+			name = theory_folder
+			position = { x = 2 y = 10 }
+		}
+
+		categories = {
+			doctrine_tech
+		}
+
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+		}
+	}
+	psychological_medicine = {
+		xor = { physiological_medicine }
+
+		category_light_infantry = {
+			max_organisation = 10
+			default_morale = 0.2
+		}
+
+		research_cost = 2.5
+		start_year = 1926
+
+		folder = {
+			name = theory_folder
+			position = { x = 4 y = 10 }
+		}
+
+		categories = {
+			doctrine_tech
+		}
+
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+		}
+	}
+
+	secret_action_1 = {
+
+		resistance_damage_to_garrison = -0.1
+  		foreign_subversive_activites = -0.05
+
+		path = {
+			leads_to_tech = encryption_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = decryption_1
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = secret_action_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1918
+
+		folder = {
+			name = theory_folder
+			position = { x = 1 y = 2 }
+		}
+
+		categories = {
+			secret_action_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	secret_action_2 = {
+
+		resistance_damage_to_garrison = -0.15
+  		foreign_subversive_activites = -0.1
+
+		research_cost = 2
+		start_year = 1926
+
+		folder = {
+			name = theory_folder
+			position = { x = 1 y = 10 }
+		}
+
+		categories = {
+			secret_action_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1926.1.1
+			}
+		}
+	}
+	encryption_1 = {
+
+		encryption = 1
+
+		path = {
+			leads_to_tech = encryption_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1920
+
+		folder = {
+			name = theory_folder
+			position = { x = 0 y = 4 }
+		}
+
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+
+		categories = {
+			secret_action_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1920.1.1
+			}
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				date > 1921.1.1
+			}
+			modifier = {
+				factor = 3
+				num_of_factories > 25
+			}
+			modifier = {
+				factor = 3
+				num_of_factories > 50
+			}
+		}
+	}
+	encryption_2 = {
+
+		encryption = 1
+
+		path = {
+			leads_to_tech = encryption_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1922
+
+		folder = {
+			name = theory_folder
+			position = { x = 0 y = 6 }
+		}
+
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+
+		categories = {
+			secret_action_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				date > 1923.1.1
+			}
+			modifier = {
+				factor = 3
+				num_of_factories > 25
+			}
+			modifier = {
+				factor = 3
+				num_of_factories > 50
+			}
+		}
+	}
+	encryption_3 = {
+
+		encryption = 1
+
+		research_cost = 1
+		start_year = 1924
+
+		folder = {
+			name = theory_folder
+			position = { x = 0 y = 8 }
+		}
+
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+
+		categories = {
+			secret_action_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				date > 1925.1.1
+			}
+			modifier = {
+				factor = 3
+				num_of_factories > 25
+			}
+			modifier = {
+				factor = 3
+				num_of_factories > 50
+			}
+		}
+	}
+	decryption_1 = {
+
+		decryption = 1
+
+		path = {
+			leads_to_tech = decryption_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1920
+
+		folder = {
+			name = theory_folder
+			position = { x = 2 y = 4 }
+		}
+
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+
+		categories = {
+			secret_action_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1920.1.1
+			}
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				date > 1921.1.1
+			}
+			modifier = {
+				factor = 3
+				num_of_factories > 25
+			}
+			modifier = {
+				factor = 3
+				num_of_factories > 50
+			}
+		}
+	}
+	decryption_2 = {
+
+		decryption = 1
+
+		path = {
+			leads_to_tech = decryption_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1922
+
+		folder = {
+			name = theory_folder
+			position = { x = 2 y = 6 }
+		}
+
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+
+		categories = {
+			secret_action_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1922.1.1
+			}
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				date > 1923.1.1
+			}
+			modifier = {
+				factor = 3
+				num_of_factories > 25
+			}
+			modifier = {
+				factor = 3
+				num_of_factories > 50
+			}
+		}
+	}
+	decryption_3 = {
+
+		decryption = 1
+
+		research_cost = 1
+		start_year = 1924
+
+		folder = {
+			name = theory_folder
+			position = { x = 2 y = 8 }
+		}
+
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+
+		categories = {
+			secret_action_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1924.1.1
+			}
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				date > 1925.1.1
+			}
+			modifier = {
+				factor = 3
+				num_of_factories > 25
+			}
+			modifier = {
+				factor = 3
+				num_of_factories > 50
+			}
+		}
+	}
+
+	doctrine_art_of_command = {
+
+		enable_tactic = tactic_shock
+		enable_tactic = tactic_ambush
+		enable_tactic = tactic_encirclement
+		category_army = {
+			max_organisation = 5
+		}
+
+		path = {
+			leads_to_tech = doctrine_firepower_focus
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = doctrine_manpower_focus
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = doctrine_mobility_focus
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 1.5
+
+		folder = {
+			name = theory_folder
+			position = { x = 3 y = 0 }
+		}
+
+		categories = {
+			doctrine_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+		}
+	}
+	doctrine_firepower_focus = {
+		xor = { doctrine_mobility_focus }
+
+		enable_tactic = tactic_barrage
+		category_front_line = {
+			soft_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = doctrine_trench_warfare
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 1 y = 2 }
+		}
+
+		categories = {
+			doctrine_tech
+			cat_superior_firepower
+			cat_grand_battle_plan
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+			modifier = {
+				factor = 0
+				has_tech = doctrine_mobility_focus
+			}
+			modifier = {
+				factor = 0
+				is_researching_technology = doctrine_mobility_focus
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_completed_focus = Generic_Firepower_Effort
+					has_completed_focus = Shared_Firepower_Effort
+				}
+			}
+		}
+		ai_research_weights = {
+			artillery = 2
+			rifle_tech = 3
+			machine_gun_tech = 2
+		}
+	}
+	doctrine_manpower_focus = {
+
+		enable_tactic = tactic_human_wave_tactics
+		land_reinforce_rate = 0.02
+		minimum_training_level = -0.1
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 3 y = 2 }
+		}
+
+		categories = {
+			doctrine_tech
+			cat_grand_battle_plan
+			cat_mass_assault
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+	}
+	doctrine_mobility_focus = {
+		xor = { doctrine_firepower_focus }
+
+		planning_speed = 0.5
+		cavalry = {
+			breakthrough = 0.20
+		}
+		mounted_infantry = {
+			breakthrough = 0.20
+		}
+
+		path = {
+			leads_to_tech = doctrine_penetrate_and_outflank
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 5 y = 2 }
+		}
+
+		categories = {
+			doctrine_tech
+			cat_mass_assault
+			cat_mobile_warfare
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+			modifier = {
+				factor = 0
+				has_tech = doctrine_firepower_focus
+			}
+			modifier = {
+				factor = 0
+				is_researching_technology = doctrine_firepower_focus
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_completed_focus = Generic_Firepower_Effort
+					has_completed_focus = Shared_Firepower_Effort
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_completed_focus = Generic_Mobility_Effort
+					has_completed_focus = Shared_Mobility_Effort
+				}
+			}
+		}
+		ai_research_weights = {
+			industry = 4
+			carbine_tech = 5
+			armor = 1
+		}
+	}
+	doctrine_trench_warfare = {
+		max_dig_in = 10
+		dig_in_speed_factor = 0.25
+
+		path = {
+			leads_to_tech = doctrine_surround_and_lure
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = doctrine_bloodthirsty_fortification
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 1 y = 4 }
+		}
+
+		categories = {
+			doctrine_tech
+			cat_superior_firepower
+			cat_grand_battle_plan
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+		}
+		ai_research_weights = {
+			artillery = 2
+			rifle_tech = 3
+			machine_gun_tech = 2
+		}
+	}
+	doctrine_penetrate_and_outflank = {
+
+		enable_tactic = tactic_unexpected_thrust
+		army_speed_factor = 0.05
+
+		path = {
+			leads_to_tech = doctrine_large_depth_combat
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = doctrine_stormtrooper
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 5 y = 4 }
+		}
+
+		categories = {
+			doctrine_tech
+			cat_mass_assault
+			cat_mobile_warfare
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+		}
+		ai_research_weights = {
+			industry = 4
+			carbine_tech = 5
+			armor = 1
+		}
+	}
+	doctrine_surround_and_lure = {
+		xor = { doctrine_bloodthirsty_fortification }
+
+		enable_tactic = tactic_backhand_blow
+		org_loss_when_moving = -0.1
+
+		path = {
+			leads_to_tech = doctrine_suppressive_fire
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 0 y = 6 }
+		}
+
+		categories = {
+			doctrine_tech
+			cat_superior_firepower
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+			modifier = {
+				factor = 0
+				has_tech = doctrine_bloodthirsty_fortification
+			}
+			modifier = {
+				factor = 0
+				is_researching_technology = doctrine_bloodthirsty_fortification
+			}
+		}
+		ai_research_weights = {
+			artillery = 8
+		}
+	}
+	doctrine_bloodthirsty_fortification = {
+		xor = { doctrine_surround_and_lure }
+
+		enable_tactic = tactic_elastic_defense
+		max_planning = 0.1
+
+		path = {
+			leads_to_tech = doctrine_heavily_encirclement
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 2 y = 6 }
+		}
+
+		categories = {
+			doctrine_tech
+			cat_grand_battle_plan
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+			modifier = {
+				factor = 0
+				has_tech = doctrine_surround_and_lure
+			}
+			modifier = {
+				factor = 0
+				is_researching_technology = doctrine_surround_and_lure
+			}
+		}
+		ai_research_weights = {
+			rifle_tech = 3
+			machine_gun_tech = 2
+		}
+	}
+	doctrine_large_depth_combat = {
+		xor = { doctrine_stormtrooper }
+
+		enable_tactic = tactic_relentless_assault
+		max_dig_in = 5
+		category_light_infantry = {
+			max_organisation = 5
+		}
+
+		path = {
+			leads_to_tech = doctrine_elaborate_ambush
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 4 y = 6 }
+		}
+
+		categories = {
+			doctrine_tech
+			cat_mass_assault
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+			modifier = {
+				factor = 0.1
+				has_manpower < 500000
+			}
+			modifier = {
+				factor = 1.5
+				has_manpower > 1000000
+			}
+			modifier = {
+				factor = 0
+				has_tech = doctrine_stormtrooper
+			}
+			modifier = {
+				factor = 0
+				is_researching_technology = doctrine_stormtrooper
+			}
+		}
+		ai_research_weights = {
+			industry = 4
+		}
+	}
+	doctrine_stormtrooper = {
+		xor = { doctrine_large_depth_combat }
+
+		enable_tactic = tactic_infantry_charge
+		category_all_infantry = {
+			defense = 0.15
+		}
+
+		path = {
+			leads_to_tech = doctrine_modern_cavalry
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 6 y = 6 }
+		}
+
+		categories = {
+			doctrine_tech
+			cat_mobile_warfare
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+			modifier = {
+				factor = 0.1
+				num_of_military_factories < 10
+			}
+			modifier = {
+				factor = 1.5
+				num_of_military_factories > 20
+			}
+			modifier = {
+				factor = 0
+				has_tech = doctrine_large_depth_combat
+			}
+			modifier = {
+				factor = 0
+				is_researching_technology = doctrine_large_depth_combat
+			}
+		}
+		ai_research_weights = {
+			carbine_tech = 6
+			armor = 2
+		}
+	}
+	doctrine_suppressive_fire = {
+
+		category_all_infantry = {
+			soft_attack = 0.05
+		}
+		category_artillery = {
+			soft_attack = 0.05
+		}
+
+		path = {
+			leads_to_tech = doctrine_desperate_breakout
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 0 y = 7 }
+		}
+
+		categories = {
+			doctrine_tech
+			cat_superior_firepower
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+		}
+		ai_research_weights = {
+			artillery = 6
+		}
+	}
+	doctrine_heavily_encirclement = {
+
+		max_planning = 0.1
+
+		path = {
+			leads_to_tech = doctrine_iron_blood_delay
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 2 y = 7 }
+		}
+
+		categories = {
+			doctrine_tech
+			cat_grand_battle_plan
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+		}
+		ai_research_weights = {
+			rifle_tech = 5
+			machine_gun_tech = 4
+		}
+	}
+	doctrine_elaborate_ambush = {
+
+		no_supply_grace = 48
+		out_of_supply_factor = -0.10
+
+		path = {
+			leads_to_tech = doctrine_night_assault
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 4 y = 7 }
+		}
+
+		categories = {
+			doctrine_tech
+			cat_mass_assault
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+		}
+		ai_research_weights = {
+			industry = 4
+		}
+	}
+	doctrine_modern_cavalry = {
+
+		cavalry = {
+			maximum_speed = 0.1
+			default_morale = 0.2
+		}
+		mounted_infantry = {
+			maximum_speed = 0.1
+			default_morale = 0.2
+		}
+
+		path = {
+			leads_to_tech = doctrine_armor_experiment
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 6 y = 7 }
+		}
+
+		categories = {
+			doctrine_tech
+			cat_mobile_warfare
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+		}
+		ai_research_weights = {
+			carbine_tech = 5
+			armor = 1
+		}
+	}
+	doctrine_desperate_breakout = {
+
+		enable_tactic = tactic_breakthrough
+		category_support_battalions = {
+			max_organisation = 10
+			soft_attack = 0.15
+		}
+
+		path = {
+			leads_to_tech = doctrine_retreat_and_battle
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 0 y = 8 }
+		}
+
+		categories = {
+			doctrine_tech
+			cat_superior_firepower
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+		}
+		ai_research_weights = {
+			artillery = 4
+		}
+	}
+	doctrine_iron_blood_delay = {
+
+		enable_tactic = tactic_delay
+		category_light_infantry = {
+			max_organisation = 15
+		}
+
+		path = {
+			leads_to_tech = doctrine_wear_and_tear
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 2 y = 8 }
+		}
+
+		categories = {
+			doctrine_tech
+			cat_grand_battle_plan
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+		}
+		ai_research_weights = {
+			rifle_tech = 3
+			machine_gun_tech = 2
+		}
+	}
+	doctrine_night_assault = {
+
+		land_night_attack = 0.25
+
+		path = {
+			leads_to_tech = doctrine_wear_and_tear
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 4 y = 8 }
+		}
+
+		categories = {
+			doctrine_tech
+			cat_mass_assault
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+		}
+		ai_research_weights = {
+			industry = 4
+		}
+	}
+	doctrine_armor_experiment = {
+
+		category_tanks = {
+			max_organisation = 3
+		}
+		category_all_infantry = {
+			max_organisation = 10
+		}
+
+		path = {
+			leads_to_tech = doctrine_paralyzed_crush
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 6 y = 8 }
+		}
+
+		categories = {
+			doctrine_tech
+			cat_mobile_warfare
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+		}
+		ai_research_weights = {
+			carbine_tech = 5
+			armor = 2
+		}
+	}
+	doctrine_retreat_and_battle = {
+
+		enable_tactic = tactic_tactical_withdrawal
+		category_artillery = {
+			soft_attack = 0.15
+			default_morale = 0.1
+		}
+
+		path = {
+			leads_to_tech = doctrine_mobile_annihilation
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 1 y = 10 }
+		}
+
+		categories = {
+			doctrine_tech
+			cat_superior_firepower
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+		}
+		ai_research_weights = {
+			artillery = 2
+		}
+	}
+	doctrine_wear_and_tear = {
+
+		enable_tactic = tactic_guerrilla_tactics
+		resistance_damage_to_garrison_on_our_occupied_states = 0.15
+		out_of_supply_factor = -0.30
+		category_army = {
+			default_morale = 0.2
+		}
+
+		path = {
+			leads_to_tech = doctrine_mobile_annihilation
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 3 y = 10 }
+		}
+
+		categories = {
+			doctrine_tech
+			cat_grand_battle_plan
+			cat_mass_assault
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+		}
+		ai_research_weights = {
+			rifle_tech = 3
+			machine_gun_tech = 2
+			industry = 4
+		}
+	}
+	doctrine_paralyzed_crush = {
+
+		category_all_infantry = {
+			max_organisation = 15
+		}
+		cavalry = {
+			max_organisation = 5
+			breakthrough = 0.1
+		}
+		mounted_infantry = {
+			max_organisation = 5
+			breakthrough = 0.1
+		}
+
+		path = {
+			leads_to_tech = doctrine_mobile_annihilation
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 5 y = 10 }
+		}
+
+		categories = {
+			doctrine_tech
+			cat_mobile_warfare
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+		}
+		ai_research_weights = {
+			carbine_tech = 5
+			armor = 1
+		}
+	}
+	doctrine_mobile_annihilation = {
+
+		category_all_infantry = {
+			maximum_speed = 0.1
+		}
+		category_tanks = {
+			maximum_speed = 0.1
+		}
+
+		doctrine = yes
+		research_cost = 3
+
+		folder = {
+			name = theory_folder
+			position = { x = 3 y = 12 }
+		}
+
+		categories = {
+			doctrine_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 4
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				amount_research_slots > 3
+			}
+		}
+	}
+}

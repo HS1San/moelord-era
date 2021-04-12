@@ -1,0 +1,42 @@
+ai_historical_focus_list_CZL = {
+	ai_national_focuses = {
+		CZL_Expel_Zhang
+		CZL_Baoding_Military_Academy
+		CZL_New_Army
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		CZL_Invite_Henan
+		CZL_War_with_Anhui_Clique
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		Shared_Expand_Military_Academies
+		Shared_Westernization_Movement
+		Shared_Construct_Roads
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		Shared_Expand_Military_Academies
+		CZL_Establish_Great_Wall_Front
+		CZL_Attack_Fengtian_Clique
+		CZL_Bride_Gao
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		CZL_Recreate_Zhili_Clique
+		CZL_Attack_Guangdong_Government
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+}

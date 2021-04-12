@@ -1,0 +1,401 @@
+CSC_strategy_plan_A = {
+	name = "CSC Strategy Plan A"
+	desc = "CSC Strategy Plan A"
+
+	enable = {
+		original_tag = CSC
+	}
+	abort = {
+		OR = {
+			has_country_flag = CSC_faction_2
+			has_country_flag = CSC_faction_3
+			has_country_flag = CSC_faction_4
+			has_country_flag = CSC_faction_5
+			has_country_flag = CSC_faction_6
+		}
+	}
+	ai_national_focuses = {
+		CSC_End_of_War
+		CSC_Electric_Company
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		CSC_Peace_Plan
+		CSC_Autonomous_Government
+		Shared_Expand_Military_Academies
+		Shared_Westernization_Movement
+		Shared_Construct_Roads
+		CSC_Invite_Yungui
+		CSC_Invite_Xikang
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		CSC_Unite_Southwest
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+	ai_strategy = { type = befriend id = "CXK" value = 200 }
+	ai_strategy = { type = befriend id = "CYN" value = 200 }
+	ai_strategy = { type = befriend id = "CGZ" value = 200 }
+}
+
+CSC_strategy_plan_B = {
+	name = "CSC Strategy Plan B"
+	desc = "CSC Strategy Plan B"
+
+	enable = {
+		original_tag = CSC
+	}
+	abort = {
+		OR = {
+			has_country_flag = CSC_faction_1
+			has_country_flag = CSC_faction_3
+			has_country_flag = CSC_faction_4
+			has_country_flag = CSC_faction_5
+			has_country_flag = CSC_faction_6
+		}
+	}
+	ai_national_focuses = {
+		CSC_End_of_War
+		CSC_Land_Reclamation
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		CSC_Peace_Plan
+		CSC_Autonomous_Government
+		Shared_Expand_Military_Academies
+		Shared_Westernization_Movement
+		Shared_Construct_Roads
+		CSC_Invite_Yungui
+		CSC_Invite_Xikang
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		CSC_Unite_Southwest
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+	ai_strategy = { type = befriend id = "CXK" value = 200 }
+	ai_strategy = { type = befriend id = "CYN" value = 200 }
+	ai_strategy = { type = befriend id = "CGZ" value = 200 }
+}
+
+CSC_strategy_plan_C = {
+	name = "CSC Strategy Plan C"
+	desc = "CSC Strategy Plan C"
+
+	enable = {
+		original_tag = CSC
+	}
+	abort = {
+		OR = {
+			has_country_flag = CSC_faction_1
+			has_country_flag = CSC_faction_2
+			has_country_flag = CSC_faction_4
+			has_country_flag = CSC_faction_5
+			has_country_flag = CSC_faction_6
+		}
+	}
+	ai_national_focuses = {
+		CSC_End_of_War
+		CSC_Minerals
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		CSC_Peace_Plan
+		CSC_Autonomous_Government
+		Shared_Expand_Military_Academies
+		Shared_Westernization_Movement
+		Shared_Construct_Roads
+		CSC_Invite_Yungui
+		CSC_Invite_Xikang
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		CSC_Unite_Southwest
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+	ai_strategy = { type = befriend id = "CXK" value = 200 }
+	ai_strategy = { type = befriend id = "CYN" value = 200 }
+	ai_strategy = { type = befriend id = "CGZ" value = 200 }
+}
+
+CSC_strategy_plan_D = {
+	name = "CSC Strategy Plan D"
+	desc = "CSC Strategy Plan D"
+
+	enable = {
+		original_tag = CSC
+	}
+	abort = {
+		OR = {
+			has_country_flag = CSC_faction_1
+			has_country_flag = CSC_faction_2
+			has_country_flag = CSC_faction_3
+			has_country_flag = CSC_faction_5
+			has_country_flag = CSC_faction_6
+		}
+	}
+	ai_national_focuses = {
+		CSC_End_of_War
+		CSC_Middle_School
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		CSC_War_Plan
+		CSC_Cooperation_with_Guangdong
+		Shared_Expand_Military_Academies
+		Shared_Westernization_Movement
+		Shared_Construct_Roads
+		CSC_War_With_Yungui
+		CSC_War_With_Xikang
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		CSC_War_With_Xizang
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+	ai_strategy = { type = befriend id = "CGD" value = 200 }
+	ai_strategy = { type = send_volunteers_desire id = "CGD" value = 100 }
+	ai_strategy = { type = support id = "CGD" value = 100 }
+	ai_strategy = { type = antagonize id = "CXK" value = 100 }
+	ai_strategy = { type = conquer id = "CXK" value = 100 }
+	ai_strategy = { type = invade id = "CXK" value = 100 }
+	ai_strategy = { type = declare_war id = "CXK" value = 100 }
+	ai_strategy = { type = antagonize id = "CYN" value = 100 }
+	ai_strategy = { type = conquer id = "CYN" value = 100 }
+	ai_strategy = { type = invade id = "CYN" value = 100 }
+	ai_strategy = { type = declare_war id = "CYN" value = 100 }
+	ai_strategy = { type = antagonize id = "CGZ" value = 100 }
+	ai_strategy = { type = conquer id = "CGZ" value = 100 }
+	ai_strategy = { type = invade id = "CGZ" value = 100 }
+	ai_strategy = { type = declare_war id = "CGZ" value = 100 }
+}
+
+CSC_strategy_plan_E = {
+	name = "CSC Strategy Plan E"
+	desc = "CSC Strategy Plan E"
+
+	enable = {
+		original_tag = CSC
+	}
+	abort = {
+		OR = {
+			has_country_flag = CSC_faction_1
+			has_country_flag = CSC_faction_2
+			has_country_flag = CSC_faction_3
+			has_country_flag = CSC_faction_4
+			has_country_flag = CSC_faction_6
+		}
+	}
+	ai_national_focuses = {
+		CSC_End_of_War
+		CSC_Military_Offices
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		CSC_War_Plan
+		CSC_Cooperation_with_Guangdong
+		Shared_Expand_Military_Academies
+		Shared_Westernization_Movement
+		Shared_Construct_Roads
+		CSC_War_With_Yungui
+		CSC_War_With_Xikang
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		CSC_War_With_Xizang
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+	ai_strategy = { type = befriend id = "CGD" value = 200 }
+	ai_strategy = { type = send_volunteers_desire id = "CGD" value = 100 }
+	ai_strategy = { type = support id = "CGD" value = 100 }
+	ai_strategy = { type = antagonize id = "CXK" value = 100 }
+	ai_strategy = { type = conquer id = "CXK" value = 100 }
+	ai_strategy = { type = invade id = "CXK" value = 100 }
+	ai_strategy = { type = declare_war id = "CXK" value = 100 }
+	ai_strategy = { type = antagonize id = "CYN" value = 100 }
+	ai_strategy = { type = conquer id = "CYN" value = 100 }
+	ai_strategy = { type = invade id = "CYN" value = 100 }
+	ai_strategy = { type = declare_war id = "CYN" value = 100 }
+	ai_strategy = { type = antagonize id = "CGZ" value = 100 }
+	ai_strategy = { type = conquer id = "CGZ" value = 100 }
+	ai_strategy = { type = invade id = "CGZ" value = 100 }
+	ai_strategy = { type = declare_war id = "CGZ" value = 100 }
+}
+
+CSC_strategy_plan_F = {
+	name = "CSC Strategy Plan F"
+	desc = "CSC Strategy Plan F"
+
+	enable = {
+		original_tag = CSC
+	}
+	abort = {
+		OR = {
+			has_country_flag = CSC_faction_1
+			has_country_flag = CSC_faction_2
+			has_country_flag = CSC_faction_3
+			has_country_flag = CSC_faction_4
+			has_country_flag = CSC_faction_5
+		}
+	}
+	ai_national_focuses = {
+		CSC_End_of_War
+		CSC_Financial_Reform
+		Shared_Plan_of_Reform
+		Shared_Diplomatic_Action
+		Shared_Reach_Out_To_the_Freedom_World
+		Shared_Reach_Out_To_the_Iron_Blood
+		CSC_War_Plan
+		CSC_Cooperation_with_Guangdong
+		Shared_Expand_Military_Academies
+		Shared_Westernization_Movement
+		Shared_Construct_Roads
+		CSC_War_With_Yungui
+		CSC_War_With_Xikang
+		Shared_Develop_Heavy_Industry
+		Shared_Encourage_Study_Abroad
+		Shared_Establish_Military_Academies
+		Shared_Army_Effort
+		CSC_War_With_Xizang
+		Shared_Expand_Military_Academies
+		Shared_Offensive_Effort
+		Shared_Special_Police_Force
+		Shared_Extra_Land_Leader
+		Shared_Develop_Light_Industry
+		Shared_Construct_Railways
+		Shared_Expand_Railways
+		Shared_People_Power
+		Shared_People_Government
+		Shared_People_Welfare
+		Shared_National_Capitalism
+		Shared_Rectify_Discipline
+		Shared_Request_International_Assistance
+		Shared_Eliteism
+		Shared_Military_Youth
+		Shared_Why_We_Fight
+		Shared_Reorganize_the_Local_Army
+	}
+	weight = {
+		factor = 1
+	}
+	ai_strategy = { type = befriend id = "CGD" value = 200 }
+	ai_strategy = { type = send_volunteers_desire id = "CGD" value = 100 }
+	ai_strategy = { type = support id = "CGD" value = 100 }
+	ai_strategy = { type = antagonize id = "CXK" value = 100 }
+	ai_strategy = { type = conquer id = "CXK" value = 100 }
+	ai_strategy = { type = invade id = "CXK" value = 100 }
+	ai_strategy = { type = declare_war id = "CXK" value = 100 }
+	ai_strategy = { type = antagonize id = "CYN" value = 100 }
+	ai_strategy = { type = conquer id = "CYN" value = 100 }
+	ai_strategy = { type = invade id = "CYN" value = 100 }
+	ai_strategy = { type = declare_war id = "CYN" value = 100 }
+	ai_strategy = { type = antagonize id = "CGZ" value = 100 }
+	ai_strategy = { type = conquer id = "CGZ" value = 100 }
+	ai_strategy = { type = invade id = "CGZ" value = 100 }
+	ai_strategy = { type = declare_war id = "CGZ" value = 100 }
+}

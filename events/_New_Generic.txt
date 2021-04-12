@@ -1,0 +1,804 @@
+﻿add_namespace = new_Generic
+
+country_event = {
+	id = new_Generic.1
+	title = new_Generic.1.t
+	desc = new_Generic.1.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Generic.1.a
+		add_to_faction = FROM
+		add_ai_strategy = { type = alliance id = FROM value = 200 }
+		FROM = {
+			news_event = { hours = 6 id = new_News.1 }
+			add_ai_strategy = { type = alliance id = ROOT value = 200 }
+			if = {
+				limit = { has_idea = Neutrality_Idea }
+				remove_ideas = Neutrality_Idea
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 175 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 150 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 125 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 100 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 75 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 50 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 25 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -25 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -50 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -75 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -100 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -125 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -150 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -175 } }
+			}
+		}
+	}
+	option = {
+		name = new_Generic.1.b
+		FROM = {
+			news_event = { hours = 6 id = new_News.2 }
+			add_opinion_modifier = { target = ROOT modifier = New_Clique_refused_us }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 175 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 150 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 125 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 100 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 75 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 50 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 25 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -25 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -50 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -75 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -100 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -125 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -150 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -175 } }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = new_Generic.2
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = { remove_political_road = yes }
+}
+
+country_event = {
+	id = new_Generic.3
+	title = new_Generic.3.t
+	desc = new_Generic.3.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Generic.3.a
+		FROM = { add_to_faction = ROOT }
+		if = {
+			limit = { has_idea = Neutrality_Idea }
+			remove_ideas = Neutrality_Idea
+		}
+		add_ai_strategy = { type = alliance id = ROOT value = 200 }
+		FROM = {
+			news_event = { hours = 6 id = new_News.1 }
+			add_ai_strategy = { type = alliance id = ROOT value = 200 }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 175 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 150 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 125 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 100 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 75 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 50 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 25 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -25 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -50 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -75 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -100 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -125 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -150 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -175 } }
+			}
+		}
+	}
+	option = {
+		name = new_Generic.3.b
+		FROM = {
+			news_event = { hours = 6 id = new_News.2 }
+			add_opinion_modifier = { target = ROOT modifier = New_Clique_refused_us }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 175 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 150 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 125 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 100 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 75 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 50 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 25 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -25 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -50 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -75 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -100 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -125 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -150 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -175 } }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = new_Generic.4
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = { add_political_road = yes }
+}
+
+country_event = {
+	id = new_Generic.5
+	title = new_Generic.5.t
+	desc = new_Generic.5.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Generic.5.a
+		add_war_support = 0.1
+		if = {
+			limit = { is_in_faction = no }
+			FROM = { add_to_faction = ROOT }
+		}
+		if = {
+			limit = { has_idea = Neutrality_Idea }
+			remove_ideas = Neutrality_Idea
+		}
+		FROM = { news_event = { hours = 6 id = new_News.1 } }
+		add_to_war = { targeted_alliance = FROM enemy = CGD }
+		add_ai_strategy = { type = alliance id = FROM value = 200 }
+		ai_chance = { base = 100 }
+	}
+	option = {
+		name = new_Generic.5.b
+		trigger = {
+			has_equipment = { rifle_equipment > 2999 }
+			has_equipment = { carbine_equipment > 299 }
+		}
+		add_war_support = 0.05
+		FROM = {
+			add_opinion_modifier = { target = ROOT modifier = New_friendship }
+			news_event = { hours = 6 id = new_News.9 }
+		}
+		send_equipment = { target = FROM type = rifle_equipment amount = 3000 }
+		send_equipment = { target = FROM type = carbine_equipment amount = 300 }
+		add_ai_strategy = { type = support id = FROM value = 200 }
+		ai_chance = { base = 0 }
+	}
+	option = {
+		name = new_Generic.5.c
+		add_war_support = -0.05
+		add_stability = 0.05
+		FROM = { news_event = { hours = 6 id = new_News.2 } }
+		ai_chance = { base = 0 }
+	}
+}
+
+country_event = {
+	id = new_Generic.6
+	title = new_Generic.6.t
+	desc = new_Generic.6.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Generic.6.a
+		add_to_faction = FROM
+		random_country = {
+			limit = { has_war_with = ROOT }
+			FROM = { add_to_war = { targeted_alliance = ROOT enemy = PREV } }
+		}
+		FROM = {
+			add_ai_strategy = { type = alliance id = ROOT value = 200 }
+			news_event = { hours = 6 id = new_News.1 }
+			if = {
+				limit = { has_idea = Neutrality_Idea }
+				remove_ideas = Neutrality_Idea
+			}
+			change_flag_into_NPC = yes
+			set_party_name = { ideology = Moderate_Leftist long_name = New_party_05_long name = New_party_05 }
+			set_party_name = { ideology = Centrist long_name = New_party_05_long name = New_party_05 }
+			set_party_name = { ideology = Moderate_Rightist long_name = New_party_05_long name = New_party_05 }
+		}
+	}
+	option = {
+		name = new_Generic.6.b
+		add_war_support = -0.05
+		add_stability = 0.05
+		FROM = { news_event = { hours = 6 id = new_News.2 } }
+	}
+}
+
+country_event = {
+	id = new_Generic.7
+	title = new_Generic.7.t
+	desc = new_Generic.7.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Generic.7.a
+		FROM = { add_to_faction = ROOT }
+		if = {
+			limit = { has_idea = Neutrality_Idea }
+			remove_ideas = Neutrality_Idea
+		}
+		random_country = {
+			limit = { has_war_with = FROM }
+			ROOT = { add_to_war = { targeted_alliance = FROM enemy = PREV } }
+		}
+		add_ai_strategy = { type = alliance id = FROM value = 200 }
+		FROM = { news_event = { hours = 6 id = new_News.1 } }
+		change_flag_into_NPC = yes
+		set_party_name = { ideology = Moderate_Leftist long_name = New_party_05_long name = New_party_05 }
+		set_party_name = { ideology = Centrist long_name = New_party_05_long name = New_party_05 }
+		set_party_name = { ideology = Moderate_Rightist long_name = New_party_05_long name = New_party_05 }
+		ai_chance = {
+			base = 50
+			modifier = { add = 30 has_country_flag = Guomin_Army }
+			modifier = { add = 30 has_country_flag = Jingguo_Army }
+		}
+	}
+	option = {
+		name = new_Generic.7.b
+		add_war_support = -0.05
+		add_stability = 0.05
+		FROM = { news_event = { hours = 6 id = new_News.2 } }
+		ai_chance = {
+			base = 50
+			modifier = { add = -30 has_country_flag = Guomin_Army }
+			modifier = { add = -30 has_country_flag = Jingguo_Army }
+		}
+	}
+}
+
+country_event = {
+	id = new_Generic.8
+	title = new_Generic.8.t
+	desc = new_Generic.8.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Generic.8.a
+		trigger = {
+			1 = { is_capital = no }
+			owns_state = 1
+		}
+		add_stability = 0.05
+		set_capital = 1
+	}
+	option = {
+		name = new_Generic.8.b
+		trigger = {
+			43 = { is_capital = no }
+			owns_state = 43
+		}
+		add_stability = 0.05
+		set_capital = 43
+	}
+	option = {
+		name = new_Generic.8.c
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = new_Generic.9
+	title = new_Generic.9.t
+	desc = new_Generic.9.d
+	picture = GFX_report_event_manchukuo_army_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Generic.9.a
+		create_country_leader = {
+			name = "Aisin-Gioro Puyi"	# 爱新觉罗·溥仪
+			picture = "gfx/leaders/China/Portrait_China_Aisin_Gioro_Puyi.tga"
+			expire = "1936.1.1"
+			ideology = Radical_Rightist_ideology
+			traits = { popular_figurehead }
+		}
+		country_event = new_Generic.8
+	}
+	option = {
+		name = new_Generic.9.b
+		create_country_leader = {
+			name = "Aisin-Gioro Pujie"	# 爱新觉罗·溥杰
+			picture = "gfx/leaders/China/Portrait_China_Aisin_Gioro_Pujie.tga"
+			expire = "1936.1.1"
+			ideology = Radical_Rightist_ideology
+			traits = { dealbroker }
+		}
+		country_event = new_Generic.8
+	}
+	option = {
+		name = new_Generic.9.c
+		create_country_leader = {
+			name = "Aisin-Gioro Xiqia"	# 爱新觉罗·熙洽
+			picture = "gfx/leaders/China/Portrait_China_Aisin_Gioro_Xiqia.tga"
+			expire = "1936.1.1"
+			ideology = Radical_Rightist_ideology
+			traits = { propaganda_expert }
+		}
+		country_event = new_Generic.8
+	}
+	option = {
+		name = new_Generic.9.e
+		create_country_leader = {
+			name = "Aisin-Gioro Pulun"	# 爱新觉罗·溥伦
+			picture = "gfx/leaders/China/Portrait_China_Aisin_Gioro_Pulun.tga"
+			expire = "1936.1.1"
+			ideology = Radical_Rightist_ideology
+			traits = { war_industrialist }
+		}
+		country_event = new_Generic.8
+	}
+	option = {
+		name = new_Generic.9.f
+		create_country_leader = {
+			name = "Aisin-Gioro Puwei"	# 爱新觉罗·溥伟
+			picture = "gfx/leaders/China/Portrait_China_Aisin_Gioro_Puwei.tga"
+			expire = "1936.1.1"
+			ideology = Radical_Rightist_ideology
+			traits = { backroom_backstabber }
+		}
+		country_event = new_Generic.8
+	}
+	option = {
+		name = new_Generic.9.g
+		create_country_leader = {
+			name = "Aisin-Gioro Zaize"	# 爱新觉罗·载泽
+			picture = "gfx/leaders/China/Portrait_China_Aisin_Gioro_Zaize.tga"
+			expire = "1936.1.1"
+			ideology = Radical_Rightist_ideology
+			traits = { silent_workhorse }
+		}
+		country_event = new_Generic.8
+	}
+}
+
+country_event = {
+	id = new_Generic.11
+	title = new_Generic.11.t
+	desc = new_Generic.11.d
+	picture = GFX_new_country_event_replace_flag_BYC
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Generic.11.a
+		set_cosmetic_tag = BYC_1
+		country_event = new_Generic.8
+	}
+	option = {
+		name = new_Generic.11.b
+		set_cosmetic_tag = BYC_2
+		country_event = new_Generic.8
+	}
+	option = {
+		name = new_Generic.11.c
+		set_cosmetic_tag = BYC_3
+		country_event = new_Generic.8
+	}
+	option = {
+		name = new_Generic.11.e
+		set_cosmetic_tag = BYC_4
+		country_event = new_Generic.8
+	}
+}
+
+country_event = {
+	id = new_Generic.12
+	title = new_Generic.12.t
+	desc = new_Generic.12.d
+	picture = GFX_new_country_event_replace_flag_ROC
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Generic.12.a
+		set_cosmetic_tag = ROC_1
+		country_event = new_Generic.8
+	}
+	option = {
+		name = new_Generic.12.b
+		set_cosmetic_tag = ROC_2
+		country_event = new_Generic.8
+	}
+	option = {
+		name = new_Generic.12.c
+		set_cosmetic_tag = ROC_3
+		country_event = new_Generic.8
+	}
+	option = {
+		name = new_Generic.12.e
+		set_cosmetic_tag = ROC_4
+		country_event = new_Generic.8
+	}
+}
+
+country_event = {
+	id = new_Generic.13
+	title = new_Generic.13.t
+	desc = new_Generic.13.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_Generic.13.a
+		FROM = { add_to_faction = ROOT }
+		if = {
+			limit = { has_idea = Neutrality_Idea }
+			remove_ideas = Neutrality_Idea
+		}
+		add_ai_strategy = { type = alliance id = ROOT value = 200 }
+		FROM = {
+			news_event = { hours = 6 id = new_News.1 }
+			add_ai_strategy = { type = alliance id = ROOT value = 200 }
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 175 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 150 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 125 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 100 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 75 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 50 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value > 25 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -25 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -50 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -75 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -100 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -125 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -150 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value < -175 } }
+			}
+		}
+	}
+	option = {
+		name = new_Generic.13.b
+		FROM = {
+			news_event = { hours = 6 id = new_News.2 }
+			add_opinion_modifier = { target = ROOT modifier = New_Clique_refused_us }
+		}
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 175 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 150 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 125 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 100 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 75 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 50 } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { has_opinion = { target = ROOT value > 25 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -25 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -50 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -75 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -100 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -125 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -150 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_opinion = { target = ROOT value < -175 } }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = new_Generic.14
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_war_with = FROM
+	}
+
+	immediate = {
+		white_peace = FROM
+	}
+}
+
+country_event = {
+	id = new_Generic.15
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_war_with = event_target:peace_country
+	}
+
+	immediate = {
+		white_peace = event_target:peace_country
+	}
+}
+
+country_event = {
+	id = new_Generic.16
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_war_with = event_target:white_peace_receiver
+	}
+
+	immediate = {
+		white_peace = event_target:white_peace_receiver
+	}
+}

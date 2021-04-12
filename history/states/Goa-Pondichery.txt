@@ -1,0 +1,57 @@
+state = {
+	id = 160
+	name = "STATE_160"
+	manpower = 533952
+	state_category = town
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = GOA
+		add_core_of = GOA
+		buildings = {
+			infrastructure = 5
+			1273 ={ naval_base = 1 }
+		}
+		victory_points = { 1273 1 }
+	}
+	provinces = {
+		1273 
+	}
+}
+
+state = {
+	id = 161
+	name = "STATE_161"
+	manpower = 286410
+	state_category = town
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = PON
+		add_core_of = PON
+		buildings = {
+			infrastructure = 5
+			10149 = { naval_base = 1 }
+		}
+		victory_points = { 10149 1 }
+	}
+	provinces = {
+		10149
+	}
+}

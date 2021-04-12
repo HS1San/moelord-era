@@ -1,0 +1,124 @@
+﻿########
+#Templates
+########
+division_template = {
+	name = "Bubingshi"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Qibingshi"
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Hunchenglü"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+########
+#OOB
+########
+units = {
+	division = {
+		name = "Zhongyang Di 27 Shi"
+		location = 11771
+		division_template = "Bubingshi"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Zhongyang Di 28 Shi"
+		location = 11771
+		division_template = "Bubingshi"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Zhongyang Di 29 Shi"
+		location = 11771
+		division_template = "Bubingshi"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Zhongyang Zanbian Di 1 Shi"
+		location = 11771
+		division_template = "Bubingshi"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Zhongyang Di 19 Hunchenglü"
+		location = 11771
+		division_template = "Hunchenglü"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Fengtian Di 1 Hunchenglü"
+		location = 11771
+		division_template = "Hunchenglü"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Fengtian Di 2 Hunchenglü"
+		location = 11771
+		division_template = "Hunchenglü"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Fengtian Di 3 Hunchenglü"
+		location = 11771
+		division_template = "Hunchenglü"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Fengtian Di 4 Hunchenglü"
+		location = 11771
+		division_template = "Hunchenglü"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Fengtian Di 5 Hunchenglü"
+		location = 11771
+		division_template = "Hunchenglü"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Fengtian Di 6 Hunchenglü"
+		location = 11771
+		division_template = "Hunchenglü"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Fengtian Di 7 Hunchenglü"
+		location = 11771
+		division_template = "Hunchenglü"
+		start_experience_factor = 0.1
+	}
+	# BUFF FROM HERE
+	division = {  
+		name = "Fengtian Di 8 Hunchenglü"
+		location = 11771
+		division_template = "Hunchenglü"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Zhongyang Di 30 Shi"
+		location = 11771
+		division_template = "Bubingshi"
+		start_experience_factor = 0.1
+	}
+}

@@ -1,0 +1,85 @@
+﻿########
+#Templates
+########
+division_template = {
+	name = "Bubingshi"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Qibingshi"
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Hunchenglü"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Buchonglü"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+	}
+	priority = 0
+}
+
+########
+#OOB
+########
+units = {
+	division = {
+		name = "Zhongyang Di 13 Shi"
+		location = 11801
+		division_template = "Bubingshi"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Yijun Di 1 Hunchenglü"
+		location = 11801
+		division_template = "Hunchenglü"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Yijun Di 2 Hunchenglü"
+		location = 11801
+		division_template = "Hunchenglü"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Yijun Di 3 Hunchenglü"
+		location = 11801
+		division_template = "Hunchenglü"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Yijun Di 4 Hunchenglü"
+		location = 11801
+		division_template = "Hunchenglü"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Yijun Dulituan"
+		location = 11801
+		division_template = "Buchonglü"
+		start_experience_factor = 0.1
+	}
+}

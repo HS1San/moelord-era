@@ -1,0 +1,977 @@
+﻿default_area_priority = {
+	enable = { always = yes }
+	abort = { always = no }
+
+	ai_strategy = { type = area_priority id = europe value = 20 }
+	ai_strategy = { type = area_priority id = north_america value = 0 }
+	ai_strategy = { type = area_priority id = south_america value = 0 }
+	ai_strategy = { type = area_priority id = asia value = 80 }
+	ai_strategy = { type = area_priority id = middle_east value = 0 }
+	ai_strategy = { type = area_priority id = africa value = 0 }
+	ai_strategy = { type = area_priority id = pacific value = 0 }
+	ai_strategy = { type = area_priority id = oceania value = 0 }
+}
+
+default_unit_production = {
+	enable = { always = yes }
+	abort = { always = no }
+
+	ai_strategy = { type = role_ratio id = infantry value = 90 }
+	ai_strategy = { type = role_ratio id = cavalry value = 10 }
+	ai_strategy = { type = role_ratio id = suppression value = 0 }
+	ai_strategy = { type = role_ratio id = garrison value = 5 }
+	ai_strategy = { type = role_ratio id = armor value = 0 }
+	ai_strategy = { type = role_ratio id = heavy_armor value = 0 }
+	ai_strategy = { type = role_ratio id = marine value = 0 }
+	ai_strategy = { type = role_ratio id = mountaineer value = 0 }
+
+	ai_strategy = { type = unit_ratio id = fighter value = 75 }
+	ai_strategy = { type = unit_ratio id = cas value = 10 }
+	ai_strategy = { type = unit_ratio id = tactical_bomber value = 10 }
+	ai_strategy = { type = unit_ratio id = strategic_bomber value = 0 }
+	ai_strategy = { type = unit_ratio id = naval_bomber value = 5 }
+	ai_strategy = { type = unit_ratio id = capital_ship value = 20 }
+	ai_strategy = { type = unit_ratio id = submarine value = 10 }
+	ai_strategy = { type = unit_ratio id = screen_ship value = 30 }
+	ai_strategy = { type = unit_ratio id = convoy value = 15 }
+
+	ai_strategy = { type = equipment_production_factor id = infantry value = 50 }
+	ai_strategy = { type = equipment_production_factor id = cavalry value = 10 }
+
+	ai_strategy = { type = template_prio id = infantry value = 75 }
+	ai_strategy = { type = template_prio id = cavalry value = 10 }
+	ai_strategy = { type = template_prio id = garrison value = 5 }
+	ai_strategy = { type = template_prio id = suppression value = 5 }
+	ai_strategy = { type = template_prio id = light_armor value = 5 }
+	ai_strategy = { type = template_prio id = medium_armor value = -10 }
+	ai_strategy = { type = template_prio id = heavy_armor value = -50 }
+
+	ai_strategy = { type = save_equipment id = rifle_equipment value = 1001 }
+	ai_strategy = { type = save_equipment id = carbine_equipment value = 1001 }
+}
+
+minimum_artillery_production = {
+	enable = { num_of_military_factories < 2 }
+	abort = { num_of_military_factories > 1 }
+
+	ai_strategy = { type = equipment_production_factor id = artillery value = -100 }
+}
+default_artillery_production = {
+	enable = { num_of_military_factories > 9 }
+	abort = { num_of_military_factories < 10 }
+
+	ai_strategy = { type = equipment_production_factor id = artillery value = 15 }
+}
+major_artillery_production = {
+	enable = { num_of_military_factories > 19 }
+	abort = { num_of_military_factories < 20 }
+
+	ai_strategy = { type = equipment_production_factor id = artillery value = 25 }
+}
+
+default_suppression_production = {
+	enable = {
+		OR = {
+			num_occupied_states > 1
+			any_owned_state = { check_variable = { var = resistance value = 2 compare = greater_than } }
+		}
+	}
+	abort = {
+		NOT = {
+			num_occupied_states > 1
+			any_owned_state = { check_variable = { var = resistance value = 2 compare = greater_than } }
+		}
+	}
+
+	ai_strategy = { type = role_ratio id = infantry value = -2 }
+	ai_strategy = { type = role_ratio id = suppression value = 2 }
+}
+less_garrison_production = {
+	enable = { num_of_controlled_states < 5 }
+	abort = { num_of_controlled_states > 4 }
+
+	ai_strategy = { type = role_ratio id = infantry value = 5 }
+	ai_strategy = { type = role_ratio id = garrison value = -5 }
+}
+
+default_marine_production = {
+	enable = {
+		has_tech = training_marines_0
+		is_actual_major = yes
+	}
+	abort = { NOT = { is_actual_major = yes } }
+
+	ai_strategy = { type = role_ratio id = infantry value = -2 }
+	ai_strategy = { type = role_ratio id = marine value = 2 }
+}
+extra_marine_production = {
+	enable = {
+		has_tech = training_marines_0
+		OR = {
+			original_tag = JAP
+			original_tag = CTW
+			original_tag = CQY
+			original_tag = CJS
+			original_tag = CZJ
+			original_tag = CSH
+			original_tag = CFJ
+			original_tag = CSD
+			AND = {
+				has_war = yes
+				num_of_naval_factories > 10
+				NOT = { any_enemy_country = { is_neighbor_of = ROOT } }
+			}
+		}
+	}
+	abort = {
+		NOT = {
+			original_tag = JAP
+			original_tag = CTW
+			original_tag = CQY
+			original_tag = CJS
+			original_tag = CZJ
+			original_tag = CSH
+			original_tag = CFJ
+			original_tag = CSD
+			AND = {
+				has_war = yes
+				num_of_naval_factories > 10
+				NOT = { any_enemy_country = { is_neighbor_of = ROOT } }
+			}
+		}
+	}
+
+	ai_strategy = { type = role_ratio id = infantry value = -3 }
+	ai_strategy = { type = role_ratio id = marine value = 3 }
+}
+
+default_mountaineer_production = {
+	enable = { has_tech = training_mountaineers_0 }
+	abort = { always = no }
+
+	ai_strategy = { type = role_ratio id = infantry value = -3 }
+	ai_strategy = { type = role_ratio id = mountaineer value = 3 }
+}
+more_mountaineer_focused_nation = {
+	enable = {
+		has_tech = training_mountaineers_0
+		OR = {
+			original_tag = CSC
+			original_tag = CYN
+			original_tag = CGX
+			original_tag = CGZ
+			original_tag = CFJ
+			original_tag = CSX
+			original_tag = CXZ
+			original_tag = NEP
+			original_tag = MON
+			original_tag = TAN
+		}
+	}
+	abort = { always = no }
+
+	ai_strategy = { type = role_ratio id = infantry value = -2 }
+	ai_strategy = { type = role_ratio id = mountaineer value = 2 }
+}
+
+make_less_cavalry = {
+	enable = { num_of_military_factories > 10 }
+	abort = { num_of_military_factories < 11 }
+
+	ai_strategy = { type = role_ratio id = infantry value = 10 }
+	ai_strategy = { type = role_ratio id = cavalry value = -10 }
+}
+more_cavalry_focused_nation = {
+	enable = {
+		OR = {
+			original_tag = MON
+			original_tag = TAN
+			original_tag = CGS
+			original_tag = CQH
+			original_tag = CNX
+		}
+	}
+	abort = { always = no }
+
+	ai_strategy = { type = role_ratio id = infantry value = -20 }
+	ai_strategy = { type = role_ratio id = cavalry value = 20 }
+}
+
+default_armored_production = {
+	enable = {
+		has_tech = tankette_equipment
+		num_of_military_factories > 10
+	}
+	abort = { num_of_military_factories < 11 }
+
+	ai_strategy = { type = role_ratio id = infantry value = -5 }
+	ai_strategy = { type = role_ratio id = armor value = 5 }
+}
+default_heavy_armor_production = {
+	enable = {
+		has_tech = tankette_equipment
+		has_tech = medium_tank_equipment
+		num_of_military_factories > 24
+	}
+	abort = { num_of_military_factories < 25 }
+
+	ai_strategy = { type = role_ratio id = armor value = -2 }
+	ai_strategy = { type = role_ratio id = heavy_armor value = 2 }
+}
+higher_armored_production = {
+	enable = {
+		has_tech = tankette_equipment
+		num_of_military_factories > 25
+	}
+	abort = { num_of_military_factories < 26 }
+
+	ai_strategy = { type = role_ratio id = infantry value = -5 }
+	ai_strategy = { type = role_ratio id = armor value = 5 }
+}
+higher_heavy_armor_production = {
+	enable = {
+		has_tech = tankette_equipment
+		has_tech = medium_tank_equipment
+		num_of_military_factories > 35
+	}
+	abort = { num_of_military_factories < 36 }
+
+	ai_strategy = { type = role_ratio id = armor value = -2 }
+	ai_strategy = { type = role_ratio id = heavy_armor value = 2 }
+}
+more_armor_focused_nation = {
+	enable = {
+		num_of_military_factories > 20
+		OR = {
+			tag = CGD
+			tag = CFT
+			tag = CZL
+			tag = CBJ
+		}
+		OR = {
+			has_tech = tankette_equipment
+			has_tech = light_tank_equipment
+			has_tech = medium_tank_equipment
+		}
+	}
+	abort = { num_of_military_factories < 21 }
+
+	ai_strategy = { type = role_ratio id = infantry value = -7 }
+	ai_strategy = { type = role_ratio id = armor value = 5 }
+	ai_strategy = { type = role_ratio id = heavy_armor value = 2 }
+	ai_strategy = { type = template_prio id = light_armor value = 50 }
+	ai_strategy = { type = template_prio id = heavy_armor value = 100 }
+	ai_strategy = { type = template_prio id = medium_armor value = 50 }
+}
+
+halt_light_armor_production_in_transitioning = {
+	enable = {
+		has_template_majority_unit = light_tank_equipment
+		num_of_military_factories > 30
+		OR = {
+			has_equipment = { tankette_equipment > 600 }
+			date > 1922.1.1
+		}
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = { type = equipment_variant_production_factor id = tankette_equipment value = -100 }
+	ai_strategy = { type = equipment_variant_production_factor id = light_tank_equipment value = 100 }
+}
+super_boost_light_for_med_armor = {
+	enable = {
+		has_tech = light_tank_equipment
+		num_of_military_factories > 30
+		NOT = { has_template_majority_unit = tankette }
+	}
+	abort = {
+		OR = {
+			has_template_majority_unit = tankette
+			num_of_military_factories < 31
+		}
+	}
+
+	ai_strategy = { type = template_xp_reserve value = -125 }
+	ai_strategy = { type = template_prio id = tankette value = 100 }
+	ai_strategy = { type = template_prio id = light_tank value = 150 }
+}
+
+default_antitank_production = {
+	enable = {
+		num_of_military_factories > 10
+		has_tech = cannon_equipment_1
+		has_tech = engineers_0
+		OR = {
+			any_enemy_country = {
+				ROOT = { estimated_intel_max_armor = { tag = PREV value > 25 } }
+			}
+			any_neighbor_country = {
+				NOT = {
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					ROOT = { is_subject_of = PREV }
+					has_war_with = ROOT
+				}
+				ROOT = { estimated_intel_max_armor = { tag = PREV value > 25 } }
+			}
+		}
+	}
+	abort = {
+		NOT = {
+			num_of_military_factories < 10
+			OR = {
+				any_enemy_country = {
+					ROOT = { estimated_intel_max_armor = { tag = PREV value > 25 } }
+				}
+				any_neighbor_country = {
+					NOT = {
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						ROOT = { is_subject_of = PREV }
+						has_war_with = ROOT
+					}
+					ROOT = { estimated_intel_max_armor = { tag = PREV value > 25 } }
+				}
+			}
+		}
+	}
+
+	ai_strategy = { type = role_ratio id = infantry value = -3 }
+	ai_strategy = { type = role_ratio id = cavalry value = -2 }
+	ai_strategy = { type = role_ratio id = anti_tank value = 5 }
+}
+
+
+slightly_naval_focused_nation = {
+	enable = {
+		OR = {
+			tag = JAP
+			tag = CSH
+			tag = CJS
+			tag = CZJ
+			tag = CFJ
+			tag = CSD
+		}
+	}
+
+	ai_strategy = { type = unit_ratio id = capital_ship value = 1 }
+	ai_strategy = { type = unit_ratio id = submarine value = 1 }
+	ai_strategy = { type = unit_ratio id = screen_ship value = 1 }
+	ai_strategy = { type = unit_ratio id = convoy value = 1 }
+}
+more_naval_focused_nation = {
+	enable = {
+		OR = {
+			tag = JAP
+			tag = CSH
+			tag = CJS
+			tag = CZJ
+			tag = CFJ
+			tag = CSD
+			tag = CFT
+			tag = CGD
+		}
+		OR = {
+			date > 1922.1.1
+			has_global_flag = China_Unification
+		}
+	}
+
+	ai_strategy = { type = unit_ratio id = capital_ship value = 2 }
+	ai_strategy = { type = unit_ratio id = submarine value = 1 }
+	ai_strategy = { type = unit_ratio id = screen_ship value = 1 }
+	ai_strategy = { type = unit_ratio id = convoy value = 1 }
+}
+
+default_pp_spend_amount = {
+	enable = { always = yes }
+
+	ai_strategy = { type = pp_spend_amount id = idea value = 100 }
+	ai_strategy = { type = pp_spend_amount id = decision value = 100 }
+}
+do_not_waste_pp_on_leaders = {
+	enable = {
+		has_war = no
+		has_political_power < 200
+	}
+	abort = {
+		OR = {
+			has_war = yes
+			NOT = { has_political_power < 200 }
+		}
+	}
+
+	ai_strategy = { type = pp_spend_priority id = general value = -9999 }
+	ai_strategy = { type = pp_spend_priority id = admiral value = -9999 }
+}
+do_not_waste_pp_if_saving_for_manpower_laws = {
+	enable = {
+		manpower_per_military_factory < 500
+		has_war = yes
+	}
+	abort = {
+		OR = {
+			manpower_per_military_factory > 500
+			has_war = no
+		}
+	}
+
+	ai_strategy = { type = pp_spend_priority id = relation value = -9999 }
+	ai_strategy = { type = pp_spend_priority id = guarantee value = -9999 }
+}
+do_not_waste_pp_befriend = {
+	enable = { has_political_power < 200 }
+	abort = { has_political_power > 199 }
+
+	ai_strategy = { type = pp_spend_priority id = relation value = -9999 }
+}
+
+default_stockpile_management = {
+	enable = { num_divisions > 150 }
+	abort = { num_divisions < 130 }
+
+	ai_strategy = { type = equipment_stockpile_surplus_ratio value = 35 }
+}
+excess_rifle_production_1 = {
+	enable = {
+		has_equipment = { rifle_equipment > 20000 }
+	}
+	abort = {
+		has_equipment = { rifle_equipment < 15000 }
+	}
+
+	ai_strategy = { type = equipment_production_factor id = infantry value = -50 }
+	ai_strategy = { type = equipment_production_factor id = fighter value = 8 }
+	ai_strategy = { type = equipment_production_factor id = motorized value = 16 }
+	ai_strategy = { type = equipment_production_factor id = artillery value = 8 }
+}
+excess_rifle_production_2 = {
+	enable = {
+		has_equipment = { rifle_equipment > 50000 }
+	}
+	abort = {
+		has_equipment = { rifle_equipment < 40000 }
+	}
+
+	ai_strategy = { type = equipment_production_factor id = infantry value = -50 }
+	ai_strategy = { type = equipment_production_factor id = fighter value = 8 }
+	ai_strategy = { type = equipment_production_factor id = motorized value = 16 }
+	ai_strategy = { type = equipment_production_factor id = artillery value = 8 }
+}
+excess_carbine_production_1 = {
+	enable = {
+		has_equipment = { carbine_equipment > 20000 }
+	}
+	abort = {
+		has_equipment = { carbine_equipment < 15000 }
+	}
+
+	ai_strategy = { type = equipment_production_factor id = cavalry value = -50 }
+	ai_strategy = { type = equipment_production_factor id = fighter value = 2 }
+	ai_strategy = { type = equipment_production_factor id = motorized value = 4 }
+	ai_strategy = { type = equipment_production_factor id = artillery value = 2 }
+}
+excess_carbine_production_2 = {
+	enable = {
+		has_equipment = { carbine_equipment > 50000 }
+	}
+	abort = {
+		has_equipment = { carbine_equipment < 40000 }
+	}
+
+	ai_strategy = { type = equipment_production_factor id = cavalry value = -50 }
+	ai_strategy = { type = equipment_production_factor id = fighter value = 2 }
+	ai_strategy = { type = equipment_production_factor id = motorized value = 4 }
+	ai_strategy = { type = equipment_production_factor id = artillery value = 2 }
+}
+excess_artillery_production_1 = {
+	enable = { has_equipment = { howitzer_equipment > 15000 } }
+	abort = { has_equipment = { howitzer_equipment < 12500 } }
+
+	ai_strategy = { type = equipment_production_factor id = artillery value = -25 }
+}
+excess_motorized_production_1 = {
+	enable = { has_equipment = { motorized_equipment > 20000 } }
+	abort = { has_equipment = { motorized_equipment < 19000 } }
+
+	ai_strategy = { type = equipment_production_factor id = motorized value = -15 }
+	ai_strategy = { type = equipment_production_factor id = infantry value = 5 }
+	ai_strategy = { type = equipment_production_factor id = fighter value = 5 }
+}
+excess_motorized_production_2 = {
+	enable = { has_equipment = { motorized_equipment > 30000 } }
+	abort = { has_equipment = { motorized_equipment < 29000 } }
+
+	ai_strategy = { type = equipment_production_factor id = motorized value = -40 }
+	ai_strategy = { type = equipment_production_factor id = infantry value = 15 }
+	ai_strategy = { type = equipment_production_factor id = armor value = 5 }
+	ai_strategy = { type = equipment_production_factor id = anti_tank value = 5 }
+	ai_strategy = { type = equipment_production_factor id = fighter value = 15 }
+}
+
+convoy_production_emergency = {
+	enable = {
+		num_of_naval_factories > 0
+		has_equipment = { convoy_equipment < 20 }
+	}
+	abort = { has_equipment = { convoy_equipment > 40 } }
+
+	ai_strategy = { type = equipment_production_factor id = carrier value = -50 }
+	ai_strategy = { type = equipment_production_factor id = capital_ship value = -50 }
+	ai_strategy = { type = equipment_production_factor id = screen_ship value = -50 }
+	ai_strategy = { type = equipment_production_factor id = convoy value = 200 }
+}
+extra_convoy_production = {
+	enable = {
+		has_war = yes
+		has_equipment = { convoy_equipment < 60 }
+		OR = {
+			num_of_naval_factories > 10
+			NOT = { any_enemy_country = { is_neighbor_of = ROOT } }
+		}
+	}
+	abort = {
+		OR = {
+			has_war = no
+			has_equipment = { convoy_equipment > 80 }
+			NOT = {
+				num_of_naval_factories > 10
+				NOT = { any_enemy_country = { is_neighbor_of = ROOT } }
+			}
+		}
+	}
+
+	ai_strategy = { type = equipment_production_factor id = convoy value = 50 }
+}
+
+naval_bombers_strategy = {
+	enable = { NOT = { any_owned_state = { is_coastal = yes } } }
+	abort = { any_owned_state = { is_coastal = yes } }
+
+	ai_strategy = { type = unit_ratio id = tactical_bomber value = 5 }
+	ai_strategy = { type = unit_ratio id = naval_bomber value = -5 }
+}
+
+superior_firepower_ratios = {
+	enable = {
+		has_tech = doctrine_surround_and_lure
+		num_of_military_factories > 10
+	}
+	abort = { num_of_military_factories < 11 }
+
+	ai_strategy = { type = role_ratio id = infantry value = -10 }
+	ai_strategy = { type = role_ratio id = armor value = 5 }
+	ai_strategy = { type = role_ratio id = heavy_armor value = 5 }
+	ai_strategy = { type = unit_ratio id = cas value = 5 }
+}
+grand_battle_plan_ratios = {
+	enable = {
+		has_tech = doctrine_bloodthirsty_fortification
+		has_tech = cannon_equipment_1
+		has_tech = engineers_0
+		num_of_military_factories > 10
+	}
+	abort = { num_of_military_factories < 11 }
+
+	ai_strategy = { type = role_ratio id = infantry value = 10 }
+	ai_strategy = { type = role_ratio id = anti_tank value = 5 }
+}
+mobile_warfare_ratios = {
+	enable = {
+		has_tech = doctrine_stormtrooper
+		has_tech = tankette_equipment
+		has_tech = cavalry_equipment_0
+		num_of_military_factories > 10
+	}
+	abort = { num_of_military_factories < 11 }
+
+	ai_strategy = { type = role_ratio id = infantry value = -10 }
+	ai_strategy = { type = role_ratio id = armor value = 10 }
+	ai_strategy = { type = role_ratio id = heavy_armor value = 5 }
+}
+mass_assault_ratios = {
+	enable = {
+		has_tech = doctrine_large_depth_combat
+		has_tech = cannon_equipment_1
+		has_tech = engineers_0
+		num_of_military_factories > 10
+	}
+	abort = { num_of_military_factories < 11 }
+
+	ai_strategy = { type = role_ratio id = infantry value = 25 }
+	ai_strategy = { type = role_ratio id = anti_tank value = 5 }
+}
+
+ignore_chinese_civil_war = {
+	enable = {
+		NOT = {
+			has_country_flag = SH_WAR
+			has_country_flag = SH_PAR
+			original_tag = CFT
+			original_tag = CZL
+			original_tag = CAH
+			original_tag = CGX
+			original_tag = CYN
+			original_tag = CSC
+			original_tag = CSX
+			original_tag = CXJ
+			original_tag = CGD
+			original_tag = CHN
+			original_tag = CGZ
+			original_tag = CHN
+			original_tag = CJG
+			original_tag = CEX
+			original_tag = CYX
+			original_tag = CSD
+			original_tag = CSA
+			original_tag = CQY
+			original_tag = CHE
+			original_tag = CFJ
+			original_tag = CCH
+			original_tag = CRH
+			original_tag = CJX
+			original_tag = CJS
+			original_tag = CHB
+			original_tag = CZJ
+			original_tag = CHJ
+			original_tag = CJL
+			original_tag = CGS
+			original_tag = CNX
+			original_tag = CQH
+			original_tag = CSY
+			original_tag = CXK
+			original_tag = CBJ
+			original_tag = MON
+			original_tag = TAN
+			original_tag = CSH
+		}
+	}
+	abort = {
+		OR = {
+			has_country_flag = SH_WAR
+			has_country_flag = SH_PAR
+			original_tag = CFT
+			original_tag = CZL
+			original_tag = CAH
+			original_tag = CGX
+			original_tag = CYN
+			original_tag = CSC
+			original_tag = CSX
+			original_tag = CXJ
+			original_tag = CGD
+			original_tag = CHN
+			original_tag = CGZ
+			original_tag = CHN
+			original_tag = CJG
+			original_tag = CEX
+			original_tag = CYX
+			original_tag = CSD
+			original_tag = CSA
+			original_tag = CQY
+			original_tag = CHE
+			original_tag = CFJ
+			original_tag = CCH
+			original_tag = CRH
+			original_tag = CJX
+			original_tag = CJS
+			original_tag = CHB
+			original_tag = CZJ
+			original_tag = CHJ
+			original_tag = CJL
+			original_tag = CGS
+			original_tag = CNX
+			original_tag = CQH
+			original_tag = CSY
+			original_tag = CXK
+			original_tag = CBJ
+			original_tag = MON
+			original_tag = TAN
+			original_tag = CSH
+		}
+	}
+
+	ai_strategy = { type = invade id = "CFT" value = -10000 }
+	ai_strategy = { type = invade id = "CZL" value = -10000 }
+	ai_strategy = { type = invade id = "CAH" value = -10000 }
+	ai_strategy = { type = invade id = "CGX" value = -10000 }
+	ai_strategy = { type = invade id = "CYN" value = -10000 }
+	ai_strategy = { type = invade id = "CSC" value = -10000 }
+	ai_strategy = { type = invade id = "CSX" value = -10000 }
+	ai_strategy = { type = invade id = "CXJ" value = -10000 }
+	ai_strategy = { type = invade id = "CGD" value = -10000 }
+	ai_strategy = { type = invade id = "CHN" value = -10000 }
+	ai_strategy = { type = invade id = "CGZ" value = -10000 }
+	ai_strategy = { type = invade id = "CJG" value = -10000 }
+	ai_strategy = { type = invade id = "CEX" value = -10000 }
+	ai_strategy = { type = invade id = "CYX" value = -10000 }
+	ai_strategy = { type = invade id = "CSD" value = -10000 }
+	ai_strategy = { type = invade id = "CSA" value = -10000 }
+	ai_strategy = { type = invade id = "CQY" value = -10000 }
+	ai_strategy = { type = invade id = "CHE" value = -10000 }
+	ai_strategy = { type = invade id = "CFJ" value = -10000 }
+	ai_strategy = { type = invade id = "CCH" value = -10000 }
+	ai_strategy = { type = invade id = "CRH" value = -10000 }
+	ai_strategy = { type = invade id = "CJX" value = -10000 }
+	ai_strategy = { type = invade id = "CJS" value = -10000 }
+	ai_strategy = { type = invade id = "CHB" value = -10000 }
+	ai_strategy = { type = invade id = "CZJ" value = -10000 }
+	ai_strategy = { type = invade id = "CHJ" value = -10000 }
+	ai_strategy = { type = invade id = "CJL" value = -10000 }
+	ai_strategy = { type = invade id = "CGS" value = -10000 }
+	ai_strategy = { type = invade id = "CNX" value = -10000 }
+	ai_strategy = { type = invade id = "CQH" value = -10000 }
+	ai_strategy = { type = invade id = "CSY" value = -10000 }
+	ai_strategy = { type = invade id = "CXK" value = -10000 }
+	ai_strategy = { type = invade id = "CBJ" value = -10000 }
+	ai_strategy = { type = invade id = "MON" value = -10000 }
+	ai_strategy = { type = invade id = "TAN" value = -10000 }
+	ai_strategy = { type = invade id = "CSH" value = -10000 }
+	ai_strategy = { type = alliance id = "CFT" value = -10000 }
+	ai_strategy = { type = alliance id = "CZL" value = -10000 }
+	ai_strategy = { type = alliance id = "CAH" value = -10000 }
+	ai_strategy = { type = alliance id = "CGX" value = -10000 }
+	ai_strategy = { type = alliance id = "CYN" value = -10000 }
+	ai_strategy = { type = alliance id = "CSC" value = -10000 }
+	ai_strategy = { type = alliance id = "CSX" value = -10000 }
+	ai_strategy = { type = alliance id = "CXJ" value = -10000 }
+	ai_strategy = { type = alliance id = "CGD" value = -10000 }
+	ai_strategy = { type = alliance id = "CHN" value = -10000 }
+	ai_strategy = { type = alliance id = "CGZ" value = -10000 }
+	ai_strategy = { type = alliance id = "CJG" value = -10000 }
+	ai_strategy = { type = alliance id = "CEX" value = -10000 }
+	ai_strategy = { type = alliance id = "CYX" value = -10000 }
+	ai_strategy = { type = alliance id = "CSD" value = -10000 }
+	ai_strategy = { type = alliance id = "CSA" value = -10000 }
+	ai_strategy = { type = alliance id = "CQY" value = -10000 }
+	ai_strategy = { type = alliance id = "CHE" value = -10000 }
+	ai_strategy = { type = alliance id = "CFJ" value = -10000 }
+	ai_strategy = { type = alliance id = "CCH" value = -10000 }
+	ai_strategy = { type = alliance id = "CRH" value = -10000 }
+	ai_strategy = { type = alliance id = "CJX" value = -10000 }
+	ai_strategy = { type = alliance id = "CJS" value = -10000 }
+	ai_strategy = { type = alliance id = "CHB" value = -10000 }
+	ai_strategy = { type = alliance id = "CZJ" value = -10000 }
+	ai_strategy = { type = alliance id = "CHJ" value = -10000 }
+	ai_strategy = { type = alliance id = "CJL" value = -10000 }
+	ai_strategy = { type = alliance id = "CGS" value = -10000 }
+	ai_strategy = { type = alliance id = "CNX" value = -10000 }
+	ai_strategy = { type = alliance id = "CQH" value = -10000 }
+	ai_strategy = { type = alliance id = "CSY" value = -10000 }
+	ai_strategy = { type = alliance id = "CXK" value = -10000 }
+	ai_strategy = { type = alliance id = "CBJ" value = -10000 }
+	ai_strategy = { type = alliance id = "MON" value = -10000 }
+	ai_strategy = { type = alliance id = "TAN" value = -10000 }
+	ai_strategy = { type = alliance id = "CSH" value = -10000 }
+	ai_strategy = { type = ignore id = "CFT" value = 10000 }
+	ai_strategy = { type = ignore id = "CZL" value = 10000 }
+	ai_strategy = { type = ignore id = "CAH" value = 10000 }
+	ai_strategy = { type = ignore id = "CGX" value = 10000 }
+	ai_strategy = { type = ignore id = "CYN" value = 10000 }
+	ai_strategy = { type = ignore id = "CSC" value = 10000 }
+	ai_strategy = { type = ignore id = "CSX" value = 10000 }
+	ai_strategy = { type = ignore id = "CXJ" value = 10000 }
+	ai_strategy = { type = ignore id = "CGD" value = 10000 }
+	ai_strategy = { type = ignore id = "CHN" value = 10000 }
+	ai_strategy = { type = ignore id = "CGZ" value = 10000 }
+	ai_strategy = { type = ignore id = "CJG" value = 10000 }
+	ai_strategy = { type = ignore id = "CEX" value = 10000 }
+	ai_strategy = { type = ignore id = "CYX" value = 10000 }
+	ai_strategy = { type = ignore id = "CSD" value = 10000 }
+	ai_strategy = { type = ignore id = "CSA" value = 10000 }
+	ai_strategy = { type = ignore id = "CQY" value = 10000 }
+	ai_strategy = { type = ignore id = "CHE" value = 10000 }
+	ai_strategy = { type = ignore id = "CFJ" value = 10000 }
+	ai_strategy = { type = ignore id = "CCH" value = 10000 }
+	ai_strategy = { type = ignore id = "CRH" value = 10000 }
+	ai_strategy = { type = ignore id = "CJX" value = 10000 }
+	ai_strategy = { type = ignore id = "CJS" value = 10000 }
+	ai_strategy = { type = ignore id = "CHB" value = 10000 }
+	ai_strategy = { type = ignore id = "CZJ" value = 10000 }
+	ai_strategy = { type = ignore id = "CHJ" value = 10000 }
+	ai_strategy = { type = ignore id = "CJL" value = 10000 }
+	ai_strategy = { type = ignore id = "CGS" value = 10000 }
+	ai_strategy = { type = ignore id = "CNX" value = 10000 }
+	ai_strategy = { type = ignore id = "CQH" value = 10000 }
+	ai_strategy = { type = ignore id = "CSY" value = 10000 }
+	ai_strategy = { type = ignore id = "CXK" value = 10000 }
+	ai_strategy = { type = ignore id = "CBJ" value = 10000 }
+	ai_strategy = { type = ignore id = "MON" value = 10000 }
+	ai_strategy = { type = ignore id = "TAN" value = 10000 }
+	ai_strategy = { type = ignore id = "CSH" value = 10000 }
+	ai_strategy = { type = naval_avoid_region id = 122 value = 200 }
+	ai_strategy = { type = naval_avoid_region id = 123 value = 200 }
+	ai_strategy = { type = naval_avoid_region id = 124 value = 200 }
+}
+
+ignore_great_powers = {
+	enable = {
+		OR = {
+			has_country_flag = SH_WAR
+			has_country_flag = SH_PAR
+			original_tag = CFT
+			original_tag = CZL
+			original_tag = CAH
+			original_tag = CGX
+			original_tag = CYN
+			original_tag = CSC
+			original_tag = CSX
+			original_tag = CXJ
+			original_tag = CGD
+			original_tag = CHN
+			original_tag = CGZ
+			original_tag = CHN
+			original_tag = CJG
+			original_tag = CEX
+			original_tag = CYX
+			original_tag = CSD
+			original_tag = CSA
+			original_tag = CQY
+			original_tag = CHE
+			original_tag = CFJ
+			original_tag = CCH
+			original_tag = CRH
+			original_tag = CJX
+			original_tag = CJS
+			original_tag = CHB
+			original_tag = CZJ
+			original_tag = CHJ
+			original_tag = CJL
+			original_tag = CGS
+			original_tag = CNX
+			original_tag = CQH
+			original_tag = CSY
+			original_tag = CXK
+			original_tag = CBJ
+			original_tag = MON
+			original_tag = TAN
+			original_tag = CSH
+		}
+	}
+	abort = {
+		NOT = {
+			has_country_flag = SH_WAR
+			has_country_flag = SH_PAR
+			original_tag = CFT
+			original_tag = CZL
+			original_tag = CAH
+			original_tag = CGX
+			original_tag = CYN
+			original_tag = CSC
+			original_tag = CSX
+			original_tag = CXJ
+			original_tag = CGD
+			original_tag = CHN
+			original_tag = CGZ
+			original_tag = CHN
+			original_tag = CJG
+			original_tag = CEX
+			original_tag = CYX
+			original_tag = CSD
+			original_tag = CSA
+			original_tag = CQY
+			original_tag = CHE
+			original_tag = CFJ
+			original_tag = CCH
+			original_tag = CRH
+			original_tag = CJX
+			original_tag = CJS
+			original_tag = CHB
+			original_tag = CZJ
+			original_tag = CHJ
+			original_tag = CJL
+			original_tag = CGS
+			original_tag = CNX
+			original_tag = CQH
+			original_tag = CSY
+			original_tag = CXK
+			original_tag = CBJ
+			original_tag = MON
+			original_tag = TAN
+			original_tag = CSH
+		}
+	}
+
+	ai_strategy = { type = invade id = "KOR" value = -10000 }
+	ai_strategy = { type = invade id = "JAP" value = -10000 }
+	ai_strategy = { type = invade id = "INC" value = -10000 }
+	ai_strategy = { type = invade id = "BUR" value = -10000 }
+	ai_strategy = { type = invade id = "SIA" value = -10000 }
+	ai_strategy = { type = invade id = "PHL" value = -10000 }
+	ai_strategy = { type = invade id = "RYU" value = -10000 }
+	ai_strategy = { type = invade id = "SAK" value = -10000 }
+	ai_strategy = { type = invade id = "IND" value = -10000 }
+	ai_strategy = { type = invade id = "PAK" value = -10000 }
+	ai_strategy = { type = invade id = "BNG" value = -10000 }
+	ai_strategy = { type = invade id = "SRI" value = -10000 }
+	ai_strategy = { type = invade id = "MLD" value = -10000 }
+	ai_strategy = { type = invade id = "NEP" value = -10000 }
+	ai_strategy = { type = invade id = "BHU" value = -10000 }
+	ai_strategy = { type = invade id = "GOA" value = -10000 }
+	ai_strategy = { type = invade id = "PON" value = -10000 }
+	ai_strategy = { type = invade id = "MAL" value = -10000 }
+	ai_strategy = { type = invade id = "SIN" value = -10000 }
+	ai_strategy = { type = invade id = "BRU" value = -10000 }
+	ai_strategy = { type = invade id = "SAB" value = -10000 }
+	ai_strategy = { type = invade id = "SWK" value = -10000 }
+	ai_strategy = { type = invade id = "CTW" value = -10000 }
+	ai_strategy = { type = invade id = "CLS" value = -10000 }
+	ai_strategy = { type = invade id = "CXG" value = -10000 }
+	ai_strategy = { type = invade id = "CAO" value = -10000 }
+	ai_strategy = { type = invade id = "CWH" value = -10000 }
+	ai_strategy = { type = alliance id = "KOR" value = -10000 }
+	ai_strategy = { type = alliance id = "JAP" value = -10000 }
+	ai_strategy = { type = alliance id = "INC" value = -10000 }
+	ai_strategy = { type = alliance id = "BUR" value = -10000 }
+	ai_strategy = { type = alliance id = "SIA" value = -10000 }
+	ai_strategy = { type = alliance id = "PHL" value = -10000 }
+	ai_strategy = { type = alliance id = "RYU" value = -10000 }
+	ai_strategy = { type = alliance id = "SAK" value = -10000 }
+	ai_strategy = { type = alliance id = "IND" value = -10000 }
+	ai_strategy = { type = alliance id = "PAK" value = -10000 }
+	ai_strategy = { type = alliance id = "BNG" value = -10000 }
+	ai_strategy = { type = alliance id = "SRI" value = -10000 }
+	ai_strategy = { type = alliance id = "MLD" value = -10000 }
+	ai_strategy = { type = alliance id = "NEP" value = -10000 }
+	ai_strategy = { type = alliance id = "BHU" value = -10000 }
+	ai_strategy = { type = alliance id = "GOA" value = -10000 }
+	ai_strategy = { type = alliance id = "PON" value = -10000 }
+	ai_strategy = { type = alliance id = "MAL" value = -10000 }
+	ai_strategy = { type = alliance id = "SIN" value = -10000 }
+	ai_strategy = { type = alliance id = "BRU" value = -10000 }
+	ai_strategy = { type = alliance id = "SAB" value = -10000 }
+	ai_strategy = { type = alliance id = "SWK" value = -10000 }
+	ai_strategy = { type = alliance id = "CTW" value = -10000 }
+	ai_strategy = { type = alliance id = "CLS" value = -10000 }
+	ai_strategy = { type = alliance id = "CXG" value = -10000 }
+	ai_strategy = { type = alliance id = "CAO" value = -10000 }
+	ai_strategy = { type = alliance id = "CWH" value = -10000 }
+	ai_strategy = { type = ignore id = "KOR" value = 10000 }
+	ai_strategy = { type = ignore id = "JAP" value = 10000 }
+	ai_strategy = { type = ignore id = "INC" value = 10000 }
+	ai_strategy = { type = ignore id = "BUR" value = 10000 }
+	ai_strategy = { type = ignore id = "SIA" value = 10000 }
+	ai_strategy = { type = ignore id = "PHL" value = 10000 }
+	ai_strategy = { type = ignore id = "RYU" value = 10000 }
+	ai_strategy = { type = ignore id = "SAK" value = 10000 }
+	ai_strategy = { type = ignore id = "IND" value = 10000 }
+	ai_strategy = { type = ignore id = "PAK" value = 10000 }
+	ai_strategy = { type = ignore id = "BNG" value = 10000 }
+	ai_strategy = { type = ignore id = "SRI" value = 10000 }
+	ai_strategy = { type = ignore id = "MLD" value = 10000 }
+	ai_strategy = { type = ignore id = "NEP" value = 10000 }
+	ai_strategy = { type = ignore id = "BHU" value = 10000 }
+	ai_strategy = { type = ignore id = "GOA" value = 10000 }
+	ai_strategy = { type = ignore id = "PON" value = 10000 }
+	ai_strategy = { type = ignore id = "MAL" value = 10000 }
+	ai_strategy = { type = ignore id = "SIN" value = 10000 }
+	ai_strategy = { type = ignore id = "BRU" value = 10000 }
+	ai_strategy = { type = ignore id = "SAB" value = 10000 }
+	ai_strategy = { type = ignore id = "SWK" value = 10000 }
+	ai_strategy = { type = ignore id = "CTW" value = 10000 }
+	ai_strategy = { type = ignore id = "CLS" value = 10000 }
+	ai_strategy = { type = ignore id = "CXG" value = 10000 }
+	ai_strategy = { type = ignore id = "CAO" value = 10000 }
+	ai_strategy = { type = ignore id = "CWH" value = 10000 }
+}

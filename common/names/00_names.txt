@@ -1,0 +1,323 @@
+﻿default = {
+	names = { Zhu Wu Geng Shang Zheng Zhao Li Shi Liu Guo Yang Wang Ma Meng Gao Sun Xiao Zu Zhou Huang Bai Lu Xu Feng Deng Hua Gu Fei Fu Hu Mei Xue Liao Jin Ye He Lan Lan Fang Mao Hao Jiao Si Zuo Ding Bao Yan Han Luo Xie Yuan Ruan Niu Dong Lin Shen Su Yu Ren Xia Mo Dai Jiang Yue Jia Xiong Zhang Liang Song Yu Yu Lü Wei Yao Wei Zou Shi Meng Yan Hou Lei Long Duan Shao Wan Gu Lai Wu He Yin Shi Hong Gong }
+	surnames = { Baichuan Bingren Changshuo Chaoliu Chuanxian Cixiu Cuiya Delin Dinghou Dunchu Fangchen Fuchen Gechen Gechen Gongqia Gongxian Guangting Hanqing Hanzhang Hanqing Huafu Huanran Huanzhang Zhi Jianchu Jiansheng Jianfu Jiechen Jieshan Jiesan Jinbo Jinkang Jingheng Jingyu Jingzhi Junru Kecheng Keqiang Lanjiang Linge Liuchen Lüzhen Maochen Mengxiao Minyuan Mingde Mingxuan Qiwu Qidie Qiyu Qingjie Qingbo Renfu Ruwei Ruibo Shaoxuan Shaoyun }
+}
+
+JAP = {
+	male = { names = { Aritomo Goro Gentaro Gonnohyoe Heihachiro Hiroshi Hikonojo Hyoe Hayao Iwao Jiro Jinzaburo Kiyotaka Kuranosuke Kozo Kantaro Koichiro Kagenori Kageaki Kotohito Keisuke Kazushige Kenkichi Maresuke Masujiro Michisura Masatake Mitsuomi Mitsue Mineo Nariaki Nobuyoshi Rokuro Sukeyuki Sukenori Shoin Sumiyoshi Samata Soroku Shichiro Shigeto Sotokichi Shigeru Sadao Shinsaku Takayoshi Takamori Toshimichi Tsugumichi Tadakuni Tomonosuke Taro Toshiyoshi Tetsutaro Taruhito Takeaki Tamemoto Tomasaburo Yoshika Yoshinobu Yoshimichi Yoshida Yasukata Yahachi Yusaku Yoshifuru Yoshinori Yasuyoshi } }
+	female = { names = { Aimi Asami Asuka } }
+	surnames = { Arisugawa Arichi Akiyama Araki Dewa Enomoto Hasegawa Honjo Ito Inoue Ichinohe Itagaki Kido Kuroda Katsura Kodama Kabayama Kawamura Kuroki Kawakami Kamimura Kataoka Kamio Kato Kanin Katsu Makino Muto Minami Masaki Matsudaira Nakamuta Nogi Nire Nozu Okubo Oyama Omura Oku Okada Osumi Saigo Suzuki Sato Sakura Shibayama Shimamura Shirakawa Togo Takashima Tsuboi Tachibana Terauchi Tamon Takasugi Tokugawa Uehara Uryu Ugaki Ueda Yamagata Yamamoto Yamakawa Yashiro Yui Yamashita Yamaya }
+	callsigns = { Viper Lightning Devil Dragon Fury Bat Beer Sake Demon Dirty Lance Panther Shogun Vampire  "War Lord"  }
+}
+RYU = {
+	male = { names = { Aritomo Goro Gentaro Gonnohyoe Heihachiro Hiroshi Hikonojo Hyoe Hayao Iwao Jiro Jinzaburo Kiyotaka Kuranosuke Kozo Kantaro Koichiro Kagenori Kageaki Kotohito Keisuke Kazushige Kenkichi Maresuke Masujiro Michisura Masatake Mitsuomi Mitsue Mineo Nariaki Nobuyoshi Rokuro Sukeyuki Sukenori Shoin Sumiyoshi Samata Soroku Shichiro Shigeto Sotokichi Shigeru Sadao Shinsaku Takayoshi Takamori Toshimichi Tsugumichi Tadakuni Tomonosuke Taro Toshiyoshi Tetsutaro Taruhito Takeaki Tamemoto Tomasaburo Yoshika Yoshinobu Yoshimichi Yoshida Yasukata Yahachi Yusaku Yoshifuru Yoshinori Yasuyoshi } }
+	female = { names = { Aimi Asami Asuka } }
+	surnames = { Arisugawa Arichi Akiyama Araki Dewa Enomoto Hasegawa Honjo Ito Inoue Ichinohe Itagaki Kido Kuroda Katsura Kodama Kabayama Kawamura Kuroki Kawakami Kamimura Kataoka Kamio Kato Kanin Katsu Makino Muto Minami Masaki Matsudaira Nakamuta Nogi Nire Nozu Okubo Oyama Omura Oku Okada Osumi Saigo Suzuki Sato Sakura Shibayama Shimamura Shirakawa Togo Takashima Tsuboi Tachibana Terauchi Tamon Takasugi Tokugawa Uehara Uryu Ugaki Ueda Yamagata Yamamoto Yamakawa Yashiro Yui Yamashita Yamaya }
+	callsigns = { Viper Lightning Devil Dragon Fury Bat Beer Sake Demon Dirty Lance Panther Shogun Vampire  "War Lord"  }
+}
+SAK = {
+	male = { names = { Aritomo Goro Gentaro Gonnohyoe Heihachiro Hiroshi Hikonojo Hyoe Hayao Iwao Jiro Jinzaburo Kiyotaka Kuranosuke Kozo Kantaro Koichiro Kagenori Kageaki Kotohito Keisuke Kazushige Kenkichi Maresuke Masujiro Michisura Masatake Mitsuomi Mitsue Mineo Nariaki Nobuyoshi Rokuro Sukeyuki Sukenori Shoin Sumiyoshi Samata Soroku Shichiro Shigeto Sotokichi Shigeru Sadao Shinsaku Takayoshi Takamori Toshimichi Tsugumichi Tadakuni Tomonosuke Taro Toshiyoshi Tetsutaro Taruhito Takeaki Tamemoto Tomasaburo Yoshika Yoshinobu Yoshimichi Yoshida Yasukata Yahachi Yusaku Yoshifuru Yoshinori Yasuyoshi } }
+	female = { names = { Aimi Asami Asuka } }
+	surnames = { Arisugawa Arichi Akiyama Araki Dewa Enomoto Hasegawa Honjo Ito Inoue Ichinohe Itagaki Kido Kuroda Katsura Kodama Kabayama Kawamura Kuroki Kawakami Kamimura Kataoka Kamio Kato Kanin Katsu Makino Muto Minami Masaki Matsudaira Nakamuta Nogi Nire Nozu Okubo Oyama Omura Oku Okada Osumi Saigo Suzuki Sato Sakura Shibayama Shimamura Shirakawa Togo Takashima Tsuboi Tachibana Terauchi Tamon Takasugi Tokugawa Uehara Uryu Ugaki Ueda Yamagata Yamamoto Yamakawa Yashiro Yui Yamashita Yamaya }
+	callsigns = { Viper Lightning Devil Dragon Fury Bat Beer Sake Demon Dirty Lance Panther Shogun Vampire  "War Lord"  }
+}
+MON = {
+	male = { names = { "Peljidiin" "Balingiin" "Sodnomyn" "Kubilai" "Baterdene" "Dogsomyn" "Damdin" "Khorloogiin" "Dambyan" "Gonchigjalzangiin" "Badamdorj" "Chingis" "Otgonbayar" "Batbayar" } }
+	female = { names = {} }
+	surnames = { "Genden" "Amar" "Tserendorj" "Tomorbaatar" "Damdinbazar" "Bodoo" "Sukhbaatar" "Jamyan" "Choibalsan" "Chagdarjav" }
+	callsigns = {}
+}
+TAN = {
+	male = { names = { "Peljidiin" "Balingiin" "Sodnomyn" "Kubilai" "Baterdene" "Dogsomyn" "Damdin" "Khorloogiin" "Dambyan" "Gonchigjalzangiin" "Badamdorj" "Chingis" "Otgonbayar" "Batbayar" } }
+	female = { names = {} }
+	surnames = { "Genden" "Amar" "Tserendorj" "Tomorbaatar" "Damdinbazar" "Bodoo" "Sukhbaatar" "Jamyan" "Choibalsan" "Chagdarjav" }
+	callsigns = {}
+}
+INC = {
+	male = { names = { "Hai Cong" "Thanh Qui" "Hy Huu" Kien "Hang Xuan" "Kha Manh" "Vien Qui" "Thang Duc" "Phoung Qui" "Mai Qui" } }
+	female = { names = {} }
+	surnames = { Lan Giang Huy De Trieu }
+	callsigns = {}
+}
+BUR = {
+	male = { names = { Myat Min Thiha Zeya Wunna Htun Mya Aung Shwe Ne } }
+	female = { names = {} }
+	surnames = { Thaik  Aye Maung Oo Pyaw San }
+	callsigns = {}
+}
+SIA = {
+	male = { names = { Nangklao Mongkut Rama Chulalongkorn Chao Vajiravudh Prajadhipok Naritsaranuwatiwong Phya Plaek } }
+	female = { names = {} }
+	surnames = { Suriyawongse Saovabha Chichalerm Nitithada Phonphayuhasena  }
+	callsigns = {}
+}
+PHL = {
+	male = { names = { Emilio Apolinario Andrés José Hermano Jacinto Mariano Deodato Ladislao Teodoro } }
+	female = { names = {} }
+	surnames = { Aguainaldo Mabini Bonifacio Jacinto Rizal }
+	callsigns = {}
+}
+IND = {
+	male = { names = { Mohandas Narenda Dalbir Bipin Subrata Amarjeet Sanijv Ravi Praveen Surinder Balwant Sarath Amit Bimal Kumar Ranbir Manoj Suresh Sunil Sushila Meena Velu Aniruddha Shokin Ashwani Ashok Abhay Devraj Rudramurti Punita Anand Dipankar Ramnath Bahadur Atan Syed Kesur Bana Chain Ganga Gian Jadunath Mukund Surinder Triveni Varinder Sonam Ram Yogendra } }
+	female = { names = { Indira } }
+	surnames = { Neru Ghandi Modi Singh Suhag Rawat Hira Saha Sharma Nimbhorkar Talwar Thoge Hooda Bakshi Negi Hariz Chand Soni Verma Reddy Gupta Cheema Prasad Bharali Shivane Unni Sarin Patyal Chakravarty Bali Datta Naravane Chavan Chandra Bandyopadhyay Krishna Pannu Ambre Ahir Varadarajan Wangchuk Yadav }
+	callsigns = { }
+}
+PAK = {
+	male = { names = { Syad Ahmad Muhammed Aga Nawab Maulvi Karamat Abdul Nasir Maulana Ibraheem Bhai Hussain Malik Raees Choudhry Rahmat } }
+	female = { names = { } }
+	surnames = { Khan Ali Malik Nabiullah Sadiq Shafi Pirbhai Ahmed Baig Johar }
+	callsigns = { }
+}
+BNG = {
+	male = { names = { Mohandas Narenda Dalbir Bipin Subrata Amarjeet Sanijv Ravi Praveen Surinder Balwant Sarath Amit Bimal Kumar Ranbir Manoj Suresh Sunil Sushila Meena Velu Aniruddha Shokin Ashwani Ashok Abhay Devraj Rudramurti Punita Anand Dipankar Ramnath Bahadur Atan Syed Kesur Bana Chain Ganga Gian Jadunath Mukund Surinder Triveni Varinder Sonam Ram Yogendra } }
+	female = { names = { Indira } }
+	surnames = { Neru Ghandi Modi Singh Suhag Rawat Hira Saha Sharma Nimbhorkar Talwar Thoge Hooda Bakshi Negi Hariz Chand Soni Verma Reddy Gupta Cheema Prasad Bharali Shivane Unni Sarin Patyal Chakravarty Bali Datta Naravane Chavan Chandra Bandyopadhyay Krishna Pannu Ambre Ahir Varadarajan Wangchuk Yadav }
+	callsigns = { }
+}
+SRI = {
+	male = { names = { Mohandas Narenda Dalbir Bipin Subrata Amarjeet Sanijv Ravi Praveen Surinder Balwant Sarath Amit Bimal Kumar Ranbir Manoj Suresh Sunil Sushila Meena Velu Aniruddha Shokin Ashwani Ashok Abhay Devraj Rudramurti Punita Anand Dipankar Ramnath Bahadur Atan Syed Kesur Bana Chain Ganga Gian Jadunath Mukund Surinder Triveni Varinder Sonam Ram Yogendra } }
+	female = { names = { Indira } }
+	surnames = { Neru Ghandi Modi Singh Suhag Rawat Hira Saha Sharma Nimbhorkar Talwar Thoge Hooda Bakshi Negi Hariz Chand Soni Verma Reddy Gupta Cheema Prasad Bharali Shivane Unni Sarin Patyal Chakravarty Bali Datta Naravane Chavan Chandra Bandyopadhyay Krishna Pannu Ambre Ahir Varadarajan Wangchuk Yadav }
+	callsigns = { }
+}
+MLD = {
+	male = { names = { Mohandas Narenda Dalbir Bipin Subrata Amarjeet Sanijv Ravi Praveen Surinder Balwant Sarath Amit Bimal Kumar Ranbir Manoj Suresh Sunil Sushila Meena Velu Aniruddha Shokin Ashwani Ashok Abhay Devraj Rudramurti Punita Anand Dipankar Ramnath Bahadur Atan Syed Kesur Bana Chain Ganga Gian Jadunath Mukund Surinder Triveni Varinder Sonam Ram Yogendra } }
+	female = { names = { Indira } }
+	surnames = { Neru Ghandi Modi Singh Suhag Rawat Hira Saha Sharma Nimbhorkar Talwar Thoge Hooda Bakshi Negi Hariz Chand Soni Verma Reddy Gupta Cheema Prasad Bharali Shivane Unni Sarin Patyal Chakravarty Bali Datta Naravane Chavan Chandra Bandyopadhyay Krishna Pannu Ambre Ahir Varadarajan Wangchuk Yadav }
+	callsigns = { }
+}
+NEP = {
+	male = { names = { "Bhimsen" "Amar" "Ranjur" "Bhakti" "Jang" "Renaudip" "Shamsher" "Bir Shamsher" "Deva Shamsher" "Chandra Shamsher" "Bhim Shamsher" } }
+	female = { names = {} }
+	surnames = { "Thapa" "Singh Thapa" "Singh" "Rana" "Bahadur Rana" }
+	callsigns = {}
+}
+BHU = {
+	male = { names = { "Tsarong" "Chamba" "Trimon" "Penor" "Gendün" "Jamphel" "Norbhu" "Mipham" "Tsepon" "Andruk" "Namgang" } }
+	female = { names = {} }
+	surnames = { "Dzasa" "Wangyal" "Shatra" "Lungshar" "Rinpoche" "Chöphel" "Shakabpa" "Tashi" }
+	callsigns = {}
+}
+GOA = {
+	male = { names = { Mohandas Narenda Dalbir Bipin Subrata Amarjeet Sanijv Ravi Praveen Surinder Balwant Sarath Amit Bimal Kumar Ranbir Manoj Suresh Sunil Sushila Meena Velu Aniruddha Shokin Ashwani Ashok Abhay Devraj Rudramurti Punita Anand Dipankar Ramnath Bahadur Atan Syed Kesur Bana Chain Ganga Gian Jadunath Mukund Surinder Triveni Varinder Sonam Ram Yogendra } }
+	female = { names = { Indira } }
+	surnames = { Neru Ghandi Modi Singh Suhag Rawat Hira Saha Sharma Nimbhorkar Talwar Thoge Hooda Bakshi Negi Hariz Chand Soni Verma Reddy Gupta Cheema Prasad Bharali Shivane Unni Sarin Patyal Chakravarty Bali Datta Naravane Chavan Chandra Bandyopadhyay Krishna Pannu Ambre Ahir Varadarajan Wangchuk Yadav }
+	callsigns = { }
+}
+PON = {
+	male = { names = { Mohandas Narenda Dalbir Bipin Subrata Amarjeet Sanijv Ravi Praveen Surinder Balwant Sarath Amit Bimal Kumar Ranbir Manoj Suresh Sunil Sushila Meena Velu Aniruddha Shokin Ashwani Ashok Abhay Devraj Rudramurti Punita Anand Dipankar Ramnath Bahadur Atan Syed Kesur Bana Chain Ganga Gian Jadunath Mukund Surinder Triveni Varinder Sonam Ram Yogendra } }
+	female = { names = { Indira } }
+	surnames = { Neru Ghandi Modi Singh Suhag Rawat Hira Saha Sharma Nimbhorkar Talwar Thoge Hooda Bakshi Negi Hariz Chand Soni Verma Reddy Gupta Cheema Prasad Bharali Shivane Unni Sarin Patyal Chakravarty Bali Datta Naravane Chavan Chandra Bandyopadhyay Krishna Pannu Ambre Ahir Varadarajan Wangchuk Yadav }
+	callsigns = { }
+}
+MAL = {
+	male = { names = { Najib Muhammad Tengku Kadir "Tengku Kadir" Embok Eunos Ibrahim Pak Pandir Rashid Ahmad Nordin Abdul Amin Lokman Yaacob Elyas Mazlan } }
+	female = { names = { } }
+	surnames = { Razak Yusof Ali Suloh Abdullah Yaacob Sako Maidin Boestamam Aziz Latiff Omar }
+	callsigns = { }
+}
+SIN = {
+	male = { names = { Najib Muhammad Tengku Kadir "Tengku Kadir" Embok Eunos Ibrahim Pak Pandir Rashid Ahmad Nordin Abdul Amin Lokman Yaacob Elyas Mazlan } }
+	female = { names = { } }
+	surnames = { Razak Yusof Ali Suloh Abdullah Yaacob Sako Maidin Boestamam Aziz Latiff Omar }
+	callsigns = { }
+}
+BRU = {
+	male = { names = { Najib Muhammad Tengku Kadir "Tengku Kadir" Embok Eunos Ibrahim Pak Pandir Rashid Ahmad Nordin Abdul Amin Lokman Yaacob Elyas Mazlan } }
+	female = { names = { } }
+	surnames = { Razak Yusof Ali Suloh Abdullah Yaacob Sako Maidin Boestamam Aziz Latiff Omar }
+	callsigns = { }
+}
+SAB = {
+	male = { names = { Najib Muhammad Tengku Kadir "Tengku Kadir" Embok Eunos Ibrahim Pak Pandir Rashid Ahmad Nordin Abdul Amin Lokman Yaacob Elyas Mazlan } }
+	female = { names = { } }
+	surnames = { Razak Yusof Ali Suloh Abdullah Yaacob Sako Maidin Boestamam Aziz Latiff Omar }
+	callsigns = { }
+}
+SWK = {
+	male = { names = { Najib Muhammad Tengku Kadir "Tengku Kadir" Embok Eunos Ibrahim Pak Pandir Rashid Ahmad Nordin Abdul Amin Lokman Yaacob Elyas Mazlan } }
+	female = { names = { } }
+	surnames = { Razak Yusof Ali Suloh Abdullah Yaacob Sako Maidin Boestamam Aziz Latiff Omar }
+	callsigns = { }
+}
+
+PRI = {
+	male = { names = { Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri } }
+	female = { names = { Jelena Ludmila } }
+	surnames = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko }
+	callsigns = { Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Vodka }
+}
+AMU = {
+	male = { names = { Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri } }
+	female = { names = { Jelena Ludmila } }
+	surnames = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko }
+	callsigns = { Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Vodka }
+}
+TUG = {
+	male = { names = { Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri } }
+	female = { names = { Jelena Ludmila } }
+	surnames = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko }
+	callsigns = { Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Vodka }
+}
+KAM = {
+	male = { names = { Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri } }
+	female = { names = { Jelena Ludmila } }
+	surnames = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko }
+	callsigns = { Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Vodka }
+}
+CHU = {
+	male = { names = { Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri } }
+	female = { names = { Jelena Ludmila } }
+	surnames = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko }
+	callsigns = { Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Vodka }
+}
+ZAB = {
+	male = { names = { Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri } }
+	female = { names = { Jelena Ludmila } }
+	surnames = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko }
+	callsigns = { Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Vodka }
+}
+YAK = {
+	male = { names = { Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri } }
+	female = { names = { Jelena Ludmila } }
+	surnames = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko }
+	callsigns = { Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Vodka }
+}
+ORI = {
+	male = { names = { Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri } }
+	female = { names = { Jelena Ludmila } }
+	surnames = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko }
+	callsigns = { Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Vodka }
+}
+SEM = {
+	male = { names = { Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri } }
+	female = { names = { Jelena Ludmila } }
+	surnames = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko }
+	callsigns = { Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Vodka }
+}
+ALA = {
+	male = { names = { "Aibek" "Bolat" "Erasyl" "Makhmud" "Nurasyl" "Ruslan" "Serik" "Talgat" "Temir" "Timur" } }
+	female = { names = { "Aiday" "Bibigul" "Gulnar" "Inkar" "Inzhu" "Saltanat" "Sezim" "Zhuldyz" } }
+	surnames = { "Abdulayev" "Baizhanov" "Erjanov" "Kadyrov" "Mendygaliev" "Nazarbayev" "Ospan" "Ramadanov" "Sapiyev" "Talgatov" }
+	callsigns = {}
+}
+TUK = {
+	male = { names = { "Aibek" "Bolat" "Erasyl" "Makhmud" "Nurasyl" "Ruslan" "Serik" "Talgat" "Temir" "Timur" } }
+	female = { names = { "Aiday" "Bibigul" "Gulnar" "Inkar" "Inzhu" "Saltanat" "Sezim" "Zhuldyz" } }
+	surnames = { "Abdulayev" "Baizhanov" "Erjanov" "Kadyrov" "Mendygaliev" "Nazarbayev" "Ospan" "Ramadanov" "Sapiyev" "Talgatov" }
+	callsigns = {}
+}
+BAS = {
+	male = { names = { "Aibek" "Bolat" "Erasyl" "Makhmud" "Nurasyl" "Ruslan" "Serik" "Talgat" "Temir" "Timur" } }
+	female = { names = { "Aiday" "Bibigul" "Gulnar" "Inkar" "Inzhu" "Saltanat" "Sezim" "Zhuldyz" } }
+	surnames = { "Abdulayev" "Baizhanov" "Erjanov" "Kadyrov" "Mendygaliev" "Nazarbayev" "Ospan" "Ramadanov" "Sapiyev" "Talgatov" }
+	callsigns = {}
+}
+BUK = {
+	male = { names = { "Aibek" "Bolat" "Erasyl" "Makhmud" "Nurasyl" "Ruslan" "Serik" "Talgat" "Temir" "Timur" } }
+	female = { names = { "Aiday" "Bibigul" "Gulnar" "Inkar" "Inzhu" "Saltanat" "Sezim" "Zhuldyz" } }
+	surnames = { "Abdulayev" "Baizhanov" "Erjanov" "Kadyrov" "Mendygaliev" "Nazarbayev" "Ospan" "Ramadanov" "Sapiyev" "Talgatov" }
+	callsigns = {}
+}
+KHI = {
+	male = { names = { "Aibek" "Bolat" "Erasyl" "Makhmud" "Nurasyl" "Ruslan" "Serik" "Talgat" "Temir" "Timur" } }
+	female = { names = { "Aiday" "Bibigul" "Gulnar" "Inkar" "Inzhu" "Saltanat" "Sezim" "Zhuldyz" } }
+	surnames = { "Abdulayev" "Baizhanov" "Erjanov" "Kadyrov" "Mendygaliev" "Nazarbayev" "Ospan" "Ramadanov" "Sapiyev" "Talgatov" }
+	callsigns = {}
+}
+TRA = {
+	male = { names = { Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri } }
+	female = { names = { Jelena Ludmila } }
+	surnames = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko }
+	callsigns = { Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Vodka }
+}
+URA = {
+	male = { names = { Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri } }
+	female = { names = { Jelena Ludmila } }
+	surnames = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko }
+	callsigns = { Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Vodka }
+}
+MNC = {
+	male = { names = { "Aibek" "Bolat" "Erasyl" "Makhmud" "Nurasyl" "Ruslan" "Serik" "Talgat" "Temir" "Timur" } }
+	female = { names = { "Aiday" "Bibigul" "Gulnar" "Inkar" "Inzhu" "Saltanat" "Sezim" "Zhuldyz" } }
+	surnames = { "Abdulayev" "Baizhanov" "Erjanov" "Kadyrov" "Mendygaliev" "Nazarbayev" "Ospan" "Ramadanov" "Sapiyev" "Talgatov" }
+	callsigns = {}
+}
+KUB = {
+	male = { names = { Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri } }
+	female = { names = { Jelena Ludmila } }
+	surnames = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko }
+	callsigns = { Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Vodka }
+}
+DON = {
+	male = { names = { Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri } }
+	female = { names = { Jelena Ludmila } }
+	surnames = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko }
+	callsigns = { Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Vodka }
+}
+AZR = {
+	male = { names = { "Ibrahim" "Muhammad" "Ibrahim" "Farrukhsiyar" "Khalil" "Bahram" "Farrukhsiyar" "Ghazi" "Farrukhsiyar" "Mahmud" } }
+	female = { names = { "Malahat" "Amsha" "Asiya" "Faghira" "Habiba" "Hanifa" "Jahaira" "Kamala" "Layla" "Maryam" } }
+	surnames = { "Abbasov" "Babayev" "Gambarov" "Hajiyev" "Ibragimov" "Kazimov" "Mammadbeyov" "Nabiyev" "Orujov" "Salmanov" "Valiyev" "Zadeh" }
+	callsigns = {}
+}
+ARM = {
+	male = { names = { "David" "Mkhitar" "Ashot" "Gagik" "Smbat" "Abbas" "Hovhannes" "Smbat" "Vagram" "Musegh" } }
+	female = { names = { "Aghavni" "Alitz" "Alice" "Almasd" "Anahid" "Anna" "Anna" "Anoush" "Arda" "Arevig" } }
+	surnames = { "Arshakuni" "Atchabahian" "Avakian" "Avetisyan" "Bagratuni" "Barsamian" "Darbinyan" "Eskandarian" "Gasparyan" "Gevorgyan" }
+	callsigns = {}
+}
+GEO = {
+	male = { names = {"Giorgi" "David" "Vakhtang" "Bagrat" "Alexander" "Erekle" "Konstantine" "Luarsab" "Simon" "Teimuraz" "Archil" } }
+	female = { names = { "Ana" "Anna" "Baia" "Bedisa" "Borena" "Chiora" "Chito" "Dali" "Dedika" "Duda" } }
+	surnames = { "Lazarashvili" "Machavariani" "Mdivani" "Melikishvili" "Gelovani" "Glonti" "Gurieli" "Bagrationi" "Akhvlediani" "Beridze" }
+	callsigns = {}
+}
+UKR = {
+	male = { names = { Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri } }
+	female = { names = { Jelena Ludmila } }
+	surnames = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko }
+	callsigns = { Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Vodka }
+}
+BLR = {
+	male = { names = { Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri } }
+	female = { names = { Jelena Ludmila } }
+	surnames = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko }
+	callsigns = { Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Vodka }
+}
+POL = {
+	male = {
+		names = { Jakub Kacper Filip Szymon Jan Antoni Michał Wojciech Mateusz  Bartosz Tomasz Grzegorz Zbigniew Piotr Maksymilian Paweł Łukasz Marcin Igor Leszek }
+		surnames = {  Nowak Kowalski Wiśniewski Kamiński Lewandowski Zieliński Szymański Dąbrowski Kozłowski Jankowski Kwiatkowski Wojciechowski Piotrowski Grabowski Aleksandrowicz Koter }
+	}
+	female = {
+		names = { "Zofia" "Wiktoria" "Natalia" "Renata" "Elżbieta" }
+		surnames = { "Nowakowska" "Kowalska" "Wiśniewska" "Kamińska" "Lewandowska" "Zielińska" "Szymańska" "Dąbrowska" "Kozłowska" "Jankowska" "Kwiatkowska" "Wojciechowska" "Piotrowska" "Grabowska" }
+	}
+	surnames = { "Kowalczyk" "Wójcik" "Woźniak" "Mazur" "Krawczyk" "Kaczmarek" }
+}
+RRU = {
+	male = { names = { Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri } }
+	female = { names = { Jelena Ludmila } }
+	surnames = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko }
+	callsigns = { Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Vodka }
+}
+WRU = {
+	male = { names = { Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri } }
+	female = { names = { Jelena Ludmila } }
+	surnames = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko }
+	callsigns = { Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Vodka }
+}
+NRU = {
+	male = { names = { Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri } }
+	female = { names = { Jelena Ludmila } }
+	surnames = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko }
+	callsigns = { Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Vodka }
+}
+SRU = {
+	male = { names = { Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri } }
+	female = { names = { Jelena Ludmila } }
+	surnames = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko }
+	callsigns = { Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Vodka }
+}

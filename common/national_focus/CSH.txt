@@ -1,0 +1,777 @@
+focus_tree = {
+	id = CSH_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CSH
+		}
+	}
+
+	default = no
+	shared_focus = Shared_Plan_of_Reform
+	shared_focus = Shared_Extra_Tech_Slot
+
+	focus = {
+		id = CSH_Military_Martial_Law
+		icon = GFX_focus_Military_Government
+		mutually_exclusive = { focus = CSH_Manage_Together_With_Chinese focus = CSH_Eve_of_Revolution }
+		x = 3
+		y = 0
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			force_recalculate_factories = yes
+			remove_political_road = yes
+			set_country_flag = SH_BYC
+			set_country_flag = SH_NPC
+			add_political_road = yes
+			create_country_leader = {
+				name = "T. E. Trueman"
+				picture = "gfx/leaders/Foreigner/Portrait_Foreigner_Shanghai_Volunteer_Corps.tga"
+				expire = "1936.1.1"
+				ideology = Centrist_ideology
+				traits = { prince_of_terror }
+			}
+			create_country_leader = {
+				name = "Crime Syndicate"
+				picture = "gfx/leaders/China/Portrait_China_Shanghai_Crime_Syndicate.tga"
+				expire = "1936.1.1"
+				ideology = Radical_Rightist_ideology
+				traits = { hedonist }
+			}
+			unlock_decision_tooltip = Formable_BYC
+			unlock_decision_tooltip = Formable_ROC
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSH_Manage_Together_With_Chinese
+		icon = GFX_focus_Trade_Deals
+		mutually_exclusive = { focus = CSH_Military_Martial_Law focus = CSH_Eve_of_Revolution }
+		x = 7
+		y = 0
+		cost = 8
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Blue_Flood } }
+				add_ideas = Blue_Flood
+			}
+			remove_political_road = yes
+			set_country_flag = SH_BYC
+			set_country_flag = SH_NPC
+			add_political_road = yes
+			create_country_leader = {
+				name = "Song Hanzhang"
+				picture = "gfx/leaders/China/Portrait_China_Song_Hanzhang.tga"
+				expire = "1936.1.1"
+				ideology = Moderate_Leftist_ideology
+				traits = { financial_expert }
+			}
+			create_country_leader = {
+				name = "Stirling Fessenden"
+				picture = "gfx/leaders/Foreigner/Portrait_Foreigner_Stirling_Fessenden.tga"
+				expire = "1936.1.1"
+				ideology = Moderate_Rightist_ideology
+				traits = { silent_workhorse }
+			}
+			unlock_decision_tooltip = Formable_BYC
+			unlock_decision_tooltip = Formable_ROC
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSH_Eve_of_Revolution
+		icon = GFX_focus_prc_agrarian_socialism
+		mutually_exclusive = { focus = CSH_Military_Martial_Law focus = CSH_Manage_Together_With_Chinese }
+		x = 10
+		y = 0
+		cost = 8
+
+		bypass = { has_government = Radical_Leftist }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Red_Flood } }
+				add_ideas = Red_Flood
+			}
+			remove_political_road = yes
+			custom_effect_tooltip = political_goal_tooltip_06
+			set_country_flag = SH_ASC
+			add_political_road = yes
+			create_country_leader = {
+				name = "Yuan Zhenying"
+				picture = "gfx/leaders/China/Portrait_China_Yuan_Zhenying.tga"
+				expire = "1936.1.1"
+				ideology = Radical_Leftist_ideology
+				traits = { cornered_fox }
+			}
+			unlock_decision_tooltip = Formable_ASC
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSH_Police_State
+		icon = GFX_focus_Subterfuge
+		prerequisite = { focus = CSH_Military_Martial_Law }
+		mutually_exclusive = { focus = CSH_Criminal_City }
+		x = 0
+		y = 1
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = { threat = 5 name = threat.COS }
+			remove_ideas = Home_of_the_Free
+			set_politics = {
+				ruling_party = Centrist
+				elections_allowed = no
+			}
+			set_popularities = {
+				Moderate_Leftist = 10
+				Moderate_Rightist = 10
+				Radical_Rightist = 20
+				Radical_Leftist = 0
+				Centrist = 60
+			}
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSH_Criminal_City
+		icon = GFX_focus_Death_Tracks_2
+		prerequisite = { focus = CSH_Military_Martial_Law }
+		mutually_exclusive = { focus = CSH_Police_State }
+		x = 3
+		y = 1
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = { threat = 5 name = threat.COS }
+			remove_ideas = Home_of_the_Free
+			set_politics = {
+				ruling_party = Radical_Rightist
+				elections_allowed = no
+			}
+			set_popularities = {
+				Moderate_Leftist = 10
+				Moderate_Rightist = 10
+				Radical_Rightist = 60
+				Radical_Leftist = 0
+				Centrist = 20
+				}
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+			if = {
+				limit = { NOT = { has_idea = Black_Flood } }
+				add_ideas = Black_Flood
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSH_Manipulating_Elections
+		icon = GFX_focus_Capitalist_Systems
+		prerequisite = { focus = CSH_Manage_Together_With_Chinese }
+		mutually_exclusive = { focus = CSH_Invite_Chamber_of_Commerce }
+		x = 6
+		y = 1
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_politics = { ruling_party = Moderate_Rightist elections_allowed = yes }
+			if = {
+				limit = { NOT = { has_idea = Statism } }
+				add_ideas = Statism
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSH_Invite_Chamber_of_Commerce
+		icon = GFX_focus_Card_Tricks
+		prerequisite = { focus = CSH_Manage_Together_With_Chinese }
+		mutually_exclusive = { focus = CSH_Manipulating_Elections }
+		x = 8
+		y = 1
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_politics = { ruling_party = Moderate_Leftist elections_allowed = yes }
+			if = {
+				limit = { NOT = { has_idea = Populism } }
+				add_ideas = Populism
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSH_Worker_Picket_Brigade
+		icon = GFX_Experience_CAF
+		prerequisite = { focus = CSH_Eve_of_Revolution }
+		x = 10
+		y = 1
+		cost = 10
+
+		available = { Radical_Leftist > 0.2 }
+
+		bypass = { has_government = Radical_Leftist }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_named_threat = { threat = 10 name = threat.COS }
+			set_politics = {
+				ruling_party = Radical_Leftist
+				elections_allowed = no
+			}
+			set_popularities = {
+				Moderate_Leftist = 10
+				Moderate_Rightist = 10
+				Radical_Rightist = 0
+				Radical_Leftist = 60
+				Centrist = 20
+			}
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = CAF
+			clr_country_flag = SH_COL
+			set_country_flag = SH_PAR
+			if = {
+				limit = { NOT = { has_idea = Revolution_in_City } }
+				add_ideas = Revolution_in_City
+			}
+			remove_ideas = Home_of_the_Free
+			every_other_country = {
+				limit = {
+					NOT = { has_government = Radical_Leftist }
+					OR = {
+						has_guaranteed = ROOT
+						has_military_access_to = ROOT
+						has_non_aggression_pact_with = ROOT
+					}
+				}
+				diplomatic_relation = { country = ROOT relation = guarantee active = no }
+				diplomatic_relation = { country = ROOT relation = military_access active = no }
+				diplomatic_relation = { country = ROOT relation = non_aggression_pact active = no }
+			}
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSH_Ban_Public_Gatherings
+		icon = GFX_focus_The_Burgos_Meeting
+		prerequisite = { focus = CSH_Police_State }
+		x = 0
+		y = 2
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 200
+			add_popularity = { ideology = Centrist popularity = 0.8 }
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSH_Green_Gang
+		icon = GFX_focus_Prepare_the_Troops
+		prerequisite = { focus = CSH_Criminal_City }
+		mutually_exclusive = { focus = CSH_Huangdaohui }
+		x = 2
+		y = 2
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_party_name = { ideology = Radical_Rightist long_name = New_party_21_long name = New_party_21 }
+			add_popularity = { ideology = Radical_Rightist popularity = 0.5 }
+			create_country_leader = {
+				name = "Zhang Renkui"
+				picture = "gfx/leaders/China/Portrait_China_Shanghai_Crime_Syndicate.tga"
+				expire = "1936.1.1"
+				ideology = Radical_Rightist_ideology
+				traits = { dealbroker }
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSH_Huangdaohui
+		icon = GFX_focus_Enlist_the_Police
+		prerequisite = { focus = CSH_Criminal_City }
+		mutually_exclusive = { focus = CSH_Green_Gang }
+		x = 4
+		y = 2
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_party_name = { ideology = Radical_Rightist long_name = New_party_22_long name = New_party_22 }
+			add_popularity = { ideology = Radical_Rightist popularity = 0.5 }
+			create_country_leader = {
+				name = "Chang Yuqing"
+				picture = "gfx/leaders/China/Portrait_China_Shanghai_Crime_Syndicate.tga"
+				expire = "1936.1.1"
+				ideology = Radical_Rightist_ideology
+				traits = { inexperienced_imperialist }
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSH_Expand_Foreign_Capital
+		icon = GFX_focus_Democracy_Fund
+		prerequisite = { focus = CSH_Manipulating_Elections }
+		x = 6
+		y = 2
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Expand_Foreign_Capital } }
+				add_ideas = Expand_Foreign_Capital
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSH_Develop_Domestic_Sales
+		icon = GFX_focus_Extravagance
+		prerequisite = { focus = CSH_Invite_Chamber_of_Commerce }
+		x = 8
+		y = 2
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Develop_Domestic_Sales } }
+				add_ideas = Develop_Domestic_Sales
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSH_Improve_Union_Management
+		icon = GFX_focus_Red_Army
+		prerequisite = { focus = CSH_Worker_Picket_Brigade }
+		x = 10
+		y = 2
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Improve_Union_Management } }
+				add_ideas = Improve_Union_Management
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSH_Safeguard_Capital_Inflows
+		icon = GFX_focus_Pile_of_Money
+		prerequisite = { focus = CSH_Ban_Public_Gatherings }
+		x = 0
+		y = 3
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 3 }
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = CSH_Forged_Passport
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = CSH_Green_Gang }
+		x = 2
+		y = 3
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Forged_Passport } }
+				add_ideas = Forged_Passport
+			}
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = CSH_Drug_Smuggling
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = CSH_Huangdaohui }
+		x = 4
+		y = 3
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = CSH_Golden_Age_of_Radio
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = CSH_Expand_Foreign_Capital focus = CSH_Develop_Domestic_Sales }
+		x = 7
+		y = 3
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = relationship_with_britain value = 25 tooltip = Increase_the_opinion_of_Britain_for_us_by_25 }
+			add_to_variable = { var = relationship_with_america value = 25 tooltip = Increase_the_opinion_of_America_for_us_by_25 }
+			add_to_variable = { var = relationship_with_france value = 25 tooltip = Increase_the_opinion_of_France_for_us_by_25 }
+			add_tech_bonus = {
+				name = tech_goal_tooltip_00
+				bonus = 0.5
+				uses = 1
+				category = agriculture_tech
+				category = light_industry_tech
+				category = heavy_industry_tech
+				category = construction_tech
+				category = excavation_tech
+				category = architecture_tech
+				category = secret_action_tech
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = CSH_Spirit_of_Dedication
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = CSH_Improve_Union_Management }
+		x = 10
+		y = 3
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = relationship_with_russia value = 100 tooltip = Increase_the_opinion_of_Russia_for_us_by_100 }
+			add_tech_bonus = {
+				name = tech_goal_tooltip_00
+				bonus = 0.5
+				uses = 1
+				category = agriculture_tech
+				category = light_industry_tech
+				category = heavy_industry_tech
+				category = construction_tech
+				category = excavation_tech
+				category = architecture_tech
+				category = secret_action_tech
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = CSH_Establish_Armed_Positions
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = CSH_Safeguard_Capital_Inflows }
+		x = 0
+		y = 4
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_offsite_building = { type = dockyard level = 1 }
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = CSH_Protection_Fees
+		icon = GFX_focus_Reopen_the_Stock_Markets
+		prerequisite = { focus = CSH_Forged_Passport }
+		x = 2
+		y = 4
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = Protection_Fees } }
+				add_ideas = Protection_Fees
+			}
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = CSH_Trafficking_Population
+		icon = GFX_focus_CZE_german_puppet
+		prerequisite = { focus = CSH_Drug_Smuggling }
+		x = 4
+		y = 4
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_manpower = 50000
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+		
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = CSH_Civilian_Low_Rent_Housing
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = CSH_Golden_Age_of_Radio }
+		x = 7
+		y = 4
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 4 }
+			add_offsite_building = { type = dockyard level = 2 }
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = CSH_Mass_Production
+		icon = GFX_focus_Soviet_Investments
+		prerequisite = { focus = CSH_Spirit_of_Dedication }
+		x = 10
+		y = 4
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_offsite_building = { type = dockyard level = 1 }
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = CSH_Security_Force
+		icon = GFX_focus_Reinforce_the_Police
+		prerequisite = { focus = CSH_Establish_Armed_Positions }
+		x = 0
+		y = 5
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 2 }
+			add_manpower = 20000
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = CSH_Cheap_Pirated_Goods
+		icon = GFX_focus_Fascist_Treaties
+		prerequisite = { focus = CSH_Protection_Fees }
+		x = 2
+		y = 5
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 3 }
+			add_country_leader_trait = dictator
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = CSH_Arms_Trade
+		icon = GFX_focus_Gun_And_Bullet
+		prerequisite = { focus = CSH_Trafficking_Population }
+		x = 4
+		y = 5
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = { name = tech_goal_tooltip_05 bonus = 0.25 uses = 2 category = infantry_weapons category = support_tech }
+			if = {
+				limit = { has_tech = rifle_equipment_2 }
+				add_equipment_to_stockpile = { type = rifle_equipment_2 amount = 2500 }
+				else = {
+					if = {
+						limit = { has_tech = rifle_equipment_1 }
+						add_equipment_to_stockpile = { type = rifle_equipment_1 amount = 2500 }
+						else = { add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 2500 } }
+					}
+				}
+			}
+			add_equipment_to_stockpile = { type = carbine_equipment_0 amount = 500 }
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = CSH_Home_of_the_Free
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = CSH_Civilian_Low_Rent_Housing }
+		x = 7
+		y = 5
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = Home_of_the_Free }
+				swap_ideas = {
+					remove_idea = Home_of_the_Free
+					add_idea = Home_of_the_Free_High
+				}
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = CSH_Industrial_Modern_City
+		icon = GFX_focus_Factory_Town
+		prerequisite = { focus = CSH_Mass_Production }
+		x = 10
+		y = 5
+		cost = 7
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 3 }
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_offsite_building = { type = dockyard level = 1 }
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+}

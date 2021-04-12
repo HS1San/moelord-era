@@ -1,0 +1,981 @@
+political_actions = {
+	Formable_BYC = {
+		icon = flag_of_BYC
+
+		cost = 30
+		ai_will_do = { base = 100 }
+
+		visible = {
+			NOT = { has_global_flag = China_Unification }
+			has_country_flag = SH_BYC
+		}
+		available = {
+			is_subject = no
+			OR = {
+				is_in_faction = no
+				is_faction_leader = yes
+			}
+			OR = {
+				ROOT = {
+					owns_state = 1
+				}
+				any_country = {
+					is_subject_of = ROOT
+					owns_state = 1
+				}
+				any_allied_country = {
+					owns_state = 1
+				}
+			}
+			OR = {
+				ROOT = {
+					owns_state = 43
+				}
+				any_country = {
+					is_subject_of = ROOT
+					owns_state = 43
+				}
+				any_allied_country = {
+					owns_state = 43
+				}
+			}
+			OR = {
+				ROOT = {
+					owns_state = 45
+				}
+				any_country = {
+					is_subject_of = ROOT
+					owns_state = 45
+				}
+				any_allied_country = {
+					owns_state = 45
+				}
+			}
+			OR = {	
+				OR = {
+					ROOT = {
+						owns_state = 12
+					}
+					any_country = {
+						is_subject_of = ROOT
+						owns_state = 12
+					}
+					any_allied_country = {
+						owns_state = 12
+					}
+				}
+				OR = {
+					ROOT = {
+						owns_state = 194
+					}
+					any_country = {
+						is_subject_of = ROOT
+						owns_state = 194
+					}
+					any_allied_country = {
+						owns_state = 194
+					}
+				}
+			}
+			num_of_controlled_states > 9
+			has_war = no
+		}
+		complete_effect = {
+			drop_cosmetic_tag = yes
+			set_global_flag = China_Unification
+			custom_effect_tooltip = Completed_China_Uniform
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							region = 2
+							region = 3
+							region = 4
+							region = 5
+							region = 6
+							region = 10
+							region = 22
+							region = 23
+							region = 24
+							region = 25
+							region = 26
+							region = 27
+							region = 28
+							region = 29
+							region = 30
+							region = 31
+							region = 32
+							region = 33
+							region = 34
+							region = 35
+							region = 36
+							region = 37
+							region = 38
+							region = 39
+							region = 40
+							region = 41
+							region = 42
+							region = 43
+							region = 44
+							state = 118
+							state = 119
+							state = 120
+							state = 121
+							state = 122
+							state = 123
+						}
+					}
+					add_core_of = ROOT
+				}
+			}
+			country_event = new_Generic.11
+		}
+	}
+	Formable_ROC = {
+		icon = flag_of_ROC
+
+		cost = 30
+		ai_will_do = { base = 100 }
+
+		visible = {
+			NOT = { has_global_flag = China_Unification }
+			OR = {
+				has_country_flag = SH_NPC
+				has_country_flag = SH_NLC
+				has_country_flag = SH_NRC
+			}
+		}
+		available = {
+			is_subject = no
+			OR = {
+				is_in_faction = no
+				is_faction_leader = yes
+			}
+			OR = {
+				ROOT = {
+					owns_state = 1
+				}
+				any_country = {
+					is_subject_of = ROOT
+					owns_state = 1
+				}
+				any_allied_country = {
+					owns_state = 1
+				}
+			}
+			OR = {
+				ROOT = {
+					owns_state = 43
+				}
+				any_country = {
+					is_subject_of = ROOT
+					owns_state = 43
+				}
+				any_allied_country = {
+					owns_state = 43
+				}
+			}
+			OR = {
+				ROOT = {
+					owns_state = 45
+				}
+				any_country = {
+					is_subject_of = ROOT
+					owns_state = 45
+				}
+				any_allied_country = {
+					owns_state = 45
+				}
+			}
+			OR = {	
+				OR = {
+					ROOT = {
+						owns_state = 12
+					}
+					any_country = {
+						is_subject_of = ROOT
+						owns_state = 12
+					}
+					any_allied_country = {
+						owns_state = 12
+					}
+				}
+				OR = {
+					ROOT = {
+						owns_state = 194
+					}
+					any_country = {
+						is_subject_of = ROOT
+						owns_state = 194
+					}
+					any_allied_country = {
+						owns_state = 194
+					}
+				}
+			}
+			num_of_controlled_states > 9
+			has_war = no
+		}
+		complete_effect = {
+			drop_cosmetic_tag = yes
+			set_global_flag = China_Unification
+			custom_effect_tooltip = Completed_China_Uniform
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							region = 2
+							region = 3
+							region = 4
+							region = 5
+							region = 6
+							region = 10
+							region = 22
+							region = 23
+							region = 24
+							region = 25
+							region = 26
+							region = 27
+							region = 28
+							region = 29
+							region = 30
+							region = 31
+							region = 32
+							region = 33
+							region = 34
+							region = 35
+							region = 36
+							region = 37
+							region = 38
+							region = 39
+							region = 40
+							region = 41
+							region = 42
+							region = 43
+							region = 44
+							state = 118
+							state = 119
+							state = 120
+							state = 121
+							state = 122
+							state = 123
+						}
+					}
+					add_core_of = ROOT
+				}
+			}
+			country_event = new_Generic.12
+		}
+	}
+	Formable_PEC = {
+		icon = flag_of_PEC
+
+		cost = 30
+		ai_will_do = { base = 100 }
+
+		visible = {
+			NOT = { has_global_flag = China_Unification }
+			has_country_flag = SH_CPC
+		}
+		available = {
+			is_subject = no
+			OR = {
+				is_in_faction = no
+				is_faction_leader = yes
+			}
+			OR = {
+				ROOT = {
+					owns_state = 1
+				}
+				any_country = {
+					is_subject_of = ROOT
+					owns_state = 1
+				}
+				any_allied_country = {
+					owns_state = 1
+				}
+			}
+			OR = {
+				ROOT = {
+					owns_state = 43
+				}
+				any_country = {
+					is_subject_of = ROOT
+					owns_state = 43
+				}
+				any_allied_country = {
+					owns_state = 43
+				}
+			}
+			OR = {
+				ROOT = {
+					owns_state = 45
+				}
+				any_country = {
+					is_subject_of = ROOT
+					owns_state = 45
+				}
+				any_allied_country = {
+					owns_state = 45
+				}
+			}
+			OR = {	
+				OR = {
+					ROOT = {
+						owns_state = 12
+					}
+					any_country = {
+						is_subject_of = ROOT
+						owns_state = 12
+					}
+					any_allied_country = {
+						owns_state = 12
+					}
+				}
+				OR = {
+					ROOT = {
+						owns_state = 194
+					}
+					any_country = {
+						is_subject_of = ROOT
+						owns_state = 194
+					}
+					any_allied_country = {
+						owns_state = 194
+					}
+				}
+			}
+			num_of_controlled_states > 9
+			has_war = no
+		}
+		complete_effect = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = PEC
+			set_global_flag = China_Unification
+			custom_effect_tooltip = Completed_China_Uniform
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							region = 2
+							region = 3
+							region = 4
+							region = 5
+							region = 6
+							region = 10
+							region = 22
+							region = 23
+							region = 24
+							region = 25
+							region = 26
+							region = 27
+							region = 28
+							region = 29
+							region = 30
+							region = 31
+							region = 32
+							region = 33
+							region = 34
+							region = 35
+							region = 36
+							region = 37
+							region = 38
+							region = 39
+							region = 40
+							region = 41
+							region = 42
+							region = 43
+							region = 44
+							state = 118
+							state = 119
+							state = 120
+							state = 121
+							state = 122
+							state = 123
+						}
+					}
+					add_core_of = ROOT
+				}
+			}
+			country_event = new_Generic.8
+		}
+	}
+	Formable_ASC = {
+		icon = flag_of_WPC
+
+		cost = 30
+		ai_will_do = { base = 100 }
+
+		visible = {
+			NOT = { has_global_flag = China_Unification }
+			has_country_flag = SH_ASC
+		}
+		available = {
+			is_subject = no
+			OR = {
+				is_in_faction = no
+				is_faction_leader = yes
+			}
+			OR = {
+				ROOT = {
+					owns_state = 1
+				}
+				any_country = {
+					is_subject_of = ROOT
+					owns_state = 1
+				}
+				any_allied_country = {
+					owns_state = 1
+				}
+			}
+			OR = {
+				ROOT = {
+					owns_state = 43
+				}
+				any_country = {
+					is_subject_of = ROOT
+					owns_state = 43
+				}
+				any_allied_country = {
+					owns_state = 43
+				}
+			}
+			OR = {
+				ROOT = {
+					owns_state = 45
+				}
+				any_country = {
+					is_subject_of = ROOT
+					owns_state = 45
+				}
+				any_allied_country = {
+					owns_state = 45
+				}
+			}
+			OR = {	
+				OR = {
+					ROOT = {
+						owns_state = 12
+					}
+					any_country = {
+						is_subject_of = ROOT
+						owns_state = 12
+					}
+					any_allied_country = {
+						owns_state = 12
+					}
+				}
+				OR = {
+					ROOT = {
+						owns_state = 194
+					}
+					any_country = {
+						is_subject_of = ROOT
+						owns_state = 194
+					}
+					any_allied_country = {
+						owns_state = 194
+					}
+				}
+			}
+			num_of_controlled_states > 9
+			has_war = no
+		}
+		complete_effect = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = WPC
+			set_global_flag = China_Unification
+			custom_effect_tooltip = Completed_China_Uniform
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							region = 2
+							region = 3
+							region = 4
+							region = 5
+							region = 6
+							region = 10
+							region = 22
+							region = 23
+							region = 24
+							region = 25
+							region = 26
+							region = 27
+							region = 28
+							region = 29
+							region = 30
+							region = 31
+							region = 32
+							region = 33
+							region = 34
+							region = 35
+							region = 36
+							region = 37
+							region = 38
+							region = 39
+							region = 40
+							region = 41
+							region = 42
+							region = 43
+							region = 44
+							state = 118
+							state = 119
+							state = 120
+							state = 121
+							state = 122
+							state = 123
+						}
+					}
+					add_core_of = ROOT
+				}
+			}
+			country_event = new_Generic.8
+		}
+	}
+	Formable_CEH = {
+		icon = flag_of_CEH
+
+		cost = 30
+		ai_will_do = { base = 100 }
+
+		visible = {
+			NOT = { has_global_flag = China_Unification }
+			has_country_flag = SH_CEH
+		}
+		available = {
+			is_subject = no
+			OR = {
+				is_in_faction = no
+				is_faction_leader = yes
+			}
+			OR = {
+				ROOT = {
+					owns_state = 1
+				}
+				any_country = {
+					is_subject_of = ROOT
+					owns_state = 1
+				}
+				any_allied_country = {
+					owns_state = 1
+				}
+			}
+			OR = {
+				ROOT = {
+					owns_state = 43
+				}
+				any_country = {
+					is_subject_of = ROOT
+					owns_state = 43
+				}
+				any_allied_country = {
+					owns_state = 43
+				}
+			}
+			OR = {
+				ROOT = {
+					owns_state = 45
+				}
+				any_country = {
+					is_subject_of = ROOT
+					owns_state = 45
+				}
+				any_allied_country = {
+					owns_state = 45
+				}
+			}
+			OR = {	
+				OR = {
+					ROOT = {
+						owns_state = 12
+					}
+					any_country = {
+						is_subject_of = ROOT
+						owns_state = 12
+					}
+					any_allied_country = {
+						owns_state = 12
+					}
+				}
+				OR = {
+					ROOT = {
+						owns_state = 194
+					}
+					any_country = {
+						is_subject_of = ROOT
+						owns_state = 194
+					}
+					any_allied_country = {
+						owns_state = 194
+					}
+				}
+			}
+			num_of_controlled_states > 9
+			has_war = no
+		}
+		complete_effect = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = CEH
+			set_global_flag = China_Unification
+			custom_effect_tooltip = Completed_China_Uniform
+			
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							region = 2
+							region = 3
+							region = 4
+							region = 5
+							region = 6
+							region = 10
+							region = 22
+							region = 23
+							region = 24
+							region = 25
+							region = 26
+							region = 27
+							region = 28
+							region = 29
+							region = 30
+							region = 31
+							region = 32
+							region = 33
+							region = 34
+							region = 35
+							region = 36
+							region = 37
+							region = 38
+							region = 39
+							region = 40
+							region = 41
+							region = 42
+							region = 43
+							region = 44
+							state = 118
+							state = 119
+							state = 120
+							state = 121
+							state = 122
+							state = 123
+						}
+					}
+					add_core_of = ROOT
+				}
+			}
+			country_event = new_Generic.8
+		}
+	}
+	Formable_CEM = {
+		icon = flag_of_CEM
+
+		cost = 30
+		ai_will_do = { base = 100 }
+
+		visible = {
+			NOT = { has_global_flag = China_Unification }
+			has_country_flag = SH_CEM
+		}
+		available = {
+			is_subject = no
+			OR = {
+				is_in_faction = no
+				is_faction_leader = yes
+			}
+			OR = {
+				ROOT = {
+					owns_state = 1
+				}
+				any_country = {
+					is_subject_of = ROOT
+					owns_state = 1
+				}
+				any_allied_country = {
+					owns_state = 1
+				}
+			}
+			OR = {
+				ROOT = {
+					owns_state = 43
+				}
+				any_country = {
+					is_subject_of = ROOT
+					owns_state = 43
+				}
+				any_allied_country = {
+					owns_state = 43
+				}
+			}
+			OR = {
+				ROOT = {
+					owns_state = 45
+				}
+				any_country = {
+					is_subject_of = ROOT
+					owns_state = 45
+				}
+				any_allied_country = {
+					owns_state = 45
+				}
+			}
+			OR = {	
+				OR = {
+					ROOT = {
+						owns_state = 12
+					}
+					any_country = {
+						is_subject_of = ROOT
+						owns_state = 12
+					}
+					any_allied_country = {
+						owns_state = 12
+					}
+				}
+				OR = {
+					ROOT = {
+						owns_state = 194
+					}
+					any_country = {
+						is_subject_of = ROOT
+						owns_state = 194
+					}
+					any_allied_country = {
+						owns_state = 194
+					}
+				}
+			}
+			num_of_controlled_states > 9
+			has_war = no
+		}
+		complete_effect = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = CEM
+			set_global_flag = China_Unification
+			custom_effect_tooltip = Completed_China_Uniform
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							region = 2
+							region = 3
+							region = 4
+							region = 5
+							region = 6
+							region = 10
+							region = 22
+							region = 23
+							region = 24
+							region = 25
+							region = 26
+							region = 27
+							region = 28
+							region = 29
+							region = 30
+							region = 31
+							region = 32
+							region = 33
+							region = 34
+							region = 35
+							region = 36
+							region = 37
+							region = 38
+							region = 39
+							region = 40
+							region = 41
+							region = 42
+							region = 43
+							region = 44
+							state = 118
+							state = 119
+							state = 120
+							state = 121
+							state = 122
+							state = 123
+						}
+					}
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_country_leader = { name = "Aisin-Gioro Puyi" } }
+					NOT = { has_country_leader = { name = "Aisin-Gioro Pujie" } }
+					NOT = { has_country_leader = { name = "Aisin-Gioro Xiqia" } }
+					NOT = { has_country_leader = { name = "Aisin-Gioro Pulun" } }
+					NOT = { has_country_leader = { name = "Aisin-Gioro Puwei" } }
+					NOT = { has_country_leader = { name = "Aisin-Gioro Zaize" } }
+				}
+				country_event = new_Generic.9
+				else = { country_event = new_Generic.8 }
+			}
+		}
+	}
+
+	Cede_Control_Anarchist = {
+		icon = flag_of_WPC
+
+		cost = 30
+		ai_will_do = { base = 100 }
+
+		visible = {
+			NOT = { has_government = Radical_Leftist }
+			has_country_flag = SH_ASC
+		}
+
+		available = {
+			Radical_Leftist > 0.25
+		}
+
+		complete_effect = {
+			set_political_party = {
+    			ideology = Radical_Leftist
+    			popularity = 50
+			}
+			set_politics = {
+					ruling_party = Radical_Leftist
+					elections_allowed = no
+			}
+		}
+	}
+	Cede_Control_Communist = {
+		icon = flag_of_PEC
+
+		cost = 30
+		ai_will_do = { base = 100 }
+
+		visible = {
+			NOT = { has_government = Radical_Leftist }
+			has_country_flag = SH_CPC
+		}
+
+		available = {
+			Radical_Leftist > 0.25
+		}
+
+		complete_effect = {
+			set_political_party = {
+    			ideology = Radical_Leftist
+    			popularity = 50
+			}
+			set_politics = {
+					ruling_party = Radical_Leftist
+					elections_allowed = no
+			}
+		}
+	}
+	Cede_Control_Han_Monarchist = {
+		icon = flag_of_CEH
+
+		cost = 30
+		ai_will_do = { base = 100 }
+
+		visible = {
+			NOT = { has_government = Radical_Rightist }
+			has_country_flag = SH_CEH
+		}
+
+		available = {
+			Radical_Rightist > 0.25
+		}
+
+		complete_effect = {
+			set_political_party = {
+    			ideology = Radical_Rightist
+    			popularity = 50
+			}
+			set_politics = {
+					ruling_party = Radical_Rightist
+					elections_allowed = no
+			}
+		}
+	}
+	Cede_Control_Man_Monarchist = {
+		icon = flag_of_CEM
+
+		cost = 30
+		ai_will_do = { base = 100 }
+
+		visible = {
+			NOT = { has_government = Radical_Rightist }
+			has_country_flag = SH_CEM
+		}
+
+		available = {
+			Radical_Rightist > 0.25
+		}
+
+		complete_effect = {
+			set_political_party = {
+    			ideology = Radical_Rightist
+    			popularity = 50
+			}
+			set_politics = {
+					ruling_party = Radical_Rightist
+					elections_allowed = no
+			}
+		}
+	}
+	Cede_Control_KMT_Left = {
+		icon = flag_of_ROC
+
+		cost = 30
+		ai_will_do = { base = 100 }
+
+		visible = {
+			NOT = { OR = { has_government = Moderate_Leftist has_government = Moderate_Rightist } }
+			has_country_flag = SH_NPC
+			has_idea = Blue_Flood
+		}
+
+		available = {
+			Moderate_Leftist > 0.2
+		}
+
+		complete_effect = {
+			set_political_party = {
+    			ideology = Moderate_Leftist
+    			popularity = 50
+			}
+			set_politics = {
+					ruling_party = Moderate_Leftist
+					elections_allowed = no
+			}
+		}
+	}
+	Cede_Control_KMT_Right = {
+		icon = flag_of_ROC
+
+		cost = 30
+		ai_will_do = { base = 100 }
+
+		visible = {
+			NOT = { OR = { has_government = Moderate_Leftist has_government = Moderate_Rightist } }
+			has_country_flag = SH_NPC
+			has_idea = Blue_Flood
+		}
+
+		available = {
+			Moderate_Rightist > 0.2
+		}
+
+		complete_effect = {
+			set_political_party = {
+    			ideology = Moderate_Rightist
+    			popularity = 50
+			}
+			set_politics = {
+					ruling_party = Moderate_Rightist
+					elections_allowed = no
+			}
+		}
+	}
+}
+
+
+#if = {
+#				limit = { NOT = { has_government = Radical_Rightist } }
+#				set_politics = {
+#					ruling_party = Radical_Rightist
+#				}
+#			}

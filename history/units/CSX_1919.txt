@@ -1,0 +1,100 @@
+﻿########
+#Templates
+########
+division_template = {
+	name = "Bubingshi"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Qibingshi"
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Hunchenglü"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Buchonglü"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+	}
+	priority = 0
+}
+division_template = {
+	name = "Paobingshi"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		howitzer_brigade = { x = 1 y = 0 }
+		howitzer_brigade = { x = 1 y = 1 }
+	}
+}
+
+########
+#OOB
+########
+units = {
+	division = {
+		name = "Shanxi Di 1 Bubingshi"
+		location = 12344
+		division_template = "Bubingshi"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Shanxi Di 2 Bubingshi"
+		location = 12344
+		division_template = "Bubingshi"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Shanxi Di 3 Bubingshi"
+		location = 12344
+		division_template = "Bubingshi"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Shanxi Di 4 Bubingshi"
+		location = 12344
+		division_template = "Bubingshi"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Shanxi Qibing Di 1 Tuan"
+		location = 12344
+		division_template = "Qibingshi"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Shanxi Qibing Di 2 Tuan"
+		location = 12344
+		division_template = "Qibingshi"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Shanxi Paobingtuan"
+		location = 12344
+		division_template = "Paobingshi"
+		start_experience_factor = 0.1
+	}
+}

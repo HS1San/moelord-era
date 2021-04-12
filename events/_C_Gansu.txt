@@ -1,0 +1,132 @@
+﻿add_namespace = new_CGS
+
+country_event = {
+	id = new_CGS.1
+	title = new_CGS.1.t
+	desc = new_CGS.1.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			random_army_leader = {
+				limit = { has_id = 31 }
+				retire = yes
+			}
+		}
+	}
+
+	option = {
+		name = new_CGS.1.a
+		trigger = {
+			CSY = {
+				is_ai = yes
+				exists = yes
+			}
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Lu Hongtao"	# 陆洪涛
+			picture = "gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
+			expire = "1927.8.31"
+			ideology =  Centrist_ideology
+			traits = {}
+		}
+		random_army_leader = {
+			limit = { has_id = 251 }
+			if = {
+				limit = { is_field_marshal = no }
+				promote_leader = yes
+			}
+			if = {
+				limit = { NOT = { has_trait = General_is_a_HoS } }
+				add_unit_leader_trait = General_is_a_HoS
+			}
+		}
+		CNX = { country_event = new_CGS.2 }
+	}
+	option = {
+		name = new_CGS.1.b
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Lu Hongtao"	# 陆洪涛
+			picture = "gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
+			expire = "1927.8.31"
+			ideology =  Centrist_ideology
+			traits = {}
+		}
+		random_army_leader = {
+			limit = { has_id = 251 }
+			if = {
+				limit = { is_field_marshal = no }
+				promote_leader = yes
+			}
+			if = {
+				limit = { NOT = { has_trait = General_is_a_HoS } }
+				add_unit_leader_trait = General_is_a_HoS
+			}
+		}
+		declare_war_on = { target = CNX type = annex_everything }
+		CQH = { add_to_war = { targeted_alliance = CNX enemy = CGS } }
+	}
+	option = {
+		name = new_CGS.1.c
+		retire_country_leader = yes
+		custom_effect_tooltip = GAME_OVER_TT
+		hidden_effect = { CNX = { annex_country = { target = ROOT transfer_troops = yes } } }
+	}
+}
+
+country_event = {
+	id = new_CGS.2
+	title = new_CGS.2.t
+	desc = new_CGS.2.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_CGS.2.a
+		if = {
+			limit = {
+				check_variable = { CSY.num_owned_states > 3 }
+				CSY = {
+					OR = {
+						owns_state = 8
+						owns_state = 9
+						owns_state = 10
+					}
+				}
+			}
+			transfer_state = 8
+			set_state_controller = 8
+			add_state_core = 8
+			transfer_state = 9
+			set_state_controller = 9
+			add_state_core = 9
+			transfer_state = 10
+			set_state_controller = 10
+			add_state_core = 10
+		}
+		else_if = {
+			limit = {
+				check_variable = { CSY.num_owned_states < 4 }
+				CSY = {
+					
+					owns_state = 8
+					owns_state = 9
+					owns_state = 10
+				}
+			}
+			annex_country = { target = CSY transfer_troops = yes }
+		}
+		add_opinion_modifier = { target = CGS modifier = New_contradiction }
+		CGS = { add_opinion_modifier = { target = ROOT modifier = New_contradiction } }
+	}
+	option = {
+		name = new_CGS.2.b
+		declare_war_on = { target = CGS type = annex_everything }
+		CQH = { add_to_war = { targeted_alliance = CNX enemy = CGS } }
+	}
+}
