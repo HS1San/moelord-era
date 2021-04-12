@@ -1,2 +1,3 @@
 # moelord era
- warlord era but moe
+ warlord era but moe and content update
+ 
