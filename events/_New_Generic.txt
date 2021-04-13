@@ -808,6 +808,8 @@ country_event = {
 	title = update_status.1.t
 	desc = update_status.1.d
 
+	timeout_days = 5
+
 	fire_only_once = yes
 
 	option = {
