@@ -801,4 +801,16 @@ country_event = {
 	immediate = {
 		white_peace = event_target:white_peace_receiver
 	}
+
+country_event = {
+	id = update_status.1
+	title = update_status.1.t
+	desc = update_status.1.d
+
+	fire_only_once = yes
+
+	option = {
+		name = update_status.1.a
+	}
+}
 }
