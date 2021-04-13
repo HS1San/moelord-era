@@ -1,4 +1,5 @@
 ﻿add_namespace = new_Generic
+add_namespace = update_status
 
 country_event = {
 	id = new_Generic.1
