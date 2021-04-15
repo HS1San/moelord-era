@@ -313,7 +313,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CFT_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -392,7 +402,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CZL_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -471,7 +491,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CAH_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -550,7 +580,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CGX_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -629,7 +669,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CYN_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -708,7 +758,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CSC_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -787,7 +847,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CSX_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -866,7 +936,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CXJ_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -945,7 +1025,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CGD_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -1024,7 +1114,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CHN_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -1103,7 +1203,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CGZ_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -1182,7 +1292,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CJG_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -1261,7 +1381,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CEX_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -1339,7 +1469,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CYX_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -1418,7 +1558,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CSD_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -1497,7 +1647,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CSA_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -1577,7 +1737,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CQY_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -1657,7 +1827,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CHE_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -1737,7 +1917,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CFJ_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -1817,7 +2007,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CCH_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -1897,7 +2097,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CRH_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -1977,7 +2187,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CJX_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -2057,7 +2277,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CJS_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -2137,7 +2367,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CHB_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -2217,7 +2457,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CZJ_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -2297,7 +2547,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CHJ_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -2377,7 +2637,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CJL_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -2457,7 +2727,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CGS_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -2537,7 +2817,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CNX_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -2617,7 +2907,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CQH_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -2697,7 +2997,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CSY_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -2777,7 +3087,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CXK_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -2857,7 +3177,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CBJ_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -2937,7 +3267,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CTJ_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -3017,7 +3357,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CSH_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -3097,7 +3447,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CXM_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -3177,7 +3537,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CTW_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -3257,7 +3627,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CLS_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -3337,7 +3717,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CXG_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -3417,7 +3807,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CAO_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -3497,7 +3897,17 @@ soundeffect = {
 }
 soundeffect = {
     name = "CWH_infantry_move_out"
-    sounds = {
+	sounds = {
+		sound = ch_Moving_001
+		sound = ch_Moving_002
+		sound = ch_Moving_003
+		sound = ch_Moving_004
+		sound = ch_Moving_005
+		sound = ch_Moving_006
+		sound = ch_Moving_007
+		sound = ch_Moving_008
+		sound = ch_Moving_009
+		sound = ch_Moving_010
     }
 	max_audible = 1
 	max_audible_behaviour = fail
