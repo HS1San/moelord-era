@@ -4783,6 +4783,46 @@ sound = {
 	file = "chi/ch_Idle_027.wav"
 }
 sound = {
+	name = "ch_Moving_001"
+	file = "chi/ch_Moving_001.wav"
+}
+sound = {
+	name = "ch_Moving_002"
+	file = "chi/ch_Moving_002.wav"
+}
+sound = {
+	name = "ch_Moving_003"
+	file = "chi/ch_Moving_003.wav"
+}
+sound = {
+	name = "ch_Moving_004"
+	file = "chi/ch_Moving_004.wav"
+}
+sound = {
+	name = "ch_Moving_005"
+	file = "chi/ch_Moving_005.wav"
+}
+sound = {
+	name = "ch_Moving_006"
+	file = "chi/ch_Moving_006.wav"
+}
+sound = {
+	name = "ch_Moving_007"
+	file = "chi/ch_Moving_007.wav"
+}
+sound = {
+	name = "ch_Moving_008"
+	file = "chi/ch_Moving_008.wav"
+}
+sound = {
+	name = "ch_Moving_009"
+	file = "chi/ch_Moving_009.wav"
+}
+sound = {
+	name = "ch_Moving_010"
+	file = "chi/ch_Moving_010.wav"
+}
+sound = {
 	name = "ch_Neutral_001"
 	file = "chi/ch_Neutral_001.wav"
 }
