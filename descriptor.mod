@@ -63,7 +63,6 @@ tags={
 	"Technologies"
 	"Utilities"
 }
-picture="WarlordEra.jpg"
-name="Warlord Era"
-supported_version="1.9.*"
-remote_file_id="2138749160"
+picture="WarlordImage.png"
+name="Moelord Era"
+supported_version="1.10.*"

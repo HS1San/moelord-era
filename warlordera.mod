@@ -63,7 +63,7 @@ tags={
 	"Technologies"
 	"Utilities"
 }
-picture="WarlordEra.jpg"
-name="Warlord Era"
-supported_version="1.9.*"
-path="C:/Users/ethan/Documents/Paradox Interactive/Hearts of Iron IV/mod/warlordera"
+picture="WarlordImage.png"
+name="Moelord Era"
+supported_version="1.10.*"
+path="mod/moelord-era/"
