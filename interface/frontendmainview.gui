@@ -23,17 +23,22 @@ guiTypes = {
 	### MAIN MENU PANEL (upperleft)
 	containerWindowType = {
 		name  ="mainmenu_panel_upperleft"
-		position = { x=0 y =-200 }
-		show_position = { x=0 y =-1 }
+		position = { x=-90 y =-1000 }
 		animation_type = decelerated
 		animation_time = 1000
-		size = { width = 256 height = 768}
+		show_position = { x=-90 y = -70 }
+		size = {
+		width = 256 height = 768
+		preserve_aspect_ratio = yes
+		}
+		Orientation = CENTER
+		Origo = center
 		
 		iconType =
 		{
 			name ="frontend_game_logo"
 			spriteType = "GFX_frontend_game_logo"
-			position = { x= 737 y = 210 }
+			position = { x= 0 y = 0 }
 		}
 		
 	}
