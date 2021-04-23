@@ -38,7 +38,7 @@ create_all_leaders = yes
 
 create_country_leader = {
 	name = "Aylmer Cavendish Pearson"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+	picture = "gfx/leaders/Foreigner/Portrait_Foreigner_Aylmer_Cavendish_Pearson.tga"
 	expire = "1926.1.1"
 	ideology = Centrist_ideology
 	traits = {}
