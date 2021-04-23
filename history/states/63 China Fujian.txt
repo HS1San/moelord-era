@@ -104,6 +104,7 @@ state = {
 	history = {
 		owner = CGD
 		add_core_of = CFJ
+		add_core_of = CGD
 		buildings = {
 			infrastructure = 2
 		}
