@@ -40,7 +40,7 @@ create_faction = American_Sphere
 
 create_country_leader = {
 	name = "Francis Burton Harrison"
-	picture = "gfx/leaders/Foreigner/Portrait_Foreigner_Francis_Burton_Harrison.tga"
+	picture = "gfx/leaders/Foreigner/Portrait_Foreigner_Francis_Burton_Harrison.dds"
 	expire = "1925.11.26"
 	ideology = Centrist_ideology
 	traits = {}
