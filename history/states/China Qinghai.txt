@@ -1,0 +1,58 @@
+state = {
+	id = 91
+	name = "STATE_91"
+	manpower = 1396100
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 1
+		aluminium = 0
+		rubber = 0
+		tungsten = 2
+		steel = 6
+		chromium = 0
+	}
+	history = {
+		owner = CQH
+		add_core_of = CQH
+		add_core_of = CXZ
+		buildings = {
+			infrastructure = 0
+		}
+		victory_points = { 4964 1 }
+		victory_points = { 7940 2 }
+	}
+	provinces = {
+		1882 4914 4964 7940 8018 8037 12899 10817 
+	}
+}
+
+state = {
+	id = 92
+	name = "STATE_92"
+	manpower = 1200000
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 2
+		steel = 6
+		chromium = 1
+	}
+	history = {
+		owner = CQH
+		add_core_of = CQH
+		add_core_of = CXZ
+		buildings = {
+			infrastructure = 0
+			industrial_complex = 1
+		}
+	}
+	provinces = {
+		2053 2099 4536 7270 7997 10490 10750 10796 10834 10865 11448 12815 12846 12890 13146 
+	}
+}

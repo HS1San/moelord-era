@@ -1,0 +1,121 @@
+state = {
+	id = 45
+	name = "STATE_45"
+	manpower = 15541600
+	state_category = developed_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 1
+		aluminium = 3
+		rubber = 0
+		tungsten = 2
+		steel = 2
+		chromium = 3
+	}
+	history = {
+		owner = CHB
+		add_core_of = CHB
+		add_core_of = CEX
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+		}
+		victory_points = { 4619 4 }
+		victory_points = { 7167 2 }
+		victory_points = { 12467 1 }
+	}
+	provinces = {
+		1036 4619 4631 7167 7580 7637 9959 10462 12467 
+	}
+}
+
+state = {
+	id = 46
+	name = "STATE_46"
+	manpower = 5000000
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 1
+		chromium = 0
+	}
+	history = {
+		owner = CHB
+		add_core_of = CHB
+		add_core_of = CEX
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = { 7609 2 }
+	}
+	provinces = {
+		4009 7019 7609 7625 8072 9934 10474 12408 
+	}
+}
+
+state = {
+	id = 47
+	name = "STATE_47"
+	manpower = 1000000
+	state_category = impoverished_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 1
+		chromium = 0
+	}
+	history = {
+		owner = CEX
+		add_core_of = CEX
+		add_core_of = CHB
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = { 12414 2 }
+	}
+	provinces = {
+		5030 12414 
+	}
+}
+
+state = {
+	id = 48
+	name = "STATE_48"
+	manpower = 4000000
+	state_category = impoverished_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 1
+		chromium = 0
+	}
+	history = {
+		owner = CHB
+		add_core_of = CHB
+		add_core_of = CEX
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 1612 2 }
+		victory_points = { 4130 1 }
+	}
+	provinces = {
+		1612 4130 7596 10757 12086 
+	}
+}

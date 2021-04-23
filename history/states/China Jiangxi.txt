@@ -1,0 +1,118 @@
+state = {
+	id = 59
+	name = "STATE_59"
+	manpower = 6820400
+	state_category = developed_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 20
+		steel = 6
+		chromium = 0
+	}
+	history = {
+		owner = CJX
+		add_core_of = CJX
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 1
+		}
+		victory_points = { 3992 4 }
+		victory_points = { 11961 1 }
+		victory_points = { 12030 1 }
+	}
+	provinces = {
+		1066 1110 3992 4038 4083 7054 7172 9984 11961 12030 
+	}
+}
+
+state = {
+	id = 60
+	name = "STATE_60"
+	manpower = 3000000
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 10
+		steel = 1
+		chromium = 0
+	}
+	history = {
+		owner = CJX
+		add_core_of = CJX
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+		}
+		victory_points = { 1153 1 }
+		victory_points = { 1628 2 }
+	}
+	provinces = {
+		1153 1628 4185 7007 7653 10114 11988 13141 
+	}
+}
+
+state = {
+	id = 61
+	name = "STATE_61"
+	manpower = 3000000
+	state_category = impoverished_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 10
+		steel = 1
+		chromium = 0
+	}
+	history = {
+		owner = CJX
+		add_core_of = CJX
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 10057 2 }
+		victory_points = { 12495 1 }
+	}
+	provinces = {
+		4156 4183 7199 10057 10501 12495 
+	}
+}
+
+state = {
+	id = 62
+	name = "STATE_62"
+	manpower = 3000000
+	state_category = impoverished_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 10
+		steel = 1
+		chromium = 0
+	}
+	history = {
+		owner = CJX
+		add_core_of = CJX
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 11945 2 }
+	}
+	provinces = {
+		1053 4081 7004 9942 10112 11945 
+	}
+}

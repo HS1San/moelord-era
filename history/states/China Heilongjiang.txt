@@ -1,0 +1,118 @@
+state = {
+	id = 19
+	name = "STATE_19"
+	manpower = 3694191
+	state_category = impoverished_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 1
+		steel = 1
+		chromium = 0
+	}
+	history = {
+		owner = CHJ
+		add_core_of = CHJ
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 7832 1 }
+		victory_points = { 7897 1 }
+		victory_points = { 10541 1 }
+	}
+	provinces = {
+		1693 1732 7832 7848 10368 10541 10675 10698 12537 12548 
+	}
+}
+
+state = {
+	id = 20
+	name = "STATE_20"
+	manpower = 277534
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 3
+		chromium = 0
+	}
+	history = {
+		owner = MON
+		add_core_of = CHJ
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 10612 1 }
+		victory_points = { 13150 2 }
+	}
+	provinces = {
+		4745 7697 7743 10612 10638 12690 13150 
+	}
+}
+
+state = {
+	id = 21
+	name = "STATE_21"
+	manpower = 1665209
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 1
+		aluminium = 0
+		rubber = 0
+		tungsten = 1
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = CHJ
+		add_core_of = CHJ
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = { 1502 1 }
+		victory_points = { 4506 3 }
+		victory_points = { 4592 2 }
+		victory_points = { 12618 1 }
+	}
+	provinces = {
+		1502 1588 1645 1776 1847 4506 4809 4852 4876 7582 7873 7894 10567 12485 12618 
+	}
+}
+
+state = {
+	id = 22
+	name = "STATE_22"
+	manpower = 1665209
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 1
+		steel = 1
+		chromium = 0
+	}
+	history = {
+		owner = CHJ
+		add_core_of = CHJ
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+	}
+	provinces = {
+		1545 4592 4649 7526 7613 7767 7897 10379 
+	}
+}

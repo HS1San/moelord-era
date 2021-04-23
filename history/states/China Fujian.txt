@@ -1,0 +1,146 @@
+state = {
+	id = 63
+	name = "STATE_63"
+	manpower = 3512090
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 2
+		steel = 10
+		chromium = 0
+	}
+	history = {
+		owner = CFJ
+		add_core_of = CFJ
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			air_base = 1
+		}
+	}
+	provinces = {
+		1094 1166 4169 7027 10069 
+	}
+}
+
+state = {
+	id = 64
+	name = "STATE_64"
+	manpower = 2000000
+	state_category = developed_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 5
+		steel = 10
+		chromium = 0
+	}
+	history = {
+		owner = CFJ
+		add_core_of = CFJ
+		buildings = {
+			infrastructure = 2
+			7071 = { naval_base = 1 }
+		}
+		victory_points = { 7071 2 }
+		victory_points = { 11986 1 }
+	}
+	provinces = {
+		7071 7131 11986 
+	}
+}
+
+state = {
+	id = 65
+	name = "STATE_65"
+	manpower = 2000000
+	state_category = impoverished_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 1
+		steel = 2
+		chromium = 0
+	}
+	history = {
+		owner = CFJ
+		add_core_of = CFJ
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 10012 1 }
+		victory_points = { 10042 2 }
+	}
+	provinces = {
+		1138 1193 4070 4113 10012 10042 10084 12057 
+	}
+}
+
+state = {
+	id = 66
+	name = "STATE_66"
+	manpower = 2000000
+	state_category = rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 1
+		steel = 2
+		chromium = 0
+	}
+	history = {
+		owner = CGD
+		add_core_of = CFJ
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 7099 2 }
+		victory_points = { 10054 1 }
+	}
+	provinces = {
+		1006 4053 7099 12084 10010 10054 10093 
+	}
+}
+
+state = {
+	id = 339
+	name = "STATE_339"
+	manpower = 343510
+	state_category = developed_rural
+	buildings_max_level_factor = 1
+	impassable = no
+	resources = {
+		oil = 0
+		aluminium = 0
+		rubber = 0
+		tungsten = 0
+		steel = 0
+		chromium = 0
+	}
+	history = {
+		owner = CFJ
+		add_core_of = CFJ
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			4196 = { naval_base = 1 }
+		}
+		victory_points = { 4196 4 }
+	}
+	provinces = {
+		4196
+	}
+}
