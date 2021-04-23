@@ -14,14 +14,6 @@ on_actions = {
 		}
 	}
 
-	on_startup = {
-		effect = {
-			every_country = {
-				country_event = update_status.1
-			}
-		}
-	}
-
 	on_ace_promoted = {
 		random_events = {
 			100 = ace_promoted.1
