@@ -38,7 +38,7 @@ create_all_leaders = yes
 
 create_country_leader = {
 	name = "Edward Lewis Brockman"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+	picture = "gfx/leaders/Foreigner/Portrait_Foreigner_Edward_Lewis_Brockman.tga"
 	expire = "1936.1.1"
 	ideology = Centrist_ideology
 	traits = {}
