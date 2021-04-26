@@ -3919,33 +3919,46 @@ soundeffect =
 {
     name = "JAP_infantry_idle"
     sounds = {
-        sound = jp_Idle_001
-        sound = jp_Idle_002
-        sound = jp_Idle_003
-        sound = jp_Idle_004
-        sound = jp_Idle_005
-        sound = jp_Idle_006
-        sound = jp_Idle_007
-        sound = jp_Idle_008
-        sound = jp_Idle_009
-        sound = jp_Idle_010
-        sound = jp_Idle_011
-        sound = jp_Idle_012
-        sound = jp_Idle_013
-        sound = jp_Idle_014
-        sound = jp_Idle_015
-        sound = jp_Idle_016
-        sound = jp_Idle_017
-        sound = jp_Idle_018
-        sound = jp_Idle_019
-        sound = jp_Idle_020
-        sound = jp_Idle_021
-        sound = jp_Idle_022
-        sound = jp_Idle_023
-        sound = jp_Idle_024
-        sound = jp_Idle_025
-        sound = jp_Idle_026
-        sound = jp_Idle_027
+		sound = jp_Idle_001
+		sound = jp_Idle_002
+		sound = jp_Idle_003
+		sound = jp_Idle_004
+		sound = jp_Idle_005
+		sound = jp_Idle_006
+		sound = jp_Idle_007
+		sound = jp_Idle_008
+		sound = jp_Idle_009
+		sound = jp_Idle_010
+		sound = jp_Idle_011
+		sound = jp_Idle_012
+		sound = jp_Idle_013
+		sound = jp_Idle_014
+		sound = jp_Idle_015
+		sound = jp_Idle_016
+		sound = jp_Idle_017
+		sound = jp_Idle_018
+		sound = jp_Idle_019
+		sound = jp_Idle_020
+		sound = jp_Idle_021
+		sound = jp_Idle_022
+		sound = jp_Idle_023
+		sound = jp_Idle_024
+		sound = jp_Idle_025
+		sound = jp_Idle_026
+		sound = jp_Idle_027
+		sound = jp_Idle_028
+		sound = jp_Idle_029
+		sound = jp_Idle_030
+		sound = jp_Idle_031
+		sound = jp_Idle_032
+		sound = jp_Idle_033
+		sound = jp_Idle_034
+		sound = jp_Idle_035
+		sound = jp_Idle_036
+		sound = jp_Idle_037
+		sound = jp_Idle_038
+		sound = jp_Idle_039
+		sound = jp_Idle_040
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -3957,27 +3970,30 @@ soundeffect =
 {
     name = "JAP_infantry_neutral_combat"
     sounds = {
-        sound = jp_Neutral_001
-        sound = jp_Neutral_002
-        sound = jp_Neutral_003
-        sound = jp_Neutral_004
-        sound = jp_Neutral_005
-        sound = jp_Neutral_006
-        sound = jp_Neutral_007
-        sound = jp_Neutral_008
-        sound = jp_Neutral_009
-        sound = jp_Neutral_010
-        sound = jp_Neutral_011
-        sound = jp_Neutral_012
-        sound = jp_Neutral_013
-        sound = jp_Neutral_014
-        sound = jp_Neutral_015
-        sound = jp_Neutral_016
-        sound = jp_Neutral_017
-        sound = jp_Neutral_018
-        sound = jp_Neutral_019
-        sound = jp_Neutral_020
+		sound = jp_Neutral_001
+		sound = jp_Neutral_002
+		sound = jp_Neutral_003
+		sound = jp_Neutral_004
+		sound = jp_Neutral_005
+		sound = jp_Neutral_006
+		sound = jp_Neutral_007
+		sound = jp_Neutral_008
+		sound = jp_Neutral_009
+		sound = jp_Neutral_010
+		sound = jp_Neutral_011
+		sound = jp_Neutral_012
+		sound = jp_Neutral_013
+		sound = jp_Neutral_014
+		sound = jp_Neutral_015
+		sound = jp_Neutral_016
+		sound = jp_Neutral_017
+		sound = jp_Neutral_018
+		sound = jp_Neutral_019
+		sound = jp_Neutral_020
 		sound = jp_Neutral_021
+		sound = jp_Neutral_022
+		sound = jp_Neutral_023
+		sound = jp_Neutral_024
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -4024,27 +4040,36 @@ soundeffect =
 {
     name = "JAP_infantry_retreat"
     sounds = {
-        sound = jp_Retreat_001
-        sound = jp_Retreat_002
-        sound = jp_Retreat_003
-        sound = jp_Retreat_004
-        sound = jp_Retreat_005
-        sound = jp_Retreat_006
-        sound = jp_Retreat_007
-        sound = jp_Retreat_008
-        sound = jp_Retreat_009
-        sound = jp_Retreat_010
-        sound = jp_Retreat_011
-        sound = jp_Retreat_012
-        sound = jp_Retreat_013
-        sound = jp_Retreat_014
-        sound = jp_Retreat_015
-        sound = jp_Retreat_016
-        sound = jp_Retreat_016_alt
-        sound = jp_Retreat_017
-        sound = jp_Retreat_017_alt
-        sound = jp_Retreat_018
-		sound = jp_Retreat_018_alt
+		sound = jp_Retreat_001
+		sound = jp_Retreat_002
+		sound = jp_Retreat_003
+		sound = jp_Retreat_004
+		sound = jp_Retreat_005
+		sound = jp_Retreat_006
+		sound = jp_Retreat_007
+		sound = jp_Retreat_008
+		sound = jp_Retreat_009
+		sound = jp_Retreat_010
+		sound = jp_Retreat_011
+		sound = jp_Retreat_012
+		sound = jp_Retreat_013
+		sound = jp_Retreat_014
+		sound = jp_Retreat_015
+		sound = jp_Retreat_016
+		sound = jp_Retreat_017
+		sound = jp_Retreat_018
+		sound = jp_Retreat_019
+		sound = jp_Retreat_020
+		sound = jp_Retreat_021
+		sound = jp_Retreat_022
+		sound = jp_Retreat_023
+		sound = jp_Retreat_024
+		sound = jp_Retreat_025
+		sound = jp_Retreat_026
+		sound = jp_Retreat_027
+		sound = jp_Retreat_028
+		sound = jp_Retreat_029
+		sound = jp_Retreat_030
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -4056,10 +4081,54 @@ soundeffect =
 {
     name = "JAP_infantry_move_out"
     sounds = {
-
-        sound = jp_Positive_010
-        sound = jp_Positive_011
-        sound = jp_Positive_012
+        sound = jp_Moving_001
+        sound = jp_Moving_002
+        sound = jp_Moving_003
+		sound = jp_Moving_004
+        sound = jp_Moving_005
+        sound = jp_Moving_006
+		sound = jp_Moving_007
+        sound = jp_Moving_008
+        sound = jp_Moving_009
+		sound = jp_Moving_010
+        sound = jp_Moving_011
+        sound = jp_Moving_012
+		sound = jp_Moving_013
+		sound = jp_Moving_014
+        sound = jp_Moving_015
+        sound = jp_Moving_016
+		sound = jp_Moving_017
+        sound = jp_Moving_018
+        sound = jp_Moving_019
+		sound = jp_Moving_020
+		sound = jp_Moving_021
+        sound = jp_Moving_022
+        sound = jp_Moving_023
+		sound = jp_Moving_024
+        sound = jp_Moving_025
+        sound = jp_Moving_026
+		sound = jp_Moving_027
+        sound = jp_Moving_028
+        sound = jp_Moving_029
+		sound = jp_Moving_030
+		sound = jp_Moving_031
+        sound = jp_Moving_032
+        sound = jp_Moving_033
+		sound = jp_Moving_034
+        sound = jp_Moving_035
+        sound = jp_Moving_036
+		sound = jp_Moving_037
+        sound = jp_Moving_038
+        sound = jp_Moving_039
+		sound = jp_Moving_040
+		sound = jp_Moving_041
+        sound = jp_Moving_042
+		sound = jp_Moving_043
+		sound = jp_Moving_044
+        sound = jp_Moving_045
+        sound = jp_Moving_046
+		sound = jp_Moving_047
+        sound = jp_Moving_048
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -5212,6 +5281,311 @@ sound =
 }
 sound = 
 {
+	name = "jp_Idle_028"
+	file = "jap/jp_Idle_028.wav"
+}
+sound = 
+{
+	name = "jp_Idle_029"
+	file = "jap/jp_Idle_029.wav"
+}
+sound = 
+{
+	name = "jp_Idle_030"
+	file = "jap/jp_Idle_030.wav"
+}
+sound = 
+{
+	name = "jp_Idle_031"
+	file = "jap/jp_Idle_031.wav"
+}
+sound = 
+{
+	name = "jp_Idle_032"
+	file = "jap/jp_Idle_032.wav"
+}
+sound = 
+{
+	name = "jp_Idle_033"
+	file = "jap/jp_Idle_033.wav"
+}
+sound = 
+{
+	name = "jp_Idle_034"
+	file = "jap/jp_Idle_034.wav"
+}
+sound = 
+{
+	name = "jp_Idle_035"
+	file = "jap/jp_Idle_035.wav"
+}
+sound = 
+{
+	name = "jp_Idle_036"
+	file = "jap/jp_Idle_036.wav"
+}
+sound = 
+{
+	name = "jp_Idle_037"
+	file = "jap/jp_Idle_037.wav"
+}
+sound = 
+{
+	name = "jp_Idle_038"
+	file = "jap/jp_Idle_038.wav"
+}
+sound = 
+{
+	name = "jp_Idle_039"
+	file = "jap/jp_Idle_039.wav"
+}
+sound = 
+{
+	name = "jp_Idle_040"
+	file = "jap/jp_Idle_040.wav"
+}
+sound = 
+{
+	name = "jp_Moving_001"
+	file = "jap/jp_Moving_001.wav"
+}
+sound = 
+{
+	name = "jp_Moving_002"
+	file = "jap/jp_Moving_002.wav"
+}
+sound = 
+{
+	name = "jp_Moving_003"
+	file = "jap/jp_Moving_003.wav"
+}
+sound = 
+{
+	name = "jp_Moving_004"
+	file = "jap/jp_Moving_004.wav"
+}
+sound = 
+{
+	name = "jp_Moving_005"
+	file = "jap/jp_Moving_005.wav"
+}
+sound = 
+{
+	name = "jp_Moving_006"
+	file = "jap/jp_Moving_006.wav"
+}
+sound = 
+{
+	name = "jp_Moving_007"
+	file = "jap/jp_Moving_007.wav"
+}
+sound = 
+{
+	name = "jp_Moving_008"
+	file = "jap/jp_Moving_008.wav"
+}
+sound = 
+{
+	name = "jp_Moving_009"
+	file = "jap/jp_Moving_009.wav"
+}
+sound = 
+{
+	name = "jp_Moving_010"
+	file = "jap/jp_Moving_010.wav"
+}
+sound = 
+{
+	name = "jp_Moving_011"
+	file = "jap/jp_Moving_011.wav"
+}
+sound = 
+{
+	name = "jp_Moving_012"
+	file = "jap/jp_Moving_012.wav"
+}
+sound = 
+{
+	name = "jp_Moving_013"
+	file = "jap/jp_Moving_013.wav"
+}
+sound = 
+{
+	name = "jp_Moving_014"
+	file = "jap/jp_Moving_014.wav"
+}
+sound = 
+{
+	name = "jp_Moving_015"
+	file = "jap/jp_Moving_015.wav"
+}
+sound = 
+{
+	name = "jp_Moving_016"
+	file = "jap/jp_Moving_016.wav"
+}
+sound = 
+{
+	name = "jp_Moving_017"
+	file = "jap/jp_Moving_017.wav"
+}
+sound = 
+{
+	name = "jp_Moving_018"
+	file = "jap/jp_Moving_018.wav"
+}
+sound = 
+{
+	name = "jp_Moving_019"
+	file = "jap/jp_Moving_019.wav"
+}
+sound = 
+{
+	name = "jp_Moving_020"
+	file = "jap/jp_Moving_020.wav"
+}
+sound = 
+{
+	name = "jp_Moving_021"
+	file = "jap/jp_Moving_021.wav"
+}
+sound = 
+{
+	name = "jp_Moving_022"
+	file = "jap/jp_Moving_022.wav"
+}
+sound = 
+{
+	name = "jp_Moving_023"
+	file = "jap/jp_Moving_023.wav"
+}
+sound = 
+{
+	name = "jp_Moving_024"
+	file = "jap/jp_Moving_024.wav"
+}
+sound = 
+{
+	name = "jp_Moving_025"
+	file = "jap/jp_Moving_025.wav"
+}
+sound = 
+{
+	name = "jp_Moving_026"
+	file = "jap/jp_Moving_026.wav"
+}
+sound = 
+{
+	name = "jp_Moving_027"
+	file = "jap/jp_Moving_027.wav"
+}
+sound = 
+{
+	name = "jp_Moving_028"
+	file = "jap/jp_Moving_028.wav"
+}
+sound = 
+{
+	name = "jp_Moving_029"
+	file = "jap/jp_Moving_029.wav"
+}
+sound = 
+{
+	name = "jp_Moving_030"
+	file = "jap/jp_Moving_030.wav"
+}
+sound = 
+{
+	name = "jp_Moving_031"
+	file = "jap/jp_Moving_031.wav"
+}
+sound = 
+{
+	name = "jp_Moving_032"
+	file = "jap/jp_Moving_032.wav"
+}
+sound = 
+{
+	name = "jp_Moving_033"
+	file = "jap/jp_Moving_033.wav"
+}
+sound = 
+{
+	name = "jp_Moving_034"
+	file = "jap/jp_Moving_034.wav"
+}
+sound = 
+{
+	name = "jp_Moving_035"
+	file = "jap/jp_Moving_035.wav"
+}
+sound = 
+{
+	name = "jp_Moving_036"
+	file = "jap/jp_Moving_036.wav"
+}
+sound = 
+{
+	name = "jp_Moving_037"
+	file = "jap/jp_Moving_037.wav"
+}
+sound = 
+{
+	name = "jp_Moving_038"
+	file = "jap/jp_Moving_038.wav"
+}
+sound = 
+{
+	name = "jp_Moving_039"
+	file = "jap/jp_Moving_039.wav"
+}
+sound = 
+{
+	name = "jp_Moving_040"
+	file = "jap/jp_Moving_040.wav"
+}
+sound = 
+{
+	name = "jp_Moving_041"
+	file = "jap/jp_Moving_041.wav"
+}
+sound = 
+{
+	name = "jp_Moving_042"
+	file = "jap/jp_Moving_042.wav"
+}
+sound = 
+{
+	name = "jp_Moving_043"
+	file = "jap/jp_Moving_043.wav"
+}
+sound = 
+{
+	name = "jp_Moving_044"
+	file = "jap/jp_Moving_044.wav"
+}
+sound = 
+{
+	name = "jp_Moving_045"
+	file = "jap/jp_Moving_045.wav"
+}
+sound = 
+{
+	name = "jp_Moving_046"
+	file = "jap/jp_Moving_046.wav"
+}
+sound = 
+{
+	name = "jp_Moving_047"
+	file = "jap/jp_Moving_047.wav"
+}
+sound = 
+{
+	name = "jp_Moving_048"
+	file = "jap/jp_Moving_048.wav"
+}
+sound = 
+{
 	name = "jp_Neutral_001"
 	file = "jap/jp_Neutral_001.wav"
 }
@@ -5314,6 +5688,26 @@ sound =
 {
 	name = "jp_Neutral_021"
 	file = "jap/jp_Neutral_021.wav"
+}
+sound = 
+{
+	name = "jp_Neutral_022"
+	file = "jap/jp_Neutral_022.wav"
+}
+sound = 
+{
+	name = "jp_Neutral_023"
+	file = "jap/jp_Neutral_023.wav"
+}
+sound = 
+{
+	name = "jp_Neutral_024"
+	file = "jap/jp_Neutral_024.wav"
+}
+sound = 
+{
+	name = "jp_Neutral_025"
+	file = "jap/jp_Neutral_025.wav"
 }
 sound = 
 {
@@ -5479,7 +5873,8 @@ sound =
 {
 	name = "jp_Retreat_009"
 	file = "jap/jp_Retreat_009.wav"
-}sound = 
+}
+sound = 
 {
 	name = "jp_Retreat_010"
 	file = "jap/jp_Retreat_010.wav"
@@ -5515,18 +5910,8 @@ sound =
 }
 sound = 
 {
-	name = "jp_Retreat_016_alt"
-	file = "jap/jp_Retreat_016_alt.wav"
-}
-sound = 
-{
 	name = "jp_Retreat_017"
 	file = "jap/jp_Retreat_017.wav"
-}
-sound = 
-{
-	name = "jp_Retreat_017_alt"
-	file = "jap/jp_Retreat_017_alt.wav"
 }
 sound = 
 {
@@ -5535,8 +5920,63 @@ sound =
 }
 sound = 
 {
-	name = "jp_Retreat_018_alt"
-	file = "jap/jp_Retreat_018_alt.wav"
+	name = "jp_Retreat_019"
+	file = "jap/jp_Retreat_019.wav"
+}
+sound = 
+{
+	name = "jp_Retreat_020"
+	file = "jap/jp_Retreat_020.wav"
+}
+sound = 
+{
+	name = "jp_Retreat_021"
+	file = "jap/jp_Retreat_021.wav"
+}
+sound = 
+{
+	name = "jp_Retreat_022"
+	file = "jap/jp_Retreat_022.wav"
+}
+sound = 
+{
+	name = "jp_Retreat_023"
+	file = "jap/jp_Retreat_023.wav"
+}
+sound = 
+{
+	name = "jp_Retreat_024"
+	file = "jap/jp_Retreat_024.wav"
+}
+sound = 
+{
+	name = "jp_Retreat_025"
+	file = "jap/jp_Retreat_025.wav"
+}
+sound = 
+{
+	name = "jp_Retreat_026"
+	file = "jap/jp_Retreat_026.wav"
+}
+sound = 
+{
+	name = "jp_Retreat_027"
+	file = "jap/jp_Retreat_027.wav"
+}
+sound = 
+{
+	name = "jp_Retreat_028"
+	file = "jap/jp_Retreat_028.wav"
+}
+sound = 
+{
+	name = "jp_Retreat_029"
+	file = "jap/jp_Retreat_029.wav"
+}
+sound = 
+{
+	name = "jp_Retreat_030"
+	file = "jap/jp_Retreat_030.wav"
 }
 sound = 
 {
