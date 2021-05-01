@@ -240,8 +240,8 @@ country_event = {
 				}
 				CJL = {
 					create_country_leader = {
-						name = "Wang Jitang"	# 王揖唐
-						picture = "gfx/leaders/China/Portrait_China_Wang_Jitang.tga"
+						name = "Wang Yitang"	# 王揖唐
+						picture = "gfx/leaders/China/Portrait_China_Wang_Yitang.tga"
 						expire = "1936.1.1"
 						ideology = Centrist_ideology
 						traits = {
