@@ -53,6 +53,7 @@ Diplomacy_with_CBJ = {
 		icon = generic_independence
 		allowed = {
 			NOT = { original_tag = CAH }
+			NOT = { cosmetic_tag = FPA }
 		}
 		activation = {
 			owns_state = 37
@@ -143,6 +144,7 @@ Diplomacy_with_CBJ = {
 		icon = generic_independence
 		allowed = {
 			NOT = { original_tag = CFJ }
+			NOT = { cosmetic_tag = FPA }
 		}
 		activation = {
 			owns_state = 63
@@ -417,6 +419,7 @@ Diplomacy_with_CBJ = {
 		icon = generic_independence
 		allowed = {
 			NOT = { original_tag = CJS }
+			NOT = { cosmetic_tag = FPA }
 		}
 		activation = {
 			owns_state = 43
@@ -463,6 +466,7 @@ Diplomacy_with_CBJ = {
 		icon = generic_independence
 		allowed = {
 			NOT = { original_tag = CJX }
+			NOT = { cosmetic_tag = FPA }
 		}
 		activation = {
 			owns_state = 59
@@ -738,6 +742,7 @@ Diplomacy_with_CBJ = {
 		icon = generic_independence
 		allowed = {
 			NOT = { original_tag = CZJ }
+			NOT = { cosmetic_tag = FPA }
 		}
 		activation = {
 			owns_state = 55

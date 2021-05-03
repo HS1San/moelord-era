@@ -163,6 +163,15 @@
  Forced_Loans:0 "Forced Loans"
  Forced_Loans_desc:0 "The merchants and industrialists have amassed incredible riches in the period of relative peace. It is surely not too much to ask them to make part of that wealth available for the government in these desperate times, with a promise of prompt repayment as soon as the situation permits."
 
+ Formable_FPAA:0 "Unite the Five Allied Armies"
+ Formable_FPAA_desc:0 "Ever since the Xinhai Revolution, China's Five Eastern Provinces have been disunited and fractured by political and economic instability. While we have bickered amongst ourselves, China has torn itself apart like a pack of ravenous wolves. Destructive wars and failed revolutions have brought nothing but devastation to the land and disrupted the harmony of the land. However, at long last, while China may continue to fracture, the 5 Eastern Provinces have united. It's time for us to take a stand. China will not be united today, it may not even be united in the next decade. But until then, the Five-Province Allied Army will be there to make sure war does not scar the people of the Provinces any longer."
+ tooltip_fpaa_jiangsu_decision:0 "Jiangsu has been incoperated into the Allied Armies"
+ tooltip_fpaa_anhui_decision:0 "Anhui has been incoperated into the Allied Armies"
+ tooltip_fpaa_zhejiang_decision:0 "Zhejiang has been incoperated into the Allied Armies"
+ tooltip_fpaa_fujian_decision:0 "Fujian has been incoperated into the Allied Armies"
+ tooltip_fpaa_jiangxi_decision:0 "Jiangxi has been incoperated into the Allied Armies"
+ tooltip_npaa_unified:0 "We will integrate the warlords of the Yangtze into one Allied Army!"
+ 
  Formable_BYC:0 "A Beiyang Republic"
  Formable_BYC_desc:0 "The rule of the warlords and the interference of imperialism have caused China to suffer. Through arduous unification, China will eventually achieve true reunification. It is time to establish a legitimate new government."
  Formable_ROC:0 "A National Republic"

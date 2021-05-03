@@ -94,3 +94,7 @@ CEH = {
 	color = rgb { 179  128  104 }
 	color_ui = rgb { 179  128  104 }
 }
+FPA = {
+    color = rgb { 135 115 123 }
+    color_ui = rgb { 135 115 123 }
+}

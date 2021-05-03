@@ -1,4 +1,193 @@
 political_actions = {
+Formable_FPAA = {
+
+		icon = flag_of_BYC
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = tooltip_fpaa_jiangsu_decision
+					OR = {
+						CAH = {
+							is_puppet_of = ROOT
+						}
+						ROOT = {
+						owns_state = 42
+						owns_state = 43
+						owns_state = 40
+						owns_state = 41
+						}
+					}
+				}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_fpaa_anhui_decision
+					OR = {
+						CJS = {
+							is_puppet_of = ROOT
+						}
+						ROOT = {
+						owns_state = 38
+						owns_state = 39
+						owns_state = 37
+						}
+					}
+				}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_fpaa_zhejiang_decision
+					OR = {
+						CZJ = {
+							is_puppet_of = ROOT
+						}
+						ROOT = {
+						owns_state = 55
+						owns_state = 56
+						owns_state = 57
+						owns_state = 58
+						}
+					}
+				}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_fpaa_jiangxi_decision
+					OR = {
+						CJX = {
+							is_puppet_of = ROOT
+						}
+						ROOT = {
+						owns_state = 59
+						owns_state = 60
+						owns_state = 61
+						owns_state = 62
+						}
+					}
+				}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_fpaa_fujian_decision
+					OR = {
+						CFJ = {
+							is_puppet_of = ROOT
+						}
+						ROOT = {
+						owns_state = 63
+						owns_state = 64
+						owns_state = 65
+						}
+					}
+				}
+		}
+
+		visible = {
+			NOT = { has_global_flag = five_provinces_united }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = FPA
+			set_capital = 43
+			set_global_flag = five_provinces_united
+			add_political_power = 120
+			custom_effect_tooltip = tooltip_npaa_unified
+			44 = {
+			add_core_of = ROOT }
+			83 = {
+			add_core_of = ROOT }
+			82 = {
+			add_core_of = ROOT }
+			hidden_effect = {
+			if = {
+				limit = {
+					CAH = {
+						OR = {
+							is_puppet_of = ROOT
+							exists = no
+						}
+						is_ai = yes
+					}
+				}
+				ROOT = {
+					every_owned_state = {
+						limit = { is_core_of = CAH }
+						add_core_of = ROOT
+				}
+				annex_country = { target = CAH transfer_troops = yes }
+				}
+				}
+			if = {
+				limit = {
+					CZJ = {
+						OR = {
+							is_puppet_of = ROOT
+							exists = no
+						}
+						is_ai = yes
+					}
+				}
+				ROOT = {
+					every_owned_state = {
+						limit = { is_core_of = CZJ }
+						add_core_of = ROOT
+				}
+				annex_country = { target = CZJ transfer_troops = yes }
+				}
+				}
+			if = {
+				limit = {
+					CFJ = {
+						OR = {
+							is_puppet_of = ROOT
+							exists = no
+						}
+						is_ai = yes
+					}
+				}
+				ROOT = {
+					every_owned_state = {
+						limit = { is_core_of = CFJ }
+						add_core_of = ROOT
+				}
+				annex_country = { target = CFJ transfer_troops = yes }
+				}
+				}
+			if = {
+				limit = {
+					CJS = {
+						OR = {
+							is_puppet_of = ROOT
+							exists = no
+						}
+						is_ai = yes
+					}
+				}
+				ROOT = {
+					every_owned_state = {
+						limit = { is_core_of = CJS }
+						add_core_of = ROOT
+				}
+				annex_country = { target = CJS transfer_troops = yes }
+				}
+				}
+			if = {
+				limit = {
+					CJX = {
+						OR = {
+							is_puppet_of = ROOT
+							exists = no
+						}
+						is_ai = yes
+					}
+				}
+				ROOT = {
+					every_owned_state = {
+						limit = { is_core_of = CJX }
+						add_core_of = ROOT
+				}
+				annex_country = { target = CJX transfer_troops = yes }
+				}
+				}
+			}
+		}
+	}
+		
 	Formable_BYC = {
 		icon = flag_of_BYC
 
