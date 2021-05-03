@@ -7,10 +7,6 @@ music = {
 		modifier = {
 			factor = 0.5
 		}
-		modifier = {
-			factor = 2
-			tag = CSY
-		}
 	}
 }
 
@@ -461,6 +457,32 @@ music = {
 			factor = 2
 			has_war = yes
 			tag = CGX
+		}
+	}
+}
+
+music = {
+	song = "little_busters"
+
+	chance = { 
+		modifier = {
+			factor = 4
+			tag = CSC
+			has_country_leader = { name = "Xiong Kewu" ruling_only = yes }
+		}
+	}
+}
+
+music = {
+	song = "hacking_to_the_gate"
+
+	chance = { 
+		modifier = {
+			factor = 4
+			OR = {
+				tag = MAL
+				tag = SAB
+			}
 		}
 	}
 }

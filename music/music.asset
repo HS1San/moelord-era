@@ -228,5 +228,15 @@ music = {
 	file = "Guangxi_Clique_Song.ogg"
 	volume = 0.75
 }
+music = {
+	name = "little_busters"
+	file = "Little_Busters.ogg"
+	volume = 0.65
+}
+music = {
+	name = "hacking_to_the_gate"
+	file = "Hacking_to_the_Gate.ogg"
+	volume = 0.65
+}
 
 #Temporarily Removed due to HOI4 unable to play audio file
