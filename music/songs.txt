@@ -6,7 +6,20 @@ music = {
 	chance = {
 		modifier = {
 			factor = 0.5
-		}		
+		}
+		modifier = {
+			factor = 2
+			tag = CSY
+		}
+	}
+}
+
+music = {
+	song = "maintheme2"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}
 	}
 }
 
