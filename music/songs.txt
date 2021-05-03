@@ -495,7 +495,7 @@ music = {
 	}
 }
 music = {
-	song = "exciting_cooking_time"
+	song = "ghost"
 
 	chance = { 
 		modifier = {

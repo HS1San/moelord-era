@@ -249,8 +249,8 @@ music = {
 	volume = 0.65
 }
 music = {
-	name = "exciting_cooking_time"
-	file = "Exciting_Cooking_Time.ogg"
+	name = "ghost"
+	file = "GHOST.ogg"
 	volume = 0.65
 }
 music = {
