@@ -462,6 +462,17 @@ music = {
 }
 
 music = {
+	song = "the_ground_is_yellow"
+
+	chance = { 
+		modifier = {
+			factor = 4
+			tag = CSC
+			has_country_leader = { name = "Cai Chengxun" ruling_only = yes }
+		}
+	}
+}
+music = {
 	song = "little_busters"
 
 	chance = { 
@@ -472,7 +483,39 @@ music = {
 		}
 	}
 }
+music = {
+	song = "lungmen_battle"
 
+	chance = { 
+		modifier = {
+			factor = 2
+			tag = CGD
+			has_country_leader = { name = "Chen Jiongming" ruling_only = yes }
+		}
+	}
+}
+music = {
+	song = "exciting_cooking_time"
+
+	chance = { 
+		modifier = {
+			factor = 2
+			tag = CYX
+			has_country_leader = { name = "Liu Zhenhua" ruling_only = yes }
+		}
+	}
+}
+music = {
+	song = "megumin_explosion"
+
+	chance = { 
+		modifier = {
+			factor = 2
+			original_tag = CHN
+			has_country_leader = { name = "Zhao Hengti" ruling_only = yes }
+		}
+	}
+}
 music = {
 	song = "hacking_to_the_gate"
 
