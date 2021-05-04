@@ -53,6 +53,7 @@ Formable_FPAA = {
 							owns_state = 56
 							owns_state = 57
 							owns_state = 58
+							owns_state = 340
 						}
 					}
 				}
@@ -82,6 +83,7 @@ Formable_FPAA = {
 							owns_state = 63
 							owns_state = 64
 							owns_state = 65
+							owns_state = 339
 						}
 					}
 				}
@@ -113,10 +115,6 @@ Formable_FPAA = {
 					}
 					annex_country = { target = CAH transfer_troops = yes }
 				}
-				every_owned_state = {
-					limit = { is_core_of = CAH }
-					add_core_of = ROOT
-				}
 				if = {
 					limit = {
 						CZJ = {
@@ -128,10 +126,6 @@ Formable_FPAA = {
 						every_unit_leader = { set_nationality = ROOT }
 					}
 					annex_country = { target = CZJ transfer_troops = yes }
-				}
-				every_owned_state = {
-					limit = { is_core_of = CZJ }
-					add_core_of = ROOT
 				}
 				if = {
 					limit = {
@@ -145,10 +139,6 @@ Formable_FPAA = {
 					}
 					annex_country = { target = CFJ transfer_troops = yes }
 				}
-				every_owned_state = {
-					limit = { is_core_of = CFJ }
-					add_core_of = ROOT
-				}
 				if = {
 					limit = {
 						CJS = {
@@ -160,10 +150,6 @@ Formable_FPAA = {
 						every_unit_leader = { set_nationality = ROOT }
 					}
 					annex_country = { target = CJS transfer_troops = yes }
-				}
-				every_owned_state = {
-					limit = { is_core_of = CJS }
-					add_core_of = ROOT
 				}
 				if = {
 					limit = {
@@ -178,7 +164,16 @@ Formable_FPAA = {
 					annex_country = { target = CJX transfer_troops = yes }
 				}
 				every_owned_state = {
-					limit = { is_core_of = CJX }
+					limit = {
+						OR = {
+							is_core_of = CAH
+							is_core_of = CZJ
+							is_core_of = CFJ
+							is_core_of = CJS
+							is_core_of = CJX
+						}
+						NOT = { is_core_of = ROOT }
+					}
 					add_core_of = ROOT
 				}
 			}
