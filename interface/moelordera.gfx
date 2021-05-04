@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_moelord_AB"
+		textureFile = "gfx/interface/AB.dds"
+	}
+}

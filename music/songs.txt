@@ -467,8 +467,10 @@ music = {
 	chance = { 
 		modifier = {
 			factor = 4
-			tag = CSC
-			has_country_leader = { name = "Cai Chengxun" ruling_only = yes }
+			OR = {
+				has_country_leader = { name = "Cai Chengxun" ruling_only = yes }
+				has_country_leader = { name = "Hakurei Reimu" ruling_only = yes }
+			}
 		}
 	}
 }
@@ -500,8 +502,10 @@ music = {
 	chance = { 
 		modifier = {
 			factor = 2
-			tag = CYX
-			has_country_leader = { name = "Liu Zhenhua" ruling_only = yes }
+			OR = {
+				has_country_leader = { name = "Liu Zhenhua" ruling_only = yes }
+				has_country_leader = { name = "Hoshimachi Suisei" ruling_only = yes }
+			}
 		}
 	}
 }

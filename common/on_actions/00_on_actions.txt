@@ -17,7 +17,8 @@ on_actions = {
 	on_startup = {
 		effect = {
 			every_country = {
-				country_event = update_status.1
+				limit = { is_ai = no }
+				set_country_flag = moelord_welcome
 			}
 		}
 	}

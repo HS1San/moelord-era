@@ -1,0 +1,160 @@
+guiTypes = {
+	containerWindowType = {
+		name = "moelord_welcome_container"
+		position = { x = 0 y = 0 }
+		size = { width = 800 height = 600 }
+		moveable = yes
+		orientation = center
+		origo = center
+
+		background = {
+			name = "Background"
+			quadTextureSprite = GFX_tiled_bg
+		}
+
+		instantTextboxType = {
+			name = "welcome_title"
+			position = { x = 75 y = 25 }
+			font = hoi_36header
+			text = welcome_title
+			maxWidth = 675
+			format = center
+		}
+		instantTextboxType = {
+			name = "welcome_text"
+			position = { x = 50 y = 85 }
+			font = hoi_16mbs
+			text = welcome_text
+			maxWidth = 460
+			format = left
+		}
+		buttonType = {
+			name = "AB_discord_button"
+			position = { x = 550 y = 100 }
+			spriteType = GFX_moelord_AB
+			clicksound = click_default
+			web_link = "https://discord.gg/Buhqdyq"
+			scale = 0.8
+		}
+		instantTextboxType = {
+			name = "welcome_link"
+			position = { x = 525 y = 300 }
+			font = hoi_36header
+			text = welcome_link
+			maxWidth = 250
+			format = center
+		}
+		buttonType = {
+			name = "welcome_close_button"
+			position = { x = 150 y = 525 }
+			quadTextureSprite = GFX_main_lobby_button
+			buttonText = FE_CONTINUE
+			buttonFont = hoi_24header
+			clicksound = click_default
+			oversound = ui_menu_over
+			shortcut = ESCAPE
+		}
+	}
+
+	containerWindowType = {
+		name = "moelord_help_button_container"
+		position = { x = 0 y = 0 }
+		orientation = upper_right
+
+		buttonType = {
+			name = "moelord_help_button"
+			position = { x = -29 y = 34 }
+			quadTextureSprite = GFX_help_button
+			clicksound = click_ok
+			oversound = ui_menu_over
+			orientation = upper_right
+			pdx_tooltip = HELP_MENU
+		}
+	}
+
+	containerWindowType = {
+		name = "moelord_help_tab_container"
+		position = { x = 81 y = 38 }
+		show_position = { x = 81 y = 78 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 450
+		orientation = upper_right
+		clipping = no
+		size = { width = 42 height = 228 }
+
+		buttonType = {
+			name = "moelord_button"
+			position = { x = -36 y = 1 }
+			quadTextureSprite = homepage
+			orientation = upper_right
+			scale = 0.75
+		}
+		buttonType = {
+			name = "hoi_wiki"
+			position = { x = -36 y = 31 }
+			quadTextureSprite = homepage
+			clicksound = click_default
+			pdx_tooltip = "MENU_BAR_GAME_WIKI"
+			web_link = ""
+			orientation = upper_right
+			scale = 0.75
+		}
+		buttonType = {
+			name = "moelord_button_a"
+			position = { x = 500 y = 0 }
+			quadTextureSprite = homepage
+			orientation = upper_right
+			shortcut = shift+a
+		}
+		buttonType = {
+			name = "moelord_button_b"
+			position = { x = 500 y = 0 }
+			quadTextureSprite = homepage
+			orientation = upper_right
+			shortcut = shift+b
+		}
+		buttonType = {
+			name = "moelord_button_c"
+			position = { x = 500 y = 0 }
+			quadTextureSprite = homepage
+			orientation = upper_right
+			shortcut = shift+c
+		}
+		buttonType = {
+			name = "moelord_button_d"
+			position = { x = 500 y = 0 }
+			quadTextureSprite = homepage
+			orientation = upper_right
+			shortcut = shift+d
+		}
+		buttonType = {
+			name = "moelord_button_e"
+			position = { x = 500 y = 0 }
+			quadTextureSprite = homepage
+			orientation = upper_right
+			shortcut = shift+e
+		}
+		buttonType = {
+			name = "moelord_button_f"
+			position = { x = 500 y = 0 }
+			quadTextureSprite = homepage
+			orientation = upper_right
+			shortcut = shift+f
+		}
+		buttonType = {
+			name = "moelord_button_g"
+			position = { x = 500 y = 0 }
+			quadTextureSprite = homepage
+			orientation = upper_right
+			shortcut = shift+g
+		}
+		buttonType = {
+			name = "moelord_button_h"
+			position = { x = 500 y = 0 }
+			quadTextureSprite = homepage
+			orientation = upper_right
+			shortcut = shift+h
+		}
+	}
+}

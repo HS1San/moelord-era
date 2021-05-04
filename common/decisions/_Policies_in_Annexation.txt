@@ -144,7 +144,6 @@ Diplomacy_with_CBJ = {
 		icon = generic_independence
 		allowed = {
 			NOT = { original_tag = CFJ }
-			NOT = { cosmetic_tag = FPA }
 		}
 		activation = {
 			owns_state = 63
@@ -158,6 +157,7 @@ Diplomacy_with_CBJ = {
 			CFJ = { exists = no }
 			NOT = { has_country_flag = annexation_FUJIAN_CONQ }
 			NOT = { has_cosmetic_tag = CSE }
+			NOT = { has_global_flag = five_provinces_united }
 			OR = {
 				has_country_flag = Anhui_Member
 				has_country_flag = Zhili_Member
@@ -419,7 +419,6 @@ Diplomacy_with_CBJ = {
 		icon = generic_independence
 		allowed = {
 			NOT = { original_tag = CJS }
-			NOT = { cosmetic_tag = FPA }
 		}
 		activation = {
 			owns_state = 43
@@ -433,6 +432,7 @@ Diplomacy_with_CBJ = {
 			CJS = { exists = no }
 			NOT = { has_country_flag = annexation_JIANGSU_CONQ }
 			NOT = { has_cosmetic_tag = CSE }
+			NOT = { has_global_flag = five_provinces_united }
 			OR = {
 				has_country_flag = Anhui_Member
 				has_country_flag = Zhili_Member
@@ -466,7 +466,6 @@ Diplomacy_with_CBJ = {
 		icon = generic_independence
 		allowed = {
 			NOT = { original_tag = CJX }
-			NOT = { cosmetic_tag = FPA }
 		}
 		activation = {
 			owns_state = 59
@@ -480,6 +479,7 @@ Diplomacy_with_CBJ = {
 			CJX = { exists = no }
 			NOT = { has_country_flag = annexation_JIANGXI_CONQ }
 			NOT = { has_cosmetic_tag = CSE }
+			NOT = { has_global_flag = five_provinces_united }
 			OR = {
 				has_country_flag = Anhui_Member
 				has_country_flag = Zhili_Member
@@ -742,7 +742,6 @@ Diplomacy_with_CBJ = {
 		icon = generic_independence
 		allowed = {
 			NOT = { original_tag = CZJ }
-			NOT = { cosmetic_tag = FPA }
 		}
 		activation = {
 			owns_state = 55
@@ -756,6 +755,7 @@ Diplomacy_with_CBJ = {
 			CZJ = { exists = no }
 			NOT = { has_country_flag = annexation_ZHEJIANG_CONQ }
 			NOT = { has_cosmetic_tag = CSE }
+			NOT = { has_global_flag = five_provinces_united }
 			OR = {
 				has_country_flag = Anhui_Member
 				has_country_flag = Zhili_Member
